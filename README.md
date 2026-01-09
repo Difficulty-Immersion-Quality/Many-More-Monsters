@@ -11,6 +11,9 @@
 - Oof falling over out of the turn order is something most players find to be problematic.
 ## 4
 - The bugbear outside the druid undercroft can kill Sazza when she exits, he should just be removed.
+## 5
+- Mini Grym pet is a bit too strong in combat, definitely needs a nerf or maybe just being a novelty that patrols camp.
+- His audio is way too loud too, will need custom model or some such instead of just downscaling
 
 # Many More Monsters - Revised (I dunno what we're calling it, the "lighter" fork for UNSO/Lab/DIQ and such)
 ## 1
