@@ -82,7 +82,7 @@ data "HitAnimationType" "MagicalNonDamage"
 data "PrepareEffect" "33d4ba61-8c76-4138-ac49-c33d279fb9c9"
 data "CastEffect" "11b177e1-ccd8-495d-ad9a-5547a138f540"
 data "TargetEffect" "78ab57f2-edce-4697-8be4-7bf7c2e76f92"
-data "DamageType" "Blast"
+data "DamageType" "Force"
 
 new entry "Shout_Stomp_AdamantineGolemN"
 type "SpellData"

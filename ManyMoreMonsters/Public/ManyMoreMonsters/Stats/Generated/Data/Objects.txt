@@ -14,7 +14,7 @@ data "ValueScale" "1.15"
 data "Priority" "1"
 data "Vitality" "10"
 data "ObjectCategory" "JunkArtificial"
-data "DefaultBoosts" "Tag()"
+// data "DefaultBoosts" "Tag()"
 
 new entry "MMM_CAVEINBOULDER"
 type "Object"
