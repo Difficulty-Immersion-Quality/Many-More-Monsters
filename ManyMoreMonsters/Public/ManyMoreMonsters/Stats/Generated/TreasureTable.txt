@@ -1,0 +1,49 @@
+new treasuretable "MMM_QUESTIONABLETABLE"
+new subtable "4,1;5,1;6,1;7,1"
+object category "I_MMM_OBJ_QUESTIONABLETOWEL",1,0,0,0,0,0,0,0
+
+new treasuretable "MMM_QUESTIONABLETABLE1"
+new subtable "-1"
+object category "I_MMM_OBJ_QUESTIONABLETOWEL",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_LavaElemental"
+new subtable "5,1; 6,1; 7,1; 8,1;"
+object category "T_Valuables_Gems",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_LOOT_GEN_Ore_Mithral_A",1,0,0,0,0,0,0,0
+new subtable "2,1; 3,2; 4,3; 5,1"
+object category "T_Exploration_Minor_Scroll",1,0,0,0,0,0,0,0
+object category "T_ST_SpecialArrow_Common",1,0,0,0,0,0,0,0
+object category "T_ST_Throwable",1,0,0,0,0,0,0,0
+object category "T_Alchemy_Potion_Healing",1,0,0,0,0,0,0,0
+object category "T_Alchemy_Potion_Utility",1,0,0,0,0,0,0,0
+object category "T_Exploration_Minor_Tools",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_LavaElemental_No_Mithral"
+new subtable "5,1; 6,1; 7,1; 8,1;"
+object category "T_Valuables_Gems",1,0,0,0,0,0,0,0
+new subtable "2,1; 3,2; 4,3; 5,1"
+object category "T_Exploration_Minor_Scroll",1,0,0,0,0,0,0,0
+object category "T_ST_SpecialArrow_Common",1,0,0,0,0,0,0,0
+object category "T_ST_Throwable",1,0,0,0,0,0,0,0
+object category "T_Alchemy_Potion_Healing",1,0,0,0,0,0,0,0
+object category "T_Alchemy_Potion_Utility",1,0,0,0,0,0,0,0
+object category "T_Exploration_Minor_Tools",1,0,0,0,0,0,0,0
+
+new treasuretable "MMM_Grym_Summon_Scroll"
+new subtable "-1"
+object category "I_MMM_OBJ_Scroll_SummonGrym",1,0,0,0,0,0,0,0
+
+new treasuretable "MMM_SQUIRRELTABLE"
+new subtable "4,1;5,1;6,1;7,1"
+object category "I_Food_Walnut",1,0,0,0,0,0,0,0
+new subtable "4,1;5,1;6,1;7,1"
+object category "I_Food_Walnut",1,0,0,0,0,0,0,0
+new subtable "4,1;5,1;6,1;7,1"
+object category "I_Food_Walnut",1,0,0,0,0,0,0,0
+new subtable "4,1;5,1;6,1;7,1"
+object category "I_Food_Walnut",1,0,0,0,0,0,0,0
+
+new treasuretable "MMM_SQUIRRELTABLE2"
+new subtable "2,1;3,1;4,1;5,1"
+object category "I_Food_Walnut",1,0,0,0,0,0,0,0

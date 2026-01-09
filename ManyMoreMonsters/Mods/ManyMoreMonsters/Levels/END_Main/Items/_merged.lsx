@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="0" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+/// ---Act 3c Mimic Chests
+				<!-- <node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="" />
+							<attribute id="RotationQuat" type="fvec4" value="" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				 -->
+			</children>
+		</node>
+	</region>
+</save>

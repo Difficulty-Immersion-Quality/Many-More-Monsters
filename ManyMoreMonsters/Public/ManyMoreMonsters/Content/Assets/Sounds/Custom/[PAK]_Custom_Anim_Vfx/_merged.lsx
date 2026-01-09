@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="0" lslib_meta="v1,bswap_guids,lsf_adjacency" />
+	<region id="SoundBank">
+		<node id="SoundBank">
+			<children>
+				<node id="Resource">
+					<attribute id="DisplayName" type="LSString" value="" />
+					<attribute id="Duration" type="float" value="-1" />
+					<attribute id="ID" type="FixedString" value="00b611c1-a47b-477d-ad2e-9ae415a7c225" />
+					<attribute id="Internal" type="bool" value="True" />
+					<attribute id="Localized" type="bool" value="False" />
+					<attribute id="MaxDistance" type="float" value="30" />
+					<attribute id="Name" type="LSString" value="VFX_StoneItem_TransmutersStone_Loop" />
+					<attribute id="Preload" type="bool" value="False" />
+					<attribute id="SoundBank" type="FixedString" value="CUSTOM_ANIM_VFX" />
+					<attribute id="SoundCategory" type="int8" value="0" />
+					<attribute id="SoundCodec" type="int8" value="7" />
+					<attribute id="SoundEvent" type="FixedString" value="VFX_StoneItem_TransmutersStone_Loop" />
+					<attribute id="SoundEventID" type="uint32" value="1427180921" />
+					<attribute id="SoundEventUUID" type="guid" value="abe5d287-e259-4991-999a-13465437489c" />
+					<attribute id="SourceFile" type="LSString" value="Public/Shared/Assets/Sound/CUSTOM_ANIM_VFX.bnk" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115205255725357" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

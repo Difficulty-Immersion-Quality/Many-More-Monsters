@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="6" revision="0" build="1" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="Content" type="TranslatedString" handle="h5705dcf9gd6b9g4277g92f6g783809657858" version="1" />
+					<attribute id="UUID" type="FixedString" value="MMM_BODE" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

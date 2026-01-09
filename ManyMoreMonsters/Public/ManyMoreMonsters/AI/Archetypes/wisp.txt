@@ -1,0 +1,24 @@
+USING melee_magic_smart
+
+//Doesn't care as much about getting close to enemies
+MULTIPLIER_ENDPOS_ENEMIES_NEARBY						-0.25
+
+//Cares a bit less about highground
+MULTIPLIER_ENEMY_HEIGHT_DIFFERENCE						0.02
+
+//Cares a lot about consuming life
++MULTIPLIER_KILL_ENEMY									5.00
+
+//Good hit/miss reasoning
+MODIFIER_HIT_CHANCE_STUPIDITY 							-0.15
+
+//Cares more than normal about it's own  concentration
++ MODIFIER_CONCENTRATION_REMOVE_SELF 					2.00
+
+//Mindflayer NPCs should not pickup weapons
+WEAPON_PICKUP_MODIFIER 									0.0
+
+//Mages like stunning and debuffing enemies - taken from Mage archetype since again, it makes sense
+MULTIPLIER_BOOST_ENEMY_POS		 				1.15
+MULTIPLIER_CONTROL_ENEMY_POS					1.15
+MULTIPLIER_BLIND								0.20

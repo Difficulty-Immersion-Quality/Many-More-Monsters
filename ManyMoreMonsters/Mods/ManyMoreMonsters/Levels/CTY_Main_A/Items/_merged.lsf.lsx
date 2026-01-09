@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="0" lslib_meta="v1,bswap_guids" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="5adb8ba4-48c2-4b99-a10e-75832ca94dae" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="564.0536 2.4179688 754.92615" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="ca61ec9a-b78d-4e07-b3e6-745449a10e81" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-2328.7842 0.99121094 1054.6299" />
+							<attribute id="RotationQuat" type="fvec4" value="0 1 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="0342ae23-252e-4238-9efb-9088d2fad031" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="518.25 -0.7636719 1064.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 -0.3826834" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="641283e8-bb0f-4bcb-bc6d-8c96da4f8596" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-965.331 43.11621 801.268" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="022345f9-7f21-472b-9cd8-41b46c327291" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-690.6223 32.896484 870.33295" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9396926 0 -0.3420201" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="58c38d01-6e0b-44f0-882a-063b1f116fd0" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-133.93173 1.0986328 -229.87729" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="4686c2ac-42b6-4cb2-ae5c-125fad3efba9" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-106.86778 1.2119141 -234.7926" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="eab4bbd8-cba4-472e-b578-42da33922578" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-181.60408 0.7763672 -224.93759" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="06f881be-083d-4bf1-882b-a3df31d63c25" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1814.25 1.234375 -83.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="672c0869-fc0b-4b84-bd9e-a356c3dd2bcd" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-272.8879 12.565704 887.60266" />
+							<attribute id="RotationQuat" type="fvec4" value="0 1 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="c63d0e70-21f8-4a84-b9f0-abd97470b07c" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1866.7599 0.064453125 -430.93707" />
+							<attribute id="RotationQuat" type="fvec4" value="0 1 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="f3cba79b-541c-454d-8f1a-7c2deaf72fab" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1931.5021 -10.294839 879.7641" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="5cec3081-ad12-43d2-9a82-cacc37a18528" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1957.4175 -6.2460938 864.65717" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.3826834 0 0.9238795" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="da01fc10-df4c-45c1-8cc4-f3e1717fe98d" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1237.339 -1.5312037 532.6018" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="9cedcedb-0b4e-4be9-a884-323d9b074354" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1263.6411 -1.7294922 548.2737" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="fc0627a9-f449-43cf-ac41-100cf52d0be7" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="55.815987 23.72382 805.4542" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.3826834 0 0.9238795" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="c6e6bca1-fb2a-416a-b896-40eaa18c05e9" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-80.85303 18.689453 869.505" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.3826834 0 0.9238795" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="5e258802-dcdc-4d6a-af41-dbf0ef2d08a3" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-135.40056 14.251953 877.0321" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="9446674c-75fd-4fdc-a37a-74e1da4b3e13" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1382.7292 0.8095703 70.13966" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.3826834 0 0.9238795" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="cdde16d3-ccca-4fdf-8909-cc2ce9a58b90" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1377.7861 0.8076172 49.56896" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 -0.3826834" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="0e4766df-f66a-4809-afde-6f0353f9ea2d" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1387.75 2.196289 54.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7933533 0 0.6087614" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="241c8f4a-c774-4685-be0d-45dea19da3df" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-1404.75 0.4140625 58.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 1 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="ac0ddcbc-080e-4f8c-85ae-c2f55bee5291" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-48.016518 -39.217773 976.46893" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9914449 0 0.1305262" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="ef30068d-4df3-4621-9a3a-36aeac847203" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-65.38679 -35.158203 1048.0974" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.1305262 0 -0.9914449" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="2f210f8d-e8bd-4dd4-881e-7f2a2b820cf6" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-49.949383 -31.428642 1044.8757" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9914449 0 0.1305262" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="bb8316c7-1b26-4555-9d52-bd4687de6172" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3BCHEST" />
+					<attribute id="Stats" type="FixedString" value="OBJ_Chest_Wood_Mimic" />
+					<attribute id="TemplateName" type="FixedString" value="abc4056e-f96d-473c-bfa8-0da70b8d2d8a" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="UND_KC_Mimic" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="CTY_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="4080649e-9db6-ff65-b929-e6cc6dde200d" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-62.50115 -39.194336 1020.57983" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.1305262 0 -0.9914449" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

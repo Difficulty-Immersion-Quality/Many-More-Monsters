@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="5" revision="0" build="0" lslib_meta="v1,bswap_guids" />
+	<region id="root">
+		<node id="root">
+			<children>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="7fb161d6-9169-4555-ae5f-6862b76bb5b9" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Barbarian" />
+					<attribute id="UUID" type="guid" value="0daaaf59-234a-4a49-b697-890e92711511" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="22c37756-089e-4dbf-a1e8-6e3503c78147" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Bard" />
+					<attribute id="UUID" type="guid" value="ee743316-8379-40c1-9993-b6b8e33a1dbb" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="0d0ff51f-47cd-40fd-a5c6-c9daa148a450" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Cleric" />
+					<attribute id="UUID" type="guid" value="8c54ff78-98f3-4ec6-9c84-3b71fb75706f" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="fb7e113a-2d3e-4981-bd71-49b075c79cd2" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Druid" />
+					<attribute id="UUID" type="guid" value="58f5278e-aa40-4508-ae09-b2686ce2518b" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="fe0fa98b-52be-4993-830f-7b4fe4c5f803" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Fighter" />
+					<attribute id="UUID" type="guid" value="14b49da9-8f6b-48e3-b6fc-2705e19c954e" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="25aa19d3-6aac-4deb-90b1-a185e062aedd" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Monk" />
+					<attribute id="UUID" type="guid" value="114cea72-4570-45d3-8fdd-0cd61a0a50ab" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="b2dc3219-5fbd-46dd-b8a5-404098a16b4e" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Paladin" />
+					<attribute id="UUID" type="guid" value="a1a4e77a-0f7a-4e43-8a9e-4ffe4bb013d3" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="0538a004-947a-4277-be12-df60bc3f919a" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Ranger" />
+					<attribute id="UUID" type="guid" value="365899ab-3bc2-494c-967e-e96fed8c5752" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="9d8a7e34-9e27-42a0-8403-4360c4faa877" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Rogue" />
+					<attribute id="UUID" type="guid" value="344367f3-7b96-44d5-a812-ab8e03f7d7c2" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="5dae89dd-d465-4514-aff2-c72d7e6c6b73" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Sorcerer" />
+					<attribute id="UUID" type="guid" value="6f0bfb15-0a0d-484a-b47c-2dcad812dd49" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="a3826c71-afba-4337-a2ad-1fc631fb2b4b" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Warlock" />
+					<attribute id="UUID" type="guid" value="f5d9783f-139e-4050-81ab-481d964cf630" />
+				</node>
+				<node id="ProgressionDescription">
+					<attribute id="Hidden" type="bool" value="True" />
+					<attribute id="ProgressionTableId" type="guid" value="bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" />
+					<attribute id="Type" type="FixedString" value="MMM_NPC_Wizard" />
+					<attribute id="UUID" type="guid" value="e289bfca-06d7-407e-8aa9-6b44e7d71028" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

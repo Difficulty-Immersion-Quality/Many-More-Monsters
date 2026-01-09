@@ -1,0 +1,1750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="328" lslib_meta="v1,bswap_guids" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
+					<attribute id="Icon" type="FixedString" value="Item_CONT_Egg_Owlbear_A" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="c1525d16-e04a-4020-aacf-1793ce7bad0a" />
+					<attribute id="Name" type="LSString" value="MMM_BULETTEEGG" />
+					<attribute id="ParentTemplateId" type="FixedString" value="bed27b85-63f8-4bb4-a363-fc0246b36c25" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="9e68a342-521e-812f-4ca9-8b06bdbcf559" />
+					<attribute id="ReadinessFlags" type="uint32" value="128" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_BULETTEEGG" />
+					<attribute id="Tooltip" type="uint8" value="1" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="8f5a36a8-c3b6-fdd8-4426-04fea96b93c5" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115196665790668" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.449144" />
+									<attribute id="IsIgnoringScale" type="bool" value="False" />
+									<attribute id="Max" type="fvec3" value="-0.06 0.09 -0.05" />
+									<attribute id="Min" type="fvec3" value="0.06 0 0.05" />
+									<attribute id="Radius" type="float" value="0.421622" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.449144" />
+									<attribute id="IsIgnoringScale" type="bool" value="False" />
+									<attribute id="Max" type="fvec3" value="-0.06 0.09 -0.05" />
+									<attribute id="Min" type="fvec3" value="0.06 0 0.05" />
+									<attribute id="Radius" type="float" value="0.421622" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.449144" />
+									<attribute id="IsIgnoringScale" type="bool" value="False" />
+									<attribute id="Max" type="fvec3" value="-0.03 0.09 -0.025" />
+									<attribute id="Min" type="fvec3" value="0.03 0 0.025" />
+									<attribute id="Radius" type="float" value="0.210811" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="GameMaster">
+							<attribute id="GameMasterSpawnSubSection" type="TranslatedString" handle="hfb4d869eg8b7ag4636g82f0g4f713ce86d80" version="1" />
+						</node>
+						<node id="InventoryList" />
+						<node id="OnUsePeaceActions" />
+						<node id="ScriptOverrides" />
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Description" type="TranslatedString" handle="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1" />
+					<attribute id="DropSound" type="FixedString" value="820221fa-5b87-7b87-3487-57ad0259f358" />
+					<attribute id="Icon" type="FixedString" value="Generated_ARM_Camp_Shoes" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="820221fa-5b87-7b87-3487-57ad0259f358" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="c4fe6d69-b19a-40e6-b01f-f2e7e3fdec9d" />
+					<attribute id="Name" type="LSString" value="MMM_BAILEYSHOE" />
+					<attribute id="ParentTemplateId" type="FixedString" value="2ca79447-a79b-41a0-abab-085c2aeedf3e" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="780c0757-b788-ee3a-d08f-d0c165f35569" />
+					<attribute id="PickupSound" type="FixedString" value="97565df5-52e7-3d7e-17be-be9ac825d061" />
+					<attribute id="ReadinessFlags" type="uint32" value="128" />
+					<attribute id="Stats" type="FixedString" value="MMM_BAILEYSHOE" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="maxStackAmount" type="int32" value="1" />
+					<attribute id="UseSound" type="FixedString" value="ba3a74f8-c087-3b5a-870c-d62c4c3367bb" />
+					<attribute id="VisualTemplate" type="FixedString" value="7eed368d-dfae-1bce-0552-8ac7206331c9" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209008" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.438493" />
+									<attribute id="Max" type="fvec3" value="0.15109797 0.29022923 0.10204773" />
+									<attribute id="Min" type="fvec3" value="-0.14264913 -0.00011408329 -0.16295673" />
+									<attribute id="Radius" type="float" value="0.1775075" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.438493" />
+									<attribute id="Max" type="fvec3" value="0.30219594 0.29022923 0.20409545" />
+									<attribute id="Min" type="fvec3" value="-0.28529826 -0.00011408329 -0.32591346" />
+									<attribute id="Radius" type="float" value="0.355015" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.438493" />
+									<attribute id="Max" type="fvec3" value="0.30219594 0.29022923 0.20409545" />
+									<attribute id="Min" type="fvec3" value="-0.28529826 -0.00011408329 -0.32591346" />
+									<attribute id="Radius" type="float" value="0.355015" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="4" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<attribute id="ExternalCauseAsSurfaceOwner" type="bool" value="True" />
+											<attribute id="LifeTime" type="float" value="0" />
+											<attribute id="Radius" type="float" value="2" />
+											<attribute id="SurfaceType" type="FixedString" value="SurfaceAlcohol" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="8b16a1d3-026d-5bfe-e9e6-d87b875fbf59" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Visuals">
+							<children>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="7d73f501-f65e-46af-a13b-2cacf3985d05" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="ed57f5e1-5d01-3294-8755-881626779cdd" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="71180b76-5752-4a97-b71f-911a69197f58" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="8e4f6f12-0c85-132c-a2b7-3efde68624cd" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="e39505f7-f576-4e70-a99e-8e29cd381a11" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="bd798f59-d57a-30fd-b35b-142371c9656f" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="47c0315c-7dc6-4862-b39b-8bf3a10f8b54" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="c8ae275f-44fd-7bda-6212-77ed9d076a1f" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="f07faafa-0c6f-4f79-a049-70e96b23d51b" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="8c2cd7a0-74d8-7262-f186-703fb58e7c15" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="06aaae02-bb9e-4fa3-ac00-b08e13a5b0fa" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="81c9c84c-b03a-7b20-83f0-57f952551674" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="abf674d2-2ea4-4a74-ade0-125429f69f83" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="dd9a06fe-631c-051d-2bc4-7a1be23f6c9a" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="b4a34ce7-41be-44d9-8486-938fe1472149" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="14d573ab-6d37-2b8c-d569-4cff2652ed0f" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="a933e2a8-aee1-4ecb-80d2-8f47b706f024" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="954ae64b-54d1-9896-4929-4e34087efce0" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="8f00cf38-4588-433a-8175-8acdbbf33f33" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="8a9282f7-12b2-5eee-1166-63378b291ed1" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="5640e766-aa53-428d-815b-6a0b4ef95aca" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="45a92d15-a284-3bba-46d7-321fb9bdb67a" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="c491d027-4332-4fda-948f-4a3df6772baa" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="b13358e0-7413-9384-66ee-2811c58ad162" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="9a8bbeba-850c-402f-bac5-ff15696e6497" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="ca90fd4b-84f1-1ca6-df6a-bcfb48954cf8" />
+										</node>
+									</children>
+								</node>
+								<node id="Object">
+									<attribute id="MapKey" type="guid" value="6d38f246-15cb-48b5-9b85-378016a7a78e" />
+									<children>
+										<node id="MapValue">
+											<attribute id="Object" type="FixedString" value="fbac12f4-4239-649d-71a8-4c3c4cf90e12" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Description" type="TranslatedString" handle="hf338ba8cge707g4f98g9144gd88cea4c5ba2" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h8cdc10fdgaa61g4ec2g86f7g95aea1f6eb90" version="1" />
+					<attribute id="Flag" type="int32" value="0" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_Foundry_Misc_Gear_A" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="ef4e5e37-6bf9-4f2b-83a3-9d7a4695ea3a" />
+					<attribute id="Name" type="LSString" value="MMM_LOOT_SCROLL_SummonGrym" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="94a7c400-b2df-c54c-1675-1937920b7714" />
+					<attribute id="ReadinessFlags" type="uint32" value="8" />
+					<attribute id="Stats" type="FixedString" value="MMM_OBJ_Scroll_SummonGrym" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="916f78a4-779b-3e43-28eb-eefc26d9683d" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540922156" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+											<attribute id="Conditions" type="LSString" value="CanUseSpellScroll(&quot;MMM_Target_GRYMMODELN&quot;)" />
+											<attribute id="Consume" type="bool" value="False" />
+											<attribute id="SkillID" type="FixedString" value="MMM_Target_GRYMMODELN" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<attribute id="Consume" type="bool" value="False" />
+											<attribute id="SpellId" type="FixedString" value="MMM_Target_GRYMMODELN" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Description" type="TranslatedString" handle="h5f851559g3dd2g4df3g9631geb1d9aa0bb08" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hebaab843gf038g414ag966fg3e492b60d084" version="1" />
+					<attribute id="Icon" type="FixedString" value="Item_DEC_GEN_Towel_B" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="ef81ed44-57a8-4b5b-a9c3-c93be743c0ad" />
+					<attribute id="Name" type="LSString" value="MMM_OBJ_QUESTIONABLETOWEL" />
+					<attribute id="ParentTemplateId" type="FixedString" value="6eada639-321a-4a82-810e-07d4abcd7937" />
+					<attribute id="PhysicsOpenTemplate" type="FixedString" value="" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="3736f3e5-530f-df9f-7270-a6f214e91433" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="maxStackAmount" type="int32" value="1" />
+					<attribute id="Stats" type="FixedString" value="MMM_OBJ_QUESTIONABLETOWEL" />
+					<attribute id="VisualTemplate" type="FixedString" value="2ab7913f-8564-3d9c-ab6a-ae0a0608329d" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.16988176" />
+									<attribute id="Max" type="fvec3" value="0.27567655 0.15716463 0.3709458" />
+									<attribute id="Min" type="fvec3" value="-0.40874106 -0.012717128 -0.35716045" />
+									<attribute id="Radius" type="float" value="0.36405313" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.16988176" />
+									<attribute id="Max" type="fvec3" value="0.27567655 0.15716463 0.3709458" />
+									<attribute id="Min" type="fvec3" value="-0.40874106 -0.012717128 -0.35716045" />
+									<attribute id="Radius" type="float" value="0.36405313" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.16988176" />
+									<attribute id="Max" type="fvec3" value="0.27567655 0.15716463 0.3709458" />
+									<attribute id="Min" type="fvec3" value="-0.40874106 -0.012717128 -0.35716045" />
+									<attribute id="Radius" type="float" value="0.36405313" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="beast" />
+					<attribute id="BloodType" type="FixedString" value="Red" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CanJoinCombat" type="bool" value="True" />
+					<attribute id="CombatGroupID" type="FixedString" value="6eb7ddf3-21ce-4442-a35f-09363f28f2f0" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="995e8e1c-286a-4020-69f3-9a14b412a7da" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h23c98986gbbfag457eg86acg30dc672671a3" version="1" />
+					<attribute id="Icon" type="FixedString" value="995e8e1c-286a-4020-69f3-9a14b412a7da-_(Icon_Spider_Critter)" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LightID" type="FixedString" value="c20762da-c531-4a81-bb07-78a651af6b1b" />
+					<attribute id="MapKey" type="FixedString" value="04c2d10f-b08e-4966-9a71-352629e4f16f" />
+					<attribute id="Name" type="LSString" value="MMM_TINYSPIDY" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3c88c158-eebe-4e8a-bc20-e0c4ae336163" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="Scale" type="float" value="0.5" />
+					<attribute id="Stats" type="FixedString" value="MMM_TINYSPIDER2" />
+					<attribute id="StartCombatRange" type="float" value="50" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_SPIDERKINGSWARM" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="VisualTemplate" type="FixedString" value="" />
+					<attribute id="VocalVictoryResourceID" type="FixedString" value="" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115205255725059" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.4" />
+									<attribute id="Max" type="fvec3" value="0.4356737 0.52902335 0.45514265" />
+									<attribute id="Min" type="fvec3" value="-0.43567348 -0.028796911 -0.39202312" />
+									<attribute id="Radius" type="float" value="0.2" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.4" />
+									<attribute id="Max" type="fvec3" value="0.4356737 0.52902335 0.45514265" />
+									<attribute id="Min" type="fvec3" value="-0.43567348 -0.028796911 -0.39202312" />
+									<attribute id="Radius" type="float" value="0.35" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.4" />
+									<attribute id="Max" type="fvec3" value="0.4356737 0.52902335 0.45514265" />
+									<attribute id="Min" type="fvec3" value="-0.43567348 -0.028796911 -0.39202312" />
+									<attribute id="Radius" type="float" value="0.35" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams">
+							<attribute id="WorldClimbingBlendspace_DownB" type="FixedString" value="4a6f8da3-6276-967f-8f1a-13f41c17c949" />
+							<attribute id="WorldClimbingBlendspace_DownBHeight" type="float" value="1.35" />
+							<attribute id="WorldClimbingBlendspace_UpB" type="FixedString" value="6944f681-0d92-8f01-8c1d-f76e5505d236" />
+							<attribute id="WorldClimbingBlendspace_UpBHeight" type="float" value="1.35" />
+							<attribute id="WorldClimbingRadius" type="float" value="0.5" />
+						</node>
+						<node id="OnDeathActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="10" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="CellAtGrow" type="int32" value="2" />
+											<attribute id="ExternalCauseAsSurfaceOwner" type="bool" value="True" />
+											<attribute id="GrowTimer" type="float" value="0.4" />
+											<attribute id="LifeTime" type="float" value="60" />
+											<attribute id="SurfaceType" type="FixedString" value="SurfaceBlood" />
+											<attribute id="Timeout" type="float" value="0" />
+											<attribute id="TotalCells" type="int32" value="2" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="CasualExplorer" type="bool" value="True" />
+									<attribute id="Classic" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="HonorHardcore" type="bool" value="True" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_Jump_Spider_Tiny" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TacticianHardcore" type="bool" value="True" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="CasualExplorer" type="bool" value="True" />
+									<attribute id="Classic" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="HonorHardcore" type="bool" value="True" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Bite_TinySpider" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TacticianHardcore" type="bool" value="True" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="10a24282-b306-40f8-9e44-410799dc21cd" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="beast" />
+					<attribute id="BloodType" type="FixedString" value="Red" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CanJoinCombat" type="bool" value="True" />
+					<attribute id="CombatGroupID" type="FixedString" value="6eb7ddf3-21ce-4442-a35f-09363f28f2f0" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h362c9575g4b53g457cg90e5gb8b3a92e1d6b" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="IsLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="14abb173-f375-4dfd-96e2-afc6e7cba83f" />
+					<attribute id="Name" type="LSString" value="MMM_SPIDERKING" />
+					<attribute id="ParentTemplateId" type="FixedString" value="109c03cb-68d6-4f4f-ae9b-9fda250c5656" />
+					<attribute id="Stats" type="FixedString" value="MMM_SPIDERKINGBURSTER" />
+					<attribute id="Title" type="TranslatedString" handle="h399fcc06g1770g4184g8e29g9cf028d95946" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209027" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="46bf2460-7de1-6bba-140d-dd1238dbe671" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="29ead110-5d0b-6997-2916-d507d23fccd1" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="90bc8335-20e2-9814-a03b-2e1a273effbf" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="d572ca9f-beb1-6051-d209-31d85cd8437a" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_DEN_Jump_Spider" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Bite_SwordSpider" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="SpeakerGroupList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Pocket_Poor" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Exploration_Minor" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Exploration_Minor" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Archetype" type="FixedString" value="mage" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="ff3a8b45-befd-6010-3891-19f8ca844029" />
+					<attribute id="DisplayName" type="TranslatedString" handle="ha03d2997geeedg4348g87b9g3f8b6f695515" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Icon" type="FixedString" value="ff3a8b45-befd-6010-3891-19f8ca844029-_(Icon_Raphael_Devil)" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="7ecffc82-c69e-46d4-95ab-fe1737334116" />
+					<attribute id="Name" type="LSString" value="MMM_SUCCUBUS" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4877074c-bfd1-4ba5-9c8a-be33a3640e81" />
+					<attribute id="Race" type="guid" value="7631ede0-25d5-4d96-9425-3d0ebd536ea5" />
+					<attribute id="Stats" type="FixedString" value="Incubus" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115209550692752" />
+					<children>
+						<node id="LocomotionParams" />
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Claws" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_DrainingKiss_Incubus" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_FiendishCharm_Incubus" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_Fly" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="SpeakerGroupList">
+							<children>
+								<node id="SpeakerGroup">
+									<attribute id="Object" type="guid" value="460929d5-2150-8c98-bd90-1cc83c28ae28" />
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="ETHEREALNESS_INCUBUS_TECHNICAL" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="3806477c-65a7-4100-9f92-be4c12c4fa4f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
+					<attribute id="Archetype" type="FixedString" value="mimic" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6534c6a6gdaa4g4ecdgba41g2e26400261a8" version="1" />
+					<attribute id="Faction" type="guid" value="0a817e1b-ba2c-42cd-b5f3-bcf834521a4f" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Mimic" />
+					<attribute id="Icon" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b-_(Icon_Mimic)" />
+					<attribute id="IsLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="LightID" type="FixedString" value="8b3e871d-4f50-4d32-ba11-e6eee7e968b0" />
+					<attribute id="MapKey" type="FixedString" value="95a8f34e-f91c-4763-b947-b16751ff6378" />
+					<attribute id="Name" type="LSString" value="MMM_ACT2MIMIC" />
+					<attribute id="ParentTemplateId" type="FixedString" value="a0fd95e9-a8cc-4dc6-91bf-96c6f46014f0" />
+					<attribute id="Race" type="guid" value="31e1a2fe-0322-4540-95c3-9a28ad7fb202" />
+					<attribute id="SoundMovementStartEvent" type="FixedString" value="cacc26eb-b759-db43-55aa-f02f6a2dc232" />
+					<attribute id="SoundMovementStopEvent" type="FixedString" value="58e099ea-fcd8-0877-384a-c39a5058a008" />
+					<attribute id="SoundObjectIndex" type="uint8" value="4" />
+					<attribute id="SpellSet" type="FixedString" value="CommonBeastActions" />
+					<attribute id="Stats" type="FixedString" value="MMM_ACT2MIMICSTATS" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VocalAlertResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalAngryResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalAnticipationResourceID" type="FixedString" value="cef6ef8c-b9ef-e0ca-9d14-df07dd589b84" />
+					<attribute id="VocalAttackResourceID" type="FixedString" value="eada7377-ddab-13e8-0e07-e69776f35348" />
+					<attribute id="VocalAwakeResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalBoredResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalDeathResourceID" type="FixedString" value="0ed0aa1a-e9c3-77a0-69a9-15fe6ffaa7d3" />
+					<attribute id="VocalDodgeResourceID" type="FixedString" value="086b6a48-980d-8115-fb60-ae14e4406d86" />
+					<attribute id="VocalExhaustedResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalIdle1ResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalIdleCombat1ResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalInitiativeResourceID" type="FixedString" value="e9de03a0-1c93-28e7-938d-568725844f86" />
+					<attribute id="VocalPainResourceID" type="FixedString" value="7e75dadf-1456-d4d0-bd34-a9604ea4a60c" />
+					<attribute id="VocalRecoverResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalRelaxedResourceID" type="FixedString" value="f86517f4-1e80-a0e2-263b-53d55a301887" />
+					<attribute id="VocalVictoryResourceID" type="FixedString" value="5bb0a33e-0d7a-837b-4275-a6c8f5680a19" />
+					<attribute id="VocalWeakResourceID" type="FixedString" value="4f41c6ad-6d41-0ee1-d342-ed6e2384a06c" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.7" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.5" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.95" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="1.16" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<node id="FootStepInfos">
+							<children>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Right" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Right" />
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams">
+							<attribute id="IsWorldClimbingEnabled" type="bool" value="False" />
+							<attribute id="MaxDashDistance" type="float" value="2.664" />
+							<attribute id="MovementAcceleration" type="float" value="15" />
+							<attribute id="MovementSpeedDash" type="float" value="4" />
+							<attribute id="MovementSpeedRun" type="float" value="2" />
+							<attribute id="MovementSpeedSprint" type="float" value="2.01" />
+							<attribute id="MovementSpeedStroll" type="float" value="1.98" />
+							<attribute id="MovementSpeedWalk" type="float" value="1.99" />
+						</node>
+						<node id="PickingPhysics">
+							<children>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterSittingPicking" />
+									<attribute id="MapValue" type="FixedString" value="17d6a1c8-e453-fbda-5769-38f4d950a50a" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterDeadPicking" />
+									<attribute id="MapValue" type="FixedString" value="dd874e4c-bd91-0c01-e284-80cf3bf57099" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterLyingPicking" />
+									<attribute id="MapValue" type="FixedString" value="6323b0ce-dab3-6e85-bebc-301aceb84602" />
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
+								</node>
+							</children>
+						</node>
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Bite_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Tongue_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="693d950b-2617-43ac-8e3c-2ff5fda7f956" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
+					<attribute id="Archetype" type="FixedString" value="mimic" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6534c6a6gdaa4g4ecdgba41g2e26400261a8" version="1" />
+					<attribute id="Faction" type="guid" value="0a817e1b-ba2c-42cd-b5f3-bcf834521a4f" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Mimic" />
+					<attribute id="Icon" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b-_(Icon_Mimic)" />
+					<attribute id="IsLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="LightID" type="FixedString" value="8b3e871d-4f50-4d32-ba11-e6eee7e968b0" />
+					<attribute id="MapKey" type="FixedString" value="c3a019a8-bbae-4591-ad10-0f45580be467" />
+					<attribute id="Name" type="LSString" value="MMM_ACT3MIMIC" />
+					<attribute id="ParentTemplateId" type="FixedString" value="a0fd95e9-a8cc-4dc6-91bf-96c6f46014f0" />
+					<attribute id="Race" type="guid" value="31e1a2fe-0322-4540-95c3-9a28ad7fb202" />
+					<attribute id="SoundMovementStartEvent" type="FixedString" value="cacc26eb-b759-db43-55aa-f02f6a2dc232" />
+					<attribute id="SoundMovementStopEvent" type="FixedString" value="58e099ea-fcd8-0877-384a-c39a5058a008" />
+					<attribute id="SoundObjectIndex" type="uint8" value="4" />
+					<attribute id="SpellSet" type="FixedString" value="CommonBeastActions" />
+					<attribute id="Stats" type="FixedString" value="MMM_ACT3MIMICSTATS" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VocalAlertResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalAngryResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalAnticipationResourceID" type="FixedString" value="cef6ef8c-b9ef-e0ca-9d14-df07dd589b84" />
+					<attribute id="VocalAttackResourceID" type="FixedString" value="eada7377-ddab-13e8-0e07-e69776f35348" />
+					<attribute id="VocalAwakeResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalBoredResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalDeathResourceID" type="FixedString" value="0ed0aa1a-e9c3-77a0-69a9-15fe6ffaa7d3" />
+					<attribute id="VocalDodgeResourceID" type="FixedString" value="086b6a48-980d-8115-fb60-ae14e4406d86" />
+					<attribute id="VocalExhaustedResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalIdle1ResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalIdleCombat1ResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalInitiativeResourceID" type="FixedString" value="e9de03a0-1c93-28e7-938d-568725844f86" />
+					<attribute id="VocalPainResourceID" type="FixedString" value="7e75dadf-1456-d4d0-bd34-a9604ea4a60c" />
+					<attribute id="VocalRecoverResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalRelaxedResourceID" type="FixedString" value="f86517f4-1e80-a0e2-263b-53d55a301887" />
+					<attribute id="VocalVictoryResourceID" type="FixedString" value="5bb0a33e-0d7a-837b-4275-a6c8f5680a19" />
+					<attribute id="VocalWeakResourceID" type="FixedString" value="4f41c6ad-6d41-0ee1-d342-ed6e2384a06c" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.7" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.5" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.95" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="1.16" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<node id="FootStepInfos">
+							<children>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Right" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Right" />
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams">
+							<attribute id="IsWorldClimbingEnabled" type="bool" value="False" />
+							<attribute id="MaxDashDistance" type="float" value="2.664" />
+							<attribute id="MovementAcceleration" type="float" value="15" />
+							<attribute id="MovementSpeedDash" type="float" value="4" />
+							<attribute id="MovementSpeedRun" type="float" value="2" />
+							<attribute id="MovementSpeedSprint" type="float" value="2.01" />
+							<attribute id="MovementSpeedStroll" type="float" value="1.98" />
+							<attribute id="MovementSpeedWalk" type="float" value="1.99" />
+						</node>
+						<node id="PickingPhysics">
+							<children>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterSittingPicking" />
+									<attribute id="MapValue" type="FixedString" value="17d6a1c8-e453-fbda-5769-38f4d950a50a" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterDeadPicking" />
+									<attribute id="MapValue" type="FixedString" value="dd874e4c-bd91-0c01-e284-80cf3bf57099" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterLyingPicking" />
+									<attribute id="MapValue" type="FixedString" value="6323b0ce-dab3-6e85-bebc-301aceb84602" />
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
+								</node>
+							</children>
+						</node>
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Bite_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Tongue_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="693d950b-2617-43ac-8e3c-2ff5fda7f956" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Archetype" type="FixedString" value="mage" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="01a8b130-e003-4be7-3cd4-8d037fc2e7ab" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6bd23a61gb09fg447eg9631g2453c101ad63" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Icon" type="FixedString" value="01a8b130-e003-4be7-3cd4-8d037fc2e7ab-_(Icon_Raphael_Devil)" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="caa4cb59-d5b0-4dfe-a5da-fba628830896" />
+					<attribute id="Name" type="LSString" value="MMM_INCUBUS" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4877074c-bfd1-4ba5-9c8a-be33a3640e81" />
+					<attribute id="Race" type="guid" value="9d44d79f-6db0-49da-90b0-0a1573d91098" />
+					<attribute id="Stats" type="FixedString" value="Incubus" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="LocomotionParams" />
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Claws" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_DrainingKiss_Incubus" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_FiendishCharm_Incubus" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_Fly" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="SpeakerGroupList">
+							<children>
+								<node id="SpeakerGroup">
+									<attribute id="Object" type="guid" value="93e1e11e-0b9f-e317-c35a-51ee75445f5f" />
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="ETHEREALNESS_INCUBUS_TECHNICAL" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="8f74d144-041e-4035-a9ac-72f41fc32de7" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="DisplayName" type="TranslatedString" handle="ha7c9ec67g94c9g4409gab01g17635f327f24" version="1" />
+					<attribute id="DisableEquipping" type="bool" value="True" />
+					<attribute id="Equipment" type="FixedString" value="" />
+					<attribute id="Faction" type="guid" value="40a90873-e3f0-478c-99f9-11e71f068f55" />
+					<attribute id="Flag" type="int32" value="0" />
+					<attribute id="IsBoss" type="bool" value="False" />
+					<attribute id="IsLootable" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="d218e838-3e04-4e99-b0cb-47dbb4184e3e" />
+					<attribute id="Name" type="LSString" value="MMM_GRYMNANO" />
+					<attribute id="Scale" type="float" value="0.1" />
+					<attribute id="SpellSet" type="FixedString" value="CommonSummonActions" />
+					<attribute id="Stats" type="FixedString" value="MMM_GRYMNANO" />
+					<attribute id="ParentTemplateId" type="FixedString" value="fb70bad0-9438-47c3-84dc-d9c6718ca4c5" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115209550692654" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1186705f-c239-e022-e3de-26132f651a17" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="8ee4d698-fa78-5a34-e330-f6d575e7ed34" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="ScriptConfigGlobalParameters" />
+						<node id="StatusList" />
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="50" />
+									<attribute id="Skill" type="FixedString" value="Target_Slam_AdamantineGolemN" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="75" />
+									<attribute id="Skill" type="FixedString" value="Shout_Stomp_AdamantineGolemN" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="70" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="MMM_Projectile_GRYMROCKETPUNCHN" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="26c78224-a4c1-43e4-b943-75e7fa1bfa41" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
+					<attribute id="Archetype" type="FixedString" value="mimic" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6534c6a6gdaa4g4ecdgba41g2e26400261a8" version="1" />
+					<attribute id="Faction" type="guid" value="0a817e1b-ba2c-42cd-b5f3-bcf834521a4f" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Mimic" />
+					<attribute id="Icon" type="FixedString" value="7f4a72c4-286b-3aec-5fbf-96ee170ed90b-_(Icon_Mimic)" />
+					<attribute id="IsLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="LightID" type="FixedString" value="8b3e871d-4f50-4d32-ba11-e6eee7e968b0" />
+					<attribute id="MapKey" type="FixedString" value="de1e25f5-fa08-430a-aaf8-e0cc80406ba6" />
+					<attribute id="Name" type="LSString" value="MMM_ACT1MIMIC" />
+					<attribute id="ParentTemplateId" type="FixedString" value="a0fd95e9-a8cc-4dc6-91bf-96c6f46014f0" />
+					<attribute id="Race" type="guid" value="31e1a2fe-0322-4540-95c3-9a28ad7fb202" />
+					<attribute id="SoundMovementStartEvent" type="FixedString" value="cacc26eb-b759-db43-55aa-f02f6a2dc232" />
+					<attribute id="SoundMovementStopEvent" type="FixedString" value="58e099ea-fcd8-0877-384a-c39a5058a008" />
+					<attribute id="SoundObjectIndex" type="uint8" value="4" />
+					<attribute id="SpellSet" type="FixedString" value="CommonBeastActions" />
+					<attribute id="Stats" type="FixedString" value="MMM_ACT1MIMICSTATS" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VocalAlertResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalAngryResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalAnticipationResourceID" type="FixedString" value="cef6ef8c-b9ef-e0ca-9d14-df07dd589b84" />
+					<attribute id="VocalAttackResourceID" type="FixedString" value="eada7377-ddab-13e8-0e07-e69776f35348" />
+					<attribute id="VocalAwakeResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalBoredResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalDeathResourceID" type="FixedString" value="0ed0aa1a-e9c3-77a0-69a9-15fe6ffaa7d3" />
+					<attribute id="VocalDodgeResourceID" type="FixedString" value="086b6a48-980d-8115-fb60-ae14e4406d86" />
+					<attribute id="VocalExhaustedResourceID" type="FixedString" value="16ddc819-b58b-e645-eb05-c67eb2eef742" />
+					<attribute id="VocalIdle1ResourceID" type="FixedString" value="5d0e91e0-de24-dbd9-d2b5-abe40bf97995" />
+					<attribute id="VocalIdleCombat1ResourceID" type="FixedString" value="8d40c345-127e-7dad-c4fa-cd916dddf9a3" />
+					<attribute id="VocalInitiativeResourceID" type="FixedString" value="e9de03a0-1c93-28e7-938d-568725844f86" />
+					<attribute id="VocalPainResourceID" type="FixedString" value="7e75dadf-1456-d4d0-bd34-a9604ea4a60c" />
+					<attribute id="VocalRecoverResourceID" type="FixedString" value="4f7cabaa-893f-07a9-b6b7-b167551b7f25" />
+					<attribute id="VocalRelaxedResourceID" type="FixedString" value="f86517f4-1e80-a0e2-263b-53d55a301887" />
+					<attribute id="VocalVictoryResourceID" type="FixedString" value="5bb0a33e-0d7a-837b-4275-a6c8f5680a19" />
+					<attribute id="VocalWeakResourceID" type="FixedString" value="4f41c6ad-6d41-0ee1-d342-ed6e2384a06c" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.7" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.5" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="0.95" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="3" />
+									<attribute id="Max" type="fvec3" value="1.1136494 2.485639 0.73358774" />
+									<attribute id="Min" type="fvec3" value="-1.1150894 -0.04565811 -3.579154" />
+									<attribute id="Radius" type="float" value="1.16" />
+									<attribute id="Shape" type="uint8" value="2" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<node id="FootStepInfos">
+							<children>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Front_Right" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Left" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_02" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootScuffEventName" type="FixedString" value="Movement_Scuff" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_Back_Right" />
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams">
+							<attribute id="IsWorldClimbingEnabled" type="bool" value="False" />
+							<attribute id="MaxDashDistance" type="float" value="2.664" />
+							<attribute id="MovementAcceleration" type="float" value="15" />
+							<attribute id="MovementSpeedDash" type="float" value="4" />
+							<attribute id="MovementSpeedRun" type="float" value="2" />
+							<attribute id="MovementSpeedSprint" type="float" value="2.01" />
+							<attribute id="MovementSpeedStroll" type="float" value="1.98" />
+							<attribute id="MovementSpeedWalk" type="float" value="1.99" />
+						</node>
+						<node id="PickingPhysics">
+							<children>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterSittingPicking" />
+									<attribute id="MapValue" type="FixedString" value="17d6a1c8-e453-fbda-5769-38f4d950a50a" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterDeadPicking" />
+									<attribute id="MapValue" type="FixedString" value="dd874e4c-bd91-0c01-e284-80cf3bf57099" />
+								</node>
+								<node id="PickingPhysicsTemplates">
+									<attribute id="MapKey" type="FixedString" value="CharacterLyingPicking" />
+									<attribute id="MapValue" type="FixedString" value="6323b0ce-dab3-6e85-bebc-301aceb84602" />
+								</node>
+							</children>
+						</node>
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Bite_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Target_Tongue_Mimic" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="693d950b-2617-43ac-8e3c-2ff5fda7f956" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

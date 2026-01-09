@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="5" revision="0" build="0" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="Flags">
+		<node id="Flags">
+			<attribute id="UUID" type="guid" value="4b0dc035-7f21-4432-a9ba-36e1897a758c" />
+			<attribute id="Name" type="FixedString" value="MMM_Act3B_Mimics" />
+			<attribute id="Description" type="LSString" value="Act 3B Mimics have been spawned" />
+			<attribute id="Usage" type="uint8" value="5" />
+		</node>
+	</region>
+</save>
