@@ -18,14 +18,14 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSWString" value="Rob Lapham" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Adds more enemies to the world" />
-          <attribute id="Folder" type="LSWString" value="ManyMoreMonstersEO" />
+          <attribute id="Description" type="LSWString" value="Moves some enemies around to be more compatible with EO. May be buggy depending on EO scripting. Warning: Not extensively testing this myself (but no problems on initial run)." />
+          <attribute id="Folder" type="LSWString" value="ManyMoreMonsters_EOPatch" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="FixedString" value="Many More Monsters EO" />
+          <attribute id="Name" type="FixedString" value="Many More Monsters - Encounters Overhaul Compatibility Patch" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />

@@ -18,14 +18,14 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSWString" value="Rob Lapham" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Zero exp for Many More Monsters" />
-          <attribute id="Folder" type="LSWString" value="ManyMoreMonstersZero" />
+          <attribute id="Description" type="LSWString" value="Makes all added enemies give 0 exp. Will always be compatible with future versions. If something gave exp it's because I didn't assign it a custom exp table key, not because this needs updating." />
+          <attribute id="Folder" type="LSWString" value="ManyMoreMonsters_ZeroExp" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="FixedString" value="Many More Monsters Zero Exp" />
+          <attribute id="Name" type="FixedString" value="Many More Monsters - Zero Exp" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />
