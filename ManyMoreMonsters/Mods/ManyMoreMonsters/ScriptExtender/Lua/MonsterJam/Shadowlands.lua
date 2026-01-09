@@ -664,7 +664,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
     end
     ModifyMonstersShadowlands()
     ToiletGuyTrigger()
-    PixieTalking()
+    -- PixieTalking()
 end)
 
 --Enter Combat Listener
