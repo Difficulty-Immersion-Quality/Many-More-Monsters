@@ -1,0 +1,40 @@
+// ==================================== Variable HP ====================================
+// TODO: These are probably best to apply a status with a StackId to avoid any nonsense passive boost duplication that can take place. Refer to the mod Passive Boost Deduplicator by osirisofinternet.
+// data "StackId" "MMM_HPMODIFIER"
+// data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;ApplyToDead;IgnoreResting"
+
+new entry "MMM_HPMODIFIER1"
+type "PassiveData"
+// Variable HP
+data "DisplayName" "h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe;1"
+data "Properties" "IsHidden"
+data "Conditions" "not Player() or not Party()"
+data "BoostConditions" "not Player() or not Party()"
+data "Boosts" "IncreaseMaxHP(1d4)"
+
+new entry "MMM_HPMODIFIER2"
+type "PassiveData"
+// Variable HP
+data "DisplayName" "h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe;1"
+data "Properties" "IsHidden"
+data "Conditions" "not Player() or not Party()"
+data "BoostConditions" "not Player() or not Party()"
+data "Boosts" "IncreaseMaxHP(2d4)"
+
+new entry "MMM_HPMODIFIER3"
+type "PassiveData"
+// Variable HP
+data "DisplayName" "h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe;1"
+data "Properties" "IsHidden"
+data "Conditions" "not Player() or not Party()"
+data "BoostConditions" "not Player() or not Party()"
+data "Boosts" "IncreaseMaxHP(3d4)"
+
+new entry "MMM_HPMODIFIER4"
+type "PassiveData"
+// Variable HP
+data "DisplayName" "h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe;1"
+data "Properties" "IsHidden"
+data "Conditions" "not Player() or not Party()"
+data "BoostConditions" "not Player() or not Party()"
+data "Boosts" "IncreaseMaxHP(-1d4)"

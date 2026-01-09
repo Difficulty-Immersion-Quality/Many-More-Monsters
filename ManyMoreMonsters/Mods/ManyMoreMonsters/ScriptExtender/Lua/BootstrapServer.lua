@@ -1,5 +1,4 @@
 Ext.Require("MonsterJam/Globallands.lua")
-Ext.Require("MonsterJam/HPlands.lua")
 Ext.Require("MonsterJam/Wildlands.lua")
 Ext.Require("MonsterJam/Crechelands.lua")
 Ext.Require("MonsterJam/Shadowlands.lua")
