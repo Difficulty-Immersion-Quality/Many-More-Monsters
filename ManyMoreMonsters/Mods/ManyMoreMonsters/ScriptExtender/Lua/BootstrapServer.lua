@@ -7,4 +7,4 @@ Ext.Require("MonsterJam/Citylands.lua")
 Ext.Require("MonsterJam/Brainlands.lua")
 Ext.Require("Debug/Debugger.lua")
 
-print("MONSTER JAM LOADED")
+print("Many More Monsters loaded")
