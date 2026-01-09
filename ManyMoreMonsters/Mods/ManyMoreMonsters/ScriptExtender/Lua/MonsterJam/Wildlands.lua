@@ -943,16 +943,22 @@ local function GrymFailsafe()
 end
 
 --Mike Talking
-local function MikeTalking()
-    if Osi.IsInCombat(Mike1) == 0 then
-        Osi.ApplyStatus(Mike1, "MMM_MIKECOMBAT", 6, 1, "")
-        Ext.Timer.WaitFor(10000, function()
-            MikeTalking()
-        end)
-    elseif Osi.IsInCombat(Mike1) == 1 then
-        return
-    end
-end
+-- TODO: Commented out MikeTalking function because in seemingly niche circumstances it can cause a recursive loop that lags the hell out of the game; lowkey save killer.
+-- local function MikeTalking()
+--     if not Osi.IsCharacter(Mike1) then
+--         return
+--     end
+
+--     if Osi.IsInCombat(Mike1) == 0 then
+--         Osi.ApplyStatus(Mike1, "MMM_MIKECOMBAT", 6, 1, "")
+--         Ext.Timer.WaitFor(10000, function()
+--             -- Only repeat if still valid and not in combat
+--             if Osi.IsInCombat(Mike1) == 0 then
+--                 MikeTalking()
+--             end
+--         end)
+--     end
+-- end
 
 
 --Counters
@@ -1008,7 +1014,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
     PatrollingZhentDog()
     PatrollingDuergar()
     GrymFailsafe()
-    MikeTalking()
+    -- MikeTalking()
 end)
 
 --Enter Combat Listener
