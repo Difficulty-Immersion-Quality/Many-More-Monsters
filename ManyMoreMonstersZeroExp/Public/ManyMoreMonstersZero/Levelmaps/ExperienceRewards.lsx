@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="307"/>
+    <region id="ExperienceRewards">
+        <node id="root">
+            <children>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="MMMZero"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="cbf0724b-422a-4a53-87b2-fb02882f1fd2"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="MMMCivilian"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="7b24a2a7-8168-4a04-88f4-a1f8d82745fb"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="LevelSource" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="MMMPack"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="35f9fe70-5391-42c4-9f86-edcb918ee8b7"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="LevelSource" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="MMMCombatant"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="dba70c09-cec3-476b-94b1-ce86fe8b3e4d"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="LevelSource" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="MMMElite"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="1022e3b8-99b3-46d4-b344-12a5dee1aa70"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="LevelSource" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="MMMMiniboss"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="da583f81-32a6-4dec-95e7-f98893bfcfba"/>
+                </node>
+                <node id="ExperienceReward">
+                    <attribute id="Level1" type="uint32" value="0"/>
+                    <attribute id="Level10" type="uint32" value="0"/>
+                    <attribute id="Level11" type="uint32" value="0"/>
+                    <attribute id="Level12" type="uint32" value="0"/>
+                    <attribute id="Level2" type="uint32" value="0"/>
+                    <attribute id="Level3" type="uint32" value="0"/>
+                    <attribute id="Level4" type="uint32" value="0"/>
+                    <attribute id="Level5" type="uint32" value="0"/>
+                    <attribute id="Level6" type="uint32" value="0"/>
+                    <attribute id="Level7" type="uint32" value="0"/>
+                    <attribute id="Level8" type="uint32" value="0"/>
+                    <attribute id="Level9" type="uint32" value="0"/>
+                    <attribute id="LevelSource" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="MMMBoss"/>
+                    <attribute id="RewardType" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="5d26ba3d-6f84-465e-870a-d8cbb577c818"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
