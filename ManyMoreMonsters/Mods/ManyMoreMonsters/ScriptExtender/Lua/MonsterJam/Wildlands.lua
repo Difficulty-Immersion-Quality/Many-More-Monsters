@@ -691,6 +691,7 @@ local function SpawnOof()
     end
 end
 
+-- TODO: He should not be going prone outside of his turn and such.
 --Oof clumsy roller
 local function ClumsyOof()
     local OofClumsySelector = Ext.Utils.Random(1,6)
