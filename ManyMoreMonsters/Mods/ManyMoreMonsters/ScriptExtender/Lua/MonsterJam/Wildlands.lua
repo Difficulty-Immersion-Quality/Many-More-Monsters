@@ -237,10 +237,11 @@ end
 
 --Create Mimics
 local function CreateAct1Mimics()
-    local Act1ChestList = { Act1Chest1, Act1Chest2, Act1Chest3, Act1Chest4, Act1Chest5, Act1Chest6, Act1Chest7, Act1Chest8, Act1Chest9, Act1Chest10, 
-                            Act1Chest11, Act1Chest12, Act1Chest13, Act1Chest14, Act1Chest15, Act1Chest16 }
-    for _,PossibleMimic in ipairs(Act1ChestList) do
-    local IsItAMimic = Ext.Utils.Random(1,5)
+    local Act1ChestList = { Act1Chest1, Act1Chest2, Act1Chest3, Act1Chest4, Act1Chest5, Act1Chest6, Act1Chest7,
+        Act1Chest8, Act1Chest9, Act1Chest10,
+        Act1Chest11, Act1Chest12, Act1Chest13, Act1Chest14, Act1Chest15, Act1Chest16 }
+    for _, PossibleMimic in ipairs(Act1ChestList) do
+        local IsItAMimic = Ext.Math.Random(1, 5)
         if IsItAMimic == 1 then
             print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC1", -1, 1, PossibleMimic)
@@ -262,30 +263,34 @@ function TurnIntoMimic1(item, character)
     if Osi.IsDead(item) == 1 then
         return
     end
-    local x,y,z = Osi.GetPosition(item)
+    local x, y, z = Osi.GetPosition(item)
     local MimicSpawnID = Osi.CreateAt(Act1Mimic, x, y, z, 0, 1, '')
     if MimicSpawnID then
-        if (Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
-        elseif Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
+        if (Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
+        elseif Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
         end
         Osi.MoveAllItemsTo(item, MimicSpawnID, 0, 0, 1)
     end
     Osi.SetOnStage(item, 0)
 end
 
---set urinating goblin animation 
+--set urinating goblin animation
 local function UrinatingGoblin()
     if (Osi.IsDead(GoblinPee) == 0) then
-        Osi.PlayLoopingAnimation(GoblinPee, "CUST_Stretching_01_9af703b0-c02f-4c17-bfee-7e11f1f80d6b", "CUST_Urinating_01_d7b689ac-2183-4c62-a481-eb5db76ac243", "CUST_Stretching_01_9af703b0-c02f-4c17-bfee-7e11f1f80d6b", "", "", "", "")
+        Osi.PlayLoopingAnimation(GoblinPee, "CUST_Stretching_01_9af703b0-c02f-4c17-bfee-7e11f1f80d6b",
+            "CUST_Urinating_01_d7b689ac-2183-4c62-a481-eb5db76ac243",
+            "CUST_Stretching_01_9af703b0-c02f-4c17-bfee-7e11f1f80d6b", "", "", "", "")
     end
 end
 
 --Intellect devourer 1 moving randomly
 local function ID1WalkAround()
     if ((Osi.IsDead(AmbushID1) == 0) and Osi.IsInCombat(AmbushID1) == 0) then
-        local ID1RandomNumber = Ext.Utils.Random(1, 6)
+        local ID1RandomNumber = Ext.Math.Random(1, 6)
         if ID1RandomNumber == 1 then
             Osi.CharacterMoveToPosition(AmbushID1, 175.19821166992, 11.845703125, 321.48937988281, "Walk", "", 0)
         elseif ID1RandomNumber == 2 then
@@ -299,7 +304,7 @@ local function ID1WalkAround()
         elseif ID1RandomNumber == 6 then
             Osi.CharacterMoveToPosition(AmbushID1, 179.89080810547, 11.873046875, 320.41668701172, "Walk", "", 0)
         end
-        local ID1WaitTImer = Ext.Utils.Random(1, 6)
+        local ID1WaitTImer = Ext.Math.Random(1, 6)
         if ID1WaitTImer == 1 then
             Ext.Timer.WaitFor(6000, function()
                 ID1WalkAround()
@@ -331,7 +336,7 @@ end
 --Intellect devourer 2 moving randomly
 local function ID2WalkAround()
     if ((Osi.IsDead(AmbushID2) == 0) and Osi.IsInCombat(AmbushID2) == 0) then
-        local ID1RandomNumber = Ext.Utils.Random(1, 6)
+        local ID1RandomNumber = Ext.Math.Random(1, 6)
         if ID1RandomNumber == 1 then
             Osi.CharacterMoveToPosition(AmbushID2, 175.19821166992, 11.845703125, 321.48937988281, "Walk", "", 0)
         elseif ID1RandomNumber == 2 then
@@ -345,7 +350,7 @@ local function ID2WalkAround()
         elseif ID1RandomNumber == 6 then
             Osi.CharacterMoveToPosition(AmbushID2, 179.89080810547, 11.873046875, 320.41668701172, "Walk", "", 0)
         end
-        local ID1WaitTImer = Ext.Utils.Random(1, 6)
+        local ID1WaitTImer = Ext.Math.Random(1, 6)
         if ID1WaitTImer == 1 then
             Ext.Timer.WaitFor(6000, function()
                 ID2WalkAround()
@@ -377,62 +382,76 @@ end
 --Patrolling Minotaur
 local function PatrollingMinotaur()
     if Osi.IsDead(AlphaM) == 0 and
-    Osi.IsInCombat(AlphaM) == 0 and
-    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+        Osi.IsInCombat(AlphaM) == 0 and
+        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
         Osi.CharacterMoveToPosition(AlphaM, 169.73611450195, 53.6142578125, -183.00788879395, "Walk", "", 0)
         Ext.Timer.WaitFor(8000, function()
             if Osi.IsDead(AlphaM) == 0 and
-            Osi.IsInCombat(AlphaM) == 0 and
-            Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                Osi.IsInCombat(AlphaM) == 0 and
+                Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
                 Osi.CharacterMoveToPosition(AlphaM, 156.88412475586, 52.0478515625, -190.68255615234, "Walk", "", 0)
                 Ext.Timer.WaitFor(8000, function()
                     if Osi.IsDead(AlphaM) == 0 and
-                    Osi.IsInCombat(AlphaM) == 0 and
-                    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                        Osi.IsInCombat(AlphaM) == 0 and
+                        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
                         Osi.CharacterMoveToPosition(AlphaM, 142.38371276855, 48.875, -166.44003295898, "Walk", "", 0)
                         Ext.Timer.WaitFor(8000, function()
                             if Osi.IsDead(AlphaM) == 0 and
-                            Osi.IsInCombat(AlphaM) == 0 and
-                            Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                Osi.CharacterMoveToPosition(AlphaM, 137.67384338379, 53.431640625, -153.70143127441, "Walk", "", 0)
+                                Osi.IsInCombat(AlphaM) == 0 and
+                                Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                Osi.CharacterMoveToPosition(AlphaM, 137.67384338379, 53.431640625, -153.70143127441,
+                                    "Walk", "", 0)
                                 Ext.Timer.WaitFor(8000, function()
                                     if Osi.IsDead(AlphaM) == 0 and
-                                    Osi.IsInCombat(AlphaM) == 0 and
-                                    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                        Osi.CharacterMoveToPosition(AlphaM, 139.3719329834, 53.9130859375, -138.57759094238, "Walk", "", 0)
+                                        Osi.IsInCombat(AlphaM) == 0 and
+                                        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                        Osi.CharacterMoveToPosition(AlphaM, 139.3719329834, 53.9130859375,
+                                            -138.57759094238, "Walk", "", 0)
                                         Ext.Timer.WaitFor(8000, function()
                                             if Osi.IsDead(AlphaM) == 0 and
-                                            Osi.IsInCombat(AlphaM) == 0 and
-                                            Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                Osi.CharacterMoveToPosition(AlphaM, 151.2942199707, 54.095703125, -146.48077392578, "Walk", "", 0)
+                                                Osi.IsInCombat(AlphaM) == 0 and
+                                                Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                Osi.CharacterMoveToPosition(AlphaM, 151.2942199707, 54.095703125,
+                                                    -146.48077392578, "Walk", "", 0)
                                                 Ext.Timer.WaitFor(8000, function()
                                                     if Osi.IsDead(AlphaM) == 0 and
-                                                    Osi.IsInCombat(AlphaM) == 0 and
-                                                    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                        Osi.CharacterMoveToPosition(AlphaM, 162.19300842285, 54.6708984375, -142.8729095459, "Walk", "", 0)
+                                                        Osi.IsInCombat(AlphaM) == 0 and
+                                                        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                        Osi.CharacterMoveToPosition(AlphaM, 162.19300842285,
+                                                            54.6708984375, -142.8729095459, "Walk", "", 0)
                                                         Ext.Timer.WaitFor(8000, function()
                                                             if Osi.IsDead(AlphaM) == 0 and
-                                                            Osi.IsInCombat(AlphaM) == 0 and
-                                                            Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                                Osi.CharacterMoveToPosition(AlphaM, 149.72705078125, 59.6328125, -139.61981201172, "Walk", "", 0)
+                                                                Osi.IsInCombat(AlphaM) == 0 and
+                                                                Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                                Osi.CharacterMoveToPosition(AlphaM, 149.72705078125,
+                                                                    59.6328125, -139.61981201172, "Walk", "", 0)
                                                                 Ext.Timer.WaitFor(8000, function()
                                                                     if Osi.IsDead(AlphaM) == 0 and
-                                                                    Osi.IsInCombat(AlphaM) == 0 and
-                                                                    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                                        Osi.CharacterMoveToPosition(AlphaM, 162.19300842285, 54.6708984375, -142.8729095459, "Walk", "", 0)
+                                                                        Osi.IsInCombat(AlphaM) == 0 and
+                                                                        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                                        Osi.CharacterMoveToPosition(AlphaM,
+                                                                            162.19300842285, 54.6708984375,
+                                                                            -142.8729095459, "Walk", "", 0)
                                                                         Ext.Timer.WaitFor(8000, function()
                                                                             if Osi.IsDead(AlphaM) == 0 and
-                                                                            Osi.IsInCombat(AlphaM) == 0 and
-                                                                            Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                                                Osi.CharacterMoveToPosition(AlphaM, 158.76704406738, 53.5673828125, -157.32588195801, "Walk", "", 0)
+                                                                                Osi.IsInCombat(AlphaM) == 0 and
+                                                                                Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                                                Osi.CharacterMoveToPosition(AlphaM,
+                                                                                    158.76704406738, 53.5673828125,
+                                                                                    -157.32588195801, "Walk", "", 0)
                                                                                 Ext.Timer.WaitFor(8000, function()
                                                                                     if Osi.IsDead(AlphaM) == 0 and
-                                                                                    Osi.IsInCombat(AlphaM) == 0 and
-                                                                                    Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
-                                                                                        Osi.CharacterMoveToPosition(AlphaM, 163.97476196289, 49.5947265625, -179.0030670166, "Walk", "", 0)
-                                                                                        Ext.Timer.WaitFor(8000, function()
-                                                                                            PatrollingMinotaur()
-                                                                                        end)
+                                                                                        Osi.IsInCombat(AlphaM) == 0 and
+                                                                                        Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+                                                                                        Osi.CharacterMoveToPosition(
+                                                                                        AlphaM, 163.97476196289,
+                                                                                            49.5947265625,
+                                                                                            -179.0030670166, "Walk", "",
+                                                                                            0)
+                                                                                        Ext.Timer.WaitFor(8000,
+                                                                                            function()
+                                                                                                PatrollingMinotaur()
+                                                                                            end)
                                                                                     end
                                                                                 end)
                                                                             end
@@ -476,11 +495,14 @@ local function PatrollingDuergar()
             Ext.Timer.WaitFor(2000, function()
                 Osi.CharacterMoveToPosition(DockDuergar, -14.048858642578, 0.609375, -233.88357543945, "Walk", "", 0)
                 Ext.Timer.WaitFor(5000, function()
-                    Osi.CharacterMoveToPosition(DockDuergar, -18.138095855713, 0.5986328125, -237.73483276367, "Walk", "", 0)
+                    Osi.CharacterMoveToPosition(DockDuergar, -18.138095855713, 0.5986328125, -237.73483276367, "Walk", "",
+                        0)
                     Ext.Timer.WaitFor(10000, function()
-                        Osi.CharacterMoveToPosition(DockDuergar, -14.048858642578, 0.609375, -233.88357543945, "Walk", "", 0)
+                        Osi.CharacterMoveToPosition(DockDuergar, -14.048858642578, 0.609375, -233.88357543945, "Walk", "",
+                            0)
                         Ext.Timer.WaitFor(5000, function()
-                            Osi.CharacterMoveToPosition(DockDuergar, -7.3731317520142, 0.0478515625, -240.70755004883, "Walk", "", 0)
+                            Osi.CharacterMoveToPosition(DockDuergar, -7.3731317520142, 0.0478515625, -240.70755004883,
+                                "Walk", "", 0)
                             Ext.Timer.WaitFor(5000, function()
                                 PatrollingDuergar()
                             end)
@@ -495,7 +517,7 @@ end
 --Defiled Spider moving randomly
 local function SpiderWalkAround()
     if ((Osi.IsDead(DSpider0) == 0) and Osi.IsInCombat(DSpider0) == 0) then
-        local SpiderRandomNumber = Ext.Utils.Random(1, 7)
+        local SpiderRandomNumber = Ext.Math.Random(1, 7)
         if SpiderRandomNumber == 1 then
             Osi.CharacterMoveToPosition(DSpider0, 438.22686767578, 25.8388671875, 57.966297149658, "Walk", "", 0)
         elseif SpiderRandomNumber == 2 then
@@ -511,7 +533,7 @@ local function SpiderWalkAround()
         elseif SpiderRandomNumber == 7 then
             Osi.CharacterMoveToPosition(DSpider0, 430.55804443359, 26.470703125, 57.241092681885, "Walk", "", 0)
         end
-        local SpiderWaitTImer = Ext.Utils.Random(1, 6)
+        local SpiderWaitTImer = Ext.Math.Random(1, 6)
         if SpiderWaitTImer == 1 then
             Ext.Timer.WaitFor(1000, function()
                 SpiderWalkAround()
@@ -543,136 +565,160 @@ end
 --Summon the spider horde wave 1
 local function SpiderHorde()
     if (Osi.IsDead(DSpider11) == 0) then
-        Osi.AppearAtPosition(DSpider11, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider11, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider11, 1)
-        Osi.CharacterMoveToPosition(DSpider11, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider11, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider12) == 0) then
-        Osi.AppearAtPosition(DSpider12, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider12, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider12, 1)
-        Osi.CharacterMoveToPosition(DSpider12, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider12, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider13) == 0) then
-        Osi.AppearAtPosition(DSpider13, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider13, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider13, 1)
-       Osi.CharacterMoveToPosition(DSpider13, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider13, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider14) == 0) then
-        Osi.AppearAtPosition(DSpider14, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider14, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider14, 1)
-        Osi.CharacterMoveToPosition(DSpider14, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider14, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider15) == 0) then
-        Osi.AppearAtPosition(DSpider15, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider15, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider15, 1)
-        Osi.CharacterMoveToPosition(DSpider15, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider15, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider16) == 0) then
-        Osi.AppearAtPosition(DSpider16, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider16, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider16, 1)
-        Osi.CharacterMoveToPosition(DSpider16, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider16, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider17) == 0) then
-        Osi.AppearAtPosition(DSpider17, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider17, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider17, 1)
-        Osi.CharacterMoveToPosition(DSpider17, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider17, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider18) == 0) then
-        Osi.AppearAtPosition(DSpider18, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider18, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider18, 1)
-        Osi.CharacterMoveToPosition(DSpider18, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider18, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider19) == 0) then
-        Osi.AppearAtPosition(DSpider19, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider19, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider19, 1)
-        Osi.CharacterMoveToPosition(DSpider19, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider19, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider110) == 0) then
-        Osi.AppearAtPosition(DSpider110, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider110, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider110, 1)
-        Osi.CharacterMoveToPosition(DSpider110, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider110, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider111) == 0) then
-        Osi.AppearAtPosition(DSpider111, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider111, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider111, 1)
-        Osi.CharacterMoveToPosition(DSpider111, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider111, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider112) == 0) then
-        Osi.AppearAtPosition(DSpider112, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider112, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider112, 1)
-        Osi.CharacterMoveToPosition(DSpider112, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider112, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
 end
 
 --Spider horde wave 2
 local function SpiderHorde2()
     if (Osi.IsDead(DSpider21) == 0) then
-        Osi.AppearAtPosition(DSpider21, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider21, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider21, 1)
-        Osi.CharacterMoveToPosition(DSpider21, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider21, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider22) == 0) then
-        Osi.AppearAtPosition(DSpider22, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider22, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider22, 1)
-        Osi.CharacterMoveToPosition(DSpider22, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider22, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider23) == 0) then
-        Osi.AppearAtPosition(DSpider23, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider23, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider23, 1)
-        Osi.CharacterMoveToPosition(DSpider23, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider23, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider24) == 0) then
-        Osi.AppearAtPosition(DSpider24, 436.22869873047, 26.849609375, 45.836368560791, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider24, 436.22869873047, 26.849609375, 45.836368560791, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider24, 1)
-        Osi.CharacterMoveToPosition(DSpider24, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider24, 436.36901855469, 25.83984375, 51.633331298828, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider25) == 0) then
-        Osi.AppearAtPosition(DSpider25, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider25, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider25, 1)
-        Osi.CharacterMoveToPosition(DSpider25, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider25, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider26) == 0) then
-        Osi.AppearAtPosition(DSpider26, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider26, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider26, 1)
-        Osi.CharacterMoveToPosition(DSpider26, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider26, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider27) == 0) then
-        Osi.AppearAtPosition(DSpider27, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider27, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider27, 1)
-        Osi.CharacterMoveToPosition(DSpider27, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider27, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider28) == 0) then
-        Osi.AppearAtPosition(DSpider28, 425.29034423828, 26.849609375, 54.974563598633, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider28, 425.29034423828, 26.849609375, 54.974563598633, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider28, 1)
-        Osi.CharacterMoveToPosition(DSpider28, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider28, 430.04388427734, 26.875, 54.684524536133, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider29) == 0) then
-        Osi.AppearAtPosition(DSpider29, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider29, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider29, 1)
-        Osi.CharacterMoveToPosition(DSpider29, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider29, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider210) == 0) then
-        Osi.AppearAtPosition(DSpider210, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider210, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider210, 1)
-        Osi.CharacterMoveToPosition(DSpider210, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider210, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider211) == 0) then
-        Osi.AppearAtPosition(DSpider211, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider211, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider211, 1)
-        Osi.CharacterMoveToPosition(DSpider211, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider211, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
     if (Osi.IsDead(DSpider212) == 0) then
-        Osi.AppearAtPosition(DSpider212, 446.75, 26.849609375, 55.75, 1, "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
+        Osi.AppearAtPosition(DSpider212, 446.75, 26.849609375, 55.75, 1,
+            "SPIDER_Rig_DFLT_UTIL_Spawn_01_93c4751e-baab-8074-9c84-22e0662fd79c", "", 0)
         Osi.SetOnStage(DSpider212, 1)
-        Osi.CharacterMoveToPosition(DSpider212, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(DSpider212, 442.81484985352, 26.888671875, 55.478549957275, "Run", "", 0)
     end
 end
 
 --Za'krug call reinforcements
 local function ZakrugReinforcements()
-    Osi.PlaySound(Zakrug,"II_Quest_DEN_BattleHorn")
+    Osi.PlaySound(Zakrug, "II_Quest_DEN_BattleHorn")
     Osi.PlayEffect(Zakrug, "a5b7b36f-8033-c0cb-4767-801ab6214323", "", 2)
-    ShowNotification(GetHostCharacter(), "Za'krug is calling reinforcements!")  
+    Osi.ShowNotification(Osi.GetHostCharacter(), "Za'krug is calling reinforcements!")
 end
 
 --Spawn Oof
@@ -681,9 +727,9 @@ local function SpawnOof()
         Osi.SetOnStage(Oof, 1)
         -- Osi.AppearOutOfSightTo(Oof, Wyll, BridgeTroll, 0, "", "OOFAPPEARED", 0)
         -- Osi.TeleportToPosition(Oof, 173.67250061035, 21.856609344482, 414.58654785156, OofTeleport, 0, 0, 0, 1, 1)
-        SetFaction(Oof, FGoblinRaiders)
+        Osi.SetFaction(Oof, FGoblinRaiders)
         Ext.Timer.WaitFor(1000, function()
-            Osi.CharacterMoveToPosition(Oof, 200.31283569336, 24.947265625, 421.1086730957, "Run", "", 0) 
+            Osi.CharacterMoveToPosition(Oof, 200.31283569336, 24.947265625, 421.1086730957, "Run", "", 0)
             Ext.Timer.WaitFor(2000, function()
                 Osi.SetHostileAndEnterCombat(FGoblinRaiders, FZevlor, Oof, Zevlor)
             end)
@@ -694,9 +740,9 @@ end
 -- TODO: He should not be going prone outside of his turn and such.
 --Oof clumsy roller
 local function ClumsyOof()
-    local OofClumsySelector = Ext.Utils.Random(1,6)
+    local OofClumsySelector = Ext.Math.Random(1, 6)
     if OofClumsySelector == 1 then
-            Osi.ApplyStatus(Oof, "MMM_OOFDISARMED", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFDISARMED", 12, 1, Oof)
     elseif OofClumsySelector == 2 then
         Osi.ApplyStatus(Oof, "MMM_OOFSPLINTER", 12, 1, Oof)
     elseif OofClumsySelector == 3 then
@@ -714,15 +760,15 @@ end
 --Oof randomly slipping and getting up
 local function TrippyOof()
     if (Osi.IsDead(Oof) == 0) then
-        local OofSlipRoll = Ext.Utils.Random(1, 6)
+        local OofSlipRoll = Ext.MAth.Random(1, 6)
         if OofSlipRoll == 1 then
             Osi.ApplyStatus(Oof, "PRONE_GREASE", 1, 1, Oof)
             Ext.Timer.WaitFor(2000, function()
-            Osi.RemoveStatus(Oof, "PRONE_GREASE", "")
+                Osi.RemoveStatus(Oof, "PRONE_GREASE", "")
             end)
         end
         Ext.Timer.WaitFor(8000, function()
-        TrippyOof()
+            TrippyOof()
         end)
     elseif (Osi.IsDead(Oof) == 1) then
         print("RIP Oof - Slipped and fell too many times")
@@ -733,12 +779,12 @@ end
 --Ex walks over to fight, ex and bf hate each other
 local function ItsComplicated()
     if ((Osi.IsDead(Buthir) == 0) and (Osi.IsOnStage(Bogsnap) == 0)) then
-            Osi.SetOnStage(Bogsnap, 1)
-            Osi.AppearOutOfSightToPosition(Bogsnap, 32.818363189697, 33.46484375, 468.50390625, "West", 0, "", "", 0)
-            Ext.Timer.WaitFor(1000, function()
-                Osi.CharacterMoveToPosition(Bogsnap, 32.818363189697, 33.46484375, 468.50390625, "Run", "", 0) 
-                Osi.SetHostileAndEnterCombat(FEvil, FSexCouple, Bogsnap, Grukkoh)
-            end)
+        Osi.SetOnStage(Bogsnap, 1)
+        Osi.AppearOutOfSightToPosition(Bogsnap, 32.818363189697, 33.46484375, 468.50390625, "West", 0, "", "", 0)
+        Ext.Timer.WaitFor(1000, function()
+            Osi.CharacterMoveToPosition(Bogsnap, 32.818363189697, 33.46484375, 468.50390625, "Run", "", 0)
+            Osi.SetHostileAndEnterCombat(FEvil, FSexCouple, Bogsnap, Grukkoh)
+        end)
     end
 end
 
@@ -757,9 +803,9 @@ local function ChickenEvent()
         Osi.CharacterMoveToPosition(Chicken3, -159.52056884766, 24.0712890625, 331.99102783203, "Sprint", "", 0)
         Osi.CharacterMoveToPosition(Chicken4, -159.52056884766, 24.0712890625, 331.99102783203, "Sprint", "", 0)
         Osi.CharacterMoveToPosition(Chicken5, -159.52056884766, 24.0712890625, 331.99102783203, "Sprint", "", 0)
-            Ext.Timer.WaitFor(6000, function()
+        Ext.Timer.WaitFor(6000, function()
             Osi.CharacterMoveToPosition(Chickenguard, -159.52056884766, 24.0712890625, 331.99102783203, "Sprint", "", 0)
-                Ext.Timer.WaitFor(20000, function()
+            Ext.Timer.WaitFor(20000, function()
                 Osi.SetOnStage(Chickenrunner, 0)
                 Osi.SetOnStage(Chicken1, 0)
                 Osi.SetOnStage(Chicken2, 0)
@@ -774,8 +820,8 @@ local function ChickenEvent()
                 Osi.ApplyDamage(Chicken4, 200, "Piercing", "")
                 Osi.ApplyDamage(Chicken5, 200, "Piercing", "")
                 Osi.ApplyDamage(Chickenguard, 200, "Piercing", "")
-                end)
             end)
+        end)
     end)
 end
 
@@ -817,12 +863,12 @@ end
 local function CaveIn()
     Osi.SetOnStage(WeakBeholder, 1)
     BeholderHP = Osi.GetMaxHitpoints(WeakBeholder)
-    Osi.SetHitpoints(WeakBeholder, BeholderHP/2)
+    Osi.SetHitpoints(WeakBeholder, BeholderHP / 2)
 end
 
 --Lolth Event
 local function LolthEvent()
-    ShowNotification(GetHostCharacter(), "You dare to call upon Lolth?")
+    Osi.ShowNotification(Osi.GetHostCharacter(), "You dare to call upon Lolth?")
     Ext.Timer.WaitFor(3000, function()
         Osi.UseSpellAtPosition(LolthTrigger, "Projectile_Fireball", -16.75, 25.0751953125, -69.25)
         Osi.SetOnStage(LolthTrigger, 0)
@@ -842,7 +888,8 @@ local function ThrowShoe()
     BaileyShoe = Osi.CreateAt("c4fe6d69-b19a-40e6-b01f-f2e7e3fdec9d", -436.75, 28.685546875, -523.25, 0, 1, "")
     Ext.Timer.WaitFor(100, function()
         Osi.ItemDragToPosition(BaileyShoe, -443.29486083984, 27.8359375, -523.27209472656)
-        Osi.PlayEffectAtPosition("5fb9e2fa-2b54-26ac-8d10-d9dfa9ef9da0", -443.29486083984, 27.8359375, -523.27209472656, 2)
+        Osi.PlayEffectAtPosition("5fb9e2fa-2b54-26ac-8d10-d9dfa9ef9da0", -443.29486083984, 27.8359375, -523.27209472656,
+            2)
         Osi.PlaySound("5fb9e2fa-2b54-26ac-8d10-d9dfa9ef9da0", "Spell_Impact_Utility_Jump_L1to3")
     end)
 end
@@ -922,7 +969,8 @@ local function MimicBossFight()
         Osi.SetOnStage(HarperMimic2, 0)
         Osi.SetOnStage(HarperMimic3, 0)
         Ext.Timer.WaitFor(100, function()
-            Osi.PlayEffectAtPosition("350a65d5-3bc6-9656-87f9-cec27d891882", -687.18841552734, -6.3623046875, 376.60565185547, 7)
+            Osi.PlayEffectAtPosition("350a65d5-3bc6-9656-87f9-cec27d891882", -687.18841552734, -6.3623046875,
+                376.60565185547, 7)
             Osi.SetOnStage(MegaMimic, 1)
         end)
     end)
@@ -938,8 +986,8 @@ local function GrymFailsafe()
     if Osi.IsDead(Grym2) == 1 then
         Osi.SetOnStage(ForgeGhost1, 0)
         Osi.SetOnStage(ForgeGhost2, 0)
-        Osi.Die(ForgeGhost1, 0, GetHostCharacter(), 0, 1, 500)
-        Osi.Die(ForgeGhost2, 0, GetHostCharacter(), 0, 1, 500)
+        Osi.Die(ForgeGhost1, 0, Osi.GetHostCharacter(), 0, 1, 500)
+        Osi.Die(ForgeGhost2, 0, Osi.GetHostCharacter(), 0, 1, 500)
     end
 end
 
@@ -978,7 +1026,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
 end)
 
 local function PreparedBoost()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
         if Osi.IsTagged(charIDprepared, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
             Osi.ApplyStatus(charIDprepared, "MMM_PREPARED", PrepareDuration, 1, charIDprepared)
@@ -994,8 +1042,8 @@ end
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    if (level_name ~= "WLD_Main_A") then 
-        return 
+    if (level_name ~= "WLD_Main_A") then
+        return
     end
     if Osi.GetFlag(Act1MimicFlag, Null) == 0 then
         Osi.SetFlag(Act1MimicFlag, Null, 0, 1)
@@ -1019,7 +1067,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
 end)
 
 --Enter Combat Listener
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
+Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat)
     --Goblin Ambush Flag
     if object == AmbushGob1 then
         Osi.SetFlag(GoblinCrashFlag, Null, 0, 1)
@@ -1047,10 +1095,10 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, comba
     --Change dragon faction if combat
     if (object == "S_GLO_GithCaptain_27fa0802-fa38-4eea-9c03-496f2e022259") then
         Osi.SetFaction(JuvDragon, FHGith)
-        Osi.SetHostileAndEnterCombat(FHGith, FPlayer, JuvDragon, GetHostCharacter())
+        Osi.SetHostileAndEnterCombat(FHGith, FPlayer, JuvDragon, Osi.GetHostCharacter())
     end
     --Za'krug sounding horn
-    if (object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d") then 
+    if (object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d") then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if (round == 2) then
                 ZakrugReinforcements()
@@ -1059,7 +1107,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, comba
         end)
     end
     --Oof Spawns round 3
-    if object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d" then 
+    if object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d" then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if (round == 3) and Osi.GetFlag(OofFlag, Null) == 1 then
                 SpawnOof()
@@ -1071,20 +1119,26 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, comba
     if object == "MMM_BUGBEARCHALLENGER_46545754-5089-4e85-b34d-81395e5ebb44" then
         BugBearCombatID = combat
         if Osi.CombatGetInvolvedPlayersCount(BugBearCombatID) == 0 then
-            Osi.AddBoosts(BugbearChallenger, "Invulnerable", "", BugbearChallenger) --Bugbear
-            Osi.AddBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", "", BugbearChallenger) --Bugbear movement so he doesn't chase Remira
-            Osi.AddBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", "", "4faf77a0-b883-4f7b-acbf-4500973f446d") --Remira
-            Osi.AddBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", "", "534bceaf-678c-40a0-8ca9-e1134f95ba0d") --Barth
-            Osi.AddBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", "", "82d1b843-9e8c-48a5-9d87-caddea5c193c") --Aradin
+            Osi.AddBoosts(BugbearChallenger, "Invulnerable", "", BugbearChallenger)                                           --Bugbear
+            Osi.AddBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", "", BugbearChallenger)                          --Bugbear movement so he doesn't chase Remira
+            Osi.AddBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", "",
+                "4faf77a0-b883-4f7b-acbf-4500973f446d")                                                                       --Remira
+            Osi.AddBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", "",
+                "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                                                       --Barth
+            Osi.AddBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", "",
+                "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                                       --Aradin
         end
     end
     --Remove bugbear immunities when player arrives
     if ((Osi.IsPlayer(object) == 1) and (combat == BugBearCombatID)) then
-        Osi.RemoveBoosts(BugbearChallenger, "Invulnerable", 0, "", BugbearChallenger) --Bugbear
-        Osi.RemoveBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", 0, "", BugbearChallenger) --Bugbear movement so he doesn't chase Remira
-        Osi.RemoveBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", 0, "", "4faf77a0-b883-4f7b-acbf-4500973f446d") --Remira
-        Osi.RemoveBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", 0, "", "534bceaf-678c-40a0-8ca9-e1134f95ba0d") --Barth
-        Osi.RemoveBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", 0, "", "82d1b843-9e8c-48a5-9d87-caddea5c193c") --Aradin
+        Osi.RemoveBoosts(BugbearChallenger, "Invulnerable", 0, "", BugbearChallenger)                                           --Bugbear
+        Osi.RemoveBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", 0, "", BugbearChallenger)                          --Bugbear movement so he doesn't chase Remira
+        Osi.RemoveBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", 0, "",
+            "4faf77a0-b883-4f7b-acbf-4500973f446d")                                                                             --Remira
+        Osi.RemoveBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", 0, "",
+            "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                                                             --Barth
+        Osi.RemoveBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", 0, "",
+            "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                                             --Aradin
     end
     --Start Summon Ex Countdown
     if (object == Buthir) then
@@ -1135,19 +1189,20 @@ end)
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, character, destroyerOwner, storyActionID)
     --Put voyeur on stage
     if (item == "MMM_QUESTIONABLEBARREL_2dff1009-962a-4f24-a94d-76253102237a") then
-        local x,y,z = Osi.GetPosition("2dff1009-962a-4f24-a94d-76253102237a")
-        Osi.AppearAtPosition(Slegbezzle, x,y,z, 1, "", "", 0)
+        local x, y, z = Osi.GetPosition("2dff1009-962a-4f24-a94d-76253102237a")
+        Osi.AppearAtPosition(Slegbezzle, x, y, z, 1, "", "", 0)
         Osi.SetOnStage(Slegbezzle, 1)
         Osi.SetHostileAndEnterCombat(FSexCouple, FEvil, Grukkoh, Slegbezzle)
     end
     --Rock for Beholder
     if item == "MMM_CAVEIN_c9e44fb1-98b5-4677-930f-dceee8a52200" then
-        Osi.RequestPassiveRoll(character, WeakBeholder, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "CAVEINROLL")
+        Osi.RequestPassiveRoll(character, WeakBeholder, "", "Perception",
+            "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "CAVEINROLL")
     end
     --Mithral Vein for Elemental
     if (item == "S_UND_MithralVein_df5366a7-aa59-4104-9a1f-f744e8883f06") then
         Osi.SetOnStage(LavaElemental, 1)
-        Osi.CharacterMoveToPosition(LavaElemental, -633.51263427734, 10.690246582031, 258.11077880859, "Run", "", 0) 
+        Osi.CharacterMoveToPosition(LavaElemental, -633.51263427734, 10.690246582031, 258.11077880859, "Run", "", 0)
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC1") == 1 then
         TurnIntoMimic1(item, character)
@@ -1284,11 +1339,11 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         BoatkillCounter = 0
         Ext.Timer.WaitFor(30000, function()
             if WentPastGregg == 0 then
-            ShowNotification(GetHostCharacter(), "You ever drink Bailey's from a shoe..?" )
-            ThrowShoe()
+                Osi.ShowNotification(Osi.GetHostCharacter(), "You ever drink Bailey's from a shoe..?")
+                ThrowShoe()
                 Ext.Timer.WaitFor(30000, function()
                     if WentPastGregg == 0 then
-                        ShowNotification(GetHostCharacter(), "I'm Ol' Gregg!" )
+                        Osi.ShowNotification(Osi.GetHostCharacter(), "I'm Ol' Gregg!")
                         Osi.PlayEffectAtPosition(OlGregg, -443.29486083984, 27.8359375, -523.27209472656, 2)
                         Osi.PlaySound(OlGregg, "Spell_Impact_Utility_Jump_L1to3")
                         Osi.SetOnStage(OlGregg, 1)
@@ -1301,21 +1356,24 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     if ((character == HarperMimic1) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic1, -685.5205078125, -6.07421875, 375.92196655273, "MIMIC1DIE", 0, 0, 0, 1, 1)
-        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555, MimicBoss)
+        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
+            MimicBoss)
     end
     if ((character == HarperMimic2) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic2, -688.21392822266, -6.6494140625, 376.70120239258, "MIMIC2DIE", 0, 0, 0, 1, 1)
-        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555, MimicBoss)
+        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
+            MimicBoss)
     end
     if ((character == HarperMimic3) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic3, -687.03607177734, -6.9794921875, 372.26666259766, "MIMIC3DIE", 0, 0, 0, 1, 1)
-        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555, MimicBoss)
+        Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
+            MimicBoss)
     end
     if (MimicBoss == 3) then
         if (Osi.IsDead(MegaMimic) == 0) then
-        MimicBossFight()
+            MimicBossFight()
         end
     end
     if (character == MegaMimic) then
@@ -1324,7 +1382,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             Osi.SetOnStage(HarperMimic2, 1)
             Osi.SetOnStage(HarperMimic3, 1)
             Osi.SetOnStage(MegaMimic, 0)
-        end) 
+        end)
     end
     --Grym 2 Death
     if character == Grym2 then
@@ -1333,11 +1391,12 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             -- Osi.LeaveCombat(ForgeGhost2)
             -- Osi.SetOnStage(ForgeGhost1, 0)
             -- Osi.SetOnStage(ForgeGhost2, 0)
-            Osi.Die(ForgeGhost1, 0, GetHostCharacter(), 0, 1, 500)
-            Osi.Die(ForgeGhost2, 0, GetHostCharacter(), 0, 1, 500)
+            Osi.Die(ForgeGhost1, 0, Osi.GetHostCharacter(), 0, 1, 500)
+            Osi.Die(ForgeGhost2, 0, Osi.GetHostCharacter(), 0, 1, 500)
             Osi.Die(Grym, 0, "", 0, 1, 500)
             Osi.SetFlag("UND_AdamantineForge_State_GolemPermaDefeated_6e173bc8-a5ba-4052-a480-5222438a35d1", Null, 0, 1)
-            Osi.ClearFlag("GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57", "S_UND_AdamantineForge_Lever_21e51504-13c0-49c2-93aa-dbc113503297", 0, 0)
+            Osi.ClearFlag("GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57",
+                "S_UND_AdamantineForge_Lever_21e51504-13c0-49c2-93aa-dbc113503297", 0, 0)
         end)
     end
 end)
@@ -1345,9 +1404,9 @@ end)
 --Saw something listener
 Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
     --Goblin Crash Ambush Attack
-    if ((character == AmbushGob1) or 
-    (character == AmbushGob2) or 
-    (character == AmbushGob3)) then
+    if ((character == AmbushGob1) or
+            (character == AmbushGob2) or
+            (character == AmbushGob3)) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_EnsnaringStrike", targetcharacter)
             Osi.ApplyStatus(targetcharacter, "SURPRISED", 1, 1, character)
@@ -1365,17 +1424,19 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         ChickenKiller()
     end
     --Gnolls at backdoor walk in and set off trap
-    if Osi.IsPlayer(character) == 1 and 
-    targetcharacter == "MMM_CAVEBACKDOOR_31da9358-a6a4-4a98-a199-85e09dea5b0e" and
-    Osi.IsDestroyed("S_PLA_BanditCave_PlatformBarricade_01_f82470f0-72b2-487e-9b0b-10a4a3388d99") == 0 then
+    if Osi.IsPlayer(character) == 1 and
+        targetcharacter == "MMM_CAVEBACKDOOR_31da9358-a6a4-4a98-a199-85e09dea5b0e" and
+        Osi.IsDestroyed("S_PLA_BanditCave_PlatformBarricade_01_f82470f0-72b2-487e-9b0b-10a4a3388d99") == 0 then
         Osi.CharacterMoveToPosition(BackdoorGnoll3, 49.923347473145, 28.5263671875, 563.97900390625, "Walk", "", 0)
         Ext.Timer.WaitFor(4000, function()
             Osi.Attack(BackdoorGnoll3, "S_PLA_BanditCave_PlatformBarricade_01_f82470f0-72b2-487e-9b0b-10a4a3388d99", 1)
             Osi.ApplyDamage("f82470f0-72b2-487e-9b0b-10a4a3388d99", 25, "Bludgeoning", BackdoorGnoll3)
             Ext.Timer.WaitFor(2000, function()
-                Osi.CharacterMoveToPosition(BackdoorGnoll1, 50.958168029785, 30.1865234375, 591.98620605469, "Walk", "", 0)
+                Osi.CharacterMoveToPosition(BackdoorGnoll1, 50.958168029785, 30.1865234375, 591.98620605469, "Walk", "",
+                    0)
                 Osi.CharacterMoveToPosition(BackdoorGnoll2, 49.56689453125, 29.6904296875, 588.1772460937, "Walk", "", 0)
-                Osi.CharacterMoveToPosition(BackdoorGnoll3, 52.401023864746, 29.3310546875, 587.01403808594, "Walk", "", 0)
+                Osi.CharacterMoveToPosition(BackdoorGnoll3, 52.401023864746, 29.3310546875, 587.01403808594, "Walk", "",
+                    0)
             end)
         end)
     end
@@ -1412,7 +1473,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         if Osi.GetFlag(GoblinCrashFlag, Null) == 0 then
             if Osi.IsTagged(object, GoblinCrashTag) == 0 then
                 Osi.SetTag(object, GoblinCrashTag)
-                Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Hard_831e1fbe-428d-4f4d-bd17-4206d6efea35", 0, "AMBUSHROLL") 
+                Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Hard_831e1fbe-428d-4f4d-bd17-4206d6efea35",
+                    0, "AMBUSHROLL")
             elseif Osi.IsTagged(object, GoblinCrashTag) == 1 then
                 return
             end
@@ -1423,7 +1485,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         if Osi.GetFlag(DrowAmbush1Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush1Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush1Tag)
-                Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL1") 
+                Osi.RequestPassiveRoll(object, cause, "", "Perception",
+                    "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL1")
             elseif Osi.IsTagged(object, DrowAmbush1Tag) == 1 then
                 return
             end
@@ -1432,7 +1495,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     -- if status == "MMM_DROWAMBUSH1" then
     --     if DrowAmbush1 == 0 then
     --         DrowAmbush1 = DrowAmbush1 + 1;
-    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Hard_831e1fbe-428d-4f4d-bd17-4206d6efea35", 0, "DROWROLL1") 
+    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Hard_831e1fbe-428d-4f4d-bd17-4206d6efea35", 0, "DROWROLL1")
     --     elseif DrowAmbush1 == 1 then
     --         return
     --     end
@@ -1442,7 +1505,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         if Osi.GetFlag(DrowAmbush2Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush2Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush2Tag)
-                Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL2") 
+                Osi.RequestPassiveRoll(object, cause, "", "Perception",
+                    "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL2")
             elseif Osi.IsTagged(object, DrowAmbush2Tag) == 1 then
                 return
             end
@@ -1451,7 +1515,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     -- if status == "MMM_DROWAMBUSH2" then
     --     if DrowAmbush2 == 0 then
     --         DrowAmbush2 = DrowAmbush2 + 1;
-    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL2") 
+    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL2")
     --     elseif DrowAmbush2 == 1 then
     --         return
     --     end
@@ -1461,7 +1525,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         if Osi.GetFlag(DrowAmbush3Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush3Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush3Tag)
-                Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL3") 
+                Osi.RequestPassiveRoll(object, cause, "", "Perception",
+                    "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DROWROLL3")
             elseif Osi.IsTagged(object, DrowAmbush3Tag) == 1 then
                 return
             end
@@ -1470,7 +1535,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     -- if status == "MMM_DROWAMBUSH3" then
     --     if DrowAmbush3 == 0 then
     --         DrowAmbush3 = DrowAmbush3 + 1;
-    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL3") 
+    --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL3")
     --     elseif DrowAmbush3 == 1 then
     --         return
     --     end
@@ -1482,7 +1547,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
                 local DuergarTag = entity.Uuid.EntityUuid
                 if Osi.IsTagged(DuergarTag, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
                     if Osi.GetDistanceTo(DuergarTrigger1, DuergarTag) <= 20 then
-                        Osi.RequestPassiveRoll(DuergarTag, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DUERGARROLL1")
+                        Osi.RequestPassiveRoll(DuergarTag, cause, "", "Perception",
+                            "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DUERGARROLL1")
                     end
                 end
             end
@@ -1493,7 +1559,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     -- if status == "MMM_DUERGARMARCH1" then
     --     if DuergarMarch == 0 then
     --         DuergarMarch = DuergarMarch + 1;
-    --         DUERGARARMYMARCH1() 
+    --         DUERGARARMYMARCH1()
     --     elseif DuergarMarch == 1 then
     --         return
     --     end
@@ -1505,7 +1571,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
                 local DuergarTag = entity.Uuid.EntityUuid
                 if Osi.IsTagged(DuergarTag, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
                     if Osi.GetDistanceTo(DuergarTrigger2, DuergarTag) <= 20 then
-                        Osi.RequestPassiveRoll(DuergarTag, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DUERGARROLL2")
+                        Osi.RequestPassiveRoll(DuergarTag, cause, "", "Perception",
+                            "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "DUERGARROLL2")
                     end
                 end
             end
@@ -1517,7 +1584,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     if DuergarMarch == 0 then
     --         DuergarMarch = DuergarMarch + 1;
     --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DUERGARROLL2")
-    --         DUERGARARMYMARCH2() 
+    --         DUERGARARMYMARCH2()
     --     elseif DuergarMarch == 1 then
     --         return
     --     end
@@ -1533,89 +1600,90 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
 end)
 
 --Roll listener
-Ext.Osiris.RegisterListener("RollResult", 6, "after", function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-    --Set Crash Ambush result
-    if eventName == "AMBUSHROLL" then
-        if resultType == 1 then
-            Osi.RemoveStatus(AmbushGob1, "INVISIBLE", "")
-            Osi.RemoveStatus(AmbushGob2, "INVISIBLE", "")
-            Osi.RemoveStatus(AmbushGob3, "INVISIBLE", "")
-            Osi.RemoveStatus(AmbushGob3, "MMM_CRASHDETECT", "")
-            Osi.SetFlag(GoblinCrashFlag, Null, 0, 1)
-        elseif resultType == 0 then
-            return
+Ext.Osiris.RegisterListener("RollResult", 6, "after",
+    function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
+        --Set Crash Ambush result
+        if eventName == "AMBUSHROLL" then
+            if resultType == 1 then
+                Osi.RemoveStatus(AmbushGob1, "INVISIBLE", "")
+                Osi.RemoveStatus(AmbushGob2, "INVISIBLE", "")
+                Osi.RemoveStatus(AmbushGob3, "INVISIBLE", "")
+                Osi.RemoveStatus(AmbushGob3, "MMM_CRASHDETECT", "")
+                Osi.SetFlag(GoblinCrashFlag, Null, 0, 1)
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Set Drow 1 Ambush Result
-    if eventName == "DROWROLL1" then
-        Osi.RemoveStatus(DrowAssassin1, "MMM_DROWDETECT1", "")
-        if resultType == 1 then
-            Osi.RemoveStatus(DrowAssassin1, "INVISIBLE", "")
-            Osi.SetFlag(DrowAmbush1Flag, Null, 0, 1)
-        elseif resultType == 0 then
-            return
+        --Set Drow 1 Ambush Result
+        if eventName == "DROWROLL1" then
+            Osi.RemoveStatus(DrowAssassin1, "MMM_DROWDETECT1", "")
+            if resultType == 1 then
+                Osi.RemoveStatus(DrowAssassin1, "INVISIBLE", "")
+                Osi.SetFlag(DrowAmbush1Flag, Null, 0, 1)
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Set Drow 2 Ambush Result
-    if eventName == "DROWROLL2" then
-        Osi.RemoveStatus(DrowAssassin2, "MMM_DROWDETECT2", "")
-        if resultType == 1 then
-            Osi.RemoveStatus(DrowAssassin2, "INVISIBLE", "")
-            Osi.SetFlag(DrowAmbush2Flag, Null, 0, 1)
-        elseif resultType == 0 then
-            return
+        --Set Drow 2 Ambush Result
+        if eventName == "DROWROLL2" then
+            Osi.RemoveStatus(DrowAssassin2, "MMM_DROWDETECT2", "")
+            if resultType == 1 then
+                Osi.RemoveStatus(DrowAssassin2, "INVISIBLE", "")
+                Osi.SetFlag(DrowAmbush2Flag, Null, 0, 1)
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Set Drow 3 Ambush Result
-    if eventName == "DROWROLL3" then
-        Osi.RemoveStatus(DrowAssassin3, "MMM_DROWDETECT3", "")
-        if resultType == 1 then
-            Osi.RemoveStatus(DrowAssassin3, "INVISIBLE", "")
-            Osi.SetFlag(DrowAmbush3Flag, Null, 0, 1)
-        elseif resultType == 0 then
-            return
+        --Set Drow 3 Ambush Result
+        if eventName == "DROWROLL3" then
+            Osi.RemoveStatus(DrowAssassin3, "MMM_DROWDETECT3", "")
+            if resultType == 1 then
+                Osi.RemoveStatus(DrowAssassin3, "INVISIBLE", "")
+                Osi.SetFlag(DrowAmbush3Flag, Null, 0, 1)
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Set DUERGAR 1 Result
-    if eventName == "DUERGARROLL1" then
-        Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
-        Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
-        if resultType == 1 then
-            ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
-            PrepareDuration = 24;
-            PreparedBoost()
-        elseif resultType == 0 then
-            return
+        --Set DUERGAR 1 Result
+        if eventName == "DUERGARROLL1" then
+            Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
+            Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
+            if resultType == 1 then
+                ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
+                PrepareDuration = 24;
+                PreparedBoost()
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Set DUERGAR 2 Result
-    if eventName == "DUERGARROLL2" then
-        Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
-        Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
-        if resultType == 1 then
-            ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
-            PrepareDuration = 30;
-            PreparedBoost()
-        elseif resultType == 0 then
-            return
+        --Set DUERGAR 2 Result
+        if eventName == "DUERGARROLL2" then
+            Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
+            Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
+            if resultType == 1 then
+                ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
+                PrepareDuration = 30;
+                PreparedBoost()
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Cave In Result
-    if eventName == "CAVEINROLL" then
-        if resultType == 1 then
-            ShowNotification(GetHostCharacter(), "You hear something approaching, get ready!")
-            PrepareDuration = 24;
-            PreparedBoost()
-            Ext.Timer.WaitFor(6000, function()
-                CaveIn()
-            end)
-        elseif resultType == 0 then
-            Ext.Timer.WaitFor(1000, function()
-                CaveIn()
-            end)
+        --Cave In Result
+        if eventName == "CAVEINROLL" then
+            if resultType == 1 then
+                ShowNotification(GetHostCharacter(), "You hear something approaching, get ready!")
+                PrepareDuration = 24;
+                PreparedBoost()
+                Ext.Timer.WaitFor(6000, function()
+                    CaveIn()
+                end)
+            elseif resultType == 0 then
+                Ext.Timer.WaitFor(1000, function()
+                    CaveIn()
+                end)
+            end
         end
-    end
-end)
+    end)
 
 --Flag listener
 Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
@@ -1647,71 +1715,72 @@ Ext.Osiris.RegisterListener("WentOnStage", 2, "after", function(object, isOnStag
 end)
 
 --Using Spell On Target
-Ext.Osiris.RegisterListener("UsingSpellOnTarget", 6, "after", function(caster, target, spell, spellType, spellElement, storyActionID)
-    if spell == "MMM_Target_CONSUMEBULETTE" then
-        Ext.Timer.WaitFor(1500, function()
-            local entity = Ext.Entity.Get(target)
-            for _, p in pairs(entity.InventoryOwner.PrimaryInventory.InventoryContainer.Items) do
-                Osi.Drop(p.Item.Uuid.EntityUuid)
-            end
-            Osi.SetOnStage(target, 0)
-            if Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE1", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE2", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE3", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE4", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE5", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE6", -1, 1, caster)
-            elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 1 and
-            Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE7", -1, 1, caster)
-            end
-        end)
-    end
-end)
+Ext.Osiris.RegisterListener("UsingSpellOnTarget", 6, "after",
+    function(caster, target, spell, spellType, spellElement, storyActionID)
+        if spell == "MMM_Target_CONSUMEBULETTE" then
+            Ext.Timer.WaitFor(1500, function()
+                local entity = Ext.Entity.Get(target)
+                for _, p in pairs(entity.InventoryOwner.PrimaryInventory.InventoryContainer.Items) do
+                    Osi.Drop(p.Item.Uuid.EntityUuid)
+                end
+                Osi.SetOnStage(target, 0)
+                if Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE1", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE2", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE3", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE4", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE5", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE6", -1, 1, caster)
+                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 1 and
+                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
+                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE7", -1, 1, caster)
+                end
+            end)
+        end
+    end)

@@ -220,19 +220,12 @@ local function CreateAct2Mimics()
         Act2Chest29, Act2Chest30,
         Act2Chest31, Act2Chest32, Act2Chest33 }
     for _, PossibleMimic in ipairs(Act2ChestList) do
-        local IsItAMimic = Ext.Utils.Random(1, 5)
+        local IsItAMimic = Ext.Math.Random(1, 5)
         if IsItAMimic == 1 then
-            print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC2", -1, 1, PossibleMimic)
-        elseif IsItAMimic == 2 then
-            print("Not a mimic, chest not hidden")
-        elseif IsItAMimic == 3 then
-            print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 4 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         elseif IsItAMimic == 5 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         end
     end
@@ -372,7 +365,7 @@ end
 local function ZombieSpeakSelector1()
     Ext.Timer.WaitFor(15000, function()
         if Osi.IsDead(BalthazarZombie1) == 0 then
-            ZombieSpeakRoll1 = Ext.Utils.Random(1, 10)
+            ZombieSpeakRoll1 = Ext.Math.Random(1, 10)
             if ZombieSpeakRoll1 == 1 then
                 ZombieSpeakSelector1()
             elseif ZombieSpeakRoll1 == 2 then
@@ -404,7 +397,7 @@ end
 local function ZombieSpeakSelector2()
     Ext.Timer.WaitFor(14500, function()
         if Osi.IsDead(BalthazarZombie2) == 0 then
-            ZombieSpeakRoll2 = Ext.Utils.Random(1, 10)
+            ZombieSpeakRoll2 = Ext.Math.Random(1, 10)
             if ZombieSpeakRoll2 == 1 then
                 ZombieSpeakSelector2()
             elseif ZombieSpeakRoll2 == 2 then
@@ -436,7 +429,7 @@ end
 local function ZombieSpeakSelector3()
     Ext.Timer.WaitFor(12200, function()
         if Osi.IsDead(BalthazarZombie3) == 0 then
-            ZombieSpeakRoll3 = Ext.Utils.Random(1, 10)
+            ZombieSpeakRoll3 = Ext.Math.Random(1, 10)
             if ZombieSpeakRoll3 == 1 then
                 ZombieSpeakSelector3()
             elseif ZombieSpeakRoll3 == 2 then
@@ -468,7 +461,7 @@ end
 local function ZombieSpeakSelector4()
     Ext.Timer.WaitFor(10300, function()
         if Osi.IsDead(BalthazarZombie4) == 0 then
-            ZombieSpeakRoll4 = Ext.Utils.Random(1, 10)
+            ZombieSpeakRoll4 = Ext.Math.Random(1, 10)
             if ZombieSpeakRoll4 == 1 then
                 ZombieSpeakSelector4()
             elseif ZombieSpeakRoll4 == 2 then
@@ -500,7 +493,7 @@ end
 local function ZombieSpeakSelector5()
     Ext.Timer.WaitFor(8800, function()
         if Osi.IsDead(BalthazarZombie5) == 0 then
-            ZombieSpeakRoll5 = Ext.Utils.Random(1, 10)
+            ZombieSpeakRoll5 = Ext.Math.Random(1, 10)
             if ZombieSpeakRoll5 == 1 then
                 ZombieSpeakSelector5()
             elseif ZombieSpeakRoll5 == 2 then
@@ -589,7 +582,7 @@ local function ReturnRingEvent()
             for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
                 Ext.Timer.WaitFor(100, function()
                     local EllieMayTextBox = v.Uuid.EntityUuid
-                    if IsPlayer(EllieMayTextBox) == 1 then
+                    if Osi.IsPlayer(EllieMayTextBox) == 1 then
                         Osi.OpenMessageBox(EllieMayTextBox,
                             Osi.ResolveTranslatedString("ha6267b39ga602g434cg9db1g557da2a3e17b"))
                     end
@@ -678,10 +671,11 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
     -- PixieTalking()
 end)
 
+local BaltZombieFightID
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combatGuid)
     if object == BalthazarZombie1 then
-        local BaltZombieFightID = combatGuid
+        BaltZombieFightID = combatGuid
         ZombieSpeakSelector1()
         ZombieSpeakSelector2()
         ZombieSpeakSelector3()
@@ -812,10 +806,6 @@ Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combatGuid)
     end
 end)
 
---Open item listener
-Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
-end)
-
 --Use item listener
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     if item == ShadowToiletDoor then
@@ -847,7 +837,7 @@ Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, destroyer
         CrazedSquirrelEvent()
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC2") == 1 then
-        TurnIntoMimic2(item, character)
+        TurnIntoMimic2(item, destroyer)
     end
 end)
 
@@ -869,10 +859,10 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         local CWpos = CWEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
             Playeruuid = entity.Uuid.EntityUuid
-            if IsPlayer(Playeruuid) == 1 then
+            if Osi.IsPlayer(Playeruuid) == 1 then
                 local CWtarget = entity.Transform.Transform.Translate
                 local distance = math.sqrt((CWpos[1] - CWtarget[1]) ^ 2 + (CWpos[2] - CWtarget[2]) ^ 2 +
-                (CWpos[3] - CWtarget[3]) ^ 2)
+                    (CWpos[3] - CWtarget[3]) ^ 2)
                 if distance <= 30 then
                     Osi.RequestPassiveRoll(Playeruuid, ChildWraithKid, "", "Arcana",
                         "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "ChildWrathRoll")
@@ -917,9 +907,9 @@ end)
 --Roll listener
 Ext.Osiris.RegisterListener("RollResult", 6, "after",
     function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-        if eventName == ChildWrathRoll then
+        if eventName == "ChildWrathRoll" then
             if resultType == 1 then
-                ShowNotification(roller, "You sense evil magic at work in the child.")
+                Osi.ShowNotification(roller, "You sense evil magic at work in the child.")
                 PrepareDuration = 12
                 PreparedBoost()
             elseif resultType == 2 then
@@ -927,11 +917,3 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
             end
         end
     end)
-
---Flag listener
-Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
-end)
-
---Event listener
-Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
-end)
