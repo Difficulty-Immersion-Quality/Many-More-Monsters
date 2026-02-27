@@ -85,11 +85,11 @@ end
 
 local function ModifyMonstersRivington()
     if Osi.GetFlag(Act2AdamFlag, Null) == 1 and
-    Osi.GetFlag(Act2MikeFlag, Null) == 1 and
-    Osi.GetFlag(Act2LiamFlag, Null) == 1 and
-    Osi.GetFlag(Act3AdamFlag, Null) == 0 and
-    Osi.GetFlag(Act3MikeFlag, Null) == 0 and
-    Osi.GetFlag(Act3LiamFlag, Null) == 0 then
+        Osi.GetFlag(Act2MikeFlag, Null) == 1 and
+        Osi.GetFlag(Act2LiamFlag, Null) == 1 and
+        Osi.GetFlag(Act3AdamFlag, Null) == 0 and
+        Osi.GetFlag(Act3MikeFlag, Null) == 0 and
+        Osi.GetFlag(Act3LiamFlag, Null) == 0 then
         Osi.SetOnStage(Adam3, 1)
         Osi.SetOnStage(Mike3, 1)
         Osi.SetOnStage(Liam3, 1)
@@ -102,22 +102,17 @@ end
 
 --Create Mimics
 local function CreateAct3Mimics()
-    local Act3ChestList = { Act3Chest1, Act3Chest2, Act3Chest3, Act3Chest4, Act3Chest5, Act3Chest6, Act3Chest7, Act3Chest8, Act3Chest9, Act3Chest10,
-                            Act3Chest11, Act3Chest12, Act3Chest13, Act3Chest14, Act3Chest15, Act3Chest16 }
-    for _,PossibleMimic in ipairs(Act3ChestList) do
-    local IsItAMimic = Ext.Utils.Random(1,5)
+    local Act3ChestList = { Act3Chest1, Act3Chest2, Act3Chest3, Act3Chest4, Act3Chest5, Act3Chest6, Act3Chest7,
+        Act3Chest8, Act3Chest9, Act3Chest10,
+        Act3Chest11, Act3Chest12, Act3Chest13, Act3Chest14, Act3Chest15, Act3Chest16 }
+
+    for _, PossibleMimic in ipairs(Act3ChestList) do
+        local IsItAMimic = Ext.Math.Random(1, 5)
         if IsItAMimic == 1 then
-            print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC3", -1, 1, PossibleMimic)
-        elseif IsItAMimic == 2 then
-            print("Not a mimic, chest not hidden")
-        elseif IsItAMimic == 3 then
-            print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 4 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         elseif IsItAMimic == 5 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         end
     end
@@ -127,13 +122,15 @@ function TurnIntoMimic3(item, character)
     if Osi.IsDead(item) == 1 then
         return
     end
-    local x,y,z = Osi.GetPosition(item)
+    local x, y, z = Osi.GetPosition(item)
     local MimicSpawnID = Osi.CreateAt(Act3Mimic, x, y, z, 0, 1, '')
     if MimicSpawnID then
-        if (Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
-        elseif Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
+        if (Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
+        elseif Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
         end
         Osi.MoveAllItemsTo(item, MimicSpawnID, 0, 0, 1)
     end
@@ -164,7 +161,8 @@ local function SeaCreature2Attack()
     Osi.UseSpellAtPosition(SeaCreature202, "Projectile_Jump", -90.487930297852, 2.4921875, 107.23223114014, 1)
     Osi.UseSpellAtPosition(SeaCreature203, "Projectile_Jump", -86.25, -0.115234375, 97.25, 1)
     Ext.Timer.WaitFor(700, function()
-        Osi.PlayEffectAtPosition("7e3869fb-18e6-bf38-378e-eb8807ed1641", -80.329879760742, -2.1445188522339, 107.9024810791, 20)
+        Osi.PlayEffectAtPosition("7e3869fb-18e6-bf38-378e-eb8807ed1641", -80.329879760742, -2.1445188522339,
+            107.9024810791, 20)
         Ext.Timer.WaitFor(1000, function()
             Osi.Die(SeaCreatureChest, 0, SeaCreatureChest, 0, 1, 500)
         end)
@@ -182,12 +180,12 @@ end
 
 --Githyanki Patrol
 local function GithPatrolRoute()
-    if Osi.IsInCombat(RivingtonPatrol1) == 0 and 
-    Osi.IsDead(RivingtonPatrol1) == 0 and 
-    Osi.IsTagged(RivingtonPatrol1, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol2, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol3, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol4, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+    if Osi.IsInCombat(RivingtonPatrol1) == 0 and
+        Osi.IsDead(RivingtonPatrol1) == 0 and
+        Osi.IsTagged(RivingtonPatrol1, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol2, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol3, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol4, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
         Osi.CharacterMoveToPosition(RivingtonPatrol1, 7.766809463501, 41.3662109375, -21.354127883911, "Walk", "", 0)
         Osi.CharacterMoveToPosition(RivingtonPatrol2, 8.766809463501, 41.3662109375, -22.354127883911, "Walk", "", 0)
         Osi.CharacterMoveToPosition(RivingtonPatrol3, 5.766809463501, 41.3662109375, -21.354127883911, "Walk", "", 0)
@@ -200,85 +198,233 @@ local function GithPatrolRoute()
                 Osi.CharacterMoveToPosition(RivingtonPatrol4, 13.475222587585, 41.84375, -26.964761734009, "Walk", "", 0)
                 Ext.Timer.WaitFor(6000, function()
                     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 19.822704315186, 43.2392578125, -37.82287597656, "Walk", "", 0)
-                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 18.822704315186, 43.2392578125, -38.82287597656, "Walk", "", 0)
-                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 20.822704315186, 43.2392578125, -35.82287597656, "Walk", "", 0)
-                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 21.822704315186, 43.2392578125, -36.82287597656, "Walk", "", 0)
+                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 19.822704315186, 43.2392578125, -37.82287597656,
+                            "Walk", "", 0)
+                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 18.822704315186, 43.2392578125, -38.82287597656,
+                            "Walk", "", 0)
+                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 20.822704315186, 43.2392578125, -35.82287597656,
+                            "Walk", "", 0)
+                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 21.822704315186, 43.2392578125, -36.82287597656,
+                            "Walk", "", 0)
                         Ext.Timer.WaitFor(6000, function()
                             if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                Osi.CharacterMoveToPosition(RivingtonPatrol1, 17.612157821655, 44.5712890625, -47.634712219238, "Walk", "", 0)
-                                Osi.CharacterMoveToPosition(RivingtonPatrol2, 18.612157821655, 44.5712890625, -47.634712219238, "Walk", "", 0)
-                                Osi.CharacterMoveToPosition(RivingtonPatrol3, 16.612157821655, 44.5712890625, -46.634712219238, "Walk", "", 0)
-                                Osi.CharacterMoveToPosition(RivingtonPatrol4, 16.612157821655, 44.5712890625, -47.634712219238, "Walk", "", 0)
+                                Osi.CharacterMoveToPosition(RivingtonPatrol1, 17.612157821655, 44.5712890625,
+                                    -47.634712219238, "Walk", "", 0)
+                                Osi.CharacterMoveToPosition(RivingtonPatrol2, 18.612157821655, 44.5712890625,
+                                    -47.634712219238, "Walk", "", 0)
+                                Osi.CharacterMoveToPosition(RivingtonPatrol3, 16.612157821655, 44.5712890625,
+                                    -46.634712219238, "Walk", "", 0)
+                                Osi.CharacterMoveToPosition(RivingtonPatrol4, 16.612157821655, 44.5712890625,
+                                    -47.634712219238, "Walk", "", 0)
                                 Ext.Timer.WaitFor(6000, function()
                                     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 13.508633613586, 45.6591796875, -55.585548400879, "Walk", "", 0)
-                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 14.508633613586, 45.6591796875, -55.585548400879, "Walk", "", 0)
-                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 12.508633613586, 45.6591796875, -54.585548400879, "Walk", "", 0)
-                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 12.508633613586, 45.6591796875, -55.585548400879, "Walk", "", 0)
+                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 13.508633613586, 45.6591796875,
+                                            -55.585548400879, "Walk", "", 0)
+                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 14.508633613586, 45.6591796875,
+                                            -55.585548400879, "Walk", "", 0)
+                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 12.508633613586, 45.6591796875,
+                                            -54.585548400879, "Walk", "", 0)
+                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 12.508633613586, 45.6591796875,
+                                            -55.585548400879, "Walk", "", 0)
                                         Ext.Timer.WaitFor(6000, function()
                                             if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, 11.389042854309, 47.83203125, -66.319076538086, "Walk", "", 0)
-                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, 12.389042854309, 47.83203125, -66.319076538086, "Walk", "", 0)
-                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, 9.389042854309, 47.83203125, -66.319076538086, "Walk", "", 0)
-                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, 101.389042854309, 47.83203125, -66.319076538086, "Walk", "", 0)
+                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, 11.389042854309,
+                                                    47.83203125, -66.319076538086, "Walk", "", 0)
+                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, 12.389042854309,
+                                                    47.83203125, -66.319076538086, "Walk", "", 0)
+                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, 9.389042854309, 47.83203125,
+                                                    -66.319076538086, "Walk", "", 0)
+                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, 101.389042854309,
+                                                    47.83203125, -66.319076538086, "Walk", "", 0)
                                                 Ext.Timer.WaitFor(7000, function()
                                                     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 2.9711270332336, 49.98046875, -71.273628234863, "Walk", "", 0)
-                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 3.9711270332336, 49.98046875, -72.273628234863, "Walk", "", 0)
-                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 1.9711270332336, 49.98046875, -73.273628234863, "Walk", "", 0)
-                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 1.9711270332336, 49.98046875, -70.273628234863, "Walk", "", 0)
+                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, 2.9711270332336,
+                                                            49.98046875, -71.273628234863, "Walk", "", 0)
+                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, 3.9711270332336,
+                                                            49.98046875, -72.273628234863, "Walk", "", 0)
+                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, 1.9711270332336,
+                                                            49.98046875, -73.273628234863, "Walk", "", 0)
+                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, 1.9711270332336,
+                                                            49.98046875, -70.273628234863, "Walk", "", 0)
                                                         Ext.Timer.WaitFor(7000, function()
                                                             if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, -8.0088748931885, 47.671875, -68.871948242188, "Walk", "", 0)
-                                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, -9.0088748931885, 47.671875, -68.871948242188, "Walk", "", 0)
-                                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, -6.0088748931885, 47.671875, -68.871948242188, "Walk", "", 0)
-                                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, -7.0088748931885, 47.671875, -68.871948242188, "Walk", "", 0)
+                                                                Osi.CharacterMoveToPosition(RivingtonPatrol1,
+                                                                    -8.0088748931885, 47.671875, -68.871948242188, "Walk",
+                                                                    "", 0)
+                                                                Osi.CharacterMoveToPosition(RivingtonPatrol2,
+                                                                    -9.0088748931885, 47.671875, -68.871948242188, "Walk",
+                                                                    "", 0)
+                                                                Osi.CharacterMoveToPosition(RivingtonPatrol3,
+                                                                    -6.0088748931885, 47.671875, -68.871948242188, "Walk",
+                                                                    "", 0)
+                                                                Osi.CharacterMoveToPosition(RivingtonPatrol4,
+                                                                    -7.0088748931885, 47.671875, -68.871948242188, "Walk",
+                                                                    "", 0)
                                                                 Ext.Timer.WaitFor(8000, function()
                                                                     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, -15.244285583496, 46.8095703125, -61.639114379883, "Walk", "", 0)
-                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, -16.244285583496, 46.8095703125, -61.639114379883, "Walk", "", 0)
-                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, -13.244285583496, 46.8095703125, -61.639114379883, "Walk", "", 0)
-                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, -14.244285583496, 46.8095703125, -61.639114379883, "Walk", "", 0)
+                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1,
+                                                                            -15.244285583496, 46.8095703125,
+                                                                            -61.639114379883, "Walk", "", 0)
+                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2,
+                                                                            -16.244285583496, 46.8095703125,
+                                                                            -61.639114379883, "Walk", "", 0)
+                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3,
+                                                                            -13.244285583496, 46.8095703125,
+                                                                            -61.639114379883, "Walk", "", 0)
+                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4,
+                                                                            -14.244285583496, 46.8095703125,
+                                                                            -61.639114379883, "Walk", "", 0)
                                                                         Ext.Timer.WaitFor(7000, function()
                                                                             if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, -15.888977050781, 45.9072265625, -50.984764099121, "Walk", "", 0)
-                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, -16.888977050781, 45.9072265625, -50.984764099121, "Walk", "", 0)
-                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, -13.888977050781, 45.9072265625, -50.984764099121, "Walk", "", 0)
-                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, -14.888977050781, 45.9072265625, -50.984764099121, "Walk", "", 0)
+                                                                                Osi.CharacterMoveToPosition(
+                                                                                    RivingtonPatrol1, -15.888977050781,
+                                                                                    45.9072265625, -50.984764099121,
+                                                                                    "Walk", "", 0)
+                                                                                Osi.CharacterMoveToPosition(
+                                                                                    RivingtonPatrol2, -16.888977050781,
+                                                                                    45.9072265625, -50.984764099121,
+                                                                                    "Walk", "", 0)
+                                                                                Osi.CharacterMoveToPosition(
+                                                                                    RivingtonPatrol3, -13.888977050781,
+                                                                                    45.9072265625, -50.984764099121,
+                                                                                    "Walk", "", 0)
+                                                                                Osi.CharacterMoveToPosition(
+                                                                                    RivingtonPatrol4, -14.888977050781,
+                                                                                    45.9072265625, -50.984764099121,
+                                                                                    "Walk", "", 0)
                                                                                 Ext.Timer.WaitFor(6000, function()
                                                                                     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, -15.9440574646, 45.0263671875, -41.169185638428, "Walk", "", 0)
-                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, -16.9440574646, 45.0263671875, -41.169185638428, "Walk", "", 0)
-                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, -13.9440574646, 45.0263671875, -41.169185638428, "Walk", "", 0)
-                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, -14.9440574646, 45.0263671875, -41.169185638428, "Walk", "", 0)
-                                                                                        Ext.Timer.WaitFor(6000, function()
-                                                                                            if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, -12.414402008057, 44.1015625, -33.918991088867, "Walk", "", 0)
-                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, -14.414402008057, 44.1015625, -33.918991088867, "Walk", "", 0)
-                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, -10.414402008057, 44.1015625, -33.918991088867, "Walk", "", 0)
-                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, -11.414402008057, 44.1015625, -33.918991088867, "Walk", "", 0)
-                                                                                                Ext.Timer.WaitFor(6000, function()
-                                                                                                    if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol1, -6.7824816703796, 42.9482421875, -27.735832214355, "Walk", "", 0)
-                                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol2, -7.7824816703796, 42.9482421875, -27.735832214355, "Walk", "", 0)
-                                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol3, -4.7824816703796, 42.9482421875, -27.735832214355, "Walk", "", 0)
-                                                                                                        Osi.CharacterMoveToPosition(RivingtonPatrol4, -5.7824816703796, 42.9482421875, -27.735832214355, "Walk", "", 0)
-                                                                                                        Ext.Timer.WaitFor(6000, function()
+                                                                                        Osi.CharacterMoveToPosition(
+                                                                                            RivingtonPatrol1,
+                                                                                            -15.9440574646,
+                                                                                            45.0263671875,
+                                                                                            -41.169185638428, "Walk", "",
+                                                                                            0)
+                                                                                        Osi.CharacterMoveToPosition(
+                                                                                            RivingtonPatrol2,
+                                                                                            -16.9440574646,
+                                                                                            45.0263671875,
+                                                                                            -41.169185638428, "Walk", "",
+                                                                                            0)
+                                                                                        Osi.CharacterMoveToPosition(
+                                                                                            RivingtonPatrol3,
+                                                                                            -13.9440574646,
+                                                                                            45.0263671875,
+                                                                                            -41.169185638428, "Walk", "",
+                                                                                            0)
+                                                                                        Osi.CharacterMoveToPosition(
+                                                                                            RivingtonPatrol4,
+                                                                                            -14.9440574646,
+                                                                                            45.0263671875,
+                                                                                            -41.169185638428, "Walk", "",
+                                                                                            0)
+                                                                                        Ext.Timer.WaitFor(6000,
+                                                                                            function()
+                                                                                                if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
+                                                                                                    Osi.CharacterMoveToPosition(
+                                                                                                        RivingtonPatrol1,
+                                                                                                        -12.414402008057,
+                                                                                                        44.1015625,
+                                                                                                        -33.918991088867,
+                                                                                                        "Walk", "", 0)
+                                                                                                    Osi.CharacterMoveToPosition(
+                                                                                                        RivingtonPatrol2,
+                                                                                                        -14.414402008057,
+                                                                                                        44.1015625,
+                                                                                                        -33.918991088867,
+                                                                                                        "Walk", "", 0)
+                                                                                                    Osi.CharacterMoveToPosition(
+                                                                                                        RivingtonPatrol3,
+                                                                                                        -10.414402008057,
+                                                                                                        44.1015625,
+                                                                                                        -33.918991088867,
+                                                                                                        "Walk", "", 0)
+                                                                                                    Osi.CharacterMoveToPosition(
+                                                                                                        RivingtonPatrol4,
+                                                                                                        -11.414402008057,
+                                                                                                        44.1015625,
+                                                                                                        -33.918991088867,
+                                                                                                        "Walk", "", 0)
+                                                                                                    Ext.Timer.WaitFor(
+                                                                                                        6000, function()
                                                                                                             if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
-                                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol1, 1.6371383666992, 41.5888671875, -20.668397903442, "Walk", "", 0)
-                                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol2, 2.6371383666992, 41.5888671875, -21.668397903442, "Walk", "", 0)
-                                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol3, 0.6371383666992, 41.5888671875, -20.668397903442, "Walk", "", 0)
-                                                                                                                Osi.CharacterMoveToPosition(RivingtonPatrol4, 0.6371383666992, 41.5888671875, -22.668397903442, "Walk", "", 0)
-                                                                                                                Ext.Timer.WaitFor(6000, function()
-                                                                                                                    GithPatrolRoute()
-                                                                                                                end)
+                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                    RivingtonPatrol1,
+                                                                                                                    -6.7824816703796,
+                                                                                                                    42.9482421875,
+                                                                                                                    -27.735832214355,
+                                                                                                                    "Walk",
+                                                                                                                    "", 0)
+                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                    RivingtonPatrol2,
+                                                                                                                    -7.7824816703796,
+                                                                                                                    42.9482421875,
+                                                                                                                    -27.735832214355,
+                                                                                                                    "Walk",
+                                                                                                                    "", 0)
+                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                    RivingtonPatrol3,
+                                                                                                                    -4.7824816703796,
+                                                                                                                    42.9482421875,
+                                                                                                                    -27.735832214355,
+                                                                                                                    "Walk",
+                                                                                                                    "", 0)
+                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                    RivingtonPatrol4,
+                                                                                                                    -5.7824816703796,
+                                                                                                                    42.9482421875,
+                                                                                                                    -27.735832214355,
+                                                                                                                    "Walk",
+                                                                                                                    "", 0)
+                                                                                                                Ext.Timer
+                                                                                                                    .WaitFor(
+                                                                                                                        6000,
+                                                                                                                        function()
+                                                                                                                            if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 then
+                                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                                    RivingtonPatrol1,
+                                                                                                                                    1.6371383666992,
+                                                                                                                                    41.5888671875,
+                                                                                                                                    -20.668397903442,
+                                                                                                                                    "Walk",
+                                                                                                                                    "",
+                                                                                                                                    0)
+                                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                                    RivingtonPatrol2,
+                                                                                                                                    2.6371383666992,
+                                                                                                                                    41.5888671875,
+                                                                                                                                    -21.668397903442,
+                                                                                                                                    "Walk",
+                                                                                                                                    "",
+                                                                                                                                    0)
+                                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                                    RivingtonPatrol3,
+                                                                                                                                    0.6371383666992,
+                                                                                                                                    41.5888671875,
+                                                                                                                                    -20.668397903442,
+                                                                                                                                    "Walk",
+                                                                                                                                    "",
+                                                                                                                                    0)
+                                                                                                                                Osi.CharacterMoveToPosition(
+                                                                                                                                    RivingtonPatrol4,
+                                                                                                                                    0.6371383666992,
+                                                                                                                                    41.5888671875,
+                                                                                                                                    -22.668397903442,
+                                                                                                                                    "Walk",
+                                                                                                                                    "",
+                                                                                                                                    0)
+                                                                                                                                Ext.Timer
+                                                                                                                                    .WaitFor(
+                                                                                                                                        6000,
+                                                                                                                                        function()
+                                                                                                                                            GithPatrolRoute()
+                                                                                                                                        end)
+                                                                                                                            end
+                                                                                                                        end)
                                                                                                             end
                                                                                                         end)
-                                                                                                    end
-                                                                                                end)
-                                                                                            end
-                                                                                        end)
+                                                                                                end
+                                                                                            end)
                                                                                     end
                                                                                 end)
                                                                             end
@@ -304,10 +450,10 @@ end
 
 local function GithPatrolReset()
     if Osi.IsInCombat(RivingtonPatrol1) == 0 and Osi.IsDead(RivingtonPatrol1) == 0 and
-    Osi.IsTagged(RivingtonPatrol1, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol2, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol3, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
-    Osi.IsTagged(RivingtonPatrol4, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
+        Osi.IsTagged(RivingtonPatrol1, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol2, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol3, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 and
+        Osi.IsTagged(RivingtonPatrol4, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
         Osi.TeleportToPosition(RivingtonPatrol1, 3.5899391174316, 41.337890625, -19.74844741821, "", 0, 0, 0, 1, 1)
         Osi.TeleportToPosition(RivingtonPatrol2, 0.98395872116089, 41.4794921875, -18.71282386779, "", 0, 0, 0, 1, 1)
         Osi.TeleportToPosition(RivingtonPatrol3, 4.6132888793945, 41.1552734375, -17.80125617981, "", 0, 0, 0, 1, 1)
@@ -315,17 +461,13 @@ local function GithPatrolReset()
     end
 end
 
-
-Ext.Events.SessionLoaded:Subscribe(function()
-end)
-
 --Prepared Boost
 Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
 local function PreparedBoost()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
         if Osi.IsTagged(charIDprepared, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
             Osi.ApplyStatus(charIDprepared, "MMM_PREPARED", PrepareDuration, 1, charIDprepared)
@@ -341,8 +483,8 @@ end
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    if (level_name ~= "BGO_Main_A") then 
-        return 
+    if (level_name ~= "BGO_Main_A") then
+        return
     end
     if Osi.GetFlag(Act3MimicFlag, Null) == 0 then
         Osi.SetFlag(Act3MimicFlag, Null, 0, 1)
@@ -358,24 +500,21 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
 end)
 
 --Enter Combat Listener
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combatGuid)
+Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combatGuid)
     if object == Adam3 then
         Osi.ApplyStatus(Adam3, "MMM_ADAMCOMBAT", 6, 1, "")
     end
 end)
 
---Turn started listener
-Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
-end)
-
 --Osi.AttackedBy
-Ext.Osiris.RegisterListener("AttackedBy", 7, "after", function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
-end)
+Ext.Osiris.RegisterListener("AttackedBy", 7, "after",
+    function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
+    end)
 
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
-     --Team Trajectile
-     if character == Adam3 then
+    --Team Trajectile
+    if character == Adam3 then
         Osi.SetFlag(Act3AdamFlag, Null, 0, 1)
         Osi.SetCanFight(Adam3, 0)
         Osi.Resurrect(Adam3, "", 0)
@@ -434,21 +573,18 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     end
 end)
 
---End Combat Listener
-Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combatGuid)
-end)
 
 --Open item listener
-Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
-    if item == BODE then
-        print("BODE WORKING")
-    end
-end)
+-- Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
+--     if item == BODE then
+--         print("BODE WORKING")
+--     end
+-- end)
 
 --Character Looted
 Ext.Osiris.RegisterListener("CharacterLootedCharacter", 2, "after", function(player, lootedCharacter)
     if lootedCharacter == RivingtonDeadChicken and
-    Osi.GetFlag(Act3HillGiantFlag, Null) == 0 then
+        Osi.GetFlag(Act3HillGiantFlag, Null) == 0 then
         Osi.SetFlag(Act3HillGiantFlag, Null, 0, 1)
         HillGiantAttack()
     end
@@ -461,19 +597,11 @@ Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     end
 end)
 
---Dialog Start Request listener
-Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)  
-end)
-
 --Destroy object listener
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, destroyer, destroyerOwner, storyActionID)
     if Osi.HasActiveStatus(item, "MMM_MIMIC3") == 1 then
-        TurnIntoMimic3(item, character)
+        TurnIntoMimic3(item, destroyer)
     end
-end)
-
---Added To listener
-Ext.Osiris.RegisterListener("AddedTo", 3, "after", function(object, inventoryHolder, addType)
 end)
 
 --Saw something listener
@@ -486,8 +614,7 @@ end)
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     if status == "MMM_RIVINGTONSEAATTACK1" and
-    Osi.GetFlag(Act3SeaCreatures1Flag, Null) == 0 then
-        print("Sea Creature Aura Applied")
+        Osi.GetFlag(Act3SeaCreatures1Flag, Null) == 0 then
         Osi.SetFlag(Act3SeaCreatures1Flag, Null, 0, 1)
         Osi.RemoveStatus(SeaCreatureMound, "MMM_RIVINGTONSEADETECT1")
         local CWEntity = Ext.Entity.Get(SeaCreature101)
@@ -496,9 +623,11 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             Playeruuid = entity.Uuid.EntityUuid
             if Osi.IsTagged(Playeruuid, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
                 local CWtarget = entity.Transform.Transform.Translate
-                local distance = math.sqrt((CWpos[1] - CWtarget[1])^2 + (CWpos[2] - CWtarget[2])^2 + (CWpos[3] - CWtarget[3])^2)
+                local distance = math.sqrt((CWpos[1] - CWtarget[1]) ^ 2 + (CWpos[2] - CWtarget[2]) ^ 2 +
+                    (CWpos[3] - CWtarget[3]) ^ 2)
                 if distance <= 30 then
-                    Osi.RequestPassiveRoll(Playeruuid, SeaCreature101, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "SeaCreature1Roll")
+                    Osi.RequestPassiveRoll(Playeruuid, SeaCreature101, "", "Perception",
+                        "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "SeaCreature1Roll")
                 end
             end
         end
@@ -507,8 +636,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         end)
     end
     if status == "MMM_RIVINGTONSEAATTACK2" and
-    Osi.GetFlag(Act3SeaCreatures2Flag, Null) == 0 then
-        print("Sea Creature Aura Applied")
+        Osi.GetFlag(Act3SeaCreatures2Flag, Null) == 0 then
         Osi.SetFlag(Act3SeaCreatures2Flag, Null, 0, 1)
         Osi.RemoveStatus(SeaCreatureMound, "MMM_RIVINGTONSEADETECT2")
         local CWEntity = Ext.Entity.Get(SeaCreature201)
@@ -517,9 +645,11 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             Playeruuid = entity.Uuid.EntityUuid
             if Osi.IsTagged(Playeruuid, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
                 local CWtarget = entity.Transform.Transform.Translate
-                local distance = math.sqrt((CWpos[1] - CWtarget[1])^2 + (CWpos[2] - CWtarget[2])^2 + (CWpos[3] - CWtarget[3])^2)
+                local distance = math.sqrt((CWpos[1] - CWtarget[1]) ^ 2 + (CWpos[2] - CWtarget[2]) ^ 2 +
+                    (CWpos[3] - CWtarget[3]) ^ 2)
                 if distance <= 30 then
-                    Osi.RequestPassiveRoll(Playeruuid, SeaCreature201, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "SeaCreature2Roll")
+                    Osi.RequestPassiveRoll(Playeruuid, SeaCreature201, "", "Perception",
+                        "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "SeaCreature2Roll")
                 end
             end
         end
@@ -530,43 +660,36 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
 end)
 
 --Roll listener
-Ext.Osiris.RegisterListener("RollResult", 6, "after", function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-    if eventName == "SeaCreature1Roll" then
-        if resultType == 1 then
-            ShowNotification(roller, "You notice something moving in the water.")
-            PrepareDuration = 12
-            PreparedBoost()
-        elseif resultType == 2 then
-            return
+Ext.Osiris.RegisterListener("RollResult", 6, "after",
+    function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
+        if eventName == "SeaCreature1Roll" then
+            if resultType == 1 then
+                Osi.ShowNotification(roller, "You notice something moving in the water.")
+                PrepareDuration = 12
+                PreparedBoost()
+            elseif resultType == 2 then
+                return
+            end
         end
-    end
-    if eventName == "SeaCreature2Roll" then
-        if resultType == 1 then
-            ShowNotification(roller, "You notice something moving in the water.")
-            PrepareDuration = 12
-            PreparedBoost()
-        elseif resultType == 2 then
-            return
+        if eventName == "SeaCreature2Roll" then
+            if resultType == 1 then
+                Osi.ShowNotification(roller, "You notice something moving in the water.")
+                PrepareDuration = 12
+                PreparedBoost()
+            elseif resultType == 2 then
+                return
+            end
         end
-    end
-    if eventName == "BODERoll" then
-        if resultType == 1 then
-            ShowNotification(roller, "You see the book emitting magic.")
-            PrepareDuration = 12
-            PreparedBoost()
-        elseif resultType == 2 then
-            return
+        if eventName == "BODERoll" then
+            if resultType == 1 then
+                Osi.ShowNotification(roller, "You see the book emitting magic.")
+                PrepareDuration = 12
+                PreparedBoost()
+            elseif resultType == 2 then
+                return
+            end
         end
-    end
-end)
-
---Flag listener
-Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
-end)
-
---Event listener
-Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
-end)
+    end)
 
 --Close Book listener
 Ext.Osiris.RegisterListener("GameBookInterfaceClosed", 2, "after", function(item, character)
@@ -575,11 +698,13 @@ Ext.Osiris.RegisterListener("GameBookInterfaceClosed", 2, "after", function(item
         local CWpos = CWEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
             Playeruuid = entity.Uuid.EntityUuid
-            if IsPlayer(Playeruuid) == 1 then
+            if Osi.IsPlayer(Playeruuid) == 1 then
                 local CWtarget = entity.Transform.Transform.Translate
-                local distance = math.sqrt((CWpos[1] - CWtarget[1])^2 + (CWpos[2] - CWtarget[2])^2 + (CWpos[3] - CWtarget[3])^2)
+                local distance = math.sqrt((CWpos[1] - CWtarget[1]) ^ 2 + (CWpos[2] - CWtarget[2]) ^ 2 +
+                    (CWpos[3] - CWtarget[3]) ^ 2)
                 if distance <= 10 then
-                    Osi.RequestPassiveRoll(Playeruuid, Null, "", "Arcana", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "BODERoll")
+                    Osi.RequestPassiveRoll(Playeruuid, Null, "", "Arcana",
+                        "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "BODERoll")
                 end
             end
         end
