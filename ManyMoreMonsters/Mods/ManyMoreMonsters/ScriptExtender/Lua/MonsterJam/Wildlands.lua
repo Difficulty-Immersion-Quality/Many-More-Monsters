@@ -243,17 +243,10 @@ local function CreateAct1Mimics()
     for _, PossibleMimic in ipairs(Act1ChestList) do
         local IsItAMimic = Ext.Math.Random(1, 5)
         if IsItAMimic == 1 then
-            print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC1", -1, 1, PossibleMimic)
-        elseif IsItAMimic == 2 then
-            print("Not a mimic, chest not hidden")
-        elseif IsItAMimic == 3 then
-            print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 4 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         elseif IsItAMimic == 5 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         end
     end
@@ -444,7 +437,7 @@ local function PatrollingMinotaur()
                                                                                         Osi.IsInCombat(AlphaM) == 0 and
                                                                                         Osi.IsTagged(AlphaM, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0 then
                                                                                         Osi.CharacterMoveToPosition(
-                                                                                        AlphaM, 163.97476196289,
+                                                                                            AlphaM, 163.97476196289,
                                                                                             49.5947265625,
                                                                                             -179.0030670166, "Walk", "",
                                                                                             0)
@@ -1119,26 +1112,26 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
     if object == "MMM_BUGBEARCHALLENGER_46545754-5089-4e85-b34d-81395e5ebb44" then
         BugBearCombatID = combat
         if Osi.CombatGetInvolvedPlayersCount(BugBearCombatID) == 0 then
-            Osi.AddBoosts(BugbearChallenger, "Invulnerable", "", BugbearChallenger)                                           --Bugbear
-            Osi.AddBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", "", BugbearChallenger)                          --Bugbear movement so he doesn't chase Remira
+            Osi.AddBoosts(BugbearChallenger, "Invulnerable", "", BugbearChallenger)                  --Bugbear
+            Osi.AddBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", "", BugbearChallenger) --Bugbear movement so he doesn't chase Remira
             Osi.AddBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", "",
-                "4faf77a0-b883-4f7b-acbf-4500973f446d")                                                                       --Remira
+                "4faf77a0-b883-4f7b-acbf-4500973f446d")                                              --Remira
             Osi.AddBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", "",
-                "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                                                       --Barth
+                "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                              --Barth
             Osi.AddBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", "",
-                "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                                       --Aradin
+                "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                              --Aradin
         end
     end
     --Remove bugbear immunities when player arrives
     if ((Osi.IsPlayer(object) == 1) and (combat == BugBearCombatID)) then
-        Osi.RemoveBoosts(BugbearChallenger, "Invulnerable", 0, "", BugbearChallenger)                                           --Bugbear
-        Osi.RemoveBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", 0, "", BugbearChallenger)                          --Bugbear movement so he doesn't chase Remira
+        Osi.RemoveBoosts(BugbearChallenger, "Invulnerable", 0, "", BugbearChallenger)                  --Bugbear
+        Osi.RemoveBoosts(BugbearChallenger, "ActionResourceBlock(Movement)", 0, "", BugbearChallenger) --Bugbear movement so he doesn't chase Remira
         Osi.RemoveBoosts("4faf77a0-b883-4f7b-acbf-4500973f446d", "Invulnerable", 0, "",
-            "4faf77a0-b883-4f7b-acbf-4500973f446d")                                                                             --Remira
+            "4faf77a0-b883-4f7b-acbf-4500973f446d")                                                    --Remira
         Osi.RemoveBoosts("534bceaf-678c-40a0-8ca9-e1134f95ba0d", "Invulnerable", 0, "",
-            "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                                                             --Barth
+            "534bceaf-678c-40a0-8ca9-e1134f95ba0d")                                                    --Barth
         Osi.RemoveBoosts("82d1b843-9e8c-48a5-9d87-caddea5c193c", "Invulnerable", 0, "",
-            "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                                             --Aradin
+            "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                    --Aradin
     end
     --Start Summon Ex Countdown
     if (object == Buthir) then
