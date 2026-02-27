@@ -1,3 +1,7 @@
+Ext.Require("Utilities/Networking/Channels.lua")
+Ext.Require("Utilities/Common/_Index.lua")
+Ext.Require("Utilities/Advanced/_ECSPrinter.lua")
+
 Ext.Require("MonsterJam/Globallands.lua")
 Ext.Require("MonsterJam/Wildlands.lua")
 Ext.Require("MonsterJam/Crechelands.lua")
@@ -6,5 +10,3 @@ Ext.Require("MonsterJam/Rivingtonlands.lua")
 Ext.Require("MonsterJam/Citylands.lua")
 Ext.Require("MonsterJam/Brainlands.lua")
 Ext.Require("Debug/Debugger.lua")
-
-print("Many More Monsters loaded")

@@ -69,9 +69,9 @@ end
 
 local function ModifyMonstersCity()
     if Osi.GetFlag(Act3AdamFlag, Null) == 1 and
-    Osi.GetFlag(Act3MikeFlag, Null) == 1 and
-    Osi.GetFlag(Act3LiamFlag, Null) == 1 and
-    Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
+        Osi.GetFlag(Act3MikeFlag, Null) == 1 and
+        Osi.GetFlag(Act3LiamFlag, Null) == 1 and
+        Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
         Osi.SetOnStage(Adam3b, 1)
         Osi.SetOnStage(Mike3b, 1)
         Osi.SetOnStage(Liam3b, 1)
@@ -94,11 +94,14 @@ end
 
 --Create Mimics
 local function CreateAct3BMimics()
-    local Act3BChestList = { Act3BChest1, Act3BChest2, Act3BChest3, Act3BChest4, Act3BChest5, Act3BChest6, Act3BChest7, Act3BChest8, Act3BChest9, Act3BChest10,
-                            Act3BChest11, Act3BChest12, Act3BChest13, Act3BChest14, Act3BChest15, Act3BChest16, Act3BChest17, Act3BChest18, Act3BChest19, Act3BChest20,
-                            Act3BChest21, Act3BChest22, Act3BChest23, Act3BChest24, Act3BChest25, Act3BChest26, Act3BChest27, Act3BChest28, Act3BChest29, Act3BChest30 }
-    for _,PossibleMimic in ipairs(Act3BChestList) do
-    local IsItAMimic = Ext.Utils.Random(1,5)
+    local Act3BChestList = { Act3BChest1, Act3BChest2, Act3BChest3, Act3BChest4, Act3BChest5, Act3BChest6, Act3BChest7,
+        Act3BChest8, Act3BChest9, Act3BChest10,
+        Act3BChest11, Act3BChest12, Act3BChest13, Act3BChest14, Act3BChest15, Act3BChest16, Act3BChest17, Act3BChest18,
+        Act3BChest19, Act3BChest20,
+        Act3BChest21, Act3BChest22, Act3BChest23, Act3BChest24, Act3BChest25, Act3BChest26, Act3BChest27, Act3BChest28,
+        Act3BChest29, Act3BChest30 }
+    for _, PossibleMimic in ipairs(Act3BChestList) do
+        local IsItAMimic = Ext.Utils.Random(1, 5)
         if IsItAMimic == 1 then
             print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC3B", -1, 1, PossibleMimic)
@@ -120,13 +123,15 @@ function TurnIntoMimic3B(item, character)
     if Osi.IsDead(item) == 1 then
         return
     end
-    local x,y,z = Osi.GetPosition(item)
+    local x, y, z = Osi.GetPosition(item)
     local MimicSpawnID = Osi.CreateAt(Act3Mimic, x, y, z, 0, 1, '')
     if MimicSpawnID then
-        if (Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
-        elseif Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
+        if (Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
+        elseif Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
         end
         Osi.MoveAllItemsTo(item, MimicSpawnID, 0, 0, 1)
     end
@@ -185,16 +190,14 @@ local function PrisonBreak()
     end)
 end
 
-Ext.Events.SessionLoaded:Subscribe(function()
-end)
-
 --Prepared Boost
 Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
+-- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
         if Osi.IsTagged(charIDprepared, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
             Osi.ApplyStatus(charIDprepared, "MMM_PREPARED", PrepareDuration, 1, charIDprepared)
@@ -210,8 +213,8 @@ end
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    if (level_name ~= "CTY_Main_A") then 
-        return 
+    if (level_name ~= "CTY_Main_A") then
+        return
     end
     if Osi.GetFlag(Act3BMimicFlag, Null) == 0 then
         Osi.SetFlag(Act3BMimicFlag, Null, 0, 1)
@@ -222,10 +225,6 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
         InitiateMonstersCitylands()
     end
     ModifyMonstersCity()
-end)
-
---Enter Combat Listener
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combatGuid)
 end)
 
 --Turn started listener
@@ -239,18 +238,6 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
     if object == Mike3b and Osi.GetHitpoints(Mike3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
         TeamTrajectileLoss()
     end
-end)
-
---Osi.AttackedBy
-Ext.Osiris.RegisterListener("AttackedBy", 7, "after", function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
-end)
-
---Death listener
-Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
-end)
-
---End Combat Listener
-Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combatGuid)
 end)
 
 --Open item listener
@@ -267,44 +254,20 @@ Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     end
 end)
 
---Dialog Start Request listener
-Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)  
-end)
-
 --Destroy object listener
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, destroyer, destroyerOwner, storyActionID)
     if Osi.HasActiveStatus(item, "MMM_MIMIC3B") == 1 then
-        TurnIntoMimic2(item, character)
+        TurnIntoMimic2(item, destroyer)
     end
-end)
-
---Added To listener
-Ext.Osiris.RegisterListener("AddedTo", 3, "after", function(object, inventoryHolder, addType)
-end)
-
---Saw something listener
-Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
 end)
 
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
-    if status == "MMM_THIEFTRIOBOSSATTACK" and
-    Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
+    if status == "MMM_THIEFTRIOBOSSATTACK" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
         TeamTrajectileBoss()
     end
+    
     if status == "MMM_THIEFTRIOJAILATTACK" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 and Osi.GetFlag(Act3TrajectileJail, Null) == 0 then
         Osi.ApplyStatus(Adam3j, "MMM_TRAJECTILEJAILSPEAK", 6, 1, "")
     end
-end)
-
---Roll listener
-Ext.Osiris.RegisterListener("RollResult", 6, "after", function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-end)
-
---Flag listener
-Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
-end)
-
---Event listener
-Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
 end)
