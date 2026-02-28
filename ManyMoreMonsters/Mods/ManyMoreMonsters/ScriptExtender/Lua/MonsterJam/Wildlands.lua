@@ -753,7 +753,7 @@ end
 --Oof randomly slipping and getting up
 local function TrippyOof()
     if (Osi.IsDead(Oof) == 0) then
-        local OofSlipRoll = Ext.MAth.Random(1, 6)
+        local OofSlipRoll = Ext.Math.Random(1, 6)
         if OofSlipRoll == 1 then
             Osi.ApplyStatus(Oof, "PRONE_GREASE", 1, 1, Oof)
             Ext.Timer.WaitFor(2000, function()
