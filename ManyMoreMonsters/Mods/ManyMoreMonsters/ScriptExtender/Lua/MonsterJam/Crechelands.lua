@@ -1060,17 +1060,15 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gondola detect roll
         if eventName == "GondolaRoll" then
             if resultType == 1 then
-                Osi.ShowNotification(roller, "You see Gith riding the gondola towards you.")
+                Channels.LogToPlayerOverhead:Broadcast("There are Gith on that Gondola! Prepare yourselves!")
                 PrepareDuration = 30
                 PreparedBoost()
-            elseif resultType == 0 then
-                return
             end
         end
         --Gish'ra detect roll
         if eventName == "GishraDetectRoll" then
             if resultType == 1 then
-                Osi.ShowNotification(roller, "You feel eyes staring at you.")
+                Channels.LogToPlayerOverhead:SendToClient("I feel eyes staring at me...", Osi.GetReservedUserID(roller))
                 PrepareDuration = 18
                 PreparedBoost()
                 Osi.RemoveStatus(CrecheGishra1, "INVISIBLE", "")
@@ -1109,10 +1107,9 @@ Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialo
                 for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
                     local GithGondolaTag = entity.Uuid.EntityUuid
                     if Osi.IsTagged(GithGondolaTag, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
-                        if Osi.GetDistanceTo(GondolaLever, GithGondolaTag) <= 20 then
-                            Osi.RequestPassiveRoll(speaker, entity.Uuid.EntityUuid, "", "Perception",
-                                "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GondolaRoll")
-                        end
+                        Osi.RequestPassiveRoll(Osi.GetHostCharacter(), GithGondola1, "SkillCheckRoll", "Perception",
+                            "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GondolaRoll")
+                        return
                     end
                 end
             end)
