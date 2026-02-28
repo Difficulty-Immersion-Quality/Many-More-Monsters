@@ -506,11 +506,6 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
     end
 end)
 
---Osi.AttackedBy
-Ext.Osiris.RegisterListener("AttackedBy", 7, "after",
-    function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
-    end)
-
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     --Team Trajectile
