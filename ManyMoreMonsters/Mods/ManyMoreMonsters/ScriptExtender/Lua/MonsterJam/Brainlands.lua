@@ -52,7 +52,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
 end)
 
 local function PreparedBoost()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
         if Osi.IsTagged(charIDprepared, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
             Osi.ApplyStatus(charIDprepared, "MMM_PREPARED", PrepareDuration, 1, charIDprepared)
@@ -68,54 +68,26 @@ end
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    if (level_name ~= "END_Main") then 
-        return 
+    if (level_name ~= "END_Main") then
+        return
     end
     InitiateMonstersBrainlands()
-end)
-
---Enter Combat Listener
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combatGuid)
-end)
-
---Turn started listener
-Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
-end)
-
---Osi.AttackedBy
-Ext.Osiris.RegisterListener("AttackedBy", 7, "after", function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
-end)
-
---Death listener
-Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
-end)
-
---End Combat Listener
-Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combatGuid)
-end)
-
---Open item listener
-Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
-end)
-
---Use item listener
-Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
 end)
 
 --Dialog Start Request listener
 Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)
     if target == Adam3c then
-        AddPartyFollower(Adam3c, player)
+        Osi.AddPartyFollower(Adam3c, player)
         -- Osi.SetFlag(ActEndAdamFlag, Null, 0, 1)
         Osi.SetHasDialog(Adam3c, 0)
     end
     if target == Liam3c then
-        AddPartyFollower(Liam3c, player)
+        Osi.AddPartyFollower(Liam3c, player)
         -- Osi.SetFlag(ActEndLiamFlag, Null, 0, 1)
         Osi.SetHasDialog(Liam3c, 0)
     end
     if target == Mike3c then
-        AddPartyFollower(Mike3c, player)
+        Osi.AddPartyFollower(Mike3c, player)
         -- Osi.SetFlag(ActEndMikeFlag, Null, 0, 1)
         Osi.SetHasDialog(Mike3c, 0)
     end
@@ -136,20 +108,8 @@ end)
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     if status == "MMM_THIEFTRIOENDATTACK" and
-    Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
+        Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
         Osi.RemoveStatus(Liam3c, "MMM_THIEFTRIOENDDETECT")
         Osi.OpenMessageBox(object, Osi.ResolveTranslatedString("hdeb59186gf202g4468gac92gf1542bae1d28"))
     end
-end)
-
---Roll listener
-Ext.Osiris.RegisterListener("RollResult", 6, "after", function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-end)
-
---Flag listener
-Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
-end)
-
---Event listener
-Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
 end)

@@ -116,11 +116,11 @@ end
 
 local function ModifyMonstersCreche()
     if Osi.GetFlag(Act1AdamFlag, Null) == 1 and
-    Osi.GetFlag(Act1MikeFlag, Null) == 1 and
-    Osi.GetFlag(Act1LiamFlag, Null) == 1 and
-    Osi.GetFlag(Act1bAdamFlag, Null) == 0 and
-    Osi.GetFlag(Act1bLiamFlag, Null) == 0 and
-    Osi.GetFlag(Act1bMikeFlag, Null) == 0 then
+        Osi.GetFlag(Act1MikeFlag, Null) == 1 and
+        Osi.GetFlag(Act1LiamFlag, Null) == 1 and
+        Osi.GetFlag(Act1bAdamFlag, Null) == 0 and
+        Osi.GetFlag(Act1bLiamFlag, Null) == 0 and
+        Osi.GetFlag(Act1bMikeFlag, Null) == 0 then
         Osi.SetOnStage(Adam1b, 1)
         Osi.SetOnStage(Mike1b, 1)
         Osi.SetOnStage(Liam1b, 1)
@@ -164,21 +164,13 @@ end
 
 --Create Mimics
 local function CreateAct1BMimics()
-    local Act1BChestList = { Act1BChest1, Act1BChest2, Act1BChest3, Act1BChest4, Act1BChest5, Act1BChest6, Act1BChest7, Act1BChest8, Act1BChest9 }
-    for _,PossibleMimic in ipairs(Act1BChestList) do
-    local IsItAMimic = Ext.Utils.Random(1,5)
+    for _, PossibleMimic in ipairs({ Act1BChest1, Act1BChest2, Act1BChest3, Act1BChest4, Act1BChest5, Act1BChest6, Act1BChest7, Act1BChest8, Act1BChest9 }) do
+        local IsItAMimic = Ext.Math.Random(1, 5)
         if IsItAMimic == 1 then
-            print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC1B", -1, 1, PossibleMimic)
-        elseif IsItAMimic == 2 then
-            print("Not a mimic, chest not hidden")
-        elseif IsItAMimic == 3 then
-            print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 4 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         elseif IsItAMimic == 5 then
-            print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         end
     end
@@ -188,13 +180,15 @@ function TurnIntoMimic1B(item, character)
     if Osi.IsDead(item) == 1 then
         return
     end
-    local x,y,z = Osi.GetPosition(item)
+    local x, y, z = Osi.GetPosition(item)
     local MimicSpawnID = Osi.CreateAt(Act1BMimic, x, y, z, 0, 1, '')
     if MimicSpawnID then
-        if (Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
-        elseif Osi.HasActiveStatus(character,"AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
-            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character, Null, Null, Null, Null, Null, 1, 1, -1, 1 )
+        if (Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") == 1 or Osi.HasPassive(character, "Alert") == 1 or Osi.HasPassive(character, "Surprise_Immunity") == 1) and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Revealed_55471c86-3b69-ccae-d0e3-e8749cf41d9e", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
+        elseif Osi.HasActiveStatus(character, "AMBUSH_IMMUNITY") ~= 1 and Osi.HasPassive(character, "Alert") ~= 1 and Osi.HasPassive(character, "Surprise_Immunity") ~= 1 and Osi.IsPlayer(character) == 1 then
+            Osi.QRY_StartDialogCustom_Fixed("GLO_PAD_Mimic_Surprised_cb5f94c8-ee5b-c17a-959c-64bc6f88b417", character,
+                Null, Null, Null, Null, Null, 1, 1, -1, 1)
         end
         Osi.MoveAllItemsTo(item, MimicSpawnID, 0, 0, 1)
     end
@@ -204,8 +198,8 @@ end
 --Chicken Event 2
 local function MountainChickenSoccer()
     if MountainChickenTracker == 0 and
-    Osi.IsDead(MountainGob1) == 0 and
-    Osi.IsDead(MountainChicken) == 0 then
+        Osi.IsDead(MountainGob1) == 0 and
+        Osi.IsDead(MountainChicken) == 0 then
         Ext.Timer.WaitFor(1000, function()
             local ChickenLottery = Ext.Utils.Random(1, 6)
             if ChickenLottery == 1 then
@@ -227,7 +221,8 @@ local function MountainChickenSoccer()
                     Osi.PlayAnimation(MountainGob1, "CMBT_Melee_RHand_01_Attack_f4ac302b-1569-404f-bd52-1fe443e265df", "")
                 end)
             elseif ChickenLottery == 4 then
-                Osi.CharacterMoveToPosition(MountainChicken, -91.863105773926, 67.162109375, -199.76995849609, "Sprint", "", 0)
+                Osi.CharacterMoveToPosition(MountainChicken, -91.863105773926, 67.162109375, -199.76995849609, "Sprint",
+                    "", 0)
                 MountainChickenSoccer()
                 Ext.Timer.WaitFor(600, function()
                     Osi.PlayAnimation(MountainGob5, "CMBT_Melee_RHand_01_Attack_f4ac302b-1569-404f-bd52-1fe443e265df", "")
@@ -253,9 +248,7 @@ local function ChickenKillTimer()
     if Osi.IsDead(MountainGob1) == 0 then
         Ext.Timer.WaitFor(1800000, function()
             if Osi.IsDead(MountainGob1) == 0 then
-            Osi.ApplyDamage(MountainChicken, 40, "Piercing", MountainGob1)
-            elseif Osi.IsDead(MountainGob1) == 1 then
-                return
+                Osi.ApplyDamage(MountainChicken, 40, "Piercing", MountainGob1)
             end
         end)
     end
@@ -265,7 +258,7 @@ end
 local function MadHand1Running()
     if Osi.IsDead(MadHand1) == 0 and Osi.IsInCombat(MadHand1) == 0 then
         Ext.Timer.WaitFor(1300, function()
-        local MadHand1Roller = Ext.Utils.Random(1, 9)
+            local MadHand1Roller = Ext.Math.Random(1, 9)
             if MadHand1Roller == 1 then
                 Osi.CharacterMoveToPosition(MadHand1, -108.28685760498, 69.9150390625, -85.434692382812, "Sprint", "", 0)
                 MadHand1Running()
@@ -300,7 +293,7 @@ end
 local function MadHand2Running()
     if Osi.IsDead(MadHand2) == 0 and Osi.IsInCombat(MadHand2) == 0 then
         Ext.Timer.WaitFor(1600, function()
-        local MadHand2Roller = Ext.Utils.Random(1, 9)
+            local MadHand2Roller = Ext.Math.Random(1, 9)
             if MadHand2Roller == 1 then
                 Osi.CharacterMoveToPosition(MadHand2, -108.28685760498, 69.9150390625, -85.434692382812, "Sprint", "", 0)
                 MadHand2Running()
@@ -335,7 +328,7 @@ end
 local function MadHand3Running()
     if Osi.IsDead(MadHand3) == 0 and Osi.IsInCombat(MadHand3) == 0 then
         Ext.Timer.WaitFor(2100, function()
-        local MadHand3Roller = Ext.Utils.Random(1, 9)
+            local MadHand3Roller = Ext.Math.Random(1, 9)
             if MadHand3Roller == 1 then
                 Osi.CharacterMoveToPosition(MadHand3, -108.28685760498, 69.9150390625, -85.434692382812, "Sprint", "", 0)
                 MadHand3Running()
@@ -370,7 +363,7 @@ end
 local function MadHand4Running()
     if Osi.IsDead(MadHand4) == 0 and Osi.IsInCombat(MadHand4) == 0 then
         Ext.Timer.WaitFor(2400, function()
-        local MadHand4Roller = Ext.Utils.Random(1, 9)
+            local MadHand4Roller = Ext.Math.Random(1, 9)
             if MadHand4Roller == 1 then
                 Osi.CharacterMoveToPosition(MadHand4, -108.28685760498, 69.9150390625, -85.434692382812, "Sprint", "", 0)
                 MadHand4Running()
@@ -447,7 +440,6 @@ end
 
 --Gith Troops
 local function MountainArmyMarch()
-    print("Gith troops enter combat")
     Osi.SetOnStage(MountainTrigger1, 0)
     Osi.SetOnStage(MountainTrigger2, 0)
     Osi.CharacterMoveToPosition(GithTroop1, -75.302528381348, 60.90625, -113.02704620361, "Sprint", "", 0)
@@ -490,9 +482,9 @@ end
 
 --Lathander Stealing Summon Spiritweapons
 local function LathanderStealing()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDstealing = v.Uuid.EntityUuid
-        if IsPlayer(charIDstealing) == 1 then
+        if Osi.IsPlayer(charIDstealing) == 1 then
             Osi.ShowNotification(charIDstealing, "You think you can just steal the Blood of Lathander?")
         end
     end
@@ -507,117 +499,119 @@ end
 
 --Dawnmaster Check
 local function DawnmasterCheck()
-    print("Checker Turned On")
+    -- print("Checker Turned On")
     --Zevlor
     if Osi.IsDead("S_DEN_TieflingLeader_475200ee-cc3c-4dbe-84b1-1820c02ea26a") == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Zevlor " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Zevlor " .. DawnmasterTally)
     end
     --Kagha
     if Osi.IsDead("S_DEN_DruidLeader_95eb2b0b-a522-4ea5-8167-c5f4d1418156") == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Kagha " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Kagha " .. DawnmasterTally)
     end
     --Gale Hand
-    if Osi.GetFlag("ORI_DarkUrge_State_HackedGale_a18d0203-6c1e-b758-242a-c01c60b243a6", GetHostCharacter()) == 1 then
-    DawnmasterTally = DawnmasterTally +1;
-    print("Gale " .. DawnmasterTally)
+    if Osi.GetFlag("ORI_DarkUrge_State_HackedGale_a18d0203-6c1e-b758-242a-c01c60b243a6", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Gale " .. DawnmasterTally)
     end
     --Paralyzed Girl
     if Osi.GetFlag("DEN_General_State_PotionTieflingHealed_0dece41d-7a76-193e-1a6b-1efc7e4497ab", "S_DEN_Tiefling_005_e5319db6-ea86-43cc-9fd0-5ec1e0eab492") == 1 then
-    DawnmasterTally = DawnmasterTally -1;
-    print("Paralyzed Girl " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally - 1;
+        -- print("Paralyzed Girl " .. DawnmasterTally)
     end
     --Barcus
     if Osi.IsDead("S_FOR_UnfortunateGnome_6e45a00b-bad2-40bb-9403-147b9e92d976") == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Barcus " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Barcus " .. DawnmasterTally)
     end
     --Arabella
     if Osi.IsDead("S_DEN_SnakeKid_02257c1c-bbec-4ae3-9bcb-31c75a0a982f") == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Arabella " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Arabella " .. DawnmasterTally)
     end
     --Alfira
-    if Osi.GetFlag("LOW_Elfsong_State_AlfiraPermaDefeated", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Alfira " .. DawnmasterTally)
+    if Osi.GetFlag("LOW_Elfsong_State_AlfiraPermaDefeated", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Alfira " .. DawnmasterTally)
     end
     --Priestess Gut
     if Osi.IsDead("S_GOB_GoblinPriest_b983c336-9a14-4e9b-adb9-4689e7e0afa9") == 0 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Gut " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Gut " .. DawnmasterTally)
     end
     --Dror Ragzlin
     if Osi.IsDead("S_GOB_GoblinKing_11337af0-6a57-426b-a820-c4b00923dd54") == 0 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Dror " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Dror " .. DawnmasterTally)
     end
     --Hag Outcome
-    if Osi.GetFlag("LOW_HagSurvivors_Debug_MayrinaDiedInActI_331b726e-28cc-447f-8bec-6f3d9c8fc796", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("HagMayrinaDead " .. DawnmasterTally)
+    if Osi.GetFlag("LOW_HagSurvivors_Debug_MayrinaDiedInActI_331b726e-28cc-447f-8bec-6f3d9c8fc796", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("HagMayrinaDead " .. DawnmasterTally)
     end
-    if Osi.GetFlag("HAG_Hag_State_HagTookMother_38dc6752-5ab3-e108-64ed-fe63971d69fd", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("HagMayrinaTaken " .. DawnmasterTally)
+    if Osi.GetFlag("HAG_Hag_State_HagTookMother_38dc6752-5ab3-e108-64ed-fe63971d69fd", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("HagMayrinaTaken " .. DawnmasterTally)
     end
     --Dragon Bridge
     if Osi.QuestUpdateIsUnlocked(Osi.GetHostCharacter(), "ORI_Avatar_Laezel", "ResolvedPeaceCreche") == 1 then
-        DawnmasterTally = DawnmasterTally -1;
-        print("Gith Peaceful " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally - 1;
+        -- print("Gith Peaceful " .. DawnmasterTally)
     end
     --Myconids
     if Osi.IsDead("S_UND_MyconidSovereign_ea0f222f-eaad-4d83-bbcd-cbae51ccf265") == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Myconids " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Myconids " .. DawnmasterTally)
     end
     --Noblestalk
-    if Osi.GetFlag("UND_MushroomHunter_Event_AteMushroom_617a7a68-9ce9-26e8-883d-7cb98665540c", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Noblestalk " .. DawnmasterTally)
+    if Osi.GetFlag("UND_MushroomHunter_Event_AteMushroom_617a7a68-9ce9-26e8-883d-7cb98665540c", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Noblestalk " .. DawnmasterTally)
     end
     --Nere
-    if Osi.GetFlag("UND_DuergarCamp_State_SidedDrow_9c15716b-2e73-3bde-7e1c-8580aa4b1850", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Nere " .. DawnmasterTally)
+    if Osi.GetFlag("UND_DuergarCamp_State_SidedDrow_9c15716b-2e73-3bde-7e1c-8580aa4b1850", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Nere " .. DawnmasterTally)
     end
     --Gith egg
-    if Osi.GetFlag("CRE_Expeditioner_Event_GiveGithEggTo_c7666c11-1970-430a-b04f-847870341af6", GetHostCharacter()) == 1 then
-        DawnmasterTally = DawnmasterTally +1;
-        print("Gith Egg " .. DawnmasterTally)
+    if Osi.GetFlag("CRE_Expeditioner_Event_GiveGithEggTo_c7666c11-1970-430a-b04f-847870341af6", Osi.GetHostCharacter()) == 1 then
+        DawnmasterTally = DawnmasterTally + 1;
+        -- print("Gith Egg " .. DawnmasterTally)
     end
     --Stole key
     if Osi.IsDead(SpiritualMonestary1) == 1 then
-        DawnmasterTally = DawnmasterTally +3;
-        print("Stole key " .. DawnmasterTally)
+        DawnmasterTally = DawnmasterTally + 3;
+        -- print("Stole key " .. DawnmasterTally)
     end
     --Tally all
     Ext.Timer.WaitFor(100, function()
-        print("TOTAL DAWNMASTER SCORE - " .. DawnmasterTally)
+        -- print("TOTAL DAWNMASTER SCORE - " .. DawnmasterTally)
         if DawnmasterTally >= 4 then
-            for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+            for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
                 Ext.Timer.WaitFor(100, function()
                     local DawnmasterBad = v.Uuid.EntityUuid
-                    if IsPlayer(DawnmasterBad) == 1 then
-                        Osi.ShowNotification(DawnmasterBad,"You are not worthy to gaze upon the Blood of Lathander")
+                    if Osi.IsPlayer(DawnmasterBad) == 1 then
+                        Osi.ShowNotification(DawnmasterBad, "You are not worthy to gaze upon the Blood of Lathander")
                         Ext.Timer.WaitFor(2000, function()
                             Osi.SetFaction(Dawnmaster, "Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6")
-                            Osi.SetHostileAndEnterCombat("Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6", "Hero_Player1_6545a015-1b3d-66a4-6a0e-6ec62065cdb7", Dawnmaster, GetHostCharacter())
+                            Osi.SetHostileAndEnterCombat("Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6",
+                                "Hero_Player1_6545a015-1b3d-66a4-6a0e-6ec62065cdb7", Dawnmaster, Osi.GetHostCharacter())
                         end)
                     end
                 end)
             end
         elseif DawnmasterTally <= 3 then
-            for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+            for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
                 Ext.Timer.WaitFor(100, function()
                     local DawnmasterGood = v.Uuid.EntityUuid
-                    if IsPlayer(DawnmasterGood) == 1 then
+                    if Osi.IsPlayer(DawnmasterGood) == 1 then
                         Osi.ShowNotification(DawnmasterGood, "You are worthy of the Blood of Lathander")
                         Ext.Timer.WaitFor(1000, function()
                             Osi.PlayEffect(Dawnmaster, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
                             Osi.SetOnStage(Dawnmaster, 0)
-                            Osi.ApplyStatus("MMM_DAWNMASTER_e4c919df-5e52-4a68-ab65-4d550debfcdb", "PEACEFUL_RESOLUTION_XP", -1, 1, GetHostCharacter())
+                            Osi.ApplyStatus("MMM_DAWNMASTER_e4c919df-5e52-4a68-ab65-4d550debfcdb",
+                                "PEACEFUL_RESOLUTION_XP", -1, 1, Osi.GetHostCharacter())
                         end)
                     end
                 end)
@@ -629,21 +623,21 @@ end
 --Dawnmaster Execution
 local function DawnmasterExecution()
     if DawnmasterRollResult >= 1 then
-        DawnmasterSelector = Ext.Utils.Random(1, 2)
+        DawnmasterSelector = Ext.Math.Random(1, 2)
         if DawnmasterSelector == 1 then
             Osi.ApplyStatus(Dawnmaster, "MMM_DAWNMASTERFLAMESTRIKE", 6, 1, Dawnmaster)
             local DMEntity = Ext.Entity.Get(Dawnmaster)
             local DMpos = DMEntity.Transform.Transform.Translate
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
-                print("FlameStrikeShow1")
                 Playeruuid = entity.Uuid.EntityUuid
-                if IsPlayer(Playeruuid) == 1 then
-                    print("FlameStrikeShow2")
-                    Osi.CreateAtObject("Helper_Invisible_A_4cc75168-a81e-4a5c-85cd-1bab8d7bb641", Playeruuid, 0, 0, "MMM_DAWNMASTER_TARGETINGF", 1)
+                if Osi.IsPlayer(Playeruuid) == 1 then
+                    Osi.CreateAtObject("Helper_Invisible_A_4cc75168-a81e-4a5c-85cd-1bab8d7bb641", Playeruuid, 0, 0,
+                        "MMM_DAWNMASTER_TARGETINGF", 1)
                     local DMtarget = entity.Transform.Transform.Translate
-                    local distance = math.sqrt((DMpos[1] - DMtarget[1])^2 + (DMpos[2] - DMtarget[2])^2 + (DMpos[3] - DMtarget[3])^2)
+                    local distance = math.sqrt((DMpos[1] - DMtarget[1]) ^ 2 + (DMpos[2] - DMtarget[2]) ^ 2 +
+                        (DMpos[3] - DMtarget[3]) ^ 2)
+
                     if distance <= 50 then
-                        print("FlameStrikeShow3")
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
@@ -659,15 +653,14 @@ local function DawnmasterExecution()
             local DMEntity = Ext.Entity.Get(Dawnmaster)
             local DMpos = DMEntity.Transform.Transform.Translate
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
-                print("SunbeamShow1")
                 Playeruuid = entity.Uuid.EntityUuid
-                if IsPlayer(Playeruuid) == 1 then
-                    print("SunbeamShow2")
-                    Osi.CreateAtObject("Helper_Invisible_A_4cc75168-a81e-4a5c-85cd-1bab8d7bb641", Playeruuid, 0, 0, "MMM_DAWNMASTER_TARGETINGS", 1)
+                if Osi.IsPlayer(Playeruuid) == 1 then
+                    Osi.CreateAtObject("Helper_Invisible_A_4cc75168-a81e-4a5c-85cd-1bab8d7bb641", Playeruuid, 0, 0,
+                        "MMM_DAWNMASTER_TARGETINGS", 1)
                     local DMtarget = entity.Transform.Transform.Translate
-                    local distance = math.sqrt((DMpos[1] - DMtarget[1])^2 + (DMpos[2] - DMtarget[2])^2 + (DMpos[3] - DMtarget[3])^2)
+                    local distance = math.sqrt((DMpos[1] - DMtarget[1]) ^ 2 + (DMpos[2] - DMtarget[2]) ^ 2 +
+                        (DMpos[3] - DMtarget[3]) ^ 2)
                     if distance <= 50 then
-                        print("SunbeamShow3")
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
@@ -681,20 +674,17 @@ local function DawnmasterExecution()
         end
     elseif DawnmasterRollResult <= 0 then
         Osi.ApplyStatus(Dawnmaster, "MMM_DAWNMASTERGENERIC", 6, 1, Dawnmaster)
-        DawnmasterSelector = Ext.Utils.Random(1, 2)
+        DawnmasterSelector = Ext.Math.Random(1, 2)
         if DawnmasterSelector == 1 then
-            print("FlameStrikeNoShow1")
             local DMEntity = Ext.Entity.Get(Dawnmaster)
             local DMpos = DMEntity.Transform.Transform.Translate
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
-                print("FlameStrikeNoShow2")
                 Playeruuid = entity.Uuid.EntityUuid
-                if IsPlayer(Playeruuid) == 1 then
-                    print("FlameStrikeNoShow3")
+                if Osi.IsPlayer(Playeruuid) == 1 then
                     local DMtarget = entity.Transform.Transform.Translate
-                    local distance = math.sqrt((DMpos[1] - DMtarget[1])^2 + (DMpos[2] - DMtarget[2])^2 + (DMpos[3] - DMtarget[3])^2)
+                    local distance = math.sqrt((DMpos[1] - DMtarget[1]) ^ 2 + (DMpos[2] - DMtarget[2]) ^ 2 +
+                        (DMpos[3] - DMtarget[3]) ^ 2)
                     if distance <= 50 then
-                        print("FlameStrikeNoShow4")
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
@@ -706,18 +696,15 @@ local function DawnmasterExecution()
                 end
             end
         elseif DawnmasterSelector == 2 then
-            print("SunbeamNoShow1")
             local DMEntity = Ext.Entity.Get(Dawnmaster)
             local DMpos = DMEntity.Transform.Transform.Translate
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
-                print("SunbeamNoShow2")
                 Playeruuid = entity.Uuid.EntityUuid
-                if IsPlayer(Playeruuid) == 1 then
-                    print("SunbeamNoShow3")
+                if Osi.IsPlayer(Playeruuid) == 1 then
                     local DMtarget = entity.Transform.Transform.Translate
-                    local distance = math.sqrt((DMpos[1] - DMtarget[1])^2 + (DMpos[2] - DMtarget[2])^2 + (DMpos[3] - DMtarget[3])^2)
+                    local distance = math.sqrt((DMpos[1] - DMtarget[1]) ^ 2 + (DMpos[2] - DMtarget[2]) ^ 2 +
+                        (DMpos[3] - DMtarget[3]) ^ 2)
                     if distance <= 50 then
-                        print("SunbeamNoShow4")
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
@@ -732,8 +719,10 @@ local function DawnmasterExecution()
     end
 end
 
---Counters
 Ext.Events.SessionLoaded:Subscribe(function()
+    --Prepared Boost
+    PrepareDuration = 0
+    --Counters
     MountainTrigger = 0
     DawnmasterTally = 0
     DawnmasterOff = 0
@@ -748,13 +737,8 @@ Ext.Events.SessionLoaded:Subscribe(function()
     DawnmasterRollResult = 0
 end)
 
---Prepared Boost
-Ext.Events.SessionLoaded:Subscribe(function()
-    PrepareDuration = 0
-end)
-
 local function PreparedBoost()
-    for i,v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
+    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
         if Osi.IsTagged(charIDprepared, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
             Osi.ApplyStatus(charIDprepared, "MMM_PREPARED", PrepareDuration, 1, charIDprepared)
@@ -770,8 +754,8 @@ end
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    if (level_name ~= "CRE_Main_A") then 
-        return 
+    if (level_name ~= "CRE_Main_A") then
+        return
     end
     if Osi.GetFlag(Act1BMimicFlag, Null) == 0 then
         Osi.SetFlag(Act1BMimicFlag, Null, 0, 1)
@@ -794,7 +778,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
 end)
 
 --Enter Combat Listener
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
+Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat)
     if object == MountainGob1 then
         MountainChickenTracker = MountainChickenTracker + 1;
         Osi.CharacterMoveToPosition(MountainChicken, -103.09066009521, 67.4404296875, -203.5530090332, "Sprint", "", 0)
@@ -802,7 +786,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, comba
             Osi.SetOnStage(MountainChicken, 0)
         end)
     end
-    if object == DeathShephard then 
+    if object == DeathShephard then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if round == 3 then
                 AbsoluteMarch()
@@ -834,7 +818,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, comba
             end
         end)
     end
-    if object == CrecheCheckpoint then 
+    if object == CrecheCheckpoint then
         Osi.SetFaction(Prisoner1, FAbsoluteUndead)
         Osi.SetFaction(Prisoner2, FAbsoluteUndead)
         Osi.SetFaction(Prisoner3, FAbsoluteUndead)
@@ -908,19 +892,17 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
         local DMpos = DMEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
             Playeruuid = entity.Uuid.EntityUuid
-            if IsPlayer(Playeruuid) == 1 then
+            if Osi.IsPlayer(Playeruuid) == 1 then
                 local DMtarget = entity.Transform.Transform.Translate
-                local distance = math.sqrt((DMpos[1] - DMtarget[1])^2 + (DMpos[2] - DMtarget[2])^2 + (DMpos[3] - DMtarget[3])^2)
+                local distance = math.sqrt((DMpos[1] - DMtarget[1]) ^ 2 + (DMpos[2] - DMtarget[2]) ^ 2 +
+                    (DMpos[3] - DMtarget[3]) ^ 2)
                 if distance <= 30 then
-                    Osi.RequestPassiveRoll(Playeruuid, Dawnmaster, "", "Arcana", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DawnmasterRoll")
+                    Osi.RequestPassiveRoll(Playeruuid, Dawnmaster, "", "Arcana",
+                        "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DawnmasterRoll")
                 end
             end
         end
     end
-end)
-
---Open item listener
-Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
 end)
 
 --Use item listener
@@ -933,7 +915,7 @@ end)
 --Destroy object listener
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, destroyer, destroyerOwner, storyActionID)
     if Osi.HasActiveStatus(item, "MMM_MIMIC1B") == 1 then
-        TurnIntoMimic1B(item, character)
+        TurnIntoMimic1B(item, destroyer)
     end
 end)
 
@@ -1019,10 +1001,6 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     end
 end)
 
---Saw something listener
-Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
-end)
-
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     --Gith Trigger 1
@@ -1055,7 +1033,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
                 local GishraTag = entity.Uuid.EntityUuid
                 if Osi.IsTagged(GishraTag, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
                     if Osi.GetDistanceTo(GishCrechTrigger, GishraTag) <= 20 then
-                        Osi.RequestPassiveRoll(GishraTag, CrecheGishra1, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GishraDetectRoll")
+                        Osi.RequestPassiveRoll(GishraTag, CrecheGishra1, "", "Perception",
+                            "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GishraDetectRoll")
                     end
                 end
             end
@@ -1076,48 +1055,47 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
 end)
 
 --Roll listener
-Ext.Osiris.RegisterListener("RollResult", 6, "after", function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
-    --Gondola detect roll
-    if eventName == "GondolaRoll" then
-        if resultType == 1 then
-            ShowNotification(roller, "You see Gith riding the gondola towards you.")
-            PrepareDuration = 30
-            PreparedBoost()
-        elseif resultType == 0 then
-            return
+Ext.Osiris.RegisterListener("RollResult", 6, "after",
+    function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
+        --Gondola detect roll
+        if eventName == "GondolaRoll" then
+            if resultType == 1 then
+                Channels.LogToPlayerOverhead:Broadcast("There are Gith on that Gondola! Prepare yourselves!")
+                PrepareDuration = 30
+                PreparedBoost()
+            end
         end
-    end
-    --Gish'ra detect roll
-    if eventName == "GishraDetectRoll" then
-        if resultType == 1 then
-            ShowNotification(roller, "You feel eyes staring at you.")
-            PrepareDuration = 18
-            PreparedBoost()
-            Osi.RemoveStatus(CrecheGishra1, "INVISIBLE", "")
-            Osi.RemoveStatus(CrecheGishra2, "INVISIBLE", "")
-        elseif resultType == 0 then
-            return
+        --Gish'ra detect roll
+        if eventName == "GishraDetectRoll" then
+            if resultType == 1 then
+                Channels.LogToPlayerOverhead:SendToClient("I feel eyes staring at me...", Osi.GetReservedUserID(roller))
+                PrepareDuration = 18
+                PreparedBoost()
+                Osi.RemoveStatus(CrecheGishra1, "INVISIBLE", "")
+                Osi.RemoveStatus(CrecheGishra2, "INVISIBLE", "")
+            elseif resultType == 0 then
+                return
+            end
         end
-    end
-    --Stealing Blood of Lathander thing
-    if rollsubject == "S_CRE_WeaponsPuzzle_HiddenDoor_5e2d9891-0dfb-4d00-9691-6ed69a50c58a" and
-    resultType == 1 and
-    isActiveRoll == 1 then
-       LathanderStealing()
-    end
-    if eventName == "DawnmasterRoll" then
-        if resultType == 1 then
-            DawnmasterRollResult = DawnmasterRollResult + 1;
-            Ext.Timer.WaitFor(100, function()
-                DawnmasterExecution()
-            end)
-        elseif resultType == 0 then
-            Ext.Timer.WaitFor(100, function()
-                DawnmasterExecution()
-            end)
+        --Stealing Blood of Lathander thing
+        if rollsubject == "S_CRE_WeaponsPuzzle_HiddenDoor_5e2d9891-0dfb-4d00-9691-6ed69a50c58a" and
+            resultType == 1 and
+            isActiveRoll == 1 then
+            LathanderStealing()
         end
-    end
-end)
+        if eventName == "DawnmasterRoll" then
+            if resultType == 1 then
+                DawnmasterRollResult = DawnmasterRollResult + 1;
+                Ext.Timer.WaitFor(100, function()
+                    DawnmasterExecution()
+                end)
+            elseif resultType == 0 then
+                Ext.Timer.WaitFor(100, function()
+                    DawnmasterExecution()
+                end)
+            end
+        end
+    end)
 
 --Flag listener
 Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
@@ -1129,9 +1107,9 @@ Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialo
                 for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
                     local GithGondolaTag = entity.Uuid.EntityUuid
                     if Osi.IsTagged(GithGondolaTag, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
-                        if Osi.GetDistanceTo(GondolaLever, GithGondolaTag) <= 20 then
-                            Osi.RequestPassiveRoll(entity, cause, "", "Perception", "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GondolaRoll")
-                        end
+                        Osi.RequestPassiveRoll(Osi.GetHostCharacter(), GithGondola1, "SkillCheckRoll", "Perception",
+                            "Act1_VeryHard_8986db4d-09af-46ee-9781-ac88ec10fa0e", 0, "GondolaRoll")
+                        return
                     end
                 end
             end)
@@ -1153,7 +1131,7 @@ Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
     if event == "MMM_DAWNMASTER_TARGETINGF" then
         Osi.ApplyStatus(object, "MMM_AVOIDFLAMESTRIKE", -1, 1, "NULL_00000000-0000-0000-0000-000000000000")
         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object2)
-            if object2 == Dawnmaster then 
+            if object2 == Dawnmaster then
                 Osi.RequestDelete(object)
             end
         end)
@@ -1161,13 +1139,9 @@ Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
     if event == "MMM_DAWNMASTER_TARGETINGS" then
         Osi.ApplyStatus(object, "MMM_AVOIDSUNBEAM", -1, 1, "NULL_00000000-0000-0000-0000-000000000000")
         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object2)
-            if object2 == Dawnmaster then 
+            if object2 == Dawnmaster then
                 Osi.RequestDelete(object)
             end
         end)
     end
-end)
-
---On Stage listener
-Ext.Osiris.RegisterListener("WentOnStage", 2, "after", function(object, isOnStageNow)
 end)

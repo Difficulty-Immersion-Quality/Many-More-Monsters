@@ -11,12 +11,12 @@ local Shadowheart = "S_Player_ShadowHeart_3ed74f06-3c60-42dc-83f6-f034cb47c679"
 local MountainChicken = "MMM_CHICKENRUN_42bd9bf1-80d8-42ee-a9a1-312ce9e630a0"
 local MountainGob1 = "MMM_MOUNTAINGOBS_68304a4f-95ae-4a67-8626-5daf30725d5e"
 
-Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
-    --Remove Ambush from enemies in combat
-    if Osi.HasActiveStatus(object, "AMBUSHING") then
-        Osi.RemoveStatus(object, "AMBUSHING")
-    end
-end)
+-- Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
+--     --Remove Ambush from enemies in combat
+--     if Osi.HasActiveStatus(object, "AMBUSHING") then
+--         Osi.RemoveStatus(object, "AMBUSHING")
+--     end
+-- end)
 
 --Animal Saved--
 --Act One

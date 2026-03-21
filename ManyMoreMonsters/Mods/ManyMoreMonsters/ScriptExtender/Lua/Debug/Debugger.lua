@@ -1,5 +1,3 @@
-print("Many More Monsters Debug Listener Loaded")
-
 function GetNearbyCharacters(radius)
     local sourceEntity = Ext.Entity.Get(Osi.GetHostCharacter())
     local nearbyCharacters = {}
