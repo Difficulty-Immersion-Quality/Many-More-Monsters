@@ -64,6 +64,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -186,6 +187,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -4454,6 +4456,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -4708,6 +4711,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -6176,6 +6180,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Goblin Tracker -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="goblin_ranged" />
@@ -6333,6 +6338,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Hobgoblin -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee" />
 					<attribute id="CanConsumeItems" type="bool" value="True" />
@@ -6676,6 +6682,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Fishing Bear -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="DisplayName" type="TranslatedString" handle="ha7db982ag5c27g4f0fgae72gbc1c0abadab9" version="1" />
@@ -6805,6 +6812,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Bonesnappah -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -7353,261 +7361,6 @@
 					</children>
 				</node>
 				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="FOR_BugBearMate" />
-					<attribute id="CanConsumeItems" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="f41039fe-66a6-171f-1ac3-9a292fdc6e48" />
-					<attribute id="CombatGroupID" type="FixedString" value="b2cb4487-57d2-d255-078f-eb5bef97d3ff" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h41d550e2g8f1fg4bf6g81a6gf524c10a1e14" version="1" />
-					<attribute id="Faction" type="guid" value="9604d2bf-346f-4573-80a7-e02f3aaf9a10" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="f41039fe-66a6-171f-1ac3-9a292fdc6e48-EQP_Bugbear_MorningStar_(Icon_Bugbear_Male)" />
-					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
-					<attribute id="MapKey" type="FixedString" value="b6c6764f-ba9d-4109-8b4e-c0d1da72be7d" />
-					<attribute id="Name" type="LSString" value="S_FOR_BugBearMate" />
-					<attribute id="Stats" type="FixedString" value="FOR_BugBearMate" />
-					<attribute id="TemplateName" type="FixedString" value="3065382b-a148-4294-b1e9-1a34875db3ba" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209018" />
-					<children>
-						<node id="ItemList">
-							<children>
-								<node id="Item">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="Amount" type="int32" value="1" />
-									<attribute id="CanBePickpocketed" type="bool" value="True" />
-									<attribute id="FallbackStartRound" type="int32" value="-1" />
-									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-									<attribute id="IsTradable" type="uint8" value="0" />
-									<attribute id="ItemName" type="LSString" value="WPN_HUM_Javelin_A_0" />
-									<attribute id="LevelName" type="LSString" value="" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<attribute id="TemplateID" type="FixedString" value="0a7adc8d-b561-4f81-a8f2-ec07b5d54955" />
-									<attribute id="Type" type="uint8" value="1" />
-									<attribute id="UUID" type="FixedString" value="" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-								<node id="Item">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="Amount" type="int32" value="1" />
-									<attribute id="CanBePickpocketed" type="bool" value="True" />
-									<attribute id="FallbackStartRound" type="int32" value="-1" />
-									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-									<attribute id="IsTradable" type="uint8" value="0" />
-									<attribute id="ItemName" type="LSString" value="WPN_HUM_Javelin_A_0" />
-									<attribute id="LevelName" type="LSString" value="" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<attribute id="TemplateID" type="FixedString" value="0a7adc8d-b561-4f81-a8f2-ec07b5d54955" />
-									<attribute id="Type" type="uint8" value="1" />
-									<attribute id="UUID" type="FixedString" value="" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-								<node id="Item">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="Amount" type="int32" value="1" />
-									<attribute id="CanBePickpocketed" type="bool" value="True" />
-									<attribute id="FallbackStartRound" type="int32" value="-1" />
-									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-									<attribute id="IsTradable" type="uint8" value="0" />
-									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
-									<attribute id="LevelName" type="LSString" value="" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<attribute id="TemplateID" type="FixedString" value="" />
-									<attribute id="Type" type="uint8" value="0" />
-									<attribute id="UUID" type="FixedString" value="" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="ItemList">
-							<children>
-								<node id="Item">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="Amount" type="int32" value="1" />
-									<attribute id="CanBePickpocketed" type="bool" value="True" />
-									<attribute id="FallbackStartRound" type="int32" value="-1" />
-									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-									<attribute id="IsTradable" type="uint8" value="0" />
-									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
-									<attribute id="LevelName" type="LSString" value="" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<attribute id="TemplateID" type="FixedString" value="" />
-									<attribute id="Type" type="uint8" value="0" />
-									<attribute id="UUID" type="FixedString" value="" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-								<node id="Item">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="Amount" type="int32" value="1" />
-									<attribute id="CanBePickpocketed" type="bool" value="True" />
-									<attribute id="FallbackStartRound" type="int32" value="-1" />
-									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-									<attribute id="IsTradable" type="uint8" value="0" />
-									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
-									<attribute id="LevelName" type="LSString" value="" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<attribute id="TemplateID" type="FixedString" value="" />
-									<attribute id="Type" type="uint8" value="0" />
-									<attribute id="UUID" type="FixedString" value="" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="303db700-f9db-a9ea-293a-3af3066f58b1" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="3fe20543-27e0-e984-0858-a7109481a047" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="SkillList">
-							<children>
-								<node id="Skill">
-									<attribute id="AIFlags" type="uint16" value="0" />
-									<attribute id="FallbackStartRound" type="int32" value="0" />
-									<attribute id="LearningStrategy" type="uint8" value="0" />
-									<attribute id="MinimumImpact" type="int32" value="0" />
-									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="Skill" type="FixedString" value="Projectile_StoneThrow" />
-									<attribute id="SpellCastingAbility" type="uint8" value="0" />
-									<attribute id="StartRound" type="int32" value="0" />
-									<children>
-										<node id="SourceConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-										<node id="TargetConditions">
-											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-											<children>
-												<node id="Tags" />
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GOB_Goblin_Generic" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="37.535587 33.433846 474.7261" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.59538054 0 0.80344385" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="19a16569-dcbb-3fe1-bf5f-029567082c54" />
@@ -7879,6 +7632,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken Wrangler -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
@@ -8049,6 +7803,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken -->
 				<node id="GameObjects">
 					<attribute id="CanClimbLadders" type="bool" value="False" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8ab21da5-5c7b-d5ea-e617-96ece3e0f0a4" />
@@ -8075,6 +7830,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken -->
 				<node id="GameObjects">
 					<attribute id="CanClimbLadders" type="bool" value="False" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8ab21da5-5c7b-d5ea-e617-96ece3e0f0a4" />
@@ -8101,6 +7857,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken -->
 				<node id="GameObjects">
 					<attribute id="CanClimbLadders" type="bool" value="False" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8ab21da5-5c7b-d5ea-e617-96ece3e0f0a4" />
@@ -8127,6 +7884,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken -->
 				<node id="GameObjects">
 					<attribute id="CanClimbLadders" type="bool" value="False" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8ab21da5-5c7b-d5ea-e617-96ece3e0f0a4" />
@@ -8153,6 +7911,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Chicken -->
 				<node id="GameObjects">
 					<attribute id="CanClimbLadders" type="bool" value="False" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8ab21da5-5c7b-d5ea-e617-96ece3e0f0a4" />
@@ -8179,6 +7938,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Stanky Goblin (Female) -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="cfe2069f-ef8b-26ee-a70e-78c87f2ddd48" />
@@ -8261,6 +8021,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Stanky Goblin (Male) -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
@@ -8389,6 +8150,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8560,6 +8322,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8731,6 +8494,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8902,6 +8666,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9073,6 +8838,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9244,6 +9010,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9415,6 +9182,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9586,6 +9354,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9757,6 +9526,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9928,6 +9698,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10099,6 +9870,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10270,6 +10042,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10441,6 +10214,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10612,6 +10386,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10783,6 +10558,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10954,6 +10730,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11125,6 +10902,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11296,6 +11074,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11467,6 +11246,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11638,6 +11418,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11809,6 +11590,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11980,6 +11762,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12151,6 +11934,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12322,6 +12106,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12493,6 +12278,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12664,6 +12450,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -12725,6 +12512,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -12786,6 +12574,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -12847,6 +12636,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -12908,6 +12698,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -12969,6 +12760,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1" />
@@ -13030,6 +12822,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -13164,6 +12957,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -13298,6 +13092,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
