@@ -2993,7 +2993,7 @@
 					<attribute id="Icon" type="FixedString" value="995e8e1c-286a-4020-69f3-9a14b412a7da-_(Icon_Spider_Critter)" />
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
 					<attribute id="LightID" type="FixedString" value="c20762da-c531-4a81-bb07-78a651af6b1b" />
-					<attribute id="MapKey" type="FixedString" value="0 0.6755902 0 0.7372773" />
+					<attribute id="MapKey" type="FixedString" value="a504142a-496f-40ad-8d60-dd5bd5f75d50" />
 					<attribute id="LevelOverride" type="int32" value="2" />
 					<attribute id="Name" type="LSString" value="MMM_TINYCRYPTSPIDY" />
 					<attribute id="TemplateName" type="FixedString" value="3c88c158-eebe-4e8a-bc20-e0c4ae336163" />
@@ -15620,6 +15620,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Slevnir -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged_smart" />
@@ -16209,6 +16210,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Coekk -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="necromancer_ranged" />
@@ -16553,6 +16555,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Ismi -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -16843,6 +16846,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Eislie -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="healer_melee" />
@@ -17958,6 +17962,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Weakened Beholder -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="beholder" />
@@ -18259,6 +18264,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Servant of Lolth -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged_smart" />
@@ -18502,6 +18508,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Servant of Lolth -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="mage_smart" />
@@ -18691,6 +18698,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Servant of Lolth -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="SCL_Drider" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -19079,6 +19087,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -19260,6 +19269,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -19441,6 +19451,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -19622,6 +19633,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -19803,6 +19815,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -19984,6 +19997,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -20165,6 +20179,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -20346,6 +20361,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -20527,6 +20543,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="babybulette" />
@@ -20708,6 +20725,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Ol' Gregg -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -20804,6 +20822,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Mega Mimic -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
 					<attribute id="CombatGroupID" type="FixedString" value="fe1a8412-5ea6-85b3-42dd-8c1ca2ff598b" />
@@ -20922,6 +20941,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Lava Elemental -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="UND_LavaElemental" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -20983,6 +21003,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Grym 2.0 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="UND_KethericCity_Elemental_1" />
 					<attribute id="Archetype" type="FixedString" value="golem_adamantine" />
@@ -20997,7 +21018,7 @@
 					<attribute id="MapKey" type="FixedString" value="a251f7c6-5a4e-49d9-984b-501c8a3aba65" />
 					<attribute id="Name" type="LSString" value="MMM_GRYM2" />
 					<attribute id="SpellSet" type="FixedString" value="" />
-					<attribute id="Stats" type="FixedString" value="MMM_GRYM2" />
+					<attribute id="Stats" type="FixedString" value="UND_AdamantineGolem" />
 					<attribute id="TemplateName" type="FixedString" value="fb70bad0-9438-47c3-84dc-d9c6718ca4c5" />
 					<attribute id="Title" type="TranslatedString" handle="h15baaecagc93eg4a69g8abfg5f73f1c8133f" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />

@@ -3011,7 +3011,7 @@
 					<attribute id="Icon" type="FixedString" value="995e8e1c-286a-4020-69f3-9a14b412a7da-_(Icon_Spider_Critter)" />
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
 					<attribute id="LightID" type="FixedString" value="c20762da-c531-4a81-bb07-78a651af6b1b" />
-					<attribute id="MapKey" type="FixedString" value="0 0.6755902 0 0.7372773" />
+					<attribute id="MapKey" type="FixedString" value="a504142a-496f-40ad-8d60-dd5bd5f75d50" />
 					<attribute id="LevelOverride" type="int32" value="2" />
 					<attribute id="Name" type="LSString" value="MMM_TINYCRYPTSPIDY" />
 					<attribute id="TemplateName" type="FixedString" value="3c88c158-eebe-4e8a-bc20-e0c4ae336163" />
