@@ -21638,7 +21638,8 @@
 						</node>
 					</children>
 				</node>
-			<!-- Forge Ghosts -->
+			<!-- Spirits of the Forge -->
+				<!-- Spirit of the Forge -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="forgeghost" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -21727,6 +21728,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Spirit of the Forge -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="forgeghost" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
