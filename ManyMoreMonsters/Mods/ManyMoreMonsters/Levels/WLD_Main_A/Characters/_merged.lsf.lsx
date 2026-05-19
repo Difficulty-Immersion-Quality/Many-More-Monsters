@@ -4,6 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+		<!-- Ravaged Beach -->
+			<!-- Devourer Breadcrumb -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="IntellectDevourer" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -64,6 +66,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Kuotoa Dock -->
 				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
@@ -248,6 +251,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Thieves Rock -->
+			<!-- Mikey "Wiggles" Pridgen -->g
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -657,6 +662,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Crash Wolf -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h65aed1dfgf910g460bga34agecac9c2c788e" version="1" />
@@ -848,6 +854,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mindflayer Ambush -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="IntellectDevourer" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -1276,6 +1283,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Goblin Crash Ambush -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="3cae4ff5-e9c0-485b-b695-f8830961a781" />
 					<attribute id="Archetype" type="FixedString" value="goblin_ranged" />
@@ -1777,6 +1785,8 @@
 						</node>
 					</children>
 				</node>
+			<!-- Dank Crypt -->
+				<!-- Tiny Spiders -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -3497,6 +3507,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Dank Kobolds -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3746,6 +3757,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Emerald Grove -->
+			<!-- Oof (Reinforcement) -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ogre_melee" />
@@ -3827,6 +3840,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Eagle -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee" />
 					<attribute id="CanClimbLadders" type="bool" value="True" />
@@ -4049,6 +4063,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Emerald Grove - Secluded Cove -->
+			<!-- Grove Thieves -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -4456,6 +4472,7 @@
 						</node>
 					</children>
 				</node>
+		<!-- Harpy Breadcrumb -->
 				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
@@ -4873,6 +4890,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Harpy Nest -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="d609a89b-713a-09ed-3ca4-ce62b1fcac89" />
 					<attribute id="Flag" type="int32" value="0" />
@@ -4987,6 +5005,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Forest -->
+			<!-- Grove Backdoor -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee" />
 					<attribute id="CanConsumeItems" type="bool" value="True" />
@@ -5294,6 +5314,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Harper Cliff -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="3cae4ff5-e9c0-485b-b695-f8830961a781" />
 					<attribute id="Archetype" type="FixedString" value="goblin_ranged" />
@@ -6180,6 +6201,7 @@
 						</node>
 					</children>
 				</node>
+		<!-- Harper Nest -->
 				<!-- Goblin Tracker -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -6512,6 +6534,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Owlbear -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee_large" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="27a13f64-a4e1-98a3-d063-14b276cba870" />
@@ -6682,6 +6705,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- River Crossing -->
 				<!-- Fishing Bear -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -6731,6 +6755,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bridge Troll -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ogre_melee" />
@@ -6812,7 +6837,8 @@
 						</node>
 					</children>
 				</node>
-				<!-- Bonesnappah -->
+		<!-- Blighted Village -->
+			<!-- Bonesnappah (Bridge Guard) -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -6939,6 +6965,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Raunchy Scene -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ogre_melee" />
@@ -7360,6 +7387,263 @@
 						</node>
 					</children>
 				</node>
+			<!-- Grukkoh - vanilla entity -->
+				<!-- <node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="FOR_BugBearMate" />
+					<attribute id="CanConsumeItems" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="f41039fe-66a6-171f-1ac3-9a292fdc6e48" />
+					<attribute id="CombatGroupID" type="FixedString" value="b2cb4487-57d2-d255-078f-eb5bef97d3ff" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h41d550e2g8f1fg4bf6g81a6gf524c10a1e14" version="1" />
+					<attribute id="Faction" type="guid" value="9604d2bf-346f-4573-80a7-e02f3aaf9a10" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="f41039fe-66a6-171f-1ac3-9a292fdc6e48-EQP_Bugbear_MorningStar_(Icon_Bugbear_Male)" />
+					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="b6c6764f-ba9d-4109-8b4e-c0d1da72be7d" />
+					<attribute id="Name" type="LSString" value="S_FOR_BugBearMate" />
+					<attribute id="Stats" type="FixedString" value="FOR_BugBearMate" />
+					<attribute id="TemplateName" type="FixedString" value="3065382b-a148-4294-b1e9-1a34875db3ba" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209018" />
+					<children>
+						<node id="ItemList">
+							<children>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="WPN_HUM_Javelin_A_0" />
+									<attribute id="LevelName" type="LSString" value="" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="0a7adc8d-b561-4f81-a8f2-ec07b5d54955" />
+									<attribute id="Type" type="uint8" value="1" />
+									<attribute id="UUID" type="FixedString" value="" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="WPN_HUM_Javelin_A_0" />
+									<attribute id="LevelName" type="LSString" value="" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="0a7adc8d-b561-4f81-a8f2-ec07b5d54955" />
+									<attribute id="Type" type="uint8" value="1" />
+									<attribute id="UUID" type="FixedString" value="" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
+									<attribute id="LevelName" type="LSString" value="" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="" />
+									<attribute id="Type" type="uint8" value="0" />
+									<attribute id="UUID" type="FixedString" value="" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="303db700-f9db-a9ea-293a-3af3066f58b1" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="3fe20543-27e0-e984-0858-a7109481a047" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="ItemList">
+							<children>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
+									<attribute id="LevelName" type="LSString" value="" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="" />
+									<attribute id="Type" type="uint8" value="0" />
+									<attribute id="UUID" type="FixedString" value="" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="OBJ_Potion_Healing" />
+									<attribute id="LevelName" type="LSString" value="" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="" />
+									<attribute id="Type" type="uint8" value="0" />
+									<attribute id="UUID" type="FixedString" value="" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="SkillList">
+							<children>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="0" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_StoneThrow" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GOB_Goblin_Generic" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="37.535587 33.433846 474.7261" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.59538054 0 0.80344385" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node> -->
+			<!-- Overlooking Log -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
@@ -7444,6 +7728,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Fallen Log -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h7c360a8dg7f47g4734gab74gd4583915a7b1" version="1" />
@@ -7539,6 +7824,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Murderer -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -7632,6 +7918,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Goblin Camp -->
+			<!-- Chicken Run -->
 				<!-- Chicken Wrangler -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -7938,6 +8226,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bathing Goblins -->
 				<!-- Stanky Goblin (Female) -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="goblin_melee" />
@@ -8150,6 +8439,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Defiled Spiders Bait -->
 				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -8322,6 +8612,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Defiled Spiders Hoard -->
 				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -10386,6 +10677,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Defiled Spiders Wave 2 -->
 				<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -12450,6 +12742,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Wetlands -->
+			<!-- Wisp Tree -->
 				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
@@ -12760,6 +13054,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Wisp Child -->
 				<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
@@ -12822,6 +13117,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Hag Kuotoa -->
 				<!-- Kuo-toa -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
@@ -13227,6 +13523,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Risen Road -->
+			<!-- Cave Backdoor -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultRanger_Gnoll" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
@@ -13740,6 +14038,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Drow Ambushers -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="rogue_smart" />
@@ -14421,6 +14720,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Underdark -->
+			<!-- Patrolling Minotaur -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -14619,6 +14920,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Zhentarim Storage -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged_smart" />
@@ -15460,6 +15762,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Duergar Army Triggers -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -15620,7 +15923,8 @@
 						</node>
 					</children>
 				</node>
-				<!-- Slevnir -->
+		<!-- Duergar Army -->
+			<!-- Slevnir -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged_smart" />
@@ -16210,7 +16514,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Coekk -->
+			<!-- Coekk -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="necromancer_ranged" />
@@ -16555,7 +16859,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Ismi -->
+			<!-- Ismi -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -16846,7 +17150,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Eislie -->
+			<!-- Eislie -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="healer_melee" />
@@ -17092,6 +17396,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Side Dock -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="necromancer_ranged" />
@@ -17962,7 +18267,8 @@
 						</node>
 					</children>
 				</node>
-				<!-- Weakened Beholder -->
+		<!-- Cave In -->
+			<!-- Weakened Beholder -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="beholder" />
@@ -18264,6 +18570,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lolth Event -->
 				<!-- Servant of Lolth -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -19007,6 +19314,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Nest Trigger -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -19087,6 +19395,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Nest -->
 				<!-- Baby Bulette -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
@@ -20725,7 +21034,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Ol' Gregg -->
+			<!-- Ol' Gregg -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -20822,7 +21131,8 @@
 						</node>
 					</children>
 				</node>
-				<!-- Mega Mimic -->
+		<!-- Grymforge -->
+			<!-- Mega Mimic -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
 					<attribute id="CombatGroupID" type="FixedString" value="fe1a8412-5ea6-85b3-42dd-8c1ca2ff598b" />
@@ -20941,7 +21251,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Lava Elemental -->
+			<!-- Lava Elemental (Mithril) -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="UND_LavaElemental" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -21003,7 +21313,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Grym 2.0 -->
+			<!-- Grym 2.0 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="UND_KethericCity_Elemental_1" />
 					<attribute id="Archetype" type="FixedString" value="golem_adamantine" />
@@ -21328,6 +21638,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Forge Ghosts -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="forgeghost" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -21504,6 +21815,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Mimics -->
 			</children>
 		</node>
 	</region>

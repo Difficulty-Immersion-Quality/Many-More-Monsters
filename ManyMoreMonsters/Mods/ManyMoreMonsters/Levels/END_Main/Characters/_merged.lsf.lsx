@@ -4,6 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Upper city -->
+			<!-- Team Trajectile Finale -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />

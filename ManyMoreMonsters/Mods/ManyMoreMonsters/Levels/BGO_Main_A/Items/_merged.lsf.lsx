@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Act 3a Mimic Chests -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
@@ -740,6 +741,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Book of Demonic Ecstasy -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h4676e885g96d0g4556g98d3ge88d8726ebf1" version="1" />
 					<attribute id="Flag" type="int32" value="1" />

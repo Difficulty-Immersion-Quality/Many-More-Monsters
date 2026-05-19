@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Voyeur Barrel -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1" />
@@ -40,6 +41,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Cave In Rock -->
 				<node id="GameObjects">
 					<attribute id="CanShootThrough" type="bool" value="False" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1" />
@@ -80,6 +82,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Eggs -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -440,6 +443,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Boss Difficulty Markers -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="he2ab4b79g7d6dg47e1gb6ebg6b66a07aa988" version="1" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -536,6 +540,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic Chests -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />

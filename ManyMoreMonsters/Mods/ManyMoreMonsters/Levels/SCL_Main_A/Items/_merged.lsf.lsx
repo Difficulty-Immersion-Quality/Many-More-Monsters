@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <save>
 	<version major="4" minor="0" revision="9" build="0" lslib_meta="v1,bswap_guids" />
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+				<!-- Squirrel Chest -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -49,6 +50,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Act 2 Mimic Chests -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />

@@ -4,6 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+		<!-- Mountain Pass -->
+			<!-- Mountain Pass Goblins -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="CanConsumeItems" type="bool" value="True" />
@@ -915,6 +917,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mad Hand Sorcerer -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="MOO_PrisonGuard_5" />
 					<attribute id="Archetype" type="FixedString" value="mage" />
@@ -1379,6 +1382,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mad Hand Second Wave -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="4b197486-1ab3-3596-5f77-1538a165758f" />
 					<attribute id="CombatGroupID" type="FixedString" value="ae77700f-7f00-4c91-ab30-147de14f7f4c" />
@@ -1598,6 +1602,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Big Clash Triggers -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -1758,6 +1763,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gith Troops -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="ceecce9b-f99a-f223-e25e-239b9cab3352" />
@@ -2543,6 +2549,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Absolute Troops -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="mage_smart" />
 					<attribute id="CombatGroupID" type="FixedString" value="b48238f8-2f62-43e2-a3df-e8ed458a6d55" />
@@ -3159,6 +3166,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lady Esther Mercs -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -3437,6 +3445,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gondola Gith -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="56477270-9902-3534-95b1-05cb4dc6b4d5" />
@@ -4320,6 +4329,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gish'ra Trigger -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -4400,6 +4410,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gish'ra -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="monk" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="87a33861-a88e-61a0-dbfc-96df9686fc4a" />
@@ -4880,6 +4891,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Harpies -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="d609a89b-713a-09ed-3ca4-ce62b1fcac89" />
 					<attribute id="CombatGroupID" type="FixedString" value="250991a2-5922-488f-9fc4-22a7241d09dd" />
@@ -5036,6 +5048,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Picnic! -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5224,6 +5237,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Spiritual Weapons -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5720,6 +5734,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Door to Act 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -5870,6 +5885,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gith Prisoners -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="mage_smart" />
 					<attribute id="CombatGroupID" type="FixedString" value="9501a0c8-a43c-4c7f-93f0-4e59ea222e6f" />
@@ -6489,6 +6505,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Dawnmaster Vaseid -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -6653,6 +6670,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Team Trajectile -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />

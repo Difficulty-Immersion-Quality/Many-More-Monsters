@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Picnic Item -->
 				<node id="GameObjects">
 					<attribute id="CanClickThrough" type="bool" value="False" />
 					<attribute id="CanClimbOn" type="bool" value="False" />
