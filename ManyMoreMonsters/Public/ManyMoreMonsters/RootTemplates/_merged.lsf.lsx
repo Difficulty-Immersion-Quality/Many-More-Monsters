@@ -1399,6 +1399,8 @@
 						</node>
 					</children>
 				</node>
+				<!-- GRYM MODEL-N -->
+				<!-- TODO: He too fucking loud even with data "SoundSize" "Tiny", needs new "FootSoundEventName" or something... -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="ha7c9ec67g94c9g4409gab01g17635f327f24" version="1" />
 					<attribute id="DisableEquipping" type="bool" value="True" />
