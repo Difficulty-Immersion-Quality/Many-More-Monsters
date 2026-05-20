@@ -38,6 +38,7 @@
 
 // ==================================== Utility ====================================
 
+// Trigger Point
 new entry "MMM_TRIGGERPOINT"
 type "Character"
 using "Stats_Placeholder"
@@ -49,6 +50,7 @@ data "Sight" "800"
 // "SG_Prone;PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
 // data "DefaultBoosts" "Invulnerable();Untargetable();Invisible()"
 
+// Trigger Point
 new entry "MMM_TRIGGERPOINT_600"
 type "Character"
 using "Stats_Placeholder"
@@ -60,6 +62,7 @@ data "Sight" "600"
 // "SG_Prone;PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
 // data "DefaultBoosts" "Invulnerable();Untargetable();Invisible()"
 
+// Trigger Point
 new entry "MMM_TRIGGERPOINT_800"
 type "Character"
 using "Stats_Placeholder"
@@ -71,6 +74,7 @@ data "Sight" "800"
 // "SG_Prone;PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
 // data "DefaultBoosts" "Invulnerable();Untargetable();Invisible()"
 
+// Trigger Point
 new entry "MMM_TRIGGERPOINT_1000"
 type "Character"
 using "Stats_Placeholder"
@@ -82,8 +86,9 @@ data "Sight" "1000"
 // "SG_Prone;PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
 // data "DefaultBoosts" "Invulnerable();Untargetable();Invisible()"
 
-// ==================================== Ravaged Beach ====================================
+// ==================================== Act 1 - Ravaged Beach ====================================
 
+// Weakened Mind Flayer
 new entry "MMM_MINDFLAYER"
 type "Character"
 using "MindFlayer"
@@ -93,9 +98,10 @@ data "Intelligence" "17"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "MagicResistance;AttackOfOpportunity;DarknessRules"
 data "Passives" "MagicResistance;AttackOfOpportunity;DarknessRules;QUEST_CRA_IntDev_Weakened"
-// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE;"
-data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: MINDFLAYER_HARDCORE"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: MINDFLAYER_HARDCORE"
+data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
 
+// Intellect Devourer and Lost Intellect Devourer
 new entry "MMM_INTELLECTDEVOURER"
 type "Character"
 using "IntellectDevourer"
@@ -108,10 +114,7 @@ data "DefaultBoosts" "ProficiencyBonus(Skill, Perception); ProficiencyBonus(Skil
 // data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;Darkvision;QUEST_CRA_IntDev_Weakened"
 
-new entry "MMM_LOSTDEVOURER"
-type "Character"
-using "MMM_INTELLECTDEVOURER"
-
+// Kuo-toa
 new entry "MMM_KUOTOADOCK"
 type "Character"
 using "Kuotoa"
@@ -119,6 +122,7 @@ using "Kuotoa"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Kuo-toa Priest
 new entry "MMM_KUOTOADOCKCLERIC"
 type "Character"
 using "Kuotoa_Caster"
@@ -133,6 +137,7 @@ data "SpellCastingAbility" "Wisdom"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES"
 type "Character"
 using "Gnome_Melee"
@@ -155,6 +160,7 @@ data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMU
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON"
 type "Character"
 using "Human_Barbarian"
@@ -171,6 +177,7 @@ data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMU
 // data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT"
 type "Character"
 using "Human_Druid_Strong"
@@ -181,6 +188,7 @@ data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMU
 // data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Wolf
 new entry "MMM_WOLF"
 type "Character"
 using "Wolf"
@@ -189,8 +197,9 @@ data "Vitality" "21"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
-// ==================================== Goblin Ambush ====================================
+// ==================================== Act 1 - Ravaged Beach - Goblin Ambush 
 
+// Goblin Tracker
 new entry "MMM_GOBLINRANGERAMBUSH"
 type "Character"
 using "Goblin_Ranger"
@@ -211,8 +220,9 @@ data "Vitality" "21"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
-// ==================================== Dank Crypt ====================================
+// ==================================== Act 1 - Ravaged Beach - Dank Crypt
 
+// Tiny Spider
 new entry "MMM_TINYSPIDER"
 type "Character"
 using "Spider_Tiny"
@@ -227,9 +237,10 @@ using "Kobold_Melee"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-// ==================================== Emerald Grove ====================================
+// ==================================== Act 1 - Emerald Grove ====================================
 
 // TODO: Rework the clumsiness
+// Oof
 new entry "MMM_OGREREINFORCEMENT"
 type "Character"
 using "Ogre"
@@ -239,6 +250,7 @@ data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
 data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules;MMM_OOFCLUMSY"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
+// Eagle
 new entry "MMM_EAGLE"
 type "Character"
 using "GiantEagle"
@@ -283,9 +295,10 @@ using "MMM_KUOTOADOCK"
 // data "Vitality" "18"
 data "Vitality" "23"
 
+// Kuo-toa Priest
 new entry "MMM_KUOTOAHARPYCLERIC"
 type "Character"
-using "Kuotoa_Caster"
+using "MMM_KUOTOADOCKCLERIC"
 // data "Vitality" "15"
 data "Vitality" "18"
 
@@ -936,9 +949,10 @@ data "PsychicResistance" "Immune"
 data "RadiantResistance" "Immune"
 data "ThunderResistance" "Immune"
 
-// ==================================== Mountain Pass ====================================
+// ==================================== Act 1.b - Mountain Pass ====================================
+// 1. Goblins found their way up to the mountains.
 
-// Unused
+// Goblin Brawler
 new entry "MMM_GOBLINMELEEMOUNTAIN"
 type "Character"
 using "Goblin_Melee"
@@ -949,7 +963,7 @@ data "Vitality" "42"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "Progressions"  "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-// Unused
+// Goblin Tracker
 new entry "MMM_GOBLINRANGERMOUNTAIN"
 type "Character"
 using "MMM_GOBLINRANGERAMBUSH"
@@ -958,46 +972,38 @@ data "Vitality" "32"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 
-/////Gith Act 2/////
+// ==================================== Mountain Pass - Gith
+// 2. This is now a battlefield, get ready for a three way fight.
+// 4. Githyanki learned how to operate a gondola, good job guys!
+
+// Githyanki Captain and Catfey
 new entry "MMM_MOUNTAINGITH_CAPTAIN"
 type "Character"
-using "Githyanki_Gish"
-data "Level" "5"
-data "Constitution" "16"
-data "Intelligence" "18"
-data "Vitality" "80"
-data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:3:3:1;SpellSlot:3:3:2;SpellSlot:2:2:3;"
-data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
+using "CRE_Githyanki_Captain"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: GITHYANKI_CAPTAIN_HARDCORE"
+// data "Progressions" ""
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
+// Unused
 new entry "MMM_MOUNTAINGITH_WARLOCK"
 type "Character"
-using "Githyanki_Caster"
-data "Dexterity" "16"
-data "Constitution" "14"
-data "Intelligence" "14"
-data "Charisma" "18"
-data "Vitality" "127"
-data "DefaultBoosts" "UnlockSpell(Target_VampiricTouch,AddChildren,e9127b70-22b7-42a1-b172-d02f828f260a,,Charisma); BlockRegainHP(Undead;Construct)"
-data "Passives" "AgonizingBlast;RepellingBlast;DevilsSight;WarMagic_Githyanki;AttackOfOpportunity;DarknessRules"
+using "TWN_Githyanki_Warlock"
+// data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
 data "Progressions" "a3826c71-afba-4337-a2ad-1fc631fb2b4b"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD:GITHYANKI_WARLOCK_HARDCORE"
 
+// Unused
 new entry "MMM_MOUNTAINGITH_ROGUE"
 type "Character"
-using "Githyanki_Rogue"
-data "Strength" "15"
-data "Dexterity" "18"
-data "Vitality" "65"
-data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
-data "Passives" "AttackOfOpportunity;DarknessRules;ExtraAttack"
+using "PLA_Githyanki_Rogue"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Proficiency Group" "HeavyArmor;LightArmor;MediumArmor;SimpleWeapons;MartialWeapons"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
+// Zio
 new entry "MMM_MOUNTAINGITH_RANGER"
 type "Character"
 using "Githyanki_Ranger"
@@ -1009,6 +1015,7 @@ data "Proficiency Group" "HeavyArmor;LightArmor;MediumArmor;SimpleWeapons;Martia
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
+// 
 new entry "MMM_MOUNTAINGITH_CASTER"
 type "Character"
 using "Githyanki_Caster"
@@ -1024,6 +1031,7 @@ data "Proficiency Group" "HeavyArmor;LightArmor;MediumArmor;SimpleWeapons;Martia
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
 
+// Githyanki Warrior, Githyanki Trainee, and Kara'i
 new entry "MMM_MOUNTAINGITH_WARRIOR"
 type "Character"
 using "Githyanki_Melee"
@@ -1035,6 +1043,7 @@ data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: H
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Githyanki Raider and Ci'e'sm
 new entry "MMM_MOUNTAINGITH_RAIDER"
 type "Character"
 using "Githyanki_Ranger"
@@ -1052,6 +1061,7 @@ data "ArmorType" "StuddedLeather"
 data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE;STATUS_HARD:GITHYANKI_RAIDER_HARDCORE"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
+// Githyanki Gish and Iek'd
 new entry "MMM_MOUNTAINGITH_GISH"
 type "Character"
 using "Githyanki_Caster"
@@ -1068,6 +1078,7 @@ data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: H
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
 
+// Ember Gish'ra Hel'dom
 new entry "MMM_GITHRA_CASTER"
 type "Character"
 using "Githyanki_Gishra_Melee"
@@ -1080,6 +1091,7 @@ data "Passives" "PsychicStrikes_Githyanki;Gishra_ArchetypeChange_Githyanki;Attac
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
 
+// High Gish'ra F'a'de
 new entry "MMM_GITHRA_MELEE"
 type "Character"
 using "_Githyanki"
@@ -1097,7 +1109,9 @@ data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
 data "DynamicAnimationTag" "d559367e-4d27-402a-8898-a72fd5f20c8b"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
-/////Absolute Troops/////
+// ==================================== Mountain Pass - Absolute Troops
+// 2. This is now a battlefield, get ready for a three way fight.
+
 new entry "MMM_HUMANNECRO_M"
 type "Character"
 using "_Human"
@@ -1184,14 +1198,22 @@ data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_
 data "PoisonResistance" "Immune"
 data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: SCL_CRAWLING_CLAWS_HARDCORE"
 
+// ==================================== Mountain Pass - Door to Act 2
+// 3. The darkness encroaches.
+
 new entry "MMM_SHADOWCURSEGITH_M"
 type "Character"
-using "Githyanki_Melee"
+using "HAV_ShadowCursed_Warrior_Githyanki_Melee"
+// data "Vitality" "48"
 data "Vitality" "70"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-/////Esther Mercs/////
+// ==================================== Mountain Pass - Esther Mercs
+// ?. Undocumented encounter
+
+// Salo and Marlow
 new entry "MMM_ESTHERMERC"
 type "Character"
 using "Guard"
@@ -1206,7 +1228,9 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SuperiorityDie:5"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-/////Harpies/////
+// ==================================== Mountain Pass - Harpies
+// 6. Harpies have settled in.
+
 new entry "MMM_MONESTARYHARPY"
 type "Character"
 using "Harpy"
@@ -1227,7 +1251,10 @@ data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:32;ReactionAct
 data "Passives" "Multiattack_Harpy;AttackOfOpportunity;DarknessRules"
 data "ArmorType" "None"
 
-/////Picnic Kobs/////
+// ==================================== Mountain Pass - Kobold Picnic!
+// 7. Aww, a cute picnic.
+
+// Konran and Kemono
 new entry "MMM_PICNICKOBS"
 type "Character"
 using "Kobold"
@@ -1684,6 +1711,7 @@ data "DarkvisionRange" "18"
 data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD:MIMIC_HARDCORE"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES1B"
 type "Character"
 using "MMM_WIGGLES"
@@ -1699,6 +1727,7 @@ data "ArmorType" "ScaleMail"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON1B"
 type "Character"
 using "MMM_LAYTON"
@@ -1710,6 +1739,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "ArmorType" "None"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT1B"
 type "Character"
 using "MMM_WRIGHT"
@@ -1720,6 +1750,7 @@ data "Vitality" "35"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES2"
 type "Character"
 using "MMM_WIGGLES1B"
@@ -1735,6 +1766,7 @@ data "ArmorType" "ScaleMail"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON2"
 type "Character"
 using "MMM_LAYTON1B"
@@ -1747,6 +1779,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "ArmorType" "None"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT2"
 type "Character"
 using "MMM_WRIGHT1B"
@@ -1756,6 +1789,7 @@ data "Vitality" "57"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3"
 type "Character"
 using "MMM_WIGGLES2"
@@ -1771,6 +1805,7 @@ data "ArmorType" "ScaleMail"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON3"
 type "Character"
 using "MMM_LAYTON2"
@@ -1784,6 +1819,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "ArmorType" "None"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT3"
 type "Character"
 using "MMM_WRIGHT2"
@@ -1832,6 +1868,7 @@ data "Passives" "BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3B"
 type "Character"
 using "MMM_WIGGLES3"
@@ -1847,6 +1884,7 @@ data "ArmorType" "ScaleMail"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON3B"
 type "Character"
 using "MMM_LAYTON3"
@@ -1860,6 +1898,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "ArmorType" "None"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT3B"
 type "Character"
 using "MMM_WRIGHT3"
@@ -1869,6 +1908,7 @@ data "Vitality" "70"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3C"
 type "Character"
 using "MMM_WIGGLES3B"
@@ -1884,6 +1924,7 @@ data "ArmorType" "ScaleMail"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 
+// Lyin' Liam Layton
 new entry "MMM_LAYTON3C"
 type "Character"
 using "MMM_LAYTON3B"
@@ -1897,6 +1938,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 data "ArmorType" "None"
 
+// Adam "Buggy" Wright
 new entry "MMM_WRIGHT3C"
 type "Character"
 using "MMM_WRIGHT3B"

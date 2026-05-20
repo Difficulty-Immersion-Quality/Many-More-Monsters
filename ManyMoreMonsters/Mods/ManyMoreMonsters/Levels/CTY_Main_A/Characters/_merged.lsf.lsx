@@ -4,8 +4,9 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-			<!-- Lower city -->
-			<!-- Team Trajectile -->
+<!-- Lower city -->
+		<!-- Team Trajectile -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -152,6 +153,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -221,6 +223,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -284,7 +287,8 @@
 						</node>
 					</children>
 				</node>
-			<!-- Team Trajectile Jail -->
+		<!-- Team Trajectile Jail -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -424,6 +428,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -493,6 +498,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />

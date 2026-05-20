@@ -4,8 +4,9 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-			<!-- Rivington -->
-			<!-- Roof Thieves -->
+<!-- Rivington -->
+		<!-- Team Trajectile - Roof Thieves -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -145,6 +146,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -214,6 +216,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
