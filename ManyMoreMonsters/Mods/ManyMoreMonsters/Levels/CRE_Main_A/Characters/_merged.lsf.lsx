@@ -5292,7 +5292,7 @@
 				</node>
 	<!-- Spiritual Weapons -->
 		<!-- 9. Find out what happens when you try to steal from a god. -->
-			<!-- Spiritual Weapon -->
+			<!-- Spiritual Weapon - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5417,7 +5417,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Spiritual Weapon -->
+			<!-- Spiritual Weapon - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5542,7 +5542,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Spiritual Weapon -->
+			<!-- Spiritual Weapon - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5667,7 +5667,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Spiritual Weapon -->
+			<!-- Spiritual Weapon - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -5890,7 +5890,7 @@
 					<attribute id="MapKey" type="FixedString" value="c0f07a71-a404-43a8-9b61-b082fddefe05" />
 					<attribute id="Name" type="LSString" value="MMM_SHADOWSPAWNDOOR" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_FIGHTER" />
-					<attribute id="Stats" type="FixedString" value="MMM_SHADOWCURSEGITH_M" />
+					<attribute id="Stats" type="FixedString" value="MMM_SHADOWCURSED_GITHYANKIFIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="c5c852f6-ba18-4219-8ef3-74fae2b70cd9" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
@@ -6570,6 +6570,11 @@
 					</children>
 				</node>
 	<!-- Dawnmaster Vaseid -->
+		<!-- B. Boss Battle 
+				Dawnmaster Vaseid gave his life to protect the Blood of Lathander, now he'll judge you if you're worthy or not.
+				A check is preformed when you approach him based on how many good vs evil acts you've done to this point.
+				Low enough score (aka Good) he will let you pass, grants full exp.
+				Too high of score (Neutral into Evil) and he won't let you pass.  At half hp Lathander will bless him to cast one of two massive spells.  A successful Arcana check will show you what spell it is and where it's targeted, otherwise better heal up! -->
 			<!-- Spirit of Dawnmaster Vaseid -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />

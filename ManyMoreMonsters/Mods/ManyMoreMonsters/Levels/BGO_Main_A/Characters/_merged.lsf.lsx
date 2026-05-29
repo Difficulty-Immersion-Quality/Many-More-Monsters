@@ -418,8 +418,9 @@
 						</node>
 					</children>
 				</node>
-			<!-- Sahuagin -->
-				<!-- Sea Creatures 1 -->
+		<!-- Sahuagin -->
+			<!-- Sea Creatures 1 -->
+				<!-- Sahuagin -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
@@ -461,6 +462,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Sahuagin -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
@@ -504,6 +506,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Sahuagin Hunter -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
@@ -545,7 +548,8 @@
 						</node>
 					</children>
 				</node>
-				<!-- Sea Creatures 2 -->
+			<!-- Sea Creatures 2 -->
+				<!-- Sahuagin -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
@@ -587,6 +591,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Sahuagin -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
@@ -630,6 +635,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Sahuagin Hunter -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
@@ -671,6 +677,7 @@
 						</node>
 					</children>
 				</node>
+		<!-- Hill Giant -->
 				<!-- Hill Giant -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -753,7 +760,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Well Shapeshifters -->
+		<!-- Well Shapeshifters -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_001" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8aecfbf4-be70-8290-94fe-9141c8539b86" />
@@ -1339,7 +1346,8 @@
 						</node>
 					</children>
 				</node>
-			<!-- Gith Patrol -->
+		<!-- Githyanki Patrol -->
+				<!-- Githyanki Patrol - 1 -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
@@ -1385,6 +1393,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Githyanki Patrol - 2 -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
@@ -1430,6 +1439,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Githyanki Patrol - 3 -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />
@@ -1476,6 +1486,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Githyanki Patrol - 4 -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />

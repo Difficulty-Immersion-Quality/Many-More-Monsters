@@ -48,10 +48,12 @@ data "Description" "hbbf58b0cg7be3g4140gac82g9807c584dbb3;1"
 data "Properties" "Highlighted"
 data "Icon" "Action_Cleric_RadianceOfTheDawn"
 
-new entry "MMM_CHAOSMAGE"
+new entry "MMM_ChaosMagic"
 type "PassiveData"
+// Chaos Magic
 data "DisplayName" "h4627f142g2a2cg48e0g9266g2f8917c2b32a;1"
-data "Description" ";1"
+// You don't know what to expect from this twisted magic.
+data "Description" "hc941079fgec2fg4851g807dg02056a8f725e;1"
 data "Icon" "PassiveFeature_WildMagicSurge"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnCast"
