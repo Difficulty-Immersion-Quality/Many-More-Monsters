@@ -1,0 +1,85 @@
+// ==================================== Act 1: Weakened Mind Flayer ====================================
+
+// Weakened Mind Blast
+new entry "MMM_Zone_MindBlast_MindFlayer_Weakened"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_MindBlast_MindFlayer"
+// data "SpellSuccess" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic,Magical); ApplyStatus(STUNNED,100,1)"
+data "SpellSuccess" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic,Magical)"
+// Mind Blast
+// data "DisplayName" "h27282233g52efg40b3gb198ge7b6c0ac2147;1"
+// Weakened Mind Blast
+data "DisplayName" "h29594e08gc49bg4558ga2bfg863f2ed53f86;1"
+// Spew forth a conical wave of psychic energy and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; targets within.
+// data "Description" "hbf315656ga8a7g4c85g9da6ga8decf7fb1f5;4"
+// Spew forth a conical wave of psychic energy.
+data "Description" "h7f32d08dgdf62g4edagacccg9a3f88aaa0a5;1"
+// data "DescriptionParams" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic)"
+data "DescriptionParams" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic)"
+// data "TooltipDamageList" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic)"
+data "TooltipDamageList" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic)"
+// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
+data "TooltipStatusApply" ""
+// data "Range" "14"
+data "Range" "5"
+
+// Weakened Tentacle Whip
+new entry "MMM_Target_Tentacles_MindFlayer_Weakened"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Tentacles_MindFlayer"
+// data "SpellSuccess" "DealDamage(2d10+4,Psychic);IF(not SavingThrow(Ability.Intelligence, 14)):ApplyStatus(STUNNED,100,1);"
+data "SpellSuccess" "DealDamage(1d10+4,Psychic)"
+// Tentacle Whip
+// data "DisplayName" "ha32797b6g8153g43b6gbb5cga37cc6c149a2;2"
+// Weakened Tentacle Whip
+data "DisplayName" "h5cf1cc21g530cg4683ga782g7cf06e38fdfb;1"
+// Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
+// data "Description" "hf0c16535gd5a3g4da1gbf6agb69118db4419;5"
+// Lash out with your tentacles.
+data "Description" "h7fcc7083g6eafg483cg8853gd0278ade0d1d;1"
+// data "TooltipDamageList" "DealDamage(2d10+4,Psychic)"
+data "TooltipDamageList" "DealDamage(1d10+4,Psychic)"
+// data "TooltipAttackSave" "MeleeUnarmedAttack;Intelligence"
+data "TooltipAttackSave" "MeleeSpellAttack"
+// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
+data "TooltipStatusApply" ""
+
+// ==================================== Act 1: Juvenile Red Dragon ====================================
+
+// Unused
+new entry "MMM_Zone_BreathWeapon_Fire_Cone_JuvenileRedDragon"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_BreathWeapon_Fire_Cone"
+// data "SpellSuccess" "DealDamage(LevelMapValue(BreathWeapon),Fire,Magical)"
+data "SpellSuccess" "DealDamage(3d6,Fire,Magical)"
+// data "SpellFail" "DealDamage(LevelMapValue(BreathWeapon)/2, Fire,Magical)"
+data "SpellFail" "DealDamage(3d6/2, Fire,Magical)"
+// data "TooltipDamageList" "DealDamage(LevelMapValue(BreathWeapon),Fire)"
+data "TooltipDamageList" "DealDamage(3d6,Fire)"
+
+// ==================================== Act 1.b: Spirit of Dawnmaster Vaseid ====================================
+
+// Lathander's Sunbeam
+new entry "MMM_Zone_Sunbeam_Lathander"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_Sunbeam"
+// data "SpellProperties" "ApplyStatus(SELF,SUNBEAM_OWNER,100,10)"
+data "SpellProperties" ""
+// data "TooltipStatusApply" "ApplyStatus(SUNBEAM,100,10);ApplyStatus(SUNBEAM_OWNER,100,10)"
+// Sunbeam
+// data "DisplayName" "h7f405eccgcdc0g47dbga900g5850375c4992;2"
+// Lathander's Sunbeam
+data "DisplayName" "hc1cf6acbge2a7g4b28g9edeg8310c1412032;1"
+data "TooltipStatusApply" "ApplyStatus(SUNBEAM,100,10)"
+// data "Range" "18"
+data "Range" "28"
+// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:6"
+data "UseCosts" "ActionPoint:0"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+// data "MemoryCost" "1"
+data "MemoryCost" ""

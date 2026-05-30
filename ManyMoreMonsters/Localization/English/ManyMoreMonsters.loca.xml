@@ -175,6 +175,12 @@
 
 	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> <content contentuid="h29594e08gc49bg4558ga2bfg863f2ed53f86" version="1">Weakened Mind Blast</content>
 	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> <content contentuid="h7f32d08dgdf62g4edagacccg9a3f88aaa0a5" version="1">Spew forth a conical wave of psychic energy.</content>
+	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h5cf1cc21g530cg4683ga782g7cf06e38fdfb" version="1">Weakened Tentacle Whip</content>
+	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h7fcc7083g6eafg483cg8853gd0278ade0d1d" version="1">Lash out with your tentacles.</content>
+	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
+
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 
 	<!-- ==================================== Objects ==================================== -->

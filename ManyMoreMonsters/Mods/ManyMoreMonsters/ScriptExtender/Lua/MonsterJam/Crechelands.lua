@@ -664,7 +664,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_LATHANDERSUNBEAM", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
@@ -708,7 +708,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_LATHANDERSUNBEAM", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
