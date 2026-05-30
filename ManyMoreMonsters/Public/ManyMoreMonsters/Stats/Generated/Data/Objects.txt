@@ -44,8 +44,3 @@ using "_Container"
 data "Weight" "50"
 data "Vitality" "30"
 data "Flags" "Grounded"
-
-new entry "MMM_OBJ_Scroll_SummonGrym"
-type "Object"
-using "_MagicScroll"
-data "RootTemplate" "ef4e5e37-6bf9-4f2b-83a3-9d7a4695ea3a"

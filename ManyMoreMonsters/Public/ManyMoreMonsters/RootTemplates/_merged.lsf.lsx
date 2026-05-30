@@ -1507,7 +1507,7 @@
 									<attribute id="MinimumImpact" type="int32" value="0" />
 									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
 									<attribute id="ScoreModifier" type="float" value="1" />
-									<attribute id="Skill" type="FixedString" value="MMM_Projectile_GRYMROCKETPUNCHN" />
+									<attribute id="Skill" type="FixedString" value="MMM_Projectile_GRYMROCKETPUNCH_Nano" />
 									<attribute id="SpellCastingAbility" type="uint8" value="0" />
 									<attribute id="StartRound" type="int32" value="0" />
 									<children>
