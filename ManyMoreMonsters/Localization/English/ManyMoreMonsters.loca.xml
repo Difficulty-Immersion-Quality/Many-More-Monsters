@@ -52,8 +52,6 @@
 	<!-- "" --> <content contentuid="hb7d4ce2eg02ecg4c15g91d9g337811359364" version="1">Raging Ex-Boyfriend</content>
 	<!-- "" --> <content contentuid="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1">Shoe Full of Bailey's</content>
 	<!-- "" --> <content contentuid="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1">A shoe full of Bailey's liqueur, have you ever drank it this way?</content>
-	<!-- "" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
-	<!-- "" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Tag</content>
 	<!-- "" --> <content contentuid="h28956d7bga473g435aga3f9gbb4807ee0e4b" version="1">Drow Assassin</content>
 	<!-- "" --> <content contentuid="hfe1c7dffg007dg4e90g93d7g6599449db603" version="1">You ever drink Bailey's from a shoe?</content>
 	<!-- "" --> <content contentuid="heaabda15gc321g44fbg9b7dgcf45c39ba9a5" version="1">I'm Ol' Gregg!</content>
@@ -203,13 +201,6 @@
 	<!-- "" --> <content contentuid="hf6f0a739g3f65g42e0g97aegc30401ca8f88" version="1">Vinly Desh</content>
 	<!-- "" --> <content contentuid="hac8f83cagb125g4b26g8157g67ff7113335d" version="1">Loves when you give her a hand</content>
 
-	<!-- "" --> <content contentuid="h2d04da13g7833g42d5g91bfgfeac4aa4dc5b" version="1">You could say I'm handy to have around!</content>
-	<!-- "" --> <content contentuid="h17227372g24cbg43eegbad0gf18516910e3c" version="1">I always do my shopping second hand!</content>
-	<!-- "" --> <content contentuid="hdf72cab3gb02ag4d55gabc1g1182aa8c6625" version="1">My collection is out of hand!</content>
-	<!-- "" --> <content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">You're handling this fight very well!</content>
-	<!-- "" --> <content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">I'm just a begger looking for hand outs!</content>
-	<!-- "" --> <content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">Don't worry about my pets, they're all right!</content>
-
 	<!-- "" --> <content contentuid="h7d02862fg1f4eg47e7g9f43g6e32bd632763" version="1">Lathander's Blessing</content>
 	<!-- "" --> <content contentuid="h88d02f89g21c2g4b8cgba4egedbfe8fea673" version="1">Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.</content>
 	<!-- "" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
@@ -239,9 +230,6 @@
 	<!-- "" --> <content contentuid="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1">Edin Mesic</content>
 	<!-- "" --> <content contentuid="h94b840a3ge66bg43b4g9425g829862494871" version="1">Farsee Yer</content>
 	<!-- "" --> <content contentuid="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1">Harry Ispup</content>
-	<!-- "" --> <content contentuid="hb61ec40bg7f77g4cf6g8d4ag6281e48ead74" version="1">"...kill me..."</content>
-	<!-- "" --> <content contentuid="h1a134e62ge777g43d1g8d92g7847800810c9" version="1">"...help me please..."</content>
-	<!-- "" --> <content contentuid="hf5aaf9a4g9b55g4dc3ga682g7ce1d0ff6f20" version="1">"...I'm so scared..."</content>
 	<!-- "" --> <content contentuid="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1">Shadow-Cursed Squirrel</content>
 	<!-- "" --> <content contentuid="h6fac55bag750ag499dg905fgc8c572ae9f53" version="1">Andi</content>
 	<!-- "" --> <content contentuid="h664cccc3gfba2g4429g8c58g7a1bf26442db" version="1">Andi</content>
@@ -311,12 +299,27 @@
 	<!-- "" --> <content contentuid="h30513e41g4555g48f3g92bcg524e474b7b08" version="1">"...stop..."</content>
 	<!-- "" --> <content contentuid="h7e485f78g4b99g4c86g9c3fg8ead0b05e499" version="1">"...the...darkness..."</content>
 
-	<!-- "MMM_20MOREHANDS" --> <content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">Needs to be about 20% more hands!</content>
+	<!-- "MMM_ZOMBIESPEAKTEXT1" --> <content contentuid="hb61ec40bg7f77g4cf6g8d4ag6281e48ead74" version="1">"...kill me..."</content>
+	<!-- "MMM_ZOMBIESPEAKTEXT2" --> <content contentuid="h1a134e62ge777g43d1g8d92g7847800810c9" version="1">"...help me please..."</content>
+	<!-- "MMM_ZOMBIESPEAKTEXT3" --> <content contentuid="hf5aaf9a4g9b55g4dc3ga682g7ce1d0ff6f20" version="1">"...I'm so scared..."</content>
+
+	<!-- "MMM_20MOREHANDS" --> <content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">"Needs to be about 20% more hands!"</content>
+	<!-- "MMM_HANDPUN1" --> <content contentuid="h2d04da13g7833g42d5g91bfgfeac4aa4dc5b" version="1">"You could say I'm handy to have around!"</content>
+	<!-- "" --> <content contentuid="h17227372g24cbg43eegbad0gf18516910e3c" version="1">"I always do my shopping second hand!"</content>
+	<!-- "" --> <content contentuid="hdf72cab3gb02ag4d55gabc1g1182aa8c6625" version="1">"My collection is out of hand!"</content>
+	<!-- "" --> <content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">"You're handling this fight very well!"</content>
+	<!-- "" --> <content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">"I'm just a begger looking for hand outs!"</content>
+	<!-- "" --> <content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">"Don't worry about my pets, they're all right!"</content>
 
 	<!-- "MMM_BALTHAZARSPEAK1" --> <content contentuid="h0c90b26cg0f4fg4590gb428g9667636d7d5c" version="1">"Such pathetic fools that lie here... Ah, fortuitous timing!  You should prove adequate to test this new spell."</content>
 	<!-- "MMM_BALTHAZARSPEAK2" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>
 
 	<!-- "MMM_RIVINGTONPATROLSPEAK" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name; get them!"</content>
+
+	<!-- ==================================== Utility ==================================== -->
+
+	<!-- "MMM_DETECTION_AURA_TEMPLATE" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
+	<!-- "MMM_DETECTION_TEMPLATE" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Condition</content>
 
 	<!-- ==================================== ... ==================================== -->
 
