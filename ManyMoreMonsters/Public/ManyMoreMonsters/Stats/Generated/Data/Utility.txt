@@ -1,0 +1,77 @@
+// ==================================== "Characters" ====================================
+
+new entry "UND_Bulette_Helper"
+type "Character"
+// using "Stats_Placeholder"
+using "UND_Bulette_Helper"
+// data "Flags" "Grounded"
+// data "PersonalStatusImmunities" "SG_Prone;PETRIFIED;SG_Charmed;SG_Frightened;PARALYZED;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
+data "PersonalStatusImmunities" "SG_Prone;SG_Blinded;SG_Petrified;SG_Charmed;SG_Frightened;SG_Unconscious;SG_Poisoned;SG_Restrained;SG_Stunned;SG_Paralyzed;SG_Sleeping;SG_Drunk;SG_Mad;SG_Confused;SG_Fleeing;SG_Dominated"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct;Living);Invulnerable();CanWalkThrough(true)"
+
+// Trigger Point
+new entry "MMM_TRIGGERPOINT"
+type "Character"
+using "UND_Bulette_Helper"
+// data "FOV" "90"
+data "FOV" "360"
+// data "Sight" "1600"
+data "Sight" "800"
+
+// Trigger Point
+new entry "MMM_TRIGGERPOINT_600"
+type "Character"
+using "MMM_TRIGGERPOINT"
+data "Sight" "600"
+
+// Trigger Point
+new entry "MMM_TRIGGERPOINT_800"
+type "Character"
+using "MMM_TRIGGERPOINT"
+data "Sight" "800"
+
+// Trigger Point
+new entry "MMM_TRIGGERPOINT_1000"
+type "Character"
+using "MMM_TRIGGERPOINT"
+data "Sight" "1000"
+
+// ==================================== Detection ====================================
+
+new entry "MMM_DETECTION_AURA_TEMPLATE"
+type "StatusData"
+data "StatusType" "BOOST"
+// Detection Aura
+data "DisplayName" "h5c144b87gc7f4g4d26ga1e2g33a473163ee7;1"
+// Detection Aura
+data "Description" "h5c144b87gc7f4g4d26ga1e2g33a473163ee7;1"
+data "Icon" "Spell_Divination_SeeInvisibility"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "AuraFlags" "IgnoreItems"
+
+new entry "MMM_DETECTION_TEMPLATE"
+type "StatusData"
+data "StatusType" "BOOST"
+// Detection Condition
+data "DisplayName" "h6ea255a3g2862g42f0gb4d7gee5781a76a62;1"
+// Detection Condition
+data "Description" "h6ea255a3g2862g42f0gb4d7gee5781a76a62;1"
+data "Icon" "Spell_Divination_SeeInvisibility"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// ==================================== Detection
+
+
+
+// ==================================== Voice barks ====================================
+
+new entry "MMM_SPEAK_OVERHEAD_TEMPLATE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Icon" "statIcons_CrawlingGnawInfection"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "ExcludeFromPortraitRendering;DisableCombatlog;DisablePortraitIndicator"
+
+// ==================================== Voice barks
+

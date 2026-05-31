@@ -1149,7 +1149,7 @@ data "StackId" "STONESKIN"
 data "Boosts" "Resistance(Bludgeoning, ResistantToNonMagical);Resistance(Piercing, ResistantToNonMagical);Resistance(Slashing, ResistantToNonMagical);Resistance(Acid,Resistant);Resistance(Cold,Resistant);Resistance(Fire,Resistant);Resistance(Lightning,Resistant);Resistance(Thunder,Resistant)"
 data "StatusGroups" "SG_RemoveOnRespec"
 
-// ==================================== ??? ====================================
+// ==================================== Cut content ====================================
 
 // Unused
 new entry "MMM_Target_CONSUMESPIDER"
@@ -1172,3 +1172,19 @@ data "SpellFlags" "IsEnemySpell;IsMelee;IsHarmful"
 data "SpellAnimationIntentType" "Aggressive"
 data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
 data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+new entry "MMM_PREPARED"
+type "StatusData"
+data "StatusType" "BOOST"
+// Prepared
+data "DisplayName" "h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0;1"
+// You are prepared for what is coming, granting +4 Initiative and +2 Attack.
+data "Description" "hae54701cg5d50g4932ga129g9af1d6b498fc;1"
+data "Icon" "Spell_Enchantment_Bless"
+data "SoundLoop" "Spell_Status_Buff_MO"
+data "StackId" "MMM_PREPARED"
+data "Boosts" "RollBonus(Attack,2);Initiative(4)"
+data "StatusGroups" "SG_RemoveOnRespec"
+data "StatusEffect" "61fe31f9-ae4b-4926-a033-e56ea67c7d92"
+data "ManagedStatusEffectType" "Positive"
+data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"

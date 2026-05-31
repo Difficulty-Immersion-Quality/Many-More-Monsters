@@ -107,8 +107,6 @@
 	<!-- "" --> <content contentuid="h01b9fb09ga722g4b21g8e51g165abd13c625" version="1">Desecrating this may anger the spirits.</content>
 	<!-- "" --> <content contentuid="h11a503e2g637bg46a9g8f9cg068a0d610b33" version="1">Grym 2.0</content>
 	<!-- "" --> <content contentuid="hc94a827cg6de3g4273gaa11gd97ab295bcfd" version="1">Spirit of the Forge</content>
-	<!-- "" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
-	<!-- "" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
 	<!-- "" --> <content contentuid="hdda8affcgc54dg4736g9d84g6edc8eb15947" version="1">Githyanki Captain</content>
 	<!-- "" --> <content contentuid="hbfab6c88gc7a1g49b7gab32g1199e1b83da3" version="1">Githyanki Raider</content>
 	<!-- "" --> <content contentuid="h594b8eeegc327g4748g9c68g040d0e727cae" version="1">Githyanki Trainee</content>
@@ -149,6 +147,11 @@
 
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.</content>
+
+	<!-- ==================================== Statuses ==================================== -->
+	
+	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
+	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
 
 	<!-- ==================================== Spells ==================================== -->
 
