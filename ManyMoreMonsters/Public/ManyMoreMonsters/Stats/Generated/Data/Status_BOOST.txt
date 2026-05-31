@@ -14,15 +14,17 @@ data "DisplayName" "h5c144b87gc7f4g4d26ga1e2g33a473163ee7;1"
 data "Description" "h5c144b87gc7f4g4d26ga1e2g33a473163ee7;1"
 data "Icon" "Spell_Divination_SeeInvisibility"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "AuraFlags" "IgnoreItems"
 
 new entry "MMM_DETECTION_TEMPLATE"
 type "StatusData"
 data "StatusType" "BOOST"
-using "MMM_DETECTION_AURA_TEMPLATE"
 // Detection Condition
 data "DisplayName" "h6ea255a3g2862g42f0gb4d7gee5781a76a62;1"
 // Detection Condition
 data "Description" "h6ea255a3g2862g42f0gb4d7gee5781a76a62;1"
+data "Icon" "Spell_Divination_SeeInvisibility"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 
 
