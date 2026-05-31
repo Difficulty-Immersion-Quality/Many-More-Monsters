@@ -78,8 +78,6 @@
 	<!-- "" --> <content contentuid="h57bd59d0g01bdg4eefg88b5g85d9ce46adc6" version="1">Matriphagous Child</content>
 	<!-- "" --> <content contentuid="h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7" version="1">Matriphagy</content>
 	<!-- "" --> <content contentuid="h897abff9g3dfag4b99gb37fg84d3b6a5306b" version="1">Baby bulette's kill their mother and eat her after birth.</content>
-	<!-- "" --> <content contentuid="h1439735agfc1cg4001gac03g51ec95bc37d6" version="1">Survival of the Fittest</content>
-	<!-- "" --> <content contentuid="h0accbfd3g6523g4595gb4acgcdb9e223f284" version="1">Consuming a corpse has made this Bulette stronger.</content>
 	<!-- "" --> <content contentuid="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1">Bulette Egg</content>
 	<!-- "" --> <content contentuid="h25b93288ga2f4g4fa1gb08eg70b73c4e91ff" version="1">Bulette Detection Aura 1</content>
 	<!-- "" --> <content contentuid="h7b1be0a8g2888g4dc0g95ddgde96af3451f5" version="1">Bulette Trigger Aura 1</content>
@@ -185,8 +183,10 @@
 
 	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
 
-	<!-- "MMM_Target_CONSUMESPIDER" --> <content contentuid="h5ec55e3cgc221g4386g92ecg1dd144725b64" version="1">Consume</content>
-	<!-- "MMM_Target_CONSUMESPIDER" --> <content contentuid="h9c46b1c7g7221g43afg9115g26e57c25dc7f" version="1">Devours a corpse.</content>
+	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h5ec55e3cgc221g4386g92ecg1dd144725b64" version="1">Consume</content>
+	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h9c46b1c7g7221g43afg9115g26e57c25dc7f" version="1">Devours a corpse.</content>
+	<!-- "MMM_SURVIVAL", "MMM_SURVIVALSIZE1" --> <content contentuid="h1439735agfc1cg4001gac03g51ec95bc37d6" version="1">Survival of the Fittest</content>
+	<!-- "MMM_SURVIVAL", "MMM_SURVIVALSIZE1" --> <content contentuid="h0accbfd3g6523g4595gb4acgcdb9e223f284" version="1">Consuming a corpse has made this Bulette stronger.</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>

@@ -1,5 +1,6 @@
 // ==================================== "Characters" ====================================
 
+// Vanilla trigger with some touch ups
 new entry "UND_Bulette_Helper"
 type "Character"
 // using "Stats_Placeholder"
@@ -10,7 +11,7 @@ data "PersonalStatusImmunities" "SG_Prone;SG_Blinded;SG_Petrified;SG_Charmed;SG_
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "BlockRegainHP(Undead;Construct;Living);Invulnerable();CanWalkThrough(true)"
 
-// Trigger Point
+// Trigger Points
 new entry "MMM_TRIGGERPOINT"
 type "Character"
 using "UND_Bulette_Helper"
@@ -19,19 +20,16 @@ data "FOV" "360"
 // data "Sight" "1600"
 data "Sight" "800"
 
-// Trigger Point
 new entry "MMM_TRIGGERPOINT_600"
 type "Character"
 using "MMM_TRIGGERPOINT"
 data "Sight" "600"
 
-// Trigger Point
 new entry "MMM_TRIGGERPOINT_800"
 type "Character"
 using "MMM_TRIGGERPOINT"
 data "Sight" "800"
 
-// Trigger Point
 new entry "MMM_TRIGGERPOINT_1000"
 type "Character"
 using "MMM_TRIGGERPOINT"

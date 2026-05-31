@@ -1717,64 +1717,6 @@ Ext.Osiris.RegisterListener("UsingSpellOnTarget", 6, "after",
                 for _, p in pairs(entity.InventoryOwner.PrimaryInventory.InventoryContainer.Items) do
                     Osi.Drop(p.Item.Uuid.EntityUuid)
                 end
-                Osi.SetOnStage(target, 0)
-                if Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE1", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE2", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE3", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE4", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE5", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE6", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE7", -1, 1, caster)
-                end
             end)
         end
     end)

@@ -559,26 +559,6 @@ data "DamageType" "Lightning"
 // ==================================== Act 1: Baby Bulettes ====================================
 
 // TODO:
-new entry "MMM_Target_CONSUMEBULETTE"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_Bite"
-data "Cooldown" "OncePerTurn"
-data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
-data "SpellProperties" "SwitchDeathType(Explode);ApplyStatus(SELF,MMM_SURVIVAL, 100, 1)"
-data "DeathType" "Explode"
-data "SpellSuccess" "RegainHitPoints(SELF, 10d10)"
-data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
-data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
-data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
-data "UseCosts" "BonusActionPoint:1"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "IsEnemySpell;IsMelee;IsHarmful"
-data "SpellAnimationIntentType" "Aggressive"
-data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
-data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
-
-// TODO:
 new entry "MMM_Target_BABYBULETTEBITE"
 type "SpellData"
 data "SpellType" "Target"
@@ -641,6 +621,100 @@ data "SpellAnimationIntentType" "Aggressive"
 data "PrepareEffect" "cc98935b-6ddf-4386-9f10-bd324fc1bd8d"
 data "CastEffect" "91f536d1-be47-4c7b-812e-4ade8041b77c"
 data "Sheathing" "DontChange"
+
+// ==================================== Act 1: Baby Bulettes - Survival of the Fittest
+
+// TODO: "IsTargetableCorpse()" with "FreshCorpse" too restrictive?
+// TODO: Inheritence here is meh.
+new entry "MMM_Target_CONSUMEBULETTE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite"
+data "Cooldown" "OncePerTurn"
+data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
+data "SpellProperties" "SwitchDeathType(Explode);ApplyStatus(SELF,MMM_SURVIVAL, 100, 1)"
+data "DeathType" "Explode"
+data "SpellSuccess" "RegainHitPoints(SELF, 10d10)"
+data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
+// Consume
+data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
+// Devours a corpse.
+data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
+data "UseCosts" "BonusActionPoint:1"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsEnemySpell;IsMelee"
+data "SpellAnimationIntentType" "Aggressive"
+data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+new entry "MMM_SURVIVAL"
+type "StatusData"
+data "StatusType" "BOOST"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_SURVIVAL2"
+data "StackType" "Additive"
+data "OnApplyFunctors" "IF(not MMM_SurvivalOfTheFittest()):ApplyStatus(MMM_SURVIVALSIZE1,100,-1);IF(HasStatus('MMM_SURVIVALSIZE1')):ApplyStatus(MMM_SURVIVALSIZE2,100,-1);IF(HasStatus('MMM_SURVIVALSIZE2')):ApplyStatus(MMM_SURVIVALSIZE3,100,-1);IF(HasStatus('MMM_SURVIVALSIZE3')):ApplyStatus(MMM_SURVIVALSIZE4,100,-1);IF(HasStatus('MMM_SURVIVALSIZE4')):ApplyStatus(MMM_SURVIVALSIZE5,100,-1);IF(HasStatus('MMM_SURVIVALSIZE5')):ApplyStatus(MMM_SURVIVALSIZE6,100,-1);IF(HasStatus('MMM_SURVIVALSIZE6')):ApplyStatus(MMM_SURVIVALSIZE7,100,-1)"
+data "Boosts" "Ability(Strength, +2);Ability(Constitution, +2);IncreaseMaxHP(15)"
+data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration;DisableOverhead;DisableCombatlog;ApplyToDead"
+data "StatusEffect" "2122e3f6-ac60-4b45-8b43-a9bd66b62b61"
+
+new entry "MMM_SURVIVALSIZE1"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Icon" "Action_VampireBite"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "StackId" "MMM_SURVIVALSIZE"
+data "StackPriority" "1"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "Boosts" "ScaleMultiplier(1.75);Weight(100)"
+
+new entry "MMM_SURVIVALSIZE2"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "2"
+data "Boosts" "ScaleMultiplier(2.5);Weight(150)"
+
+new entry "MMM_SURVIVALSIZE3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "3"
+data "Boosts" "ScaleMultiplier(3.25);Weight(200)"
+
+new entry "MMM_SURVIVALSIZE4"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "4"
+data "Boosts" "ScaleMultiplier(4);Weight(250)"
+
+new entry "MMM_SURVIVALSIZE5"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "Boosts" "ScaleMultiplier(4.75);Weight(300)"
+
+new entry "MMM_SURVIVALSIZE6"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "6"
+data "Boosts" "ScaleMultiplier(5.5);Weight(450)"
+
+new entry "MMM_SURVIVALSIZE7"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "7"
+data "Boosts" "ScaleMultiplier(6.5);Weight(600)"
 
 // ==================================== Act 1: Weakened Beholder ====================================
 
