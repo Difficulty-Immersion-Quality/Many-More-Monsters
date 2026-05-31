@@ -780,33 +780,28 @@ data "HitEffect" "d9846f10-94b4-4de7-85d7-04173e4c1e2b"
 data "BeamEffect" "4bc7dd52-06ff-4500-9054-db4424a72d98"
 data "Sheathing" "DontChange"
 
-// TODO:
 new entry "MMM_Target_PETRIFYRAY"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_ParalyzingRay_Spectator"
+using "Target_FearRay_Spectator"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC())"
+// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,2)"
 data "SpellSuccess" "ApplyStatus(PETRIFIED,100,2)"
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('FRIGHTENED')"
 data "TargetConditions" "Character() and Enemy() and not HasStatus('PETRIFIED')"
+// Fear Ray
+// data "DisplayName" "he3c73709gd2a7g4d10g891bg171742cd0079;1"
+// Petrify Ray
 data "DisplayName" "h1ef5f407geb19g4627gb771g5921816dc5d5;1"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightens&lt;/LSTag&gt; its target.
+// data "Description" "h71c35c37g9a71g432fgbe3cg25e723e1e12d;2"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrifies&lt;/LSTag&gt; its target.
 data "Description" "h951d8854g1532g4584g8b0ag85c46fae2d5f;1"
-data "TooltipDamageList" ""
-data "TooltipAttackSave" "Wisdom"
+// data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,3)"
 data "TooltipStatusApply" "ApplyStatus(PETRIFIED,100,2)"
-data "CastSound" "CrSpell_Cast_RayFear"
-data "TargetSound" "CrSpell_Impact_RayFear"
-data "CastTextEvent" "Cast"
-data "UseCosts" "EyeStalkActionPoint:1"
-data "VerbalIntent" "Control"
-data "SpellFlags" "CannotRotate;IsEnemySpell"
+// data "RechargeValues" "4-6"
 data "RechargeValues" "4-5"
-data "SpellAnimationIntentType" "Aggressive"
-data "SourceLimbIndex" "1"
-data "CastEffect" "45b6efb7-bba3-4dc9-af25-cbfa2c74926d"
-data "TargetEffect" "3ec121cf-0862-40b9-ba59-0881af7da550"
-data "HitEffect" "d9846f10-94b4-4de7-85d7-04173e4c1e2b"
-data "BeamEffect" "4bc7dd52-06ff-4500-9054-db4424a72d98"
-data "Sheathing" "DontChange"
 
 // TODO:
 new entry "MMM_Target_SLEEPRAY"
@@ -1140,6 +1135,19 @@ data "MemoryCost" "1"
 data "LineOfSightFlags" "AddSourceHeight"
 data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
 data "CastEffect" "71859b27-bdda-44c3-8c65-7f142a1a2f60"
+
+// TODO: Now grants Resistance to non-magical Bludgeoning, Piercing and Slashing damage per the description (but it's not quite clear to me what the intention of it is just at this moment.)
+new entry "MMM_BLESSINGOFRAVENQUEEN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Stoneskin
+data "DisplayName" "hf8ea421dg7f92g4e16gb569g4cbd023a8f36;1"
+// Has <LSTag Tooltip="Resistant">Resistance</LSTag> to non-magical Bludgeoning, Piercing, and Slashing damage.
+data "Description" "h60bb1d22gcaceg4656g9a29gd2540ffd8711;1"
+data "Icon" "Spell_Abjuration_Stoneskin"
+data "StackId" "STONESKIN"
+data "Boosts" "Resistance(Bludgeoning, ResistantToNonMagical);Resistance(Piercing, ResistantToNonMagical);Resistance(Slashing, ResistantToNonMagical);Resistance(Acid,Resistant);Resistance(Cold,Resistant);Resistance(Fire,Resistant);Resistance(Lightning,Resistant);Resistance(Thunder,Resistant)"
+data "StatusGroups" "SG_RemoveOnRespec"
 
 // ==================================== ??? ====================================
 

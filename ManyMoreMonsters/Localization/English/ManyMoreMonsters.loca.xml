@@ -52,8 +52,8 @@
 	<!-- "" --> <content contentuid="hb7d4ce2eg02ecg4c15g91d9g337811359364" version="1">Raging Ex-Boyfriend</content>
 	<!-- "" --> <content contentuid="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1">Shoe Full of Bailey's</content>
 	<!-- "" --> <content contentuid="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1">A shoe full of Bailey's liqueur, have you ever drank it this way?</content>
-	<!-- "" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Crash Ambush Detection Aura</content>
-	<!-- "" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Crash Ambush Detection Tag</content>
+	<!-- "" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
+	<!-- "" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Tag</content>
 	<!-- "" --> <content contentuid="h28956d7bga473g435aga3f9gbb4807ee0e4b" version="1">Drow Assassin</content>
 	<!-- "" --> <content contentuid="hfe1c7dffg007dg4e90g93d7g6599449db603" version="1">You ever drink Bailey's from a shoe?</content>
 	<!-- "" --> <content contentuid="heaabda15gc321g44fbg9b7dgcf45c39ba9a5" version="1">I'm Ol' Gregg!</content>
@@ -73,18 +73,6 @@
 	<!-- "" --> <content contentuid="h878c2be9g8208g4b9fgbf1ag1cbfbf479047" version="1">Imeh</content>
 	<!-- "" --> <content contentuid="hd861e470gf9ccg42c5ga857geb988d78e7f5" version="1">Sie</content>
 	<!-- "" --> <content contentuid="h748f416fgd063g4e70g9fa7g797e02202f12" version="1">Weakened Beholder</content>
-	<!-- "" --> <content contentuid="h94139211gb20cg42e3gbcacgf7b9553c2cee" version="1">Paralyzing Ray</content>
-	<!-- "" --> <content contentuid="h8acf5df5gbeb7g4983g8bceg385bc0dcc717" version="1">Paralyzing Ray D</content>
-	<!-- "" --> <content contentuid="h4de64a46geef4g4eefgb621gaf04b5ee7cd7" version="1">Wounding Ray</content>
-	<!-- "" --> <content contentuid="heb75c8d4g3886g48fdg8310g6aac50e79727" version="1">Wounding Ray D</content>
-	<!-- "" --> <content contentuid="h9f7d2edbgdee1g46c5g8078g1414e5088c78" version="1">Confusion Ray</content>
-	<!-- "" --> <content contentuid="hf9a835ecg29bdg4cffga7b4gd4c6394da84a" version="1">Confusion Ray D</content>
-	<!-- "" --> <content contentuid="hb8257f42gc028g49eagbb32g0d023fc3a8ae" version="1">Slow Ray</content>
-	<!-- "" --> <content contentuid="hdbafe54cg2341g4c1bg9c25gdac18d5631f5" version="1">Slow Ray D</content>
-	<!-- "" --> <content contentuid="h1ef5f407geb19g4627gb771g5921816dc5d5" version="1">Petrify Ray</content>
-	<!-- "" --> <content contentuid="h951d8854g1532g4584g8b0ag85c46fae2d5f" version="1">Petrify Ray D</content>
-	<!-- "" --> <content contentuid="h8c86d426g08d4g41e3gacdagdf2abdc308d4" version="1">Sleep Ray</content>
-	<!-- "" --> <content contentuid="ha909f49eg7066g4896gac14g668491b74477" version="1">Sleep Ray D</content>
 	<!-- "" --> <content contentuid="hccd1da1agb580g477ega809gfd4b8aaa2745" version="1">Servant of Lolth</content>
 	<!-- "" --> <content contentuid="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1">Boulder Blocking Mineshaft</content>
 	<!-- "" --> <content contentuid="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1">Suspicious Barrel</content>
@@ -174,6 +162,20 @@
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h5cf1cc21g530cg4683ga782g7cf06e38fdfb" version="1">Weakened Tentacle Whip</content>
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h7fcc7083g6eafg483cg8853gd0278ade0d1d" version="1">Lash out with your tentacles.</content>
 
+	<!-- TODO: -->
+	<!-- "" --> <content contentuid="h94139211gb20cg42e3gbcacgf7b9553c2cee" version="1">Paralyzing Ray</content>
+	<!-- "" --> <content contentuid="h8acf5df5gbeb7g4983g8bceg385bc0dcc717" version="1">Paralyzing Ray D</content>
+	<!-- "" --> <content contentuid="h4de64a46geef4g4eefgb621gaf04b5ee7cd7" version="1">Wounding Ray</content>
+	<!-- "" --> <content contentuid="heb75c8d4g3886g48fdg8310g6aac50e79727" version="1">Wounding Ray D</content>
+	<!-- "" --> <content contentuid="h9f7d2edbgdee1g46c5g8078g1414e5088c78" version="1">Confusion Ray</content>
+	<!-- "" --> <content contentuid="hf9a835ecg29bdg4cffga7b4gd4c6394da84a" version="1">Confusion Ray D</content>
+	<!-- "" --> <content contentuid="hb8257f42gc028g49eagbb32g0d023fc3a8ae" version="1">Slow Ray</content>
+	<!-- "" --> <content contentuid="hdbafe54cg2341g4c1bg9c25gdac18d5631f5" version="1">Slow Ray D</content>
+	<!-- "MMM_Target_PETRIFYRAY" --> <content contentuid="h1ef5f407geb19g4627gb771g5921816dc5d5" version="1">Petrify Ray</content>
+	<!-- "MMM_Target_PETRIFYRAY" --> <content contentuid="h951d8854g1532g4584g8b0ag85c46fae2d5f" version="1">Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrifies&lt;/LSTag&gt; its target.</content>
+	<!-- "" --> <content contentuid="h8c86d426g08d4g41e3gacdagdf2abdc308d4" version="1">Sleep Ray</content>
+	<!-- "" --> <content contentuid="ha909f49eg7066g4896gac14g668491b74477" version="1">Sleep Ray D</content>
+
 	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> <content contentuid="hb2c010feg1b1eg419fg9d2bgf2ed3d5be7d1" version="1">Rocket Punch</content>
 	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> <content contentuid="he0956d1agc340g4a81g923cgd61262d9119a" version="1">Grym fires his fist to hit enemies at range.</content>
 	<!-- "MMM_GRYMD", "MMM_Shout_GRYMDEVASTATION" --> <content contentuid="h8d24bb07geda3g4571gac22gf48d43994f09" version="1">Grym Devastation</content>
@@ -201,7 +203,6 @@
 	<!-- "" --> <content contentuid="hf6f0a739g3f65g42e0g97aegc30401ca8f88" version="1">Vinly Desh</content>
 	<!-- "" --> <content contentuid="hac8f83cagb125g4b26g8157g67ff7113335d" version="1">Loves when you give her a hand</content>
 
-	<!-- "" --> <content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">Needs to be about 20% more hands!</content>
 	<!-- "" --> <content contentuid="h2d04da13g7833g42d5g91bfgfeac4aa4dc5b" version="1">You could say I'm handy to have around!</content>
 	<!-- "" --> <content contentuid="h17227372g24cbg43eegbad0gf18516910e3c" version="1">I always do my shopping second hand!</content>
 	<!-- "" --> <content contentuid="hdf72cab3gb02ag4d55gabc1g1182aa8c6625" version="1">My collection is out of hand!</content>
@@ -233,8 +234,6 @@
 	<!-- "" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
 	<!-- "" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
 	<!-- "" --> <content contentuid="h9db59951gef15g4775gab79g709bcbb11853" version="1">Shadow-Infused Villager</content>
-	<!-- "" --> <content contentuid="h0c90b26cg0f4fg4590gb428g9667636d7d5c" version="1">"Such pathetic fools that lie here... Ah, fortuitous timing!  You should prove adequate to test this new spell."</content>
-	<!-- "" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>
 	<!-- "" --> <content contentuid="h1edac836ge5f1g486ega20fg2b507a35d172" version="1">Damon Eyesz</content>
 	<!-- "" --> <content contentuid="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1">Rekin Ky</content>
 	<!-- "" --> <content contentuid="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1">Edin Mesic</content>
@@ -312,7 +311,12 @@
 	<!-- "" --> <content contentuid="h30513e41g4555g48f3g92bcg524e474b7b08" version="1">"...stop..."</content>
 	<!-- "" --> <content contentuid="h7e485f78g4b99g4c86g9c3fg8ead0b05e499" version="1">"...the...darkness..."</content>
 
-	<!-- "" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name; get them!</content>
+	<!-- "MMM_20MOREHANDS" --> <content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">Needs to be about 20% more hands!</content>
+
+	<!-- "MMM_BALTHAZARSPEAK1" --> <content contentuid="h0c90b26cg0f4fg4590gb428g9667636d7d5c" version="1">"Such pathetic fools that lie here... Ah, fortuitous timing!  You should prove adequate to test this new spell."</content>
+	<!-- "MMM_BALTHAZARSPEAK2" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>
+
+	<!-- "MMM_RIVINGTONPATROLSPEAK" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name; get them!"</content>
 
 	<!-- ==================================== ... ==================================== -->
 
