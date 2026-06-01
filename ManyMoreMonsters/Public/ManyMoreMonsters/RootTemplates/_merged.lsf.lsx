@@ -652,7 +652,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -969,7 +968,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -1185,7 +1183,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>

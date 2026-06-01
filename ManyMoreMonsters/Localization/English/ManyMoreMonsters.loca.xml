@@ -92,8 +92,6 @@
 	<!-- "" --> <content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
 	<!-- "" --> <content contentuid="h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe" version="1">Variable HP</content>
 	<!-- "" --> <content contentuid="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1">Destroying this tombstone will anger the spirits of the forge.&lt;br&gt;&lt;br&gt;Turns on Grym anti-cheese mode/hard mode. Killing Grym in this mode rewards you with a pet.&lt;br&gt;&lt;br&gt;The ghosts are supposed to be unkillable and die with Grym.</content>
-	<!-- "" --> <content contentuid="h66abd1cag0a0eg412bg8babg70d4b7d8580a" version="1">Shadow-Infused Undead</content>
-	<!-- "" --> <content contentuid="he382272ag1f07g482agb5b5gec7c480a231b" version="1">Something has caused this shadow-cursed being to infuse itself with the shadows.</content>
 	<!-- "" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
 	<!-- "" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
 	<!-- "" --> <content contentuid="h9db59951gef15g4775gab79g709bcbb11853" version="1">Shadow-Infused Villager</content>
@@ -211,6 +209,10 @@
 	<!-- "MMM_DAWNMASTERGENERIC" --> <content contentuid="h0428c939g637eg4066ga658g6ae9c2ae103d" version="1">Unfortunately you don't recognize it.</content>
 	<!-- "MMM_DAWNMASTERFLAMESTRIKE" --> <content contentuid="h086b5a23gb552g449eg8b81g5c26ebd7ba46" version="1">Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!</content>
 	<!-- "MMM_DAWNMASTERSUNBEAM" --> <content contentuid="hffd7ab2ag4c9fg41cfgad38g462fc47ae591" version="1">Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!</content>
+
+
+	<!-- "MMM_SUPER_SHADOWCURSE" --> <content contentuid="h66abd1cag0a0eg412bg8babg70d4b7d8580a" version="1">Shadow-Infused Undead</content>
+	<!-- "MMM_SUPER_SHADOWCURSE" --> <content contentuid="he382272ag1f07g482agb5b5gec7c480a231b" version="1">Something has caused this shadow-cursed being to infuse itself with the shadows.</content>
 
 	<!-- ==================================== Statuses - Unimplemented -->
 

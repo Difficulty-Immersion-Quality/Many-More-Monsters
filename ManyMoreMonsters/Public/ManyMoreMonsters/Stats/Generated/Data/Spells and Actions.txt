@@ -1223,7 +1223,7 @@ type "StatusData"
 data "StatusType" "POLYMORPHED"
 using "SCL_SHADOW_CURSE_UNDEAD_NEW"
 // data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
-data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
 // data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
 data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
 // data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
@@ -1234,6 +1234,37 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "SCL_SHADOW_CURSE_UNDEAD"
 data "StackPriority" "69"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// ==================================== Act 2: 11. Balthazar event #1. ====================================
+
+new entry "MMM_SUPER_SHADOWCURSE"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// Shadow-Infused Undead
+data "DisplayName" "h66abd1cag0a0eg412bg8babg70d4b7d8580a;1"
+// Something has caused this shadow-cursed being to infuse itself with the shadows.
+data "Description" "he382272ag1f07g482agb5b5gec7c480a231b;1"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(MMM_SUPER_SHADOWCURSE_UNDEAD,100,-1)"
+// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
+data "Rules" ""
+
+new entry "MMM_SUPER_SHADOWCURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+data "StackPriority" "420"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
@@ -1275,7 +1306,6 @@ data "StatusEffect" "8aa59540-9ded-437f-aa13-5c7c2d3c7cac"
 
 // ==================================== Cut content ====================================
 
-// Unused
 new entry "MMM_Target_CONSUMESPIDER"
 type "SpellData"
 data "SpellType" "Target"
@@ -1312,3 +1342,15 @@ data "StatusGroups" "SG_RemoveOnRespec"
 data "StatusEffect" "61fe31f9-ae4b-4926-a033-e56ea67c7d92"
 data "ManagedStatusEffectType" "Positive"
 data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
+
+new entry "MMM_SHADOWSHIELD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_MOONSHIELD"
+// Pixie Blessing
+data "DisplayName" "hb52f28cbgfd85g4ae9gb906g2d2bdd1eede1;1"
+// The Shadow Curse cannot affect this creature thanks to a pixie's protective magic.
+data "Description" "h43f81dd2g0527g4cd9g95ccg50ff7d133646;1"
+data "StackId" "SCL_SAFE"
+data "StackPriority" "20"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ExcludeFromPortraitRendering;IgnoreResting"
