@@ -4,8 +4,9 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-<!-- Upper city -->
-		<!-- Team Trajectile Finale -->
+<!-- Upper City -->
+	<!-- Team Trajectile - Finale -->
+		<!-- 2. Team Trajectile Event #5 -->
 			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />

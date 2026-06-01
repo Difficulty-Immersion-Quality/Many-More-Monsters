@@ -4,8 +4,9 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-<!-- Ravaged Beach -->
-	<!-- Devourer Breadcrumb -->
+<!-- Surface -->
+	<!-- Ravaged Beach -->
+		<!-- 1. Lost Intellect Devourer, breadcrumb for people who didn't realize the cliff was there, will join in fight with other intellect devourers. -->
 			<!-- Lost Intellect Devourer -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="IntellectDevourer" />
@@ -67,7 +68,7 @@
 						</node>
 					</children>
 				</node>
-	<!-- Kuotoa Dock -->
+		<!-- 2. Kuotoa on docks, can easily walk past if you aren't ready to fight. -->
 			<!-- Kuo-toa - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
@@ -253,7 +254,7 @@
 						</node>
 					</children>
 				</node>
-	<!-- Thieves Rock -->
+		<!-- 3. Team Trajectile Event #1 -->
 			<!-- Mikey "Wiggles" Pridgen -->g
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -666,7 +667,7 @@
 						</node>
 					</children>
 				</node>
-	<!-- Crash Wolves -->
+		<!-- 4. Wolves eating dead mindflayer.  Body has decent starting potions/alchemy ingredients. -->
 			<!-- Wolf - 1 -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -805,7 +806,7 @@
 						</node>
 					</children>
 				</node>
-	<!-- Mindflayer Ambush -->
+		<!-- 5. Mindflayer ambush - Mindflayer using other mindflayer as bait to ambush player, attacks are about 1/3rd of a standard mindflayer. -->
 			<!-- Dead Mind Flayer -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="mindflayer" />
@@ -1293,7 +1294,7 @@
 						</node>
 					</children>
 				</node>
-	<!-- Goblin Crash Ambush -->
+		<!-- 6. Goblin scout ambush - goblins scouting area, has perception check to see them, if you don't see them will ambush you when you get closer. -->
 			<!-- Goblin Tracker - 1 -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="3cae4ff5-e9c0-485b-b695-f8830961a781" />
@@ -1799,8 +1800,8 @@
 					</children>
 				</node>
 	<!-- Dank Crypt -->
-		<!-- Tiny Spiders -->
-			<!-- Tiny Spider -->
+		<!-- 7. Spiders!  If you don't step on them you can actually get through this part without aggroing them.  Very small aggro range. -->
+			<!-- Tiny Spider - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -1973,7 +1974,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -2146,7 +2147,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -2319,7 +2320,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -2492,7 +2493,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 5 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -2665,7 +2666,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 6 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -2838,7 +2839,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 7 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -3011,7 +3012,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 8 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -3184,7 +3185,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 9 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -3357,7 +3358,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 10 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -3530,8 +3531,8 @@
 						</node>
 					</children>
 				</node>
-		<!-- Dank Kobolds -->
-			<!-- Kobold -->
+		<!-- 8. Kobolds coming in to loot the place, may join battle if you aggro the skeletons first if the door is open, not sure if the door is closed. -->
+			<!-- Kobold - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3616,7 +3617,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Kobold -->
+			<!-- Kobold - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3698,7 +3699,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Kobold -->
+			<!-- Kobold - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3783,8 +3784,9 @@
 						</node>
 					</children>
 				</node>
-<!-- Emerald Grove -->
-			<!-- Oof (Reinforcement) -->
+	<!-- Emerald Grove -->
+		<!-- 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy. -->
+			<!-- Oof -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ogre_melee" />
@@ -3799,6 +3801,7 @@
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="4" />
 					<attribute id="Flag" type="int32" value="1" />
+					<!-- The Clumsiest Ogre -->
 					<attribute id="Title" type="TranslatedString" handle="h5b53a934g6880g42abgbd42g88f087f750ce" version="1" />
 					<attribute id="IsBoss" type="bool" value="True" />
 					<attribute id="MapKey" type="FixedString" value="1119bea0-a63f-4617-99ab-7f0af17bfdf4" />
@@ -3866,6 +3869,7 @@
 						</node>
 					</children>
 				</node>
+		<!-- 13. Eagle chilling on cliff. -->
 			<!-- Eagle -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -4090,7 +4094,8 @@
 					</children>
 				</node>
 	<!-- Emerald Grove - Secluded Cove -->
-		<!-- Grove Thieves -->
+		<!-- 10. Thieves hiding treasure. -->
+			<!-- Grove Bandit - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -4245,6 +4250,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Grove Bandit - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
@@ -8476,7 +8482,7 @@
 					</children>
 				</node>
 		<!-- Defiled Spiders Bait -->
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 11 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8649,7 +8655,7 @@
 					</children>
 				</node>
 		<!-- Defiled Spiders Hoard -->
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 12 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8821,7 +8827,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 13 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -8993,7 +8999,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 14 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9165,7 +9171,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 15 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9337,7 +9343,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 16 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9509,7 +9515,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 17 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9681,7 +9687,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 18 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -9853,7 +9859,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 19 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10025,7 +10031,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 20 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10197,7 +10203,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 21 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10369,7 +10375,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 22 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10541,7 +10547,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 23 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10714,7 +10720,7 @@
 					</children>
 				</node>
 		<!-- Defiled Spiders Wave 2 -->
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 24 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -10886,7 +10892,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 25 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11058,7 +11064,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 26 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11230,7 +11236,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 27 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11402,7 +11408,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 28 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11574,7 +11580,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 29 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11746,7 +11752,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 30 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -11918,7 +11924,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 31 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12090,7 +12096,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 32 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12262,7 +12268,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 33 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12434,7 +12440,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 34 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -12606,7 +12612,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Tiny Spider -->
+			<!-- Tiny Spider - 35 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />

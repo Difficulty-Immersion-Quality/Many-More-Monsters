@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
 					<attribute id="Icon" type="FixedString" value="Item_CONT_Egg_Owlbear_A" />
@@ -61,6 +62,7 @@
 						<node id="ScriptOverrides" />
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="Description" type="TranslatedString" handle="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1" />
@@ -271,7 +273,9 @@
 						</node>
 					</children>
 				</node>
+			<!-- Scroll of Summon GRYM MODEL-N -->
 				<node id="GameObjects">
+					<!-- Summons Grym Model-N. Not consumed on use. -->
 					<attribute id="Description" type="TranslatedString" handle="hf338ba8cge707g4f98g9144gd88cea4c5ba2" version="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h8cdc10fdgaa61g4ec2g86f7g95aea1f6eb90" version="1" />
 					<attribute id="Flag" type="int32" value="0" />
@@ -362,6 +366,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -666,6 +671,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="mage" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="ff3a8b45-befd-6010-3891-19f8ca844029" />
@@ -818,6 +824,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
 					<attribute id="Archetype" type="FixedString" value="mimic" />
@@ -1033,6 +1040,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
 					<attribute id="Archetype" type="FixedString" value="mimic" />
@@ -1248,6 +1256,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="mage" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="01a8b130-e003-4be7-3cd4-8d037fc2e7ab" />
@@ -1400,7 +1409,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- GRYM MODEL-N -->
+			<!-- GRYM MODEL-N -->
 				<!-- TODO: He too fucking loud even with data "SoundSize" "Tiny", needs new "FootSoundEventName" or something... -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="ha7c9ec67g94c9g4409gab01g17635f327f24" version="1" />
@@ -1539,6 +1548,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="GLO_Mimic" />
 					<attribute id="Archetype" type="FixedString" value="mimic" />

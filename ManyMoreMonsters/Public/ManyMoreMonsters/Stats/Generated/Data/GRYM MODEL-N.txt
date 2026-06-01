@@ -35,12 +35,14 @@ data "RadiantResistance" "Resistant"
 data "DifficultyStatuses" "STATUS_EASY:PLAYER_BONUSES_EASYMODE"
 data "SoundSize" "Tiny"
 
-// TODO:
-new entry "MMM_GRYMNANOPASSIVE"
-type "PassiveData" 
+new entry "MMM_Passive_GRYMNANO"
+type "PassiveData"
+// Nano
 data "DisplayName" "h9fe22381g74acg4e59gb575gcfb106fd7938;1"
+// The cutest little thing.
 data "Description" "hb354b69bg9c0fg4f98gb2fag3c8320a902ef;1"
 data "Icon" "Spell_Transmutation_Reduce"
+data "Properties" "IsHidden"
 data "Boosts" "ScaleMultiplier(0.10);ObjectSize(-3)"
 
 // TODO:

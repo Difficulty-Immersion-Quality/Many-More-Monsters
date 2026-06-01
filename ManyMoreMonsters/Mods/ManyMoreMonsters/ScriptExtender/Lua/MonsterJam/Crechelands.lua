@@ -1061,6 +1061,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gondola detect roll
         if eventName == "GondolaRoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Channels.LogToPlayerOverhead:Broadcast("There are Gith on that Gondola! Prepare yourselves!")
                 PrepareDuration = 30
                 PreparedBoost()
@@ -1069,6 +1070,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gish'ra detect roll
         if eventName == "GishraDetectRoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Channels.LogToPlayerOverhead:SendToClient("I feel eyes staring at me...", Osi.GetReservedUserID(roller))
                 PrepareDuration = 18
                 PreparedBoost()

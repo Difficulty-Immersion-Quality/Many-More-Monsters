@@ -5,7 +5,8 @@
 		<node id="Templates">
 			<children>
 <!-- Rivington -->
-		<!-- Team Trajectile - Roof Thieves -->
+	<!-- Team Trajectile - Roof Thieves -->
+		<!-- 1. Team Trajectile Event #4. -->
 			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -418,267 +419,9 @@
 						</node>
 					</children>
 				</node>
-		<!-- Sahuagin -->
-			<!-- Sea Creatures 1 -->
-				<!-- Sahuagin -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="45b8fd96-ca15-448d-aac1-a5197a9ddef7" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
-					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209005" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="70 0 103" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-				<!-- Sahuagin -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
-					<attribute id="Equipment" type="FixedString" value="" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="cf3bb0d4-11b9-9de4-cad3-2891c457febd-_(Icon_Sahuagin)" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="2a4ee504-3e91-4334-a27b-8ae6129b4997" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
-					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="70 0 103" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-				<!-- Sahuagin Hunter -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="805adc8d-047e-491a-a931-db16f5b97589" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
-					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="70 0 103" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-			<!-- Sea Creatures 2 -->
-				<!-- Sahuagin -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="f29443b5-4d60-4942-bd4b-d340d7c192a8" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
-					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209005" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-				<!-- Sahuagin -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
-					<attribute id="Equipment" type="FixedString" value="" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="cf3bb0d4-11b9-9de4-cad3-2891c457febd-_(Icon_Sahuagin)" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="0ab5e757-776c-4c82-bbab-1fe2dd92a8ff" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
-					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-				<!-- Sahuagin Hunter -->
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
-					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="f4ea38b5-d822-44c9-b241-18f05f28a86a" />
-					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
-					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
-					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="0.9" />
-						</node>
-					</children>
-				</node>
-		<!-- Hill Giant -->
-				<!-- Hill Giant -->
+	<!-- Hill Giant -->
+		<!-- 2. Don't get the chicken smell on you or you might attract something. -->
+			<!-- Hill Giant -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ogre_melee" />
@@ -760,7 +503,269 @@
 						</node>
 					</children>
 				</node>
-		<!-- Well Shapeshifters -->
+	<!-- Sahuagin -->
+		<!-- 3. Sea Creatures on the beach. -->
+			<!-- Sahuagin - 1 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="45b8fd96-ca15-448d-aac1-a5197a9ddef7" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
+					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209005" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="70 0 103" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+			<!-- Sahuagin - 2 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
+					<attribute id="Equipment" type="FixedString" value="" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="cf3bb0d4-11b9-9de4-cad3-2891c457febd-_(Icon_Sahuagin)" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="2a4ee504-3e91-4334-a27b-8ae6129b4997" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
+					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="70 0 103" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+			<!-- Sahuagin Hunter - 1 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="805adc8d-047e-491a-a931-db16f5b97589" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
+					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="70 0 103" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+		<!-- 4. Sea Creatures at the wrecked ship. -->
+			<!-- Sahuagin - 3 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="f29443b5-4d60-4942-bd4b-d340d7c192a8" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
+					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209005" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+			<!-- Sahuagin - 4 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
+					<attribute id="Equipment" type="FixedString" value="" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="cf3bb0d4-11b9-9de4-cad3-2891c457febd-_(Icon_Sahuagin)" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="0ab5e757-776c-4c82-bbab-1fe2dd92a8ff" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINMELEE" />
+					<attribute id="TemplateName" type="FixedString" value="3f66ffc0-8bc9-49cf-a2f8-71ccdea306bd" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+			<!-- Sahuagin Hunter - 2 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="f4ea38b5-d822-44c9-b241-18f05f28a86a" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
+					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+	<!-- Well Shapeshifters -->
+		<!-- 5. Murdered Refugees. -->
+			<!-- TODO: These fuckers have a chance to have that unique key spawn on them pretty sure, gotta fix inheritence or whatever. -->
+			<!-- TODO: what the dawg name -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_001" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8aecfbf4-be70-8290-94fe-9141c8539b86" />
@@ -967,6 +972,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: what the dawg name -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_002" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -1141,6 +1147,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: what the dawg name -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_003" />
 					<attribute id="CombatGroupID" type="FixedString" value="50d0221a-1f12-418d-a469-ce1e90fd4a64" />
@@ -1346,8 +1353,12 @@
 						</node>
 					</children>
 				</node>
-		<!-- Githyanki Patrol -->
-				<!-- Githyanki Patrol - 1 -->
+	<!-- Book of Demonic Ecstasy -->
+		<!-- 6. Book of Demonic Ecstasy -->
+			<!-- TODO: Entirely found in lua. Spawns Raunchy Succubus and Randy Incubus, might be cooler with custom entities. -->
+	<!-- Githyanki Patrol -->
+		<!-- 7. Githyanki Patrol -->
+			<!-- Githyanki Patrol - 1 -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
@@ -1393,7 +1404,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Githyanki Patrol - 2 -->
+			<!-- Githyanki Patrol - 2 -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
@@ -1439,7 +1450,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Githyanki Patrol - 3 -->
+			<!-- Githyanki Patrol - 3 -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />
@@ -1486,7 +1497,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Githyanki Patrol - 4 -->
+			<!-- Githyanki Patrol - 4 -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />
