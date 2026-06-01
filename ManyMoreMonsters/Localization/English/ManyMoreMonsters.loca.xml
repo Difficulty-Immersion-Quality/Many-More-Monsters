@@ -194,13 +194,17 @@
 	<!-- "MMM_GRYMD" --> <content contentuid="h2847cc74g0f06g4a24gbf29g8d8be5803d51" version="1">Under unknown threat Grym sets off a massive runepowder charge.</content>
 	<!-- "MMM_Shout_GRYMDEVASTATION" --> <content contentuid="hbbf58b0cg7be3g4140gac82g9807c584dbb3" version="1">If someone isn't within 20m of Grym he will destroy the forge, and everyone with it.</content>
 
-	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
-	<!-- "MMM_Target_FlameStrike_Lathander" --> <content contentuid="hae978ab4g7decg4519ga168ga38e1cbdc514" version="1">Lathander's Flame Strike</content>
-
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h5ec55e3cgc221g4386g92ecg1dd144725b64" version="1">Consume</content>
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h9c46b1c7g7221g43afg9115g26e57c25dc7f" version="1">Devours a corpse.</content>
 	<!-- "MMM_SURVIVAL", "MMM_SURVIVALSIZE1" --> <content contentuid="h1439735agfc1cg4001gac03g51ec95bc37d6" version="1">Survival of the Fittest</content>
 	<!-- "MMM_SURVIVAL", "MMM_SURVIVALSIZE1" --> <content contentuid="h0accbfd3g6523g4595gb4acgcdb9e223f284" version="1">Consuming a corpse has made this Bulette stronger.</content>
+
+	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
+	<!-- "MMM_Target_FlameStrike_Lathander" --> <content contentuid="hae978ab4g7decg4519ga168ga38e1cbdc514" version="1">Lathander's Flame Strike</content>
+
+	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN", "MMM_BLESSINGOFRAVENQUEEN" --> <content contentuid="hf8ea421dg7f92g4e16gb569g4cbd023a8f36" version="1">Blessing of the Raven Queen</content>
+	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN" --> <content contentuid="habe82285g651cg46a0ga97ag3146cba4bcc1" version="1">Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.</content>
+	<!-- "MMM_BLESSINGOFRAVENQUEEN" --> <content contentuid="h60bb1d22gcaceg4656g9a29gd2540ffd8711" version="1">Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
@@ -250,8 +254,6 @@
 	<!-- "" --> <content contentuid="h664cccc3gfba2g4429g8c58g7a1bf26442db" version="1">Andi</content>
 	<!-- "" --> <content contentuid="h823e08b8g8aafg4b45g8355gb895940b69e8" version="1">Child-like Wraith</content>
 	<!-- "" --> <content contentuid="ha7a913e7gc032g4447g9bd0g8fe86d05e35f" version="1">"Mummy and daddy don't want to play anymore.  Will you play with me?"</content>
-	<!-- "" --> <content contentuid="hf8ea421dg7f92g4e16gb569g4cbd023a8f36" version="1">Blessing of the Raven Queen</content>
-	<!-- "" --> <content contentuid="h60bb1d22gcaceg4656g9a29gd2540ffd8711" version="1">Is resistant to all damage.</content>
 	<!-- "" --> <content contentuid="h34f45e52g9749g49dcga687gd3453b84bf50" version="1">N'saneh Att'er</content>
 	<!-- "" --> <content contentuid="h2a441d62g531dg4f77gbe74g4276f6c10ff1" version="1">Shadar-Kai Soul Monger</content>
 	<!-- "" --> <content contentuid="h7eef141dg05fcg4d67g912bg09f4a00023a6" version="1">Shadar-Kai</content>

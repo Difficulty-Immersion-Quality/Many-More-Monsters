@@ -1275,48 +1275,41 @@ data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
 data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
 
 // ==================================== Act 2: Shadar Kai ====================================
+// TODO: Custom resource > cooldown "You can use this trait a number of times equal to your proficiency bonus" per RAW.
+// TODO: Level check 
 
-// TODO:
 new entry "MMM_Target_BLESSINGOFRAVENQUEEN"
 type "SpellData"
 data "SpellType" "Target"
+using "Target_MistyStep"
 data "Cooldown" "OncePerRest"
-data "Level" "2"
-data "SpellSchool" "Conjuration"
+// data "SpellProperties" "GROUND:TeleportSource();"
 data "SpellProperties" "GROUND:TeleportSource();ApplyStatus(MMM_BLESSINGOFRAVENQUEEN,100,1)"
-data "TargetRadius" "18"
-data "TargetConditions" "CanStand('') and not Character() and not Self()"
-data "Icon" "Spell_Conjuration_MistyStep"
-// Misty Step
+// Blessing of the Raven Queen
 data "DisplayName" "hf8ea421dg7f92g4e16gb569g4cbd023a8f36;1"
 // Surrounded by silver mist, you teleport to an unoccupied space you can see.
-data "Description" "hc724a06agbd46g40e5gbdb0gbf6721f1bc8d;2"
-data "TooltipUpcastDescription" "6ff1780a-855a-414c-a8bf-811251537206"
-data "CastSound" "Spell_Cast_Utility_MistyStep_L1to3"
-data "TargetSound" "Spell_Impact_Utility_MistyStep_L1to3"
-data "VocalComponentSound" "Vocal_Component_Teleport"
-data "CastTextEvent" "Cast"
+// data "Description" "hc724a06agbd46g40e5gbdb0gbf6721f1bc8d;2"
+// Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.
+data "Description" "habe82285g651cg46a0ga97ag3146cba4bcc1;1"
+data "TooltipStatusApply" "ApplyStatus(MMM_BLESSINGOFRAVENQUEEN,100,1)"
+// data "UseCosts" "BonusActionPoint:1;SpellSlotsGroup:1:1:2"
 data "UseCosts" "BonusActionPoint:1"
-data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;39daf365-ec06-49a8-81f3-9032640699d7,,;5c400e93-0266-499c-a2e1-75d53358460f,,;cc5b0caf-3ed1-4711-a50d-11dc3f1fdc6a,,;,,;1715b877-4512-472e-9bd0-fd568a112e90,,;,,;,,"
-data "VerbalIntent" "Utility"
-data "SpellFlags" "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
-data "MemoryCost" "1"
-data "LineOfSightFlags" "AddSourceHeight"
-data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
-data "CastEffect" "71859b27-bdda-44c3-8c65-7f142a1a2f60"
+// data "SpellFlags" "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+// data "Sheathing" "Sheathed"
+data "Sheathing" ""
 
 // TODO: Now grants Resistance to non-magical Bludgeoning, Piercing and Slashing damage per the description (but it's not quite clear to me what the intention of it is just at this moment.)
 new entry "MMM_BLESSINGOFRAVENQUEEN"
 type "StatusData"
 data "StatusType" "BOOST"
-// Stoneskin
+// Blessing of the Raven Queen
 data "DisplayName" "hf8ea421dg7f92g4e16gb569g4cbd023a8f36;1"
-// Has <LSTag Tooltip="Resistant">Resistance</LSTag> to non-magical Bludgeoning, Piercing, and Slashing damage.
+// Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.
 data "Description" "h60bb1d22gcaceg4656g9a29gd2540ffd8711;1"
 data "Icon" "Spell_Abjuration_Stoneskin"
-data "StackId" "STONESKIN"
-data "Boosts" "Resistance(Bludgeoning, ResistantToNonMagical);Resistance(Piercing, ResistantToNonMagical);Resistance(Slashing, ResistantToNonMagical);Resistance(Acid,Resistant);Resistance(Cold,Resistant);Resistance(Fire,Resistant);Resistance(Lightning,Resistant);Resistance(Thunder,Resistant)"
-data "StatusGroups" "SG_RemoveOnRespec"
+data "Boosts" "Resistance(Acid, Resistant);Resistance(Bludgeoning, Resistant);Resistance(Cold, Resistant);Resistance(Fire, Resistant);Resistance(Force, Resistant);Resistance(Lightning, Resistant);Resistance(Necrotic, Resistant);Resistance(Piercing, Resistant);Resistance(Poison, Resistant);Resistance(Psychic, Resistant);Resistance(Radiant, Resistant);Resistance(Slashing, Resistant);Resistance(Thunder, Resistant)"
+data "StatusEffect" "8aa59540-9ded-437f-aa13-5c7c2d3c7cac"
 
 // ==================================== Cut content ====================================
 
