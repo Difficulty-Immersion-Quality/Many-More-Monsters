@@ -1,6 +1,24 @@
 // ==================================== Team Trajectile ====================================
 
 // TODO:
+new entry "MMM_TEAMTRAJECTILEBLASTOFF"
+type "StatusData"
+data "StatusType" "BOOST"
+// Enlarged
+data "DisplayName" "h18b068aege3a3g42e7ga1a5gb506a2c348f5;1"
+// Size is increased, weapon attacks deal an additional [1] damage, and the affected entity has <LSTag Tooltip="Advantage">Advantage</LSTag> on Strength <LSTag Tooltip="AbilityCheck">Checks</LSTag> and <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>. <LSTag Tooltip="CarryWeight">Carrying capacity</LSTag> is also increased by 25%.
+data "Description" "hb0f54d47g9b2ag46cegb2f4ga1eb301fe15c;4"
+data "DescriptionParams" "1d4"
+data "Icon" "Spell_Transmutation_Enlarge"
+data "SoundLoop" "MAG_Status_EnlargeSelf_Loop"
+data "SoundStop" "MAG_Status_EnlargeSelf_End"
+data "StackId" "SIZE"
+data "Boosts" "Advantage(Ability, Strength); Advantage(SavingThrow, Strength);CharacterWeaponDamage(1d4);ObjectSize(+1);ScaleMultiplier(1.33);CharacterUnarmedDamage(1d4);CarryCapacityMultiplier(1.25);IncreaseMaxHP(150)"
+data "Passives" "EnlargeWeightMedium;EnlargeWeightLarge"
+data "StatusGroups" "SG_RemoveOnRespec"
+data "StatusEffect" "ead75c6a-806e-4db7-8d51-f06beca00fe2"
+
+// TODO:
 new entry "MMM_Shout_MassDimensionDoor"
 type "SpellData"
 data "SpellType" "Shout"
@@ -64,6 +82,28 @@ data "BeamEffect" "5366661d-fcc5-429b-9507-d1469124b297"
 data "DamageType" "Bludgeoning"
 data "SpellSoundMagnitude" "Big"
 data "Sheathing" "Sheathed"
+
+// ==================================== Mimics ====================================
+
+new entry "MMM_MIMIC1"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC1B"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC2"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC3"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 // ==================================== Act 1: Weakened Mind Flayer ====================================
 
@@ -150,8 +190,6 @@ data "RemoveConditions" ""
 data "StatusPropertyFlags" "IgnoredByImmobilized;InitiateCombat;ForceOverhead"
 // data "SplatterDirtAmount" "0.2"
 data "SplatterDirtAmount" "0.7"
-// data "RemoveEvents" "OnTurn"
-data "RemoveEvents" "OnTurn"
 
 new entry "MMM_OOFSPLINTER"
 type "StatusData"
@@ -164,7 +202,6 @@ data "Icon" "Action_DisarmingAttack_Melee"
 data "FormatColor" "White"
 data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 data "OnApplyFunctors" "DealDamage(1,Piercing);ApplyStatus(BLEEDING,100,2)"
-data "RemoveEvents" "OnTurn"
 
 new entry "MMM_OOFDISARMED"
 type "StatusData"
@@ -199,7 +236,6 @@ data "Description" "h9cc843b9g9959g4316ga007g6c655f48577e;1"
 // data "StatusPropertyFlags" "DisableCombatlog"
 data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 data "OnApplyFunctors" "ApplyStatus(CONFUSION,100,1)"
-data "RemoveEvents" "OnTurn"
 
 new entry "MMM_OOFBUMBLE"
 type "StatusData"
@@ -1104,7 +1140,41 @@ data "StatsFunctors" "TriggerRandomCast(1,,WildMagic)"
 
 // ==================================== Act 1.b: Spirit of Dawnmaster Vaseid ====================================
 
-// Lathander's Sunbeam
+new entry "MMM_LATHANDERSBLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Lathander's Blessing
+data "DisplayName" "h7d02862fg1f4eg47e7g9f43g6e32bd632763;1"
+// Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.
+data "Description" "h88d02f89g21c2g4b8cgba4egedbfe8fea673;1"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+data "Boosts" "ActionResourceBlock(Movement);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(ActionPoint)"
+data "StatusEffect" "b21ec9bd-5f35-446e-cc8f-5458962c118e"
+
+// TODO: What is this description?
+new entry "MMM_DAWNMASTERGENERIC"
+type "StatusData"
+data "StatusType" "BOOST"
+// Lathander is empowering Dawnmaster Vaseid!
+data "DisplayName" "hbf7bbc37gde41g46a1gb53bg8ff3aed90b60;1"
+// Unfortunately you don't recognize it.
+data "Description" "h0428c939g637eg4066ga658g6ae9c2ae103d;1"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+data "FormatColor" "Yellow"
+data "StatusPropertyFlags" "ExcludeFromPortraitRendering;DisablePortraitIndicator"
+data "Boosts" "ActionResourceBlock(Movement);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(ActionPoint)"
+
+new entry "MMM_DAWNMASTERSUNBEAM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_DAWNMASTERGENERIC"
+// Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!
+data "DisplayName" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
+// Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!
+data "Description" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
+
 new entry "MMM_Zone_Sunbeam_Lathander"
 type "SpellData"
 data "SpellType" "Zone"
@@ -1127,42 +1197,35 @@ data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
 // data "MemoryCost" "1"
 data "MemoryCost" ""
 
-// TODO:
-new entry "MMM_Target_LATHANDERFLAMESTRIKE"
+new entry "MMM_AVOIDSUNBEAM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AI_HELPER_AVOIDAREA_RADIUS2"
+
+new entry "MMM_DAWNMASTERFLAMESTRIKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_DAWNMASTERGENERIC"
+// Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!
+data "DisplayName" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
+// Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!
+data "Description" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
+
+new entry "MMM_Target_FlameStrike_Lathander"
 type "SpellData"
 data "SpellType" "Target"
-data "Level" "5"
-data "SpellSchool" "Evocation"
-data "SpellProperties" "GROUND:SurfaceChange(Ignite);"
-data "TargetRadius" "18"
+using "Target_FlameStrike"
+// data "AreaRadius" "3"
 data "AreaRadius" "6"
-data "SpellRoll" "not SavingThrow(Ability.Dexterity, SourceSpellDC())"
-data "SpellSuccess" "DealDamage(5d6,Fire);DealDamage(5d6,Radiant,Magical)"
-data "SpellFail" "DealDamage(5d6/2,Fire);DealDamage(5d6/2,Radiant,Magical)"
-data "TargetConditions" "not Dead() and not (HasPassive('SculptSpells', context.Source) and Ally())"
-data "Icon" "Spell_Evocation_FlameStrike"
-data "DisplayName" "h645e40b7g5e63g4981gb6ecg3d6735227497;2"
-data "Description" "h54716561g46b1g450egaa75ga7015fdf323f;2"
-data "TooltipDamageList" "DealDamage(5d6,Fire);DealDamage(5d6,Radiant)"
-data "TooltipAttackSave" "Dexterity"
-data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
-data "TooltipUpcastDescription" "5f3e75ef-5efb-47a3-b6ac-1b838cbe7bc3"
-data "TooltipUpcastDescriptionParams" "DealDamage(1d6,Fire);DealDamage(1d6,Radiant)"
-data "PrepareSound" "Spell_Prepare_Damage_FlameStrike_L4to5"
-data "PrepareLoopSound" "Spell_Loop_Damage_FlameStrike_L4to5"
-data "CastSound" "Spell_Cast_Damage_FlameStrike_L4to5"
-data "TargetSound" "Spell_Impact_Damage_FlameStrike_L4to5"
-data "CastTextEvent" "Cast"
-data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:5"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;39daf365-ec06-49a8-81f3-9032640699d7,,;5c400e93-0266-499c-a2e1-75d53358460f,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade"
-data "MemoryCost" "1"
-data "PrepareEffect" "f2cc8572-ef49-414a-bc5d-0002e9f9fae3"
-data "CastEffect" "bcdbef29-f309-4d72-b12b-aa264e676786"
-data "TargetEffect" "02511b69-2ccd-4fa6-a251-b4ee3437bcf0"
-data "PositionEffect" "5e97b8fc-680a-4155-b105-948be46f0f26"
-data "DamageType" "Radiant"
+// Flame Strike
+// data "DisplayName" "h645e40b7g5e63g4981gb6ecg3d6735227497;2"
+// Lathander's Flame Strike
+data "DisplayName" "hae978ab4g7decg4519ga168ga38e1cbdc514;1"
+
+new entry "MMM_AVOIDFLAMESTRIKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AI_HELPER_AVOIDAREA_RADIUS6"
 
 // ==================================== Act 2: Shadowcursed Toilet Guy ====================================
 

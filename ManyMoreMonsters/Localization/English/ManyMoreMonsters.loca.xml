@@ -117,12 +117,7 @@
 	<!-- "" --> <content contentuid="hb7382d23ge4f1g4fefg899bgdc356c10a036" version="1">Marlow</content>
 	<!-- "" --> <content contentuid="h45ad82efgfea9g4f85gae2egc942a348a737" version="1">Lady Esther's Bodyguard</content>
 	<!-- "" --> <content contentuid="hec731007gbcbdg4538g8505g899c7cb35e61" version="1">Spirit of Dawnmaster Vaseid</content>
-	<!-- "" --> <content contentuid="h086b5a23gb552g449eg8b81g5c26ebd7ba46" version="1">Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!</content>
-	<!-- "" --> <content contentuid="hffd7ab2ag4c9fg41cfgad38g462fc47ae591" version="1">Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!</content>
-	<!-- "" --> <content contentuid="he0644ffdg77a8g4ba8gb7b2g86a39868bb86" version="1">Dawnmaster Vaseid is casting Flame Strike on the stairs!</content>
 	<!-- "" --> <content contentuid="h008939bcgc53cg4019gb712g771462126079" version="1">Cuckles</content>
-	<!-- "" --> <content contentuid="hbf7bbc37gde41g46a1gb53bg8ff3aed90b60" version="1">Lathander is empowering Dawnmaster Vaseid!</content>
-	<!-- "" --> <content contentuid="h0428c939g637eg4066ga658g6ae9c2ae103d" version="1">Unfortunately you don't recognize it.</content>
 
 	<!-- ==================================== Passives ==================================== -->
 
@@ -148,6 +143,13 @@
 	<!-- "MMM_OOFBUMBLE" --> <content contentuid="h349ec00fg53b4g4808ga5fege29d72db8f8e" version="1">Oof dropped his flask on himself, whoops.</content>
 	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="h51c78884g9b73g4870gbaa5g3669a7112fc1" version="1">Oof pulled his hamstring!</content>
 	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="hee83e74bg218cg40begb421g71fe847c17cf" version="1">Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.</content>
+
+	<!-- "MMM_LATHANDERSBLESSING" --> <content contentuid="h7d02862fg1f4eg47e7g9f43g6e32bd632763" version="1">Lathander's Blessing</content>
+	<!-- "MMM_LATHANDERSBLESSING" --> <content contentuid="h88d02f89g21c2g4b8cgba4egedbfe8fea673" version="1">Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.</content>
+	<!-- "MMM_DAWNMASTERGENERIC" --> <content contentuid="hbf7bbc37gde41g46a1gb53bg8ff3aed90b60" version="1">Lathander is empowering Dawnmaster Vaseid!</content>
+	<!-- "MMM_DAWNMASTERGENERIC" --> <content contentuid="h0428c939g637eg4066ga658g6ae9c2ae103d" version="1">Unfortunately you don't recognize it.</content>
+	<!-- "MMM_DAWNMASTERFLAMESTRIKE" --> <content contentuid="h086b5a23gb552g449eg8b81g5c26ebd7ba46" version="1">Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!</content>
+	<!-- "MMM_DAWNMASTERSUNBEAM" --> <content contentuid="hffd7ab2ag4c9fg41cfgad38g462fc47ae591" version="1">Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
@@ -190,6 +192,7 @@
 	<!-- "MMM_Shout_GRYMDEVASTATION" --> <content contentuid="hbbf58b0cg7be3g4140gac82g9807c584dbb3" version="1">If someone isn't within 20m of Grym he will destroy the forge, and everyone with it.</content>
 
 	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
+	<!-- "MMM_Target_FlameStrike_Lathander" --> <content contentuid="hae978ab4g7decg4519ga168ga38e1cbdc514" version="1">Lathander's Flame Strike</content>
 
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h5ec55e3cgc221g4386g92ecg1dd144725b64" version="1">Consume</content>
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h9c46b1c7g7221g43afg9115g26e57c25dc7f" version="1">Devours a corpse.</content>
@@ -212,8 +215,6 @@
 	<!-- "" --> <content contentuid="hf6f0a739g3f65g42e0g97aegc30401ca8f88" version="1">Vinly Desh</content>
 	<!-- "" --> <content contentuid="hac8f83cagb125g4b26g8157g67ff7113335d" version="1">Loves when you give her a hand</content>
 
-	<!-- "" --> <content contentuid="h7d02862fg1f4eg47e7g9f43g6e32bd632763" version="1">Lathander's Blessing</content>
-	<!-- "" --> <content contentuid="h88d02f89g21c2g4b8cgba4egedbfe8fea673" version="1">Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.</content>
 	<!-- "" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
 	<!-- "" --> <content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
 	<!-- "" --> <content contentuid="hd687428agad54g4f8fg87c4g96be185517d2" version="1">Now's our chance, let's break out of here!</content>
