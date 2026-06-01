@@ -189,15 +189,13 @@ data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
 // ==================================== Act 1 - Emerald Grove ====================================
 
-// TODO: Rework the clumsiness
+// TODO: He shouldn't throw Javelins, and "Shout_GOB_Ogre_Enrage" Polma's Wrath needs replacing.
 // Oof
 new entry "MMM_OGREREINFORCEMENT"
 type "Character"
 using "Ogre"
 // data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
 data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
-// data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules;MMM_OOFCLUMSY"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
 // Eagle

@@ -114,111 +114,118 @@ data "TooltipAttackSave" "MeleeSpellAttack"
 data "TooltipStatusApply" ""
 
 // ==================================== Act 1: Oof ====================================
+// TODO: TickType of endturn is best for a lot of these.
+// TODO: Have the mechanical status seperate from the overhead text for combat log clarity.
 
-// TODO:
-new entry "MMM_OOFCLUMSY"
-type "PassiveData" 
+new entry "MMM_OofClumsy"
+type "PassiveData"
+// Clumsy
 data "DisplayName" "h354cad17g0278g45d9g993dg673b5183ab96;1"
+// This ogre was born with two left everything, how is someone this clumsy?
 data "Description" "hb1b0340age5c3g4696ga0d7gdbe438a33fe8;1"
 data "Icon" "Status_Prone"
 
-// TODO:
-new entry "MMM_OOFSLIPPED"
-type "StatusData"
-data "StatusType" "KNOCKED_DOWN"
-using "PRONE"
-data "DisplayName" "hd4944a6bg7362g4af0g8411ga36d3e250148;1"
-data "Description" "h6cd48362g053dg47d7ga763g48feba5bea03;1"
-data "Icon" "Status_Prone"
-data "StillAnimationType" "KO_Fallen"
-data "StillAnimationPriority" "KO_Fallen"
-data "FormatColor" "White"
-data "RemoveConditions" ""
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog"
-data "RemoveEvents" "OnTurn"
-data "OnRemoveFunctors" "RemoveStatus(OOF_SLIPPED);IF(RemoveCause(StatusRemoveCause.Condition) and TurnBased(context.Source) and not HasPassive('Athlete_StandUp')):UseActionResource(Movement, 50%, 0, true);IF(RemoveCause(StatusRemoveCause.Condition) and TurnBased(context.Source) and HasPassive('Athlete_StandUp') and HasActionResource('Movement', 1.5, 0)):UseActionResource(Movement, 1.5, 0, true);IF(RemoveCause(StatusRemoveCause.Condition) and TurnBased(context.Source) and HasPassive('Athlete_StandUp') and not HasActionResource('Movement', 1.5, 0)):UseActionResource(Movement, 100%, 0, true);AI_ONLY:ApplyStatus(AI_HELPER_PRONE,100,2);"
-data "SplatterDirtAmount" "0.7"
-
-// TODO:
 new entry "MMM_OOFKLUTZ"
 type "StatusData"
 data "StatusType" "BOOST"
-data "Icon" "Status_Prone"
+// Such a Klutz!
 data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
+// Prone to messing everything up.
 data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
-data "StackId" "MMM_OOFKLUTZ"
-data "Passives" ""
+data "Icon" "statIcons_Confused"
 
-// TODO:
+new entry "MMM_OOFSLIPPED"
+type "StatusData"
+data "StatusType" "KNOCKED_DOWN"
+using "PRONE_FALLEN"
+// Prone
+// data "DisplayName" "hf436e702gfa14g45aagabaeg6fa3d54c1061;1"
+// Oof slipped!
+data "DisplayName" "hd4944a6bg7362g4af0g8411ga36d3e250148;1"
+// Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.
+data "ExtraDescription" "h6cd48362g053dg47d7ga763g48feba5bea03;1"
+// data "RemoveConditions" "(HasActionResource('Movement', 50, 0, true) and not HasPassive('Athlete_StandUp') and not HasPassive('LeapToYourFeet')) or (HasPassive('Athlete_StandUp') and HasActionResource('Movement', 1.5, 0)) or (HasActionResource('Movement', 1, 0, true) and HasPassive('Athlete_StandUp')) or (HasPassive('LeapToYourFeet') and HasActionResource('Movement', 1.5, 0)) or (HasActionResource('Movement', 1, 0, true) and HasPassive('LeapToYourFeet'))"
+data "RemoveConditions" ""
+// data "StatusPropertyFlags" "IgnoredByImmobilized;InitiateCombat"
+data "StatusPropertyFlags" "IgnoredByImmobilized;InitiateCombat;ForceOverhead"
+// data "SplatterDirtAmount" "0.2"
+data "SplatterDirtAmount" "0.7"
+// data "RemoveEvents" "OnTurn"
+data "RemoveEvents" "OnTurn"
+
 new entry "MMM_OOFSPLINTER"
 type "StatusData"
 data "StatusType" "BOOST"
+// Oof got a splinter!
 data "DisplayName" "hc812dd94g799bg4234gbc06g7a32e176f90f;1"
+// Oof got a splinter, inflicting &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.
 data "Description" "h9de451d8g0962g40b0g83fcg8e64ccd07345;1"
 data "Icon" "Action_DisarmingAttack_Melee"
 data "FormatColor" "White"
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "OnApplyFunctors" "DealDamage(1d4,Piercing);ApplyStatus(BLEEDING,100,2)"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+data "OnApplyFunctors" "DealDamage(1,Piercing);ApplyStatus(BLEEDING,100,2)"
+data "RemoveEvents" "OnTurn"
 
-// TODO:
 new entry "MMM_OOFDISARMED"
 type "StatusData"
 data "StatusType" "BOOST"
+using "DISARM"
+// Weapon Dropped!
+// data "DisplayName" "hef7a7279g3977g496bga1a5g24be3a434868;2"
+// Oof's weapon slipped out of his hands!
 data "DisplayName" "hf6062eeegce12g4f15gaff8g698a47f35a2f;1"
+// An enemy has made you drop your weapon to the ground.
+// data "Description" "ha50fbaf7g046bg4255g8adegeb7ea837cc46;2"
+// Oof dropped his weapon mid-battle, how embarassing.
 data "Description" "hd1b30279gb513g4bbaga881g5725bfd1efe1;1"
+// data "Icon" "Action_DisarmingAttack_Melee"
 data "Icon" "statIcons_Disarmed"
+// data "FormatColor" "Orange"
 data "FormatColor" "White"
-data "StackId" "DISARMED"
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "OnApplyFunctors" "DisarmWeapon()"
+data "RemoveEvents" "OnTurn"
 
-// TODO:
 new entry "MMM_OOFDRUNK"
 type "StatusData"
 data "StatusType" "BOOST"
+using "DRUNK"
+// Drunk
+// data "DisplayName" "h71a6dc3eg2596g4f90ga237g9627401f33c9;1"
+// Oof drank alcohol instead of a potion!
 data "DisplayName" "h3aee92fcg4fd8g4062g8537gf4e0a778a315;1"
+// Has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on Dexterity and Charisma &lt;LSTag Tooltip="AbilityCheck"&gt;Checks&lt;/LSTag&gt;.
+// data "Description" "h5fd7c8b8ga49bg421ag813egfd154778f5ff;4"
+// Oof gave himself a buzz, inflicting &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; for 1 turn.
 data "Description" "h9cc843b9g9959g4316ga007g6c655f48577e;1"
-data "Icon" "Status_Drunk"
-data "FormatColor" "White"
-data "StillAnimationType" "Dazed"
-data "StillAnimationPriority" "Dazed"
-data "SoundVocalStart" "WEAK"
-data "SoundLoop" "Misc_Status_Drunk_MO"
-data "SoundStop" "Misc_Status_Drunk_MO_Stop"
-data "StackId" "DRUNK"
-data "Boosts" "Disadvantage(Ability, Dexterity);Disadvantage(Ability, Charisma)"
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "StatusGroups" "SG_Drunk"
-data "StatusEffect" "79eb91f2-1a1f-4749-87e3-a0cafc1f4ef6"
-data "OnApplyFunctors" "DealDamage(1d4,Piercing);ApplyStatus(CONFUSION,100,3)"
+// data "StatusPropertyFlags" "DisableCombatlog"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+data "OnApplyFunctors" "ApplyStatus(CONFUSION,100,1)"
+data "RemoveEvents" "OnTurn"
 
-// TODO:
 new entry "MMM_OOFBUMBLE"
 type "StatusData"
-data "StatusType" "BOOST" 
+data "StatusType" "BOOST"
+// Oof bumbled the flask he was going to throw!
 data "DisplayName" "h5eacd23ag8d89g45dcg807egfab6a9dd5855;1"
+// Oof dropped his flask on himself, whoops.
 data "Description" "h349ec00fg53b4g4808ga5fege29d72db8f8e;1"
 data "Icon" "Item_GRN_FireFlask_A"
 data "FormatColor" "White"
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 
-// TODO:
 new entry "MMM_OOFHAMSTRING"
 type "StatusData"
 data "StatusType" "BOOST"
+using "HAMSTRING"
+// Hamstrung
+// data "DisplayName" "h9f5f8be7gc48ag4a08ga112gd162bc57e986;2"
+// Oof pulled his hamstring!
 data "DisplayName" "h51c78884g9b73g4870gbaa5g3669a7112fc1;1"
+// &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.
+// data "Description" "h38a7184bg3f6fg4d51gbc98gc18deef89d73;2"
+// Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.
 data "Description" "hee83e74bg218cg40begb421g71fe847c17cf;1"
-data "Icon" "statIcons_Hamstring"
 data "FormatColor" "White"
-data "StillAnimationType" "Weakened"
-data "StillAnimationPriority" "Weakened"
-data "StackId" "HAMSTRING"
-data "Boosts" "ActionResourceMultiplier(Movement,50,0)"
-data "RemoveEvents" "OnHeal"
-data "StatusGroups" "SG_Restrained;SG_Condition"
-data "StatusPropertyFlags" "ForceOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "ManagedStatusEffectType" "Negative"
-data "ManagedStatusEffectGroup" "d787f666-8ee6-4185-9365-6aac9ebe76ae"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 
 // ==================================== Act 1: Bridge Troll ====================================
 

@@ -61,7 +61,6 @@
 	<!-- "" --> <content contentuid="h059641d9gc1b5g4a29g9033g892f3f93beab" version="1">Bobb</content>
 	<!-- "" --> <content contentuid="h1846063dg1fa5g4593g8b9bg8a5399b899b8" version="1">Theo</content>
 	<!-- "" --> <content contentuid="h70d13177gafbdg435eg8553g5e30ca041943" version="1">Freyja</content>
-	<!-- "" --> <content contentuid="h05b93046g12dfg4ef6gadd6g3e0ed4695ece" version="1">Trigger Point</content>
 	<!-- "" --> <content contentuid="hfb8f70ffgf926g4761gba34g3ac8c82ab770" version="1">Slevnir</content>
 	<!-- "" --> <content contentuid="h61eceae9g8911g4270ga3e6g5569b608eaaa" version="1">Irkse</content>
 	<!-- "" --> <content contentuid="h35cbf4fcga160g4bf3gbe77gb6eac3c7d77e" version="1">Coekk</content>
@@ -84,22 +83,6 @@
 	<!-- "" --> <content contentuid="he218540dgdc86g4809gb6fcgbda109da2c4f" version="1">Bulette Detection Aura 2</content>
 	<!-- "" --> <content contentuid="h0536dc65gdcebg45d7ga429gca3001708104" version="1">Bulette Trigger Aura 2</content>
 	<!-- "" --> <content contentuid="h44760295ge57cg406fg823dg26e23a428262" version="1">Mega Mimic</content>
-	<!-- "" --> <content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
-	<!-- "" --> <content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom.</content>
-	<!-- "" --> <content contentuid="h354cad17g0278g45d9g993dg673b5183ab96" version="1">Clumsy</content>
-	<!-- "" --> <content contentuid="hb1b0340age5c3g4696ga0d7gdbe438a33fe8" version="1">This ogre was born with two left everything, how is someone this clumsy?</content>
-	<!-- "" --> <content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
-	<!-- "" --> <content contentuid="h9de451d8g0962g40b0g83fcg8e64ccd07345" version="1">Oof got a splinter from his weapon.</content>
-	<!-- "" --> <content contentuid="hf6062eeegce12g4f15gaff8g698a47f35a2f" version="1">Oof's weapon slipped out of his hands!</content>
-	<!-- "" --> <content contentuid="hd1b30279gb513g4bbaga881g5725bfd1efe1" version="1">Oof dropped his weapon mid-battle, how embarassing.</content>
-	<!-- "" --> <content contentuid="h3aee92fcg4fd8g4062g8537gf4e0a778a315" version="1">Oof drank alcohol instead of a potion!</content>
-	<!-- "" --> <content contentuid="h9cc843b9g9959g4316ga007g6c655f48577e" version="1">Oof gave himself a buzz.</content>
-	<!-- "" --> <content contentuid="h5eacd23ag8d89g45dcg807egfab6a9dd5855" version="1">Oof bumbled the flask he was going to throw!</content>
-	<!-- "" --> <content contentuid="h349ec00fg53b4g4808ga5fege29d72db8f8e" version="1">Oof dropped his flask on himself, whoops.</content>
-	<!-- "" --> <content contentuid="h51c78884g9b73g4870gbaa5g3669a7112fc1" version="1">Oof pulled his hamstring!</content>
-	<!-- "" --> <content contentuid="hee83e74bg218cg40begb421g71fe847c17cf" version="1">Oof must have skipped leg day.</content>
-	<!-- "" --> <content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such A Klutz!</content>
-	<!-- "" --> <content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up.</content>
 	<!-- "" --> <content contentuid="h8c1fd0bega97ag4c3fg9fa3ge6074fa1131d" version="1">HP Randomized</content>
 	<!-- "" --> <content contentuid="he2ab4b79g7d6dg47e1gb6ebg6b66a07aa988" version="1">Spirits Of The Forge</content>
 	<!-- "" --> <content contentuid="h01b9fb09ga722g4b21g8e51g165abd13c625" version="1">Desecrating this may anger the spirits.</content>
@@ -143,11 +126,36 @@
 
 	<!-- ==================================== Passives ==================================== -->
 
+	<!-- "MMM_OofClumsy" --> <content contentuid="h354cad17g0278g45d9g993dg673b5183ab96" version="1">Clumsy</content>
+	<!-- "MMM_OofClumsy" --> <content contentuid="hb1b0340age5c3g4696ga0d7gdbe438a33fe8" version="1">This ogre was born with two left everything, how is someone this clumsy?</content>
+
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.</content>
 
 	<!-- ==================================== Statuses ==================================== -->
 	
+	<!-- "MMM_OOFKLUTZ" --> <content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
+	<!-- "MMM_OOFKLUTZ" --> <content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up.</content>
+	<!-- "MMM_OOFSLIPPED" --> <content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
+	<!-- "MMM_OOFSLIPPED" --> <content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.</content>
+	<!-- "MMM_OOFSPLINTER" --> <content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
+	<!-- "MMM_OOFSPLINTER" --> <content contentuid="h9de451d8g0962g40b0g83fcg8e64ccd07345" version="1">Oof got a splinter, inflicting &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.</content>
+	<!-- "MMM_OOFDISARMED" --> <content contentuid="hf6062eeegce12g4f15gaff8g698a47f35a2f" version="1">Oof's weapon slipped out of his hands!</content>
+	<!-- "MMM_OOFDISARMED" --> <content contentuid="hd1b30279gb513g4bbaga881g5725bfd1efe1" version="1">Oof dropped his weapon mid-battle, how embarassing.</content>
+	<!-- "MMM_OOFDRUNK" --> <content contentuid="h3aee92fcg4fd8g4062g8537gf4e0a778a315" version="1">Oof drank alcohol instead of a potion!</content>
+	<!-- "MMM_OOFDRUNK" --> <content contentuid="h9cc843b9g9959g4316ga007g6c655f48577e" version="1">Oof gave himself a buzz, inflicting &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; for 1 turn.</content>
+	<!-- "MMM_OOFBUMBLE" --> <content contentuid="h5eacd23ag8d89g45dcg807egfab6a9dd5855" version="1">Oof bumbled the flask he was going to throw!</content>
+	<!-- "MMM_OOFBUMBLE" --> <content contentuid="h349ec00fg53b4g4808ga5fege29d72db8f8e" version="1">Oof dropped his flask on himself, whoops.</content>
+	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="h51c78884g9b73g4870gbaa5g3669a7112fc1" version="1">Oof pulled his hamstring!</content>
+	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="hee83e74bg218cg40begb421g71fe847c17cf" version="1">Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.</content>
+
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+
 	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
 	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
 
@@ -321,6 +329,8 @@
 
 	<!-- ==================================== Utility ==================================== -->
 
+	<!-- "" --> <content contentuid="h05b93046g12dfg4ef6gadd6g3e0ed4695ece" version="1">Trigger Point</content>
+	
 	<!-- "MMM_DETECTION_AURA_TEMPLATE" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
 	<!-- "MMM_DETECTION_TEMPLATE" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Condition</content>
 
