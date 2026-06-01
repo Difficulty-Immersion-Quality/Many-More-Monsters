@@ -70,22 +70,3 @@ data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not Ha
 data "RemoveEvents" "OnTurn"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
-
-new entry "MMM_SHADOW_CURSE_UNDEAD"
-type "StatusData"
-data "StatusType" "BOOST"
-// Shadow-Cursed Undead
-data "DisplayName" "h5bb2c482gac30g42d1ga586ge1ec51ecd63b;5"
-// Those who die in the shadows are cursed to remain there forever.<br><br>These undead have reduced hit points and <LSTag Tooltip="Strength">Strength</LSTag>, are <LSTag Tooltip="Vulnerable">Vulnerable</LSTag> to Radiant damage, have <LSTag Tooltip="Resistant">Resistance</LSTag> to Necrotic damage, and cannot use spells or weapon actions.
-data "Description" "h5ea5b875g69e7g4542gad2fg0a672c3dfaf8;12"
-data "Icon" "GenericIcon_DamageType_Necrotic"
-data "StillAnimationType" "Weakened"
-data "StillAnimationPriority" "Weakened"
-data "SoundVocalStart" "GASP"
-data "StackId" "MMM_SHADOW_CURSE_UNDEAD"
-data "StackType" "Ignore"
-data "Boosts" "BlockTravel()"
-data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
-data "RemoveEvents" "OnTurn"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"

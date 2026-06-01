@@ -538,6 +538,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Plouf -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />

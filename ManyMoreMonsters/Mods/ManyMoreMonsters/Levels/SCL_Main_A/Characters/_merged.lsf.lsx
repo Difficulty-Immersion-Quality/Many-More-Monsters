@@ -1834,6 +1834,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Balthazar -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="45a231e4-e94f-4b0e-a941-2daf1adf44b5" />
 					<attribute id="AnubisConfigName" type="FixedString" value="SHA_Necromancer_Chosen_Act2" />
@@ -1941,6 +1942,7 @@
 						</node>
 					</children>
 				</node>
+				<!-- Damon Eyesz -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3907,6 +3909,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Balthazar -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="45a231e4-e94f-4b0e-a941-2daf1adf44b5" />
 					<attribute id="AnubisConfigName" type="FixedString" value="SHA_Necromancer_Chosen_Act2" />
@@ -4014,6 +4017,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Necrofex -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="deathShepherd" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="45154e42-cf21-9053-df13-bd4476ede627" />
@@ -4087,7 +4091,8 @@
 						</node>
 					</children>
 				</node>
-			<!-- Spider King? -->
+		<!-- Spider King? -->
+			<!-- Plouf? -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="mage" />
@@ -4158,6 +4163,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4336,6 +4342,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4514,6 +4521,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4692,6 +4700,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />

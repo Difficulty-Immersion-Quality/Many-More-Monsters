@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<!-- TODO: Sort the loca -->
-	<!-- ==================================== Characters ==================================== -->
+	<!-- ==================================== Character templates ==================================== -->
+
+	<!-- "14abb173-f375-4dfd-96e2-afc6e7cba83f" --> <content contentuid="h362c9575g4b53g457cg90e5gb8b3a92e1d6b" version="1">Plouf</content>
 
 	<!-- "" --> <content contentuid="heee2a587g8d7dg486eg8235gde707f5b95fa" version="1">Lost Intellect Devourer</content>
 	<!-- "" --> <content contentuid="hf39848bdg7e6dg4671gac69g026bf3c524f0" version="1">Kuo-toa</content>
@@ -119,6 +121,85 @@
 	<!-- "" --> <content contentuid="hec731007gbcbdg4538g8505g899c7cb35e61" version="1">Spirit of Dawnmaster Vaseid</content>
 	<!-- "" --> <content contentuid="h008939bcgc53cg4019gb712g771462126079" version="1">Cuckles</content>
 
+	<!-- "" --> <content contentuid="hf6f0a739g3f65g42e0g97aegc30401ca8f88" version="1">Vinly Desh</content>
+	<!-- "" --> <content contentuid="hac8f83cagb125g4b26g8157g67ff7113335d" version="1">Loves when you give her a hand</content>
+
+	<!-- "" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
+	<!-- "" --> <content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
+	<!-- "" --> <content contentuid="hd687428agad54g4f8fg87c4g96be185517d2" version="1">Now's our chance, let's break out of here!</content>
+	<!-- "" --> <content contentuid="h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe" version="1">Variable HP</content>
+	<!-- "" --> <content contentuid="he739c904g40f3g45b3g9d55g9c071d5a7414" version="1">Shadow-Cursed Githyanki</content>
+	<!-- "" --> <content contentuid="h053087f7g094ag46a8ga247gb924a10abbc0" version="1">Shadow-Cursed Family</content>
+	<!-- "" --> <content contentuid="ha1c633f6gccc7g41b2ga24eg312c2ff133ae" version="1">Shadow-Cursed Toilet Guy</content>
+	<!-- "" --> <content contentuid="hffacf774g2884g4191gbb7fg6a39cd2fbc20" version="1">Restless Druid</content>
+	<!-- "" --> <content contentuid="ha19c305bge042g4d17g845eg721c914dba4f" version="1">Restless Harper</content>
+	<!-- "" --> <content contentuid="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1">Destroying this tombstone will anger the spirits of the forge.&lt;br&gt;&lt;br&gt;Turns on Grym anti-cheese mode/hard mode. Killing Grym in this mode rewards you with a pet.&lt;br&gt;&lt;br&gt;The ghosts are supposed to be unkillable and die with Grym.</content>
+	<!-- "" --> <content contentuid="hf338ba8cge707g4f98g9144gd88cea4c5ba2" version="1">Summons Grym Model-N.  Not consumed on use.</content>
+	<!-- "" --> <content contentuid="h7cdde728gdeb1g4054g8162g318d1ae486d2" version="1">Shadow-Cursed Druid</content>
+	<!-- "" --> <content contentuid="hfaa209c9g9f5fg405eg8f7fg3b4db06a33ec" version="1">Shadow-Cursed Harper</content>
+	<!-- "" --> <content contentuid="h66abd1cag0a0eg412bg8babg70d4b7d8580a" version="1">Shadow-Infused Undead</content>
+	<!-- "" --> <content contentuid="he382272ag1f07g482agb5b5gec7c480a231b" version="1">Something has caused this shadow-cursed being to infuse itself with the shadows.</content>
+	<!-- "" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
+	<!-- "" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
+	<!-- "" --> <content contentuid="h9db59951gef15g4775gab79g709bcbb11853" version="1">Shadow-Infused Villager</content>
+	<!-- "" --> <content contentuid="h1edac836ge5f1g486ega20fg2b507a35d172" version="1">Damon Eyesz</content>
+	<!-- "" --> <content contentuid="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1">Rekin Ky</content>
+	<!-- "" --> <content contentuid="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1">Edin Mesic</content>
+	<!-- "" --> <content contentuid="h94b840a3ge66bg43b4g9425g829862494871" version="1">Farsee Yer</content>
+	<!-- "" --> <content contentuid="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1">Harry Ispup</content>
+	<!-- "" --> <content contentuid="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1">Shadow-Cursed Squirrel</content>
+	<!-- "" --> <content contentuid="h6fac55bag750ag499dg905fgc8c572ae9f53" version="1">Andi</content>
+	<!-- "" --> <content contentuid="h664cccc3gfba2g4429g8c58g7a1bf26442db" version="1">Andi</content>
+	<!-- "" --> <content contentuid="h823e08b8g8aafg4b45g8355gb895940b69e8" version="1">Child-like Wraith</content>
+	<!-- "" --> <content contentuid="ha7a913e7gc032g4447g9bd0g8fe86d05e35f" version="1">"Mummy and daddy don't want to play anymore.  Will you play with me?"</content>
+	<!-- "" --> <content contentuid="h34f45e52g9749g49dcga687gd3453b84bf50" version="1">N'saneh Att'er</content>
+	<!-- "" --> <content contentuid="h2a441d62g531dg4f77gbe74g4276f6c10ff1" version="1">Shadar-Kai Soul Monger</content>
+	<!-- "" --> <content contentuid="h7eef141dg05fcg4d67g912bg09f4a00023a6" version="1">Shadar-Kai</content>
+	<!-- "" --> <content contentuid="h3492997eg8e6dg451fgbf63ge648a314a75c" version="1">Shadar-Kai Shadow Dancer</content>
+	<!-- "" --> <content contentuid="h9fead00egb816g434fgb388g36099f42147e" version="1">Shadar-Kai</content>
+	<!-- "" --> <content contentuid="h4d4c3c52g6e35g43aag88feg883819b115a0" version="1">Shadar-kai Gloom Weaver</content>
+	<!-- "" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie May</content>
+	<!-- "" --> <content contentuid="hcf6746ebgef55g4a1ag928egc72846acf335" version="1">"Thank you so much for returning my beloved ring."</content>
+	<!-- "" --> <content contentuid="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1">Wooden Chest With A Hole Gnawed In The Corner</content>
+	<!-- "" --> <content contentuid="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1">Necrofex</content>
+	<!-- "" --> <content contentuid="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1">The Spider King?</content>
+	<!-- "" --> <content contentuid="hd0841a90gf7bag49b8g8102gbbea903357d3" version="1">"Come to my aid spiders!"</content>
+	<!-- "" --> <content contentuid="h54c22bb7g65ffg4003gaa94g4f4c0a472280" version="1">"Yes... YES!  Come, eat the interlopers!</content>
+	<!-- "" --> <content contentuid="h399fcc06g1770g4184g8e29g9cf028d95946" version="1">The Spider King</content>
+	<!-- "" --> <content contentuid="hb90411f4g08beg467dg8825g77b572340d90" version="1">Summon Juvenile Dragon</content>
+	<!-- "" --> <content contentuid="hc88d706ag5390g41f9gbfe6gdc17d182da71" version="1">Breaking this tombstone will summon the juvenile red dragon with the bridge githyanki.&lt;br&gt;&lt;br&gt;Save before breaking this, no takebacksies.&lt;br&gt;&lt;br&gt;This gravestone is just a placeholder to get the event working that I can customize later.</content>
+	<!-- "" --> <content contentuid="hbfcaecabgd2e8g468dgb8b3g0f76ecea19ad" version="1">Hidden</content>
+	<!-- "" --> <content contentuid="h36bab53ag8b42g4033ga00bgb7b6ec8b7d53" version="1">"You can't keep the ultimate hero down!"</content>
+	<!-- "" --> <content contentuid="h8f985dd4g9e9dg4b05gb09dgdb9fb5cd776c" version="1">"Be kind to yourself... and me!"</content>
+	<!-- "" --> <content contentuid="hf3f93890g09d8g4335g8e90gd830786c6bc7" version="1">"Team Trajectile blasting off!"</content>
+	<!-- "" --> <content contentuid="h729ee576g4c45g49a9g93deg3f8770c64a99" version="1">"Hey fellas I found the hole!"</content>
+	<!-- "" --> <content contentuid="h2da6da02gfe2eg4868gb8b5g1cbaf952e430" version="1">"Time to show you the Ultimate Hero!"</content>
+	<!-- "" --> <content contentuid="hfccde3b3g7b1ag4386g98b9g76b9750aca6e" version="1">Hill Giant</content>
+	<!-- "" --> <content contentuid="h3e111ef0ga66dg4e35g8456g31749b1dc3f8" version="1">"ME WANT MORE CHICKEN!"</content>
+	<!-- "" --> <content contentuid="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1">Team Trajectile</content>
+	<!-- "" --> <content contentuid="h9319d7c9g2adfg4df9g81f5g50e327fa3b2d" version="1">Hookshot</content>
+	<!-- "" --> <content contentuid="h4676e885g96d0g4556g98d3ge88d8726ebf1" version="1">Book of Demonic Ecstasy</content>
+	<!-- "" --> <content contentuid="h5705dcf9gd6b9g4277g92f6g783809657858" version="1">ሃዐ፱ ሠⶴዐ ዪቹልጋነ ፕⶴጎነ ነ፱ጮጮዐክነ ፱የዐክ ሃዐ፱ ፕⶴቹ ጎክነልፕጎል፪ረቹ ፕⶴጎዪነፕ ዐቻ ፕⶴቹ ርረዐጎነፕቹዪ ዐቻ ⶴዐዪክሃ ⶴቹረረ ፕዐ ቹሸፕዪልርፕ ቻዪዐጮ ሃዐ፱ ልረረ ሃዐ፱ዪ ረ፱ነፕ.</content>
+	<!-- "" --> <content contentuid="ha03d2997geeedg4348g87b9g3f8b6f695515" version="1">Raunchy Succubus</content>
+	<!-- "" --> <content contentuid="h6bd23a61gb09fg447eg9631g2453c101ad63" version="1">Randy Incubus</content>
+	<!-- "" --> <content contentuid="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1">Molly Molly Molly</content>
+	<!-- "" --> <content contentuid="hd60d014eg3cf4g4c79g93c6g0932f99fb837" version="1">"Just grab the treasure, idiots!"</content>
+	<!-- "" --> <content contentuid="h09738964g7614g4ab2ga782g4986f2888937" version="1">"Alright I'm out you dummies!"</content>
+	<!-- "" --> <content contentuid="hcd6730cage385g4d93gb878gb14f555604a9" version="1">"Hey it's those guys again!"</content>
+	<!-- "" --> <content contentuid="h90e4e0a2g2504g46f2g930eg45bc908911a4" version="1">"Quick, use the artifact we found!"</content>
+	<!-- "" --> <content contentuid="h4eee7168g6dd2g4bfcgbd87g369b54c5e339" version="1">"They're winning, let's get out of here!"</content>
+	<!-- "" --> <content contentuid="h18b068aege3a3g42e7ga1a5gb506a2c348f5" version="1">Blast Off!</content>
+	<!-- "" --> <content contentuid="h15c18905g5b11g4ffdg813ag17e638fbb895" version="1">"We accidentally teleported into jail, help us out!"</content>
+	<!-- "" --> <content contentuid="he4a0c841gdd48g425agb055g895786911505" version="1">"We owe you one!</content>
+	<!-- "" --> <content contentuid="h35bf502eg1c6bg4f3bg8273g8824caddadc1" version="1">"...wait for Wiggles!!!"</content>
+	<!-- "" --> <content contentuid="hdeb59186gf202g4468gac92gf1542bae1d28" version="1">Team Trajectile is making good on their debt to you for freeing them.&lt;br&gt;&lt;br&gt;Speak to each member with the player that wants to control them.</content>
+
+	<!-- ==================================== Local characters ==================================== -->
+
+	<!-- "MMM_RIVINGTONPATROL" --> <content contentuid="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1">Githyanki Patrol</content>
+
+	<!-- "0683b560-c29e-4a0b-b15f-f02703d3e219" --> <content contentuid="h0a15fdf0ge1b7g4badga0cbg882e4c7835df" version="1">Plouf?</content>
+
 	<!-- ==================================== Passives ==================================== -->
 
 	<!-- "MMM_OofClumsy" --> <content contentuid="h354cad17g0278g45d9g993dg673b5183ab96" version="1">Clumsy</content>
@@ -160,6 +241,8 @@
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
+
+	<!-- ==================================== Statuses - Unimplemented -->
 
 	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
 	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
@@ -206,104 +289,17 @@
 	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN" --> <content contentuid="habe82285g651cg46a0ga97ag3146cba4bcc1" version="1">Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.</content>
 	<!-- "MMM_BLESSINGOFRAVENQUEEN" --> <content contentuid="h60bb1d22gcaceg4656g9a29gd2540ffd8711" version="1">Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.</content>
 
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-
 	<!-- ==================================== Objects ==================================== -->
 
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
 
 	<!-- ==================================== Objects - Unimplemented -->
 
 	<!-- "" --> <content contentuid="hf92908ebg7806g4beaga597gbc1fc182a71e" version="1">Oof's War Horn</content>
 	<!-- "" --> <content contentuid="h947c88d8gd694g41f8ga38bgf97af1f1b6a9" version="1">A war horn belonging to Oof.</content>
 	<!-- "" --> <content contentuid="h9ee969b5g277fg44a6g9ebbg203f892a5cdc" version="1">Sound this horn to call Oof as reinforcement.</content>
-
-	<!-- "" --> <content contentuid="hf6f0a739g3f65g42e0g97aegc30401ca8f88" version="1">Vinly Desh</content>
-	<!-- "" --> <content contentuid="hac8f83cagb125g4b26g8157g67ff7113335d" version="1">Loves when you give her a hand</content>
-
-	<!-- "" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
-	<!-- "" --> <content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
-	<!-- "" --> <content contentuid="hd687428agad54g4f8fg87c4g96be185517d2" version="1">Now's our chance, let's break out of here!</content>
-	<!-- "" --> <content contentuid="h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe" version="1">Variable HP</content>
-	<!-- "" --> <content contentuid="he739c904g40f3g45b3g9d55g9c071d5a7414" version="1">Shadow-Cursed Githyanki</content>
-	<!-- "" --> <content contentuid="h053087f7g094ag46a8ga247gb924a10abbc0" version="1">Shadow-Cursed Family</content>
-	<!-- "" --> <content contentuid="ha1c633f6gccc7g41b2ga24eg312c2ff133ae" version="1">Shadow-Cursed Toilet Guy</content>
-	<!-- "" --> <content contentuid="hffacf774g2884g4191gbb7fg6a39cd2fbc20" version="1">Restless Druid</content>
-	<!-- "" --> <content contentuid="ha19c305bge042g4d17g845eg721c914dba4f" version="1">Restless Harper</content>
-	<!-- "" --> <content contentuid="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1">Destroying this tombstone will anger the spirits of the forge.
-
-	Turns on Grym anti-cheese mode/hard mode. Killing Grym in this mode rewards you with a pet.
-	
-	The ghosts are supposed to be unkillable and die with Grym.</content>
-	<!-- "" --> <content contentuid="hf338ba8cge707g4f98g9144gd88cea4c5ba2" version="1">Summons Grym Model-N.  Not consumed on use.</content>
-	<!-- "" --> <content contentuid="h7cdde728gdeb1g4054g8162g318d1ae486d2" version="1">Shadow-Cursed Druid</content>
-	<!-- "" --> <content contentuid="hfaa209c9g9f5fg405eg8f7fg3b4db06a33ec" version="1">Shadow-Cursed Harper</content>
-	<!-- "" --> <content contentuid="h66abd1cag0a0eg412bg8babg70d4b7d8580a" version="1">Shadow-Infused Undead</content>
-	<!-- "" --> <content contentuid="he382272ag1f07g482agb5b5gec7c480a231b" version="1">Something has caused this shadow-cursed being to infuse itself with the shadows.</content>
-	<!-- "" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
-	<!-- "" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
-	<!-- "" --> <content contentuid="h9db59951gef15g4775gab79g709bcbb11853" version="1">Shadow-Infused Villager</content>
-	<!-- "" --> <content contentuid="h1edac836ge5f1g486ega20fg2b507a35d172" version="1">Damon Eyesz</content>
-	<!-- "" --> <content contentuid="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1">Rekin Ky</content>
-	<!-- "" --> <content contentuid="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1">Edin Mesic</content>
-	<!-- "" --> <content contentuid="h94b840a3ge66bg43b4g9425g829862494871" version="1">Farsee Yer</content>
-	<!-- "" --> <content contentuid="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1">Harry Ispup</content>
-	<!-- "" --> <content contentuid="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1">Shadow-Cursed Squirrel</content>
-	<!-- "" --> <content contentuid="h6fac55bag750ag499dg905fgc8c572ae9f53" version="1">Andi</content>
-	<!-- "" --> <content contentuid="h664cccc3gfba2g4429g8c58g7a1bf26442db" version="1">Andi</content>
-	<!-- "" --> <content contentuid="h823e08b8g8aafg4b45g8355gb895940b69e8" version="1">Child-like Wraith</content>
-	<!-- "" --> <content contentuid="ha7a913e7gc032g4447g9bd0g8fe86d05e35f" version="1">"Mummy and daddy don't want to play anymore.  Will you play with me?"</content>
-	<!-- "" --> <content contentuid="h34f45e52g9749g49dcga687gd3453b84bf50" version="1">N'saneh Att'er</content>
-	<!-- "" --> <content contentuid="h2a441d62g531dg4f77gbe74g4276f6c10ff1" version="1">Shadar-Kai Soul Monger</content>
-	<!-- "" --> <content contentuid="h7eef141dg05fcg4d67g912bg09f4a00023a6" version="1">Shadar-Kai</content>
-	<!-- "" --> <content contentuid="h3492997eg8e6dg451fgbf63ge648a314a75c" version="1">Shadar-Kai Shadow Dancer</content>
-	<!-- "" --> <content contentuid="h9fead00egb816g434fgb388g36099f42147e" version="1">Shadar-Kai</content>
-	<!-- "" --> <content contentuid="h4d4c3c52g6e35g43aag88feg883819b115a0" version="1">Shadar-kai Gloom Weaver</content>
-	<!-- "" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie May</content>
-	<!-- "" --> <content contentuid="hcf6746ebgef55g4a1ag928egc72846acf335" version="1">"Thank you so much for returning my beloved ring."</content>
-	<!-- "" --> <content contentuid="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1">Wooden Chest With A Hole Gnawed In The Corner</content>
-	<!-- "" --> <content contentuid="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1">Necrofex</content>
-	<!-- "" --> <content contentuid="h0a15fdf0ge1b7g4badga0cbg882e4c7835df" version="1">Plouf?</content>
-	<!-- "" --> <content contentuid="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1">The Spider King?</content>
-	<!-- "" --> <content contentuid="hd0841a90gf7bag49b8g8102gbbea903357d3" version="1">"Come to my aid spiders!"</content>
-	<!-- "" --> <content contentuid="h54c22bb7g65ffg4003gaa94g4f4c0a472280" version="1">"Yes... YES!  Come, eat the interlopers!</content>
-	<!-- "" --> <content contentuid="h362c9575g4b53g457cg90e5gb8b3a92e1d6b" version="1">Plouf</content>
-	<!-- "" --> <content contentuid="h399fcc06g1770g4184g8e29g9cf028d95946" version="1">The Spider King</content>
-	<!-- "" --> <content contentuid="hb90411f4g08beg467dg8825g77b572340d90" version="1">Summon Juvenile Dragon</content>
-	<!-- "" --> <content contentuid="hc88d706ag5390g41f9gbfe6gdc17d182da71" version="1">Breaking this tombstone will summon the juvenile red dragon with the bridge githyanki.
-	
-	Save before breaking this, no takebacksies.
-	
-	This gravestone is just a placeholder to get the event working that I can customize later.</content>
-	<!-- "" --> <content contentuid="hbfcaecabgd2e8g468dgb8b3g0f76ecea19ad" version="1">Hidden</content>
-	<!-- "" --> <content contentuid="h36bab53ag8b42g4033ga00bgb7b6ec8b7d53" version="1">"You can't keep the ultimate hero down!"</content>
-	<!-- "" --> <content contentuid="h8f985dd4g9e9dg4b05gb09dgdb9fb5cd776c" version="1">"Be kind to yourself... and me!"</content>
-	<!-- "" --> <content contentuid="hf3f93890g09d8g4335g8e90gd830786c6bc7" version="1">"Team Trajectile blasting off!"</content>
-	<!-- "" --> <content contentuid="h729ee576g4c45g49a9g93deg3f8770c64a99" version="1">"Hey fellas I found the hole!"</content>
-	<!-- "" --> <content contentuid="h2da6da02gfe2eg4868gb8b5g1cbaf952e430" version="1">"Time to show you the Ultimate Hero!"</content>
-	<!-- "" --> <content contentuid="hfccde3b3g7b1ag4386g98b9g76b9750aca6e" version="1">Hill Giant</content>
-	<!-- "" --> <content contentuid="h3e111ef0ga66dg4e35g8456g31749b1dc3f8" version="1">"ME WANT MORE CHICKEN!"</content>
-	<!-- "" --> <content contentuid="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1">Team Trajectile</content>
-	<!-- "" --> <content contentuid="h9319d7c9g2adfg4df9g81f5g50e327fa3b2d" version="1">Hookshot</content>
-	<!-- "" --> <content contentuid="h4676e885g96d0g4556g98d3ge88d8726ebf1" version="1">Book of Demonic Ecstasy</content>
-	<!-- "" --> <content contentuid="h5705dcf9gd6b9g4277g92f6g783809657858" version="1">ሃዐ፱ ሠⶴዐ ዪቹልጋነ ፕⶴጎነ ነ፱ጮጮዐክነ ፱የዐክ ሃዐ፱ ፕⶴቹ ጎክነልፕጎል፪ረቹ ፕⶴጎዪነፕ ዐቻ ፕⶴቹ ርረዐጎነፕቹዪ ዐቻ ⶴዐዪክሃ ⶴቹረረ ፕዐ ቹሸፕዪልርፕ ቻዪዐጮ ሃዐ፱ ልረረ ሃዐ፱ዪ ረ፱ነፕ.</content>
-	<!-- "" --> <content contentuid="ha03d2997geeedg4348g87b9g3f8b6f695515" version="1">Raunchy Succubus</content>
-	<!-- "" --> <content contentuid="h6bd23a61gb09fg447eg9631g2453c101ad63" version="1">Randy Incubus</content>
-	<!-- "" --> <content contentuid="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1">Molly Molly Molly</content>
-	<!-- "" --> <content contentuid="hd60d014eg3cf4g4c79g93c6g0932f99fb837" version="1">"Just grab the treasure, idiots!"</content>
-	<!-- "" --> <content contentuid="h09738964g7614g4ab2ga782g4986f2888937" version="1">"Alright I'm out you dummies!"</content>
-	<!-- "" --> <content contentuid="hcd6730cage385g4d93gb878gb14f555604a9" version="1">"Hey it's those guys again!"</content>
-	<!-- "" --> <content contentuid="h90e4e0a2g2504g46f2g930eg45bc908911a4" version="1">"Quick, use the artifact we found!"</content>
-	<!-- "" --> <content contentuid="h4eee7168g6dd2g4bfcgbd87g369b54c5e339" version="1">"They're winning, let's get out of here!"</content>
-	<!-- "" --> <content contentuid="h18b068aege3a3g42e7ga1a5gb506a2c348f5" version="1">Blast Off!</content>
-	<!-- "" --> <content contentuid="h15c18905g5b11g4ffdg813ag17e638fbb895" version="1">"We accidentally teleported into jail, help us out!"</content>
-	<!-- "" --> <content contentuid="he4a0c841gdd48g425agb055g895786911505" version="1">"We owe you one!</content>
-	<!-- "" --> <content contentuid="h35bf502eg1c6bg4f3bg8273g8824caddadc1" version="1">"...wait for Wiggles!!!"</content>
-	<!-- "" --> <content contentuid="hdeb59186gf202g4468gac92gf1542bae1d28" version="1">Team Trajectile is making good on their debt to you for freeing them.
-	
-	Speak to each member with the player that wants to control them.</content>
-	<!-- "MMM_RIVINGTONPATROL" --> <content contentuid="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1">Githyanki Patrol</content>
 
 	<!-- ==================================== Voice barks and overheads ==================================== -->
 
