@@ -242,6 +242,15 @@ data "StatsFunctorContext" "OnTurn"
 data "Conditions" "Combat()"
 data "StatsFunctors" "RegainHitPoints(SELF,10+SpellPowerLevel)"
 
+// ==================================== Act 1: Raging Ex-Boyfriend ====================================
+
+new entry "MMM_JEALOUSEX"
+type "StatusData"
+data "StatusType" "BOOST"
+// Raging Ex-Boyfriend
+data "DisplayName" "hb7d4ce2eg02ecg4c15g91d9g337811359364;1"
+data "StackId" "MMM_JEALOUSEX"
+
 // ==================================== Act 1: Juvenile Red Dragon ====================================
 
 // TODO:
@@ -564,6 +573,16 @@ data "TargetEffect" "a3e2368b-f486-4cfc-b04a-b02e23383280"
 data "DamageType" "Lightning"
 
 // ==================================== Act 1: Baby Bulettes ====================================
+
+new entry "MMM_MATRIPHAGY"
+type "StatusData"
+data "StatusType" "BOOST"
+// Matriphagy
+data "DisplayName" "h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7;1"
+// Baby bulette's kill their mother and eat her after birth.
+data "Description" "h897abff9g3dfag4b99gb37fg84d3b6a5306b;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_MATRIPHAGY"
 
 // TODO:
 new entry "MMM_Target_BABYBULETTEBITE"
@@ -1086,6 +1105,19 @@ data "Description" "h0e9562e6g87d9g4d39g9867g2811bf9113e0;4"
 data "ExtraDescription" "hdcdec53cg3720g470bgba0bgb9599ef35e6d;1"
 data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning)"
 data "TooltipStatusApply" "ApplyStatus(MMM_CRAWLINGCLAW_SWITCH,100,1)"
+
+// TODO:
+new entry "MMM_CRAWLINGCLAW_SWITCH"
+type "StatusData"
+data "StatusType" "BOOST"
+// Crawling Gnaw
+data "DisplayName" "he2096addg1b1ag411fga229gcfd0811df3fc;2"
+// Infected with zombie mucus. &lt;br&gt;&lt;br&gt;If the affected entity dies before the infection wears off, it will temporarily rise again as a &lt;LSTag Type="Status" Tooltip="ZOMBIE_DECAY"&gt;Newborn Zombie&lt;/LSTag&gt;.
+data "Description" "hc6b32806g0fa4g48f5g9a05gd485d5eed014;3"
+data "Icon" "statIcons_CrawlingGnawInfection"
+data "StackId" "CRAWLING_GNAW_SWITCH"
+data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
+data "StatusGroups" "SG_Disease"
 
 // ==================================== Act 1.b: Vinly Desh + Absolute Chaos Mage and Prisoner
 
