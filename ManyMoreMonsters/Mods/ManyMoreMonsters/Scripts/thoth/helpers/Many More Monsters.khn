@@ -1,3 +1,9 @@
 function MMM_SurvivalOfTheFittest()
-    return HasAnyStatus({ 'MMM_SURVIVALSIZE1', 'MMM_SURVIVALSIZE2', 'MMM_SURVIVALSIZE3', 'MMM_SURVIVALSIZE4', 'MMM_SURVIVALSIZE5', 'MMM_SURVIVALSIZE6', 'MMM_SURVIVALSIZE7' }, {}, {})
+    return HasAnyStatus({ 'MMM_SURVIVALSIZE1',
+                          'MMM_SURVIVALSIZE2',
+                          'MMM_SURVIVALSIZE3',
+                          'MMM_SURVIVALSIZE4',
+                          'MMM_SURVIVALSIZE5',
+                          'MMM_SURVIVALSIZE6',
+                          'MMM_SURVIVALSIZE7' }, {}, {})
 end

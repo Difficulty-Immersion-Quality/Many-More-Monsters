@@ -127,6 +127,9 @@
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.</content>
 
+	<!-- "MMM_ELLIEMAYBLESSING", "MMM_Passive_ELLIEMAYBLESSING" --> <content contentuid="he866a6bagfb7fg4e88ga02cg3a23222d3d47" version="1">Ellie May's Boon</content>
+	<!-- "MMM_ELLIEMAYBLESSING", "MMM_Passive_ELLIEMAYBLESSING" --> <content contentuid="h9f1eea95g0ce7g42e5g8088gfbb509bb12b3" version="1">Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.</content>
+
 	<!-- ==================================== Statuses ==================================== -->
 	
 	<!-- "MMM_OOFKLUTZ" --> <content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
@@ -148,8 +151,8 @@
 	<!-- "MMM_LATHANDERSBLESSING" --> <content contentuid="h88d02f89g21c2g4b8cgba4egedbfe8fea673" version="1">Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.</content>
 	<!-- "MMM_DAWNMASTERGENERIC" --> <content contentuid="hbf7bbc37gde41g46a1gb53bg8ff3aed90b60" version="1">Lathander is empowering Dawnmaster Vaseid!</content>
 	<!-- "MMM_DAWNMASTERGENERIC" --> <content contentuid="h0428c939g637eg4066ga658g6ae9c2ae103d" version="1">Unfortunately you don't recognize it.</content>
-	<!-- "MMM_DAWNMASTERFLAMESTRIKE" --> <content contentuid="h086b5a23gb552g449eg8b81g5c26ebd7ba46" version="1">Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!</content>
-	<!-- "MMM_DAWNMASTERSUNBEAM" --> <content contentuid="hffd7ab2ag4c9fg41cfgad38g462fc47ae591" version="1">Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!</content>
+	<!-- "MMM_DAWNMASTERFLAMESTRIKE" --> <content contentuid="h086b5a23gb552g449eg8b81g5c26ebd7ba46" version="1">Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!</content>
+	<!-- "MMM_DAWNMASTERSUNBEAM" --> <content contentuid="hffd7ab2ag4c9fg41cfgad38g462fc47ae591" version="1">Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
@@ -255,13 +258,8 @@
 	<!-- "" --> <content contentuid="h3492997eg8e6dg451fgbf63ge648a314a75c" version="1">Shadar-Kai Shadow Dancer</content>
 	<!-- "" --> <content contentuid="h9fead00egb816g434fgb388g36099f42147e" version="1">Shadar-Kai</content>
 	<!-- "" --> <content contentuid="h4d4c3c52g6e35g43aag88feg883819b115a0" version="1">Shadar-kai Gloom Weaver</content>
-	<!-- "" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie-May</content>
+	<!-- "" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie May</content>
 	<!-- "" --> <content contentuid="hcf6746ebgef55g4a1ag928egc72846acf335" version="1">"Thank you so much for returning my beloved ring."</content>
-	<!-- "" --> <content contentuid="ha6267b39ga602g434cg9db1g557da2a3e17b" version="1">"May he who is kind and wise approach me for a blessing"
-	
-	Next character that clicks on Ellie-May will recieve a permanent wisdom bonus.</content>
-	<!-- "" --> <content contentuid="he866a6bagfb7fg4e88ga02cg3a23222d3d47" version="1">Ellie-May's Boon</content>
-	<!-- "" --> <content contentuid="h9f1eea95g0ce7g42e5g8088gfbb509bb12b3" version="1">Ellie-May granted you a boon for your wisdom in returning her ring.</content>
 	<!-- "" --> <content contentuid="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1">Wooden Chest With A Hole Gnawed In The Corner</content>
 	<!-- "" --> <content contentuid="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1">Necrofex</content>
 	<!-- "" --> <content contentuid="h0a15fdf0ge1b7g4badga0cbg882e4c7835df" version="1">Plouf?</content>
@@ -322,6 +320,8 @@
 	<!-- "" --> <content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">"You're handling this fight very well!"</content>
 	<!-- "" --> <content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">"I'm just a begger looking for hand outs!"</content>
 	<!-- "" --> <content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">"Don't worry about my pets, they're all right!"</content>
+
+	<!-- "ReturnRingEvent()" --> <content contentuid="ha6267b39ga602g434cg9db1g557da2a3e17b" version="1">"May he who is kind and wise approach me for a blessing"&lt;br&gt;&lt;br&gt;The next character to interact with Ellie May will recieve a permanent &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; bonus.</content>
 
 	<!-- "MMM_BALTHAZARSPEAK1" --> <content contentuid="h0c90b26cg0f4fg4590gb428g9667636d7d5c" version="1">"Such pathetic fools that lie here... Ah, fortuitous timing!  You should prove adequate to test this new spell."</content>
 	<!-- "MMM_BALTHAZARSPEAK2" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>

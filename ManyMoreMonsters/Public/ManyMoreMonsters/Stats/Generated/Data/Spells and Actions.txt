@@ -1170,9 +1170,9 @@ new entry "MMM_DAWNMASTERSUNBEAM"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_DAWNMASTERGENERIC"
-// Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!
 data "DisplayName" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
-// Lathander is empowering Dawnmaster Vaseid to cast Sunbeams!
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!
 data "Description" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
 
 new entry "MMM_Zone_Sunbeam_Lathander"
@@ -1206,9 +1206,9 @@ new entry "MMM_DAWNMASTERFLAMESTRIKE"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_DAWNMASTERGENERIC"
-// Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!
 data "DisplayName" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
-// Lathander is empowering Dawnmaster Vaseid to cast Flame Strikes!
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!
 data "Description" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
 
 new entry "MMM_Target_FlameStrike_Lathander"
@@ -1226,6 +1226,31 @@ new entry "MMM_AVOIDFLAMESTRIKE"
 type "StatusData"
 data "StatusType" "BOOST"
 using "AI_HELPER_AVOIDAREA_RADIUS6"
+
+// ==================================== Act 2: Ellie May ====================================
+
+new entry "MMM_ELLIEMAYBLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Ellie May's Boon
+data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
+// Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.
+data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "FormatColor" "White"
+data "Passives" "MMM_Passive_ELLIEMAYBLESSING"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "ApplyEffect" "66381954-eae3-4d37-9051-a6cdca4e2867"
+
+new entry "MMM_Passive_ELLIEMAYBLESSING"
+type "PassiveData"
+// Ellie May's Boon
+data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
+// Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.
+data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "Highlighted"
+data "Boosts" "Ability(Wisdom,1)"
 
 // ==================================== Act 2: Shadowcursed Toilet Guy ====================================
 

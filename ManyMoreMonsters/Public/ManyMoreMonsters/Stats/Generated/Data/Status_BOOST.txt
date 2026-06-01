@@ -89,25 +89,3 @@ data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not Ha
 data "RemoveEvents" "OnTurn"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "StatusEffect" "a9cf5cbf-4247-4b9a-b81b-e3af4982ff62"
-
-new entry "MMM_ELLIEMAYBLESSING"
-type "StatusData"
-data "StatusType" "BOOST"
-// Ellie-May's Boon
-data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
-// Ellie-May granted you a boon for your wisdom in returning her ring.
-data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
-data "Icon" "GenericIcon_Intent_Buff"
-data "FormatColor" "DarkGray"
-data "Passives" "MMM_Passive_ELLIEMAYBLESSING"
-data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-data "ApplyEffect" "66381954-eae3-4d37-9051-a6cdca4e2867"
-
-new entry "MMM_Passive_ELLIEMAYBLESSING"
-type "PassiveData"
-// Ellie-May's Boon
-data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
-// Ellie-May granted you a boon for your wisdom in returning her ring.
-data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
-data "Boosts" "Ability(Wisdom,+1)"
-
