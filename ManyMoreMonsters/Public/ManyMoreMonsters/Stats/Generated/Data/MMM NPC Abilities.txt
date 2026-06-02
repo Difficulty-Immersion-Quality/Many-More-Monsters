@@ -469,14 +469,12 @@ data "DamageType" "Fire"
 
 // ==================================== Act 1: Will-o'-Wisp ====================================
 
-// TODO:
 new entry "MMM_WILL_O_WISP_GLOW"
 type "StatusData"
 data "StatusType" "POLYMORPHED"
+// using "DEAD_WILL_O_WISP"
 // Wisp Effect
 data "DisplayName" "h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd;1"
-// Wisp Effect
-data "Description" "h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd;1"
 data "Icon" "statIcons_SoulEcho"
 data "Boosts" "GameplayLight(3,false,0.1)"
 data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
@@ -584,19 +582,20 @@ data "Description" "h897abff9g3dfag4b99gb37fg84d3b6a5306b;1"
 data "Icon" "Action_VampireBite"
 data "StackId" "MMM_MATRIPHAGY"
 
-// TODO:
 new entry "MMM_Target_BABYBULETTEBITE"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_Bite"
+using "Target_Bite_Bulette"
+// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
 data "SpellSuccess" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing);ApplyStatus(ACID,100,3)"
-data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
-data "DescriptionParams" "Distance(1.5)"
-data "TooltipDamageList" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing);"
-data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
-data "SpellAnimationIntentType" "Aggressive"
-data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
-data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+// Bite a target and possibly push it back [1].
+// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
+// Bite a target.
+data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
+// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
+data "TooltipDamageList" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing)"
+// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
+data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
 
 // TODO:
 new entry "MMM_Projectile_BABYBULETTEJUMP"

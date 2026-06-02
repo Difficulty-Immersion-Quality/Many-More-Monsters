@@ -4,6 +4,7 @@
   <region id="Progressions">
     <node id="root">
       <children>
+      <!-- TODO: Expansion support and stuff? -->
         <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(Rage,1,0);ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Constitution);" />
                     <attribute id="Level" type="uint8" value="1" />
