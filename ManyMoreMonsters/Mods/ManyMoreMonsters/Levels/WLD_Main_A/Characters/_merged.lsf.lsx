@@ -21154,6 +21154,7 @@
 						</node>
 					</children>
 				</node>
+	<!-- Underdark -->
 		<!-- Boss #2: Light the candle in the shrine in the corner of the bibberbang field. -->
 			<!-- Trigger Point -->
 				<node id="GameObjects">
