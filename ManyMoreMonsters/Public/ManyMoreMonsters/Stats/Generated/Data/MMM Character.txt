@@ -966,6 +966,15 @@ data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 // ==================================== Mountain Pass ====================================
 // 1. Goblins found their way up to the mountains.
 
+// Goblin Tracker
+new entry "MMM_GOBLINRANGERMOUNTAIN"
+type "Character"
+using "MMM_GOBLINRANGERAMBUSH"
+// data "Vitality" "21"
+data "Vitality" "32"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
 // Goblin Brawler
 new entry "MMM_GOBLINMELEEMOUNTAIN"
 type "Character"
@@ -976,15 +985,6 @@ data "Vitality" "42"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "Progressions"  "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
-
-// Goblin Tracker
-new entry "MMM_GOBLINRANGERMOUNTAIN"
-type "Character"
-using "MMM_GOBLINRANGERAMBUSH"
-// data "Vitality" "21"
-data "Vitality" "32"
-// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 
 // ==================================== Mountain Pass - Gith
 // 2. This is now a battlefield, get ready for a three way fight.
@@ -1086,6 +1086,7 @@ data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
 
 // ==================================== Mountain Pass - Absolute Troops
 // 2. This is now a battlefield, get ready for a three way fight.
+// 10. The Gith actualy have some prisoners in the prisons.
 
 // Absolute Necromancer and Prisoner - 1
 new entry "MMM_HUMANNECRO_M"
@@ -1128,56 +1129,10 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
 data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
 
-// ==================================== Mountain Pass - Mad Hand Sorcerer
-// 11. Let's just say this fight is... hands on.
-
-// Vinly Desh
-new entry "MMM_MINDTORTURED"
-type "Character"
-using "MOO_MindTorturer"
-// data "Vitality" "59"
-data "Vitality" "96"
-// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;Gnome_Cunning;Gnome_Speed;RepellingBlast;DreadfulWord"
-data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;MMM_ChaosMagic"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
-
-new entry "MMM_TORTUREDCLAW"
-type "Character"
-using "CrawlingClaw"
-// data "Vitality" "4"
-data "Vitality" "24"
-// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:6;ReactionActionPoint:1"
-data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
-
 // ==================================== Mountain Pass
 // 3. The darkness encroaches.
 
 // MMM_SHADOWCURSED_GITHYANKIFIGHTER
-
-// ==================================== Mountain Pass - Esther Mercs
-// ?. Undocumented encounter
-
-// Salo and Marlow
-new entry "MMM_ESTHERMERC"
-type "Character"
-using "Human_Melee_Strong"
-// data "Constitution" "14"
-data "Constitution" "16"
-// data "Intelligence" "12"
-data "Intelligence" "8"
-// data "Charisma" "14"
-data "Charisma" "6"
-// data "Vitality" "28"
-data "Vitality" "84"
-// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
-data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SuperiorityDie:5"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
 // ==================================== Mountain Pass - Harpies
 // 6. Harpies have settled in.
@@ -1243,6 +1198,30 @@ new entry "MMM_SPIRITUALMONESTARY_SPEAR"
 type "Character"
 using "SpiritualWeapon_Spear"
 
+// ==================================== Mountain Pass - Mad Hand Sorcerer
+// 11. Let's just say this fight is... hands on.
+
+// Vinly Desh
+new entry "MMM_MINDTORTURED"
+type "Character"
+using "MOO_MindTorturer"
+// data "Vitality" "59"
+data "Vitality" "96"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;Gnome_Cunning;Gnome_Speed;RepellingBlast;DreadfulWord"
+data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;MMM_ChaosMagic"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+
+new entry "MMM_TORTUREDCLAW"
+type "Character"
+using "CrawlingClaw"
+// data "Vitality" "4"
+data "Vitality" "24"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:6;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+
 // ==================================== Githyanki Crecke - Dawnmaster Vaseid ====================================
 // B. Boss Battle 
 // Dawnmaster Vaseid gave his life to protect the Blood of Lathander, now he'll judge you if you're worthy or not.
@@ -1266,6 +1245,28 @@ data "SpellCastingAbility" "Charisma"
 data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
 data "XPReward" "5d26ba3d-6f84-465e-870a-d8cbb577c818"
 data "Proficiency Group" "LightArmor;MediumArmor;HeavyArmor;MartialWeapons;SimpleWeapons"
+
+// ==================================== Mountain Pass - Undocumented encounters ====================================
+// Lady Esther's Mercs
+
+// Salo and Marlow
+new entry "MMM_ESTHERMERC"
+type "Character"
+using "Human_Melee_Strong"
+// data "Constitution" "14"
+data "Constitution" "16"
+// data "Intelligence" "12"
+data "Intelligence" "8"
+// data "Charisma" "14"
+data "Charisma" "6"
+// data "Vitality" "28"
+data "Vitality" "84"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SuperiorityDie:5"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
 // ==================================== Shadowcursed Lands - East Side ====================================
 
