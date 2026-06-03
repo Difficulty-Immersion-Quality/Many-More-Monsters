@@ -6,9 +6,9 @@
       <children>
         <node id="Dependencies" />
         <node id="ModuleInfo">
-          <attribute id="Author" type="LSWString" value="Rob Lapham" />
+          <attribute id="Author" type="LSWString" value="Palderon (Rob Lapham)" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSWString" value="Adds more enemies to the world" />
+          <attribute id="Description" type="LSWString" value="Adds more enemies to the world." />
           <attribute id="Folder" type="LSWString" value="ManyMoreMonsters" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />

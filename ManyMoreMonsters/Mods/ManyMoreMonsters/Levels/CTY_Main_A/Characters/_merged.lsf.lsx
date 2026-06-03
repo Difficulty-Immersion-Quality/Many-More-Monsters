@@ -27,6 +27,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -174,6 +175,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -244,6 +246,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -310,6 +313,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -450,6 +454,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -520,6 +525,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />

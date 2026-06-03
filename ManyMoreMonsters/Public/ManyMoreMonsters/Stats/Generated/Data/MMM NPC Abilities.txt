@@ -228,6 +228,7 @@ data "FormatColor" "White"
 data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 
 // ==================================== Act 1: Bridge Troll ====================================
+// Bug: Needs to respond to acid and fire, try and get something semi-RAW going.
 
 // TODO:
 new entry "MMM_TROLLREGEN"
@@ -298,7 +299,9 @@ data "SpellSuccess" "DealDamage(2d8+UnarmedMeleeAbilityModifier, Bludgeoning);Ap
 data "TargetConditions" "Enemy() and not Self() and not Tagged('HIT_PROXY')"
 data "AoEConditions" "Enemy() and not Self() and not Tagged('HIT_PROXY')"
 data "Icon" "GenericIcon_DamageType_Physical"
+// Juvenile Slam
 data "DisplayName" "hb143b034g604fg4be5g847eg4299dd230646;1"
+// Slam the ground, dealing bludgeoning damage and possibly knocking targets &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
 data "Description" "h9c6177d6gf994g4a11g9c25g9eae312cde6d;2"
 data "TooltipDamageList" "DealDamage(2d8+UnarmedMeleeAbilityModifier, Bludgeoning)"
 data "TooltipStatusApply" "ApplyStatus(PRONE,100,2);"
@@ -335,6 +338,10 @@ using "Zone_BreathWeapon_Fire_Cone"
 data "SpellSuccess" "DealDamage(3d6,Fire,Magical)"
 // data "SpellFail" "DealDamage(LevelMapValue(BreathWeapon)/2, Fire,Magical)"
 data "SpellFail" "DealDamage(3d6/2, Fire,Magical)"
+// Fire Breath
+// data "DisplayName" "h725acbf8ga49ag4d70g9775g638c5a1094a0;2"
+// Juvenile Fire Breath
+data "DisplayName" "h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5;1"
 // data "TooltipDamageList" "DealDamage(LevelMapValue(BreathWeapon),Fire)"
 data "TooltipDamageList" "DealDamage(3d6,Fire)"
 
@@ -381,6 +388,7 @@ data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
 data "SpellSuccess" "ApplyStatus(FEARED,100,1);"
 data "TargetConditions" "Enemy() and not Dead() and not Tagged('HIT_PROXY') and not Self()"
 data "Icon" "Spell_Illusion_Fear"
+// Juvenile Fear
 data "DisplayName" "hac02aa59gcf74g43adg922cg0e7341d1e693;1"
 data "Description" "h712faea8g25bfg4a09gb5adg887012616ea6;2"
 data "TooltipStatusApply" "ApplyStatus(FEARED, 100, 2)"
@@ -402,7 +410,9 @@ data "Sheathing" "DontChange"
 new entry "MMM_JUVENILERED_RETALIATEPASSIVE"
 type "PassiveData"
 using "HellishRebuke"
+// Fireball Retaliation
 data "DisplayName" "hfc16a780g3998g47e7g9bb5g842118b9e586;1"
+// Retaliates with a fireball.
 data "Description" "hd8c12fd6gaaf0g4e26ga6f4g513c0e821775;1"
 data "DescriptionParams" "DealDamage(3d6,Fire)"
 data "Icon" "Action_Dragonborn_BreathWeapon_FireCone"
@@ -415,7 +425,9 @@ data "StatsFunctors" "UseSpell(SWAP,MMM_JUVENILERED_RETALIATEFIREBALL,true,true,
 new entry "MMM_JUVENILERED_RETALIATE"
 type "StatusData"
 data "StatusType" "BOOST"
+// Fireball Retaliation
 data "DisplayName" "hfc16a780g3998g47e7g9bb5g842118b9e586;1"
+// Retaliates with a fireball.
 data "Description" "hd8c12fd6gaaf0g4e26ga6f4g513c0e821775;1"
 data "Icon" "Action_Dragonborn_BreathWeapon_FireCone"
 data "FormatColor" "Red"
@@ -428,6 +440,7 @@ data "StatusPropertyFlags" "ForceOverhead"
 new entry "MMM_JUVENILERED_RETALIATEBASE"
 type "StatusData"
 data "StatusType" "BOOST"
+// Fireball Retaliation
 data "DisplayName" "hfc16a780g3998g47e7g9bb5g842118b9e586;1"
 data "StackId" "MMM_JUVENILERED_RETALIATEREAPPLY"
 data "TickType" "StartRound"
@@ -452,7 +465,10 @@ data "TargetConditions" "Enemy() and not Tagged('HIT_PROXY')"
 data "ProjectileCount" "1"
 data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
 data "Icon" "Spell_Evocation_FireBolt"
+// Juvenile Fireball
 data "DisplayName" "he04c9a4fg2f0cg4095g852bg9e88b8274d6e;1"
+// TODO: lmao
+// Hurl a mote of fire.
 data "Description" "h111ae255g55f1g4a55gb958g517af226971b;4"
 data "TooltipDamageList" "DealDamage(4d6,Fire)"
 data "TooltipAttackSave" "RangedSpellAttack"
@@ -522,7 +538,9 @@ data "SpellRoll" "not SavingThrow(Ability.Constitution, 10)"
 data "SpellSuccess" "DealDamage(10d10,Lightning);RegainHitPoints(SELF,3d6)"
 data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
 data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// Consume Life
 data "DisplayName" "h46580d81gd418g4a86gb260gae11d8393cde;1"
+// Try to consume what's left of a targets life essence.
 data "Description" "hce513b30g93c9g4387gbac6gaff3bd113aaf;1"
 data "TooltipDamageList" "DealDamage(10d10,Lightning);RegainHitPoints(3d6)"
 data "TooltipAttackSave" "Consitution"

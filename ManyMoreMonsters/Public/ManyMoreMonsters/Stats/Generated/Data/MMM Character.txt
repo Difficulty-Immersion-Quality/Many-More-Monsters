@@ -367,7 +367,6 @@ data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 // ==================================== Forest
 // 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
 // TODO: Yeah it's not really a troll and RAW troll stats are too much for that early in the game
-// TODO: Need to fix regen.
 
 // Bridge Troll 
 new entry "MMM_BRIDGETROLL"
@@ -1134,6 +1133,30 @@ data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
 
 // MMM_SHADOWCURSED_GITHYANKIFIGHTER
 
+// ==================================== Mountain Pass
+// 5. Team Trajectile Event #2.
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES1B"
+type "Character"
+using "MMM_WIGGLES"
+// data "Vitality" "24"
+data "Vitality" "43"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON1B"
+type "Character"
+using "MMM_LAYTON"
+// data "Vitality" "24"
+data "Vitality" "52"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT1B"
+type "Character"
+using "MMM_WRIGHT"
+// data "Vitality" "20"
+data "Vitality" "35"
+
 // ==================================== Mountain Pass - Harpies
 // 6. Harpies have settled in.
 
@@ -1268,9 +1291,10 @@ data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActi
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-// ==================================== Shadowcursed Lands - East Side ====================================
+// ==================================== Shadow Cursed Lands - Lastlight Side ====================================
+// 1. Shadowcursed Githyanki.
 
-// Shadow-Cursed Githyanki Warrior
+// Shadow-Cursed Githyanki
 new entry "MMM_SHADOWCURSED_GITHYANKIFIGHTER"
 type "Character"
 using "HAV_ShadowCursed_Warrior_Githyanki_Melee"
@@ -1281,6 +1305,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Shadow-Cursed Githyanki
 new entry "MMM_SHADOWCURSED_GITHYANKIBARBARIAN"
 type "Character"
 using "Githyanki_Melee"
@@ -1291,6 +1316,10 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 2. Shadowcursed on the toilet. 
+
+// Shadow-Cursed Toilet Guy
 new entry "MMM_SHADOWCURSED_HUMANBARBARIAN"
 type "Character"
 using "HAV_ShadowCursed_Warrior_Human_Melee"
@@ -1299,6 +1328,11 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 3. Shadowcursed family.
+// Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss.
+
+// Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_HUMANRANGED"
 type "Character"
 using "LOW_Guildhall_Swarm_Melee_Human"
@@ -1307,6 +1341,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
+// Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_HUMANCASTER"
 type "Character"
 using "Human_Caster"
@@ -1319,12 +1354,14 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
 
+// Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_DOG"
 type "Character"
 using "Shadow_Mastiff"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
+// Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_KID"
 type "Character"
 using "Shadow"
@@ -1336,6 +1373,10 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Passives" "SunlightWeakness;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
 
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 4. Restless Druids and Harpers.
+
+// Restless Harper
 new entry "MMM_SHADOWSKELETON_MELEE"
 type "Character"
 using "SHA_Skeleton_Melee"
@@ -1345,6 +1386,7 @@ data "Vitality" "37"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Restless Harper
 new entry "MMM_SHADOWSKELETON_RANGED"
 type "Character"
 using "SHA_Skeleton_Ranger"
@@ -1354,6 +1396,7 @@ data "Vitality" "29"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
+// Restless Druid
 new entry "MMM_SHADOWSKELETON_DRUID"
 type "Character"
 using "SHA_Skeleton_Caster"
@@ -1370,6 +1413,10 @@ data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 // data "ArmorType" "Cloth"
 data "ArmorType" "Leather"
 
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 5. Shadowcursed Druids and Harpers.
+
+// Shadow-Cursed Druid
 new entry "MMM_SHADOWCURSED_HALFLINGDRUID"
 type "Character"
 using "Halfling_Druid"
@@ -1380,6 +1427,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Shadow-Cursed Druid
 new entry "MMM_SHADOWCURSED_HUMANDRUID"
 type "Character"
 using "Human_Druid"
@@ -1390,6 +1438,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
 data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
 
+// Shadow-Cursed Harper
 new entry "MMM_SHADOWCURSED_ELFHARPERRANGED"
 type "Character"
 using "Elf_Ranger"
@@ -1400,6 +1449,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 
+// Shadow-Cursed Harper
 new entry "MMM_SHADOWCURSED_HALFELFBARBARIAN"
 type "Character"
 using "HalfElf_Barbarian"
@@ -1410,111 +1460,21 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
-new entry "MMM_BALTHAZARZOMBIEDRUID"
-type "Character"
-using "Zombie"
-// data "Strength" "16"
-data "Strength" "8"
-// data "Dexterity" "6"
-data "Dexterity" "12"
-// data "Intelligence" "3"
-data "Intelligence" "12"
-// data "Wisdom" "6"
-data "Wisdom" "16"
-// data "Charisma" "5"
-data "Charisma" "13"
-// data "Vitality" "22"
-data "Vitality" "42"
-// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 7. A lost child.
 
-new entry "MMM_BALTHAZARZOMBIEBARBARIAN"
+new entry "MMM_CHILDWRAITH"
 type "Character"
-using "Zombie"
-// data "Strength" "16"
-data "Strength" "18"
-// data "Dexterity" "6"
-data "Dexterity" "16"
-// data "Intelligence" "3"
-data "Intelligence" "16"
-// data "Wisdom" "6"
-data "Wisdom" "8"
-// data "Charisma" "5"
-data "Charisma" "8"
-// data "Vitality" "22"
-data "Vitality" "65"
-// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+using "Wraith"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:18;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:2:2:1"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
-new entry "MMM_BALTHAZARZOMBIEROGUE"
-type "Character"
-using "Zombie"
-// data "Strength" "16"
-data "Strength" "10"
-// data "Dexterity" "6"
-data "Dexterity" "18"
-// data "Intelligence" "3"
-data "Intelligence" "14"
-// data "Wisdom" "6"
-data "Wisdom" "12"
-// data "Charisma" "5"
-data "Charisma" "16"
-// data "Vitality" "22"
-data "Vitality" "38"
-// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 8. What could have done this to this chest...
 
-new entry "MMM_BALTHAZARZOMBIERANGER"
-type "Character"
-using "Zombie"
-// data "Strength" "16"
-data "Strength" "8"
-// data "Dexterity" "6"
-data "Dexterity" "18"
-// data "Intelligence" "3"
-data "Intelligence" "12"
-// data "Wisdom" "6"
-data "Wisdom" "16"
-// data "Charisma" "5"
-data "Charisma" "13"
-// data "Vitality" "22"
-data "Vitality" "45"
-// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
-
-new entry "MMM_BALTHAZARZOMBIEMONK"
-type "Character"
-using "Zombie"
-// data "Strength" "16"
-data "Strength" "12"
-// data "Dexterity" "6"
-data "Dexterity" "16"
-// data "Intelligence" "3"
-data "Intelligence" "12"
-// data "Wisdom" "6"
-data "Wisdom" "16"
-// data "Charisma" "5"
-data "Charisma" "12"
-// data "Vitality" "22"
-data "Vitality" "52"
-// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
-data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
-
+// Shadow-Cursed Squirrel
 new entry "MMM_CRAZEDSQUIRREL"
 type "Character"
 using "Squirrel"
@@ -1529,14 +1489,10 @@ data "Passives" "DarknessRules;AttackOfOpportunity"
 // data "XPReward" "c83d6caa-c5c3-4356-b55c-8d634535976c"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 
-new entry "MMM_CHILDWRAITH"
-type "Character"
-using "Wraith"
-// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:18;ReactionActionPoint:1"
-data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:2:2:1"
-// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 9. Shadar-Kai.
 
+// N'saneh Att'er
 new entry "MMM_SHADARKAISOUL"
 type "Character"
 using "Elf_ShadarKai_Ranger"
@@ -1565,6 +1521,7 @@ data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;Darkness
 // data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
+// Shadar-Kai - Shadar-Kai Shadow Dancer
 new entry "MMM_SHADARKAIDANCER"
 type "Character"
 using "Elf_ShadarKai_Ranger"
@@ -1589,6 +1546,7 @@ data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;Darkness
 // data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
+// Shadar-Kai - Shadar-kai Gloom Weaver
 new entry "MMM_SHADARKAIGLOOM"
 type "Character"
 using "Elf_ShadarKai_Ranger"
@@ -1617,34 +1575,123 @@ data "Passives" "ExtraAttack;MistyEscape_ShadarKai_GloomWeaver;FeyAncestry;Attac
 // data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
-new entry "MMM_ACT1MIMICSTATS"
-type "Character"
-using "_Monstrosity"
-// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
-data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 11. Balthazar event #1.
 
-new entry "MMM_ACT2MIMICSTATS"
+// Edin Mesic
+new entry "MMM_BALTHAZARZOMBIEDRUID"
 type "Character"
-using "MMM_ACT1MIMICSTATS"
-// data "Strength" "17"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "8"
+// data "Dexterity" "6"
+data "Dexterity" "12"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "13"
+// data "Vitality" "22"
+data "Vitality" "42"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+
+// Damon Eyesz
+new entry "MMM_BALTHAZARZOMBIEBARBARIAN"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
 data "Strength" "18"
-// data "Constitution" "15"
-data "Constitution" "16"
-// data "Vitality" "58"
-data "Vitality" "85"
-// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
-data "ActionResources" "ActionPoint:2;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+// data "Dexterity" "6"
+data "Dexterity" "16"
+// data "Intelligence" "3"
+data "Intelligence" "16"
+// data "Wisdom" "6"
+data "Wisdom" "8"
+// data "Charisma" "5"
+data "Charisma" "8"
+// data "Vitality" "22"
+data "Vitality" "65"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
-new entry "MMM_ACT3MIMICSTATS"
+// Rekin Ky
+new entry "MMM_BALTHAZARZOMBIEROGUE"
 type "Character"
-using "MMM_ACT2MIMICSTATS"
-// data "Strength" "18"
-data "Strength" "20"
-// data "Constitution" "16"
-data "Constitution" "18"
-// data "Vitality" "85"
-data "Vitality" "125"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "10"
+// data "Dexterity" "6"
+data "Dexterity" "18"
+// data "Intelligence" "3"
+data "Intelligence" "14"
+// data "Wisdom" "6"
+data "Wisdom" "12"
+// data "Charisma" "5"
+data "Charisma" "16"
+// data "Vitality" "22"
+data "Vitality" "38"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
+// Farsee Yer
+new entry "MMM_BALTHAZARZOMBIERANGER"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "8"
+// data "Dexterity" "6"
+data "Dexterity" "18"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "13"
+// data "Vitality" "22"
+data "Vitality" "45"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Harry Ispup
+new entry "MMM_BALTHAZARZOMBIEMONK"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "12"
+// data "Dexterity" "6"
+data "Dexterity" "16"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "12"
+// data "Vitality" "22"
+data "Vitality" "52"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+
+// ==================================== Shadow Cursed Lands - Moonrise Side
+// 13. Balthazar event #2.
+
+// Necrofex
 new entry "MMM_BALTHAZARSKELETONBOSS"
 type "Character"
 using "LOW_KidNecromancer_GiantSkeleton"
@@ -1654,6 +1701,7 @@ data "Vitality" "146"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 
+// Plouf? - The Spider King?
 new entry "MMM_SPIDERKING"
 type "Character"
 using "Gnome_Deep_Caster"
@@ -1665,6 +1713,7 @@ data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpp
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
 
+// Plouf - The Spider King
 new entry "MMM_SPIDERKINGBURSTER"
 type "Character"
 using "Spider_Sword"
@@ -1673,6 +1722,7 @@ data "Vitality" "181"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 
+// Tiny Spider
 new entry "MMM_TINYSPIDER2"
 type "Character"
 using "MMM_TINYSPIDER"
@@ -1681,26 +1731,8 @@ data "Vitality" "16"
 // data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
 
-// Mikey "Wiggles" Pridgen
-new entry "MMM_WIGGLES1B"
-type "Character"
-using "MMM_WIGGLES"
-// data "Vitality" "24"
-data "Vitality" "43"
-
-// Lyin' Liam Layton
-new entry "MMM_LAYTON1B"
-type "Character"
-using "MMM_LAYTON"
-// data "Vitality" "24"
-data "Vitality" "52"
-
-// Adam "Buggy" Wright
-new entry "MMM_WRIGHT1B"
-type "Character"
-using "MMM_WRIGHT"
-// data "Vitality" "20"
-data "Vitality" "35"
+// ==================================== Shadow Cursed Lands - Moonrise Side
+// 14. Team Trajectile Event #3
 
 // Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES2"
@@ -1729,6 +1761,9 @@ using "MMM_WRIGHT1B"
 // data "Vitality" "35"
 data "Vitality" "57"
 
+// ==================================== Rivington ==================================== 
+// 1. Team Trajectile Event #4.
+
 // Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3"
 type "Character"
@@ -1756,6 +1791,11 @@ data "Wisdom" "20"
 // data "Vitality" "57"
 data "Vitality" "64"
 
+// ==================================== Rivington
+// 2. Don't get the chicken smell on you or you might attract something.
+// TODO: Not really a Hill Giant, just ogre.
+
+// Hill Giant
 new entry "MMM_HILLGIANT"
 type "Character"
 using "Ogre"
@@ -1776,6 +1816,11 @@ data "SpellCastingAbility" "Constitution"
 data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
 data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
 
+// ==================================== Rivington
+// 3. Sea Creatures on the beach.
+// 4. Sea Creatures at the wrecked ship.
+
+// Sahuagin
 new entry "MMM_SAHUAGINMELEE"
 type "Character"
 using "Sahuagin_Melee"
@@ -1783,12 +1828,29 @@ using "Sahuagin_Melee"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
 
+// Sahuagin Hunter
 new entry "MMM_SAHUAGINRANGED"
 type "Character"
 using "Sahuagin_Ranged"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Rivington
+// 7. Githyanki Patrol
+
+// Gith Patrol
+new entry "MMM_RIVINGTONGITH_WARRIOR"
+type "Character"
+using "MMM_MOUNTAINGITH_WARRIOR"
+
+// Githyanki Patrol
+new entry "MMM_RIVINGTONGITH_RANGER"
+type "Character"
+using "MMM_MOUNTAINGITH_RANGER"
+
+// ==================================== Lower City ====================================
+// 1. Team Trajectile Event #5
 
 // Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3B"
@@ -1810,6 +1872,9 @@ type "Character"
 using "MMM_WRIGHT3"
 // data "Vitality" "64"
 data "Vitality" "70"
+
+// ==================================== Upper City ====================================
+// 2. Team Trajectile Event #5
 
 // Mikey "Wiggles" Pridgen
 new entry "MMM_WIGGLES3C"
@@ -1849,12 +1914,32 @@ data "Vitality" "82"
 // data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 // data "Passives" "AttackOfOpportunity"
 
-// Gith Patrol - 1 and 2
-new entry "MMM_RIVINGTONGITH_WARRIOR"
-type "Character"
-using "MMM_MOUNTAINGITH_WARRIOR"
+// ==================================== All levels ====================================
 
-// Githyanki Patrol - 3 and 4
-new entry "MMM_RIVINGTONGITH_RANGER"
+new entry "MMM_ACT1MIMICSTATS"
 type "Character"
-using "MMM_MOUNTAINGITH_RANGER"
+using "_Monstrosity"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+new entry "MMM_ACT2MIMICSTATS"
+type "Character"
+using "MMM_ACT1MIMICSTATS"
+// data "Strength" "17"
+data "Strength" "18"
+// data "Constitution" "15"
+data "Constitution" "16"
+// data "Vitality" "58"
+data "Vitality" "85"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:2;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+
+new entry "MMM_ACT3MIMICSTATS"
+type "Character"
+using "MMM_ACT2MIMICSTATS"
+// data "Strength" "18"
+data "Strength" "20"
+// data "Constitution" "16"
+data "Constitution" "18"
+// data "Vitality" "85"
+data "Vitality" "125"

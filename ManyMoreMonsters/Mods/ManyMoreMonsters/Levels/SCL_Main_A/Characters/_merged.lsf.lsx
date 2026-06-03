@@ -368,6 +368,7 @@
 					</children>
 				</node>
 		<!-- 3. Shadowcursed family. -->
+			<!-- Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss. -->
 			<!-- Shadow-Cursed Family - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -2920,7 +2921,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Shadar-Kai -->
+			<!-- Shadar-Kai - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3069,7 +3070,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Shadar-Kai -->
+			<!-- Shadar-Kai - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -3646,6 +3647,7 @@
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_DRUID" />
 					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEDRUID" />
 					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
+					<!-- Shadow-Infused Druid -->
 					<attribute id="Title" type="TranslatedString" handle="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
@@ -3717,6 +3719,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIERANGER" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_RANGER" />
 					<attribute id="TemplateName" type="FixedString" value="d07a6db8-462f-48ac-8286-8aad8282ba02" />
+					<!-- Shadow-Infused Harper -->
 					<attribute id="Title" type="TranslatedString" handle="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209030" />
@@ -3871,6 +3874,7 @@
 					<attribute id="StartCombatRange" type="float" value="4" />
 					<attribute id="Stats" type="FixedString" value="MMM_SPIDERKING" />
 					<attribute id="TemplateName" type="FixedString" value="e41a1319-3979-4d19-bd64-1cd5562eda2a" />
+					<!-- The Spider King? -->
 					<attribute id="Title" type="TranslatedString" handle="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144818875517632912" />
@@ -4912,6 +4916,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -5059,6 +5064,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -5136,6 +5142,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -5325,6 +5332,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Molly Molly Molly -->
 				<!-- <node id="GameObjects">
 					<attribute id="CanFight" type="bool" value="False" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1" />

@@ -4,7 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-				<!-- Squirrel Chest -->
+			<!-- Wooden Chest with a Hole Gnawed in the Corner -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -50,7 +50,7 @@
 						</node>
 					</children>
 				</node>
-				<!-- Act 2 Mimic Chests -->
+			<!-- Act 2 Mimic Chests -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />

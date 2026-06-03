@@ -275,6 +275,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL2_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -415,6 +416,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL2_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -485,6 +487,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL2_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -6679,6 +6682,7 @@
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="4" />
 					<attribute id="Flag" type="int32" value="1" />
+					<!-- Bugbear Champion -->
 					<attribute id="Title" type="TranslatedString" handle="hf5d4d152g8b78g416cg9f57g7d3ee5c081ba" version="1" />
 					<attribute id="IsBoss" type="bool" value="True" />
 					<attribute id="MapKey" type="FixedString" value="46545754-5089-4e85-b34d-81395e5ebb44" />
@@ -7712,6 +7716,7 @@
 					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="6" />
 					<attribute id="Flag" type="int32" value="1" />
+					<!-- Killer of Tieflings -->
 					<attribute id="Title" type="TranslatedString" handle="h7e7466abg8c9cg4461ga72bg05bc64938cdb" version="1" />
 					<attribute id="IsBoss" type="bool" value="True" />
 					<attribute id="MapKey" type="FixedString" value="1d905255-1735-4afe-988d-5cfee3f85643" />
@@ -20199,6 +20204,7 @@
 					<attribute id="Name" type="LSString" value="MMM_BULETTEBABY" />
 					<attribute id="Stats" type="FixedString" value="MMM_BULETTEBABY" />
 					<attribute id="TemplateName" type="FixedString" value="0ea356fc-7a6f-4c60-8017-86349e2777ab" />
+					<!-- Matriphagous Child -->
 					<attribute id="Title" type="TranslatedString" handle="h57bd59d0g01bdg4eefg88b5g85d9ce46adc6" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
@@ -21075,6 +21081,7 @@
 					<attribute id="SpellSet" type="FixedString" value="MMM_SPELLS_GREGG" />
 					<attribute id="TemplateName" type="FixedString" value="c1fb77cf-cfa8-4027-b86b-decc3ff92739" />
 					<attribute id="Type" type="FixedString" value="character" />
+					<!-- Has a downstairs mix-up -->
 					<attribute id="Title" type="TranslatedString" handle="hcd2d7141g821ag44b3gb0e8gacf9c9bd5a84" version="1" />
 					<attribute id="IsBoss" type="bool" value="True" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />

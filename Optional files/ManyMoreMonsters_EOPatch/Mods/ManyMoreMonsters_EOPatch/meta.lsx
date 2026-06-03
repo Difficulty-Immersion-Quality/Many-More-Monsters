@@ -16,7 +16,7 @@
           </children>
         </node>
         <node id="ModuleInfo">
-          <attribute id="Author" type="LSWString" value="Rob Lapham" />
+          <attribute id="Author" type="LSWString" value="Palderon (Rob Lapham)" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
           <attribute id="Description" type="LSWString" value="Moves some enemies around to be more compatible with EO. May be buggy depending on EO scripting. Warning: Not extensively testing this myself (but no problems on initial run)." />
           <attribute id="Folder" type="LSWString" value="ManyMoreMonsters_EOPatch" />

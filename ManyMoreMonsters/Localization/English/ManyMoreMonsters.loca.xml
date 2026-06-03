@@ -1,58 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentList>
-	<!-- TODO: Sort the loca -->
 	<!-- ==================================== Character templates ==================================== -->
 
 	<!-- "c0ce95ee-8112-4977-a2bf-97f53d051cf7" --> <content contentuid="hbd880f20g4cc8g4f64gbefbga83b058c77ae" version="1">Juvenile Red Dragon</content>
 
 	<!-- "14abb173-f375-4dfd-96e2-afc6e7cba83f" --> <content contentuid="h362c9575g4b53g457cg90e5gb8b3a92e1d6b" version="1">Plouf</content>
+	<!-- "14abb173-f375-4dfd-96e2-afc6e7cba83f" --> <content contentuid="h399fcc06g1770g4184g8e29g9cf028d95946" version="1">The Spider King</content>
 
-	<!-- "" --> <content contentuid="heee2a587g8d7dg486eg8235gde707f5b95fa" version="1">Lost Intellect Devourer</content>
-	<!-- "" --> <content contentuid="hf39848bdg7e6dg4671gac69g026bf3c524f0" version="1">Kuo-toa</content>
-	<!-- "" --> <content contentuid="ha9ebb80agf93cg468dg9e76ged18db88d16e" version="1">Kuo-toa Priest</content>
-	<!-- "" --> <content contentuid="h78f1ac01gd2a9g49f9gb9deg62739c44c0ab" version="1">Mikey "Wiggles" Pridgen</content>
-	<!-- "" --> <content contentuid="hac8d93c8g6fe3g403dgb912g6b7795e2cb6b" version="1">Lyin' Liam Layton</content>
-	<!-- "" --> <content contentuid="hfcdf98e2gbd35g417dg9354ge55db3aea5fd" version="1">Adam "Buggy" Wright</content>
-	<!-- "" --> <content contentuid="hb2fe85a8g8e4bg4a8fg9c1age2594d2e5f6c" version="1">Weakened Mind Flayer</content>
-	<!-- "" --> <content contentuid="h56e21dfdg3a15g476fg9c1eg728d2cf8641d" version="1">Damaged</content>
-	<!-- "" --> <content contentuid="he6731f16g3826g485cg8c1ag80da399c144e" version="1">Creature has been damaged in the crash.</content>
+	<!-- "7ecffc82-c69e-46d4-95ab-fe1737334116" --> <content contentuid="ha03d2997geeedg4348g87b9g3f8b6f695515" version="1">Raunchy Succubus</content>
+	<!-- "caa4cb59-d5b0-4dfe-a5da-fba628830896" --> <content contentuid="h6bd23a61gb09fg447eg9631g2453c101ad63" version="1">Randy Incubus</content>
+
+	<!-- ==================================== Local characters ==================================== -->
+
+	<!-- "" --> 									<content contentuid="h78f1ac01gd2a9g49f9gb9deg62739c44c0ab" version="1">Mikey "Wiggles" Pridgen</content>
+	<!-- "" --> 									<content contentuid="hac8d93c8g6fe3g403dgb912g6b7795e2cb6b" version="1">Lyin' Liam Layton</content>
+	<!-- "" --> 									<content contentuid="hfcdf98e2gbd35g417dg9354ge55db3aea5fd" version="1">Adam "Buggy" Wright</content>
+	<!-- "" --> 									<content contentuid="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1">Team Trajectile</content>
+	<!-- "57f0740b-352e-464e-ab47-2e112aa5a8a4" --> <content contentuid="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1">Molly Molly Molly</content>
+
+	<!-- "c518330d-cc41-46f5-a9c7-bddc8738f993" --> <content contentuid="heee2a587g8d7dg486eg8235gde707f5b95fa" version="1">Lost Intellect Devourer</content>
+	<!-- "MMM_KUOTOADOCK", "MMM_HARPYKUOTOA", "MMM_HAGKUOTOA" --> <content contentuid="hf39848bdg7e6dg4671gac69g026bf3c524f0" version="1">Kuo-toa</content>
+	<!-- "MMM_KUOTOADOCK", "MMM_HARPYKUOTOA" --> 	<content contentuid="ha9ebb80agf93cg468dg9e76ged18db88d16e" version="1">Kuo-toa Priest</content>
+	<!-- "b45c012b-05f9-4252-9960-fade2c05ee34" --> <content contentuid="hb2fe85a8g8e4bg4a8fg9c1age2594d2e5f6c" version="1">Weakened Mind Flayer</content>
+	<!-- "1119bea0-a63f-4617-99ab-7f0af17bfdf4" --> <content contentuid="h1da10680gae78g4872gb9c5ged84f8b00f0d" version="1">Oof</content>
+	<!-- "1119bea0-a63f-4617-99ab-7f0af17bfdf4" --> <content contentuid="h5b53a934g6880g42abgbd42g88f087f750ce" version="1">The Clumsiest Ogre</content>
+	<!-- "MMM_GROVEBANDIT" --> 						<content contentuid="hce229af4gbc76g4d0cgb996g7f862250c84e" version="1">Grove Bandit</content>
 	<!-- "48ae4a20-8e6c-4211-b53f-7c1dd31b200a" --> <content contentuid="ha1400be3gd0acg4b18g8424g36909adf7e8d" version="1">Harpy Matriarch</content>
 	<!-- "57da58c2-b6f5-4432-8c50-e4208a83e41e" --> <content contentuid="h3b72f3dcge8b0g448dg91eag15386f76ce7a" version="1">Ancient Owlbear</content>
-	<!-- "MMM_TINYDEFILEDSPIDY", "MMM_TINYCRYPTSPIDY" --> <content contentuid="h23c98986gbbfag457eg86acg30dc672671a3" version="1">Tiny Spider</content>
+	<!-- "04c2d10f-b08e-4966-9a71-352629e4f16f", "MMM_TINYDEFILEDSPIDY", "MMM_TINYCRYPTSPIDY" --> <content contentuid="h23c98986gbbfag457eg86acg30dc672671a3" version="1">Tiny Spider</content>
 	<!-- "711e0cb6-6d7d-4233-9157-2a218f5f348d" --> <content contentuid="h80a93e24gc446g4c1cgb1c4g2378a2907f44" version="1">Bridge Troll</content>
-	<!-- "" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regen</content>
-	<!-- "" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls.</content>
-	<!-- "500e8dac-7089-4e30-8e01-e41b5d43405e" --> <content contentuid="ha7db982ag5c27g4f0fgae72gbc1c0abadab9" version="1">Fishing Bear</content>
-	<!-- "" --> <content contentuid="hf5d4d152g8b78g416cg9f57g7d3ee5c081ba" version="1">Bugbear Champion</content>
+	<!-- "46545754-5089-4e85-b34d-81395e5ebb44" --> <content contentuid="h5f799638gc612g4c19g90efga0af30fc069d" version="1">Bonesnappah</content>
+	<!-- "46545754-5089-4e85-b34d-81395e5ebb44" --> <content contentuid="hf5d4d152g8b78g416cg9f57g7d3ee5c081ba" version="1">Bugbear Champion</content>
 	<!-- "fee2b522-e440-4fae-9b9a-a597cf03c434" --> <content contentuid="h470006f3g4618g4fc9g8d8agda8a8c349c0e" version="1">Bogsnap</content>
 	<!-- "fee2b522-e440-4fae-9b9a-a597cf03c434" --> <content contentuid="h370507b2gb715g4908g9a97g9853d1d7b880" version="1">Buthir's Jealous Ex</content>
 	<!-- "4295596a-1cae-45ff-a481-e29ca6d616ec" --> <content contentuid="h7341c49cgca50g40a7ga8c4g356c5f22efec" version="1">Slegbezzle</content>
 	<!-- "4295596a-1cae-45ff-a481-e29ca6d616ec" --> <content contentuid="h81ff1d74g1db6g4feagaecfg54bd2c4450a5" version="1">Professional Goblin Voyeur</content>
-	<!-- "" --> <content contentuid="h5f851559g3dd2g4df3g9631geb1d9aa0bb08" version="1">This towel is a bit soggy and has an... odd... smell...</content>
-	<!-- "" --> <content contentuid="hebaab843gf038g414ag966fg3e492b60d084" version="1">Questionably Soggy Towel</content>
-	<!-- "46545754-5089-4e85-b34d-81395e5ebb44" --> <content contentuid="h5f799638gc612g4c19g90efga0af30fc069d" version="1">Bonesnappah</content>
-	<!-- "" --> <content contentuid="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1">Will-o'-Wisp</content>
-	<!-- "" --> <content contentuid="h46580d81gd418g4a86gb260gae11d8393cde" version="1">Consume Life</content>
-	<!-- "" --> <content contentuid="hce513b30g93c9g4387gbac6gaff3bd113aaf" version="1">Try to consume what's left of a targets life essence.</content>
+	<!-- "MMM_DROWASSASSIN" --> 					<content contentuid="h28956d7bga473g435aga3f9gbb4807ee0e4b" version="1">Drow Assassin</content>
 	<!-- "1d905255-1735-4afe-988d-5cfee3f85643" --> <content contentuid="h7d565c4fgce73g4b85g8631g78e8134107bc" version="1">Murderous Bugbear</content>
-	<!-- "" --> <content contentuid="h7e7466abg8c9cg4461ga72bg05bc64938cdb" version="1">Killer of Tieflings</content>
-	<!-- "MMM_GOBBATHING" --> <content contentuid="hbcbe0625g4194g4504gb8d4gdf0bb14e6049" version="1">Stanky Goblin</content>
+	<!-- "1d905255-1735-4afe-988d-5cfee3f85643" --> <content contentuid="h7e7466abg8c9cg4461ga72bg05bc64938cdb" version="1">Killer of Tieflings</content>
+	<!-- "MMM_GOBBATHING" --> 						<content contentuid="hbcbe0625g4194g4504gb8d4gdf0bb14e6049" version="1">Stanky Goblin</content>
 	<!-- "e3be0621-86c4-4da5-882d-288098db0274" --> <content contentuid="h7dba8f3egdacdg436dg9b23g50e9d909b227" version="1">Chicken Wrangler</content>
 	<!-- "5915b958-417f-459f-8b33-157b1b8d7c3a" --> <content contentuid="hcbb82effgb4d7g4516g8b2bga4583e1edc37" version="1">Ziznut</content>
-	<!-- "" --> <content contentuid="hfc16a780g3998g47e7g9bb5g842118b9e586" version="1">Fireball Retaliation</content>
-	<!-- "" --> <content contentuid="hd8c12fd6gaaf0g4e26ga6f4g513c0e821775" version="1">Retaliates with a fireball.</content>
-	<!-- "" --> <content contentuid="hb143b034g604fg4be5g847eg4299dd230646" version="1">Juvenile Red Dragon Slam</content>
-	<!-- "" --> <content contentuid="h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5" version="1">Juvenile Red Dragon Breath Attack</content>
-	<!-- "" --> <content contentuid="he04c9a4fg2f0cg4095g852bg9e88b8274d6e" version="1">Juvenile Red Dragon Fireball</content>
-	<!-- "" --> <content contentuid="hac02aa59gcf74g43adg922cg0e7341d1e693" version="1">Juvenile Red Dragon Fear</content>
-	<!-- "" --> <content contentuid="hcd2d7141g821ag44b3gb0e8gacf9c9bd5a84" version="1">Has a downstairs mix-up</content>
-	<!-- "" --> <content contentuid="h2c8a8f7bg50cag4f2fg803bg01ef0297ee65" version="1">Ol' Gregg</content>
+	<!-- "500e8dac-7089-4e30-8e01-e41b5d43405e" --> <content contentuid="ha7db982ag5c27g4f0fgae72gbc1c0abadab9" version="1">Fishing Bear</content>
 	<!-- "5daaafd1-d23c-41bf-b915-ae129e6c4cf9" --> <content contentuid="h7c360a8dg7f47g4734gab74gd4583915a7b1" version="1">Mama Bear</content>
 	<!-- "48277221-bd08-42f4-a3af-09415731ee58" --> <content contentuid="hc9d9a09ag76ccg472ag85c8g34e44a346d28" version="1">Baby Bear</content>
-	<!-- "" --> <content contentuid="hb7d4ce2eg02ecg4c15g91d9g337811359364" version="1">Raging Ex-Boyfriend</content>
-	<!-- "" --> <content contentuid="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1">Shoe Full of Bailey's</content>
-	<!-- "" --> <content contentuid="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1">A shoe full of Bailey's liqueur, have you ever drank it this way?</content>
-	<!-- "MMM_DROWASSASSIN" --> <content contentuid="h28956d7bga473g435aga3f9gbb4807ee0e4b" version="1">Drow Assassin</content>
+	<!-- "MMM_WISPTREE" --> 						<content contentuid="h650862a2gec6fg4633ga268gf8f9e7af2d0a" version="1">Will-o'-Wisp</content>
 	<!-- "3cefad8c-5cad-4821-a7c7-77ec2201db48" --> <content contentuid="h4da80730g15fag4946ga7b2gb4d10bb79f79" version="1">Alpha Minotaur</content>
 	<!-- "548da10f-f67b-4cbd-9421-bffb2c8c6faa" --> <content contentuid="h1a217ce1ga5a4g4fccg8519gc084c2763800" version="1">Alister</content>
 	<!-- "4d0458ed-cb3b-4e7e-81e8-3ccb976b825f" --> <content contentuid="h84872cb4g1de0g4655gb366g6e5aeb72a092" version="1">Mustaf</content>
@@ -68,45 +60,14 @@
 	<!-- "3486bb49-300c-4539-afe1-dc359febb580" --> <content contentuid="h878c2be9g8208g4b9fgbf1ag1cbfbf479047" version="1">Imeh</content>
 	<!-- "5b7acfc9-269d-49ba-a2de-727cde8f7f3c" --> <content contentuid="hd861e470gf9ccg42c5ga857geb988d78e7f5" version="1">Sie</content>
 	<!-- "558beb96-818b-4377-997e-2958aaad0645" --> <content contentuid="h748f416fgd063g4e70g9fa7g797e02202f12" version="1">Weakened Beholder</content>
-	<!-- "" --> <content contentuid="hccd1da1agb580g477ega809gfd4b8aaa2745" version="1">Servant of Lolth</content>
-	<!-- "" --> <content contentuid="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1">Boulder Blocking Mineshaft</content>
-	<!-- "" --> <content contentuid="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1">Suspicious Barrel</content>
-	<!-- "" --> <content contentuid="h463cafffgf249g4b27g819cgede1abbb3a05" version="1">Baby Bulette</content>
-	<!-- "" --> <content contentuid="h57bd59d0g01bdg4eefg88b5g85d9ce46adc6" version="1">Matriphagous Child</content>
-	<!-- "" --> <content contentuid="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1">Bulette Egg</content>
-	<!-- "" --> <content contentuid="h44760295ge57cg406fg823dg26e23a428262" version="1">Mega Mimic</content>
-	<!-- "" --> <content contentuid="h8c1fd0bega97ag4c3fg9fa3ge6074fa1131d" version="1">HP Randomized</content>
-	<!-- "" --> <content contentuid="he2ab4b79g7d6dg47e1gb6ebg6b66a07aa988" version="1">Spirits Of The Forge</content>
-	<!-- "" --> <content contentuid="h01b9fb09ga722g4b21g8e51g165abd13c625" version="1">Desecrating this may anger the spirits.</content>
-	<!-- "" --> <content contentuid="h11a503e2g637bg46a9g8f9cg068a0d610b33" version="1">Grym 2.0</content>
-	<!-- "" --> <content contentuid="hc94a827cg6de3g4273gaa11gd97ab295bcfd" version="1">Spirit of the Forge</content>
-
-	<!-- "" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
-	<!-- "" --> <content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
-	<!-- "" --> <content contentuid="h1e36a6ddg9d3ag4ac2g8bb5gea0c3aacb0fe" version="1">Variable HP</content>
-	<!-- "" --> <content contentuid="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1">Destroying this tombstone will anger the spirits of the forge.&lt;br&gt;&lt;br&gt;Turns on Grym anti-cheese mode/hard mode. Killing Grym in this mode rewards you with a pet.&lt;br&gt;&lt;br&gt;The ghosts are supposed to be unkillable and die with Grym.</content>
-	<!-- "" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
-	<!-- "" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
-	<!-- "" --> <content contentuid="h9db59951gef15g4775gab79g709bcbb11853" version="1">Shadow-Infused Villager</content>
-
-	<!-- "" --> <content contentuid="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1">Wooden Chest with a Hole Gnawed in the Corner</content>
-	<!-- "" --> <content contentuid="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1">Necrofex</content>
-	<!-- "" --> <content contentuid="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1">The Spider King?</content>
-	<!-- "" --> <content contentuid="h399fcc06g1770g4184g8e29g9cf028d95946" version="1">The Spider King</content>
-	<!-- "" --> <content contentuid="hb90411f4g08beg467dg8825g77b572340d90" version="1">Summon Juvenile Dragon</content>
-	<!-- "" --> <content contentuid="hc88d706ag5390g41f9gbfe6gdc17d182da71" version="1">Breaking this tombstone will summon the juvenile red dragon with the bridge githyanki.&lt;br&gt;&lt;br&gt;Save before breaking this, no takebacksies.&lt;br&gt;&lt;br&gt;This gravestone is just a placeholder to get the event working that I can customize later.</content>
-	<!-- "" --> <content contentuid="hfccde3b3g7b1ag4386g98b9g76b9750aca6e" version="1">Hill Giant</content>
-	<!-- "" --> <content contentuid="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1">Team Trajectile</content>
-	<!-- "" --> <content contentuid="ha03d2997geeedg4348g87b9g3f8b6f695515" version="1">Raunchy Succubus</content>
-	<!-- "" --> <content contentuid="h6bd23a61gb09fg447eg9631g2453c101ad63" version="1">Randy Incubus</content>
-	<!-- "" --> <content contentuid="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1">Molly Molly Molly</content>
-	<!-- "" --> <content contentuid="hdeb59186gf202g4468gac92gf1542bae1d28" version="1">Team Trajectile is making good on their debt to you for freeing them.&lt;br&gt;&lt;br&gt;Speak to each member with the player that wants to control them.</content>
-
-	<!-- ==================================== Local characters ==================================== -->
-
-	<!-- "1119bea0-a63f-4617-99ab-7f0af17bfdf4" --> <content contentuid="h1da10680gae78g4872gb9c5ged84f8b00f0d" version="1">Oof</content>
-	<!-- "1119bea0-a63f-4617-99ab-7f0af17bfdf4" --> <content contentuid="h5b53a934g6880g42abgbd42g88f087f750ce" version="1">The Clumsiest Ogre</content>
-	<!-- "MMM_GROVEBANDIT" --> <content contentuid="hce229af4gbc76g4d0cgb996g7f862250c84e" version="1">Grove Bandit</content>
+	<!-- "533cfc38-9097-4b0d-b457-e78719463757" --> <content contentuid="h44760295ge57cg406fg823dg26e23a428262" version="1">Mega Mimic</content>
+	<!-- "MMM_LOLTHEVENT" --> 						<content contentuid="hccd1da1agb580g477ega809gfd4b8aaa2745" version="1">Servant of Lolth</content>
+	<!-- "MMM_BULETTEBABY" --> 						<content contentuid="h463cafffgf249g4b27g819cgede1abbb3a05" version="1">Baby Bulette</content>
+	<!-- "MMM_BULETTEBABY" --> 						<content contentuid="h57bd59d0g01bdg4eefg88b5g85d9ce46adc6" version="1">Matriphagous Child</content>
+	<!-- "14541d9b-7fcc-4cd4-adde-2a36ea204163" --> <content contentuid="h2c8a8f7bg50cag4f2fg803bg01ef0297ee65" version="1">Ol' Gregg</content>
+	<!-- "14541d9b-7fcc-4cd4-adde-2a36ea204163" --> <content contentuid="hcd2d7141g821ag44b3gb0e8gacf9c9bd5a84" version="1">Has a downstairs mix-up</content>
+	<!-- "a251f7c6-5a4e-49d9-984b-501c8a3aba65" --> <content contentuid="h11a503e2g637bg46a9g8f9cg068a0d610b33" version="1">Grym 2.0</content>
+	<!-- "MMM_FORGEGHOST" --> 						<content contentuid="hc94a827cg6de3g4273gaa11gd97ab295bcfd" version="1">Spirit of the Forge</content>
 
 	<!-- "42bd9bf1-80d8-42ee-a9a1-312ce9e630a0" --> <content contentuid="h008939bcgc53cg4019gb712g771462126079" version="1">Cuckles</content>
 	<!-- "2f25f6aa-16e8-4477-8de3-593561147a76" --> <content contentuid="hdda8affcgc54dg4736g9d84g6edc8eb15947" version="1">Githyanki Captain</content>
@@ -120,36 +81,42 @@
 	<!-- "hf2c43ec8gdd41g4161gb0f1gc0d284545e79" --> <content contentuid="hf2c43ec8gdd41g4161gb0f1gc0d284545e79" version="1">Absolute Necromancer</content>
 	<!-- "e3f4450b-b21a-4286-bdcc-4103dd122db6" --> <content contentuid="h1c70382dgd34cg4ab3g995dg96978e35bdf8" version="1">Absolute Chaos Mage</content>
 	<!-- "c4697028-cf81-4bcf-97d5-4ac54a90bc39" --> <content contentuid="hb8ff1536gedb8g4842ga03aga2ca58b2c5ad" version="1">Zealot of the Absolute</content>
+	<!-- "be856487-d5f9-4b54-992f-6ea6cb1e8c01" --> <content contentuid="h8f6ae4f2g5153g4fefga23eg94ab2d395381" version="1">Yani</content>
+	<!-- "MMM_GITHPRISONER" --> 					<content contentuid="h17ddf8efgc89dg4988g926dgd9b8e7648789" version="1">Prisoner</content>
 	<!-- "1c524a48-5618-4115-9653-076dae88cb76" --> <content contentuid="h01576057g6afag434dg89aeg376ebe092d5f" version="1">Kara'i</content>
 	<!-- "30db150e-2e0a-4dfa-b142-13ef8e2f0b42" --> <content contentuid="hb0474891gf5d9g4e65g810dg074163746dfd" version="1">Catfey</content>
 	<!-- "2c3b16ad-77d1-42b9-8a46-0e52069917fb" --> <content contentuid="hb3316416gb321g47e7gb7deg3b5bf964fade" version="1">Zio</content>
 	<!-- "1c4b58c5-ab99-4f8c-b028-48dabff63df2" --> <content contentuid="h27e98207gfc05g4d8dg84f4g55aba817c51f" version="1">Iek'd</content>
 	<!-- "9a2c3864-736f-4260-bfa3-c59c49d5938c" --> <content contentuid="hae554aa9gbb38g4a0dg9c80g9cbc36e99594" version="1">Ci'e'sm</content>
-	<!-- "" --> <content contentuid="hbe0fdec6g85aeg4d73gb118g1039eaf44d8b" version="1">Gith Student</content>
-	<!-- "" --> <content contentuid="hcff55ef5ga948g4095g91dag4ef0f9b3e54c" version="1">Cathedral Guard</content>
+	<!-- "" --> 									<content contentuid="hbe0fdec6g85aeg4d73gb118g1039eaf44d8b" version="1">Gith Student</content>
+	<!-- "" --> 									<content contentuid="hcff55ef5ga948g4095g91dag4ef0f9b3e54c" version="1">Cathedral Guard</content>
 	<!-- "cf1334ef-51dc-4b3e-a78c-51db5bbb2e4a" --> <content contentuid="h256cda2egb448g40e3g8947g27c7b6976571" version="1">High Gish'ra F'a'de</content>
 	<!-- "2a355838-6605-4087-b96c-a592b31eff2d" --> <content contentuid="h99f545bbgf55eg439egb624g02f61dce331c" version="1">Ember Gish'ra Hel'dom</content>
 	<!-- "f1ded2a0-26b6-4854-b8bc-aa373c5a9589" --> <content contentuid="h5a0606bega98dg4be0g8436g8e1fe6fbf688" version="1">Konran</content>
 	<!-- "6c8746e0-c539-48da-bc7e-266f65bc606e" --> <content contentuid="h99526adfgbd9cg4f9cg850dga2e19ba818f3" version="1">Kemono</content>
 	<!-- "54ce2dee-7a19-4192-8687-b1d3a84b8c9e" --> <content contentuid="h5c68f468g9a04g415dga98fg1f245e6c4077" version="1">Salo</content>
 	<!-- "b3d4d2e6-a6fe-4860-a951-3f893633f716" --> <content contentuid="hb7382d23ge4f1g4fefg899bgdc356c10a036" version="1">Marlow</content>
-	<!-- "MMM_ESTHERMERC" --> <content contentuid="h45ad82efgfea9g4f85gae2egc942a348a737" version="1">Lady Esther's Bodyguard</content>
+	<!-- "MMM_ESTHERMERC" --> 						<content contentuid="h45ad82efgfea9g4f85gae2egc942a348a737" version="1">Lady Esther's Bodyguard</content>
 	<!-- "e4c919df-5e52-4a68-ab65-4d550debfcdb" --> <content contentuid="hec731007gbcbdg4538g8505g899c7cb35e61" version="1">Spirit of Dawnmaster Vaseid</content>
 
-	<!-- "MMM_SCGITH_SOUTHDOOR" --> <content contentuid="he739c904g40f3g45b3g9d55g9c071d5a7414" version="1">Shadow-Cursed Githyanki</content>
+	<!-- "MMM_SCGITH_SOUTHDOOR" --> 				<content contentuid="he739c904g40f3g45b3g9d55g9c071d5a7414" version="1">Shadow-Cursed Githyanki</content>
 	<!-- "3c9e62e8-b85f-4c5d-a0c8-9efa8f49516a" --> <content contentuid="ha1c633f6gccc7g41b2ga24eg312c2ff133ae" version="1">Shadow-Cursed Toilet Guy</content>
-	<!-- "MMM_SHADOWFAMILY" --> <content contentuid="h053087f7g094ag46a8ga247gb924a10abbc0" version="1">Shadow-Cursed Family</content>
-	<!-- "MMM_HARPERDRUIDBATTLEFIELD" --> <content contentuid="hffacf774g2884g4191gbb7fg6a39cd2fbc20" version="1">Restless Druid</content>
-	<!-- "MMM_HARPERDRUIDBATTLEFIELD" --> <content contentuid="ha19c305bge042g4d17g845eg721c914dba4f" version="1">Restless Harper</content>
-	<!-- "MMM_SHADOWHARPERDRUID1" --> <content contentuid="h7cdde728gdeb1g4054g8162g318d1ae486d2" version="1">Shadow-Cursed Druid</content>
-	<!-- "MMM_SHADOWHARPERDRUID1" --> <content contentuid="hfaa209c9g9f5fg405eg8f7fg3b4db06a33ec" version="1">Shadow-Cursed Harper</content>
+	<!-- "MMM_SHADOWFAMILY" --> 					<content contentuid="h053087f7g094ag46a8ga247gb924a10abbc0" version="1">Shadow-Cursed Family</content>
+	<!-- "MMM_HARPERDRUIDBATTLEFIELD" --> 			<content contentuid="hffacf774g2884g4191gbb7fg6a39cd2fbc20" version="1">Restless Druid</content>
+	<!-- "MMM_HARPERDRUIDBATTLEFIELD" --> 			<content contentuid="ha19c305bge042g4d17g845eg721c914dba4f" version="1">Restless Harper</content>
+	<!-- "MMM_SHADOWHARPERDRUID1" --> 				<content contentuid="h7cdde728gdeb1g4054g8162g318d1ae486d2" version="1">Shadow-Cursed Druid</content>
+	<!-- "MMM_SHADOWHARPERDRUID1" --> 				<content contentuid="hfaa209c9g9f5fg405eg8f7fg3b4db06a33ec" version="1">Shadow-Cursed Harper</content>
 	<!-- "0683b560-c29e-4a0b-b15f-f02703d3e219" --> <content contentuid="h0a15fdf0ge1b7g4badga0cbg882e4c7835df" version="1">Plouf?</content>
+	<!-- "0683b560-c29e-4a0b-b15f-f02703d3e219" --> <content contentuid="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1">The Spider King?</content>
+	<!-- "45437558-8c7b-45b3-8a4f-4201643ebe9a" --> <content contentuid="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1">Necrofex</content>
 	<!-- "df0c3aa8-1d07-49f8-b035-d04d0f5684d1" --> <content contentuid="h1edac836ge5f1g486ega20fg2b507a35d172" version="1">Damon Eyesz</content>
 	<!-- "c63affdb-c020-494d-a1e9-5fcb7819a82b" --> <content contentuid="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1">Rekin Ky</content>
 	<!-- "9136f7ba-1d20-48c8-94ab-5db5ead804d1" --> <content contentuid="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1">Edin Mesic</content>
+	<!-- "9136f7ba-1d20-48c8-94ab-5db5ead804d1" --> <content contentuid="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1">Shadow-Infused Druid</content>
 	<!-- "a2d93742-9537-438e-b396-34d1f312f059" --> <content contentuid="h94b840a3ge66bg43b4g9425g829862494871" version="1">Farsee Yer</content>
+	<!-- "a2d93742-9537-438e-b396-34d1f312f059" --> <content contentuid="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1">Shadow-Infused Harper</content>
 	<!-- "b8b9c59f-4743-404a-b59f-4287d02003b2" --> <content contentuid="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1">Harry Ispup</content>
-	<!-- "MMM_CRAZEDSQUIRREL" --> <content contentuid="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1">Shadow-Cursed Squirrel</content>
+	<!-- "MMM_CRAZEDSQUIRREL" --> 					<content contentuid="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1">Shadow-Cursed Squirrel</content>
 	<!-- "42ab304e-a3d3-41e0-878a-f54241e75478" --> <content contentuid="h6fac55bag750ag499dg905fgc8c572ae9f53" version="1">Andi</content>
 	<!-- "dff8911e-f42c-4825-854c-8f6793ab78a7" --> <content contentuid="h823e08b8g8aafg4b45g8355gb895940b69e8" version="1">Child-like Wraith</content>
 	<!-- "dff8911e-f42c-4825-854c-8f6793ab78a7" --> <content contentuid="h664cccc3gfba2g4429g8c58g7a1bf26442db" version="1">Andi</content>
@@ -161,12 +128,19 @@
 	<!-- "3204422c-e6e7-4937-a418-3f113e88b994" --> <content contentuid="h4d4c3c52g6e35g43aag88feg883819b115a0" version="1">Shadar-kai Gloom Weaver</content>
 	<!-- "77bde205-4dcf-4978-a452-cb686bc1db1c" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie May</content>
 
-	<!-- "MMM_RIVINGTONPATROL" --> <content contentuid="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1">Githyanki Patrol</content>
+	<!-- "5bcd9958-dbe6-402a-9f7b-4bcf09a16974" --> <content contentuid="hfccde3b3g7b1ag4386g98b9g76b9750aca6e" version="1">Hill Giant</content>
+	<!-- "MMM_RIVINGTONPATROL" --> 					<content contentuid="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1">Githyanki Patrol</content>
 
 	<!-- ==================================== Passives ==================================== -->
 
 	<!-- "MMM_OofClumsy" --> <content contentuid="h354cad17g0278g45d9g993dg673b5183ab96" version="1">Clumsy</content>
 	<!-- "MMM_OofClumsy" --> <content contentuid="hb1b0340age5c3g4696ga0d7gdbe438a33fe8" version="1">This ogre was born with two left everything, how is someone this clumsy?</content>
+
+	<!-- "MMM_TROLLREGEN" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regen</content>
+	<!-- "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls.</content>
+
+	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEBASE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 	<content contentuid="hfc16a780g3998g47e7g9bb5g842118b9e586" version="1">Fireball Retaliation</content>
+	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 									<content contentuid="hd8c12fd6gaaf0g4e26ga6f4g513c0e821775" version="1">Retaliates with a fireball.</content>
 
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.</content>
@@ -181,25 +155,25 @@
 
 	<!-- "MMM_TEAMTRAJECTILEBLASTOFF" --> <content contentuid="h18b068aege3a3g42e7ga1a5gb506a2c348f5" version="1">Blast Off!</content>
 
-	<!-- "MMM_OOFKLUTZ" --> <content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
-	<!-- "MMM_OOFKLUTZ" --> <content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up.</content>
-	<!-- "MMM_OOFSLIPPED" --> <content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
-	<!-- "MMM_OOFSLIPPED" --> <content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.</content>
-	<!-- "MMM_OOFSPLINTER" --> <content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
-	<!-- "MMM_OOFSPLINTER" --> <content contentuid="h9de451d8g0962g40b0g83fcg8e64ccd07345" version="1">Oof got a splinter, inflicting &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.</content>
-	<!-- "MMM_OOFDISARMED" --> <content contentuid="hf6062eeegce12g4f15gaff8g698a47f35a2f" version="1">Oof's weapon slipped out of his hands!</content>
-	<!-- "MMM_OOFDISARMED" --> <content contentuid="hd1b30279gb513g4bbaga881g5725bfd1efe1" version="1">Oof dropped his weapon mid-battle, how embarassing.</content>
-	<!-- "MMM_OOFDRUNK" --> <content contentuid="h3aee92fcg4fd8g4062g8537gf4e0a778a315" version="1">Oof drank alcohol instead of a potion!</content>
-	<!-- "MMM_OOFDRUNK" --> <content contentuid="h9cc843b9g9959g4316ga007g6c655f48577e" version="1">Oof gave himself a buzz, inflicting &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; for 1 turn.</content>
-	<!-- "MMM_OOFBUMBLE" --> <content contentuid="h5eacd23ag8d89g45dcg807egfab6a9dd5855" version="1">Oof bumbled the flask he was going to throw!</content>
-	<!-- "MMM_OOFBUMBLE" --> <content contentuid="h349ec00fg53b4g4808ga5fege29d72db8f8e" version="1">Oof dropped his flask on himself, whoops.</content>
+	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
+	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up.</content>
+	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
+	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.</content>
+	<!-- "MMM_OOFSPLINTER" --> 	<content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
+	<!-- "MMM_OOFSPLINTER" --> 	<content contentuid="h9de451d8g0962g40b0g83fcg8e64ccd07345" version="1">Oof got a splinter, inflicting &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.</content>
+	<!-- "MMM_OOFDISARMED" --> 	<content contentuid="hf6062eeegce12g4f15gaff8g698a47f35a2f" version="1">Oof's weapon slipped out of his hands!</content>
+	<!-- "MMM_OOFDISARMED" --> 	<content contentuid="hd1b30279gb513g4bbaga881g5725bfd1efe1" version="1">Oof dropped his weapon mid-battle, how embarassing.</content>
+	<!-- "MMM_OOFDRUNK" --> 	<content contentuid="h3aee92fcg4fd8g4062g8537gf4e0a778a315" version="1">Oof drank alcohol instead of a potion!</content>
+	<!-- "MMM_OOFDRUNK" --> 	<content contentuid="h9cc843b9g9959g4316ga007g6c655f48577e" version="1">Oof gave himself a buzz, inflicting &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; for 1 turn.</content>
+	<!-- "MMM_OOFBUMBLE" --> 	<content contentuid="h5eacd23ag8d89g45dcg807egfab6a9dd5855" version="1">Oof bumbled the flask he was going to throw!</content>
+	<!-- "MMM_OOFBUMBLE" --> 	<content contentuid="h349ec00fg53b4g4808ga5fege29d72db8f8e" version="1">Oof dropped his flask on himself, whoops.</content>
 	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="h51c78884g9b73g4870gbaa5g3669a7112fc1" version="1">Oof pulled his hamstring!</content>
 	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="hee83e74bg218cg40begb421g71fe847c17cf" version="1">Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.</content>
 
+	<!-- "MMM_JEALOUSEX" --> 		<content contentuid="hb7d4ce2eg02ecg4c15g91d9g337811359364" version="1">Raging Ex-Boyfriend</content>
 	<!-- "MMM_WILL_O_WISP_GLOW" --> <content contentuid="h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd" version="1">Wisp Effect</content>
-
-	<!-- "MMM_MATRIPHAGY" --> <content contentuid="h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7" version="1">Matriphagy</content>
-	<!-- "MMM_MATRIPHAGY" --> <content contentuid="h897abff9g3dfag4b99gb37fg84d3b6a5306b" version="1">Baby bulette's kill their mother and eat her after birth.</content>
+	<!-- "MMM_MATRIPHAGY" --> 		<content contentuid="h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7" version="1">Matriphagy</content>
+	<!-- "MMM_MATRIPHAGY" --> 		<content contentuid="h897abff9g3dfag4b99gb37fg84d3b6a5306b" version="1">Baby bulette's kill their mother and eat her after birth.</content>
 
 	<!-- "MMM_LATHANDERSBLESSING" --> <content contentuid="h7d02862fg1f4eg47e7g9f43g6e32bd632763" version="1">Lathander's Blessing</content>
 	<!-- "MMM_LATHANDERSBLESSING" --> <content contentuid="h88d02f89g21c2g4b8cgba4egedbfe8fea673" version="1">Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.</content>
@@ -216,18 +190,30 @@
 
 	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
 	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
+	
+	<!-- "" --> <content contentuid="h56e21dfdg3a15g476fg9c1eg728d2cf8641d" version="1">Damaged</content>
+	<!-- "" --> <content contentuid="he6731f16g3826g485cg8c1ag80da399c144e" version="1">Creature has been damaged in the crash.</content>
 
 	<!-- ==================================== Spells ==================================== -->
 
-	<!-- "MMM_Target_HOOKSHOT" --> <content contentuid="h9319d7c9g2adfg4df9g81f5g50e327fa3b2d" version="1">Hookshot</content>
-	<!-- "MMM_Target_HOOKSHOT" --> <content contentuid="h3f995852g2f75g459dgb7d2g7e7830a5f01c" version="1">Pull an entity towards you with great force.</content>
+	<!-- "MMM_Target_HOOKSHOT" --> 		   <content contentuid="h9319d7c9g2adfg4df9g81f5g50e327fa3b2d" version="1">Hookshot</content>
+	<!-- "MMM_Target_HOOKSHOT" --> 		   <content contentuid="h3f995852g2f75g459dgb7d2g7e7830a5f01c" version="1">Pull an entity towards you with great force.</content>
 	<!-- "MMM_Shout_MassDimensionDoor" --> <content contentuid="h685ff502g32cbg47b2g8a69ga9eeff1a6669" version="1">Mass Dimension Door</content>
 	<!-- "MMM_Shout_MassDimensionDoor" --> <content contentuid="he30eef3fg2928g459bg87d1gc5fb3822eb7e" version="1">The best way to run away.</content>
 
-	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> <content contentuid="h29594e08gc49bg4558ga2bfg863f2ed53f86" version="1">Weakened Mind Blast</content>
-	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> <content contentuid="h7f32d08dgdf62g4edagacccg9a3f88aaa0a5" version="1">Spew forth a conical wave of psychic energy.</content>
+	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> 	<content contentuid="h29594e08gc49bg4558ga2bfg863f2ed53f86" version="1">Weakened Mind Blast</content>
+	<!-- "MMM_Zone_MindBlast_MindFlayer_Weakened" --> 	<content contentuid="h7f32d08dgdf62g4edagacccg9a3f88aaa0a5" version="1">Spew forth a conical wave of psychic energy.</content>
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h5cf1cc21g530cg4683ga782g7cf06e38fdfb" version="1">Weakened Tentacle Whip</content>
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h7fcc7083g6eafg483cg8853gd0278ade0d1d" version="1">Lash out with your tentacles.</content>
+
+	<!-- "MMM_Target_JUVENILERED_SLAM" --> 						 <content contentuid="hb143b034g604fg4be5g847eg4299dd230646" version="1">Juvenile Slam</content>
+	<!-- "MMM_Zone_BreathWeapon_Fire_Cone_JuvenileRedDragon" --> <content contentuid="h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5" version="1">Juvenile Fire Breath</content>
+	<!-- "MMM_Projectile_JUVENILERED_RETALIATEFIREBALL" --> 	 <content contentuid="he04c9a4fg2f0cg4095g852bg9e88b8274d6e" version="1">Juvenile Fireball</content>
+	<!-- "MMM_Shout_JUVENILERED_FEAR" --> 						 <content contentuid="hac02aa59gcf74g43adg922cg0e7341d1e693" version="1">Juvenile Fear</content>
+
+
+	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="h46580d81gd418g4a86gb260gae11d8393cde" version="1">Consume Life</content>
+	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="hce513b30g93c9g4387gbac6gaff3bd113aaf" version="1">Try to consume what's left of a targets life essence.</content>
 
 	<!-- TODO: -->
 	<!-- "" --> <content contentuid="h94139211gb20cg42e3gbcacgf7b9553c2cee" version="1">Paralyzing Ray</content>
@@ -243,11 +229,11 @@
 	<!-- "" --> <content contentuid="h8c86d426g08d4g41e3gacdagdf2abdc308d4" version="1">Sleep Ray</content>
 	<!-- "" --> <content contentuid="ha909f49eg7066g4896gac14g668491b74477" version="1">Sleep Ray D</content>
 
-	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> <content contentuid="hb2c010feg1b1eg419fg9d2bgf2ed3d5be7d1" version="1">Rocket Punch</content>
-	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> <content contentuid="he0956d1agc340g4a81g923cgd61262d9119a" version="1">Grym fires his fist to hit enemies at range.</content>
+	<!-- "MMM_Projectile_GRYMROCKETPUNCH" -->		  <content contentuid="hb2c010feg1b1eg419fg9d2bgf2ed3d5be7d1" version="1">Rocket Punch</content>
+	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> 		  <content contentuid="he0956d1agc340g4a81g923cgd61262d9119a" version="1">Grym fires his fist to hit enemies at range.</content>
 	<!-- "MMM_GRYMD", "MMM_Shout_GRYMDEVASTATION" --> <content contentuid="h8d24bb07geda3g4571gac22gf48d43994f09" version="1">Grym Devastation</content>
-	<!-- "MMM_GRYMD" --> <content contentuid="h2847cc74g0f06g4a24gbf29g8d8be5803d51" version="1">Under unknown threat Grym sets off a massive runepowder charge.</content>
-	<!-- "MMM_Shout_GRYMDEVASTATION" --> <content contentuid="hbbf58b0cg7be3g4140gac82g9807c584dbb3" version="1">If someone isn't within 20m of Grym he will destroy the forge, and everyone with it.</content>
+	<!-- "MMM_GRYMD" --> 							  <content contentuid="h2847cc74g0f06g4a24gbf29g8d8be5803d51" version="1">Under unknown threat Grym sets off a massive runepowder charge.</content>
+	<!-- "MMM_Shout_GRYMDEVASTATION" --> 			  <content contentuid="hbbf58b0cg7be3g4140gac82g9807c584dbb3" version="1">If someone isn't within 20m of Grym he will destroy the forge, and everyone with it.</content>
 
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h5ec55e3cgc221g4386g92ecg1dd144725b64" version="1">Consume</content>
 	<!-- "MMM_Target_CONSUMEBULETTE", "MMM_Target_CONSUMESPIDER" --> <content contentuid="h9c46b1c7g7221g43afg9115g26e57c25dc7f" version="1">Devours a corpse.</content>
@@ -257,20 +243,34 @@
 	<!-- "MMM_Zone_Sunbeam_Lathander" --> <content contentuid="hc1cf6acbge2a7g4b28g9edeg8310c1412032" version="1">Lathander's Sunbeam</content>
 	<!-- "MMM_Target_FlameStrike_Lathander" --> <content contentuid="hae978ab4g7decg4519ga168ga38e1cbdc514" version="1">Lathander's Flame Strike</content>
 
-	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN", "MMM_BLESSINGOFRAVENQUEEN" --> <content contentuid="hf8ea421dg7f92g4e16gb569g4cbd023a8f36" version="1">Blessing of the Raven Queen</content>
-	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN" --> <content contentuid="habe82285g651cg46a0ga97ag3146cba4bcc1" version="1">Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.</content>
-	<!-- "MMM_BLESSINGOFRAVENQUEEN" --> <content contentuid="h60bb1d22gcaceg4656g9a29gd2540ffd8711" version="1">Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.</content>
+	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN", "MMM_BLESSINGOFRAVENQUEEN" -->  <content contentuid="hf8ea421dg7f92g4e16gb569g4cbd023a8f36" version="1">Blessing of the Raven Queen</content>
+	<!-- "MMM_Target_BLESSINGOFRAVENQUEEN" --> 								<content contentuid="habe82285g651cg46a0ga97ag3146cba4bcc1" version="1">Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.</content>
+	<!-- "MMM_BLESSINGOFRAVENQUEEN" --> 									<content contentuid="h60bb1d22gcaceg4656g9a29gd2540ffd8711" version="1">Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.</content>
 
 	<!-- "MMM_Target_GRYMMODELN" --> <content contentuid="h7fed7d1dg5e9dg4c57gaf95g4950c4a6164a" version="1">Summon GRYM MODEL-N</content>
 	<!-- "MMM_Target_GRYMMODELN" --> <content contentuid="hf1d6fa08g6659g4953g9604gbf7fb7e88eb4" version="1">Summon a nano model of Grym.</content>
 
 	<!-- ==================================== Objects ==================================== -->
 
+	<!-- "c9e44fb1-98b5-4677-930f-dceee8a52200" --> <content contentuid="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1">Boulder Blocking Mineshaft</content>
+	<!-- "2dff1009-962a-4f24-a94d-76253102237a" --> <content contentuid="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1">Suspicious Barrel</content>
+	<!-- "ef81ed44-57a8-4b5b-a9c3-c93be743c0ad" --> <content contentuid="hebaab843gf038g414ag966fg3e492b60d084" version="1">Questionably Soggy Towel</content>
+	<!-- "ef81ed44-57a8-4b5b-a9c3-c93be743c0ad" --> <content contentuid="h5f851559g3dd2g4df3g9631geb1d9aa0bb08" version="1">This towel is a bit soggy and has an... odd... smell...</content>
+	<!-- "c1525d16-e04a-4020-aacf-1793ce7bad0a", "MMM_BULETTEEGG_CONTAINER" --> <content contentuid="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1">Bulette Egg</content>
+	<!-- "c4fe6d69-b19a-40e6-b01f-f2e7e3fdec9d" --> <content contentuid="hef693685gd587g4c8eg8bc8g4817c000fec6" version="1">Shoe Full of Bailey's</content>
+	<!-- "c4fe6d69-b19a-40e6-b01f-f2e7e3fdec9d" --> <content contentuid="h22f52608gfce7g430fg8783g9b8e185d8c05" version="1">A shoe full of Bailey's liqueur, have you ever drank it this way?</content>
+	<!-- "269f30ee-fad4-4632-aec3-68fc7b6d1176" --> <content contentuid="h560467efgc5bfg4e8dgb926gcedf66587d33" version="1">Wooden Chest with a Hole Gnawed in the Corner</content>
+
+	<!-- "60a347be-473c-4b4f-b7a1-7622961e8659" --> <content contentuid="hb90411f4g08beg467dg8825g77b572340d90" version="1">Summon Juvenile Dragon</content>
+	<!-- "Wildlands.lua" --> <content contentuid="hc88d706ag5390g41f9gbfe6gdc17d182da71" version="1">Destroying this tombstone will summon a Juvenile Red Dragon alongside the Githyanki.&lt;br&gt;&lt;br&gt;This cannot be undone. Save prior to destroying this tombstone and attempting the encounter.</content>
+	<!-- "02c3342c-d419-4ccc-824d-7ed706d20dee" --> <content contentuid="he2ab4b79g7d6dg47e1gb6ebg6b66a07aa988" version="1">Spirits Of The Forge</content>
+	<!-- "Wildlands.lua" --> 						<content contentuid="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1">Destroying this tombstone will anger the Spirits of the Forge.&lt;br&gt;&lt;br&gt;Turns on Grym's anti-cheese/hard mode. Killing Grym in this mode rewards you with a pet.&lt;br&gt;Note: the ghosts are supposed to be invulnerable, and they will die with Grym.&lt;br&gt;&lt;br&gt;This cannot be undone. Save prior to destroying this tombstone and attempting the encounter.</content>
+
 	<!-- "ef4e5e37-6bf9-4f2b-83a3-9d7a4695ea3a" --> <content contentuid="h8cdc10fdgaa61g4ec2g86f7g95aea1f6eb90" version="1">Scroll of Summon GRYM MODEL-N</content>
 	<!-- "ef4e5e37-6bf9-4f2b-83a3-9d7a4695ea3a" --> <content contentuid="hf338ba8cge707g4f98g9144gd88cea4c5ba2" version="1">Summons Grym Model-N. Not consumed on use.</content>
 
 	<!-- "803e4140-5d5d-45d1-bc01-af309f8d94ee" --> <content contentuid="h4676e885g96d0g4556g98d3ge88d8726ebf1" version="1">Book of Demonic Ecstasy</content>
-	<!-- "MMM_BODE" --> <content contentuid="h5705dcf9gd6b9g4277g92f6g783809657858" version="1">ሃዐ፱ ሠⶴዐ ዪቹልጋነ ፕⶴጎነ ነ፱ጮጮዐክነ ፱የዐክ ሃዐ፱ ፕⶴቹ ጎክነልፕጎል፪ረቹ ፕⶴጎዪነፕ ዐቻ ፕⶴቹ ርረዐጎነፕቹዪ ዐቻ ⶴዐዪክሃ ⶴቹረረ ፕዐ ቹሸፕዪልርፕ ቻዪዐጮ ሃዐ፱ ልረረ ሃዐ፱ዪ ረ፱ነፕ.</content>
+	<!-- "MMM_BODE" --> 							<content contentuid="h5705dcf9gd6b9g4277g92f6g783809657858" version="1">ሃዐ፱ ሠⶴዐ ዪቹልጋነ ፕⶴጎነ ነ፱ጮጮዐክነ ፱የዐክ ሃዐ፱ ፕⶴቹ ጎክነልፕጎል፪ረቹ ፕⶴጎዪነፕ ዐቻ ፕⶴቹ ርረዐጎነፕቹዪ ዐቻ ⶴዐዪክሃ ⶴቹረረ ፕዐ ቹሸፕዪልርፕ ቻዪዐጮ ሃዐ፱ ልረረ ሃዐ፱ዪ ረ፱ነፕ.</content>
 
 	<!-- ==================================== Objects - Unimplemented -->
 
@@ -280,24 +280,24 @@
 
 	<!-- ==================================== Voice barks and overheads ==================================== -->
 
-	<!-- "MMM_ADAMCOMBAT" --> <content contentuid="h729ee576g4c45g49a9g93deg3f8770c64a99" version="1">"Hey fellas I found the hole!"</content>
-	<!-- "MMM_MIKECOMBAT" --> <content contentuid="h2da6da02gfe2eg4868gb8b5g1cbaf952e430" version="1">"Time to show you the Ultimate Hero!"</content>
+	<!-- "MMM_ADAMCOMBAT" --> 	<content contentuid="h729ee576g4c45g49a9g93deg3f8770c64a99" version="1">"Hey fellas I found the hole!"</content>
+	<!-- "MMM_MIKECOMBAT" --> 	<content contentuid="h2da6da02gfe2eg4868gb8b5g1cbaf952e430" version="1">"Time to show you the Ultimate Hero!"</content>
 	<!-- "MMM_ADAMRUNAWAY1" --> <content contentuid="h36bab53ag8b42g4033ga00bgb7b6ec8b7d53" version="1">"You can't keep the ultimate hero down!"</content>
 	<!-- "MMM_MIKERUNAWAY1" --> <content contentuid="h8f985dd4g9e9dg4b05gb09dgdb9fb5cd776c" version="1">"Be kind to yourself... and me!"</content>
 	<!-- "MMM_LIAMRUNAWAY1" --> <content contentuid="hf3f93890g09d8g4335g8e90gd830786c6bc7" version="1">"Team Trajectile blasting off!"</content>
 
-	<!-- "MMM_20MOREHANDS" --> <content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">"Needs to be about 20% more hands!"</content>
-	<!-- "MMM_HANDPUN1" --> <content contentuid="h2d04da13g7833g42d5g91bfgfeac4aa4dc5b" version="1">"You could say I'm handy to have around!"</content>
-	<!-- "MMM_HANDPUN2" --> <content contentuid="h17227372g24cbg43eegbad0gf18516910e3c" version="1">"I always do my shopping second hand!"</content>
-	<!-- "MMM_HANDPUN3" --> <content contentuid="hdf72cab3gb02ag4d55gabc1g1182aa8c6625" version="1">"My collection is out of hand!"</content>
-	<!-- "MMM_HANDPUN4" --> <content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">"You're handling this fight very well!"</content>
-	<!-- "MMM_HANDPUN5" --> <content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">"I'm just a begger looking for hand outs!"</content>
-	<!-- "MMM_HANDPUN6" --> <content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">"Don't worry about my pets, they're all right!"</content>
+	<!-- "MMM_20MOREHANDS" --> 	<content contentuid="h55a1a753g3f63g468bg918bg16d7e196128b" version="1">"Needs to be about 20% more hands!"</content>
+	<!-- "MMM_HANDPUN1" --> 	<content contentuid="h2d04da13g7833g42d5g91bfgfeac4aa4dc5b" version="1">"You could say I'm handy to have around!"</content>
+	<!-- "MMM_HANDPUN2" --> 	<content contentuid="h17227372g24cbg43eegbad0gf18516910e3c" version="1">"I always do my shopping second hand!"</content>
+	<!-- "MMM_HANDPUN3" --> 	<content contentuid="hdf72cab3gb02ag4d55gabc1g1182aa8c6625" version="1">"My collection is out of hand!"</content>
+	<!-- "MMM_HANDPUN4" --> 	<content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">"You're handling this fight very well!"</content>
+	<!-- "MMM_HANDPUN5" --> 	<content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">"I'm just a begger looking for hand outs!"</content>
+	<!-- "MMM_HANDPUN6" --> 	<content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">"Don't worry about my pets, they're all right!"</content>
 
 	<!-- "MMM_CRECHEPRISONBREAK" --> <content contentuid="hd687428agad54g4f8fg87c4g96be185517d2" version="1">"Now's our chance, let's break out of here!"</content>
 
-	<!-- "MMM_ELLIEMAYSPEAK1" --> <content contentuid="hcf6746ebgef55g4a1ag928egc72846acf335" version="1">"Thank you so much for returning my beloved ring."</content>
-	<!-- "ReturnRingEvent()" --> <content contentuid="ha6267b39ga602g434cg9db1g557da2a3e17b" version="1">"May he who is kind and wise approach me for a blessing"&lt;br&gt;&lt;br&gt;The next character to interact with Ellie May will recieve a permanent &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; bonus.</content>
+	<!-- "MMM_ELLIEMAYSPEAK1" --> 	<content contentuid="hcf6746ebgef55g4a1ag928egc72846acf335" version="1">"Thank you so much for returning my beloved ring."</content>
+	<!-- "ReturnRingEvent()" --> 	<content contentuid="ha6267b39ga602g434cg9db1g557da2a3e17b" version="1">"May he who is kind and wise approach me for a blessing"&lt;br&gt;&lt;br&gt;The next character to interact with Ellie May will recieve a permanent &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; bonus.</content>
 
 	<!-- "MMM_SHADOWDRUIDSPEAK1" --> <content contentuid="h6b4af7ffgd3b8g42ebga2cag870ebd08159e" version="1">"...We...will..."</content>
 	<!-- "MMM_SHADOWDRUIDSPEAK2" --> <content contentuid="h30513e41g4555g48f3g92bcg524e474b7b08" version="1">"...stop..."</content>
@@ -309,24 +309,26 @@
 
 	<!-- "MMM_CHILDWRAITHSPEAK1" --> <content contentuid="ha7a913e7gc032g4447g9bd0g8fe86d05e35f" version="1">"Mummy and daddy don't want to play anymore.  Will you play with me?"</content>
 
-	<!-- "MMM_MORESPIDERS" --> <content contentuid="hd0841a90gf7bag49b8g8102gbbea903357d3" version="1">"Come to my aid spiders!"</content>
-	<!-- "MMM_EVENMORESPIDERS" --> <content contentuid="h54c22bb7g65ffg4003gaa94g4f4c0a472280" version="1">"Yes... YES! Come, eat the interlopers!"</content>
+	<!-- "MMM_MORESPIDERS" --> 		<content contentuid="hd0841a90gf7bag49b8g8102gbbea903357d3" version="1">"Come to my aid spiders!"</content>
+	<!-- "MMM_EVENMORESPIDERS" --> 	<content contentuid="h54c22bb7g65ffg4003gaa94g4f4c0a472280" version="1">"Yes... YES! Come, eat the interlopers!"</content>
 
 	<!-- "MMM_BALTHAZARSPEAK1" --> <content contentuid="h0c90b26cg0f4fg4590gb428g9667636d7d5c" version="1">"Such pathetic fools that lie here... Ah, fortuitous timing!  You should prove adequate to test this new spell."</content>
 	<!-- "MMM_BALTHAZARSPEAK2" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>
 
-	<!-- "MMM_HILLGIANTSPEAK" --> <content contentuid="h3e111ef0ga66dg4e35g8456g31749b1dc3f8" version="1">"ME WANT MORE CHICKEN!"</content>
+	<!-- "MMM_HILLGIANTSPEAK" --> 		<content contentuid="h3e111ef0ga66dg4e35g8456g31749b1dc3f8" version="1">"ME WANT MORE CHICKEN!"</content>
 	<!-- "MMM_RIVINGTONPATROLSPEAK" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name; get them!"</content>
 
-	<!-- "MMM_THIEFPIXIESPEAK" --> <content contentuid="hd60d014eg3cf4g4c79g93c6g0932f99fb837" version="1">"Just grab the treasure, idiots!"</content>
-	<!-- "MMM_THIEFPIXIESPEAK2" --> <content contentuid="h09738964g7614g4ab2ga782g4986f2888937" version="1">"Alright I'm out you dummies!"</content>
-	<!-- "MMM_TRAJECTILEBOSSSPEAK" --> <content contentuid="hcd6730cage385g4d93gb878gb14f555604a9" version="1">"Hey it's those guys again!"</content>
+	<!-- "MMM_THIEFPIXIESPEAK" --> 		<content contentuid="hd60d014eg3cf4g4c79g93c6g0932f99fb837" version="1">"Just grab the treasure, idiots!"</content>
+	<!-- "MMM_THIEFPIXIESPEAK2" --> 	<content contentuid="h09738964g7614g4ab2ga782g4986f2888937" version="1">"Alright I'm out you dummies!"</content>
+	<!-- "MMM_TRAJECTILEBOSSSPEAK" --> 	<content contentuid="hcd6730cage385g4d93gb878gb14f555604a9" version="1">"Hey it's those guys again!"</content>
 	<!-- "MMM_TRAJECTILEBOSSSPEAK2" --> <content contentuid="h90e4e0a2g2504g46f2g930eg45bc908911a4" version="1">"Quick, use the artifact we found!"</content>
 	<!-- "MMM_TRAJECTILEBOSSSPEAK3" --> <content contentuid="h4eee7168g6dd2g4bfcgbd87g369b54c5e339" version="1">"They're winning, let's get out of here!"</content>
 
-	<!-- "MMM_TRAJECTILEJAILSPEAK" --> <content contentuid="h15c18905g5b11g4ffdg813ag17e638fbb895" version="1">"We accidentally teleported into jail! Help us out!"</content>
+	<!-- "MMM_TRAJECTILEJAILSPEAK" --> 	<content contentuid="h15c18905g5b11g4ffdg813ag17e638fbb895" version="1">"We accidentally teleported into jail! Help us out!"</content>
 	<!-- "MMM_TRAJECTILEJAILSPEAK2" --> <content contentuid="he4a0c841gdd48g425agb055g895786911505" version="1">"We owe you one!"</content>
 	<!-- "MMM_TRAJECTILEJAILSPEAK3" --> <content contentuid="h35bf502eg1c6bg4f3bg8273g8824caddadc1" version="1">"...wait for Wiggles!"</content>
+
+	<!-- "Brainlands.lua" --> <content contentuid="hdeb59186gf202g4468gac92gf1542bae1d28" version="1">Team Trajectile is making good on their debt to you for freeing them.&lt;br&gt;&lt;br&gt;Speak to each member with the player that wants to control them.</content>
 
 	<!-- ==================================== Voice barks and overheads - Unimplemented -->
 
@@ -339,8 +341,8 @@
 
 	<!-- "" --> <content contentuid="h05b93046g12dfg4ef6gadd6g3e0ed4695ece" version="1">Trigger Point</content>
 	
-	<!-- "MMM_DETECTION_AURA_TEMPLATE" --> <content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
-	<!-- "MMM_DETECTION_TEMPLATE" --> <content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Condition</content>
+	<!-- "MMM_DETECTION_AURA_TEMPLATE" --> 	<content contentuid="h5c144b87gc7f4g4d26ga1e2g33a473163ee7" version="1">Detection Aura</content>
+	<!-- "MMM_DETECTION_TEMPLATE" --> 		<content contentuid="h6ea255a3g2862g42f0gb4d7gee5781a76a62" version="1">Detection Condition</content>
 
 	<!-- ==================================== ... ==================================== -->
 

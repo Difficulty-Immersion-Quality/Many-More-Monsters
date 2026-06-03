@@ -16,7 +16,7 @@
           </children>
         </node>
         <node id="ModuleInfo">
-          <attribute id="Author" type="LSWString" value="Rob Lapham" />
+          <attribute id="Author" type="LSWString" value="Palderon (Rob Lapham)" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
           <attribute id="Description" type="LSWString" value="Makes all added enemies give 0 exp. Will always be compatible with future versions. If something gave exp it's because I didn't assign it a custom exp table key, not because this needs updating." />
           <attribute id="Folder" type="LSWString" value="ManyMoreMonsters_ZeroExp" />

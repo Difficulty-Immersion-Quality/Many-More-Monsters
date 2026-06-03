@@ -4,7 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-			<!-- Voyeur Barrel -->
+			<!-- Suspicious Barrel -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1" />
@@ -41,7 +41,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Cave In Rock -->
+			<!-- Boulder Blocking Mineshaft -->
 				<node id="GameObjects">
 					<attribute id="CanShootThrough" type="bool" value="False" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1" />
@@ -82,7 +82,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Bulette Eggs -->
+			<!-- Bulette Egg - 1 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -123,6 +123,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 2 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -163,6 +164,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 3 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -203,6 +205,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 4 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -243,6 +246,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 5 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -283,6 +287,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 6 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -323,6 +328,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 7 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -363,6 +369,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 8 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -403,6 +410,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Bulette Egg - 9 -->
 				<node id="GameObjects">
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -443,7 +451,8 @@
 						</node>
 					</children>
 				</node>
-			<!-- Boss Difficulty Markers -->
+		<!-- Boss Difficulty Markers -->
+			<!-- Spirits Of The Forge -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="he2ab4b79g7d6dg47e1gb6ebg6b66a07aa988" version="1" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -492,6 +501,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Summon Juvenile Dragon -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="hb90411f4g08beg467dg8825g77b572340d90" version="1" />
 					<attribute id="Flag" type="int32" value="1" />

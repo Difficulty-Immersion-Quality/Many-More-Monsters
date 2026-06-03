@@ -1,7 +1,4 @@
 // ==================================== Variable HP ====================================
-// TODO: These are probably best to apply a status with a StackId to avoid any nonsense passive boost duplication that can take place. Refer to the mod Passive Boost Deduplicator by osirisofinternet.
-// data "StackId" "MMM_HPMODIFIER"
-// data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog;ApplyToDead;IgnoreResting"
 
 new entry "MMM_HPMODIFIER1"
 type "PassiveData"

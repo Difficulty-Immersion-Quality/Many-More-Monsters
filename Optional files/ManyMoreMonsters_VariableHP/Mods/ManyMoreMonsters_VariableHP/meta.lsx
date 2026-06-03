@@ -6,7 +6,7 @@
       <children>
         <node id="Dependencies" />
         <node id="ModuleInfo">
-          <attribute id="Author" type="LSWString" value="Rob Lapham" />
+          <attribute id="Author" type="LSWString" value="Palderon (Rob Lapham)" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
           <attribute id="Description" type="LSWString" value="Standalone file for globally adjusting NPC HP in a range from -1d4 to +3d4." />
           <attribute id="Folder" type="LSWString" value="ManyMoreMonsters_VariableHP" />
