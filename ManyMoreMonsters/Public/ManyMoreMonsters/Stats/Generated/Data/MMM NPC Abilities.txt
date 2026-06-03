@@ -281,7 +281,7 @@ data "Boosts" "GameplayLight(3,false,0.1)"
 data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
 data "StatusEffect" "4769bddd-bb59-4861-bb7f-b7ef1f28888d"
 
-// TODO:
+// TODO: Regular invis is a target, no clean inheritence to be had.
 new entry "MMM_Shout_WISPINVIS"
 type "SpellData"
 data "SpellType" "Shout"
@@ -312,66 +312,43 @@ data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
 data "CastEffect" "4f8e353e-c04e-45c3-880b-d10885fd091f"
 data "TargetEffect" "68b1219a-ccc2-4b29-bb42-b18996de3b4d"
 
-// TODO:
 new entry "MMM_Target_WISPCONSUMELIFE"
 type "SpellData"
 data "SpellType" "Target"
 using "Target_ExtractBrain_Mindflayer"
-data "Cooldown" "OncePerTurn"
-data "SpellProperties" ""
+// data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
 data "SpellRoll" "not SavingThrow(Ability.Constitution, 10)"
-data "SpellSuccess" "DealDamage(10d10,Lightning);RegainHitPoints(SELF,3d6)"
-data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
-data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// data "SpellSuccess" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(SELF,6d6)"
+data "SpellSuccess" "DealDamage(10d10,Lightning,Magical);RegainHitPoints(SELF,3d6)"
+// data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
+data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Unconscious') and not Goon_HasProneCondition_Conscious())"
+// Extract Brain
+// data "DisplayName" "hdc7aef70g430bg453bg8572g8834a2364262;2"
 // Consume Life
 data "DisplayName" "h46580d81gd418g4a86gb260gae11d8393cde;1"
+// Try to extract the brain of a Stunned or Unconscious creature.
+// data "Description" "hdccfcac3g7a8dg45e8gb683g9ffc48c4a1c7;3"
 // Try to consume what's left of a targets life essence.
 data "Description" "hce513b30g93c9g4387gbac6gaff3bd113aaf;1"
+// data "TooltipDamageList" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(6d6)"
 data "TooltipDamageList" "DealDamage(10d10,Lightning);RegainHitPoints(3d6)"
-data "TooltipAttackSave" "Consitution"
+// data "TooltipAttackSave" "MeleeUnarmedAttack"
+data "TooltipAttackSave" "Constitution"
+// data "UseCosts" "ActionPoint:1"
 data "UseCosts" "BonusActionPoint:1"
-data "CastSound" "CrSpell_Cast_ExtractBrain"
-data "TargetSound" "CrSpell_Impact_ExtractBrain"
-data "SpellAnimation" "8cbf3b5e-bf3f-4772-b09a-d91af2305aed,,;,,;68a739dd-63bf-468d-afeb-9e15467adc2c,e508f83e-90e9-4d4e-b13d-683d5954bd9e,2e0ad6cb-66f7-49ce-82c6-3a4b932d555f;7840ced8-dd25-4cc7-a987-8f58a72f48f9,187ade91-b581-41a1-ad5c-8625391d12b3,ac412b30-e7bf-4e2e-a65c-02c9a5d756db;19c50781-0c14-4329-9356-602d40c10ae3,,;e0dca5b0-f877-4934-8c57-a976b8ce3784,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
-data "SpellFlags" "IsMelee;IsEnemySpell;IsHarmful"
-data "SpellAnimationIntentType" "Peaceful"
-data "MemoryCost" "6"
-data "CastEffect" "09214cd7-37f3-48c6-bbcf-b6666743479b"
-data "TargetEffect" "76b18a50-9f43-4711-9f37-f52a022f9060"
 
-// TODO:
 new entry "MMM_Target_WISPSHOCKINGGRASP"
 type "SpellData"
 data "SpellType" "Target"
-data "Level" "0"
-data "SpellSchool" "Evocation"
-data "SpellProperties" "GROUND:SurfaceChange(Electrify)"
-data "TargetRadius" "1.5"
-data "SpellRoll" "Attack(AttackType.MeleeSpellAttack,HasMetalArmor() or IsMetalCharacter())"
+using "Target_ShockingGrasp"
+// data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(LevelMapValue(D8Cantrip),Lightning,Magical)"
 data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(1d8+SpellCastingAbilityModifier,Lightning,Magical)"
-data "TargetConditions" "not Self() and not Dead()"
-data "Icon" "Spell_Evocation_ShockingGrasp"
-data "DisplayName" "h83428213g0a17g4b04g9dbfg2cde3aed8b78;1"
-data "Description" "h08fcd063g2c1dg4837g9e49g66fa8a27b8ae;3"
+// data "DescriptionParams" "DealDamage(LevelMapValue(D8Cantrip),Lightning)"
 data "DescriptionParams" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
+// data "TooltipDamageList" "DealDamage(LevelMapValue(D8Cantrip),Lightning)"
 data "TooltipDamageList" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
-data "TooltipAttackSave" "MeleeSpellAttack"
-data "TooltipStatusApply" "ApplyStatus(SHOCKING_GRASP,100,1)"
-data "PrepareSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3"
-data "PrepareLoopSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3_Loop"
-data "CastSound" "Spell_Cast_Damage_Lightning_ShockingGrasp_L0"
-data "TargetSound" "Spell_Impact_Damage_Lightning_ShockingGrasp_L0"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;c17a3562-3758-4c4a-96e8-790cebed1df4,a1227ad0-1db2-4941-836b-0a8d85b87a0b,aef20313-abe9-4abb-8ecf-65c22d25ea80;a8012b19-b279-45ec-89b0-86a1b73ad584,92b2bf7e-5fd5-4016-acb9-dae833b7c2e2,a6874259-8dd1-46fa-99f8-6a19ebb19087;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;efbf3ee5-7340-4b29-8ab5-113b004a8e7b,,;95c387b6-3756-4bb5-accf-75a117eefb5f,,"
-data "VerbalIntent" "Damage"
+// data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsHarmful"
 data "SpellFlags" "IsSpell;IsMelee;IsHarmful"
-data "HitAnimationType" "MagicalDamage_Electric"
-data "PrepareEffect" "77241e8c-ae8d-4402-92d8-a871ce64d86f"
-data "CastEffect" "10fc784a-4312-47a8-a6b8-6b529c646ac4"
-data "TargetEffect" "a3e2368b-f486-4cfc-b04a-b02e23383280"
-data "DamageType" "Lightning"
 
 // ==================================== Risen Road ====================================
 // 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
@@ -970,24 +947,18 @@ data "Boosts" "ScaleMultiplier(6.5);Weight(600)"
 // ==================================== Grymforge ====================================
 // 40. Mega Mimic formed from the three smaller mimics.
 
-// TODO:
 new entry "MMM_Target_MEGAMIMICBITE"
 type "SpellData"
 data "SpellType" "Target"
 using "Target_Bite"
+// data "SpellSuccess" "IF(not SavingThrow(Ability.Strength, SourceSpellDC()) and HasWeaponInMainHand() and CanDisarmWieldingWeapon()):ApplyStatus(DISARM_STEAL,100,0);DealDamage(max(1,2d8+UnarmedMeleeAbilityModifier),Piercing)"
 data "SpellSuccess" "DealDamage(max(1,3d8+UnarmedMeleeAbilityModifier),Piercing)"
-// Bite
-data "DisplayName" "hcd6b5e83gb22fg4c8eg93aegb0cc17a2d713;2"
 // Bite a target and possibly swallow its weapon.
-data "Description" "h3c00869fga5c9g4696g935cgea358117331e;4"
+// data "Description" "h3c00869fga5c9g4696g935cgea358117331e;4"
+// Bite a target.
+data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
+// data "TooltipDamageList" "DealDamage(2d8+UnarmedMeleeAbilityModifier,Piercing)"
 data "TooltipDamageList" "DealDamage(3d8+UnarmedMeleeAbilityModifier,Piercing)"
-data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;6606c30b-be1c-4f17-ae6b-1a591c80b18c,,;f4ac302b-1569-404f-bd52-1fe443e265df,,;e8a5c57f-855b-4227-acaa-11e8ce8d7d64,,;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;2b81c18b-9698-4262-a623-932c2bb1296d,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "IsAttack;IsMelee;IsEnemySpell;IsHarmful"
-data "SpellAnimationIntentType" "Aggressive"
-data "PrepareEffect" ""
-data "CastEffect" "a81ca52d-3414-4eaa-a5d5-468dd3bb3a58"
-data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
 
 // ==================================== Grymforge
 // 43. Optional - Break the tomb to unleash the Spirits of the Forge and upgrade Grym to Grym 2.0, making him harder to cheese.
@@ -1072,92 +1043,60 @@ data "DamageType" "Force"
 
 // Spirits of the Forge...
 
-// TODO:
 new entry "MMM_GHOSTINITIATIVE"
 type "PassiveData"
-data "Properties" "IsHidden"
+// Ambusher
 data "DisplayName" "hf59f8652g8414g44daga44dg225de02de026;2"
+// Gain a +[1] bonus to Initiative Rolls.
 data "Description" "h5b86e533gcf1cg4726g8804g3146580a0b0a;2"
 data "DescriptionParams" "40"
+data "Properties" "IsHidden"
 data "Boosts" "Initiative(40)"
 
-// TODO:
 new entry "MMM_Target_SPIRITSHOVE"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_Shove"
+using "Target_LOW_Poltergeist_Shove"
+// data "TargetRadius" "9"
 data "TargetRadius" "5"
+// data "SpellRoll" "not SavingThrow(Ability.Strength, 15)"
 data "SpellRoll" ""
-data "SpellSuccess" "ApplyStatus(PRONE,100,1);Force(10);"
+// data "SpellSuccess" "DealDamage(3d10+4,Force,Magical);ApplyStatus(PRONE,100,1);Force(4);"
+data "SpellSuccess" "ApplyStatus(PRONE,100,1);Force(10)"
+// data "TargetConditions" "Enemy() and not Dead() and not Tagged('OSKARSBELOVED_IMMUNITY')"
 data "TargetConditions" "Enemy() and not Dead()"
-// Telekinetic Thrust
-data "DisplayName" "h46ff20f2g2faag4c09gaa0cgac85a3687800;4"
-// Shove a target with your mind.
-data "Description" "ha4c60e58gdbb6g4c9ega206g6124d6548ca8;5"
-data "CycleConditions" "not Grounded()"
+// data "UseCosts" "ActionPoint:1"
 data "UseCosts" "BonusActionPoint:1"
-data "SpellFlags" "AddFallDamageOnLand;IsHarmful;IsAttack"
+// data "RechargeValues" "4-6"
 data "RechargeValues" ""
 
 // ==================================== Mountain Pass ====================================
 // 11. Let's just say this fight is... hands on.
 
-
-// TODO:
 new entry "MMM_Shout_SummonHands"
 type "SpellData"
 data "SpellType" "Shout"
-using "Shout_FalseLife"
-data "Level" ""
-data "Cooldown" "OncePerCombat"
+using "Shout_HAV_FlamingSpy_SummonHands"
+// data "SpellProperties" "AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,10); ApplyStatus(STUNNED,100,3); ApplyStatus(HAV_ISOBELABDUCTION_FLAMINGSPY_UNPREFER_TARGET,100,3)"
 data "SpellProperties" "AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,10); ApplyStatus(STUNNED,100,3)"
-data "AreaRadius" "12"
+// data "TargetConditions" "Enemy() and not Dead() and not Tagged('PLAYABLE') and not Item()"
 data "TargetConditions" "Enemy() and not Dead() and not Item()"
-data "Icon" "GenericIcon_Intent_Control"
-// Awaken Crawling Claws
-data "DisplayName" "h2c5fce2cg82f8g423bgb2cbg1f7bb3bd9a82;4"
-// Awaken long-buried Crawling Claws to do the Absolute's bidding. In the same breath, <LSTag Type="Status" Tooltip="STUNNED">Stun</LSTag> enemies within [1].
-data "Description" "h6c8fa543gd658g45f0g9087g61f20f1e218e;5"
-data "DescriptionParams" "Distance(4)"
-data "TooltipStatusApply" ""
-data "UseCosts" "ActionPoint:0"
-data "SpellAnimation" "cc6063ad-e800-4e2d-baee-6620dae744ca,,;,,;ec05d085-8b95-4c3a-9b7b-f2a562cdf41c,,;366a6dc9-0ed6-4590-adbc-d4909de5c341,,;a0a15c9e-0cbc-4086-90ff-a932c3027a98,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;,,;,,"
-data "VerbalIntent" ""
-data "SpellFlags" "IsEnemySpell;HasVerbalComponent;HasSomaticComponent"
-data "SpellAnimationIntentType" "Aggressive"
-data "RequirementConditions" "not HasStatus('CREATURE_SPORE_SERVANT')"
-data "MemoryCost" ""
-data "PrepareEffect" ""
-data "CastEffect" "282bcc2e-0dbd-4a93-a53b-ca3a70279cfb"
-data "TargetEffect" "6b15cf0d-0f36-4d44-9f1d-573c9159a35e"
-data "Sheathing" "Sheathed"
 
-// TODO:
 new entry "MMM_Target_CRAWLINGCLAW"
 type "SpellData"
 data "SpellType" "Target"
-using "Target_Slam_Zombie"
-data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);IF(not Tagged('UNDEAD') and not Tagged('CONSTRUCT')  and not Tagged('ELEMENTAL') and not Tagged('PLANT') and not Tagged('OOZE')):ApplyStatus(CRAWLING_GNAW_SWITCH,100,1) "
-data "TargetConditions" "not Self() and not Dead() and not Item()"
-// Hit a target with your bare fists and infect it with the <LSTag Type="Status" Tooltip="CRAWLING_GNAW_SWITCH">Crawling Gnaw</LSTag>.
-data "Description" "h0e9562e6g87d9g4d39g9867g2811bf9113e0;4"
-// Constructs, elementals, oozes, plants, undead, and members of your adventuring party can't be infected.
-data "ExtraDescription" "hdcdec53cg3720g470bgba0bgb9599ef35e6d;1"
-data "TooltipDamageList" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning)"
+using "Target_Slam_Zombie_AnimateDead"
+// data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);IF(not Tagged('UNDEAD') and not Tagged('PLAYABLE') and not Tagged('CONSTRUCT')  and not Tagged('ELEMENTAL') and not Tagged('PLANT') and not Tagged('OOZE')):ApplyStatus(CRAWLING_GNAW_SWITCH,100,1) "
+data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);IF(not Tagged('UNDEAD') and not Tagged('CONSTRUCT') and not Tagged('ELEMENTAL') and not Tagged('PLANT') and not Tagged('OOZE')):ApplyStatus(CRAWLING_GNAW_SWITCH,100,1)"
+// data "TooltipStatusApply" "ApplyStatus(CRAWLING_GNAW_SWITCH,100,1)"
 data "TooltipStatusApply" "ApplyStatus(MMM_CRAWLINGCLAW_SWITCH,100,1)"
 
-// TODO:
 new entry "MMM_CRAWLINGCLAW_SWITCH"
 type "StatusData"
 data "StatusType" "BOOST"
-// Crawling Gnaw
-data "DisplayName" "he2096addg1b1ag411fga229gcfd0811df3fc;2"
-// Infected with zombie mucus. &lt;br&gt;&lt;br&gt;If the affected entity dies before the infection wears off, it will temporarily rise again as a &lt;LSTag Type="Status" Tooltip="ZOMBIE_DECAY"&gt;Newborn Zombie&lt;/LSTag&gt;.
-data "Description" "hc6b32806g0fa4g48f5g9a05gd485d5eed014;3"
-data "Icon" "statIcons_CrawlingGnawInfection"
-data "StackId" "CRAWLING_GNAW_SWITCH"
+using "CRAWLING_GNAW_SWITCH"
+// data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death)):SwitchDeathType(Explode);IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
-data "StatusGroups" "SG_Disease"
 
 // ==================================== Mountain Pass
 // 11. Let's just say this fight is... hands on.
