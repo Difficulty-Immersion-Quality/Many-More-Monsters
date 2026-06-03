@@ -228,20 +228,32 @@ data "FormatColor" "White"
 data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 
 // ==================================== Act 1: Bridge Troll ====================================
-// Bug: Needs to respond to acid and fire, try and get something semi-RAW going.
+// TODO: Could be much more RAW, but it could also look like a troll at all too.
+// TODO: Maybe the passive should apply the status if it isn't present, but meh.
 
-// TODO:
-new entry "MMM_TROLLREGEN"
+new entry "MMM_TrollRegen_Passive"
 type "PassiveData"
-// Troll Regen
+// Troll Regeneration
 data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
-// The superior regeneration of trolls.
+// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
 data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
-data "Icon" "TadpoleSuperPower_TransfuseHealth"
+data "DescriptionParams" "RegainHitPoints(10)"
+data "Icon" "Spell_Transmutation_Regenerate"
 data "Properties" "Highlighted"
-data "StatsFunctorContext" "OnTurn"
-data "Conditions" "Combat()"
-data "StatsFunctors" "RegainHitPoints(SELF,10+SpellPowerLevel)"
+
+new entry "MMM_TROLLREGEN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Troll Regeneration
+data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
+// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
+data "DescriptionParams" "RegainHitPoints(10)"
+data "Icon" "Spell_Transmutation_Regenerate"
+data "StackId" "MMM_TROLLREGEN"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "TickType" "StartTurn"
+data "TickFunctors" "IF(not Dead() and HasHPPercentageWithoutTemporaryHPLessThan(100) and not Goon_HasBurningConditionOrTag() and not HasStatus('ACID')):RegainHitPoints(10)"
 
 // ==================================== Act 1: Raging Ex-Boyfriend ====================================
 

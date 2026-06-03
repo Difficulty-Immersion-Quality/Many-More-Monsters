@@ -136,8 +136,8 @@
 	<!-- "MMM_OofClumsy" --> <content contentuid="h354cad17g0278g45d9g993dg673b5183ab96" version="1">Clumsy</content>
 	<!-- "MMM_OofClumsy" --> <content contentuid="hb1b0340age5c3g4696ga0d7gdbe438a33fe8" version="1">This ogre was born with two left everything, how is someone this clumsy?</content>
 
-	<!-- "MMM_TROLLREGEN" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regen</content>
-	<!-- "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls.</content>
+	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regeneration</content>
+	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.</content>
 
 	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEBASE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 	<content contentuid="hfc16a780g3998g47e7g9bb5g842118b9e586" version="1">Fireball Retaliation</content>
 	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 									<content contentuid="hd8c12fd6gaaf0g4e26ga6f4g513c0e821775" version="1">Retaliates with a fireball.</content>
@@ -190,7 +190,7 @@
 
 	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
 	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
-	
+
 	<!-- "" --> <content contentuid="h56e21dfdg3a15g476fg9c1eg728d2cf8641d" version="1">Damaged</content>
 	<!-- "" --> <content contentuid="he6731f16g3826g485cg8c1ag80da399c144e" version="1">Creature has been damaged in the crash.</content>
 

@@ -6631,6 +6631,13 @@
 						<node id="LocomotionParams" />
 						<node id="ScriptConfigGlobalParameters" />
 						<node id="SkillList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_TROLLREGEN" />
+								</node>
+							</children>
+						</node>
 						<node id="Tags" />
 						<node id="TradeTreasures">
 							<children>
@@ -7204,7 +7211,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_JEALOUSEX" />
+									<attribute id="Object" type="FixedString" value="MMM_TROLLREGEN" />
 								</node>
 							</children>
 						</node>
