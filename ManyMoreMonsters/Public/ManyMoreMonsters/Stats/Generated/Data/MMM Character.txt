@@ -449,7 +449,7 @@ data "Vitality" "54"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
 // ==================================== Blighted Village ====================================
-// 21. Buthirs jealous ex is looking for her, and is there a suspicious sound coming from one of those barrels?
+// 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels?
 
 // Bogsnap - Buthir's Jealous Ex
 new entry "MMM_OGREBOYFRIEND"
@@ -515,8 +515,8 @@ data "Vitality" "8"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
 // ==================================== Swamp ====================================
-// 25. Wisps, be careful they do lightning damage and you're standing in a swamp.
-// 26. Wisp over the presumed dead child.
+// 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp.
+// 26. Will-o'-Wisp over the presumed dead child.
 
 // Will-o'-Wisp
 // TODO: No AoO? Account for custom surface stuff or whatever, Goon's Conditon and Surface Overhaul bullshit
@@ -676,7 +676,7 @@ data "PsychicResistance" "Resistant"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;LightArmor"
 data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
-// ==================================== Juvenile Dragon ====================================
+// ==================================== Risen Road
 // 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
 
 // Juvenile Red Dragon

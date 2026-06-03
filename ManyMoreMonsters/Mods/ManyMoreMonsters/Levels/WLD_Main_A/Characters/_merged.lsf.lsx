@@ -7024,7 +7024,7 @@
 					</children>
 				</node>
 	<!-- Blighted Village -->
-		<!-- 21. Buthirs jealous ex is looking for her, and is there a suspicious sound coming from one of those barrels? -->
+		<!-- 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels? -->
 			<!-- Bogsnap -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -7211,7 +7211,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_TROLLREGEN" />
+									<attribute id="Object" type="FixedString" value="MMM_JEALOUSEX" />
 								</node>
 							</children>
 						</node>
@@ -7987,7 +7987,7 @@
 					</children>
 				</node>
 	<!-- Swamp -->
-		<!-- 25. Wisps, be careful they do lightning damage and you're standing in a swamp. -->
+		<!-- 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp. -->
 			<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
@@ -8298,7 +8298,7 @@
 						</node>
 					</children>
 				</node>
-		<!-- 26. Wisp over the presumed dead child. -->
+		<!-- 26. Will-o'-Wisp over the presumed dead child. -->
 			<!-- Will-o'-Wisp -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="wisp" />
@@ -20565,7 +20565,7 @@
 				</node>
 		<!-- 42. Lava elemental unchanged but has a much, much better loot table so he's worth killing. -->
 		<!-- TODO: Me no much likey vanilla overwrite stuff... -->
-		<!-- 43. Optional - Break the tomb to unleash the forge spirits and upgrade Grym making him harder to cheese. -->
+		<!-- 43. Optional - Break the tomb to unleash the Spirits of the Forge and upgrade Grym to Grym 2.0, making him harder to cheese. -->
 			<!-- Grym 2.0 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="UND_KethericCity_Elemental_1" />

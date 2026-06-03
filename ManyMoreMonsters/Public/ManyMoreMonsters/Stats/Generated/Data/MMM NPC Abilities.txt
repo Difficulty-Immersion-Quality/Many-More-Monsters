@@ -69,7 +69,8 @@ type "StatusData"
 data "StatusType" "BOOST"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-// ==================================== Act 1: Weakened Mind Flayer ====================================
+// ==================================== Ravaged Beach ====================================
+// 5. Mindflayer ambush - Mindflayer using other mindflayer as bait to ambush player, attacks are about 1/3rd of a standard mindflayer.
 
 // Weakened Mind Blast
 new entry "MMM_Zone_MindBlast_MindFlayer_Weakened"
@@ -117,9 +118,9 @@ data "TooltipAttackSave" "MeleeSpellAttack"
 // data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
 data "TooltipStatusApply" ""
 
-// ==================================== Act 1: Oof ====================================
-// TODO: TickType of endturn is best for a lot of these.
-// TODO: Have the mechanical status seperate from the overhead text for combat log clarity.
+// ==================================== Emerald Grove ====================================
+// 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy.
+// TODO: Have the mechanical status separate from the overhead text for combat log clarity.
 
 new entry "MMM_OofClumsy"
 type "PassiveData"
@@ -183,7 +184,6 @@ data "Description" "hd1b30279gb513g4bbaga881g5725bfd1efe1;1"
 data "Icon" "statIcons_Disarmed"
 // data "FormatColor" "Orange"
 data "FormatColor" "White"
-data "RemoveEvents" "OnTurn"
 
 new entry "MMM_OOFDRUNK"
 type "StatusData"
@@ -227,7 +227,8 @@ data "Description" "hee83e74bg218cg40begb421g71fe847c17cf;1"
 data "FormatColor" "White"
 data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 
-// ==================================== Act 1: Bridge Troll ====================================
+// ==================================== Forest ====================================
+// 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
 // TODO: Could be much more RAW, but it could also look like a troll at all too.
 // TODO: Maybe the passive should apply the status if it isn't present, but meh.
 
@@ -255,7 +256,8 @@ data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndi
 data "TickType" "StartTurn"
 data "TickFunctors" "IF(not Dead() and HasHPPercentageWithoutTemporaryHPLessThan(100) and not Goon_HasBurningConditionOrTag() and not HasStatus('ACID')):RegainHitPoints(10)"
 
-// ==================================== Act 1: Raging Ex-Boyfriend ====================================
+// ==================================== Blighted Village ====================================
+// 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels?
 
 new entry "MMM_JEALOUSEX"
 type "StatusData"
@@ -264,7 +266,115 @@ data "StatusType" "BOOST"
 data "DisplayName" "hb7d4ce2eg02ecg4c15g91d9g337811359364;1"
 data "StackId" "MMM_JEALOUSEX"
 
-// ==================================== Act 1: Juvenile Red Dragon ====================================
+// ==================================== Swamp ====================================
+// 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp.
+// 26. Will-o'-Wisp over the presumed dead child.
+
+new entry "MMM_WILL_O_WISP_GLOW"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+// using "DEAD_WILL_O_WISP"
+// Wisp Effect
+data "DisplayName" "h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd;1"
+data "Icon" "statIcons_SoulEcho"
+data "Boosts" "GameplayLight(3,false,0.1)"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
+data "StatusEffect" "4769bddd-bb59-4861-bb7f-b7ef1f28888d"
+
+// TODO:
+new entry "MMM_Shout_WISPINVIS"
+type "SpellData"
+data "SpellType" "Shout"
+data "Level" "2"
+data "SpellSchool" "Illusion"
+data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY,100,10);AI_ONLY:ApplyStatus(INVISIBILITY,100,1)"
+data "TargetRadius" "1.5"
+data "TargetConditions" "Self() and not HasStatus('FAERIE_FIRE')  and not IsImmuneToStatus('SG_Invisible')"
+data "Icon" "Spell_Illusion_Invisibility"
+data "DisplayName" "hcf22dcf2g26c6g4dffg98f8gc7c84f36124c;1"
+data "Description" "hf30493d0g1858g4f2eg8c77ga32d930bdd56;3"
+data "ExtraDescription" "hbd89356ag64e6g4ee5gb1a2ga259e0603647;1"
+data "TooltipStatusApply" "ApplyStatus(INVISIBILITY,100,10)"
+data "TooltipUpcastDescription" "04cc3403-f67a-4747-b49e-a1802cc7a6ad"
+data "TooltipPermanentWarnings" "184019c7-770a-4594-a7dd-ec616fe940fd"
+data "CastSound" "Spell_Cast_Utility_Invisibility_L1to3"
+data "TargetSound" "Spell_Impact_Utility_Invisibility_L1to3"
+data "VocalComponentSound" "Vocal_Component_Invisibility"
+data "PreviewCursor" "Cast"
+data "CastTextEvent" "Cast"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,,;8373f3da-2368-4a51-98b1-146ec3586660,,;cc5b0caf-3ed1-4711-a50d-11dc3f1fdc6a,,;,,;1715b877-4512-472e-9bd0-fd568a112e90,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,"
+data "VerbalIntent" "Utility"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities"
+data "HitAnimationType" "MagicalNonDamage"
+data "MemoryCost" "1"
+data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
+data "CastEffect" "4f8e353e-c04e-45c3-880b-d10885fd091f"
+data "TargetEffect" "68b1219a-ccc2-4b29-bb42-b18996de3b4d"
+
+// TODO:
+new entry "MMM_Target_WISPCONSUMELIFE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ExtractBrain_Mindflayer"
+data "Cooldown" "OncePerTurn"
+data "SpellProperties" ""
+data "SpellRoll" "not SavingThrow(Ability.Constitution, 10)"
+data "SpellSuccess" "DealDamage(10d10,Lightning);RegainHitPoints(SELF,3d6)"
+data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
+data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
+// Consume Life
+data "DisplayName" "h46580d81gd418g4a86gb260gae11d8393cde;1"
+// Try to consume what's left of a targets life essence.
+data "Description" "hce513b30g93c9g4387gbac6gaff3bd113aaf;1"
+data "TooltipDamageList" "DealDamage(10d10,Lightning);RegainHitPoints(3d6)"
+data "TooltipAttackSave" "Consitution"
+data "UseCosts" "BonusActionPoint:1"
+data "CastSound" "CrSpell_Cast_ExtractBrain"
+data "TargetSound" "CrSpell_Impact_ExtractBrain"
+data "SpellAnimation" "8cbf3b5e-bf3f-4772-b09a-d91af2305aed,,;,,;68a739dd-63bf-468d-afeb-9e15467adc2c,e508f83e-90e9-4d4e-b13d-683d5954bd9e,2e0ad6cb-66f7-49ce-82c6-3a4b932d555f;7840ced8-dd25-4cc7-a987-8f58a72f48f9,187ade91-b581-41a1-ad5c-8625391d12b3,ac412b30-e7bf-4e2e-a65c-02c9a5d756db;19c50781-0c14-4329-9356-602d40c10ae3,,;e0dca5b0-f877-4934-8c57-a976b8ce3784,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+data "SpellFlags" "IsMelee;IsEnemySpell;IsHarmful"
+data "SpellAnimationIntentType" "Peaceful"
+data "MemoryCost" "6"
+data "CastEffect" "09214cd7-37f3-48c6-bbcf-b6666743479b"
+data "TargetEffect" "76b18a50-9f43-4711-9f37-f52a022f9060"
+
+// TODO:
+new entry "MMM_Target_WISPSHOCKINGGRASP"
+type "SpellData"
+data "SpellType" "Target"
+data "Level" "0"
+data "SpellSchool" "Evocation"
+data "SpellProperties" "GROUND:SurfaceChange(Electrify)"
+data "TargetRadius" "1.5"
+data "SpellRoll" "Attack(AttackType.MeleeSpellAttack,HasMetalArmor() or IsMetalCharacter())"
+data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(1d8+SpellCastingAbilityModifier,Lightning,Magical)"
+data "TargetConditions" "not Self() and not Dead()"
+data "Icon" "Spell_Evocation_ShockingGrasp"
+data "DisplayName" "h83428213g0a17g4b04g9dbfg2cde3aed8b78;1"
+data "Description" "h08fcd063g2c1dg4837g9e49g66fa8a27b8ae;3"
+data "DescriptionParams" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
+data "TooltipDamageList" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
+data "TooltipAttackSave" "MeleeSpellAttack"
+data "TooltipStatusApply" "ApplyStatus(SHOCKING_GRASP,100,1)"
+data "PrepareSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3"
+data "PrepareLoopSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3_Loop"
+data "CastSound" "Spell_Cast_Damage_Lightning_ShockingGrasp_L0"
+data "TargetSound" "Spell_Impact_Damage_Lightning_ShockingGrasp_L0"
+data "CastTextEvent" "Cast"
+data "CycleConditions" "Enemy() and not Dead()"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;c17a3562-3758-4c4a-96e8-790cebed1df4,a1227ad0-1db2-4941-836b-0a8d85b87a0b,aef20313-abe9-4abb-8ecf-65c22d25ea80;a8012b19-b279-45ec-89b0-86a1b73ad584,92b2bf7e-5fd5-4016-acb9-dae833b7c2e2,a6874259-8dd1-46fa-99f8-6a19ebb19087;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;efbf3ee5-7340-4b29-8ab5-113b004a8e7b,,;95c387b6-3756-4bb5-accf-75a117eefb5f,,"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsSpell;IsMelee;IsHarmful"
+data "HitAnimationType" "MagicalDamage_Electric"
+data "PrepareEffect" "77241e8c-ae8d-4402-92d8-a871ce64d86f"
+data "CastEffect" "10fc784a-4312-47a8-a6b8-6b529c646ac4"
+data "TargetEffect" "a3e2368b-f486-4cfc-b04a-b02e23383280"
+data "DamageType" "Lightning"
+
+// ==================================== Risen Road ====================================
+// 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
 
 // TODO:
 new entry "MMM_Target_JUVENILERED_FLY"
@@ -416,7 +526,7 @@ data "RequirementConditions" "not HasStatus('DRAGON_SKELETAL_FLIGHTSTATE')"
 data "CastEffect" "c72230c5-a757-40ba-b704-9219d7ffc0f5"
 data "Sheathing" "DontChange"
 
-// ==================================== Act 1: Juvenile Red Dragon - Retaliate
+// Juvenile Red Dragon - Retaliate...
 
 // TODO:
 new entry "MMM_JUVENILERED_RETALIATEPASSIVE"
@@ -495,283 +605,8 @@ data "PrepareEffect" ""
 data "CastEffect" "e235ca47-1bf5-4587-9475-cf191b6005f9"
 data "DamageType" "Fire"
 
-// ==================================== Act 1: Will-o'-Wisp ====================================
-
-new entry "MMM_WILL_O_WISP_GLOW"
-type "StatusData"
-data "StatusType" "POLYMORPHED"
-// using "DEAD_WILL_O_WISP"
-// Wisp Effect
-data "DisplayName" "h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd;1"
-data "Icon" "statIcons_SoulEcho"
-data "Boosts" "GameplayLight(3,false,0.1)"
-data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
-data "StatusEffect" "4769bddd-bb59-4861-bb7f-b7ef1f28888d"
-
-// TODO:
-new entry "MMM_Shout_WISPINVIS"
-type "SpellData"
-data "SpellType" "Shout"
-data "Level" "2"
-data "SpellSchool" "Illusion"
-data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY,100,10);AI_ONLY:ApplyStatus(INVISIBILITY,100,1)"
-data "TargetRadius" "1.5"
-data "TargetConditions" "Self() and not HasStatus('FAERIE_FIRE')  and not IsImmuneToStatus('SG_Invisible')"
-data "Icon" "Spell_Illusion_Invisibility"
-data "DisplayName" "hcf22dcf2g26c6g4dffg98f8gc7c84f36124c;1"
-data "Description" "hf30493d0g1858g4f2eg8c77ga32d930bdd56;3"
-data "ExtraDescription" "hbd89356ag64e6g4ee5gb1a2ga259e0603647;1"
-data "TooltipStatusApply" "ApplyStatus(INVISIBILITY,100,10)"
-data "TooltipUpcastDescription" "04cc3403-f67a-4747-b49e-a1802cc7a6ad"
-data "TooltipPermanentWarnings" "184019c7-770a-4594-a7dd-ec616fe940fd"
-data "CastSound" "Spell_Cast_Utility_Invisibility_L1to3"
-data "TargetSound" "Spell_Impact_Utility_Invisibility_L1to3"
-data "VocalComponentSound" "Vocal_Component_Invisibility"
-data "PreviewCursor" "Cast"
-data "CastTextEvent" "Cast"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,,;8373f3da-2368-4a51-98b1-146ec3586660,,;cc5b0caf-3ed1-4711-a50d-11dc3f1fdc6a,,;,,;1715b877-4512-472e-9bd0-fd568a112e90,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,"
-data "VerbalIntent" "Utility"
-data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities"
-data "HitAnimationType" "MagicalNonDamage"
-data "MemoryCost" "1"
-data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
-data "CastEffect" "4f8e353e-c04e-45c3-880b-d10885fd091f"
-data "TargetEffect" "68b1219a-ccc2-4b29-bb42-b18996de3b4d"
-
-// TODO:
-new entry "MMM_Target_WISPCONSUMELIFE"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_ExtractBrain_Mindflayer"
-data "Cooldown" "OncePerTurn"
-data "SpellProperties" ""
-data "SpellRoll" "not SavingThrow(Ability.Constitution, 10)"
-data "SpellSuccess" "DealDamage(10d10,Lightning);RegainHitPoints(SELF,3d6)"
-data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
-data "Icon" "PassiveFeature_Generic_MultiAttackInfo"
-// Consume Life
-data "DisplayName" "h46580d81gd418g4a86gb260gae11d8393cde;1"
-// Try to consume what's left of a targets life essence.
-data "Description" "hce513b30g93c9g4387gbac6gaff3bd113aaf;1"
-data "TooltipDamageList" "DealDamage(10d10,Lightning);RegainHitPoints(3d6)"
-data "TooltipAttackSave" "Consitution"
-data "UseCosts" "BonusActionPoint:1"
-data "CastSound" "CrSpell_Cast_ExtractBrain"
-data "TargetSound" "CrSpell_Impact_ExtractBrain"
-data "SpellAnimation" "8cbf3b5e-bf3f-4772-b09a-d91af2305aed,,;,,;68a739dd-63bf-468d-afeb-9e15467adc2c,e508f83e-90e9-4d4e-b13d-683d5954bd9e,2e0ad6cb-66f7-49ce-82c6-3a4b932d555f;7840ced8-dd25-4cc7-a987-8f58a72f48f9,187ade91-b581-41a1-ad5c-8625391d12b3,ac412b30-e7bf-4e2e-a65c-02c9a5d756db;19c50781-0c14-4329-9356-602d40c10ae3,,;e0dca5b0-f877-4934-8c57-a976b8ce3784,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
-data "SpellFlags" "IsMelee;IsEnemySpell;IsHarmful"
-data "SpellAnimationIntentType" "Peaceful"
-data "MemoryCost" "6"
-data "CastEffect" "09214cd7-37f3-48c6-bbcf-b6666743479b"
-data "TargetEffect" "76b18a50-9f43-4711-9f37-f52a022f9060"
-
-// TODO:
-new entry "MMM_Target_WISPSHOCKINGGRASP"
-type "SpellData"
-data "SpellType" "Target"
-data "Level" "0"
-data "SpellSchool" "Evocation"
-data "SpellProperties" "GROUND:SurfaceChange(Electrify)"
-data "TargetRadius" "1.5"
-data "SpellRoll" "Attack(AttackType.MeleeSpellAttack,HasMetalArmor() or IsMetalCharacter())"
-data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(1d8+SpellCastingAbilityModifier,Lightning,Magical)"
-data "TargetConditions" "not Self() and not Dead()"
-data "Icon" "Spell_Evocation_ShockingGrasp"
-data "DisplayName" "h83428213g0a17g4b04g9dbfg2cde3aed8b78;1"
-data "Description" "h08fcd063g2c1dg4837g9e49g66fa8a27b8ae;3"
-data "DescriptionParams" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
-data "TooltipDamageList" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
-data "TooltipAttackSave" "MeleeSpellAttack"
-data "TooltipStatusApply" "ApplyStatus(SHOCKING_GRASP,100,1)"
-data "PrepareSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3"
-data "PrepareLoopSound" "Spell_Prepare_Damage_Lightning_Gen_L1to3_Loop"
-data "CastSound" "Spell_Cast_Damage_Lightning_ShockingGrasp_L0"
-data "TargetSound" "Spell_Impact_Damage_Lightning_ShockingGrasp_L0"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;c17a3562-3758-4c4a-96e8-790cebed1df4,a1227ad0-1db2-4941-836b-0a8d85b87a0b,aef20313-abe9-4abb-8ecf-65c22d25ea80;a8012b19-b279-45ec-89b0-86a1b73ad584,92b2bf7e-5fd5-4016-acb9-dae833b7c2e2,a6874259-8dd1-46fa-99f8-6a19ebb19087;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;efbf3ee5-7340-4b29-8ab5-113b004a8e7b,,;95c387b6-3756-4bb5-accf-75a117eefb5f,,"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "IsSpell;IsMelee;IsHarmful"
-data "HitAnimationType" "MagicalDamage_Electric"
-data "PrepareEffect" "77241e8c-ae8d-4402-92d8-a871ce64d86f"
-data "CastEffect" "10fc784a-4312-47a8-a6b8-6b529c646ac4"
-data "TargetEffect" "a3e2368b-f486-4cfc-b04a-b02e23383280"
-data "DamageType" "Lightning"
-
-// ==================================== Act 1: Baby Bulettes ====================================
-
-new entry "MMM_MATRIPHAGY"
-type "StatusData"
-data "StatusType" "BOOST"
-// Matriphagy
-data "DisplayName" "h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7;1"
-// Baby bulette's kill their mother and eat her after birth.
-data "Description" "h897abff9g3dfag4b99gb37fg84d3b6a5306b;1"
-data "Icon" "Action_VampireBite"
-data "StackId" "MMM_MATRIPHAGY"
-
-new entry "MMM_Target_BABYBULETTEBITE"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_Bite_Bulette"
-// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
-data "SpellSuccess" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing);ApplyStatus(ACID,100,3)"
-// Bite a target and possibly push it back [1].
-// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
-// Bite a target.
-data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
-// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
-data "TooltipDamageList" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing)"
-// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
-data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
-
-// TODO:
-new entry "MMM_Projectile_BABYBULETTEJUMP"
-type "SpellData"
-data "SpellType" "Projectile"
-using "Projectile_Jump_HookHorror"
-data "Cooldown" "OncePerTurn"
-data "TargetConditions" "CanStand('0ea356fc-7a6f-4c60-8017-86349e2777ab')"
-data "Trajectories" "a6154eff-e34d-4f7b-b115-ada400496e97,3ea6c884-d13b-855d-882c-b08fa701f1ee,58a077ad-fa49-05ce-c438-5c74ad9021a6"
-data "Icon" "Action_Jump"
-data "DisplayName" "h950bba7agb376g4c97gb479gaac721aedae8;1"
-data "Description" "h54f10337g1d80g41f6gb848g3e03e518782b;3"
-data "ExtraDescription" ""
-data "TooltipDamageList" "DealDamage(1d6+4,Bludgeoning);DealDamage(1d6+4,Slashing)"
-data "TooltipOnSave" "f6bac56a-c82f-4265-87b4-00a7ff7746eb"
-data "CastSound" "CrSpell_Cast_DeadlyLeap"
-data "UseCosts" "Movement:6"
-data "SpellAnimation" "958dd4d6-3ad3-4f58-a4ae-9499743a6dab,,;,,;d7741bd3-2ec9-41aa-803b-39d2be52aac5,,;78da379c-5535-4a07-b650-b695831bab9a,,;1accbc00-728f-44d4-8926-268944ce5f03,,;,,;,,;,,;,,"
-data "SpellFlags" "IsJump;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IgnoreVisionBlock;CannotTargetItems;CannotTargetCharacter"
-data "CastEffect" "fb36e39f-1bc9-4421-96ef-0acdd663a0c6"
-
-// TODO:
-new entry "MMM_Projectile_BABYBULETTETOXIC"
-type "SpellData"
-data "SpellType" "Projectile"
-using "Projectile_AcidSplash"
-data "SpellSchool" "None"
-data "SpellProperties" "GROUND:CreateSurface(2,3,Acid)"
-data "TargetRadius" "14"
-data "AreaRadius" "2"
-data "DeathType" "Acid"
-data "ExplodeRadius" "2"
-data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
-data "SpellSuccess" "DealDamage(1d8+3,Acid)"
-data "SpellFail" "DealDamage((1d8+3)/2,Acid)"
-data "TargetConditions" "not Dead()"
-data "Trajectories" "f1512ea3-8d5d-4320-87ac-6674309bac49"
-data "Icon" "GenericIcon_DamageType_Acid"
-data "DisplayName" "hee8288cag120cg4bc3gaeccgf8452633bd76;2"
-data "Description" "h13d36fa8g5377g45d7g8c28gebdf476e508e;4"
-data "TooltipDamageList" "DealDamage(1d8+3,Acid)"
-data "TooltipOnSave" "961753f4-c345-4bc4-b408-1d5b87a5ab0c"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "accc80a3-002d-4236-9343-2e29b7bee5fd,,;5ed9b242-79de-4eca-a884-319b3c139edf,,;eb088193-13f6-44ec-889d-2f1966587697,,;72ee5db6-869d-4a43-9add-8056ab7159e3,,;ea6e0c45-db66-4034-a4eb-4e890d91168e,,;d21075df-3648-4626-b211-84cd99a21cb4,,;,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade"
-data "HitAnimationType" "MagicalDamage_External"
-data "SpellAnimationIntentType" "Aggressive"
-data "PrepareEffect" "cc98935b-6ddf-4386-9f10-bd324fc1bd8d"
-data "CastEffect" "91f536d1-be47-4c7b-812e-4ade8041b77c"
-data "Sheathing" "DontChange"
-
-// ==================================== Act 1: Baby Bulettes - Survival of the Fittest
-
-// TODO: "IsTargetableCorpse()" with "FreshCorpse" too restrictive?
-// TODO: Inheritence here is meh.
-new entry "MMM_Target_CONSUMEBULETTE"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_Bite"
-data "Cooldown" "OncePerTurn"
-data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
-data "SpellProperties" "SwitchDeathType(Explode);ApplyStatus(SELF,MMM_SURVIVAL, 100, 1)"
-data "DeathType" "Explode"
-data "SpellSuccess" "RegainHitPoints(SELF, 10d10)"
-data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
-// Consume
-data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
-// Devours a corpse.
-data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
-data "UseCosts" "BonusActionPoint:1"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "IsEnemySpell;IsMelee"
-data "SpellAnimationIntentType" "Aggressive"
-data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
-data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
-
-new entry "MMM_SURVIVAL"
-type "StatusData"
-data "StatusType" "BOOST"
-// Survival of the Fittest
-data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
-// Consuming a corpse has made this Bulette stronger.
-data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
-data "Icon" "Action_VampireBite"
-data "StackId" "MMM_SURVIVAL2"
-data "StackType" "Additive"
-data "OnApplyFunctors" "IF(not MMM_SurvivalOfTheFittest()):ApplyStatus(MMM_SURVIVALSIZE1,100,-1);IF(HasStatus('MMM_SURVIVALSIZE1')):ApplyStatus(MMM_SURVIVALSIZE2,100,-1);IF(HasStatus('MMM_SURVIVALSIZE2')):ApplyStatus(MMM_SURVIVALSIZE3,100,-1);IF(HasStatus('MMM_SURVIVALSIZE3')):ApplyStatus(MMM_SURVIVALSIZE4,100,-1);IF(HasStatus('MMM_SURVIVALSIZE4')):ApplyStatus(MMM_SURVIVALSIZE5,100,-1);IF(HasStatus('MMM_SURVIVALSIZE5')):ApplyStatus(MMM_SURVIVALSIZE6,100,-1);IF(HasStatus('MMM_SURVIVALSIZE6')):ApplyStatus(MMM_SURVIVALSIZE7,100,-1)"
-data "Boosts" "Ability(Strength, +2);Ability(Constitution, +2);IncreaseMaxHP(15)"
-data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration;DisableOverhead;DisableCombatlog;ApplyToDead"
-data "StatusEffect" "2122e3f6-ac60-4b45-8b43-a9bd66b62b61"
-
-new entry "MMM_SURVIVALSIZE1"
-type "StatusData"
-data "StatusType" "BOOST"
-data "Icon" "Action_VampireBite"
-// Survival of the Fittest
-data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
-// Consuming a corpse has made this Bulette stronger.
-data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
-data "StackId" "MMM_SURVIVALSIZE"
-data "StackPriority" "1"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-data "Boosts" "ScaleMultiplier(1.75);Weight(100)"
-
-new entry "MMM_SURVIVALSIZE2"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "StackPriority" "2"
-data "Boosts" "ScaleMultiplier(2.5);Weight(150)"
-
-new entry "MMM_SURVIVALSIZE3"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "StackPriority" "3"
-data "Boosts" "ScaleMultiplier(3.25);Weight(200)"
-
-new entry "MMM_SURVIVALSIZE4"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "StackPriority" "4"
-data "Boosts" "ScaleMultiplier(4);Weight(250)"
-
-new entry "MMM_SURVIVALSIZE5"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "Boosts" "ScaleMultiplier(4.75);Weight(300)"
-
-new entry "MMM_SURVIVALSIZE6"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "StackPriority" "6"
-data "Boosts" "ScaleMultiplier(5.5);Weight(450)"
-
-new entry "MMM_SURVIVALSIZE7"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MMM_SURVIVALSIZE1"
-data "StackPriority" "7"
-data "Boosts" "ScaleMultiplier(6.5);Weight(600)"
-
-// ==================================== Act 1: Weakened Beholder ====================================
+// ==================================== Underdark ====================================
+// 37. Clear the cave-in to reveal a damaged beholder.
 
 // TODO:
 new entry "MMM_Projectile_LEVITATE"
@@ -960,7 +795,180 @@ data "HitEffect" "d9846f10-94b4-4de7-85d7-04173e4c1e2b"
 data "BeamEffect" "4bc7dd52-06ff-4500-9054-db4424a72d98"
 data "Sheathing" "DontChange"
 
-// ==================================== Act 1: Mega Mimic ====================================
+// ==================================== Underdark
+// 39. Bulette Nest.  Fun fact, baby bulette's kill and eat their mother.
+
+new entry "MMM_MATRIPHAGY"
+type "StatusData"
+data "StatusType" "BOOST"
+// Matriphagy
+data "DisplayName" "h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7;1"
+// Baby bulette's kill their mother and eat her after birth.
+data "Description" "h897abff9g3dfag4b99gb37fg84d3b6a5306b;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_MATRIPHAGY"
+
+new entry "MMM_Target_BABYBULETTEBITE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite_Bulette"
+// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
+data "SpellSuccess" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing);ApplyStatus(ACID,100,3)"
+// Bite a target and possibly push it back [1].
+// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
+// Bite a target.
+data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
+// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
+data "TooltipDamageList" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing)"
+// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
+data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
+
+// TODO:
+new entry "MMM_Projectile_BABYBULETTEJUMP"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_Jump_HookHorror"
+data "Cooldown" "OncePerTurn"
+data "TargetConditions" "CanStand('0ea356fc-7a6f-4c60-8017-86349e2777ab')"
+data "Trajectories" "a6154eff-e34d-4f7b-b115-ada400496e97,3ea6c884-d13b-855d-882c-b08fa701f1ee,58a077ad-fa49-05ce-c438-5c74ad9021a6"
+data "Icon" "Action_Jump"
+data "DisplayName" "h950bba7agb376g4c97gb479gaac721aedae8;1"
+data "Description" "h54f10337g1d80g41f6gb848g3e03e518782b;3"
+data "ExtraDescription" ""
+data "TooltipDamageList" "DealDamage(1d6+4,Bludgeoning);DealDamage(1d6+4,Slashing)"
+data "TooltipOnSave" "f6bac56a-c82f-4265-87b4-00a7ff7746eb"
+data "CastSound" "CrSpell_Cast_DeadlyLeap"
+data "UseCosts" "Movement:6"
+data "SpellAnimation" "958dd4d6-3ad3-4f58-a4ae-9499743a6dab,,;,,;d7741bd3-2ec9-41aa-803b-39d2be52aac5,,;78da379c-5535-4a07-b650-b695831bab9a,,;1accbc00-728f-44d4-8926-268944ce5f03,,;,,;,,;,,;,,"
+data "SpellFlags" "IsJump;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IgnoreVisionBlock;CannotTargetItems;CannotTargetCharacter"
+data "CastEffect" "fb36e39f-1bc9-4421-96ef-0acdd663a0c6"
+
+// TODO:
+new entry "MMM_Projectile_BABYBULETTETOXIC"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_AcidSplash"
+data "SpellSchool" "None"
+data "SpellProperties" "GROUND:CreateSurface(2,3,Acid)"
+data "TargetRadius" "14"
+data "AreaRadius" "2"
+data "DeathType" "Acid"
+data "ExplodeRadius" "2"
+data "SpellRoll" "not SavingThrow(Ability.Dexterity, 15)"
+data "SpellSuccess" "DealDamage(1d8+3,Acid)"
+data "SpellFail" "DealDamage((1d8+3)/2,Acid)"
+data "TargetConditions" "not Dead()"
+data "Trajectories" "f1512ea3-8d5d-4320-87ac-6674309bac49"
+data "Icon" "GenericIcon_DamageType_Acid"
+data "DisplayName" "hee8288cag120cg4bc3gaeccgf8452633bd76;2"
+data "Description" "h13d36fa8g5377g45d7g8c28gebdf476e508e;4"
+data "TooltipDamageList" "DealDamage(1d8+3,Acid)"
+data "TooltipOnSave" "961753f4-c345-4bc4-b408-1d5b87a5ab0c"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "accc80a3-002d-4236-9343-2e29b7bee5fd,,;5ed9b242-79de-4eca-a884-319b3c139edf,,;eb088193-13f6-44ec-889d-2f1966587697,,;72ee5db6-869d-4a43-9add-8056ab7159e3,,;ea6e0c45-db66-4034-a4eb-4e890d91168e,,;d21075df-3648-4626-b211-84cd99a21cb4,,;,,;,,;,,"
+data "SpellFlags" "HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade"
+data "HitAnimationType" "MagicalDamage_External"
+data "SpellAnimationIntentType" "Aggressive"
+data "PrepareEffect" "cc98935b-6ddf-4386-9f10-bd324fc1bd8d"
+data "CastEffect" "91f536d1-be47-4c7b-812e-4ade8041b77c"
+data "Sheathing" "DontChange"
+
+// Baby Bulettes - Survival of the Fittest...
+
+// TODO: "IsTargetableCorpse()" with "FreshCorpse" too restrictive?
+// TODO: Inheritence here is meh.
+new entry "MMM_Target_CONSUMEBULETTE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite"
+data "Cooldown" "OncePerTurn"
+data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
+data "SpellProperties" "SwitchDeathType(Explode);ApplyStatus(SELF,MMM_SURVIVAL, 100, 1)"
+data "DeathType" "Explode"
+data "SpellSuccess" "RegainHitPoints(SELF, 10d10)"
+data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
+// Consume
+data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
+// Devours a corpse.
+data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
+data "UseCosts" "BonusActionPoint:1"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsEnemySpell;IsMelee"
+data "SpellAnimationIntentType" "Aggressive"
+data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+new entry "MMM_SURVIVAL"
+type "StatusData"
+data "StatusType" "BOOST"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_SURVIVAL2"
+data "StackType" "Additive"
+data "OnApplyFunctors" "IF(not MMM_SurvivalOfTheFittest()):ApplyStatus(MMM_SURVIVALSIZE1,100,-1);IF(HasStatus('MMM_SURVIVALSIZE1')):ApplyStatus(MMM_SURVIVALSIZE2,100,-1);IF(HasStatus('MMM_SURVIVALSIZE2')):ApplyStatus(MMM_SURVIVALSIZE3,100,-1);IF(HasStatus('MMM_SURVIVALSIZE3')):ApplyStatus(MMM_SURVIVALSIZE4,100,-1);IF(HasStatus('MMM_SURVIVALSIZE4')):ApplyStatus(MMM_SURVIVALSIZE5,100,-1);IF(HasStatus('MMM_SURVIVALSIZE5')):ApplyStatus(MMM_SURVIVALSIZE6,100,-1);IF(HasStatus('MMM_SURVIVALSIZE6')):ApplyStatus(MMM_SURVIVALSIZE7,100,-1)"
+data "Boosts" "Ability(Strength, +2);Ability(Constitution, +2);IncreaseMaxHP(15)"
+data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration;DisableOverhead;DisableCombatlog;ApplyToDead"
+data "StatusEffect" "2122e3f6-ac60-4b45-8b43-a9bd66b62b61"
+
+new entry "MMM_SURVIVALSIZE1"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Icon" "Action_VampireBite"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "StackId" "MMM_SURVIVALSIZE"
+data "StackPriority" "1"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "Boosts" "ScaleMultiplier(1.75);Weight(100)"
+
+new entry "MMM_SURVIVALSIZE2"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "2"
+data "Boosts" "ScaleMultiplier(2.5);Weight(150)"
+
+new entry "MMM_SURVIVALSIZE3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "3"
+data "Boosts" "ScaleMultiplier(3.25);Weight(200)"
+
+new entry "MMM_SURVIVALSIZE4"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "4"
+data "Boosts" "ScaleMultiplier(4);Weight(250)"
+
+new entry "MMM_SURVIVALSIZE5"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "Boosts" "ScaleMultiplier(4.75);Weight(300)"
+
+new entry "MMM_SURVIVALSIZE6"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "6"
+data "Boosts" "ScaleMultiplier(5.5);Weight(450)"
+
+new entry "MMM_SURVIVALSIZE7"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "7"
+data "Boosts" "ScaleMultiplier(6.5);Weight(600)"
+
+// ==================================== Grymforge ====================================
+// 40. Mega Mimic formed from the three smaller mimics.
 
 // TODO:
 new entry "MMM_Target_MEGAMIMICBITE"
@@ -981,7 +989,8 @@ data "PrepareEffect" ""
 data "CastEffect" "a81ca52d-3414-4eaa-a5d5-468dd3bb3a58"
 data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
 
-// ==================================== Act 1: Grym 2.0 ====================================
+// ==================================== Grymforge
+// 43. Optional - Break the tomb to unleash the Spirits of the Forge and upgrade Grym to Grym 2.0, making him harder to cheese.
 
 // Unused
 new entry "MMM_GRYMD"
@@ -1061,7 +1070,7 @@ data "PrepareEffect" ""
 data "CastEffect" "e235ca47-1bf5-4587-9475-cf191b6005f9"
 data "DamageType" "Force"
 
-// ==================================== Act 1: Grym 2.0 - Spirits of the Forge
+// Spirits of the Forge...
 
 // TODO:
 new entry "MMM_GHOSTINITIATIVE"
@@ -1090,7 +1099,9 @@ data "UseCosts" "BonusActionPoint:1"
 data "SpellFlags" "AddFallDamageOnLand;IsHarmful;IsAttack"
 data "RechargeValues" ""
 
-// ==================================== Act 1.b: Vinly Desh ====================================
+// ==================================== Mountain Pass ====================================
+// 11. Let's just say this fight is... hands on.
+
 
 // TODO:
 new entry "MMM_Shout_SummonHands"
@@ -1148,14 +1159,15 @@ data "StackId" "CRAWLING_GNAW_SWITCH"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
 data "StatusGroups" "SG_Disease"
 
-// ==================================== Act 1.b: Vinly Desh + Absolute Chaos Mage and Prisoner
+// ==================================== Mountain Pass
+// 11. Let's just say this fight is... hands on.
+// 10. The Gith actualy have some prisoners in the prisons.
 
-// TODO:
 new entry "MMM_ChaosMagic"
 type "PassiveData"
 // Chaos Magic
 data "DisplayName" "h4627f142g2a2cg48e0g9266g2f8917c2b32a;1"
-// You don't know what to expect from this twisted magic.
+// You don't know what to expect from this twisted magic.&lt;br&gt;&lt;br&gt;Each time you cast a spell of Level 1 or higher, your magic surges triggering a random magical effect.
 data "Description" "hc941079fgec2fg4851g807dg02056a8f725e;1"
 data "Icon" "PassiveFeature_WildMagicSurge"
 data "Properties" "Highlighted"
@@ -1163,7 +1175,12 @@ data "StatsFunctorContext" "OnCast"
 data "Conditions" "not IsCantrip() and HasSpellFlag(SpellFlags.Spell)"
 data "StatsFunctors" "TriggerRandomCast(1,,WildMagic)"
 
-// ==================================== Act 1.b: Spirit of Dawnmaster Vaseid ====================================
+// ==================================== Githyanki Crecke - Dawnmaster Vaseid ====================================
+// B. Boss Battle 
+// Dawnmaster Vaseid gave his life to protect the Blood of Lathander, now he'll judge you if you're worthy or not.
+// A check is preformed when you approach him based on how many good vs evil acts you've done to this point.
+// Low enough score (aka Good) he will let you pass, grants full exp.
+// Too high of score (Neutral into Evil) and he won't let you pass.  At half hp Lathander will bless him to cast one of two massive spells.  A successful Arcana check will show you what spell it is and where it's targeted, otherwise better heal up!
 
 new entry "MMM_LATHANDERSBLESSING"
 type "StatusData"
@@ -1252,7 +1269,32 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "AI_HELPER_AVOIDAREA_RADIUS6"
 
-// ==================================== Act 2: Ellie May ====================================
+// ==================================== Shadow Cursed Lands - Lastlight Side ====================================
+// 2. Shadowcursed on the toilet. 
+
+new entry "MMM_SHADOW_CURSE_UNDEAD_CONTROL"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(MMM_SHADOW_CURSE_UNDEAD,100,-1)"
+
+new entry "MMM_SHADOW_CURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+data "StackPriority" "69"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 10. Something is missing from Ellie-May's grave... (Permanent Wisdom Event)
 
 new entry "MMM_ELLIEMAYBLESSING"
 type "StatusData"
@@ -1277,59 +1319,8 @@ data "Icon" "GenericIcon_Intent_Buff"
 data "Properties" "Highlighted"
 data "Boosts" "Ability(Wisdom,1)"
 
-// ==================================== Act 2: Shadowcursed Toilet Guy ====================================
-
-new entry "MMM_SHADOW_CURSE_UNDEAD_CONTROL"
-type "StatusData"
-data "StatusType" "POLYMORPHED"
-using "SCL_SHADOW_CURSE_UNDEAD_NEW"
-// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
-data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
-// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
-data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
-// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
-data "OnApplyFunctors" "ApplyStatus(MMM_SHADOW_CURSE_UNDEAD,100,-1)"
-
-new entry "MMM_SHADOW_CURSE_UNDEAD"
-type "StatusData"
-data "StatusType" "BOOST"
-using "SCL_SHADOW_CURSE_UNDEAD"
-data "StackPriority" "69"
-// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
-data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-
-// ==================================== Act 2: 11. Balthazar event #1. ====================================
-
-new entry "MMM_SUPER_SHADOWCURSE"
-type "StatusData"
-data "StatusType" "POLYMORPHED"
-using "SCL_SHADOW_CURSE_UNDEAD_NEW"
-// Shadow-Infused Undead
-data "DisplayName" "h66abd1cag0a0eg412bg8babg70d4b7d8580a;1"
-// Something has caused this shadow-cursed being to infuse itself with the shadows.
-data "Description" "he382272ag1f07g482agb5b5gec7c480a231b;1"
-// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
-data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
-// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
-data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
-// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
-data "OnApplyFunctors" "ApplyStatus(MMM_SUPER_SHADOWCURSE_UNDEAD,100,-1)"
-// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
-data "Rules" ""
-
-new entry "MMM_SUPER_SHADOWCURSE_UNDEAD"
-type "StatusData"
-data "StatusType" "BOOST"
-using "SCL_SHADOW_CURSE_UNDEAD"
-data "StackPriority" "420"
-// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
-data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-
-// ==================================== Act 2: Shadar Kai ====================================
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 9. Shadar-Kai.
 // TODO: Custom resource > cooldown "You can use this trait a number of times equal to your proficiency bonus" per RAW.
 // TODO: Level check 
 
@@ -1364,6 +1355,36 @@ data "Description" "h60bb1d22gcaceg4656g9a29gd2540ffd8711;1"
 data "Icon" "Spell_Abjuration_Stoneskin"
 data "Boosts" "Resistance(Acid, Resistant);Resistance(Bludgeoning, Resistant);Resistance(Cold, Resistant);Resistance(Fire, Resistant);Resistance(Force, Resistant);Resistance(Lightning, Resistant);Resistance(Necrotic, Resistant);Resistance(Piercing, Resistant);Resistance(Poison, Resistant);Resistance(Psychic, Resistant);Resistance(Radiant, Resistant);Resistance(Slashing, Resistant);Resistance(Thunder, Resistant)"
 data "StatusEffect" "8aa59540-9ded-437f-aa13-5c7c2d3c7cac"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 11. Balthazar event #1.
+
+new entry "MMM_SUPER_SHADOWCURSE"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// Shadow-Infused Undead
+data "DisplayName" "h66abd1cag0a0eg412bg8babg70d4b7d8580a;1"
+// Something has caused this shadow-cursed being to infuse itself with the shadows.
+data "Description" "he382272ag1f07g482agb5b5gec7c480a231b;1"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(MMM_SUPER_SHADOWCURSE_UNDEAD,100,-1)"
+// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
+data "Rules" ""
+
+new entry "MMM_SUPER_SHADOWCURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+data "StackPriority" "420"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
 // ==================================== Cut content ====================================
 

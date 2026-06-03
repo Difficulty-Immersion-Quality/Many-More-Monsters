@@ -143,7 +143,7 @@
 	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 									<content contentuid="hd8c12fd6gaaf0g4e26ga6f4g513c0e821775" version="1">Retaliates with a fireball.</content>
 
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
-	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.</content>
+	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.&lt;br&gt;&lt;br&gt;Each time you cast a spell of Level 1 or higher, your magic surges triggering a random magical effect.</content>
 
 	<!-- "MMM_ELLIEMAYBLESSING", "MMM_Passive_ELLIEMAYBLESSING" --> <content contentuid="he866a6bagfb7fg4e88ga02cg3a23222d3d47" version="1">Ellie May's Boon</content>
 	<!-- "MMM_ELLIEMAYBLESSING", "MMM_Passive_ELLIEMAYBLESSING" --> <content contentuid="h9f1eea95g0ce7g42e5g8088gfbb509bb12b3" version="1">Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.</content>
