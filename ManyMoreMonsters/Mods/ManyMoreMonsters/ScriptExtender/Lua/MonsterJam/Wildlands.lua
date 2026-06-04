@@ -730,44 +730,45 @@ local function SpawnOof()
     end
 end
 
--- TODO: He should not be going prone outside of his turn and such.
 --Oof clumsy roller
-local function ClumsyOof()
+local function ClumsyOof(Oof)
     local OofClumsySelector = Ext.Math.Random(1, 6)
+
     if OofClumsySelector == 1 then
-        Osi.ApplyStatus(Oof, "MMM_OOFDISARMED", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFDISARMED", 6, 1, Oof)
     elseif OofClumsySelector == 2 then
-        Osi.ApplyStatus(Oof, "MMM_OOFSPLINTER", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFSPLINTER", 6, 1, Oof)
     elseif OofClumsySelector == 3 then
-        Osi.ApplyStatus(Oof, "MMM_OOFDRUNK", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFDRUNK", 6, 1, Oof)
     elseif OofClumsySelector == 4 then
-        Osi.ApplyStatus(Oof, "MMM_OOFBUMBLE", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFBUMBLE", 6, 1, Oof)
+        -- TODO: Needs a custom spell with ogre throwing animation.
         Osi.UseSpell(Oof, "Projectile_AlchemistFire", Oof)
     elseif OofClumsySelector == 5 then
-        Osi.ApplyStatus(Oof, "MMM_OOFHAMSTRING", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFHAMSTRING", 6, 1, Oof)
     elseif OofClumsySelector == 6 then
-        Osi.ApplyStatus(Oof, "MMM_OOFSLIPPED", 12, 1, Oof)
+        Osi.ApplyStatus(Oof, "MMM_OOFSLIPPED", 6, 1, Oof)
     end
 end
 
 --Oof randomly slipping and getting up
-local function TrippyOof()
-    if (Osi.IsDead(Oof) == 0) then
-        local OofSlipRoll = Ext.Math.Random(1, 6)
-        if OofSlipRoll == 1 then
-            Osi.ApplyStatus(Oof, "PRONE_GREASE", 1, 1, Oof)
-            Ext.Timer.WaitFor(2000, function()
-                Osi.RemoveStatus(Oof, "PRONE_GREASE", "")
-            end)
-        end
-        Ext.Timer.WaitFor(8000, function()
-            TrippyOof()
-        end)
-    elseif (Osi.IsDead(Oof) == 1) then
-        print("RIP Oof - Slipped and fell too many times")
-        return
-    end
-end
+-- local function TrippyOof()
+--     if (Osi.IsDead(Oof) == 0) then
+--         local OofSlipRoll = Ext.Math.Random(1, 6)
+--         if OofSlipRoll == 1 then
+--             Osi.ApplyStatus(Oof, "PRONE_GREASE", 1, 1, Oof)
+--             Ext.Timer.WaitFor(2000, function()
+--                 Osi.RemoveStatus(Oof, "PRONE_GREASE", "")
+--             end)
+--         end
+--         Ext.Timer.WaitFor(8000, function()
+--             TrippyOof()
+--         end)
+--     elseif (Osi.IsDead(Oof) == 1) then
+--         print("RIP Oof - Slipped and fell too many times")
+--         return
+--     end
+-- end
 
 --Ex walks over to fight, ex and bf hate each other
 local function ItsComplicated()
@@ -1018,6 +1019,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
+-- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -1104,7 +1106,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if (round == 3) and Osi.GetFlag(OofFlag, Null) == 1 then
                 SpawnOof()
-                TrippyOof()
+                -- TrippyOof()
             end
         end)
     end
@@ -1145,16 +1147,21 @@ end)
 
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
-    --Oof's Turn
-    if object == Oof then
-        ClumsyOof()
-    end
-    if object == Grym2 and Osi.GetHitpoints(Grym2) <= 100 and Osi.IsOnStage(ForgeMephit1) == 0 then
-        Osi.SetOnStage(ForgeMephit1, 1)
-        Osi.SetOnStage(ForgeMephit2, 1)
-        Osi.SetOnStage(ForgeMephit3, 1)
-        Osi.SetOnStage(ForgeMephit4, 1)
-    end
+    Ext.Timer.WaitFor(100, function()
+        if object == Oof then
+            ClumsyOof(Oof)
+        end
+
+        if object == Grym2
+        and Osi.GetHitpoints(Grym2) <= 100
+        and Osi.IsOnStage(ForgeMephit1) == 0 then
+            Osi.SetOnStage(ForgeMephit1, 1)
+            Osi.SetOnStage(ForgeMephit2, 1)
+            Osi.SetOnStage(ForgeMephit3, 1)
+            Osi.SetOnStage(ForgeMephit4, 1)
+        end
+    end)
+
 end)
 
 --Open item listener
@@ -1715,64 +1722,6 @@ Ext.Osiris.RegisterListener("UsingSpellOnTarget", 6, "after",
                 local entity = Ext.Entity.Get(target)
                 for _, p in pairs(entity.InventoryOwner.PrimaryInventory.InventoryContainer.Items) do
                     Osi.Drop(p.Item.Uuid.EntityUuid)
-                end
-                Osi.SetOnStage(target, 0)
-                if Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE1", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE2", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE3", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE4", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE5", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE6", -1, 1, caster)
-                elseif Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE1") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE2") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE3") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE4") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE5") == 0 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE6") == 1 and
-                    Osi.HasActiveStatus(caster, "MMM_SURVIVALSIZE7") == 0 then
-                    Osi.ApplyStatus(caster, "MMM_SURVIVALSIZE7", -1, 1, caster)
                 end
             end)
         end

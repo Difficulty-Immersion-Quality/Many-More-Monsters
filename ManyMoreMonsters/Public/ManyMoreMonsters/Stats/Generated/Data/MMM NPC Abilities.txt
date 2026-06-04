@@ -1,0 +1,1201 @@
+// ==================================== Team Trajectile ====================================
+
+new entry "MMM_TEAMTRAJECTILEBLASTOFF"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ENLARGE"
+// Enlarged
+// data "DisplayName" "ha4ed2ee8g07cfg453bgbfabg88c053bf3f46;1"
+// Blast Off!
+data "DisplayName" "h18b068aege3a3g42e7ga1a5gb506a2c348f5;1"
+// data "Boosts" "Advantage(Ability, Strength); Advantage(SavingThrow, Strength);CharacterWeaponDamage(1d4);ObjectSize(+1);ScaleMultiplier(1.33);CharacterUnarmedDamage(1d4);CarryCapacityMultiplier(1.25)"
+data "Boosts" "Advantage(Ability, Strength); Advantage(SavingThrow, Strength);CharacterWeaponDamage(1d4);ObjectSize(+1);ScaleMultiplier(1.33);CharacterUnarmedDamage(1d4);CarryCapacityMultiplier(1.25);IncreaseMaxHP(150)"
+
+new entry "MMM_Shout_MassDimensionDoor"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_LOW_SerialKiller_BootsOfDimensionDoor"
+// Boots of Dimension Door
+// data "DisplayName" "hb68be288g2796g4734g83f2g752ba8eb3444;2"
+// Mass Dimension Door
+data "DisplayName" "h685ff502g32cbg47b2g8a69ga9eeff1a6669;1"
+// Cast &lt;LSTag Type="Spell" Tooltip="Teleportation_Dimension_Door"&gt;Dimension Door&lt;/LSTag&gt; using your boots.
+// data "Description" "hc506b9cfgd264g4312g9c1dga27f8e30291a;2"
+// The best way to run away.
+data "Description" "he30eef3fg2928g459bg87d1gc5fb3822eb7e;1"
+
+// ==================================== Mikey "Wiggles" Pridgen
+
+new entry "MMM_Target_HOOKSHOT"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_SteelWatcher_Biped_RetrievingShot"
+// data "Cooldown" ""
+data "Cooldown" "OncePerTurn"
+// data "TargetRadius" "14"
+data "TargetRadius" "18"
+// data "SpellRoll" "SpellAutoResolveOnAlly(Ability.Dexterity,16, true)"
+data "SpellRoll" "SpellAutoResolveOnAlly(Ability.Dexterity, CalculateSpellDC(Ability.Strength, context.Source), true)"
+// data "SpellSuccess" "Force(-11,TargetToOrigin);IF(not Ally()):DealDamage(3d8,Bludgeoning)"
+data "SpellSuccess" "Force(-11,TargetToEntity);IF(not Ally()):DealDamage(1d8,Bludgeoning)"
+// Hookshot
+data "DisplayName" "h9319d7c9g2adfg4df9g81f5g50e327fa3b2d;1"
+// Pull an entity towards you with great force.
+data "Description" "h3f995852g2f75g459dgb7d2g7e7830a5f01c;1"
+// data "TooltipDamageList" "DealDamage(3d8,Bludgeoning);"
+data "TooltipDamageList" "DealDamage(1d8,Bludgeoning)"
+// data "RechargeValues" "3-6"
+data "RechargeValues" ""
+
+// ==================================== Mimics ====================================
+
+new entry "MMM_MIMIC1"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC1B"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC2"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "MMM_MIMIC3"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// ==================================== Ravaged Beach ====================================
+// 5. Mindflayer ambush - Mindflayer using other mindflayer as bait to ambush player, attacks are about 1/3rd of a standard mindflayer.
+
+// Weakened Mind Blast
+new entry "MMM_Zone_MindBlast_MindFlayer_Weakened"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_MindBlast_MindFlayer"
+// data "SpellSuccess" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic,Magical); ApplyStatus(STUNNED,100,1)"
+data "SpellSuccess" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic,Magical)"
+// Mind Blast
+// data "DisplayName" "h27282233g52efg40b3gb198ge7b6c0ac2147;1"
+// Weakened Mind Blast
+data "DisplayName" "h29594e08gc49bg4558ga2bfg863f2ed53f86;1"
+// Spew forth a conical wave of psychic energy and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; targets within.
+// data "Description" "hbf315656ga8a7g4c85g9da6ga8decf7fb1f5;4"
+// Spew forth a conical wave of psychic energy.
+data "Description" "h7f32d08dgdf62g4edagacccg9a3f88aaa0a5;1"
+// data "DescriptionParams" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic)"
+data "DescriptionParams" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic)"
+// data "TooltipDamageList" "DealDamage(4d8+SpellCastingAbilityModifier,Psychic)"
+data "TooltipDamageList" "DealDamage(2d6+SpellCastingAbilityModifier,Psychic)"
+// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
+data "TooltipStatusApply" ""
+// data "Range" "14"
+data "Range" "5"
+
+// Weakened Tentacle Whip
+new entry "MMM_Target_Tentacles_MindFlayer_Weakened"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Tentacles_MindFlayer"
+// data "SpellSuccess" "DealDamage(2d10+4,Psychic);IF(not SavingThrow(Ability.Intelligence, 14)):ApplyStatus(STUNNED,100,1);"
+data "SpellSuccess" "DealDamage(1d10+4,Psychic)"
+// Tentacle Whip
+// data "DisplayName" "ha32797b6g8153g43b6gbb5cga37cc6c149a2;2"
+// Weakened Tentacle Whip
+data "DisplayName" "h5cf1cc21g530cg4683ga782g7cf06e38fdfb;1"
+// Lash out with your tentacles and possibly &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stun&lt;/LSTag&gt; your target.
+// data "Description" "hf0c16535gd5a3g4da1gbf6agb69118db4419;5"
+// Lash out with your tentacles.
+data "Description" "h7fcc7083g6eafg483cg8853gd0278ade0d1d;1"
+// data "TooltipDamageList" "DealDamage(2d10+4,Psychic)"
+data "TooltipDamageList" "DealDamage(1d10+4,Psychic)"
+// data "TooltipAttackSave" "MeleeUnarmedAttack;Intelligence"
+data "TooltipAttackSave" "MeleeSpellAttack"
+// data "TooltipStatusApply" "ApplyStatus(STUNNED,100,1)"
+data "TooltipStatusApply" ""
+
+// ==================================== Emerald Grove ====================================
+// 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy.
+// TODO: Have the mechanical status separate from the overhead text for combat log clarity.
+
+new entry "MMM_OofClumsy"
+type "PassiveData"
+// Clumsy
+data "DisplayName" "h354cad17g0278g45d9g993dg673b5183ab96;1"
+// This ogre was born with two left everything, how is someone this clumsy?
+data "Description" "hb1b0340age5c3g4696ga0d7gdbe438a33fe8;1"
+data "Icon" "Status_Prone"
+
+new entry "MMM_OOFKLUTZ"
+type "StatusData"
+data "StatusType" "BOOST"
+// Such a Klutz!
+data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
+// Prone to messing everything up.
+data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
+data "Icon" "statIcons_Confused"
+
+new entry "MMM_OOFSLIPPED"
+type "StatusData"
+data "StatusType" "KNOCKED_DOWN"
+using "PRONE_FALLEN"
+// Prone
+// data "DisplayName" "hf436e702gfa14g45aagabaeg6fa3d54c1061;1"
+// Oof slipped!
+data "DisplayName" "hd4944a6bg7362g4af0g8411ga36d3e250148;1"
+// Can't move or take actions, bonus actions, or reactions, and has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on Strength and Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;Attacks against a Prone creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; if they're made within [1] of the creature.&lt;br&gt;&lt;br&gt;A Prone creature must spend half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.
+// data "Description" "hfe0869e3g3954g4eb1g915agd39ade42ecde;3"
+// Can't move or take actions, bonus actions, or reactions, and has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on Strength and Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;Attacks against a Prone creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; if they're made within [1] of the creature.&lt;br&gt;&lt;br&gt;A Prone creature must spend half its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.
+data "Description" "hfe0869e3g3954g4eb1g915agd39ade42ecde;3"
+// Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.
+data "ExtraDescription" "h6cd48362g053dg47d7ga763g48feba5bea03;1"
+// data "RemoveConditions" "(HasActionResource('Movement', 50, 0, true) and not HasPassive('Athlete_StandUp') and not HasPassive('LeapToYourFeet')) or (HasPassive('Athlete_StandUp') and HasActionResource('Movement', 1.5, 0)) or (HasActionResource('Movement', 1, 0, true) and HasPassive('Athlete_StandUp')) or (HasPassive('LeapToYourFeet') and HasActionResource('Movement', 1.5, 0)) or (HasActionResource('Movement', 1, 0, true) and HasPassive('LeapToYourFeet'))"
+data "RemoveConditions" ""
+// data "StatusPropertyFlags" "IgnoredByImmobilized;InitiateCombat"
+data "StatusPropertyFlags" "IgnoredByImmobilized;InitiateCombat;ForceOverhead"
+// data "SplatterDirtAmount" "0.2"
+data "SplatterDirtAmount" "0.7"
+
+new entry "MMM_OOFSPLINTER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Oof got a splinter!
+data "DisplayName" "hc812dd94g799bg4234gbc06g7a32e176f90f;1"
+// Oof got a splinter, inflicting &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.
+data "Description" "h9de451d8g0962g40b0g83fcg8e64ccd07345;1"
+data "Icon" "Action_DisarmingAttack_Melee"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+data "OnApplyFunctors" "DealDamage(1,Piercing);ApplyStatus(BLEEDING,100,2)"
+
+new entry "MMM_OOFDISARMED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DISARM"
+// Weapon Dropped!
+// data "DisplayName" "hef7a7279g3977g496bga1a5g24be3a434868;2"
+// Oof's weapon slipped out of his hands!
+data "DisplayName" "hf6062eeegce12g4f15gaff8g698a47f35a2f;1"
+// An enemy has made you drop your weapon to the ground.
+// data "Description" "ha50fbaf7g046bg4255g8adegeb7ea837cc46;2"
+// Oof dropped his weapon mid-battle, how embarassing.
+data "Description" "hd1b30279gb513g4bbaga881g5725bfd1efe1;1"
+// data "Icon" "Action_DisarmingAttack_Melee"
+data "Icon" "statIcons_Disarmed"
+// data "FormatColor" "Orange"
+data "FormatColor" "White"
+
+new entry "MMM_OOFDRUNK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DRUNK"
+// Drunk
+// data "DisplayName" "h71a6dc3eg2596g4f90ga237g9627401f33c9;1"
+// Oof drank alcohol instead of a potion!
+data "DisplayName" "h3aee92fcg4fd8g4062g8537gf4e0a778a315;1"
+// Has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on Dexterity and Charisma &lt;LSTag Tooltip="AbilityCheck"&gt;Checks&lt;/LSTag&gt;.
+// data "Description" "h5fd7c8b8ga49bg421ag813egfd154778f5ff;4"
+// Oof gave himself a buzz, inflicting &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; for 1 turn.
+data "Description" "h9cc843b9g9959g4316ga007g6c655f48577e;1"
+// data "StatusPropertyFlags" "DisableCombatlog"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+data "OnApplyFunctors" "ApplyStatus(CONFUSION,100,1)"
+
+new entry "MMM_OOFBUMBLE"
+type "StatusData"
+data "StatusType" "BOOST"
+// Oof bumbled the flask he was going to throw!
+data "DisplayName" "h5eacd23ag8d89g45dcg807egfab6a9dd5855;1"
+// Oof dropped his flask on himself, whoops.
+data "Description" "h349ec00fg53b4g4808ga5fege29d72db8f8e;1"
+data "Icon" "Item_GRN_FireFlask_A"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+
+new entry "MMM_OOFHAMSTRING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "HAMSTRING"
+// Hamstrung
+// data "DisplayName" "h9f5f8be7gc48ag4a08ga112gd162bc57e986;2"
+// Oof pulled his hamstring!
+data "DisplayName" "h51c78884g9b73g4870gbaa5g3669a7112fc1;1"
+// &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.
+// data "Description" "h38a7184bg3f6fg4d51gbc98gc18deef89d73;2"
+// Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.
+data "Description" "hee83e74bg218cg40begb421g71fe847c17cf;1"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
+
+// ==================================== Forest ====================================
+// 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
+// TODO: Could be much more RAW, but it could also look like a troll at all too.
+// TODO: Maybe the passive should apply the status if it isn't present, but meh.
+
+new entry "MMM_TrollRegen_Passive"
+type "PassiveData"
+// Troll Regeneration
+data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
+// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
+data "DescriptionParams" "RegainHitPoints(10)"
+data "Icon" "Spell_Transmutation_Regenerate"
+data "Properties" "Highlighted"
+
+new entry "MMM_TROLLREGEN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Troll Regeneration
+data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
+// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
+data "DescriptionParams" "RegainHitPoints(10)"
+data "Icon" "Spell_Transmutation_Regenerate"
+data "StackId" "MMM_TROLLREGEN"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "TickType" "StartTurn"
+data "TickFunctors" "IF(not Dead() and HasHPPercentageWithoutTemporaryHPLessThan(100) and not Goon_HasBurningConditionOrTag() and not HasStatus('ACID')):RegainHitPoints(10)"
+
+// ==================================== Blighted Village ====================================
+// 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels?
+
+new entry "MMM_JEALOUSEX"
+type "StatusData"
+data "StatusType" "BOOST"
+// Raging Ex-Boyfriend
+data "DisplayName" "hb7d4ce2eg02ecg4c15g91d9g337811359364;1"
+data "StackId" "MMM_JEALOUSEX"
+
+// ==================================== Swamp ====================================
+// 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp.
+// 26. Will-o'-Wisp over the presumed dead child.
+
+new entry "MMM_WILL_O_WISP_GLOW"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+// using "DEAD_WILL_O_WISP"
+// Wisp Effect
+data "DisplayName" "h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd;1"
+data "Icon" "statIcons_SoulEcho"
+data "Boosts" "GameplayLight(3,false,0.1)"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
+data "StatusEffect" "4769bddd-bb59-4861-bb7f-b7ef1f28888d"
+
+// TODO: Regular invis is a target, no clean inheritence to be had.
+new entry "MMM_Shout_WISPINVIS"
+type "SpellData"
+data "SpellType" "Shout"
+data "Level" "2"
+data "SpellSchool" "Illusion"
+data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY,100,10);AI_ONLY:ApplyStatus(INVISIBILITY,100,1)"
+data "TargetRadius" "1.5"
+data "TargetConditions" "Self() and not HasStatus('FAERIE_FIRE')  and not IsImmuneToStatus('SG_Invisible')"
+data "Icon" "Spell_Illusion_Invisibility"
+data "DisplayName" "hcf22dcf2g26c6g4dffg98f8gc7c84f36124c;1"
+data "Description" "hf30493d0g1858g4f2eg8c77ga32d930bdd56;3"
+data "ExtraDescription" "hbd89356ag64e6g4ee5gb1a2ga259e0603647;1"
+data "TooltipStatusApply" "ApplyStatus(INVISIBILITY,100,10)"
+data "TooltipUpcastDescription" "04cc3403-f67a-4747-b49e-a1802cc7a6ad"
+data "TooltipPermanentWarnings" "184019c7-770a-4594-a7dd-ec616fe940fd"
+data "CastSound" "Spell_Cast_Utility_Invisibility_L1to3"
+data "TargetSound" "Spell_Impact_Utility_Invisibility_L1to3"
+data "VocalComponentSound" "Vocal_Component_Invisibility"
+data "PreviewCursor" "Cast"
+data "CastTextEvent" "Cast"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,,;8373f3da-2368-4a51-98b1-146ec3586660,,;cc5b0caf-3ed1-4711-a50d-11dc3f1fdc6a,,;,,;1715b877-4512-472e-9bd0-fd568a112e90,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,"
+data "VerbalIntent" "Utility"
+data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities"
+data "HitAnimationType" "MagicalNonDamage"
+data "MemoryCost" "1"
+data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
+data "CastEffect" "4f8e353e-c04e-45c3-880b-d10885fd091f"
+data "TargetEffect" "68b1219a-ccc2-4b29-bb42-b18996de3b4d"
+
+new entry "MMM_Target_WISPCONSUMELIFE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ExtractBrain_Mindflayer"
+// data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, 10)"
+// data "SpellSuccess" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(SELF,6d6)"
+data "SpellSuccess" "DealDamage(10d10,Lightning,Magical);RegainHitPoints(SELF,3d6)"
+// data "TargetConditions" "Character() and not Dead() and (HasStatus('SG_Stunned') or HasStatus('SG_Unconscious') and not HasAnyStatus({'PRONE','PRONE_GREASE','PRONE_ICE','PRONE_FALLEN'}))"
+data "TargetConditions" "Character() and not Dead() and (HasStatus('DOWNED') or HasStatus('SG_Sleeping') or Goon_HasProneCondition_Unconscious())"
+// Extract Brain
+// data "DisplayName" "hdc7aef70g430bg453bg8572g8834a2364262;2"
+// Consume Life
+data "DisplayName" "h46580d81gd418g4a86gb260gae11d8393cde;1"
+// Try to extract the brain of a Stunned or Unconscious creature.
+// data "Description" "hdccfcac3g7a8dg45e8gb683g9ffc48c4a1c7;3"
+// Try to consume what's left of a targets life essence.
+data "Description" "hce513b30g93c9g4387gbac6gaff3bd113aaf;1"
+// data "TooltipDamageList" "DealDamage(10d10+UnarmedMeleeAbilityModifier,Piercing);RegainHitPoints(6d6)"
+data "TooltipDamageList" "DealDamage(10d10,Lightning);RegainHitPoints(3d6)"
+// data "TooltipAttackSave" "MeleeUnarmedAttack"
+data "TooltipAttackSave" "Constitution"
+// data "UseCosts" "ActionPoint:1"
+data "UseCosts" "BonusActionPoint:1"
+
+new entry "MMM_Target_WISPSHOCKINGGRASP"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ShockingGrasp"
+// data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(LevelMapValue(D8Cantrip),Lightning,Magical)"
+data "SpellSuccess" "ApplyStatus(SHOCKING_GRASP,100,1);DealDamage(1d8+SpellCastingAbilityModifier,Lightning,Magical)"
+// data "DescriptionParams" "DealDamage(LevelMapValue(D8Cantrip),Lightning)"
+data "DescriptionParams" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
+// data "TooltipDamageList" "DealDamage(LevelMapValue(D8Cantrip),Lightning)"
+data "TooltipDamageList" "DealDamage(1d8+SpellCastingAbilityModifier,Lightning)"
+// data "SpellFlags" "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsHarmful"
+data "SpellFlags" "IsSpell;IsMelee;IsHarmful"
+
+// ==================================== Risen Road ====================================
+// 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
+
+new entry "MMM_Target_JUVENILERED_FLY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Fly_Dragon"
+// data "SpellProperties" "GROUND:TeleportSource();AI_IGNORE:AOE:Force(3.0,TargetToEntity,Friendly);CreateExplosion(Projectile_AiHelper_Fly_SkeletalDragon)"
+data "SpellProperties" "GROUND:TeleportSource();AI_IGNORE:AOE:Force(3.0,TargetToEntity,Friendly)"
+// data "AreaRadius" "4"
+data "AreaRadius" "2"
+// data "TargetConditions" "Player(context.Source) or (Item() and Tagged('AI_USEITEM_A') and DistanceToTargetGreaterThan(8.0))"
+data "TargetConditions" "Player(context.Source) or DistanceToTargetGreaterThan(8.0)"
+// data "UseCosts" "BonusActionPoint:1"
+data "UseCosts" "BonusActionPoint:1;Movement:3"
+
+new entry "MMM_Target_JUVENILERED_SLAM"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Slam_Dragon"
+// data "TargetRadius" "4"
+data "TargetRadius" "3"
+// data "SpellSuccess" "DealDamage(6d8+UnarmedMeleeAbilityModifier, Bludgeoning);ApplyStatus(PRONE,100,2);"
+data "SpellSuccess" "DealDamage(2d8+UnarmedMeleeAbilityModifier, Bludgeoning);ApplyStatus(PRONE,100,2)"
+// data "TargetConditions" "not Self() and not Tagged('HIT_PROXY')"
+data "TargetConditions" "Enemy() and not Self() and not Tagged('HIT_PROXY')"
+// data "AoEConditions" "not Self() and not Tagged('HIT_PROXY')"
+data "AoEConditions" "Enemy() and not Self() and not Tagged('HIT_PROXY')"
+// Slam
+// data "DisplayName" "hd2313906g9672g4869g8ba3g089ee5b83ed4;1"
+// Juvenile Slam
+data "DisplayName" "hb143b034g604fg4be5g847eg4299dd230646;1"
+// data "TooltipDamageList" "DealDamage(6d8+UnarmedMeleeAbilityModifier, Bludgeoning)"
+data "TooltipDamageList" "DealDamage(2d8+UnarmedMeleeAbilityModifier, Bludgeoning)"
+
+new entry "MMM_Target_JUVENILERED_MULTIATTACK"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Multiattack_Dragon"
+// data "TargetRadius" "4"
+data "TargetRadius" "3"
+// data "SpellSuccess" "DealDamage(max(1,4d8+UnarmedMeleeAbilityModifier),Slashing);Cast2[DealDamage(3d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(4d6,Fire);ApplyStatus(BURNING,100,2)]"
+data "SpellSuccess" "DealDamage(max(1,2d8+UnarmedMeleeAbilityModifier),Slashing);Cast2[DealDamage(1d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(2d6,Fire);ApplyStatus(BURNING,100,2)]"
+// data "TargetConditions" "not Self() and not Dead() and not Tagged('HIT_PROXY')"
+data "TargetConditions" "Enemy() and not Dead() and not Tagged('HIT_PROXY') and not Self()"
+// data "DescriptionParams" "DealDamage(max(1,4d8+UnarmedMeleeAbilityModifier),Slashing);DealDamage(3d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(4d6,Fire);"
+data "DescriptionParams" "DealDamage(max(1,2d8+UnarmedMeleeAbilityModifier),Slashing);DealDamage(1d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(2d6,Fire)"
+// data "TooltipDamageList" "DealDamage(4d8+UnarmedMeleeAbilityModifier,Slashing);DealDamage(3d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(4d6,Fire);"
+data "TooltipDamageList" "DealDamage(2d8+UnarmedMeleeAbilityModifier,Slashing);DealDamage(1d8+UnarmedMeleeAbilityModifier,Piercing);DealDamage(2d6,Fire);"
+
+// Unused
+new entry "MMM_Zone_BreathWeapon_Fire_Cone_JuvenileRedDragon"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_BreathWeapon_Fire_Cone"
+// data "SpellSuccess" "DealDamage(LevelMapValue(BreathWeapon),Fire,Magical)"
+data "SpellSuccess" "DealDamage(3d6,Fire,Magical)"
+// data "SpellFail" "DealDamage(LevelMapValue(BreathWeapon)/2, Fire,Magical)"
+data "SpellFail" "DealDamage(3d6/2, Fire,Magical)"
+// Fire Breath
+// data "DisplayName" "h725acbf8ga49ag4d70g9775g638c5a1094a0;2"
+// Juvenile Fire Breath
+data "DisplayName" "h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5;1"
+// data "TooltipDamageList" "DealDamage(LevelMapValue(BreathWeapon),Fire)"
+data "TooltipDamageList" "DealDamage(3d6,Fire)"
+
+new entry "MMM_Projectile_JUVENILERED_FIREBALL"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_Fireball_Dragon"
+// data "TargetRadius" "30"
+data "TargetRadius" "26"
+// data "AreaRadius" "6"
+data "AreaRadius" "4"
+// data "SpellSuccess" "DealDamage(14d6,Fire,Magical);ApplyStatus(BURNING,100,2)"
+data "SpellSuccess" "DealDamage(4d6,Fire,Magical);ApplyStatus(BURNING,100,2)"
+// data "SpellFail" "DealDamage((14d6)/2,Fire,Magical)"
+data "SpellFail" "DealDamage((4d6)/2,Fire,Magical)"
+// data "TargetConditions" "DistanceToTargetGreaterThan(6.0) and not Tagged('HIT_PROXY')"
+data "TargetConditions" "Enemy() and DistanceToTargetGreaterThan(4.0) and not Tagged('HIT_PROXY')"
+// data "Trajectories" "ee353c2a-31e7-4fe2-a1b8-1902da1f4371"
+data "Trajectories" "f5855e43-2e8f-4971-b8c2-7faa36e3381b"
+// Juvenile Fire Breath
+data "DisplayName" "h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5;1"
+// Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity.
+// data "Description" "hf6dae528gfd1eg426dg9776g4fff66e4734f;6"
+// Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.
+data "Description" "ha2415101g373eg4be2g8df7g0c9d73cfec3b;1"
+// data "TooltipDamageList" "DealDamage(14d6,Fire)"
+data "TooltipDamageList" "DealDamage(4d6,Fire)"
+// data "CastSound" "CrSpell_Cast_RedDragon_FireBreath"
+data "CastSound" "Spell_Cast_Damage_Fireball_L5"
+// data "RechargeValues" ""
+data "RechargeValues" "5-6"
+
+new entry "MMM_Shout_JUVENILERED_FEAR"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_FrightfulPresence_Dragon"
+// data "Cooldown" "OncePerTurn"
+data "Cooldown" "OncePerCombat"
+// data "AreaRadius" "16"
+data "AreaRadius" "8"
+// data "SpellSuccess" "ApplyStatus(FEARED,100,2);"
+data "SpellSuccess" "ApplyStatus(FEARED,100,1)"
+// data "TooltipStatusApply" "ApplyStatus(FEARED, 100, 2)"
+data "TooltipStatusApply" "ApplyStatus(FEARED, 100, 1)"
+
+// Juvenile Red Dragon - Retaliate...
+
+new entry "MMM_Dragon_Red_Retaliate_Juvenile"
+type "PassiveData"
+using "Dragon_Red_Retaliate"
+// data "Conditions" "Enemy() and HasStatus('DRAGON_RED_RETALIATE') and HasLastAttackTriggered() and not HasStatus('SG_Polymorph')"
+data "Conditions" "Enemy() and HasStatus('MMM_JUVENILERED_RETALIATE') and not HasStatus('SG_Polymorph')"
+// data "StatsFunctors" "UseSpell(SWAP,Projectile_FireballRetaliate_Dragon,true,true,true,,true)"
+data "StatsFunctors" "UseSpell(SWAP,MMM_Projectile_JUVENILERED_FIREBALL_Retaliate,true,true,true)"
+
+new entry "MMM_JUVENILERED_RETALIATE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DRAGON_RED_RETALIATE"
+data "StackPriority" "1"
+// data "RemoveConditions" "SpellId('Projectile_FireballRetaliate_Dragon')"
+data "RemoveConditions" "SpellId('MMM_Projectile_JUVENILERED_FIREBALL_Retaliate')"
+
+new entry "MMM_JUVENILERED_RETALIATE_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DRAGON_RED_RETALIATE_TECHNICAL"
+data "StackPriority" "1"
+// data "Passives" "Dragon_Red_Retaliate"
+data "Passives" "MMM_Dragon_Red_Retaliate_Juvenile"
+// data "TickFunctors" "IF(not HasStatus('DRAGON_RED_RETALIATE')):ApplyStatus(DRAGON_RED_RETALIATE,100,-1)"
+data "TickFunctors" "IF(not HasStatus('MMM_JUVENILERED_RETALIATE')):ApplyStatus(MMM_JUVENILERED_RETALIATE,100,-1)"
+// data "OnRemoveFunctors" "RemoveStatus(DRAGON_RED_RETALIATE)"
+data "OnRemoveFunctors" "RemoveStatus(MMM_JUVENILERED_RETALIATE)"
+
+new entry "MMM_Projectile_JUVENILERED_FIREBALL_Retaliate"
+type "SpellData"
+data "SpellType" "Projectile"
+using "MMM_Projectile_JUVENILERED_FIREBALL"
+// data "TargetConditions" "Enemy() and DistanceToTargetGreaterThan(4.0) and not Tagged('HIT_PROXY')"
+data "TargetConditions" "not Tagged('HIT_PROXY')"
+// data "RechargeValues" "5-6"
+data "RechargeValues" ""
+
+// ==================================== Underdark ====================================
+// 37. Clear the cave-in to reveal a damaged beholder.
+// TODO: Is "RechargeValues" always just a D6 roll per spell? Because if so the way they're set up here is kinda pointless, benign, but pointless.
+// TODO: Different coloured beams and shit.
+
+new entry "MMM_Projectile_LEVITATE"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_Levitate_Beholder"
+
+new entry "MMM_Target_PARALYZINGRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ParalyzingRay_Spectator"
+// data "TooltipStatusApply" "ApplyStatus(PARALYZED_SPECTATOR,100,3)"
+data "TooltipStatusApply" "ApplyStatus(PARALYZED_SPECTATOR,100,2)"
+// data "RechargeValues" "4-6"
+data "RechargeValues" "1-2"
+
+new entry "MMM_Target_WOUNDINGRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_WoundingRay_Spectator"
+// data "SpellSuccess" "DealDamage((4d8+3),Necrotic)"
+data "SpellSuccess" "DealDamage((2d8+3),Necrotic)"
+// data "SpellFail" "DealDamage((4d8+3)/2,Necrotic)"
+data "SpellFail" "DealDamage((2d8+3)/2,Necrotic)"
+// data "TooltipDamageList" "DealDamage(4d8+3,Necrotic)"
+data "TooltipDamageList" "DealDamage(2d8+3,Necrotic)"
+
+new entry "MMM_Target_CONFUSIONRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FearRay_Spectator"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC())"
+// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,2)"
+data "SpellSuccess" "ApplyStatus(CONFUSION_RAY,100,2)"
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('FRIGHTENED')"
+data "TargetConditions" "Character() and Enemy() and not HasStatus('CONFUSION_RAY')"
+// Fear Ray
+// data "DisplayName" "he3c73709gd2a7g4d10g891bg171742cd0079;1"
+// Confusion Ray
+data "DisplayName" "h9f7d2edbgdee1g46c5g8078g1414e5088c78;1"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightens&lt;/LSTag&gt; its target.
+// data "Description" "h71c35c37g9a71g432fgbe3cg25e723e1e12d;2"
+// Shoot an eye ray that &lt;LSTag Type="Spell" Tooltip="Target_ConfusionRay_Spectator"&gt;Confuses&lt;/LSTag&gt; its target.
+data "Description" "hf9a835ecg29bdg4cffga7b4gd4c6394da84a;1"
+// data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,3)"
+data "TooltipStatusApply" "ApplyStatus(CONFUSION_RAY,100,2)"
+// data "CastSound" "CrSpell_Cast_RayFear"
+data "CastSound" "CrSpell_Cast_Spectator_ConfusionRay"
+// data "TargetSound" "CrSpell_Impact_RayFear"
+data "TargetSound" "CrSpell_Impact_Spectator_ConfusionRay"
+// data "RechargeValues" "4-6"
+data "RechargeValues" "2-3"
+
+new entry "MMM_Target_SLOWRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FearRay_Spectator"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC())"
+// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,2)"
+data "SpellSuccess" "ApplyStatus(SLOW,100,2)"
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('FRIGHTENED')"
+data "TargetConditions" "Character() and Enemy() and not HasStatus('SLOW')"
+// Fear Ray
+// data "DisplayName" "he3c73709gd2a7g4d10g891bg171742cd0079;1"
+// Slow Ray
+data "DisplayName" "hb8257f42gc028g49eagbb32g0d023fc3a8ae;1"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightens&lt;/LSTag&gt; its target.
+// data "Description" "h71c35c37g9a71g432fgbe3cg25e723e1e12d;2"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="SLOW"&gt;Slows&lt;/LSTag&gt; its target.
+data "Description" "hdbafe54cg2341g4c1bg9c25gdac18d5631f5;1"
+// data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,3)"
+data "TooltipStatusApply" "ApplyStatus(SLOW,100,2)"
+// data "RechargeValues" "4-6"
+data "RechargeValues" "3-4"
+
+new entry "MMM_Target_PETRIFYRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FearRay_Spectator"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC())"
+// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,2)"
+data "SpellSuccess" "ApplyStatus(PETRIFIED,100,2)"
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('FRIGHTENED')"
+data "TargetConditions" "Character() and Enemy() and not HasStatus('PETRIFIED')"
+// Fear Ray
+// data "DisplayName" "he3c73709gd2a7g4d10g891bg171742cd0079;1"
+// Petrify Ray
+data "DisplayName" "h1ef5f407geb19g4627gb771g5921816dc5d5;1"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightens&lt;/LSTag&gt; its target.
+// data "Description" "h71c35c37g9a71g432fgbe3cg25e723e1e12d;2"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrifies&lt;/LSTag&gt; its target.
+data "Description" "h951d8854g1532g4584g8b0ag85c46fae2d5f;1"
+// data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,3)"
+data "TooltipStatusApply" "ApplyStatus(PETRIFIED,100,2)"
+// data "RechargeValues" "4-6"
+data "RechargeValues" "4-5"
+
+new entry "MMM_Target_SLEEPRAY"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FearRay_Spectator"
+// data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom,SourceSpellDC(), AdvantageOnSleep(), DisadvantageOnSleep())"
+// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,2)"
+data "SpellSuccess" "ApplyStatus(SLEEP,100,2)"
+// data "TargetConditions" "Character() and Enemy() and not HasStatus('FRIGHTENED')"
+data "TargetConditions" "Character() and Enemy() and not HasStatus('SLEEP')"
+// Fear Ray
+// data "DisplayName" "he3c73709gd2a7g4d10g891bg171742cd0079;1"
+// Sleep Ray
+data "DisplayName" "h8c86d426g08d4g41e3gacdagdf2abdc308d4;1"
+// Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightens&lt;/LSTag&gt; its target.
+// data "Description" "h71c35c37g9a71g432fgbe3cg25e723e1e12d;2"
+// Shoot an eye ray that inflicts &lt;LSTag Type="Status" Tooltip="SLEEP"&gt;Sleep&lt;/LSTag&gt; upon its target.
+data "Description" "ha909f49eg7066g4896gac14g668491b74477;1"
+data "TooltipStatusApply" "ApplyStatus(SLEEP,100,2)"
+// data "RechargeValues" "4-6"
+data "RechargeValues" "5-6"
+
+// ==================================== Underdark
+// 39. Bulette Nest.  Fun fact, baby bulette's kill and eat their mother.
+
+new entry "MMM_MATRIPHAGY"
+type "StatusData"
+data "StatusType" "BOOST"
+// Matriphagy
+data "DisplayName" "h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7;1"
+// Baby bulette's kill their mother and eat her after birth.
+data "Description" "h897abff9g3dfag4b99gb37fg84d3b6a5306b;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_MATRIPHAGY"
+
+new entry "MMM_Target_BABYBULETTEBITE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite_Bulette"
+// data "SpellSuccess" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);IF(TargetSizeEqualOrSmaller(Size.Large))Force(1.5);ApplyStatus(ACID,100,3)"
+data "SpellSuccess" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing);ApplyStatus(ACID,100,3)"
+// Bite a target and possibly push it back [1].
+// data "Description" "h0fb03eb2g9802g4452ga838gf9c45799108e;2"
+// Bite a target.
+data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
+// data "TooltipDamageList" "DealDamage(4d12+UnarmedMeleeAbilityModifier,Piercing);"
+data "TooltipDamageList" "DealDamage(1d12+UnarmedMeleeAbilityModifier,Piercing)"
+// data "TooltipStatusApply" "ApplyStatus(ACID,100,2)"
+data "TooltipStatusApply" "ApplyStatus(ACID,100,3)"
+
+new entry "MMM_Projectile_BABYBULETTEJUMP"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_Jump_Bulette"
+// data "SpellProperties" "GROUND:CreateExplosion(Projectile_Jump_Bulette_Spawn)"
+data "SpellProperties" "GROUND:CreateExplosion(Projectile_Jump_Knockdown_AOE)"
+// data "TooltipDamageList" "DealDamage(3d6+4,Bludgeoning);DealDamage(3d6+4,Slashing)"
+data "TooltipDamageList" "DealDamage(1d6+4,Bludgeoning);DealDamage(1d6+4,Slashing)"
+
+new entry "MMM_Projectile_BABYBULETTETOXIC"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_ToxicSpit_Bulette"
+// data "SpellSuccess" "DealDamage(2d8+3,Acid)"
+data "SpellSuccess" "DealDamage(1d8+3,Acid)"
+// data "SpellFail" "DealDamage((2d8+3)/2,Acid)"
+data "SpellFail" "DealDamage((1d8+3)/2,Acid)"
+// data "TooltipDamageList" "DealDamage(2d8+3,Acid)"
+data "TooltipDamageList" "DealDamage(1d8+3,Acid)"
+
+// Baby Bulettes - Survival of the Fittest...
+
+// TODO: "IsTargetableCorpse()" with "FreshCorpse" too restrictive?
+// TODO: Inheritence here is meh.
+new entry "MMM_Target_CONSUMEBULETTE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite"
+data "Cooldown" "OncePerTurn"
+data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
+data "SpellProperties" "SwitchDeathType(Explode);ApplyStatus(SELF,MMM_SURVIVAL, 100, 1)"
+data "DeathType" "Explode"
+data "SpellSuccess" "RegainHitPoints(SELF, 10d10)"
+data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
+// Consume
+data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
+// Devours a corpse.
+data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
+data "UseCosts" "BonusActionPoint:1"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsEnemySpell;IsMelee"
+data "SpellAnimationIntentType" "Aggressive"
+data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+new entry "MMM_SURVIVAL"
+type "StatusData"
+data "StatusType" "BOOST"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "Icon" "Action_VampireBite"
+data "StackId" "MMM_SURVIVAL2"
+data "StackType" "Additive"
+data "OnApplyFunctors" "IF(not MMM_SurvivalOfTheFittest()):ApplyStatus(MMM_SURVIVALSIZE1,100,-1);IF(HasStatus('MMM_SURVIVALSIZE1')):ApplyStatus(MMM_SURVIVALSIZE2,100,-1);IF(HasStatus('MMM_SURVIVALSIZE2')):ApplyStatus(MMM_SURVIVALSIZE3,100,-1);IF(HasStatus('MMM_SURVIVALSIZE3')):ApplyStatus(MMM_SURVIVALSIZE4,100,-1);IF(HasStatus('MMM_SURVIVALSIZE4')):ApplyStatus(MMM_SURVIVALSIZE5,100,-1);IF(HasStatus('MMM_SURVIVALSIZE5')):ApplyStatus(MMM_SURVIVALSIZE6,100,-1);IF(HasStatus('MMM_SURVIVALSIZE6')):ApplyStatus(MMM_SURVIVALSIZE7,100,-1)"
+data "Boosts" "Ability(Strength, +2);Ability(Constitution, +2);IncreaseMaxHP(15)"
+data "StatusPropertyFlags" "FreezeDuration;MultiplyEffectsByDuration;DisableOverhead;DisableCombatlog;ApplyToDead"
+data "StatusEffect" "2122e3f6-ac60-4b45-8b43-a9bd66b62b61"
+
+new entry "MMM_SURVIVALSIZE1"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Icon" "Action_VampireBite"
+// Survival of the Fittest
+data "DisplayName" "h1439735agfc1cg4001gac03g51ec95bc37d6;1"
+// Consuming a corpse has made this Bulette stronger.
+data "Description" "h0accbfd3g6523g4595gb4acgcdb9e223f284;1"
+data "StackId" "MMM_SURVIVALSIZE"
+data "StackPriority" "1"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "Boosts" "ScaleMultiplier(1.75);Weight(100)"
+
+new entry "MMM_SURVIVALSIZE2"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "2"
+data "Boosts" "ScaleMultiplier(2.5);Weight(150)"
+
+new entry "MMM_SURVIVALSIZE3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "3"
+data "Boosts" "ScaleMultiplier(3.25);Weight(200)"
+
+new entry "MMM_SURVIVALSIZE4"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "4"
+data "Boosts" "ScaleMultiplier(4);Weight(250)"
+
+new entry "MMM_SURVIVALSIZE5"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "Boosts" "ScaleMultiplier(4.75);Weight(300)"
+
+new entry "MMM_SURVIVALSIZE6"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "6"
+data "Boosts" "ScaleMultiplier(5.5);Weight(450)"
+
+new entry "MMM_SURVIVALSIZE7"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_SURVIVALSIZE1"
+data "StackPriority" "7"
+data "Boosts" "ScaleMultiplier(6.5);Weight(600)"
+
+// ==================================== Grymforge ====================================
+// 40. Mega Mimic formed from the three smaller mimics.
+
+new entry "MMM_Target_MEGAMIMICBITE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite"
+// data "SpellSuccess" "IF(not SavingThrow(Ability.Strength, SourceSpellDC()) and HasWeaponInMainHand() and CanDisarmWieldingWeapon()):ApplyStatus(DISARM_STEAL,100,0);DealDamage(max(1,2d8+UnarmedMeleeAbilityModifier),Piercing)"
+data "SpellSuccess" "DealDamage(max(1,3d8+UnarmedMeleeAbilityModifier),Piercing)"
+// Bite a target and possibly swallow its weapon.
+// data "Description" "h3c00869fga5c9g4696g935cgea358117331e;4"
+// Bite a target.
+data "Description" "h00cdf585g3af2g4d9fg8c80gefabb5ea1c1a;2"
+// data "TooltipDamageList" "DealDamage(2d8+UnarmedMeleeAbilityModifier,Piercing)"
+data "TooltipDamageList" "DealDamage(3d8+UnarmedMeleeAbilityModifier,Piercing)"
+
+// ==================================== Grymforge
+// 43. Optional - Break the tomb to unleash the Spirits of the Forge and upgrade Grym to Grym 2.0, making him harder to cheese.
+
+// Unused
+new entry "MMM_GRYMD"
+type "PassiveData"
+// Grym Devastation
+data "DisplayName" "h8d24bb07geda3g4571gac22gf48d43994f09;1"
+// If someone isn't within 20m of Grym he will destroy the forge, and everyone with it.
+data "Description" "hbbf58b0cg7be3g4140gac82g9807c584dbb3;1"
+data "Properties" "Highlighted"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+
+// Unused
+new entry "MMM_Shout_GRYMDEVASTATION"
+type "SpellData"
+data "SpellType" "Shout"
+using "Projectile_UND_Runepowder_Barrel_Explosion"
+data "SpellProperties" "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt);GROUND:CreateSurface(1,,Fire);Force(6, TargetToEntity);GROUND:SurfaceChange(Daylight)"
+data "AreaRadius" "40"
+data "ExplodeRadius" "40"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(10d8+40,Force);IF(Item() and (HasStatus('DEBRIS_THRESHOLD_GREATER') or HasStatus('DEBRIS_THRESHOLD') or HasStatus('DEBRIS_THRESHOLD_LESSER'))):DealDamage(23,Force)"
+data "SpellFail" "DealDamage((10d8+40)/2,Force)"
+data "TargetConditions" "Enemy() and Character()"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+// Grym Devastation
+data "DisplayName" "h8d24bb07geda3g4571gac22gf48d43994f09;1"
+// Under unknown threat Grym sets off a massive runepowder charge.
+data "Description" "h2847cc74g0f06g4a24gbf29g8d8be5803d51;1"
+data "TooltipDamageList" "DealDamage(10d8+40,Force)"
+data "TooltipAttackSave" "Constitution"
+data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
+data "CastSound" "Action_Cast_RadianceOfTheDawn"
+data "TargetSound" "Action_Impact_RadianceOfTheDawn"
+data "CastTextEvent" "Cast"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "2f0d97b9-4a1f-4bf3-a3c2-32efb563d601,,;,,;70ddfd63-fc3f-45f4-b067-75389b85d540,,;90face3a-6607-4b3d-87e6-c6090b069160,,;57e449b3-b712-4508-afcf-f2e91dc473f6,,;,,;84f3727f-aabc-4e34-bf31-c6cd0160bec9,,;,,;,,"
+data "VerbalIntent" "Healing"
+data "SpellStyleGroup" "Class"
+data "SpellFlags" "AddFallDamageOnLand;IsHarmful;RangeIgnoreVerticalThreshold;CanAreaDamageEvade;ImmediateCast;DisplayInItemTooltip"
+data "HitAnimationType" "MagicalNonDamage"
+data "PrepareEffect" "33d4ba61-8c76-4138-ac49-c33d279fb9c9"
+data "CastEffect" "11b177e1-ccd8-495d-ad9a-5547a138f540"
+data "TargetEffect" "78ab57f2-edce-4697-8be4-7bf7c2e76f92"
+data "DamageType" "Force"
+
+// TODO:
+new entry "MMM_Projectile_GRYMROCKETPUNCH"
+type "SpellData"
+data "SpellType" "Projectile"
+data "Level" "0"
+data "SpellSchool" "Evocation"
+data "SpellProperties" "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt)"
+data "TargetFloor" "-1"
+data "TargetRadius" "26"
+data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
+data "SpellSuccess" "DealDamage(6d8,Force,Magical)"
+data "SpellFail" "DealDamage((6d8)/2,Force,Magical)"
+data "TargetConditions" "Enemy() and DistanceToTargetGreaterThan(12.0)"
+data "ProjectileCount" "1"
+data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
+data "Icon" "Spell_Evocation_FireBolt"
+// Rocket Punch
+data "DisplayName" "hb2c010feg1b1eg419fg9d2bgf2ed3d5be7d1;1"
+// Grym fires his fist to hit enemies at range.
+data "Description" "he0956d1agc340g4a81g923cgd61262d9119a;1"
+data "TooltipDamageList" "DealDamage(6d8,Force)"
+data "TooltipAttackSave" "MeleeWeaponAttack"
+data "CastSound" "Spell_Cast_Damage_Fire_FireBolt_L1to3"
+data "CycleConditions" "Enemy() and not Dead()"
+data "UseCosts" "BonusActionPoint:1"
+data "RechargeValues" ""
+data "SpellAnimation" "8b8bb757-21ce-4e02-a2f3-97d55cf2f90b,,;6606c30b-be1c-4f17-ae6b-1a591c80b18c,366693ee-d97f-4294-a4dd-a2145ddc4e6a,9f2d32b9-529a-4b75-b3df-6e1ae1395280;f4ac302b-1569-404f-bd52-1fe443e265df,479ee5da-2967-41e1-b7d1-a94e864a5f25,79323098-edb3-4993-ba50-9b5f705e9878;e8a5c57f-855b-4227-acaa-11e8ce8d7d64,b5cb923d-0c08-4c20-89a9-44b9bf98c6cb,6282d127-0c06-4365-9d53-6f32ef350127;7bb52cd4-0b1c-4926-9165-fa92b75876a3,,;2b81c18b-9698-4262-a623-932c2bb1296d,ecbf9949-3b33-432c-b735-e47aaed0924a,e71a7c08-fdc1-4a0b-9a90-1c793c58553c;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
+data "HitAnimationType" "MagicalDamage_External"
+data "PrepareEffect" ""
+data "CastEffect" "e235ca47-1bf5-4587-9475-cf191b6005f9"
+data "DamageType" "Force"
+
+// Spirits of the Forge...
+
+new entry "MMM_GHOSTINITIATIVE"
+type "PassiveData"
+// Ambusher
+data "DisplayName" "hf59f8652g8414g44daga44dg225de02de026;2"
+// Gain a +[1] bonus to Initiative Rolls.
+data "Description" "h5b86e533gcf1cg4726g8804g3146580a0b0a;2"
+data "DescriptionParams" "40"
+data "Properties" "IsHidden"
+data "Boosts" "Initiative(40)"
+
+new entry "MMM_Target_SPIRITSHOVE"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_LOW_Poltergeist_Shove"
+// data "TargetRadius" "9"
+data "TargetRadius" "5"
+// data "SpellRoll" "not SavingThrow(Ability.Strength, 15)"
+data "SpellRoll" ""
+// data "SpellSuccess" "DealDamage(3d10+4,Force,Magical);ApplyStatus(PRONE,100,1);Force(4);"
+data "SpellSuccess" "ApplyStatus(PRONE,100,1);Force(10)"
+// data "TargetConditions" "Enemy() and not Dead() and not Tagged('OSKARSBELOVED_IMMUNITY')"
+data "TargetConditions" "Enemy() and not Dead()"
+// data "UseCosts" "ActionPoint:1"
+data "UseCosts" "BonusActionPoint:1"
+// data "RechargeValues" "4-6"
+data "RechargeValues" ""
+
+// ==================================== Mountain Pass ====================================
+// 11. Let's just say this fight is... hands on.
+
+new entry "MMM_Shout_SummonHands"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_HAV_FlamingSpy_SummonHands"
+// data "SpellProperties" "AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,10); ApplyStatus(STUNNED,100,3); ApplyStatus(HAV_ISOBELABDUCTION_FLAMINGSPY_UNPREFER_TARGET,100,3)"
+data "SpellProperties" "AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,10); ApplyStatus(STUNNED,100,3)"
+// data "TargetConditions" "Enemy() and not Dead() and not Tagged('PLAYABLE') and not Item()"
+data "TargetConditions" "Enemy() and not Dead() and not Item()"
+
+new entry "MMM_Target_CRAWLINGCLAW"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Slam_Zombie_AnimateDead"
+// data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);IF(not Tagged('UNDEAD') and not Tagged('PLAYABLE') and not Tagged('CONSTRUCT')  and not Tagged('ELEMENTAL') and not Tagged('PLANT') and not Tagged('OOZE')):ApplyStatus(CRAWLING_GNAW_SWITCH,100,1) "
+data "SpellSuccess" "DealDamage(2d6+UnarmedMeleeAbilityModifier, Bludgeoning);IF(not Tagged('UNDEAD') and not Tagged('CONSTRUCT') and not Tagged('ELEMENTAL') and not Tagged('PLANT') and not Tagged('OOZE')):ApplyStatus(CRAWLING_GNAW_SWITCH,100,1)"
+// data "TooltipStatusApply" "ApplyStatus(CRAWLING_GNAW_SWITCH,100,1)"
+data "TooltipStatusApply" "ApplyStatus(MMM_CRAWLINGCLAW_SWITCH,100,1)"
+
+new entry "MMM_CRAWLINGCLAW_SWITCH"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CRAWLING_GNAW_SWITCH"
+// data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death)):SwitchDeathType(Explode);IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
+data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Death) and not Summon() and IsTargetableCorpse()):Summon(82d6ff04-db9d-4b02-82aa-fd4db21f5b7d, UntilLongRest,,,,ZOMBIE_DECAY,SHADOWCURSE_SUMMON_CHECK)"
+
+// ==================================== Mountain Pass
+// 11. Let's just say this fight is... hands on.
+// 10. The Gith actualy have some prisoners in the prisons.
+
+new entry "MMM_ChaosMagic"
+type "PassiveData"
+// Chaos Magic
+data "DisplayName" "h4627f142g2a2cg48e0g9266g2f8917c2b32a;1"
+// You don't know what to expect from this twisted magic.&lt;br&gt;&lt;br&gt;Each time you cast a spell of Level 1 or higher, your magic surges triggering a random magical effect.
+data "Description" "hc941079fgec2fg4851g807dg02056a8f725e;1"
+data "Icon" "PassiveFeature_WildMagicSurge"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnCast"
+data "Conditions" "not IsCantrip() and HasSpellFlag(SpellFlags.Spell)"
+data "StatsFunctors" "TriggerRandomCast(1,,WildMagic)"
+
+// ==================================== Githyanki Crecke - Dawnmaster Vaseid ====================================
+// B. Boss Battle 
+// Dawnmaster Vaseid gave his life to protect the Blood of Lathander, now he'll judge you if you're worthy or not.
+// A check is preformed when you approach him based on how many good vs evil acts you've done to this point.
+// Low enough score (aka Good) he will let you pass, grants full exp.
+// Too high of score (Neutral into Evil) and he won't let you pass.  At half hp Lathander will bless him to cast one of two massive spells.  A successful Arcana check will show you what spell it is and where it's targeted, otherwise better heal up!
+
+new entry "MMM_LATHANDERSBLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Lathander's Blessing
+data "DisplayName" "h7d02862fg1f4eg47e7g9f43g6e32bd632763;1"
+// Lathander is empowering Dawnmaster Vaseid, making him invulnerable and granting him a powerful spell.
+data "Description" "h88d02f89g21c2g4b8cgba4egedbfe8fea673;1"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+data "FormatColor" "White"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+data "Boosts" "ActionResourceBlock(Movement);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(ActionPoint)"
+data "StatusEffect" "b21ec9bd-5f35-446e-cc8f-5458962c118e"
+
+// TODO: What is this description?
+new entry "MMM_DAWNMASTERGENERIC"
+type "StatusData"
+data "StatusType" "BOOST"
+// Lathander is empowering Dawnmaster Vaseid!
+data "DisplayName" "hbf7bbc37gde41g46a1gb53bg8ff3aed90b60;1"
+// Unfortunately you don't recognize it.
+data "Description" "h0428c939g637eg4066ga658g6ae9c2ae103d;1"
+data "Icon" "Action_Cleric_RadianceOfTheDawn"
+data "FormatColor" "Yellow"
+data "StatusPropertyFlags" "ExcludeFromPortraitRendering;DisablePortraitIndicator"
+data "Boosts" "ActionResourceBlock(Movement);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(ActionPoint)"
+
+new entry "MMM_DAWNMASTERSUNBEAM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_DAWNMASTERGENERIC"
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!
+data "DisplayName" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Zone_Sunbeam_Lathander"&gt;Sunbeams&lt;/LSTag&gt;!
+data "Description" "hffd7ab2ag4c9fg41cfgad38g462fc47ae591;1"
+
+new entry "MMM_Zone_Sunbeam_Lathander"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_Sunbeam"
+// data "SpellProperties" "ApplyStatus(SELF,SUNBEAM_OWNER,100,10)"
+data "SpellProperties" ""
+// data "TooltipStatusApply" "ApplyStatus(SUNBEAM,100,10);ApplyStatus(SUNBEAM_OWNER,100,10)"
+// Sunbeam
+// data "DisplayName" "h7f405eccgcdc0g47dbga900g5850375c4992;2"
+// Lathander's Sunbeam
+data "DisplayName" "hc1cf6acbge2a7g4b28g9edeg8310c1412032;1"
+// data "TooltipStatusApply" "ApplyStatus(SUNBEAM,100,10);ApplyStatus(SUNBEAM_OWNER,100,10)"
+data "TooltipStatusApply" "ApplyStatus(SUNBEAM,100,10)"
+// data "Range" "18"
+data "Range" "28"
+// data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:6"
+data "UseCosts" "ActionPoint:0"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+// data "MemoryCost" "1"
+data "MemoryCost" ""
+
+new entry "MMM_AVOIDSUNBEAM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AI_HELPER_AVOIDAREA_RADIUS2"
+
+new entry "MMM_DAWNMASTERFLAMESTRIKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MMM_DAWNMASTERGENERIC"
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!
+data "DisplayName" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
+// Lathander is empowering Dawnmaster Vaseid to cast &lt;LSTag Type="Spell" Tooltip="MMM_Target_FlameStrike_Lathander"&gt;Flame Strikes&lt;/LSTag&gt;!
+data "Description" "h086b5a23gb552g449eg8b81g5c26ebd7ba46;1"
+
+new entry "MMM_Target_FlameStrike_Lathander"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FlameStrike"
+// data "AreaRadius" "3"
+data "AreaRadius" "6"
+// Flame Strike
+// data "DisplayName" "h645e40b7g5e63g4981gb6ecg3d6735227497;2"
+// Lathander's Flame Strike
+data "DisplayName" "hae978ab4g7decg4519ga168ga38e1cbdc514;1"
+
+new entry "MMM_AVOIDFLAMESTRIKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AI_HELPER_AVOIDAREA_RADIUS6"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side ====================================
+// 2. Shadowcursed on the toilet. 
+
+new entry "MMM_SHADOW_CURSE_UNDEAD_CONTROL"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(MMM_SHADOW_CURSE_UNDEAD,100,-1)"
+
+new entry "MMM_SHADOW_CURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+data "StackPriority" "69"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 10. Something is missing from Ellie-May's grave... (Permanent Wisdom Event)
+
+new entry "MMM_ELLIEMAYBLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Ellie May's Boon
+data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
+// Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.
+data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "FormatColor" "White"
+data "Passives" "MMM_Passive_ELLIEMAYBLESSING"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "ApplyEffect" "66381954-eae3-4d37-9051-a6cdca4e2867"
+
+new entry "MMM_Passive_ELLIEMAYBLESSING"
+type "PassiveData"
+// Ellie May's Boon
+data "DisplayName" "he866a6bagfb7fg4e88ga02cg3a23222d3d47;1"
+// Ellie May granted you a boon for your &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; in returning her ring.
+data "Description" "h9f1eea95g0ce7g42e5g8088gfbb509bb12b3;1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "Highlighted"
+data "Boosts" "Ability(Wisdom,1)"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 9. Shadar-Kai.
+// TODO: Custom resource > cooldown "You can use this trait a number of times equal to your proficiency bonus" per RAW.
+// TODO: Level check 
+
+new entry "MMM_Target_BLESSINGOFRAVENQUEEN"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MistyStep"
+data "Cooldown" "OncePerRest"
+// data "SpellProperties" "GROUND:TeleportSource();"
+data "SpellProperties" "GROUND:TeleportSource();ApplyStatus(MMM_BLESSINGOFRAVENQUEEN,100,1)"
+// Blessing of the Raven Queen
+data "DisplayName" "hf8ea421dg7f92g4e16gb569g4cbd023a8f36;1"
+// Surrounded by silver mist, you teleport to an unoccupied space you can see.
+// data "Description" "hc724a06agbd46g40e5gbdb0gbf6721f1bc8d;2"
+// Surrounded by silver mist, you teleport to an unoccupied space you can see.&lt;br&gt;&lt;br&gt;Starting at 3rd level, you also gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage for 1 turn after teleporting.
+data "Description" "habe82285g651cg46a0ga97ag3146cba4bcc1;1"
+data "TooltipStatusApply" "ApplyStatus(MMM_BLESSINGOFRAVENQUEEN,100,1)"
+// data "UseCosts" "BonusActionPoint:1;SpellSlotsGroup:1:1:2"
+data "UseCosts" "BonusActionPoint:1"
+// data "SpellFlags" "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+// data "Sheathing" "Sheathed"
+data "Sheathing" ""
+
+new entry "MMM_BLESSINGOFRAVENQUEEN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Blessing of the Raven Queen
+data "DisplayName" "hf8ea421dg7f92g4e16gb569g4cbd023a8f36;1"
+// Has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all damage.
+data "Description" "h60bb1d22gcaceg4656g9a29gd2540ffd8711;1"
+data "Icon" "Spell_Abjuration_Stoneskin"
+data "Boosts" "Resistance(Acid, Resistant);Resistance(Bludgeoning, Resistant);Resistance(Cold, Resistant);Resistance(Fire, Resistant);Resistance(Force, Resistant);Resistance(Lightning, Resistant);Resistance(Necrotic, Resistant);Resistance(Piercing, Resistant);Resistance(Poison, Resistant);Resistance(Psychic, Resistant);Resistance(Radiant, Resistant);Resistance(Slashing, Resistant);Resistance(Thunder, Resistant)"
+data "StatusEffect" "8aa59540-9ded-437f-aa13-5c7c2d3c7cac"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 11. Balthazar event #1.
+
+new entry "MMM_SUPER_SHADOWCURSE"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "SCL_SHADOW_CURSE_UNDEAD_NEW"
+// Shadow-Infused Undead
+data "DisplayName" "h66abd1cag0a0eg412bg8babg70d4b7d8580a;1"
+// Something has caused this shadow-cursed being to infuse itself with the shadows.
+data "Description" "he382272ag1f07g482agb5b5gec7c480a231b;1"
+// data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(FEARED);StatusImmunity(COMMAND_FLEE);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);AC(-5);Ability(Intelligence,-5);Ability(Wisdom,-5);Ability(Charisma,-5);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);AiArchetypeOverride(zombie,1);ProficiencyBonusOverride(0);Disadvantage(AllSavingThrows);IncreaseMaxHP(-5);UnlockSpellVariant(ShadowCurseUndead(),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint));UnlockSpellVariant(not ShadowCurseUndead(),ModifyUseCosts(Replace,ActionPoint,1,0,BonusActionPoint));ActionResourceBlock(BonusActionPoint);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+data "Boosts" "DarkvisionRangeOverride(18);StatusImmunity(HEAL);StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing);StatusImmunity(SHADOW_CURSED_VINES);DamageBonus(2d4+2,Necrotic);Resistance(Necrotic,Resistant);FactionOverride(db6c0191-8663-7dbd-8706-b99062a7b442);StatusImmunity(SCL_MOONSHIELD);BlockTravel();Tag(ACT2_SHADOW_CURSE_IMMUNE);DialogueBlock()"
+// data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "ForceOverhead;ApplyToDead;IgnoreResting"
+// data "OnApplyFunctors" "ApplyStatus(SCL_SHADOW_CURSE_UNDEAD,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(MMM_SUPER_SHADOWCURSE_UNDEAD,100,-1)"
+// data "Rules" "3cda987f-5e0f-44e0-b54d-c72020040406"
+data "Rules" ""
+
+new entry "MMM_SUPER_SHADOWCURSE_UNDEAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_SHADOW_CURSE_UNDEAD"
+data "StackPriority" "420"
+// data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE')"
+data "RemoveConditions" "not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW') and not HasStatus('SCL_SHADOW_CURSE_UNDEAD_NEW_HALSINLAKESIDE') and not HasStatus('MMM_SHADOW_CURSE_UNDEAD') and not HasStatus('MMM_SUPER_SHADOWCURSE_UNDEAD')"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;LoseControl;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// ==================================== Cut content ====================================
+
+new entry "MMM_Target_CONSUMESPIDER"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Bite"
+data "Cooldown" "OncePerTurn"
+data "SpellRoll" "RollDieAgainstDC(DiceType.d20, 1)"
+data "SpellProperties" "SwitchDeathType(Explode)"
+data "DeathType" "Explode"
+data "SpellSuccess" ""
+data "TargetConditions" "IsTargetableCorpse() and not Tagged('BLOCK_RESURRECTION')"
+// Consume
+data "DisplayName" "h5ec55e3cgc221g4386g92ecg1dd144725b64;1"
+// Devours a corpse.
+data "Description" "h9c46b1c7g7221g43afg9115g26e57c25dc7f;1"
+data "UseCosts" "BonusActionPoint:1"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsEnemySpell;IsMelee;IsHarmful"
+data "SpellAnimationIntentType" "Aggressive"
+data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
+data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
+
+new entry "MMM_PREPARED"
+type "StatusData"
+data "StatusType" "BOOST"
+// Prepared
+data "DisplayName" "h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0;1"
+// You are prepared for what is coming, granting +4 Initiative and +2 Attack.
+data "Description" "hae54701cg5d50g4932ga129g9af1d6b498fc;1"
+data "Icon" "Spell_Enchantment_Bless"
+data "SoundLoop" "Spell_Status_Buff_MO"
+data "StackId" "MMM_PREPARED"
+data "Boosts" "RollBonus(Attack,2);Initiative(4)"
+data "StatusGroups" "SG_RemoveOnRespec"
+data "StatusEffect" "61fe31f9-ae4b-4926-a033-e56ea67c7d92"
+data "ManagedStatusEffectType" "Positive"
+data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
+
+new entry "MMM_SHADOWSHIELD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SCL_MOONSHIELD"
+// Pixie Blessing
+data "DisplayName" "hb52f28cbgfd85g4ae9gb906g2d2bdd1eede1;1"
+// The Shadow Curse cannot affect this creature thanks to a pixie's protective magic.
+data "Description" "h43f81dd2g0527g4cd9g95ccg50ff7d133646;1"
+data "StackId" "SCL_SAFE"
+data "StackPriority" "20"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ExcludeFromPortraitRendering;IgnoreResting"

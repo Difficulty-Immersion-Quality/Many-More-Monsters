@@ -4,11 +4,14 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+		<!-- Picnic Items -->
+			<!-- Beregost Blue Wheel -->
 				<node id="GameObjects">
 					<attribute id="CanClickThrough" type="bool" value="False" />
 					<attribute id="CanClimbOn" type="bool" value="False" />
 					<attribute id="CanShootThrough" type="bool" value="True" />
 					<attribute id="CoverAmount" type="uint8" value="0" />
+					<!-- The monks of Candlekeep covet wheels of this tangy cheese from nearby Beregost almost as much as they covet knowledge. -->
 					<attribute id="Description" type="TranslatedString" handle="h094d6290g77e2g4328g9594ga9f09eee903f" version="3" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h63974817g5e4fg4916ga7degb6ef5828016a" version="2" />
 					<attribute id="Icon" type="FixedString" value="Item_CONS_GEN_Food_Cheese_Piece_A" />
@@ -73,8 +76,10 @@
 						</node>
 					</children>
 				</node>
+			<!-- Gulthmeran Reserve -->
 				<node id="GameObjects">
 					<attribute id="CanBeImprovisedWeapon" type="bool" value="True" />
+					<!-- Best left to truly discerning palettes, this wine may be too austere for its own good. -->
 					<attribute id="Description" type="TranslatedString" handle="hf833983eg1f94g4d44gbc77g76c1fe747b8e" version="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h4ac864b0g925dg4ff1g8c75g71100a845369" version="1" />
 					<attribute id="DropSound" type="FixedString" value="820221fa-5b87-7b87-3487-57ad0259f358" />
@@ -172,6 +177,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- TODO: -->
 				<node id="GameObjects">
 					<attribute id="Description" type="TranslatedString" handle="h054e36b4gc775g4f73gaabag3fb7c49802b5" version="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h23d496b4gd798g495agba53g767c2b21ef10" version="1" />
@@ -230,6 +236,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- Act 1.b Mimic Chests -->
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -276,6 +284,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -322,6 +331,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -368,6 +378,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -414,6 +425,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -460,6 +472,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -506,6 +519,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -552,6 +566,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
@@ -598,6 +613,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />

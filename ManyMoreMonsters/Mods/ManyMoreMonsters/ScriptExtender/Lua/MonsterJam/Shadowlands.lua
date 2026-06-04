@@ -638,6 +638,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
+-- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid

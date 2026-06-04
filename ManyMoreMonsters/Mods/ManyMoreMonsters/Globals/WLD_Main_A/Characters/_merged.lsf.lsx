@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Juvenile Red Dragon -->
 				<node id="GameObjects">
 					<attribute id="ActivationGroupId" type="FixedString" value="PLA_GithChokepoint" />
 					<attribute id="Archetype" type="FixedString" value="dragon" />

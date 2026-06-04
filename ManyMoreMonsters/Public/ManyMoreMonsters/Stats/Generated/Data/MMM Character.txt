@@ -1,0 +1,1948 @@
+// ==================================== Reference ====================================
+
+// new entry "_Base"
+// type "Character"
+// data "Level" "1"
+// data "Strength" "10"
+// data "Dexterity" "10"
+// data "Constitution" "10"
+// data "Intelligence" "10"
+// data "Wisdom" "10"
+// data "Charisma" "10"
+// data "Armor" "10"
+// data "Vitality" "5"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+// data "Sight" "1600"
+// data "Hearing" "1100"
+// data "FOV" "90"
+// data "Weight" "50"
+// data "StepsType" "Bare"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+// data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,70;WyvernPoison,70;DrowPoisonCloud,70;PurpleWormPoison,70;SerpentVenom,70;InvisibleGithAcid,70;CloudkillCloud,70;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
+// data "ProficiencyBonusScaling" "265d62c4-9b82-4ed6-9a86-da675b4ef8fe"
+// data "SpellCastingAbility" "Intelligence"
+// data "UnarmedAttackAbility" "Strength"
+// data "UnarmedRangedAttackAbility" "Strength"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+// data "MinimumDetectionRange" "2"
+// data "DarkvisionRange" "0"
+// data "FallingHitEffect" "VFX_Combat_Bludgeoning_Damage_Blood_01"
+// data "FallingLandEffect" "VFX_Combat_Force_Land_01"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
+
+// new entry "Stats_Placeholder"
+// type "Character"
+// using "_Base"
+// data "Vitality" "1"
+
+// ==================================== Ravaged Beach ====================================
+// 1. Lost Intellect Devourer, breadcrumb for people who didn't realize the cliff was there, will join in fight with other intellect devourers.
+
+// Intellect Devourer and Lost Intellect Devourer
+new entry "MMM_INTELLECTDEVOURER"
+type "Character"
+using "IntellectDevourer"
+// data "Vitality" "21"
+data "Vitality" "15"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+// data "DefaultBoosts" "ProficiencyBonus(Skill, Perception); ProficiencyBonus(Skill, Stealth); BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "ProficiencyBonus(Skill, Perception); ProficiencyBonus(Skill, Stealth); BlockRegainHP(Undead;Construct); CriticalHit(AttackRoll,Success,Never)"
+// data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "Blindsight;AttackOfOpportunity;DarknessRules;Darkvision;QUEST_CRA_IntDev_Weakened"
+
+// ==================================== Ravaged Beach
+// 2. Kuotoa on docks, can easily walk past if you aren't ready to fight.
+
+// Kuo-toa
+new entry "MMM_KUOTOADOCK"
+type "Character"
+using "Kuotoa"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Kuo-toa Priest
+new entry "MMM_KUOTOADOCKCLERIC"
+type "Character"
+using "Kuotoa_Caster"
+// data "Intelligence" "13"
+data "Intelligence" "11"
+// data "Wisdom" "10"
+data "Wisdom" "13"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Wisdom"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+
+// ==================================== Ravaged Beach
+// 3. Team Trajectile Event #1
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES"
+type "Character"
+using "Gnome_Melee"
+// data "Strength" "14"
+data "Strength" "16"
+// data "Dexterity" "15"
+data "Dexterity" "11"
+// data "Constitution" "15"
+data "Constitution" "14"
+// data "Wisdom" "13"
+data "Wisdom" "12"
+// data "Charisma" "13"
+data "Charisma" "14"
+// data "Vitality" "20"
+data "Vitality" "24"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON"
+type "Character"
+using "Human_Barbarian"
+// data "Strength" "16"
+data "Strength" "18"
+// data "Dexterity" "11"
+data "Dexterity" "12"
+// data "Vitality" "28"
+data "Vitality" "24"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT"
+type "Character"
+using "Human_Druid_Strong"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+
+// ==================================== Ravaged Beach
+// 4. Wolves eating dead mindflayer.  Body has decent starting potions/alchemy ingredients.
+
+// Wolf
+new entry "MMM_WOLF"
+type "Character"
+using "Wolf"
+// data "Vitality" "11"
+data "Vitality" "21"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Ravaged Beach - Goblin Ambush 
+// 6. Goblin scout ambush - goblins scouting area, has perception check to see them, if you don't see them will ambush you when you get closer.
+
+// Goblin Tracker
+new entry "MMM_GOBLINRANGERAMBUSH"
+type "Character"
+using "Goblin_Ranger"
+// data "Dexterity" "14"
+data "Dexterity" "15"
+// data "Constitution" "10"
+data "Constitution" "12"
+// data "Intelligence" "10"
+data "Intelligence" "8"
+// data "Wisdom" "8"
+data "Wisdom" "12"
+// data "Charisma" "8"
+data "Charisma" "6"
+// data "Vitality" "7"
+// data "Vitality" "9"
+data "Vitality" "21"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Ravaged Beach
+// 5. Mindflayer ambush - Mindflayer using other mindflayer as bait to ambush player, attacks are about 1/3rd of a standard mindflayer.
+
+// Weakened Mind Flayer
+new entry "MMM_MINDFLAYER"
+type "Character"
+using "MindFlayer"
+// data "Intelligence" "19"
+data "Intelligence" "17"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "MagicResistance;AttackOfOpportunity;DarknessRules"
+data "Passives" "MagicResistance;AttackOfOpportunity;DarknessRules;QUEST_CRA_IntDev_Weakened"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: MINDFLAYER_HARDCORE"
+data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
+
+// ==================================== Dank Crypt ====================================
+// 7. Spiders!  If you don't step on them you can actually get through this part without aggroing them.  Very small aggro range.
+
+// Tiny Spider
+new entry "MMM_TINYSPIDER"
+type "Character"
+using "Spider_Tiny"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// ==================================== Dank Crypt
+// 8. Kobolds coming in to loot the place, may join battle if you aggro the skeletons first if the door is open, not sure if the door is closed.
+
+// Kobold
+new entry "MMM_KOBOLDMELEE"
+type "Character"
+using "Kobold_Melee"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Emerald Grove ====================================
+// 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy.
+// TODO: He shouldn't throw Javelins, and "Shout_GOB_Ogre_Enrage" Polma's Wrath needs replacing.
+
+// Oof
+new entry "MMM_OGREREINFORCEMENT"
+type "Character"
+using "Ogre"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Emerald Grove - Secluded Cove
+// 10. Thieves hiding treasure.
+
+// Grove Bandit
+new entry "MMM_GROVEBANDIT1"
+type "Character"
+using "Dragonborn_Barbarian"
+// data "Vitality" "28"
+data "Vitality" "35"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// Grove Bandit
+new entry "MMM_GROVEBANDIT2"
+type "Character"
+using "Gnome_Ranger"
+// data "Strength" "11"
+data "Strength" "10"
+// data "Dexterity" "16"
+data "Dexterity" "12"
+// data "Intelligence" "12"
+data "Intelligence" "10"
+// data "Wisdom" "10"
+data "Wisdom" "9"
+// data "Vitality" "18"
+data "Vitality" "25"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Emerald Grove - Secluded Cove
+// 11. Kuotoa on beach after harpies.
+
+// Kuo-toa
+new entry "MMM_KUOTOAHARPY"
+type "Character"
+using "MMM_KUOTOADOCK"
+// data "Vitality" "18"
+data "Vitality" "23"
+
+// Kuo-toa Priest
+new entry "MMM_KUOTOAHARPYCLERIC"
+type "Character"
+using "MMM_KUOTOADOCKCLERIC"
+// data "Vitality" "15"
+data "Vitality" "18"
+
+// ==================================== Emerald Grove - Secluded Cove
+// 12. Harpy Matriarch, stronger than previous harpies but wouldn't really consider her a boss.  Might change to a boss based on feedback.
+
+// Harpy Matriarch
+new entry "MMM_HARPYMATRIARCH"
+type "Character"
+using "Harpy"
+// data "Vitality" "24"
+data "Vitality" "36"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Emerald Grove
+// 13. Eagle chilling on cliff.
+
+// Eagle
+new entry "MMM_EAGLE"
+type "Character"
+using "GiantEagle"
+// data "Vitality" "44"
+data "Vitality" "86"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Forest ====================================
+// 14. Hob at other entrance to grove, commander of the goblins that went inside.
+// Bug: Can kill Sazza
+
+// Hobgoblin
+new entry "MMM_HOBGOBLIN_BACKDOOR"
+type "Character"
+using "Hobgoblin"
+// data "Vitality" "11"
+data "Vitality" "37"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// Note: Inherits fighter stats but is a ranger
+// Goblin Tracker
+new entry "MMM_GOBLIN_BACKDOOR"
+type "Character"
+using "Goblin_Melee"
+// data "Vitality" "9"
+// data "Vitality" "11"
+data "Vitality" "21"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Forest
+// 15. Goblins taking over the harper lookout, the archers may climb up the ladder and aggro the group above if you aren't careful.
+
+// Goblin Tracker
+new entry "MMM_GOBLINMELEEHARPER"
+type "Character"
+using "Goblin_Melee"
+// data "Vitality" "9"
+// data "Vitality" "11"
+data "Vitality" "11"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Goblin Tracker
+new entry "MMM_GOBLINRANGERHARPER"
+type "Character"
+using "Goblin_Ranger"
+// data "Dexterity" "14"
+data "Dexterity" "15"
+// data "Constitution" "10"
+data "Constitution" "12"
+// data "Intelligence" "10"
+data "Intelligence" "8"
+// data "Wisdom" "8"
+data "Wisdom" "12"
+// data "Charisma" "8"
+data "Charisma" "6"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Forest
+// 16. Commander of harper lookout group.
+
+// Hobgoblin
+new entry "MMM_HARPERHOB"
+type "Character"
+using "Hobgoblin"
+// data "Strength" "13"
+data "Strength" "17"
+// data "Vitality" "11"
+data "Vitality" "62"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Forest
+// 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
+// TODO: Yeah it's not really a troll and RAW troll stats are too much for that early in the game
+
+// Bridge Troll 
+new entry "MMM_BRIDGETROLL"
+type "Character"
+using "_Giants"
+// data "Strength" "21"
+data "Strength" "19"
+// data "Wisdom" "9"
+data "Wisdom" "7"
+// data "Charisma" "6"
+data "Charisma" "7"
+// data "Armor" "13"
+data "Armor" "8"
+// data "Vitality" "105"
+data "Vitality" "70"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "FOV" "90"
+data "FOV" "180"
+// data "Weight" "3500"
+data "Weight" "500"
+data "SoundSize" "Huge"
+data "SpellCastingAbility" "Constitution"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MMM_TrollRegen_Passive"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
+data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: OGRE_HARDCORE"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Forest
+// 18. Bugbear champion, if Aradin left the grove his group will be locked in combat with him.
+
+// Bonesnappah
+new entry "MMM_BUGBEARCHALLENGER"
+type "Character"
+using "Bugbear"
+// data "Strength" "15"
+data "Strength" "17"
+// data "Dexterity" "14"
+data "Dexterity" "12"
+// data "Constitution" "13"
+data "Constitution" "18"
+// data "Intelligence" "8"
+data "Intelligence" "5"
+// data "Wisdom" "11"
+data "Wisdom" "7"
+// data "Charisma" "9"
+data "Charisma" "7"
+// data "Vitality" "27"
+data "Vitality" "60"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Forest
+// 19. Ancient Owlbear miniboss, not hostile unless you kill the other owlbears.
+
+// Ancient Owlbear
+new entry "MMM_OWLBEAR"
+type "Character"
+using "Owlbear"
+// data "Armor" "12"
+data "Armor" "16"
+// data "Vitality" "59"
+data "Vitality" "165"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+
+// ==================================== Forest
+// 20. Bear fishing in stream.
+
+// Fishing Bear
+new entry "MMM_FISHINGBEAR"
+type "Character"
+using "Bear_Black"
+// data "Strength" "15"
+data "Strength" "21"
+// data "Vitality" "19"
+data "Vitality" "54"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Blighted Village ====================================
+// 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels?
+
+// Bogsnap - Buthir's Jealous Ex
+new entry "MMM_OGREBOYFRIEND"
+type "Character"
+using "Ogre"
+// data "Vitality" "59"
+data "Vitality" "120"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// Slegbezzle - Professional Goblin Voyeur
+new entry "MMM_GOBLINVOYEUR"
+type "Character"
+using "MMM_GOBLINRANGERAMBUSH"
+// data "Vitality" "21"
+data "Vitality" "54"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// ==================================== Blighted Village
+// 22. Bugbear standing over Arka's corpse if you let her murder the goblin.
+
+// Murderous Bugbear
+new entry "MMM_BUGBEARMURDER"
+type "Character"
+using "Bugbear"
+// data "Strength" "15"
+data "Strength" "19"
+// data "Dexterity" "14"
+data "Dexterity" "12"
+// data "Constitution" "13"
+data "Constitution" "18"
+// data "Intelligence" "8"
+data "Intelligence" "5"
+// data "Wisdom" "11"
+data "Wisdom" "7"
+// data "Charisma" "9"
+data "Charisma" "7"
+// data "Vitality" "27"
+data "Vitality" "80"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Blighted Village
+// 24. Mama bear and baby bear crossing log, breadcrumb for people who didn't realize there's a passage there.
+
+// Mama Bear
+new entry "MMM_LOGBEAR"
+type "Character"
+using "MMM_FISHINGBEAR"
+
+// Baby Bear
+new entry "MMM_LOGBEARBABY"
+type "Character"
+using "Bear_Black"
+// data "Strength" "15"
+data "Strength" "13"
+// data "Vitality" "19"
+data "Vitality" "8"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Swamp ====================================
+// 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp.
+// 26. Will-o'-Wisp over the presumed dead child.
+
+// Will-o'-Wisp
+// TODO: No AoO? Account for custom surface stuff or whatever, Goon's Conditon and Surface Overhaul bullshit
+new entry "MMM_WISPS"
+type "Character"
+using "_Undead"
+// data "Level" "1"
+data "Level" "3"
+// data "Strength" "10"
+data "Strength" "1"
+// data "Dexterity" "10"
+data "Dexterity" "28"
+// data "Intelligence" "10"
+data "Intelligence" "13"
+// data "Wisdom" "10"
+data "Wisdom" "18"
+// data "Charisma" "10"
+data "Charisma" "11"
+// data "Armor" "10"
+data "Armor" "8"
+// data "Vitality" "5"
+data "Vitality" "22"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+data "Flags" "Floating"
+// data "PersonalStatusImmunities" "GAPING_WOUND;CHEST_TRAUMA;BLEEDING"
+data "PersonalStatusImmunities" "PRONE_FALLEN;CRIPPLED;GAPING_WOUND;CHEST_TRAUMA;BLEEDING;SG_Exhausted;GRAPPLED;SG_Paralyzed;SG_Poisoned;SG_Prone;SG_Restrained;DISARM"
+// data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,70;WyvernPoison,70;DrowPoisonCloud,70;PurpleWormPoison,70;SerpentVenom,70;InvisibleGithAcid,70;CloudkillCloud,70;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
+data "PathInfluence" "Water,0;BloodElectrified,0;BloodFrozen,0;Lava,0;Fire,0;HolyFire,0;Hellfire,0;PoisonCloud,0;WyvernPoison,0;DrowPoisonCloud,0;PurpleWormPoison,0;SerpentVenom,0;InvisibleGithAcid,0;CloudkillCloud,0;MaliceCloud,0;CrawlerMucusCloud,0;WaterElectrified,0;WaterFrozen,0;Grease,0;Web,0;Vines,0;SporeBlackCloud,0;WaterCloudElectrified,0;SporeGreenCloud,0;Acid,0;CausticBrine,0;DarknessCloud,30;FogCloud,30;Mud,0;Oil,0;Poison,0;SpikeGrowth,0;SporePinkCloud,0;StinkingCloud,0"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Wisdom"
+// data "Passives" "AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Passives" "Ethereal;Darkvision;IncorporealMovement;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+// data "DarkvisionRange" "0"
+data "DarkvisionRange" "12"
+// data "FallingHitEffect" "VFX_Combat_Bludgeoning_Damage_Blood_01"
+data "FallingHitEffect" ""
+// data "FallingLandEffect" "VFX_Combat_Force_Land_01"
+data "FallingLandEffect" ""
+data "AcidResistance" "Resistant"
+data "FireResistance" "Resistant"
+data "NecroticResistance" "Resistant"
+data "ThunderResistance" "Resistant"
+data "ColdResistance" "Resistant"
+data "LightningResistance" "ImmuneToMagical"
+data "PoisonResistance" "ImmuneToMagical"
+data "BludgeoningResistance" "ResistantToNonMagical"
+data "SlashingResistance" "ResistantToNonMagical"
+data "PiercingResistance" "ResistantToNonMagical"
+
+// ==================================== Swamp
+// 27. Kuotoa on beach behind hags house.
+
+// Kuo-toa
+new entry "MMM_KUOTOARIVER"
+type "Character"
+using "MMM_KUOTOADOCK"
+// data "Vitality" "18"
+data "Vitality" "32"
+
+// ==================================== Goblin Camp ====================================
+// 28. Approaching from the bridge will trigger an event with a goblin chasing down a bunch of loose chickens.  No fight, just flavour.
+
+// Chicken Wrangler
+new entry "MMM_CHICKENRUNNER"
+type "Character"
+using "Goblin_Melee"
+// data "Vitality" "9"
+// data "Vitality" "11"
+data "Vitality" "21"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
+
+// Chicken
+new entry "MMM_CHICKEN"
+type "Character"
+using "Chicken"
+// data "XPReward" "c83d6caa-c5c3-4356-b55c-8d634535976c"
+data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
+
+// ==================================== Goblin Camp
+// 29. Two stanky goblins bathing in the goblin bath under the bridge.
+
+// Stanky Goblin
+new entry "MMM_GOBLINBATHING"
+type "Character"
+using "MMM_GOBLINRANGERAMBUSH"
+// data "Vitality" "21"
+data "Vitality" "26"
+
+// ==================================== Goblin Camp - Defiled Temple
+// 30. Even more spiders!  Also avoidable if you don't step on the spider.
+
+// Tiny Spider
+new entry "MMM_DEFILEDSPIDER"
+type "Character"
+using "Spider_Tiny"
+// data "Sight" "1600"
+data "Sight" "500"
+// data "Hearing" "1100"
+data "Hearing" "500"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// ==================================== Zhentarim vs Gnolls cave ====================================
+// 31. Gnolls trying to figure out the backdoor to ambush the group in there, will trigger the trap if you let them, will despawn if you kill the boss out front.
+
+// Gnoll Flesh Gnawer
+new entry "MMM_BACKDOORGNOLLFIGHTER"
+type "Character"
+using "Gnoll"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Gnoll Hunter
+new entry "MMM_BACKDOORGNOLLRANGER"
+type "Character"
+using "Gnoll_Hunter"
+// data "Vitality" "20"
+data "Vitality" "23"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Gnoll
+new entry "MMM_BACKDOORGNOLLBARB"
+type "Character"
+using "Gnoll_Fang"
+// data "Vitality" "20"
+data "Vitality" "30"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Risen Road ====================================
+// 32. Three drow assassins hiding because drow don't give up that easily, each has its own perception check to see it before it attacks you.
+
+// Drow Assassin
+new entry "MMM_DROWASSASSIN"
+type "Character"
+using "Elf_Drow_Melee"
+// data "Strength" "15"
+data "Strength" "12"
+// data "Dexterity" "14"
+data "Dexterity" "19"
+// data "Constitution" "13"
+data "Constitution" "15"
+// data "Vitality" "24"
+data "Vitality" "78"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;FeyAncestry;SunlightSensitivity;AttackOfOpportunity;Darkvision"
+data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;FeyAncestry;SunlightSensitivity;AttackOfOpportunity;Darkvision;Muscular_Athletics;ExtraAttack"
+data "PsychicResistance" "Resistant"
+// data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
+data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;LightArmor"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// ==================================== Risen Road
+// 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
+// TODO: "CombatStartAttack"?
+
+// Juvenile Red Dragon
+new entry "MMM_JUVENILERED"
+type "Character"
+using "Dragon_AdultRed"
+// data "Strength" "27"
+data "Strength" "21"
+// data "Constitution" "25"
+data "Constitution" "18"
+// data "Armor" "19"
+data "Armor" "17"
+// data "Vitality" "400"
+data "Vitality" "125"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Dexterity);ProficiencyBonus(SavingThrow, Constitution);ProficiencyBonus(SavingThrow, Wisdom);ProficiencyBonus(SavingThrow, Charisma);ActionResourceBlock(Movement);BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Dexterity);ProficiencyBonus(SavingThrow, Constitution);ProficiencyBonus(SavingThrow, Wisdom);ProficiencyBonus(SavingThrow, Charisma);BlockRegainHP(Undead;Construct)"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;ReactionActionPoint:1;Movement:14"
+// data "Passives" "MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules;CombatStartAttack"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_MEDIUM: REDDRAGON_NORMAL; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: DRAGON_RED_RETALIATE_TECHNICAL; STATUS_HARD: REDDRAGON_HARDCORE"
+data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_MEDIUM: REDDRAGON_NORMAL; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: MMM_JUVENILERED_RETALIATE_TECHNICAL; STATUS_HARD: REDDRAGON_HARDCORE"
+
+// ==================================== Underdark ====================================
+// 34. Alpha Minotaur patrolling with the other minotaurs.
+
+// Patrolling Minotaur
+new entry "MMM_AMINOTAUR"
+type "Character"
+using "Minotaur"
+// data "Strength" "18"
+data "Strength" "21"
+// data "Constitution" "16"
+data "Constitution" "18"
+// data "Vitality" "84"
+data "Vitality" "154"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Underdark
+// 35. Zhentarim in the storage area, same faction as the Zhentarim in the hideout.
+
+// Alister, Mustaf, Bobb, Theo
+new entry "MMM_ZHENTSTORAGE"
+type "Character"
+using "Human_Ranger"
+// data "Vitality" "15"
+data "Vitality" "28"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Freyja
+new entry "MMM_ZHENTSTORAGEDOG"
+type "Character"
+using "Wolf_Dire"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Underdark
+// 37. Clear the cave-in to reveal a damaged beholder.
+
+// Weakened Beholder
+new entry "MMM_WEAKBEHOLDER"
+type "Character"
+using "Spectator"
+// data "Strength" "8"
+data "Strength" "14"
+// data "Vitality" "118"
+data "Vitality" "210"
+// data "XPReward" "206b753f-bc3b-46af-98b9-0c711d98c678"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+
+// ==================================== Underdark
+// 36. Duergar patrol.
+// 38. Duergar on the other dock.
+// TODO: These are just carbon copies of existing NPCs and incredibly immersion breaking, remove or create new appearances.
+
+// Coekk, Widdle
+new entry "MMM_DUERGARARMYNECRO"
+type "Character"
+using "UND_LoneDuergar"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// Irkse, Eislie, Sie
+new entry "MMM_DUERGARARMYCLERIC"
+type "Character"
+using "UND_Duergar_Cleric"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
+data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+
+// Slevnir
+new entry "MMM_DUERGARARMYRANGER"
+type "Character"
+using "UND_Duergar_Ranger"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Ismi, Imeh
+new entry "MMM_DUERGARARMYFIGHTER"
+type "Character"
+using "UND_KC_DuergarSergeant"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Underdark
+// 39. Bulette Nest.  Fun fact, baby bulette's kill and eat their mother.
+
+// Baby Bulette
+new entry "MMM_BULETTEBABY"
+type "Character"
+using "Bulette"
+// data "Strength" "19"
+data "Strength" "13"
+// data "Dexterity" "11"
+data "Dexterity" "10"
+// data "Constitution" "21"
+data "Constitution" "14"
+// data "Vitality" "125"
+data "Vitality" "35"
+// data "XPReward" "206b753f-bc3b-46af-98b9-0c711d98c678"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+// data "Weight" "600"
+data "Weight" "60"
+
+// ==================================== Grymforge ====================================
+// 40. Mega Mimic formed from the three smaller mimics.
+
+// Mega Mimic
+new entry "MMM_MIMICBOSS"
+type "Character"
+using "Mimic"
+// data "Strength" "17"
+data "Strength" "21"
+// data "Constitution" "15"
+data "Constitution" "18"
+// data "Vitality" "58"
+data "Vitality" "200"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:7;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+
+// ==================================== Grymforge
+// 41. Lava elemental when you break the mithral node.
+
+// Lava Elemental
+new entry "MMM_LAVAELE"
+type "Character"
+using "Elemental_Lava"
+// data "Vitality" "95"
+data "Vitality" "195"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Grymforge
+// 43. Optional - Break the tomb to unleash the forge spirits and upgrade Grym making him harder to cheese.
+
+// Spirit of the Forge
+new entry "MMM_FORGEGHOST"
+type "Character"
+using "LOW_OskarsBeloved_Poltergeist"
+// data "Strength" "1"
+data "Strength" "30"
+// data "Vitality" "40"
+data "Vitality" "1000"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
+// data "Weight" "1"
+data "Weight" "600"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:0;BonusActionPoint:4;Movement:12;ReactionActionPoint:0"
+// data "Passives" "AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Darkvision;IncorporealMovement;LOW_OskarsBeloved_Poltergeists_Invisible;Ethereal;LOW_OskarsBeloved_Poltergeists_See_Invisibility;LOW_OskarsBeloved_Poltergeists_LimitThrow"
+data "Passives" "AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Darkvision;IncorporealMovement;Ethereal;MMM_GHOSTINITIATIVE"
+data "BludgeoningResistance" "Immune"
+data "SlashingResistance" "Immune"
+data "PiercingResistance" "Immune"
+data "AcidResistance" "Immune"
+data "ColdResistance" "Immune"
+data "FireResistance" "Immune"
+data "ForceResistance" "Immune"
+data "LightningResistance" "Immune"
+data "NecroticResistance" "Immune"
+data "PoisonResistance" "Immune"
+data "PsychicResistance" "Immune"
+data "RadiantResistance" "Immune"
+data "ThunderResistance" "Immune"
+
+// ==================================== Grymforge
+// 42. Lava elemental unchanged but has a much, much better loot table so he's worth killing.
+// TODO: Me no much likey vanilla overwrite stuff...
+
+// ==================================== Grymforge ====================================
+// Boss #1: On the boat to Grymforge you must kill all the dwarves then wait 60 seconds.
+
+// Ol' Gregg
+new entry "MMM_OLGREGG"
+type "Character"
+using "Kuotoa"
+// data "Strength" "13"
+data "Strength" "21"
+// data "Dexterity" "10"
+data "Dexterity" "12"
+// data "Constitution" "11"
+data "Constitution" "16"
+// data "Charisma" "8"
+data "Charisma" "99"
+// data "Armor" "11"
+data "Armor" "17"
+// data "Vitality" "18"
+data "Vitality" "180"
+// data "Weight" "60"
+data "Weight" "500"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a;0e6da493-5a37-423b-8c28-629462b22faa"
+
+// ==================================== Underdark ====================================
+// Boss #2: Light the candle in the shrine in the corner of the bibberbang field.
+
+// Servant of Lolth
+new entry "MMM_DROWLOLTHRANGER"
+type "Character"
+using "MMM_DROWASSASSIN"
+// data "Vitality" "78"
+data "Vitality" "83"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Servant of Lolth
+new entry "MMM_DROWLOLTHCLERIC"
+type "Character"
+using "Elf_Drow_Cleric"
+// data "Constitution" "13"
+data "Constitution" "15"
+// data "Wisdom" "16"
+data "Wisdom" "19"
+// data "Vitality" "18"
+data "Vitality" "98"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision;Muscular_Athletics;ExtraAttack"
+data "PsychicResistance" "Resistant"
+// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
+data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+
+// Servant of Lolth
+new entry "MMM_DRIDERLOLTH"
+type "Character"
+using "Drider"
+// data "Strength" "16"
+data "Strength" "19"
+// data "Dexterity" "16"
+data "Dexterity" "12"
+// data "Constitution" "18"
+data "Constitution" "15"
+// data "Intelligence" "13"
+data "Intelligence" "12"
+// data "Wisdom" "16"
+data "Wisdom" "10"
+// data "Vitality" "164"
+data "Vitality" "112"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "Passives" "Multiattack_Drider;ImprovedCritical;SpiderWalk;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "Multiattack_Drider;ImprovedCritical;SpiderWalk;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Muscular_Athletics;ExtraAttack"
+data "PsychicResistance" "Resistant"
+// data "Proficiency Group" "MartialWeapons;SimpleWeapons"
+data "Proficiency Group" "MartialWeapons;SimpleWeapons;LightArmor"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Mountain Pass ====================================
+// 1. Goblins found their way up to the mountains.
+
+// Goblin Tracker
+new entry "MMM_GOBLINRANGERMOUNTAIN"
+type "Character"
+using "MMM_GOBLINRANGERAMBUSH"
+// data "Vitality" "21"
+data "Vitality" "32"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// Goblin Brawler
+new entry "MMM_GOBLINMELEEMOUNTAIN"
+type "Character"
+using "Goblin_Melee"
+// data "Vitality" "9"
+// data "Vitality" "11"
+data "Vitality" "42"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+data "Progressions"  "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Mountain Pass - Gith
+// 2. This is now a battlefield, get ready for a three way fight.
+// 4. Githyanki learned how to operate a gondola, good job guys!
+
+// Githyanki Captain and Catfey
+new entry "MMM_MOUNTAINGITH_CAPTAIN"
+type "Character"
+using "CRE_Githyanki_Captain"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" ""
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+
+// Unused
+new entry "MMM_MOUNTAINGITH_WARLOCK"
+type "Character"
+using "TWN_Githyanki_Warlock"
+// data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
+data "Progressions" "a3826c71-afba-4337-a2ad-1fc631fb2b4b"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// Unused
+new entry "MMM_MOUNTAINGITH_ROGUE"
+type "Character"
+using "PLA_Githyanki_Rogue"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// Zio
+new entry "MMM_MOUNTAINGITH_RANGER"
+type "Character"
+using "PLA_Githyanki_Ranger"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Unused
+new entry "MMM_MOUNTAINGITH_CASTER"
+type "Character"
+using "PLA_Githyanki_Caster"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// Githyanki Warrior, Githyanki Trainee, and Kara'i
+new entry "MMM_MOUNTAINGITH_WARRIOR"
+type "Character"
+using "Githyanki_Warrior"
+// data "Vitality" "41"
+data "Vitality" "61"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Githyanki Raider and Ci'e'sm
+new entry "MMM_MOUNTAINGITH_RAIDER"
+type "Character"
+using "Githyanki_Raider"
+// data "Vitality" "32"
+data "Vitality" "52"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Githyanki Gish and Iek'd
+new entry "MMM_MOUNTAINGITH_GISH"
+type "Character"
+using "Githyanki_Gish"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+
+// Ember Gish'ra Hel'dom
+new entry "MMM_GITHRA_CASTER"
+type "Character"
+using "Githyanki_Gishra_Caster"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107"
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+
+// High Gish'ra F'a'de
+new entry "MMM_GITHRA_MELEE"
+type "Character"
+using "Githyanki_Gishra_Melee"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107"
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+
+// ==================================== Mountain Pass - Absolute Troops
+// 2. This is now a battlefield, get ready for a three way fight.
+// 10. The Gith actualy have some prisoners in the prisons.
+
+// Absolute Necromancer and Prisoner - 1
+new entry "MMM_HUMANNECRO_M"
+type "Character"
+using "Human_Caster"
+// data "Vitality" "8"
+data "Vitality" "43"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// Absolute Chaos Mage and Yani
+new entry "MMM_CHAOSMAGE_M"
+type "Character"
+using "Elf_Caster"
+// data "Intelligence" "18"
+data "Intelligence" "14"
+// data "Charisma" "14"
+data "Charisma" "18"
+// data "Vitality" "18"
+data "Vitality" "46"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;MMM_ChaosMagic"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+
+// Zealot of the Absolute and Prisoner - 2
+new entry "MMM_ABZEALOT_M"
+type "Character"
+using "MOO_ZealotOfTheAbsolute_Human"
+// data "Vitality" "70"
+data "Vitality" "60"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
+data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
+
+// ==================================== Mountain Pass
+// 3. The darkness encroaches.
+
+// MMM_SHADOWCURSED_GITHYANKIFIGHTER
+
+// ==================================== Mountain Pass
+// 5. Team Trajectile Event #2.
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES1B"
+type "Character"
+using "MMM_WIGGLES"
+// data "Vitality" "24"
+data "Vitality" "43"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON1B"
+type "Character"
+using "MMM_LAYTON"
+// data "Vitality" "24"
+data "Vitality" "52"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT1B"
+type "Character"
+using "MMM_WRIGHT"
+// data "Vitality" "20"
+data "Vitality" "35"
+
+// ==================================== Mountain Pass - Harpies
+// 6. Harpies have settled in.
+
+new entry "MMM_MONESTARYHARPY"
+type "Character"
+using "Harpy"
+// data "Strength" "12"
+data "Strength" "14"
+// data "Dexterity" "14"
+data "Dexterity" "16"
+// data "Constitution" "12"
+data "Constitution" "14"
+// data "Vitality" "24"
+data "Vitality" "52"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Mountain Pass - Kobold Picnic!
+// 7. Aww, a cute picnic.
+
+// Konran and Kemono
+new entry "MMM_PICNICKOBS"
+type "Character"
+using "Kobold_Melee"
+// data "Vitality" "12"
+data "Vitality" "21"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// ==================================== Mountain Pass - Spiritual Weapons
+// 9. Find out what happens when you try to steal from a god.
+
+// Spiritual Weapon - 1
+new entry "MMM_SPIRITUALMONESTARY_AXE"
+type "Character"
+using "SpiritualWeapon_Greataxe"
+// data "Strength" "10"
+data "Strength" "16"
+// data "Dexterity" "10"
+data "Dexterity" "16"
+// data "Constitution" "10"
+data "Constitution" "16"
+// data "Vitality" "20"
+data "Vitality" "50"
+// data "XPReward" ""
+data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
+// data "ActionResources" "BonusActionPoint:1;Movement:6"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:12"
+
+// Spiritual Weapon - 2
+new entry "MMM_SPIRITUALMONESTARY_SWORD"
+type "Character"
+using "SpiritualWeapon_Greatsword"
+
+// Spiritual Weapon - 3
+new entry "MMM_SPIRITUALMONESTARY_MAUL"
+type "Character"
+using "SpiritualWeapon_Maul"
+
+// Spiritual Weapon - 4
+new entry "MMM_SPIRITUALMONESTARY_SPEAR"
+type "Character"
+using "SpiritualWeapon_Spear"
+
+// ==================================== Mountain Pass - Mad Hand Sorcerer
+// 11. Let's just say this fight is... hands on.
+
+// Vinly Desh
+new entry "MMM_MINDTORTURED"
+type "Character"
+using "MOO_MindTorturer"
+// data "Vitality" "59"
+data "Vitality" "96"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;Gnome_Cunning;Gnome_Speed;RepellingBlast;DreadfulWord"
+data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;MMM_ChaosMagic"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+
+new entry "MMM_TORTUREDCLAW"
+type "Character"
+using "CrawlingClaw"
+// data "Vitality" "4"
+data "Vitality" "24"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:6;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+
+// ==================================== Githyanki Crecke - Dawnmaster Vaseid ====================================
+// B. Boss Battle 
+// Dawnmaster Vaseid gave his life to protect the Blood of Lathander, now he'll judge you if you're worthy or not.
+// A check is preformed when you approach him based on how many good vs evil acts you've done to this point.
+// Low enough score (aka Good) he will let you pass, grants full exp.
+// Too high of score (Neutral into Evil) and he won't let you pass.  At half hp Lathander will bless him to cast one of two massive spells.  A successful Arcana check will show you what spell it is and where it's targeted, otherwise better heal up!
+
+// Spirit of Dawnmaster Vaseid
+new entry "MMM_DAWNMASTER"
+type "Character"
+using "_Human"
+data "Strength" "19"
+data "Dexterity" "13"
+data "Constitution" "16"
+data "Intelligence" "10"
+data "Wisdom" "18"
+data "Charisma" "18"
+data "Vitality" "400"
+data "Armor" "18"
+data "SpellCastingAbility" "Charisma"
+data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
+data "XPReward" "5d26ba3d-6f84-465e-870a-d8cbb577c818"
+data "Proficiency Group" "LightArmor;MediumArmor;HeavyArmor;MartialWeapons;SimpleWeapons"
+
+// ==================================== Mountain Pass - Undocumented encounters ====================================
+// Lady Esther's Mercs
+
+// Salo and Marlow
+new entry "MMM_ESTHERMERC"
+type "Character"
+using "Human_Melee_Strong"
+// data "Constitution" "14"
+data "Constitution" "16"
+// data "Intelligence" "12"
+data "Intelligence" "8"
+// data "Charisma" "14"
+data "Charisma" "6"
+// data "Vitality" "28"
+data "Vitality" "84"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SuperiorityDie:5"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side ====================================
+// 1. Shadowcursed Githyanki.
+
+// Shadow-Cursed Githyanki
+new entry "MMM_SHADOWCURSED_GITHYANKIFIGHTER"
+type "Character"
+using "HAV_ShadowCursed_Warrior_Githyanki_Melee"
+// data "Vitality" "48"
+data "Vitality" "65"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Shadow-Cursed Githyanki
+new entry "MMM_SHADOWCURSED_GITHYANKIBARBARIAN"
+type "Character"
+using "Githyanki_Melee"
+// data "Vitality" "48"
+data "Vitality" "70"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 2. Shadowcursed on the toilet. 
+
+// Shadow-Cursed Toilet Guy
+new entry "MMM_SHADOWCURSED_HUMANBARBARIAN"
+type "Character"
+using "HAV_ShadowCursed_Warrior_Human_Melee"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 3. Shadowcursed family.
+// Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss.
+
+// Shadow-Cursed Family
+new entry "MMM_SHADOWCURSED_HUMANRANGED"
+type "Character"
+using "LOW_Guildhall_Swarm_Melee_Human"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Shadow-Cursed Family
+new entry "MMM_SHADOWCURSED_HUMANCASTER"
+type "Character"
+using "Human_Caster"
+// data "Intelligence" "16"
+data "Intelligence" "18"
+// data "Vitality" "8"
+data "Vitality" "42"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// Shadow-Cursed Family
+new entry "MMM_SHADOWCURSED_DOG"
+type "Character"
+using "Shadow_Mastiff"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// Shadow-Cursed Family
+new entry "MMM_SHADOWCURSED_KID"
+type "Character"
+using "Shadow"
+// data "Vitality" "24"
+data "Vitality" "22"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "ShadowyRetreat;Ethereal;SunlightWeakness;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Passives" "SunlightWeakness;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 4. Restless Druids and Harpers.
+
+// Restless Harper
+new entry "MMM_SHADOWSKELETON_MELEE"
+type "Character"
+using "SHA_Skeleton_Melee"
+// data "Vitality" "16"
+data "Vitality" "37"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Restless Harper
+new entry "MMM_SHADOWSKELETON_RANGED"
+type "Character"
+using "SHA_Skeleton_Ranger"
+// data "Vitality" "14"
+data "Vitality" "29"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Restless Druid
+new entry "MMM_SHADOWSKELETON_DRUID"
+type "Character"
+using "SHA_Skeleton_Caster"
+// data "Wisdom" "8"
+data "Wisdom" "16"
+// data "Armor" "10"
+data "Armor" "14"
+// data "Vitality" "12"
+data "Vitality" "32"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "ArmorType" "Cloth"
+data "ArmorType" "Leather"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 5. Shadowcursed Druids and Harpers.
+
+// Shadow-Cursed Druid
+new entry "MMM_SHADOWCURSED_HALFLINGDRUID"
+type "Character"
+using "Halfling_Druid"
+// data "Vitality" "18"
+data "Vitality" "45"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+
+// Shadow-Cursed Druid
+new entry "MMM_SHADOWCURSED_HUMANDRUID"
+type "Character"
+using "Human_Druid"
+// data "Vitality" "20"
+data "Vitality" "47"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+
+// Shadow-Cursed Harper
+new entry "MMM_SHADOWCURSED_ELFHARPERRANGED"
+type "Character"
+using "Elf_Ranger"
+// data "Vitality" "22"
+data "Vitality" "42"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Shadow-Cursed Harper
+new entry "MMM_SHADOWCURSED_HALFELFBARBARIAN"
+type "Character"
+using "HalfElf_Barbarian"
+// data "Vitality" "24"
+data "Vitality" "62"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 7. A lost child.
+
+new entry "MMM_CHILDWRAITH"
+type "Character"
+using "Wraith"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:18;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:2:2:1"
+// data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 8. What could have done this to this chest...
+
+// Shadow-Cursed Squirrel
+new entry "MMM_CRAZEDSQUIRREL"
+type "Character"
+using "Squirrel"
+// data "Strength" "2"
+data "Strength" "8"
+// data "Dexterity" "11"
+data "Dexterity" "14"
+// data "Vitality" "1"
+data "Vitality" "17"
+// data "Passives" "DarknessRules"
+data "Passives" "DarknessRules;AttackOfOpportunity"
+// data "XPReward" "c83d6caa-c5c3-4356-b55c-8d634535976c"
+data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 9. Shadar-Kai.
+
+// N'saneh Att'er
+new entry "MMM_SHADARKAISOUL"
+type "Character"
+using "Elf_ShadarKai_Ranger"
+// data "Strength" "10"
+data "Strength" "8"
+// data "Dexterity" "16"
+data "Dexterity" "17"
+// data "Constitution" "12"
+data "Constitution" "14"
+// data "Intelligence" "10"
+data "Intelligence" "19"
+// data "Wisdom" "14"
+data "Wisdom" "16"
+// data "Charisma" "10"
+data "Charisma" "13"
+// data "Vitality" "18"
+data "Vitality" "106"
+// data "SpellCastingAbility" "Wisdom"
+data "SpellCastingAbility" "Intelligence"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:3:3:1;SpellSlot:1:1:2;SpellSlot:1:1:3"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// Shadar-Kai - Shadar-Kai Shadow Dancer
+new entry "MMM_SHADARKAIDANCER"
+type "Character"
+using "Elf_ShadarKai_Ranger"
+// data "Strength" "10"
+data "Strength" "12"
+// data "Constitution" "12"
+data "Constitution" "13"
+// data "Intelligence" "10"
+data "Intelligence" "11"
+// data "Wisdom" "14"
+data "Wisdom" "12"
+// data "Charisma" "10"
+data "Charisma" "12"
+// data "Vitality" "18"
+data "Vitality" "51"
+// data "SpellCastingAbility" "Wisdom"
+data "SpellCastingAbility" "Intelligence"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// Shadar-Kai - Shadar-kai Gloom Weaver
+new entry "MMM_SHADARKAIGLOOM"
+type "Character"
+using "Elf_ShadarKai_Ranger"
+// data "Strength" "10"
+data "Strength" "18"
+// data "Dexterity" "16"
+data "Dexterity" "18"
+// data "Constitution" "12"
+data "Constitution" "14"
+// data "Intelligence" "10"
+data "Intelligence" "15"
+// data "Wisdom" "14"
+data "Wisdom" "12"
+// data "Charisma" "10"
+data "Charisma" "18"
+// data "Vitality" "18"
+data "Vitality" "86"
+// data "SpellCastingAbility" "Wisdom"
+data "SpellCastingAbility" "Intelligence"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:3:3:1;SpellSlot:1:1:2;SpellSlot:1:1:3"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
+data "Passives" "ExtraAttack;MistyEscape_ShadarKai_GloomWeaver;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// ==================================== Shadow Cursed Lands - Lastlight Side
+// 11. Balthazar event #1.
+
+// Edin Mesic
+new entry "MMM_BALTHAZARZOMBIEDRUID"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "8"
+// data "Dexterity" "6"
+data "Dexterity" "12"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "13"
+// data "Vitality" "22"
+data "Vitality" "42"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+
+// Damon Eyesz
+new entry "MMM_BALTHAZARZOMBIEBARBARIAN"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "18"
+// data "Dexterity" "6"
+data "Dexterity" "16"
+// data "Intelligence" "3"
+data "Intelligence" "16"
+// data "Wisdom" "6"
+data "Wisdom" "8"
+// data "Charisma" "5"
+data "Charisma" "8"
+// data "Vitality" "22"
+data "Vitality" "65"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// Rekin Ky
+new entry "MMM_BALTHAZARZOMBIEROGUE"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "10"
+// data "Dexterity" "6"
+data "Dexterity" "18"
+// data "Intelligence" "3"
+data "Intelligence" "14"
+// data "Wisdom" "6"
+data "Wisdom" "12"
+// data "Charisma" "5"
+data "Charisma" "16"
+// data "Vitality" "22"
+data "Vitality" "38"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+
+// Farsee Yer
+new entry "MMM_BALTHAZARZOMBIERANGER"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "8"
+// data "Dexterity" "6"
+data "Dexterity" "18"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "13"
+// data "Vitality" "22"
+data "Vitality" "45"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// Harry Ispup
+new entry "MMM_BALTHAZARZOMBIEMONK"
+type "Character"
+using "Zombie"
+// data "Strength" "16"
+data "Strength" "12"
+// data "Dexterity" "6"
+data "Dexterity" "16"
+// data "Intelligence" "3"
+data "Intelligence" "12"
+// data "Wisdom" "6"
+data "Wisdom" "16"
+// data "Charisma" "5"
+data "Charisma" "12"
+// data "Vitality" "22"
+data "Vitality" "52"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
+// data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
+data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+
+// ==================================== Shadow Cursed Lands - Moonrise Side
+// 13. Balthazar event #2.
+
+// Necrofex
+new entry "MMM_BALTHAZARSKELETONBOSS"
+type "Character"
+using "LOW_KidNecromancer_GiantSkeleton"
+// data "Vitality" "76"
+data "Vitality" "146"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+
+// Plouf? - The Spider King?
+new entry "MMM_SPIDERKING"
+type "Character"
+using "Gnome_Deep_Caster"
+// data "Vitality" "16"
+data "Vitality" "176"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+
+// Plouf - The Spider King
+new entry "MMM_SPIDERKINGBURSTER"
+type "Character"
+using "Spider_Sword"
+// data "Vitality" "31"
+data "Vitality" "181"
+// data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+
+// Tiny Spider
+new entry "MMM_TINYSPIDER2"
+type "Character"
+using "MMM_TINYSPIDER"
+// data "Vitality" "6"
+data "Vitality" "16"
+// data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
+data "XPReward" "cbf0724b-422a-4a53-87b2-fb02882f1fd2"
+
+// ==================================== Shadow Cursed Lands - Moonrise Side
+// 14. Team Trajectile Event #3
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES2"
+type "Character"
+using "MMM_WIGGLES1B"
+// data "Strength" "16"
+data "Strength" "18"
+// data "Dexterity" "11"
+data "Dexterity" "14"
+// data "Vitality" "43"
+data "Vitality" "82"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON2"
+type "Character"
+using "MMM_LAYTON1B"
+// data "Strength" "18"
+data "Strength" "20"
+// data "Vitality" "52"
+data "Vitality" "93"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT2"
+type "Character"
+using "MMM_WRIGHT1B"
+// data "Vitality" "35"
+data "Vitality" "57"
+
+// ==================================== Rivington ==================================== 
+// 1. Team Trajectile Event #4.
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES3"
+type "Character"
+using "MMM_WIGGLES2"
+// data "Strength" "18"
+data "Strength" "20"
+// data "Vitality" "82"
+data "Vitality" "92"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON3"
+type "Character"
+using "MMM_LAYTON2"
+// data "Dexterity" "12"
+data "Dexterity" "16"
+// data "Vitality" "93"
+data "Vitality" "105"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT3"
+type "Character"
+using "MMM_WRIGHT2"
+// data "Wisdom" "18"
+data "Wisdom" "20"
+// data "Vitality" "57"
+data "Vitality" "64"
+
+// ==================================== Rivington
+// 2. Don't get the chicken smell on you or you might attract something.
+// TODO: Not really a Hill Giant, just ogre.
+
+// Hill Giant
+new entry "MMM_HILLGIANT"
+type "Character"
+using "Ogre"
+// data "Strength" "19"
+data "Strength" "23"
+// data "Dexterity" "12"
+data "Dexterity" "8"
+// data "Constitution" "16"
+data "Constitution" "18"
+// data "Armor" "11"
+data "Armor" "8"
+// data "Vitality" "59"
+data "Vitality" "130"
+data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
+// data "SpellCastingAbility" "Strength"
+data "SpellCastingAbility" "Constitution"
+// data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
+data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+
+// ==================================== Rivington
+// 3. Sea Creatures on the beach.
+// 4. Sea Creatures at the wrecked ship.
+
+// Sahuagin
+new entry "MMM_SAHUAGINMELEE"
+type "Character"
+using "Sahuagin_Melee"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+
+// Sahuagin Hunter
+new entry "MMM_SAHUAGINRANGED"
+type "Character"
+using "Sahuagin_Ranged"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+
+// ==================================== Rivington
+// 7. Githyanki Patrol
+
+// Gith Patrol
+new entry "MMM_RIVINGTONGITH_WARRIOR"
+type "Character"
+using "MMM_MOUNTAINGITH_WARRIOR"
+
+// Githyanki Patrol
+new entry "MMM_RIVINGTONGITH_RANGER"
+type "Character"
+using "MMM_MOUNTAINGITH_RANGER"
+
+// ==================================== Lower City ====================================
+// 1. Team Trajectile Event #5
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES3B"
+type "Character"
+using "MMM_WIGGLES3"
+// data "Vitality" "92"
+data "Vitality" "99"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON3B"
+type "Character"
+using "MMM_LAYTON3"
+// data "Vitality" "105"
+data "Vitality" "115"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT3B"
+type "Character"
+using "MMM_WRIGHT3"
+// data "Vitality" "64"
+data "Vitality" "70"
+
+// ==================================== Upper City ====================================
+// 2. Team Trajectile Event #5
+
+// Mikey "Wiggles" Pridgen
+new entry "MMM_WIGGLES3C"
+type "Character"
+using "MMM_WIGGLES3B"
+// data "Vitality" "99"
+data "Vitality" "112"
+
+// Lyin' Liam Layton
+new entry "MMM_LAYTON3C"
+type "Character"
+using "MMM_LAYTON3B"
+// data "Vitality" "115"
+data "Vitality" "135"
+
+// Adam "Buggy" Wright
+new entry "MMM_WRIGHT3C"
+type "Character"
+using "MMM_WRIGHT3B"
+// data "Vitality" "70"
+data "Vitality" "82"
+
+// Unused - Vanilla pixie just uses "Commoner_Child", but would be a lot cooler with a real stat block.
+// new entry "MMM_THIEFPIXIE"
+// type "Character"
+// using "Gnome_Melee"
+// data "Strength" "18"
+// data "Dexterity" "14"
+// data "Constitution" "14"
+// data "Intelligence" "12"
+// data "Wisdom" "12"
+// data "Charisma" "14"
+// data "Vitality" "82"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "ArmorType" "ScaleMail"
+// data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
+// data "Passives" "AttackOfOpportunity"
+
+// ==================================== All levels ====================================
+
+new entry "MMM_ACT1MIMICSTATS"
+type "Character"
+using "_Monstrosity"
+// data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
+data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+
+new entry "MMM_ACT2MIMICSTATS"
+type "Character"
+using "MMM_ACT1MIMICSTATS"
+// data "Strength" "17"
+data "Strength" "18"
+// data "Constitution" "15"
+data "Constitution" "16"
+// data "Vitality" "58"
+data "Vitality" "85"
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:2;BonusActionPoint:1;Movement:4.5;ReactionActionPoint:1"
+
+new entry "MMM_ACT3MIMICSTATS"
+type "Character"
+using "MMM_ACT2MIMICSTATS"
+// data "Strength" "18"
+data "Strength" "20"
+// data "Constitution" "16"
+data "Constitution" "18"
+// data "Vitality" "85"
+data "Vitality" "125"

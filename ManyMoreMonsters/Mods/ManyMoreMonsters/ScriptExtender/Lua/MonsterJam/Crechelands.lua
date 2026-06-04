@@ -641,7 +641,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_LATHANDERFLAMESTRIKE", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_FlameStrike_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
@@ -664,7 +664,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_LATHANDERSUNBEAM", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
@@ -688,7 +688,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_LATHANDERFLAMESTRIKE", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_FlameStrike_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
@@ -708,7 +708,7 @@ local function DawnmasterExecution()
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
                             if object == Dawnmaster and DawnmasterOff <= 1 then
-                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_LATHANDERSUNBEAM", x, y, z, 1)
+                                Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
                         end)
@@ -737,6 +737,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
     DawnmasterRollResult = 0
 end)
 
+-- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -1060,6 +1061,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gondola detect roll
         if eventName == "GondolaRoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Channels.LogToPlayerOverhead:Broadcast("There are Gith on that Gondola! Prepare yourselves!")
                 PrepareDuration = 30
                 PreparedBoost()
@@ -1068,6 +1070,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gish'ra detect roll
         if eventName == "GishraDetectRoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Channels.LogToPlayerOverhead:SendToClient("I feel eyes staring at me...", Osi.GetReservedUserID(roller))
                 PrepareDuration = 18
                 PreparedBoost()

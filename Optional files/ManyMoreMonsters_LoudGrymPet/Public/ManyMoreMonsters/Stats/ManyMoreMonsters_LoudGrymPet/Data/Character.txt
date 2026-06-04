@@ -1,0 +1,5 @@
+// GRYM MODEL-N (Summon)
+new entry "MMM_GRYMNANO"
+type "Character"
+using "MMM_GRYMNANO"
+data "SoundSize" "Gargantuan"

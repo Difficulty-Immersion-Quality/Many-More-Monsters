@@ -4,7 +4,9 @@
 	<region id="Tags">
 		<node id="Tags">
 			<attribute id="Description" type="LSString" value="" />
+			<!-- Hidden -->
 			<attribute id="DisplayDescription" type="TranslatedString" handle="hbfcaecabgd2e8g468dgb8b3g0f76ecea19ad" version="0" />
+			<!-- Hidden -->
 			<attribute id="DisplayName" type="TranslatedString" handle="hbfcaecabgd2e8g468dgb8b3g0f76ecea19ad" version="0" />
 			<attribute id="Icon" type="FixedString" value="" />
 			<attribute id="Name" type="FixedString" value="MMM_Act1_DrowAmbush1" />

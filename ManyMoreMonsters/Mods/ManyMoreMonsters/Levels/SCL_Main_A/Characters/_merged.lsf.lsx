@@ -4,6 +4,10 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+<!-- Shadow Cursed Lands -->
+	<!-- Lastlight Side -->
+		<!-- 1. Shadowcursed Githyanki. -->
+			<!-- Shadowcursed Githyanki - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -76,6 +80,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadowcursed Githyanki - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -148,6 +153,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadowcursed Githyanki - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -220,6 +226,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadowcursed Githyanki - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -290,7 +297,80 @@
 						</node>
 					</children>
 				</node>
+		<!-- 2. Shadowcursed on the toilet. -->
+			<!-- Shadow-Cursed Toilet Guy -->
 				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="ranged" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="71ec8d6d-e377-a9c1-2c58-80d87415d99e" />
+					<attribute id="CombatGroupID" type="FixedString" value="e3252287-f236-401d-951d-68d45f555e15" />
+					<attribute id="DisplayName" type="TranslatedString" handle="ha1c633f6gccc7g41b2ga24eg312c2ff133ae" version="1" />
+					<attribute id="Faction" type="guid" value="68c65246-aa75-4224-8cc3-f72389416ae5" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="71ec8d6d-e377-a9c1-2c58-80d87415d99e-_(Icon_Human_Male)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="7" />
+					<attribute id="MapKey" type="FixedString" value="3c9e62e8-b85f-4c5d-a0c8-9efa8f49516a" />
+					<attribute id="Name" type="LSString" value="MMM_SHADOWTOILET" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_BARBARIAN" />
+					<attribute id="StartCombatRange" type="float" value="1" />
+					<attribute id="Stats" type="FixedString" value="MMM_SHADOWCURSED_HUMANBARBARIAN" />
+					<attribute id="TemplateName" type="FixedString" value="3278f064-5353-4c08-ab96-c2f432d0fda0" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="eb3fa5f9-f73d-24a5-c27a-506ccc571403" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53172adc-5565-64ac-d016-884e2f985bc6" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="f54bb4c7-5bc3-dd21-7c6d-c0f8c45ba53f" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="91156f03-73ec-b8b4-0d2a-a37d7c42134a" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SkillList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SHADOW_CURSE_UNDEAD_CONTROL" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MOO_Cultist" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="44.25 47.600586 -26.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+		<!-- 3. Shadowcursed family. -->
+			<!-- Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss. -->
+			<!-- Shadow-Cursed Family - 1 -->
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="ad4adb39-7617-2f30-b5d7-082bcde1626a" />
@@ -362,8 +442,9 @@
 							</children>
 						</node>
 					</children>
-				</node>
-				<node id="GameObjects">
+				</node> -->
+			<!-- Shadow-Cursed Family - 2 -->
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="e2479dec-3cf4-f9c5-0310-72126ad89633" />
@@ -435,8 +516,9 @@
 							</children>
 						</node>
 					</children>
-				</node>
-				<node id="GameObjects">
+				</node> -->
+			<!-- Shadow-Cursed Family - 3 -->
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="f128d0b6-512b-e721-5d58-67de4d9e6d82" />
@@ -496,8 +578,9 @@
 							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
-				</node>
-				<node id="GameObjects">
+				</node> -->
+			<!-- Shadow-Cursed Family - 4 -->
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
 					<attribute id="CanFight" type="bool" value="True" />
@@ -563,75 +646,9 @@
 							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="ranged" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="71ec8d6d-e377-a9c1-2c58-80d87415d99e" />
-					<attribute id="CombatGroupID" type="FixedString" value="e3252287-f236-401d-951d-68d45f555e15" />
-					<attribute id="DisplayName" type="TranslatedString" handle="ha1c633f6gccc7g41b2ga24eg312c2ff133ae" version="1" />
-					<attribute id="Faction" type="guid" value="68c65246-aa75-4224-8cc3-f72389416ae5" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="71ec8d6d-e377-a9c1-2c58-80d87415d99e-_(Icon_Human_Male)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="7" />
-					<attribute id="MapKey" type="FixedString" value="3c9e62e8-b85f-4c5d-a0c8-9efa8f49516a" />
-					<attribute id="Name" type="LSString" value="MMM_SHADOWTOILET" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_BARBARIAN" />
-					<attribute id="StartCombatRange" type="float" value="1" />
-					<attribute id="Stats" type="FixedString" value="MMM_SHADOWCURSED_HUMANBARBARIAN" />
-					<attribute id="TemplateName" type="FixedString" value="3278f064-5353-4c08-ab96-c2f432d0fda0" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209024" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="eb3fa5f9-f73d-24a5-c27a-506ccc571403" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="53172adc-5565-64ac-d016-884e2f985bc6" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="f54bb4c7-5bc3-dd21-7c6d-c0f8c45ba53f" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="91156f03-73ec-b8b4-0d2a-a37d7c42134a" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="SkillList" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOW_CURSE_UNDEAD_CONTROL" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MOO_Cultist" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="44.25 47.600586 -26.25" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
+				</node> -->
+		<!-- 4. Restless Druids and Harpers. -->
+			<!-- Trigger Point -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -693,9 +710,6 @@
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
 								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
 							</children>
 						</node>
 						<node id="Tags">
@@ -715,6 +729,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Harper - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -749,7 +764,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -777,6 +791,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Harper - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
@@ -810,7 +825,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -838,6 +852,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Druid - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
@@ -871,7 +886,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -899,6 +913,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Druid - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
@@ -932,7 +947,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -960,6 +974,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Druid - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
@@ -993,7 +1008,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -1021,6 +1035,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Harper - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
@@ -1054,7 +1069,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -1082,6 +1096,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Restless Harper - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -1116,7 +1131,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -1144,6 +1158,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- 5. Shadowcursed Druids and Harpers. -->
+			<!-- Shadow-Cursed Druid - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -1239,6 +1255,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadow-Cursed Druid - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="mage" />
@@ -1355,6 +1372,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadow-Cursed Harper - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="f2f1e59a-cb02-5b29-2c38-2314fc8bbf83" />
@@ -1425,6 +1443,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadow-Cursed Harper - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="f4a56675-516f-d12e-a27a-ed421b574c22" />
@@ -1499,6 +1518,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- 6. Meazel Ambush. -->
+			<!-- Trigger Point -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -1560,9 +1581,6 @@
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
 								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
 							</children>
 						</node>
 						<node id="Tags">
@@ -1582,6 +1600,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Meazel - 1 -->
 				<node id="GameObjects">
 					<attribute id="CombatGroupID" type="FixedString" value="ca4cabb5-e4a4-486a-bb82-b3ee8b99ed06" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h86007787g2ea7g4f5dga7c9gd867a7d28220" version="2" />
@@ -1621,6 +1640,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Meazel - 2 -->
 				<node id="GameObjects">
 					<attribute id="CombatGroupID" type="FixedString" value="ca4cabb5-e4a4-486a-bb82-b3ee8b99ed06" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h86007787g2ea7g4f5dga7c9gd867a7d28220" version="2" />
@@ -1660,6 +1680,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Meazel - 3 -->
 				<node id="GameObjects">
 					<attribute id="CombatGroupID" type="FixedString" value="ca4cabb5-e4a4-486a-bb82-b3ee8b99ed06" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h86007787g2ea7g4f5dga7c9gd867a7d28220" version="2" />
@@ -1699,6 +1720,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Meazel - 4 -->
 				<node id="GameObjects">
 					<attribute id="CombatGroupID" type="FixedString" value="ca4cabb5-e4a4-486a-bb82-b3ee8b99ed06" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h86007787g2ea7g4f5dga7c9gd867a7d28220" version="2" />
@@ -1738,1382 +1760,8 @@
 						</node>
 					</children>
 				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
-					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
-					<attribute id="CanBeTeleported" type="bool" value="False" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanJoinCombat" type="bool" value="False" />
-					<attribute id="CanOpenDoors" type="bool" value="False" />
-					<attribute id="CanShootThrough" type="bool" value="True" />
-					<attribute id="CastShadow" type="bool" value="False" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="b59edc87-ba12-c608-8996-cf6df1ee003a" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h05b93046g12dfg4ef6gadd6g3e0ed4695ece" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="InfluenceTreasureLevel" type="bool" value="False" />
-					<attribute id="IsInspector" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="MapKey" type="FixedString" value="ef903bef-1c07-46ca-8643-e48aeebc4427" />
-					<attribute id="Name" type="LSString" value="MMM_TRIGGERPOINT_BALTHAZAR" />
-					<attribute id="RecieveDecal" type="bool" value="False" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_TRIGGERPOINT" />
-					<attribute id="TemplateName" type="FixedString" value="d5589336-4ca7-4ef7-9f6d-ebfea51001fe" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="WalkThrough" type="bool" value="True" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115188075855921" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="f9fa0a86-91f5-7e21-c535-485871d35b87" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams">
-							<attribute id="IsMovementEnabled" type="bool" value="False" />
-							<attribute id="IsSteeringEnabled" type="bool" value="False" />
-							<attribute id="IsWorldClimbingEnabled" type="bool" value="False" />
-						</node>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_BALTHAZARDETECT1" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="INVISIBLE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
-							</children>
-						</node>
-						<node id="Tags">
-							<children>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="ff6d7d1f-094f-432e-a117-fdc3a0ab7ac1" />
-								</node>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="0668a5fd-72e0-4f9e-b85e-baae8796c637" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-19.958988 27.510742 209.93259" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
-							<attribute id="Scale" type="float" value="0.01" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AiHint" type="guid" value="45a231e4-e94f-4b0e-a941-2daf1adf44b5" />
-					<attribute id="AnubisConfigName" type="FixedString" value="SHA_Necromancer_Chosen_Act2" />
-					<attribute id="Archetype" type="FixedString" value="act2_SHA_necromancer" />
-					<attribute id="CanFight" type="bool" value="False" />
-					<attribute id="CanJoinCombat" type="bool" value="False" />
-					<attribute id="CombatGroupID" type="FixedString" value="" />
-					<attribute id="DisplayName" type="TranslatedString" handle="he1379cb5g0146g46e1g8e8agdadb2b27f854" version="2" />
-					<attribute id="Equipment" type="FixedString" value="SHA_Necromancer" />
-					<attribute id="Faction" type="guid" value="6a8d2366-831d-48ad-8d58-1f99a5cc7ca1" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GroupID" type="uint32" value="43227" />
-					<attribute id="Icon" type="FixedString" value="5dbde3ef-2023-bbbf-b24a-d23e25575d8b-SHA_Necromancer_(Icon_Necromancer)" />
-					<attribute id="IsBoss" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="a7a2cdb7-fc6b-4bb5-b4d8-feff84e466d3" />
-					<attribute id="Name" type="LSString" value="S_SHA_Necromancer" />
-					<attribute id="Race" type="guid" value="02e5c59e-80e7-4176-a289-1d08699583f5" />
-					<attribute id="Stats" type="FixedString" value="SHA_Necromancer" />
-					<attribute id="TemplateName" type="FixedString" value="167ee470-5f36-4618-a423-b04f6d8dbbb2" />
-					<attribute id="Title" type="TranslatedString" handle="h094824d1g96cag4657gbe8age05aeebcdaa6" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540921856" />
-					<children>
-						<node id="ItemList" />
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="5040ca2c-7203-5d44-2557-7673dc502c38" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="eda0926c-134c-5e5b-faad-4b029a4f7fc6" />
-												</node>
-											</children>
-										</node>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="6d1ac1e5-e6ae-f6f1-fb54-4876b4f93350" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="1f072a2e-c678-bb81-7b08-f6dc07d657ed" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="SkillList" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MAGE_ARMOR" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SHA_NECROMANCER_UNDEADWARD" />
-								</node>
-							</children>
-						</node>
-						<node id="Tags">
-							<children>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="53c3304c-032d-4c49-86df-00b3b03a6b13" />
-								</node>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="33c625aa-6982-4c27-904f-e47029a9b140" />
-								</node>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="04a90774-cd81-4173-8918-1c0f7dc8ec2a" />
-								</node>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="e6cd3ba7-7a49-44c5-a10b-8799efe36d8c" />
-								</node>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="542b58f0-42ad-4157-a28e-27434e0e7b18" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="SHA_Necromancer" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-19.63218 27.700195 217.49596" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="6fad7f54-a354-4cfc-8c52-86f29e405d84" />
-					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h1edac836ge5f1g486ega20fg2b507a35d172" version="1" />
-					<attribute id="Equipment" type="FixedString" value="EQP_GreatAxe_B" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="6fad7f54-a354-4cfc-8c52-86f29e405d84-_(Icon_Zombie)" />
-					<attribute id="IsEquipmentLootable" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="5" />
-					<attribute id="MapKey" type="FixedString" value="df0c3aa8-1d07-49f8-b035-d04d0f5684d1" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_BARBARIAN" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEBARBARIAN" />
-					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
-								</node>
-							</children>
-						</node>
-						<node id="Tags">
-							<children>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="b47643e0-583c-4808-b108-f6d3b605b0a9" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Gold_Meager" />
-								</node>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-21.56221 27.703125 219.92497" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1" />
-					<attribute id="Equipment" type="FixedString" value="EQP_Dagger_Leather_DW" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="IsEquipmentLootable" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="5" />
-					<attribute id="MapKey" type="FixedString" value="c63affdb-c020-494d-a1e9-5fcb7819a82b" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_ROGUE" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEROGUE" />
-					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="a5d2e442-4fe3-f147-ca38-b071adb584d1" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="27d38813-0f57-839d-b500-2d0f7e518067" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="78e61052-c1db-a94a-074f-ee89d537b862" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="OnDeathActions" />
-						<node id="ScriptConfigGlobalParameters" />
-						<node id="SpeakerGroupList" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-24.517181 27.501953 220.2505" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9063078 0 0.4226183" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Gold_Meager" />
-								</node>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
-								</node>
-							</children>
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="caster" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="12f78231-705d-2661-25e6-285b1a64ed98" />
-					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1" />
-					<attribute id="Equipment" type="FixedString" value="EQP_Staff_Leather" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="12f78231-705d-2661-25e6-285b1a64ed98-_(Icon_Zombie)" />
-					<attribute id="IsEquipmentLootable" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="5" />
-					<attribute id="MapKey" type="FixedString" value="9136f7ba-1d20-48c8-94ab-5db5ead804d1" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_DRUID" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEDRUID" />
-					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="a5d2e442-4fe3-f147-ca38-b071adb584d1" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="27d38813-0f57-839d-b500-2d0f7e518067" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="OnDeathActions" />
-						<node id="ScriptConfigGlobalParameters" />
-						<node id="SpeakerGroupList" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-21.531017 29.125977 227.08029" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.6755902 0 -0.7372773" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Gold_Meager" />
-								</node>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
-								</node>
-							</children>
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="ranged" />
-					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h94b840a3ge66bg43b4g9425g829862494871" version="1" />
-					<attribute id="Equipment" type="FixedString" value="EQP_Longbow_B_Leather" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="IsEquipmentLootable" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="5" />
-					<attribute id="MapKey" type="FixedString" value="a2d93742-9537-438e-b396-34d1f312f059" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIERANGER" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_RANGER" />
-					<attribute id="TemplateName" type="FixedString" value="d07a6db8-462f-48ac-8286-8aad8282ba02" />
-					<attribute id="Title" type="TranslatedString" handle="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209030" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="9cc8e46a-cf37-55e5-8323-ea1670d977c3" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="2be53979-c736-6640-f06c-748624e2d9e5" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="e51b497f-256f-ca49-edbe-d50f7f987f74" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="ScriptConfigGlobalParameters" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Gold_Meager" />
-								</node>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-11.908868 30.328125 220.07988" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9990482 0 -0.0436194" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="48fb270c-f427-2811-9ecd-e4dd0d032572" />
-					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1" />
-					<attribute id="Equipment" type="FixedString" value="Empty" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="48fb270c-f427-2811-9ecd-e4dd0d032572-_(Icon_Zombie)" />
-					<attribute id="IsEquipmentLootable" type="bool" value="True" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="5" />
-					<attribute id="MapKey" type="FixedString" value="b8b9c59f-4743-404a-b59f-4287d02003b2" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_MONK" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEMONK" />
-					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
-					<children>
-						<node id="LayerList">
-							<children>
-								<node id="Layers">
-									<children>
-										<node id="Object">
-											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="5155fad3-4d34-3798-f8ca-8a7942d22a05" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="60c3163d-1066-77eb-2b26-5c652959c441" />
-												</node>
-											</children>
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-						<node id="LocomotionParams" />
-						<node id="SkillList" />
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
-								</node>
-							</children>
-						</node>
-						<node id="Tags">
-							<children>
-								<node id="Tag">
-									<attribute id="Object" type="guid" value="b47643e0-583c-4808-b108-f6d3b605b0a9" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-10.57641 30.111433 217.35248" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 0.7071068" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Gold_Meager" />
-								</node>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
-								</node>
-							</children>
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="6275db9d-499a-4c33-a4c1-6d8d3874a94b" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="105.89757 56.342773 84.137436" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.8660254 0 -0.5" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="0df5e645-3bbd-443a-9bcb-0f3d4c7e57ba" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="104.75 56.1416 86.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.5735764 0 -0.819152" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="7f78517b-fce3-4217-b8c3-e8cbfbbb41d2" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="117.25 55.770508 75.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 0.3826834" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="41a3c31a-26b7-4dc3-b570-8cff96b47080" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="117.75 55.624023 77.25" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.8660254 0 0.5" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="4a55cc16-d9f3-4ebb-824c-5426045b8482" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="115.486084 55.158203 77.887375" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 0.3826834" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="06475630-c519-4dfe-9da4-6ced402a04ce" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="105.25 55.13379 78.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.6333309 0 0.7738811" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="66e02b7e-0bc0-4bf2-b8cf-bb4297df55cc" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="106.25 55.01953 78.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 -0.4617486" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="178f0e08-d8ae-41d0-99a5-d8e8144b4945" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="105.83375 54.89746 79.894066" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9063078 0 -0.4226183" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="3eca352e-5b02-473c-8e27-6be750516f2c" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="104.95282 55.16504 80.70909" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.976296 0 -0.2164396" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="b083eefc-4eda-460b-87e6-ddc8de0a27bd" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="103.095726 54.63965 80.999954" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9848078 0 0.1736482" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="9b926545-54bd-49db-923f-3349c335e297" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="95.75 52.259766 79.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.819152 0 -0.5735764" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="470d4ed0-85a2-4e6e-bd09-f37a47662a9d" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="94.75 52.564453 81.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 -0.4617486" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="5d9f6dd6-1a7c-4e76-8e1d-042617ef1b40" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="93.25 52.416992 82.25" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.9990482 0 0.0436194" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="e8560c15-f1a0-43bd-b619-a301b9b24544" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="91.905716 52.46289 81.85124" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.976296 0 0.2164396" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
-				<node id="GameObjects">
-					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
-					<attribute id="Archetype" type="FixedString" value="melee" />
-					<attribute id="CanClimbLadders" type="bool" value="False" />
-					<attribute id="CanFight" type="bool" value="True" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
-					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
-					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
-					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
-					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
-					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="2" />
-					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
-					<attribute id="MapKey" type="FixedString" value="2f69c995-54bd-4b34-ac72-f12f823a5b94" />
-					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
-					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
-					<attribute id="ReadinessFlags" type="uint32" value="12" />
-					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
-					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
-					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
-					<children>
-						<node id="StatusList">
-							<children>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
-								</node>
-							</children>
-						</node>
-						<node id="TradeTreasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="Empty" />
-								</node>
-							</children>
-						</node>
-						<node id="Treasures">
-							<children>
-								<node id="TreasureItem">
-									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
-								</node>
-							</children>
-						</node>
-						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="90.25 52.51172 80.75" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 0.4617486" />
-							<attribute id="Scale" type="float" value="1" />
-						</node>
-					</children>
-				</node>
+		<!-- 7. A lost child. -->
+			<!-- Andi -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="faa0692e-a5a6-4a7c-8ec6-f6740fe71b66" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h6fac55bag750ag499dg905fgc8c572ae9f53" version="1" />
@@ -3152,9 +1800,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
-								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
 								</node>
 							</children>
@@ -3166,6 +1811,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Andi -->
 				<node id="GameObjects">
 					<attribute id="AnimationSetResourceID" type="FixedString" value="f0e7b822-4421-fe91-b07c-613259e14c69" />
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -3179,6 +1825,7 @@
 					<attribute id="Name" type="LSString" value="MMM_CHILDWRAITH" />
 					<attribute id="TemplateName" type="FixedString" value="066133a8-5dce-4636-8ba1-13efb1140c54" />
 					<attribute id="Stats" type="FixedString" value="MMM_CHILDWRAITH" />
+					<!-- Child-like Wraith -->
 					<attribute id="Title" type="TranslatedString" handle="h823e08b8g8aafg4b45g8355gb895940b69e8" version="2" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
@@ -3283,6 +1930,849 @@
 						</node>
 					</children>
 				</node>
+		<!-- 8. What could have done this to this chest... -->
+			<!-- Shadow-Cursed Squirrel - 1 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="6275db9d-499a-4c33-a4c1-6d8d3874a94b" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="105.89757 56.342773 84.137436" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.8660254 0 -0.5" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 2 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="0df5e645-3bbd-443a-9bcb-0f3d4c7e57ba" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="104.75 56.1416 86.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.5735764 0 -0.819152" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 3 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="7f78517b-fce3-4217-b8c3-e8cbfbbb41d2" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="117.25 55.770508 75.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 0.3826834" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 4 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="41a3c31a-26b7-4dc3-b570-8cff96b47080" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="117.75 55.624023 77.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.8660254 0 0.5" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 5 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="4a55cc16-d9f3-4ebb-824c-5426045b8482" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="115.486084 55.158203 77.887375" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9238795 0 0.3826834" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 6 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="06475630-c519-4dfe-9da4-6ced402a04ce" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="105.25 55.13379 78.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.6333309 0 0.7738811" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 7 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="66e02b7e-0bc0-4bf2-b8cf-bb4297df55cc" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="106.25 55.01953 78.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 -0.4617486" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 8 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="178f0e08-d8ae-41d0-99a5-d8e8144b4945" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="105.83375 54.89746 79.894066" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9063078 0 -0.4226183" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 9 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="3eca352e-5b02-473c-8e27-6be750516f2c" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="104.95282 55.16504 80.70909" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.976296 0 -0.2164396" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 10 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="b083eefc-4eda-460b-87e6-ddc8de0a27bd" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="103.095726 54.63965 80.999954" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9848078 0 0.1736482" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 11 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="9b926545-54bd-49db-923f-3349c335e297" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="95.75 52.259766 79.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.819152 0 -0.5735764" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 12 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="470d4ed0-85a2-4e6e-bd09-f37a47662a9d" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="94.75 52.564453 81.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 -0.4617486" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 13 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="5d9f6dd6-1a7c-4e76-8e1d-042617ef1b40" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="93.25 52.416992 82.25" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9990482 0 0.0436194" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 14 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="e8560c15-f1a0-43bd-b619-a301b9b24544" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="91.905716 52.46289 81.85124" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.976296 0 0.2164396" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Shadow-Cursed Squirrel - 15 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanFight" type="bool" value="True" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a" />
+					<attribute id="CombatGroupID" type="FixedString" value="b6790471-c4e2-46dc-adbc-0d70abed3786" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hae91c9dbg18b2g49ecgad0eg1d846f24c541" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Squirrel" />
+					<attribute id="Icon" type="FixedString" value="dcec3a7b-1f94-33ce-44c7-08adde07b05a-_(Icon_Squirrel)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="2" />
+					<attribute id="LightID" type="FixedString" value="b62fa66d-5720-449a-96ea-3d69f0facfce" />
+					<attribute id="MapKey" type="FixedString" value="2f69c995-54bd-4b34-ac72-f12f823a5b94" />
+					<attribute id="Name" type="LSString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="TemplateName" type="FixedString" value="6d8584d9-7a83-49b5-8f7c-d777fc57f705" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="6ba76f46-ff1d-a751-b6ec-cfd458d35a41" />
+					<attribute id="ReadinessFlags" type="uint32" value="12" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_CRAZEDSQUIRREL" />
+					<attribute id="SwarmGroup" type="FixedString" value="MMM_CRAZEDSQUIRRELSWARM" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="VisualTemplate" type="FixedString" value="cb113113-c78b-1deb-73c2-359fa69a9de0" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144255925564211200" />
+					<children>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SCL_SHADOW_CURSE_UNDEAD_NEW" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="MMM_SQUIRRELTABLE2" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="90.25 52.51172 80.75" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.8870108 0 0.4617486" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+		<!-- 9. Shadar-Kai. -->
+			<!-- N'saneh Att'er -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -3302,6 +2792,7 @@
 					<attribute id="StartCombatRange" type="float" value="3" />
 					<attribute id="Stats" type="FixedString" value="MMM_SHADARKAISOUL" />
 					<attribute id="TemplateName" type="FixedString" value="4ba32414-1e90-456b-ad34-bcb32fd7e32b" />
+					<!-- Shadar-Kai Soul Monger -->
 					<attribute id="Title" type="TranslatedString" handle="h2a441d62g531dg4f77gbe74g4276f6c10ff1" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144959613005987841" />
@@ -3400,7 +2891,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -3431,6 +2921,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadar-Kai - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
@@ -3450,6 +2941,7 @@
 					<attribute id="StartCombatRange" type="float" value="3" />
 					<attribute id="Stats" type="FixedString" value="MMM_SHADARKAIDANCER" />
 					<attribute id="TemplateName" type="FixedString" value="4ba32414-1e90-456b-ad34-bcb32fd7e32b" />
+					<!-- Shadar-Kai Shadow Dancer -->
 					<attribute id="Title" type="TranslatedString" handle="h3492997eg8e6dg451fgbf63ge648a314a75c" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144959613005987841" />
@@ -3548,7 +3040,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -3579,6 +3070,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Shadar-Kai - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -3598,6 +3090,7 @@
 					<attribute id="StartCombatRange" type="float" value="3" />
 					<attribute id="Stats" type="FixedString" value="MMM_SHADARKAIGLOOM" />
 					<attribute id="TemplateName" type="FixedString" value="4ba32414-1e90-456b-ad34-bcb32fd7e32b" />
+					<!-- Shadar-kai Gloom Weaver -->
 					<attribute id="Title" type="TranslatedString" handle="h4d4c3c52g6e35g43aag88feg883819b115a0" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144959613005987841" />
@@ -3696,7 +3189,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -3727,6 +3219,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- 10. Something is missing from Ellie-May's grave... (Permanent Wisdom Event) -->
+			<!-- Spirit of Ellie May -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BaldursGate_Civilian" />
 					<attribute id="CanJoinCombat" type="bool" value="False" />
@@ -3788,9 +3282,6 @@
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="GHOST_FX" />
 								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
 							</children>
 						</node>
 						<node id="TradeTreasures">
@@ -3807,6 +3298,8 @@
 						</node>
 					</children>
 				</node>
+		<!-- 11. Balthazar event #1. -->
+			<!-- Trigger Point -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
 					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
@@ -3823,11 +3316,11 @@
 					<attribute id="InfluenceTreasureLevel" type="bool" value="False" />
 					<attribute id="IsInspector" type="bool" value="True" />
 					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="MapKey" type="FixedString" value="3a0b4676-c655-4088-94ca-4a63d7775f9c" />
+					<attribute id="MapKey" type="FixedString" value="ef903bef-1c07-46ca-8643-e48aeebc4427" />
 					<attribute id="Name" type="LSString" value="MMM_TRIGGERPOINT_BALTHAZAR" />
 					<attribute id="RecieveDecal" type="bool" value="False" />
 					<attribute id="SpotSneakers" type="bool" value="False" />
-					<attribute id="Stats" type="FixedString" value="MMM_TRIGGERPOINT_600" />
+					<attribute id="Stats" type="FixedString" value="MMM_TRIGGERPOINT" />
 					<attribute id="TemplateName" type="FixedString" value="d5589336-4ca7-4ef7-9f6d-ebfea51001fe" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="WalkThrough" type="bool" value="True" />
@@ -3860,13 +3353,13 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_BALTHAZARDETECT1" />
+								</node>
+								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
 								</node>
 							</children>
 						</node>
@@ -3881,12 +3374,13 @@
 							</children>
 						</node>
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-156.70578 31.529297 57.418594" />
+							<attribute id="Position" type="fvec3" value="-19.958988 27.510742 209.93259" />
 							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
 							<attribute id="Scale" type="float" value="0.01" />
 						</node>
 					</children>
 				</node>
+			<!-- Balthazar -->
 				<node id="GameObjects">
 					<attribute id="AiHint" type="guid" value="45a231e4-e94f-4b0e-a941-2daf1adf44b5" />
 					<attribute id="AnubisConfigName" type="FixedString" value="SHA_Necromancer_Chosen_Act2" />
@@ -3903,7 +3397,7 @@
 					<attribute id="IsBoss" type="bool" value="True" />
 					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="5406f805-858d-4399-9a12-8c7ff4124802" />
+					<attribute id="MapKey" type="FixedString" value="a7a2cdb7-fc6b-4bb5-b4d8-feff84e466d3" />
 					<attribute id="Name" type="LSString" value="S_SHA_Necromancer" />
 					<attribute id="Race" type="guid" value="02e5c59e-80e7-4176-a289-1d08699583f5" />
 					<attribute id="Stats" type="FixedString" value="SHA_Necromancer" />
@@ -3951,9 +3445,6 @@
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
-								<node id="Status">
 									<attribute id="Object" type="FixedString" value="MAGE_ARMOR" />
 								</node>
 								<node id="Status">
@@ -3988,31 +3479,34 @@
 							</children>
 						</node>
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-155.74823 31.610352 64.118645" />
+							<attribute id="Position" type="fvec3" value="-19.63218 27.700195 217.49596" />
 							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
 							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
 				</node>
+			<!-- Damon Eyesz -->
 				<node id="GameObjects">
-					<attribute id="Archetype" type="FixedString" value="deathShepherd" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="45154e42-cf21-9053-df13-bd4476ede627" />
-					<attribute id="CanFight" type="bool" value="False" />
-					<attribute id="CombatGroupID" type="FixedString" value="58620e39-22f9-4600-a95e-f13e645d1b1d" />
-					<attribute id="DisplayName" type="TranslatedString" handle="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1" />
-					<attribute id="Equipment" type="FixedString" value="EQP_Greatsword_Plate" />
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="6fad7f54-a354-4cfc-8c52-86f29e405d84" />
+					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h1edac836ge5f1g486ega20fg2b507a35d172" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_GreatAxe_B" />
 					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
 					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="45154e42-cf21-9053-df13-bd4476ede627-EQP_Greatsword_Plate_(Icon_Skeleton)" />
+					<attribute id="Icon" type="FixedString" value="6fad7f54-a354-4cfc-8c52-86f29e405d84-_(Icon_Zombie)" />
+					<attribute id="IsEquipmentLootable" type="bool" value="True" />
 					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
-					<attribute id="LevelOverride" type="int32" value="8" />
-					<attribute id="MapKey" type="FixedString" value="45437558-8c7b-45b3-8a4f-4201643ebe9a" />
-					<attribute id="Name" type="LSString" value="MMM_BALTHAZARSKELETON" />
-					<attribute id="SpellSet" type="FixedString" value="MMM_SKELETON_SPELLSWORD" />
-					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARSKELETONBOSS" />
-					<attribute id="TemplateName" type="FixedString" value="f05367f6-78f2-4631-996e-7e21912bbb78" />
+					<attribute id="LevelOverride" type="int32" value="5" />
+					<attribute id="MapKey" type="FixedString" value="df0c3aa8-1d07-49f8-b035-d04d0f5684d1" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_BARBARIAN" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEBARBARIAN" />
+					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
+					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209009" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
 					<children>
 						<node id="LayerList">
 							<children>
@@ -4020,17 +3514,6 @@
 									<children>
 										<node id="Object">
 											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
-											<children>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="6f38e8a5-25b1-daa6-d744-929a9fd64f7c" />
-												</node>
-												<node id="Layer">
-													<attribute id="Object" type="guid" value="f611edbe-1bef-910e-f266-1d1f687b8b2f" />
-												</node>
-											</children>
 										</node>
 									</children>
 								</node>
@@ -4040,33 +3523,339 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_MYRKULBOUND" />
+									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_MYRKULVEIL" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_UNDEAD_PRESENCE" />
-								</node>
-								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
+									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
 								</node>
 							</children>
 						</node>
 						<node id="Tags">
 							<children>
 								<node id="Tag">
-									<attribute id="Object" type="guid" value="6d60bed7-10cc-4b52-8fb7-baa75181cd49" />
+									<attribute id="Object" type="guid" value="b47643e0-583c-4808-b108-f6d3b605b0a9" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Meager" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
 								</node>
 							</children>
 						</node>
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="-155.55742 31.749023 70.596" />
+							<attribute id="Position" type="fvec3" value="-21.56221 27.703125 219.92497" />
 							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
-							<attribute id="Scale" type="float" value="1.6" />
+							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
 				</node>
+			<!-- Rekin Ky -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h93d17240gfd92g4333gafcag8bf77aff3d1b" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Dagger_Leather_DW" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="IsEquipmentLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="5" />
+					<attribute id="MapKey" type="FixedString" value="c63affdb-c020-494d-a1e9-5fcb7819a82b" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_ROGUE" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEROGUE" />
+					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
+					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="a5d2e442-4fe3-f147-ca38-b071adb584d1" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="27d38813-0f57-839d-b500-2d0f7e518067" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="78e61052-c1db-a94a-074f-ee89d537b862" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="OnDeathActions" />
+						<node id="ScriptConfigGlobalParameters" />
+						<node id="SpeakerGroupList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-24.517181 27.501953 220.2505" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9063078 0 0.4226183" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Meager" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			<!-- Edin Mesic -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="caster" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="12f78231-705d-2661-25e6-285b1a64ed98" />
+					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h4723c9c4g9b9eg4c0agb3deg00baf541a46d" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Staff_Leather" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="12f78231-705d-2661-25e6-285b1a64ed98-_(Icon_Zombie)" />
+					<attribute id="IsEquipmentLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="5" />
+					<attribute id="MapKey" type="FixedString" value="9136f7ba-1d20-48c8-94ab-5db5ead804d1" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_DRUID" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEDRUID" />
+					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
+					<!-- Shadow-Infused Druid -->
+					<attribute id="Title" type="TranslatedString" handle="h3d2b43a4g6ee4g40ccgbd1dge5c18be92d91" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="a5d2e442-4fe3-f147-ca38-b071adb584d1" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="27d38813-0f57-839d-b500-2d0f7e518067" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="OnDeathActions" />
+						<node id="ScriptConfigGlobalParameters" />
+						<node id="SpeakerGroupList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-21.531017 29.125977 227.08029" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.6755902 0 -0.7372773" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Meager" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			<!-- Farsee Yer -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="ranged" />
+					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h94b840a3ge66bg43b4g9425g829862494871" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Longbow_B_Leather" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="IsEquipmentLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="5" />
+					<attribute id="MapKey" type="FixedString" value="a2d93742-9537-438e-b396-34d1f312f059" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIERANGER" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_RANGER" />
+					<attribute id="TemplateName" type="FixedString" value="d07a6db8-462f-48ac-8286-8aad8282ba02" />
+					<!-- Shadow-Infused Harper -->
+					<attribute id="Title" type="TranslatedString" handle="hc1fda8c3g5d2cg48eeg8339g584aba014a01" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209030" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="9cc8e46a-cf37-55e5-8323-ea1670d977c3" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="2be53979-c736-6640-f06c-748624e2d9e5" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e51b497f-256f-ca49-edbe-d50f7f987f74" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="ScriptConfigGlobalParameters" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
+								</node>
+							</children>
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Meager" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-11.908868 30.328125 220.07988" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.9990482 0 -0.0436194" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Harry Ispup -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
+					<attribute id="Archetype" type="FixedString" value="melee" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="48fb270c-f427-2811-9ecd-e4dd0d032572" />
+					<attribute id="CombatGroupID" type="FixedString" value="8eea577c-895a-46e6-b20a-59455fd01765" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h9465ea6age671g488ag98ffgaf5b78733ac9" version="1" />
+					<attribute id="Equipment" type="FixedString" value="Empty" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="48fb270c-f427-2811-9ecd-e4dd0d032572-_(Icon_Zombie)" />
+					<attribute id="IsEquipmentLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="5" />
+					<attribute id="MapKey" type="FixedString" value="b8b9c59f-4743-404a-b59f-4287d02003b2" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARZOMBIE" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_MONK" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEMONK" />
+					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
+					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="5155fad3-4d34-3798-f8ca-8a7942d22a05" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="60c3163d-1066-77eb-2b26-5c652959c441" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SkillList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="UNDEAD_FORTITUDE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_SUPER_SHADOWCURSE" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="b47643e0-583c-4808-b108-f6d3b605b0a9" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-10.57641 30.111433 217.35248" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="Gold_Meager" />
+								</node>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="GEN_Skeleton_Generic" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+	<!-- Moonrise Side -->
+		<!-- 12. The Spider King. -->
+			<!-- Plouf? -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="mage" />
@@ -4085,6 +3874,7 @@
 					<attribute id="StartCombatRange" type="float" value="4" />
 					<attribute id="Stats" type="FixedString" value="MMM_SPIDERKING" />
 					<attribute id="TemplateName" type="FixedString" value="e41a1319-3979-4d19-bd64-1cd5562eda2a" />
+					<!-- The Spider King? -->
 					<attribute id="Title" type="TranslatedString" handle="h1fa9e4f4ga74fg4ffeg9d1dg74bdc570a646" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144818875517632912" />
@@ -4116,9 +3906,6 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_SHADOWSHIELD" />
-								</node>
-								<node id="Status">
 									<attribute id="Object" type="FixedString" value="MAGE_ARMOR" />
 								</node>
 							</children>
@@ -4137,6 +3924,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 1 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4315,6 +4103,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 2 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4493,6 +4282,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4671,6 +4461,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Tiny Spider - 4 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -4849,6 +4640,263 @@
 						</node>
 					</children>
 				</node>
+		<!-- 13. Balthazar event #2. -->
+			<!-- Trigger Point -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
+					<attribute id="BloodSurfaceType" type="FixedString" value="SurfaceNone" />
+					<attribute id="CanBeTeleported" type="bool" value="False" />
+					<attribute id="CanClimbLadders" type="bool" value="False" />
+					<attribute id="CanJoinCombat" type="bool" value="False" />
+					<attribute id="CanOpenDoors" type="bool" value="False" />
+					<attribute id="CanShootThrough" type="bool" value="True" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="b59edc87-ba12-c608-8996-cf6df1ee003a" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h05b93046g12dfg4ef6gadd6g3e0ed4695ece" version="1" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="InfluenceTreasureLevel" type="bool" value="False" />
+					<attribute id="IsInspector" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="3a0b4676-c655-4088-94ca-4a63d7775f9c" />
+					<attribute id="Name" type="LSString" value="MMM_TRIGGERPOINT_BALTHAZAR" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="SpotSneakers" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="MMM_TRIGGERPOINT_600" />
+					<attribute id="TemplateName" type="FixedString" value="d5589336-4ca7-4ef7-9f6d-ebfea51001fe" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="WalkThrough" type="bool" value="True" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115188075855921" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="53403475-3141-4317-fa26-9f114ae0c2d9" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="f9fa0a86-91f5-7e21-c535-485871d35b87" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams">
+							<attribute id="IsMovementEnabled" type="bool" value="False" />
+							<attribute id="IsSteeringEnabled" type="bool" value="False" />
+							<attribute id="IsWorldClimbingEnabled" type="bool" value="False" />
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="INVISIBLE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="ff6d7d1f-094f-432e-a117-fdc3a0ab7ac1" />
+								</node>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="0668a5fd-72e0-4f9e-b85e-baae8796c637" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-156.70578 31.529297 57.418594" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
+							<attribute id="Scale" type="float" value="0.01" />
+						</node>
+					</children>
+				</node>
+			<!-- Balthazar -->
+				<node id="GameObjects">
+					<attribute id="AiHint" type="guid" value="45a231e4-e94f-4b0e-a941-2daf1adf44b5" />
+					<attribute id="AnubisConfigName" type="FixedString" value="SHA_Necromancer_Chosen_Act2" />
+					<attribute id="Archetype" type="FixedString" value="act2_SHA_necromancer" />
+					<attribute id="CanFight" type="bool" value="False" />
+					<attribute id="CanJoinCombat" type="bool" value="False" />
+					<attribute id="CombatGroupID" type="FixedString" value="" />
+					<attribute id="DisplayName" type="TranslatedString" handle="he1379cb5g0146g46e1g8e8agdadb2b27f854" version="2" />
+					<attribute id="Equipment" type="FixedString" value="SHA_Necromancer" />
+					<attribute id="Faction" type="guid" value="6a8d2366-831d-48ad-8d58-1f99a5cc7ca1" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GroupID" type="uint32" value="43227" />
+					<attribute id="Icon" type="FixedString" value="5dbde3ef-2023-bbbf-b24a-d23e25575d8b-SHA_Necromancer_(Icon_Necromancer)" />
+					<attribute id="IsBoss" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="5406f805-858d-4399-9a12-8c7ff4124802" />
+					<attribute id="Name" type="LSString" value="S_SHA_Necromancer" />
+					<attribute id="Race" type="guid" value="02e5c59e-80e7-4176-a289-1d08699583f5" />
+					<attribute id="Stats" type="FixedString" value="SHA_Necromancer" />
+					<attribute id="TemplateName" type="FixedString" value="167ee470-5f36-4618-a423-b04f6d8dbbb2" />
+					<attribute id="Title" type="TranslatedString" handle="h094824d1g96cag4657gbe8age05aeebcdaa6" version="1" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540921856" />
+					<children>
+						<node id="ItemList" />
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="5040ca2c-7203-5d44-2557-7673dc502c38" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="eda0926c-134c-5e5b-faad-4b029a4f7fc6" />
+												</node>
+											</children>
+										</node>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="6d1ac1e5-e6ae-f6f1-fb54-4876b4f93350" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="1f072a2e-c678-bb81-7b08-f6dc07d657ed" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SkillList" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MAGE_ARMOR" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="SHA_NECROMANCER_UNDEADWARD" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="53c3304c-032d-4c49-86df-00b3b03a6b13" />
+								</node>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="33c625aa-6982-4c27-904f-e47029a9b140" />
+								</node>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="04a90774-cd81-4173-8918-1c0f7dc8ec2a" />
+								</node>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="e6cd3ba7-7a49-44c5-a10b-8799efe36d8c" />
+								</node>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="542b58f0-42ad-4157-a28e-27434e0e7b18" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="SHA_Necromancer" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-155.74823 31.610352 64.118645" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			<!-- Necrofex -->
+				<node id="GameObjects">
+					<attribute id="Archetype" type="FixedString" value="deathShepherd" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="45154e42-cf21-9053-df13-bd4476ede627" />
+					<attribute id="CanFight" type="bool" value="False" />
+					<attribute id="CombatGroupID" type="FixedString" value="58620e39-22f9-4600-a95e-f13e645d1b1d" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hde08cbf4g371bg4f69gb77bg6694bfdccb75" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Greatsword_Plate" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="45154e42-cf21-9053-df13-bd4476ede627-EQP_Greatsword_Plate_(Icon_Skeleton)" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="45437558-8c7b-45b3-8a4f-4201643ebe9a" />
+					<attribute id="Name" type="LSString" value="MMM_BALTHAZARSKELETON" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_SKELETON_SPELLSWORD" />
+					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARSKELETONBOSS" />
+					<attribute id="TemplateName" type="FixedString" value="f05367f6-78f2-4631-996e-7e21912bbb78" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209009" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="6f38e8a5-25b1-daa6-d744-929a9fd64f7c" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="f611edbe-1bef-910e-f266-1d1f687b8b2f" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_MYRKULBOUND" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_MYRKULVEIL" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="LOW_RISENSKELETON_UNDEAD_PRESENCE" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6d60bed7-10cc-4b52-8fb7-baa75181cd49" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-155.55742 31.749023 70.596" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="1.6" />
+						</node>
+					</children>
+				</node>
+		<!-- 14. Team Trajectile Event #3 -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -4868,6 +4916,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -4995,6 +5044,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -5014,6 +5064,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -5071,6 +5122,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -5090,6 +5142,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT2" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL7_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -5279,6 +5332,64 @@
 						</node>
 					</children>
 				</node>
+			<!-- Molly Molly Molly -->
+				<!-- <node id="GameObjects">
+					<attribute id="CanFight" type="bool" value="False" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hfd7ea831gb3eeg4ddbg8931gab531107facc" version="1" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="IsGlobal" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="SCL_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="57f0740b-352e-464e-ab47-2e112aa5a8a4" />
+					<attribute id="Name" type="LSString" value="MMM_THIEFTRIO2" />
+					<attribute id="Stats" type="FixedString" value="MMM_THIEFPIXIE" />
+					<attribute id="TemplateName" type="FixedString" value="470f9761-d397-402a-968b-e9b6ff02ea3a" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115205255725669" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="SCL_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="91450084-e118-ff17-bf5d-ec7212c70b99" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="20be695a-e1c2-b459-4c27-1c5db7721226" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="8a66941c-149a-fa4c-006c-8af7cf2b16b7" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MMM_THIEFTRIOPIXIEDETECT" />
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SpeakerGroupList" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-256.19083 -30.379883 -875.0302" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="0.1" />
+						</node>
+					</children>
+				</node> -->
 			</children>
 		</node>
 	</region>

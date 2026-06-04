@@ -1,9 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <save>
 	<version major="1" minor="0" revision="0" build="0" lslib_meta="v1,bswap_guids" />
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+<!-- Lower City -->
+	<!-- Team Trajectile - Sewers -->
+		<!-- 1. Team Trajectile Event #5 -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -23,6 +27,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -150,6 +155,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -169,6 +175,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -219,6 +226,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -238,6 +246,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -282,6 +291,9 @@
 						</node>
 					</children>
 				</node>
+	<!-- Team Trajectile - Jail -->
+		<!-- 2. Team Trajectile Event #6 -->
+			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -301,6 +313,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WIGGLES3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_FIGHTER" />
 					<attribute id="TemplateName" type="FixedString" value="b2b58122-e2b2-40ad-86f6-ecd13845603b" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -421,6 +434,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lyin' Liam Layton -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="melee_smart" />
@@ -440,6 +454,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_LAYTON3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_BARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -490,6 +505,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Adam "Buggy" Wright -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DEN_ShadowDruid_003" />
 					<attribute id="Archetype" type="FixedString" value="melee_magic_smart" />
@@ -509,6 +525,7 @@
 					<attribute id="Stats" type="FixedString" value="MMM_WRIGHT3B" />
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_DRUID" />
 					<attribute id="TemplateName" type="FixedString" value="26287685-17a9-443d-ab87-9d00f9fa7b3d" />
+					<!-- Team Trajectile -->
 					<attribute id="Title" type="TranslatedString" handle="hba46ffcag75b4g41d5g9750g6aa59a6201c4" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
