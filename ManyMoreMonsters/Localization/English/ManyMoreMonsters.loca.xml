@@ -215,19 +215,14 @@
 	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="h46580d81gd418g4a86gb260gae11d8393cde" version="1">Consume Life</content>
 	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="hce513b30g93c9g4387gbac6gaff3bd113aaf" version="1">Try to consume what's left of a targets life essence.</content>
 
-	<!-- TODO: -->
-	<!-- "" --> <content contentuid="h94139211gb20cg42e3gbcacgf7b9553c2cee" version="1">Paralyzing Ray</content>
-	<!-- "" --> <content contentuid="h8acf5df5gbeb7g4983g8bceg385bc0dcc717" version="1">Paralyzing Ray D</content>
-	<!-- "" --> <content contentuid="h4de64a46geef4g4eefgb621gaf04b5ee7cd7" version="1">Wounding Ray</content>
-	<!-- "" --> <content contentuid="heb75c8d4g3886g48fdg8310g6aac50e79727" version="1">Wounding Ray D</content>
-	<!-- "" --> <content contentuid="h9f7d2edbgdee1g46c5g8078g1414e5088c78" version="1">Confusion Ray</content>
-	<!-- "" --> <content contentuid="hf9a835ecg29bdg4cffga7b4gd4c6394da84a" version="1">Confusion Ray D</content>
-	<!-- "" --> <content contentuid="hb8257f42gc028g49eagbb32g0d023fc3a8ae" version="1">Slow Ray</content>
-	<!-- "" --> <content contentuid="hdbafe54cg2341g4c1bg9c25gdac18d5631f5" version="1">Slow Ray D</content>
-	<!-- "MMM_Target_PETRIFYRAY" --> <content contentuid="h1ef5f407geb19g4627gb771g5921816dc5d5" version="1">Petrify Ray</content>
-	<!-- "MMM_Target_PETRIFYRAY" --> <content contentuid="h951d8854g1532g4584g8b0ag85c46fae2d5f" version="1">Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrifies&lt;/LSTag&gt; its target.</content>
-	<!-- "" --> <content contentuid="h8c86d426g08d4g41e3gacdagdf2abdc308d4" version="1">Sleep Ray</content>
-	<!-- "" --> <content contentuid="ha909f49eg7066g4896gac14g668491b74477" version="1">Sleep Ray D</content>
+	<!-- "MMM_Target_CONFUSIONRAY" --> 	<content contentuid="h9f7d2edbgdee1g46c5g8078g1414e5088c78" version="1">Confusion Ray</content>
+	<!-- "MMM_Target_CONFUSIONRAY" --> 	<content contentuid="hf9a835ecg29bdg4cffga7b4gd4c6394da84a" version="1">Shoot an eye ray that &lt;LSTag Type="Spell" Tooltip="Target_ConfusionRay_Spectator"&gt;Confuses&lt;/LSTag&gt; its target.</content>
+	<!-- "MMM_Target_SLOWRAY" --> 		<content contentuid="hb8257f42gc028g49eagbb32g0d023fc3a8ae" version="1">Slow Ray</content>
+	<!-- "MMM_Target_SLOWRAY" --> 		<content contentuid="hdbafe54cg2341g4c1bg9c25gdac18d5631f5" version="1">Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="SLOW"&gt;Slows&lt;/LSTag&gt; its target.</content>
+	<!-- "MMM_Target_PETRIFYRAY" --> 	<content contentuid="h1ef5f407geb19g4627gb771g5921816dc5d5" version="1">Petrify Ray</content>
+	<!-- "MMM_Target_PETRIFYRAY" --> 	<content contentuid="h951d8854g1532g4584g8b0ag85c46fae2d5f" version="1">Shoot an eye ray that &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrifies&lt;/LSTag&gt; its target.</content>
+	<!-- "MMM_Target_SLEEPRAY" --> 		<content contentuid="h8c86d426g08d4g41e3gacdagdf2abdc308d4" version="1">Sleep Ray</content>
+	<!-- "MMM_Target_SLEEPRAY" -->	 	<content contentuid="ha909f49eg7066g4896gac14g668491b74477" version="1">Shoot an eye ray that inflicts &lt;LSTag Type="Status" Tooltip="SLEEP"&gt;Sleep&lt;/LSTag&gt; upon its target.</content>
 
 	<!-- "MMM_Projectile_GRYMROCKETPUNCH" -->		  <content contentuid="hb2c010feg1b1eg419fg9d2bgf2ed3d5be7d1" version="1">Rocket Punch</content>
 	<!-- "MMM_Projectile_GRYMROCKETPUNCH" --> 		  <content contentuid="he0956d1agc340g4a81g923cgd61262d9119a" version="1">Grym fires his fist to hit enemies at range.</content>
