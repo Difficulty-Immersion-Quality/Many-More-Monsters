@@ -678,6 +678,7 @@ data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 
 // ==================================== Risen Road
 // 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
+// TODO: "CombatStartAttack"?
 
 // Juvenile Red Dragon
 new entry "MMM_JUVENILERED"
@@ -698,7 +699,9 @@ data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Dexterity);ProficiencyBonus(
 // data "ActionResources" "ActionPoint:1;BonusActionPoint:1;ReactionActionPoint:1"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;ReactionActionPoint:1;Movement:14"
 // data "Passives" "MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules;CombatStartAttack;MMM_JUVENILERED_RETALIATEPASSIVE"
+data "Passives" "MagicResistance;AttackOfOpportunity;Darkvision;DarknessRules;CombatStartAttack"
+// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_MEDIUM: REDDRAGON_NORMAL; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: DRAGON_RED_RETALIATE_TECHNICAL; STATUS_HARD: REDDRAGON_HARDCORE"
+data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_MEDIUM: REDDRAGON_NORMAL; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: MMM_JUVENILERED_RETALIATE_TECHNICAL; STATUS_HARD: REDDRAGON_HARDCORE"
 
 // ==================================== Underdark ====================================
 // 34. Alpha Minotaur patrolling with the other minotaurs.

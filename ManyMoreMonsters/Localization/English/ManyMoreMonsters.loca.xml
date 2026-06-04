@@ -139,9 +139,6 @@
 	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regeneration</content>
 	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.</content>
 
-	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEBASE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 	<content contentuid="hfc16a780g3998g47e7g9bb5g842118b9e586" version="1">Fireball Retaliation</content>
-	<!-- "MMM_JUVENILERED_RETALIATE", "MMM_JUVENILERED_RETALIATEPASSIVE" --> 									<content contentuid="hd8c12fd6gaaf0g4e26ga6f4g513c0e821775" version="1">Retaliates with a fireball.</content>
-
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.&lt;br&gt;&lt;br&gt;Each time you cast a spell of Level 1 or higher, your magic surges triggering a random magical effect.</content>
 
@@ -206,11 +203,9 @@
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h5cf1cc21g530cg4683ga782g7cf06e38fdfb" version="1">Weakened Tentacle Whip</content>
 	<!-- "MMM_Target_Tentacles_MindFlayer_Weakened" --> <content contentuid="h7fcc7083g6eafg483cg8853gd0278ade0d1d" version="1">Lash out with your tentacles.</content>
 
-	<!-- "MMM_Target_JUVENILERED_SLAM" --> 						 <content contentuid="hb143b034g604fg4be5g847eg4299dd230646" version="1">Juvenile Slam</content>
-	<!-- "MMM_Zone_BreathWeapon_Fire_Cone_JuvenileRedDragon" --> <content contentuid="h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5" version="1">Juvenile Fire Breath</content>
-	<!-- "MMM_Projectile_JUVENILERED_RETALIATEFIREBALL" --> 	 <content contentuid="he04c9a4fg2f0cg4095g852bg9e88b8274d6e" version="1">Juvenile Fireball</content>
-	<!-- "MMM_Shout_JUVENILERED_FEAR" --> 						 <content contentuid="hac02aa59gcf74g43adg922cg0e7341d1e693" version="1">Juvenile Fear</content>
-
+	<!-- "MMM_Target_JUVENILERED_SLAM" --> <content contentuid="hb143b034g604fg4be5g847eg4299dd230646" version="1">Juvenile Slam</content>
+	<!-- "MMM_Projectile_JUVENILERED_FIREBALL", "MMM_Projectile_JUVENILERED_RETALIATEFIREBALL", "MMM_Zone_BreathWeapon_Fire_Cone_JuvenileRedDragon" --> <content contentuid="h9e7f1a85g4f14g4093g9ff9g1a4fed4e8ba5" version="1">Juvenile Fire Breath</content>
+	<!-- "MMM_Projectile_JUVENILERED_FIREBALL" --> <content contentuid="ha2415101g373eg4be2g8df7g0c9d73cfec3b" version="1">Shoot a bright flame from your maw that explodes upon contact, torching everything in the vicinity.</content>
 
 	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="h46580d81gd418g4a86gb260gae11d8393cde" version="1">Consume Life</content>
 	<!-- "MMM_Target_WISPCONSUMELIFE" --> <content contentuid="hce513b30g93c9g4387gbac6gaff3bd113aaf" version="1">Try to consume what's left of a targets life essence.</content>
