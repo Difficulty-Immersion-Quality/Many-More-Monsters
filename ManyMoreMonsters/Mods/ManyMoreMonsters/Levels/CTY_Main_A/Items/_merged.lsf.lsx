@@ -4,7 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-			<!-- Act 3a Mimic Chests -->
+		<!-- Act 3b Mimic Chests -->
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -51,6 +52,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -97,6 +99,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -143,6 +146,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -189,6 +193,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -235,6 +240,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -281,6 +287,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -327,6 +334,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -373,6 +381,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -419,6 +428,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -465,6 +475,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -511,6 +522,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -557,6 +569,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -603,6 +616,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -649,6 +663,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -695,6 +710,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -741,6 +757,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -787,6 +804,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -833,6 +851,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -879,6 +898,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -925,6 +945,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -971,6 +992,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -1017,6 +1039,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -1063,6 +1086,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -1109,6 +1133,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />
@@ -1155,6 +1180,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Mimic -->
 				<node id="GameObjects">
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="LevelName" type="FixedString" value="CTY_Main_A" />

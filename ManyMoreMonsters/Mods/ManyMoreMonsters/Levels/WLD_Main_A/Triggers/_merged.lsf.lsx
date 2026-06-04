@@ -4,6 +4,7 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+			<!-- Trigger -->
 				<node id="GameObjects">
 					<attribute id="Extents" type="fvec3" value="0.5 0.5 0.5" />
 					<attribute id="Flag" type="int32" value="0" />
