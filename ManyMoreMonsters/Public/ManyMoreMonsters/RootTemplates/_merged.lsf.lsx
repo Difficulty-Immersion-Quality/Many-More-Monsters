@@ -4,6 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+	<!-- Templates -->
+		<!-- Objects -->
 			<!-- Bulette Egg -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
@@ -369,6 +371,7 @@
 						</node>
 					</children>
 				</node>
+		<!-- Characters -->
 			<!-- Tiny Spider -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
