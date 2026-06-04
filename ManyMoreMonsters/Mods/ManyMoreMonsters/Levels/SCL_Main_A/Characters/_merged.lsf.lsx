@@ -370,7 +370,7 @@
 		<!-- 3. Shadowcursed family. -->
 			<!-- Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss. -->
 			<!-- Shadow-Cursed Family - 1 -->
-				<node id="GameObjects">
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="ad4adb39-7617-2f30-b5d7-082bcde1626a" />
@@ -442,9 +442,9 @@
 							</children>
 						</node>
 					</children>
-				</node>
+				</node> -->
 			<!-- Shadow-Cursed Family - 2 -->
-				<node id="GameObjects">
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="e2479dec-3cf4-f9c5-0310-72126ad89633" />
@@ -516,9 +516,9 @@
 							</children>
 						</node>
 					</children>
-				</node>
+				</node> -->
 			<!-- Shadow-Cursed Family - 3 -->
-				<node id="GameObjects">
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultMonster" />
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="f128d0b6-512b-e721-5d58-67de4d9e6d82" />
@@ -578,9 +578,9 @@
 							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
-				</node>
+				</node> -->
 			<!-- Shadow-Cursed Family - 4 -->
-				<node id="GameObjects">
+				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
 					<attribute id="Archetype" type="FixedString" value="caster" />
 					<attribute id="CanFight" type="bool" value="True" />
@@ -646,7 +646,7 @@
 							<attribute id="Scale" type="float" value="1" />
 						</node>
 					</children>
-				</node>
+				</node> -->
 		<!-- 4. Restless Druids and Harpers. -->
 			<!-- Trigger Point -->
 				<node id="GameObjects">
