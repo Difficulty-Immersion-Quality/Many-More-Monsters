@@ -38,7 +38,7 @@
 	<!-- "MMM_DROWASSASSIN" --> 					<content contentuid="h28956d7bga473g435aga3f9gbb4807ee0e4b" version="1">Drow Assassin</content>
 	<!-- "1d905255-1735-4afe-988d-5cfee3f85643" --> <content contentuid="h7d565c4fgce73g4b85g8631g78e8134107bc" version="1">Murderous Bugbear</content>
 	<!-- "1d905255-1735-4afe-988d-5cfee3f85643" --> <content contentuid="h7e7466abg8c9cg4461ga72bg05bc64938cdb" version="1">Killer of Tieflings</content>
-	<!-- "MMM_GOBBATHING" --> 						<content contentuid="hbcbe0625g4194g4504gb8d4gdf0bb14e6049" version="1">Stanky Goblin</content>
+	<!-- "MMM_GOBBATHING" --> 						<content contentuid="hbcbe0625g4194g4504gb8d4gdf0bb14e6049" version="1">Feral Stanky Goblin</content>
 	<!-- "e3be0621-86c4-4da5-882d-288098db0274" --> <content contentuid="h7dba8f3egdacdg436dg9b23g50e9d909b227" version="1">Chicken Wrangler</content>
 	<!-- "5915b958-417f-459f-8b33-157b1b8d7c3a" --> <content contentuid="hcbb82effgb4d7g4516g8b2bga4583e1edc37" version="1">Ziznut</content>
 	<!-- "500e8dac-7089-4e30-8e01-e41b5d43405e" --> <content contentuid="ha7db982ag5c27g4f0fgae72gbc1c0abadab9" version="1">Fishing Bear</content>
@@ -129,7 +129,12 @@
 	<!-- "77bde205-4dcf-4978-a452-cb686bc1db1c" --> <content contentuid="hed7e8dd5gd5aag472egbc29g7126392ccbb7" version="1">Spirit of Ellie May</content>
 
 	<!-- "5bcd9958-dbe6-402a-9f7b-4bcf09a16974" --> <content contentuid="hfccde3b3g7b1ag4386g98b9g76b9750aca6e" version="1">Hill Giant</content>
-	<!-- "MMM_RIVINGTONPATROL" --> 					<content contentuid="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1">Githyanki Patrol</content>
+
+	<!-- "6e8518a8-c7c3-4e78-9515-43e620d82472" --> <content contentuid="hca136228g44adg4577g84e3gb7872b3abd49" version="1">Veteran Warrior Ka'zith</content>
+	<!-- "0944a300-cdd8-4d9d-9ac3-cf8e90b9b23e" --> <content contentuid="he5e480ccg263cg449bg96c4gf55a471b2df5" version="1">Veteran Warrior Velra</content>
+	<!-- "3f954530-e65e-4739-9d21-97557f729981" --> <content contentuid="hb993483cg87bag4a05g989fg5062ac53b68e" version="1">Veteran Raider Zerith</content>
+	<!-- "d8a8f915-d71f-4207-8a89-8161ef87ebf8" --> <content contentuid="h7ade3a1ag5e04g4c96g94d5gbe712747d54e" version="1">Veteran Raider Tza'veth</content>
+	<!-- "e8073df8-3ca3-4e5f-bab7-32d5ea09d2c0" --> <content contentuid="hb1a60dcegff54g495ega49bg3cd026fe3935" version="1">Veteran Ardent Vey'quor</content>
 
 	<!-- ==================================== Passives ==================================== -->
 
@@ -137,7 +142,7 @@
 	<!-- "MMM_OofClumsy" --> <content contentuid="hb1b0340age5c3g4696ga0d7gdbe438a33fe8" version="1">This ogre was born with two left everything, how is someone this clumsy?</content>
 
 	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be" version="1">Troll Regeneration</content>
-	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.</content>
+	<!-- "MMM_TrollRegen_Passive", "MMM_TROLLREGEN" --> <content contentuid="h6de58c84g59bdg4c44ga201gd83b446b728d" version="1">The troll regains [1] at the start of its turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.</content>
 
 	<!-- "MMM_ChaosMagic" --> <content contentuid="h4627f142g2a2cg48e0g9266g2f8917c2b32a" version="1">Chaos Magic</content>
 	<!-- "MMM_ChaosMagic" --> <content contentuid="hc941079fgec2fg4851g807dg02056a8f725e" version="1">You don't know what to expect from this twisted magic.&lt;br&gt;&lt;br&gt;Each time you cast a spell of Level 1 or higher, your magic surges triggering a random magical effect.</content>
@@ -168,6 +173,9 @@
 	<!-- "MMM_OOFHAMSTRING" --> <content contentuid="hee83e74bg218cg40begb421g71fe847c17cf" version="1">Oof must have skipped leg day. &lt;LSTag Tooltip="MovementSpeed"&gt;Movement speed&lt;/LSTag&gt; reduced by [1].&lt;br&gt;&lt;br&gt;Removed by healing.</content>
 
 	<!-- "MMM_JEALOUSEX" --> 		<content contentuid="hb7d4ce2eg02ecg4c15g91d9g337811359364" version="1">Raging Ex-Boyfriend</content>
+	<!-- "MMM_BEAR_ENRAGE" --><content contentuid="h7750c66fgc731g400fga1f5gde65c7e92882" version="1">Bear's Rage</content>
+	<!-- "MMM_BEAR_ENRAGE" --><content contentuid="h7558c923g1e89g4341gb6bbgf1bd9ef7f313" version="1">The mama bear is enraged! &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; increased by 2 and has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt;to all physical damage.</content>
+
 	<!-- "MMM_WILL_O_WISP_GLOW" --> <content contentuid="h201a2f4fg2a6bg4ab2g83a2gfee03a8943dd" version="1">Wisp Effect</content>
 	<!-- "MMM_MATRIPHAGY" --> 		<content contentuid="h8e3dbb89gff86g4e25gbab2gb3c07ea8fcd7" version="1">Matriphagy</content>
 	<!-- "MMM_MATRIPHAGY" --> 		<content contentuid="h897abff9g3dfag4b99gb37fg84d3b6a5306b" version="1">Baby bulette's kill their mother and eat her after birth.</content>
@@ -242,6 +250,9 @@
 
 	<!-- ==================================== Objects ==================================== -->
 
+	<!-- "MMM_WPN_Dagger_PooScraper" --> <content contentuid="h6b265d69ga7eag4d0ag823dg631cf29a153f" version="1">Poo-Scraper</content>
+	<!-- "MMM_WPN_Dagger_PooScraper" --> <content contentuid="h92f2c87cg1604g40b7g9168g5f26a0aca52c" version="1">Fecund and revolting, the Abyss is not the worst place this has been.</content>
+
 	<!-- "c9e44fb1-98b5-4677-930f-dceee8a52200" --> <content contentuid="h7bc05c52g29beg440cgb76bgaa81cbdf69a0" version="1">Boulder Blocking Mineshaft</content>
 	<!-- "2dff1009-962a-4f24-a94d-76253102237a" --> <content contentuid="hbe6873c0g2a4bg4294gb49bg774eafa30f89" version="1">Suspicious Barrel</content>
 	<!-- "ef81ed44-57a8-4b5b-a9c3-c93be743c0ad" --> <content contentuid="hebaab843gf038g414ag966fg3e492b60d084" version="1">Questionably Soggy Towel</content>
@@ -306,7 +317,7 @@
 	<!-- "MMM_BALTHAZARSPEAK2" --> <content contentuid="hc04e81ecg40e1g4920g8b1eg990b0c408411" version="1">"Excellent, some witless grave robbers to play with my new pet."</content>
 
 	<!-- "MMM_HILLGIANTSPEAK" --> 		<content contentuid="h3e111ef0ga66dg4e35g8456g31749b1dc3f8" version="1">"ME WANT MORE CHICKEN!"</content>
-	<!-- "MMM_RIVINGTONPATROLSPEAK" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name; get them!"</content>
+	<!-- "MMM_RIVINGTONPATROLSPEAK" --> <content contentuid="h29e1eb18gd678g4314gb57dg99d4a159cd85" version="1">"There they are! In Vlaakith's name, get them!"</content>
 
 	<!-- "MMM_THIEFPIXIESPEAK" --> 		<content contentuid="hd60d014eg3cf4g4c79g93c6g0932f99fb837" version="1">"Just grab the treasure, idiots!"</content>
 	<!-- "MMM_THIEFPIXIESPEAK2" --> 	<content contentuid="h09738964g7614g4ab2ga782g4986f2888937" version="1">"Alright I'm out you dummies!"</content>
