@@ -28,6 +28,8 @@ local Chicken3 = "MMM_CHICKENRUN_fbd9eefa-0fe2-4f9c-833e-0ed18f717c04"
 local Chicken4 = "MMM_CHICKENRUN_399df9f7-510d-451e-a95d-39c94e01067a"
 local Chicken5 = "MMM_CHICKENRUN_b62f031c-0fe7-4e12-9b0e-71867f2ce2c3"
 local GoblinPee = "8ab4d871-bc1c-4045-93d2-91234ff163d8"
+local MamaBear = "MMM_LOGBEAR_5daaafd1-d23c-41bf-b915-ae129e6c4cf9"
+local BabyBear = "MMM_LOGBEAR_48277221-bd08-42f4-a3af-09415731ee58"
 local BackdoorGnoll1 = "d743f4f3-2dae-47cb-bfb2-ec4332881937"
 local BackdoorGnoll2 = "bd069598-65c0-47ab-819c-8a8bbef5fc27"
 local BackdoorGnoll3 = "31da9358-a6a4-4a98-a199-85e09dea5b0e"
@@ -220,11 +222,17 @@ local function ModifyMonsters()
     Osi.PROC_SelfHealing_Disable(BackdoorGnoll2)
     Osi.PROC_SelfHealing_Disable(BackdoorGnoll3)
     Ext.Timer.WaitFor(100, function()
-        Osi.SetHitpointsPercentage(LostID, 60.0)
-        Osi.SetHitpointsPercentage(AmbushMF, 50.0)
-        Osi.SetHitpointsPercentage(AmbushID1, 60.0)
-        Osi.SetHitpointsPercentage(AmbushID2, 60.0)
+        -- Osi.SetHitpointsPercentage(LostID, 60.0)
+        Osi.SetHitpointsPercentage(LostID, 45.0)
+        -- Osi.SetHitpointsPercentage(AmbushMF, 50.0)
+        Osi.SetHitpointsPercentage(AmbushMF, 35.0)
+        -- Osi.SetHitpointsPercentage(AmbushID1, 60.0)
+        Osi.SetHitpointsPercentage(AmbushID1, 45.0)
+        -- Osi.SetHitpointsPercentage(AmbushID2, 60.0)
+        Osi.SetHitpointsPercentage(AmbushID2, 45.0)
     end)
+    Osi.AddBoosts(AmbushID1, "StatusImmunity(BURNING)", "", AmbushID1) -- prevent Intellect Devourers from being damaged in case they walk through fire surface
+    Osi.AddBoosts(AmbushID2, "StatusImmunity(BURNING)", "", AmbushID2) -- prevent Intellect Devourers from being damaged in case they walk through fire surface
 end
 
 --if anything needs to be removed
@@ -369,6 +377,51 @@ local function ID2WalkAround()
                 ID2WalkAround()
             end)
         end
+    end
+end
+
+-- Log bear patrol
+local bearPatrolTolerance = 2
+
+local function BearPatrolAtB()
+    return
+        Osi.GetDistanceToPosition(MamaBear, -37.9689, 12.90234, 310.9056) < bearPatrolTolerance
+end
+
+function BearPatrolRouteA()
+    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0) then
+        Osi.CharacterMoveToPosition(MamaBear, -37.9689, 12.90234, 310.9056, "Walk", "", 0)
+        local function WaitForB()
+            if BearPatrolAtB() then
+                Ext.Timer.WaitFor(4000, function()
+                    BearPatrolRouteB()
+                end)
+            else
+                Ext.Timer.WaitFor(1000, WaitForB)
+            end
+        end
+        Ext.Timer.WaitFor(1000, WaitForB)
+    end
+end
+
+local function BearPatrolAtA()
+    return
+        Osi.GetDistanceToPosition(MamaBear, -45.38582, 16.61328, 321.6407) < bearPatrolTolerance
+end
+
+function BearPatrolRouteB()
+    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0) then
+        Osi.CharacterMoveToPosition(MamaBear, -45.38582, 16.61328, 321.6407, "Walk", "", 0)
+        local function WaitForA()
+            if BearPatrolAtA() then
+                Ext.Timer.WaitFor(4000, function()
+                    BearPatrolRouteA()
+                end)
+            else
+                Ext.Timer.WaitFor(1000, WaitForA)
+            end
+        end
+        Ext.Timer.WaitFor(1000, WaitForA)
     end
 end
 
@@ -1054,6 +1107,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_n
     ID2WalkAround()
     SpiderWalkAround()
     UrinatingGoblin()
+    BearPatrolRouteA()
     PatrollingMinotaur()
     PatrollingZhentDog()
     PatrollingDuergar()
@@ -1142,6 +1196,13 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
                 ItsComplicated()
             end
         end)
+    end
+    --Remove BURNING immunity from patrolling Intellect Devourers
+    if object == "MMM_FLAYERAMBUSH_998da1c1-b588-4d92-b673-7bad5c71095e" then
+        Osi.RemoveBoosts(AmbushID1, "StatusImmunity(BURNING)", 0, "", AmbushID1)
+    end
+    if object == "MMM_FLAYERAMBUSH_75db3611-eca6-41b6-ac65-23a0efe7129c" then
+        Osi.RemoveBoosts(AmbushID2, "StatusImmunity(BURNING)", 0, "", AmbushID2)
     end
 end)
 
