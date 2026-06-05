@@ -6,6 +6,20 @@
 			<children>
 	<!-- Templates -->
 		<!-- Objects -->
+			<!-- Poo-Scraper -->
+				<node id="GameObjects">
+					<!-- Fecund and revolting, the Abyss is not the worst place this has been. -->
+					<attribute id="Description" type="TranslatedString" handle="h92f2c87cg1604g40b7g9168g5f26a0aca52c" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6b265d69ga7eag4d0ag823dg631cf29a153f" version="1" />
+					<attribute id="Icon" type="FixedString" value="Item_WPN_HUM_Dagger_A_0_Rusty_A" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="MapKey" type="FixedString" value="d30d2d2c-03f0-4354-9273-0df186e31149" />
+					<attribute id="Name" type="LSString" value="WPN_Dagger_PooScraper_MMM" />
+					<attribute id="ParentTemplateId" type="FixedString" value="6a321455-d00f-4164-ab12-3601fef2ae6e" />
+					<attribute id="Stats" type="FixedString" value="WPN_Dagger_PooScraper_MMM" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115205255725059" />
+				</node>
 			<!-- Bulette Egg -->
 				<node id="GameObjects">
 					<attribute id="DisplayName" type="TranslatedString" handle="h20841457g8aaeg4f3ega84ag2416da7dfefc" version="1" />
