@@ -63,7 +63,8 @@ using "Kuotoa"
 data "Vitality" "13"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Kuo-toa Priest
 new entry "MMM_KUOTOADOCKCLERIC"
@@ -79,8 +80,9 @@ data "Vitality" "10"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Wisdom"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450" // MMM_NPC_Cleric
+data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
 
 // ==================================== Ravaged Beach
 // 3. Team Trajectile Event #1
@@ -106,8 +108,9 @@ data "Vitality" "19"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Lyin' Liam Layton
 new entry "MMM_LAYTON"
@@ -124,8 +127,9 @@ data "Vitality" "19"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
-// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // Adam "Buggy" Wright
 new entry "MMM_WRIGHT"
@@ -137,8 +141,9 @@ data "Vitality" "16"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
 data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
-// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
+// data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2" // MMM_NPC_Druid
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
 
 // ==================================== Ravaged Beach
 // 4. Wolves eating dead mindflayer.  Body has decent starting potions/alchemy ingredients.
@@ -176,7 +181,8 @@ data "Charisma" "6"
 data "Vitality" "14"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // ==================================== Ravaged Beach
 // 5. Mindflayer ambush - Mindflayer using other mindflayer as bait to ambush player, attacks are about 1/3rd of a standard mindflayer.
@@ -215,11 +221,11 @@ using "Kobold_Melee"
 data "Vitality" "9"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Emerald Grove ====================================
 // 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy.
-// TODO: He shouldn't throw Javelins, and "Shout_GOB_Ogre_Enrage" Polma's Wrath needs replacing.
 
 // Oof
 new entry "MMM_OGREREINFORCEMENT"
@@ -229,7 +235,8 @@ using "Ogre"
 data "Vitality" "44"
 // data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
 data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Emerald Grove - Secluded Cove
 // 10. Thieves hiding treasure.
@@ -243,8 +250,9 @@ using "Dragonborn_Barbarian"
 data "Vitality" "24"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // Grove Bandit
 new entry "MMM_GROVEBANDIT2"
@@ -263,8 +271,9 @@ data "Wisdom" "9"
 data "Vitality" "18"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // ==================================== Emerald Grove - Secluded Cove
 // 11. Kuotoa on beach after harpies.
@@ -324,7 +333,8 @@ using "Hobgoblin"
 data "Vitality" "37"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // Note: Inherits fighter stats but is a ranger
 // Goblin Tracker
@@ -333,10 +343,12 @@ type "Character"
 using "Goblin_Melee"
 // data "Vitality" "9"
 // data "Vitality" "11"
-data "Vitality" "21"
+// data "Vitality" "21"
+data "Vitality" "11"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // ==================================== Forest
 // 15. Goblins taking over the harper lookout, the archers may climb up the ladder and aggro the group above if you aren't careful.
@@ -350,7 +362,8 @@ using "Goblin_Melee"
 data "Vitality" "9"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Goblin Tracker
 new entry "MMM_GOBLINRANGERHARPER"
@@ -371,7 +384,8 @@ data "Charisma" "6"
 data "Vitality" "7"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // ==================================== Forest
 // 16. Commander of harper lookout group.
@@ -384,10 +398,11 @@ using "Hobgoblin"
 data "Strength" "17"
 // data "Vitality" "11"
 // data "Vitality" "62"
-data "Vitality" "38"
+data "Vitality" "32"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Forest
 // 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
@@ -422,7 +437,8 @@ data "SpellCastingAbility" "Constitution"
 data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MMM_TrollRegen_Passive"
 // data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
 data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: OGRE_HARDCORE"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Forest
 // 18. Bugbear champion, if Aradin left the grove his group will be locked in combat with him.
@@ -455,7 +471,8 @@ data "Charisma" "9"
 data "Vitality" "42"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Forest
 // 19. Ancient Owlbear miniboss, not hostile unless you kill the other owlbears.
@@ -500,7 +517,8 @@ using "Ogre"
 data "Vitality" "78"
 // data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // Slegbezzle - Professional Goblin Voyeur
 new entry "MMM_GOBLINVOYEUR"
@@ -519,7 +537,8 @@ data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 // // data "Vitality" "59"
 // // data "Vitality" "124"
 // data "Vitality" "80"
-// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// // data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // Grukkoh
 // new entry "FOR_BugBearMate"
@@ -528,7 +547,8 @@ data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
 // // data "Vitality" "27"
 // // data "Vitality" "84"
 // data "Vitality" "39"
-// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// // data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Blighted Village
 // 22. Bugbear standing over Arka's corpse if you let her murder the goblin.
@@ -545,8 +565,9 @@ data "Strength" "17"
 data "Vitality" "50"
 // data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// // data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Blighted Village
 // 24. Mama bear and baby bear crossing log, breadcrumb for people who didn't realize there's a passage there.
@@ -691,7 +712,8 @@ type "Character"
 using "Gnoll"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Gnoll Hunter
 new entry "MMM_BACKDOORGNOLLRANGER"
@@ -699,7 +721,8 @@ type "Character"
 using "Gnoll_Hunter"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Gnoll
 new entry "MMM_BACKDOORGNOLLBARB"
@@ -710,7 +733,8 @@ using "Gnoll_Fang"
 data "Vitality" "27"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Risen Road ====================================
 // 32. Three drow assassins hiding because drow don't give up that easily, each has its own perception check to see it before it attacks you.
@@ -735,7 +759,8 @@ data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;Fe
 data "PsychicResistance" "Resistant"
 // data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;LightArmor"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // ==================================== Risen Road
 // 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
@@ -783,7 +808,8 @@ data "Constitution" "17"
 data "Vitality" "96"
 // data "XPReward" "4ee02692-eb98-43a6-803f-2da645364568"
 data "XPReward" "1022e3b8-99b3-46d4-b344-12a5dee1aa70"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Underdark
 // 35. Zhentarim in the storage area, same faction as the Zhentarim in the hideout.
@@ -796,8 +822,9 @@ using "Human_Ranger"
 data "Vitality" "28"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Freyja
 new entry "MMM_ZHENTSTORAGEDOG"
@@ -834,8 +861,9 @@ using "UND_LoneDuergar"
 data "Vitality" "45"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
 // Irkse, Eislie, Sie
 new entry "MMM_DUERGARARMYCLERIC"
@@ -845,8 +873,9 @@ using "UND_Duergar_Cleric"
 data "Vitality" "28"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
-data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
+// data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450" // MMM_NPC_Cleric
+data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
 
 // Slevnir
 new entry "MMM_DUERGARARMYRANGER"
@@ -856,8 +885,9 @@ using "UND_Duergar_Ranger"
 data "Vitality" "30"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Ismi, Imeh
 new entry "MMM_DUERGARARMYFIGHTER"
@@ -867,8 +897,9 @@ using "UND_KC_DuergarSergeant"
 data "Vitality" "36"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Underdark
 // 39. Bulette Nest.  Fun fact, baby bulette's kill and eat their mother.
@@ -984,7 +1015,8 @@ data "Vitality" "155"
 data "Weight" "500"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
-data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a;0e6da493-5a37-423b-8c28-629462b22faa"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Underdark ====================================
 // Boss #2: Light the candle in the shrine in the corner of the bibberbang field.
@@ -998,8 +1030,10 @@ using "MMM_DROWASSASSIN"
 data "Vitality" "66"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
-// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// // data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Servant of Lolth
 new entry "MMM_DROWLOLTHCLERIC"
@@ -1017,8 +1051,9 @@ data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 // data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision;Muscular_Athletics;ExtraAttack"
 data "PsychicResistance" "Resistant"
-// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
-data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450"
+// data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
+// data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450" // MMM_NPC_Cleric
+data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
 
 // Servant of Lolth
 new entry "MMM_DRIDERLOLTH"
@@ -1044,7 +1079,8 @@ data "Passives" "Multiattack_Drider;ImprovedCritical;SpiderWalk;SunlightSensitiv
 data "PsychicResistance" "Resistant"
 // data "Proficiency Group" "MartialWeapons;SimpleWeapons"
 data "Proficiency Group" "MartialWeapons;SimpleWeapons;LightArmor"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Mountain Pass ====================================
 // 1. Goblins found their way up to the mountains.
@@ -1069,7 +1105,8 @@ using "Goblin_Melee"
 data "Vitality" "37"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
-data "Progressions"  "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Mountain Pass - Gith
 // 2. This is now a battlefield, get ready for a three way fight.
@@ -1084,8 +1121,11 @@ using "CRE_Githyanki_Captain"
 data "Vitality" "60"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
+data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger;CX_Fighter_EldritchKnight_Boost;LAB_Progression_Fighter_EldritchKnight_Prep"
 // data "Progressions" ""
-data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Unused
 new entry "MMM_MOUNTAINGITH_WARLOCK"
@@ -1094,10 +1134,11 @@ using "TWN_Githyanki_Warlock"
 // data "Vitality" "127"
 // data "Vitality" "48"
 data "Vitality" "39"
-// data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a"
-data "Progressions" "a3826c71-afba-4337-a2ad-1fc631fb2b4b"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
+// data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a" // NPC_Warlock
+// data "Progressions" "a3826c71-afba-4337-a2ad-1fc631fb2b4b" // MMM_NPC_Warlock
+data "Progressions" "51274504-865d-46d1-a3b6-c72e9384904a" // NPC_Warlock
 
 // Unused
 new entry "MMM_MOUNTAINGITH_ROGUE"
@@ -1108,8 +1149,9 @@ using "PLA_Githyanki_Rogue"
 data "Vitality" "43"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // Zio
 new entry "MMM_MOUNTAINGITH_RANGER"
@@ -1120,8 +1162,9 @@ using "PLA_Githyanki_Ranger"
 data "Vitality" "45"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Unused
 new entry "MMM_MOUNTAINGITH_CASTER"
@@ -1132,8 +1175,9 @@ using "PLA_Githyanki_Caster"
 data "Vitality" "38"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
 // Githyanki Warrior, Githyanki Trainee, and Kara'i
 new entry "MMM_MOUNTAINGITH_WARRIOR"
@@ -1144,8 +1188,9 @@ using "Githyanki_Warrior"
 data "Vitality" "45"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Githyanki Raider and Ci'e'sm
 new entry "MMM_MOUNTAINGITH_RAIDER"
@@ -1156,8 +1201,9 @@ using "Githyanki_Raider"
 data "Vitality" "42"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Githyanki Gish and Iek'd
 new entry "MMM_MOUNTAINGITH_GISH"
@@ -1168,8 +1214,9 @@ using "Githyanki_Gish"
 data "Vitality" "40"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73" // MMM_NPC_Sorcerer
+data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" // NPC_Sorcerer
 
 // Ember Gish'ra Hel'dom
 new entry "MMM_GITHRA_CASTER"
@@ -1180,8 +1227,8 @@ using "Githyanki_Gishra_Caster"
 data "Vitality" "46"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107"
-data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107" // NPC_Monk
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd" // MMM_NPC_Monk
 
 // High Gish'ra F'a'de
 new entry "MMM_GITHRA_MELEE"
@@ -1192,8 +1239,8 @@ using "Githyanki_Gishra_Melee"
 data "Vitality" "56"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107"
-data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+// data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107" // NPC_Monk
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd" // MMM_NPC_Monk
 
 // ==================================== Mountain Pass - Absolute Troops
 // 2. This is now a battlefield, get ready for a three way fight.
@@ -1208,10 +1255,11 @@ using "Human_Caster"
 data "Vitality" "35"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
-// Absolute Chaos Mage and Yani
+// Absolute Chaos Mage and Yani (Wizard --> swapped to Sorcerer)
 new entry "MMM_CHAOSMAGE_M"
 type "Character"
 using "Elf_Caster"
@@ -1228,8 +1276,9 @@ data "SpellCastingAbility" "Charisma"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;MMM_ChaosMagic"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73" // MMM_NPC_Sorcerer
+data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" // NPC_Sorcerer
 
 // Zealot of the Absolute and Prisoner - 2
 new entry "MMM_ABZEALOT_M"
@@ -1240,8 +1289,9 @@ using "MOO_ZealotOfTheAbsolute_Human"
 data "Vitality" "47"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733"
-data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
+// data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733" // NPC_Paladin
+// data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e" // MMM_NPC_Paladin
+data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733" // NPC_Paladin
 
 // ==================================== Mountain Pass
 // 3. The darkness encroaches.
@@ -1383,7 +1433,7 @@ data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:12"
 // ==================================== Mountain Pass - Mad Hand Sorcerer
 // 11. Let's just say this fight is... hands on.
 
-// Vinly Desh
+// Vinly Desh (Wizard --> swapped to Sorcerer)
 new entry "MMM_MINDTORTURED"
 type "Character"
 using "MOO_MindTorturer"
@@ -1394,8 +1444,9 @@ data "Vitality" "68"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;Gnome_Cunning;Gnome_Speed;RepellingBlast;DreadfulWord"
 data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;MMM_ChaosMagic"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "5dae89dd-d465-4514-aff2-c72d7e6c6b73" // MMM_NPC_Sorcerer
+data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" // NPC_Sorcerer
 
 new entry "MMM_TORTUREDCLAW"
 type "Character"
@@ -1426,7 +1477,8 @@ data "Charisma" "18"
 data "Vitality" "300"
 data "Armor" "18"
 data "SpellCastingAbility" "Charisma"
-data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e"
+// data "Progressions" "b2dc3219-5fbd-46dd-b8a5-404098a16b4e" // MMM_NPC_Paladin
+data "Progressions" "8726b2c4-edc0-4905-b82f-60a4baba0733" // NPC_Paladin
 data "XPReward" "5d26ba3d-6f84-465e-870a-d8cbb577c818"
 data "Proficiency Group" "LightArmor;MediumArmor;HeavyArmor;MartialWeapons;SimpleWeapons"
 
@@ -1450,8 +1502,9 @@ data "Vitality" "75"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SuperiorityDie:5"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Shadow Cursed Lands - Lastlight Side ====================================
 // 1. Shadowcursed Githyanki.
@@ -1465,8 +1518,9 @@ using "HAV_ShadowCursed_Warrior_Githyanki_Melee"
 data "Vitality" "48"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Shadow-Cursed Githyanki
 new entry "MMM_SHADOWCURSED_GITHYANKIBARBARIAN"
@@ -1477,8 +1531,9 @@ using "Githyanki_Melee"
 data "Vitality" "54"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Shadow Cursed Lands - Lastlight Side
 // 2. Shadowcursed on the toilet. 
@@ -1489,8 +1544,9 @@ type "Character"
 using "HAV_ShadowCursed_Warrior_Human_Melee"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Shadow Cursed Lands - Lastlight Side
 // 3. Shadowcursed family.
@@ -1504,8 +1560,9 @@ using "LOW_Guildhall_Swarm_Melee_Human"
 data "Vitality" "34"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_HUMANCASTER"
@@ -1517,8 +1574,9 @@ data "Intelligence" "18"
 data "Vitality" "42"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
 // Shadow-Cursed Family
 new entry "MMM_SHADOWCURSED_DOG"
@@ -1537,7 +1595,8 @@ data "Vitality" "22"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "ShadowyRetreat;Ethereal;SunlightWeakness;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 data "Passives" "SunlightWeakness;AttackOfOpportunity;Darkvision;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
 // ==================================== Shadow Cursed Lands - Lastlight Side
 // 4. Restless Druids and Harpers.
@@ -1551,7 +1610,8 @@ using "SHA_Skeleton_Melee"
 data "Vitality" "28"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Restless Harper
 new entry "MMM_SHADOWSKELETON_RANGED"
@@ -1562,7 +1622,8 @@ using "SHA_Skeleton_Ranger"
 data "Vitality" "22"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Restless Druid
 new entry "MMM_SHADOWSKELETON_DRUID"
@@ -1576,8 +1637,9 @@ data "Armor" "14"
 data "Vitality" "32"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "35f9fe70-5391-42c4-9f86-edcb918ee8b7"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2" // MMM_NPC_Druid
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
 // data "ArmorType" "Cloth"
 data "ArmorType" "Leather"
 
@@ -1593,8 +1655,9 @@ using "Halfling_Druid"
 data "Vitality" "38"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
-// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
+// data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2" // MMM_NPC_Druid
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
 
 // Shadow-Cursed Druid
 new entry "MMM_SHADOWCURSED_HUMANDRUID"
@@ -1605,8 +1668,9 @@ using "Human_Druid"
 data "Vitality" "39"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
+// data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2" // MMM_NPC_Druid
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
 
 // Shadow-Cursed Harper
 new entry "MMM_SHADOWCURSED_ELFHARPERRANGED"
@@ -1617,8 +1681,9 @@ using "Elf_Ranger"
 data "Vitality" "42"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Shadow-Cursed Harper
 new entry "MMM_SHADOWCURSED_HALFELFBARBARIAN"
@@ -1629,8 +1694,9 @@ using "HalfElf_Barbarian"
 data "Vitality" "47"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Shadow Cursed Lands - Lastlight Side
 // 7. A lost child.
@@ -1692,8 +1758,9 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:3:3:1;SpellSlot:1:1:2;SpellSlot:1:1:3"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // Shadar-Kai - Shadar-Kai Shadow Dancer
 new entry "MMM_SHADARKAIDANCER"
@@ -1718,8 +1785,9 @@ data "SpellCastingAbility" "Intelligence"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "ExtraAttack;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // Shadar-Kai - Shadar-kai Gloom Weaver
 new entry "MMM_SHADARKAIGLOOM"
@@ -1748,8 +1816,9 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:3:3:1;SpellSlot:1:1:2;SpellSlot:1:1:3"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "ExtraAttack;MistyEscape_ShadarKai_GloomWeaver;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
-// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // ==================================== Shadow Cursed Lands - Lastlight Side
 // 11. Balthazar event #1.
@@ -1774,7 +1843,8 @@ data "Vitality" "42"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
 data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2"
+// data "Progressions" "fb7e113a-2d3e-4981-bd71-49b075c79cd2" // MMM_NPC_Druid
+data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60" // NPC_Druid
 
 // Damon Eyesz
 new entry "MMM_BALTHAZARZOMBIEBARBARIAN"
@@ -1797,7 +1867,8 @@ data "Vitality" "65"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
 data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // Rekin Ky
 new entry "MMM_BALTHAZARZOMBIEROGUE"
@@ -1820,7 +1891,8 @@ data "Vitality" "32"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
 data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // Farsee Yer
 new entry "MMM_BALTHAZARZOMBIERANGER"
@@ -1843,7 +1915,8 @@ data "Vitality" "34"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
 data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a" // MMM_NPC_Ranger
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5" // NPC_Ranger
 
 // Harry Ispup
 new entry "MMM_BALTHAZARZOMBIEMONK"
@@ -1866,7 +1939,7 @@ data "Vitality" "39"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
 data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED;SCL_SHADOW_CURSE;SCL_SHADOW_CURSE_1;SCL_SHADOW_CURSE_2;SCL_SHADOW_CURSE_3;SCL_SHADOW_CURSE_4"
-data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
+data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd" // MMM_NPC_Monk
 
 // ==================================== Shadow Cursed Lands - Moonrise Side
 // 13. Balthazar event #2.
@@ -1880,9 +1953,12 @@ using "LOW_KidNecromancer_GiantSkeleton"
 data "Vitality" "110"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
-data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+// data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;CX_Fighter_Champion_Boost;LAB_Progression_Fighter_Champion_Prep"
+// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
-// Plouf? - The Spider King?
+// Plouf? - The Spider King? (Wizard --> swapped to Sorcerer)
 new entry "MMM_SPIDERKING"
 type "Character"
 using "Gnome_Deep_Caster"
@@ -1892,8 +1968,9 @@ data "Vitality" "132"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" // NPC_Sorcerer
 
 // Plouf - The Spider King
 new entry "MMM_SPIDERKINGBURSTER"
@@ -2005,7 +2082,8 @@ data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 data "SpellCastingAbility" "Constitution"
 // data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
 data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules"
-data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9"
+// data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
+data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a" // NPC_Barbarian
 
 // ==================================== Rivington
 // 3. Sea Creatures on the beach.
@@ -2019,7 +2097,8 @@ using "Sahuagin_Melee"
 data "Vitality" "49"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Sahuagin Hunter
 new entry "MMM_SAHUAGINRANGED"
@@ -2027,7 +2106,10 @@ type "Character"
 using "Sahuagin_Ranged"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
+// data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
+data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules;CX_Rogue_Assassin_Boost;LAB_Progression_Rogue_Assassin_Prep"
+// data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877" // MMM_NPC_Rogue
+data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30" // NPC_Rogue
 
 // ==================================== Rivington
 // 7. Githyanki Patrol
@@ -2061,8 +2143,9 @@ data "Intelligence" "20"
 data "Vitality" "55"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
-data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
+data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 
 // ==================================== Lower City ====================================
 // 1. Team Trajectile Event #5
@@ -2129,7 +2212,8 @@ data "Vitality" "70"
 // data "Wisdom" "12"
 // data "Charisma" "14"
 // data "Vitality" "69"
-// data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803"
+// // data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
+data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 // data "ArmorType" "ScaleMail"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
