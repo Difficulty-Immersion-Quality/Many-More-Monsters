@@ -1,3 +1,9 @@
+new entry "MMM_WPN_Dagger_PooScraper"
+type "Weapon"
+using "WPN_Dagger_Rusty"
+// data "RootTemplate" "6a321455-d00f-4164-ab12-3601fef2ae6e"
+data "RootTemplate" "d30d2d2c-03f0-4354-9273-0df186e31149"
+
 new entry "MMM_OBJ_QUESTIONABLETOWEL"
 type "Object"
 using "OBJ_Generic_Light"

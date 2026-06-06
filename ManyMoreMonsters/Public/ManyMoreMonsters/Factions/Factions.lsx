@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="FactionContainer">
+        <node id="root">
+            <children>
+                <node id="Faction">
+                    <attribute id="Faction" type="FixedString" value="MMM_Act1_MamaBear"/>
+                    <!-- Neutral NPC -->
+                    <attribute id="ParentGuid" type="guid" value="cfb709b3-220f-9682-bcfb-6f0d8837462e"/>
+                    <attribute id="UUID" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

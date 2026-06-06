@@ -369,6 +369,7 @@
 				</node>
 		<!-- 3. Shadowcursed family. -->
 			<!-- Bug: They're too close to the Harper ambush, and combat can be initiated without dialogue when being escorted by Kar'niss. -->
+			<!-- TODO: Don't comment out, use SetOnStage shit in SE - cleaner. -->
 			<!-- Shadow-Cursed Family - 1 -->
 				<!-- <node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />

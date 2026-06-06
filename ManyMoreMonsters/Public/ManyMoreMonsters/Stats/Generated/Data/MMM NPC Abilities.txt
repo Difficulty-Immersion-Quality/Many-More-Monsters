@@ -122,6 +122,27 @@ data "TooltipStatusApply" ""
 // 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy.
 // TODO: Have the mechanical status separate from the overhead text for combat log clarity.
 
+new entry "MMM_Shout_RAGE_OGRE"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+// data "SpellProperties" "AI_IGNORE:IF(not ClassLevelHigherOrEqualThan(9,'Barbarian')):ApplyStatus(RAGE,100,10);AI_IGNORE:IF(ClassLevelHigherOrEqualThan(9,'Barbarian')):ApplyStatus(RAGE_2,100,10);ApplyStatus(RAGE_MUTE,100,10);AI_ONLY:IF(HasActionResource('ActionPoint', 1, 0, false)):ApplyStatus(AI_HELPER_RAGE,100,1);"
+data "SpellProperties" "ApplyStatus(MMM_RAGE_OGRE,100,10);ApplyStatus(RAGE_MUTE,100,10);AI_ONLY:IF(HasActionResource('ActionPoint', 1, 0, false)):ApplyStatus(AI_HELPER_RAGE,100,1);"
+// data "SpellAnimation" "50e7cd15-5b95-47e9-b6f8-ed7900d23d9d,,;,,;289b4f53-3ca5-4dff-a1d4-e84a84a283f0,,;772a34bf-06c1-43ee-ae7b-1a1ffd3fef9e,,;03239618-40c7-47ab-a7b4-d2e0b111e5f7,,;,,;bc09e561-370b-4307-88d7-6462b6fbabec,,;,,;,,"
+data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;d8b7f668-db2b-43b0-9707-5da2ed2cf27e,,;7521e279-1bb3-4105-b32d-8206234836a3,,;d172e037-7041-4352-9a20-5f4b185f9ef1,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;,,;,,;,,"
+// data "RequirementConditions" ""
+data "RequirementConditions" "not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
+data "CombatAIOverrideSpell" ""
+
+new entry "MMM_RAGE_OGRE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RAGE"
+// data "Boosts" "Tag(VFX_RAGE);UnlockSpell(Shout_EndRage);Attribute(ForceMainhandAlternativeEquipBones);"
+data "Boosts" "Tag(VFX_RAGE);UnlockSpell(Shout_EndRage)"
+// data "DynamicAnimationTag" "b6aa23c3-c96d-42d5-8ffa-8d441d18faa7"
+data "DynamicAnimationTag" ""
+
 new entry "MMM_OofClumsy"
 type "PassiveData"
 // Clumsy
@@ -240,7 +261,7 @@ new entry "MMM_TrollRegen_Passive"
 type "PassiveData"
 // Troll Regeneration
 data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
-// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+// The troll regains [1] at the start of its turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
 data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
 data "DescriptionParams" "RegainHitPoints(10)"
 data "Icon" "Spell_Transmutation_Regenerate"
@@ -251,7 +272,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // Troll Regeneration
 data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
-// The superior regeneration of trolls. Regains [1] per turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+// The troll regains [1] at the start of its turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
 data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
 data "DescriptionParams" "RegainHitPoints(10)"
 data "Icon" "Spell_Transmutation_Regenerate"
@@ -269,6 +290,36 @@ data "StatusType" "BOOST"
 // Raging Ex-Boyfriend
 data "DisplayName" "hb7d4ce2eg02ecg4c15g91d9g337811359364;1"
 data "StackId" "MMM_JEALOUSEX"
+
+// ==================================== Blighted Village
+// 24. Mama bear and baby bear crossing log, breadcrumb for people who didn't realize there's a passage there.
+
+new entry "MMM_Shout_Bear_Enraged"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_FOR_Owlbear_Enrage_Hardcore"
+// data "SpellProperties" "ApplyStatus(FOR_OWLBEAR_ENRAGE_HARDCORE,100,-1);AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,5);AI_ONLY:ApplyStatus(BLESS,100,5);"
+data "SpellProperties" "ApplyStatus(MMM_BEAR_ENRAGE,100,-1);AI_ONLY:ApplyStatus(SELF,AI_HELPER_BUFF_LARGE,100,5);AI_ONLY:ApplyStatus(BLESS,100,5)"
+// data "TargetConditions" "Self() and not HasStatus('FOR_OWLBEAR_ENRAGE') and not HasStatus('CALM_EMOTIONS')"
+data "TargetConditions" "Self() and not HasStatus('MMM_BEAR_ENRAGE') and not HasStatus('CALM_EMOTIONS')"
+// data "TooltipStatusApply" "ApplyStatus(FOR_OWLBEAR_ENRAGE,100,-1)"
+data "TooltipStatusApply" "ApplyStatus(MMM_BEAR_ENRAGE,100,-1)"
+// data "RequirementConditions" "not HasStatus('CALM_EMOTIONS') and not HasStatus('FOR_OWLBEAR_ENRAGE') and not HasStatus('FOR_OWLBEAR_ENRAGE_HARDCORE')"
+data "RequirementConditions" "not HasStatus('CALM_EMOTIONS') and not HasStatus('MMM_BEAR_ENRAGE')"
+
+new entry "MMM_BEAR_ENRAGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "FOR_OWLBEAR_ENRAGE_HARDCORE"
+// Owlbear's Rage
+// data "DisplayName" "hecdf646bg92f6g445dgb8a4ge5d23fbd1f4f;1"
+// Bear's Rage
+data "DisplayName" "h7750c66fgc731g400fga1f5gde65c7e92882;1"
+// The owlbear is enraged! &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; increased by 2 and has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to all physical damage.
+// data "Description" "h147d9a39ga77bg4a86g8e63ge86f55b50604;1"
+// The mama bear is enraged! &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; increased by 2 and has &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt;to all physical damage.
+data "Description" "h7558c923g1e89g4341gb6bbgf1bd9ef7f313;1"
+// data "Boosts" "Ability(Strength, 2);UnlockSpell(Target_Multiattack_Owlbear);Tag(CANBECALMED);Resistance(Slashing,Resistant);Resistance(Piercing,Resistant);Resistance(Bludgeoning,Resistant)"
 
 // ==================================== Swamp ====================================
 // 25. Will-o'-Wisps, be careful they do lightning damage and you're standing in a swamp.
@@ -315,6 +366,7 @@ data "MemoryCost" "1"
 data "PrepareEffect" "7121a488-7c9a-4ba1-a585-f79aaa77e97c"
 data "CastEffect" "4f8e353e-c04e-45c3-880b-d10885fd091f"
 data "TargetEffect" "68b1219a-ccc2-4b29-bb42-b18996de3b4d"
+data "RechargeValues" "6"
 
 new entry "MMM_Target_WISPCONSUMELIFE"
 type "SpellData"

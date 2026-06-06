@@ -636,6 +636,48 @@
 						</node>
 					</children>
 				</node>
+			<!-- Sahuagin Hunter - 2 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="e17e2b71-499f-4e72-bedf-9436305859d3" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="9226d987-9b8d-45e6-b700-ef763ac218db" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE1" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
+					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="70 0 103" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
 		<!-- 4. Sea Creatures at the wrecked ship. -->
 			<!-- Sahuagin - 3 -->
 				<node id="GameObjects">
@@ -723,7 +765,7 @@
 						</node>
 					</children>
 				</node>
-			<!-- Sahuagin Hunter - 2 -->
+			<!-- Sahuagin Hunter - 3 -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
 					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
@@ -732,6 +774,48 @@
 					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="8" />
 					<attribute id="MapKey" type="FixedString" value="f4ea38b5-d822-44c9-b241-18f05f28a86a" />
+					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
+					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
+					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209026" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="57e10301-831b-f6cf-1258-a93ddbdfa8a0" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="e61ecb0e-95e4-7a3c-a6bb-5fc18e63f9a9" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-80.32988 -2.1445189 107.90248" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<attribute id="Scale" type="float" value="0.9" />
+						</node>
+					</children>
+				</node>
+			<!-- Sahuagin Hunter - 4 -->
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="LOW_BeachSahuagin_Sahuagin" />
+					<attribute id="CombatGroupID" type="FixedString" value="f8fa3c47-b04d-4890-ae12-367009f75f1a" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="8" />
+					<attribute id="MapKey" type="FixedString" value="860d6f36-edd3-4082-9c4d-1ee4015f982f" />
 					<attribute id="Name" type="LSString" value="MMM_SEACREATURE2" />
 					<attribute id="Stats" type="FixedString" value="MMM_SAHUAGINRANGED" />
 					<attribute id="TemplateName" type="FixedString" value="809663b3-5df8-49eb-b89b-2aab141a6081" />
@@ -1358,14 +1442,14 @@
 				</node>
 	<!-- Book of Demonic Ecstasy -->
 		<!-- 6. Book of Demonic Ecstasy -->
-			<!-- TODO: Entirely found in lua. Spawns Raunchy Succubus and Randy Incubus, might be cooler with custom entities. -->
+			<!-- TODO: Entirely found in lua. Spawns Raunchy Succubus and Randy Incubus from templates. -->
 	<!-- Githyanki Patrol -->
 		<!-- 7. Githyanki Patrol -->
-			<!-- Githyanki Patrol - 1 -->
+			<!-- Veteran Warrior Ka'zith -->
 				<node id="GameObjects">
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hca136228g44adg4577g84e3gb7872b3abd49" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_Greatsword_HalfPlate_Gith" />
 					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -1401,21 +1485,30 @@
 						</node>
 						<node id="LocomotionParams" />
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="3.589939 41.33789 -19.748447" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<!-- <attribute id="Position" type="fvec3" value="3.589939 41.33789 -19.748447" /> -->
+							<attribute id="Position" type="fvec3" value="-54.34603 2.701172 84.54216" />
+							<!-- <attribute id="RotationQuat" type="fvec4" value="0 0 0 0" /> -->
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
 							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="CRE_Supplies_Gith_NPC" />
+								</node>
+							</children>
 						</node>
 					</children>
 				</node>
-			<!-- Githyanki Patrol - 2 -->
+			<!-- Veteran Warrior Velra -->
 				<node id="GameObjects">
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="439887c2-2eed-5656-5f34-08fd45c4809e" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="he5e480ccg263cg449bg96c4gf55a471b2df5" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_Greatsword_HalfPlate_Gith" />
 					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
 					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="5621b94c-74c5-9ece-62b3-42832039607f-EQP_Greatsword_HalfPlate_Gith_(Icon_Githyanki_Male)" />
+					<attribute id="Icon" type="FixedString" value="439887c2-2eed-5656-5f34-08fd45c4809e-EQP_Greatsword_HalfPlate_Gith_(Icon_Githyanki_Female)" />
 					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="7" />
 					<attribute id="MapKey" type="FixedString" value="0944a300-cdd8-4d9d-9ac3-cf8e90b9b23e" />
@@ -1447,18 +1540,27 @@
 						</node>
 						<node id="LocomotionParams" />
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="0.9839587 41.479492 -18.712824" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 0" />
+							<!-- <attribute id="Position" type="fvec3" value="0.9839587 41.479492 -18.712824" /> -->
+							<attribute id="Position" type="fvec3" value="-54.15995 3.185547 82.58978" />
+							<!-- <attribute id="RotationQuat" type="fvec4" value="0 0 0 0" /> -->
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
 							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="CRE_Supplies_Gith_NPC" />
+								</node>
+							</children>
 						</node>
 					</children>
 				</node>
-			<!-- Githyanki Patrol - 3 -->
+			<!-- Veteran Raider Zerith -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hb993483cg87bag4a05g989fg5062ac53b68e" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_HeavyCrossbow_StuddedLeather_Gith" />
 					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -1494,22 +1596,31 @@
 						</node>
 						<node id="LocomotionParams" />
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="4.613289 41.155273 -17.801256" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
+							<!-- <attribute id="Position" type="fvec3" value="4.613289 41.155273 -17.801256" /> -->
+							<attribute id="Position" type="fvec3" value="-55.83921 2.905273 82.33079" />
+							<!-- <attribute id="RotationQuat" type="fvec4" value="0 0 0 1" /> -->
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
 							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="CRE_Supplies_Gith_NPC" />
+								</node>
+							</children>
 						</node>
 					</children>
 				</node>
-			<!-- Githyanki Patrol - 4 -->
+			<!-- Veteran Raider Tza'veth -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="0fc1c073-a093-c450-a42b-e75ebbfcd327" />
 					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h6b6b7076g20e6g41f6gb70dge79293765e1a" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h7ade3a1ag5e04g4c96g94d5gbe712747d54e" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_HeavyCrossbow_StuddedLeather_Gith" />
 					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
 					<attribute id="Flag" type="int32" value="1" />
-					<attribute id="Icon" type="FixedString" value="fbf981eb-8c4f-327e-8293-5134170fd591-EQP_HeavyCrossbow_StuddedLeather_Gith_(Icon_Githyanki_Female)" />
+					<attribute id="Icon" type="FixedString" value="0fc1c073-a093-c450-a42b-e75ebbfcd327-EQP_HeavyCrossbow_StuddedLeather_Gith_(Icon_Githyanki_Female)" />
 					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="7" />
 					<attribute id="MapKey" type="FixedString" value="d8a8f915-d71f-4207-8a89-8161ef87ebf8" />
@@ -1541,9 +1652,72 @@
 						</node>
 						<node id="LocomotionParams" />
 						<node id="Transform">
-							<attribute id="Position" type="fvec3" value="2.1579285 41.2334 -16.797224" />
-							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
+							<!-- <attribute id="Position" type="fvec3" value="2.1579285 41.2334 -16.797224" /> -->
+							<attribute id="Position" type="fvec3" value="-56.37951 2.425781 84.3372" />
+							<!-- <attribute id="RotationQuat" type="fvec4" value="0 0 0 1" /> -->
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
 							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="CRE_Supplies_Gith_NPC" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			<!-- Veteran Ardent Vey'quor -->
+				<node id="GameObjects">
+					<attribute id="Archetype" type="FixedString" value="ranged" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="ba52d2c0-6b18-b1b6-4176-b08a62befeb7" />
+					<attribute id="CombatGroupID" type="FixedString" value="2547e136-249a-4b9f-9016-c6e87c69121d" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hb1a60dcegff54g495ega49bg3cd026fe3935" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Shortsword_Robe_Gith" />
+					<attribute id="Faction" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="Icon" type="FixedString" value="ba52d2c0-6b18-b1b6-4176-b08a62befeb7-EQP_Shortsword_Robe_Gith_(Icon_Githyanki_Male)" />
+					<attribute id="LevelName" type="FixedString" value="BGO_Main_A" />
+					<attribute id="LevelOverride" type="int32" value="9" />
+					<attribute id="MapKey" type="FixedString" value="e8073df8-3ca3-4e5f-bab7-32d5ea09d2c0" />
+					<attribute id="Name" type="LSString" value="MMM_RIVINGTONPATROL" />
+					<attribute id="Stats" type="FixedString" value="MMM_RIVINGTONGITH_ARDENT" />
+					<attribute id="SpellSet" type="FixedString" value="MMM_LVL9_ARDENT" />
+					<attribute id="TemplateName" type="FixedString" value="366bca00-1c0c-4fba-bb1c-45c6ae20d691" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540921856" />
+					<children>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="BGO_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="418ed4b9-a18a-889a-7539-2618a6785c0b" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="f813a58c-96a2-3b23-2570-117b45867217" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="-55.19349 2.820313 83.36315" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.7071068 0 -0.7071068" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="CRE_Supplies_Gith_NPC" />
+								</node>
+							</children>
 						</node>
 					</children>
 				</node>
