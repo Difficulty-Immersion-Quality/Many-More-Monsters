@@ -1027,6 +1027,14 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         Osi.CharacterMoveToPosition(ShadowSpawnDoor, -142.17744445801, 51.1376953125, -142.08139038086, "Walk", "", 0)
         Osi.SetOnStage(MountainTriggerDoor, 0)
     end
+
+    -- TODO: Redo Perception check system - medium priority (only Gish'Ra left)
+-- Bug Report: Gish'ra Trigger spam
+    -- Managed to get this error spammed in console. Tho my game did not crash.
+    -- bg3se::esv::lua::OsirisCallbackManager::RunHandler(): Osiris event handler failed: [string "ManyMoreMonsters/MonsterJam/Crechelands.lua"]:1057: attempt to compare nil with number
+    -- stack traceback:
+    --         ManyMoreMonsters/MonsterJam/Crechelands.lua:1057: in function <ManyMoreMonsters/MonsterJam/Crechelands.lua:1027>
+
     --Gish'ra Trigger
     if status == "MMM_GISHRAMARCH" then
         if Osi.GetFlag(GishraFlag, Null) == 0 then
