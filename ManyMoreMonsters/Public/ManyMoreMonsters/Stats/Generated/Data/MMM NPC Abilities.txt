@@ -156,9 +156,10 @@ type "StatusData"
 data "StatusType" "BOOST"
 // Such a Klutz!
 data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
-// Prone to messing everything up.
+// Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.
 data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
 data "Icon" "statIcons_Confused"
+data "Boosts" "IF(IsRangedAttack()):Disadvantage(AttackRoll)"
 
 new entry "MMM_OOFSLIPPED"
 type "StatusData"

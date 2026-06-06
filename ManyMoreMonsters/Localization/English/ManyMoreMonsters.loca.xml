@@ -158,7 +158,7 @@
 	<!-- "MMM_TEAMTRAJECTILEBLASTOFF" --> <content contentuid="h18b068aege3a3g42e7ga1a5gb506a2c348f5" version="1">Blast Off!</content>
 
 	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
-	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up.</content>
+	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
 	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
 	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.</content>
 	<!-- "MMM_OOFSPLINTER" --> 	<content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
