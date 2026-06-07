@@ -992,7 +992,6 @@ data "Progressions" "fe0fa98b-52be-4993-830f-7b4fe4c5f803" // MMM_NPC_Fighter
 // ==================================== Mountain Pass - Gith
 // 2. This is now a battlefield, get ready for a three way fight.
 // 4. Githyanki learned how to operate a gondola, good job guys!
-// TODO: Weird double vanilla progressions. Need to decide on what's best from a few angles.
 
 // Githyanki Captain and Catfey
 new entry "MMM_MOUNTAINGITH_CAPTAIN"
@@ -1005,7 +1004,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
 data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger;CX_Fighter_EldritchKnight_Boost;LAB_Progression_Fighter_EldritchKnight_Prep"
 // data "Progressions" ""
-data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
 
 // Unused
 new entry "MMM_MOUNTAINGITH_WARLOCK"
@@ -1751,8 +1750,6 @@ data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd" // MMM_NPC_Monk
 
 // ==================================== Shadow Cursed Lands - Moonrise Side
 // 13. Balthazar event #2.
-// TODO: Wouldn't this guy just have loads of issues with casting animations?
-// TODO: Weird double vanilla progressions. Need to decide on what's best from a few angles.
 
 // Necrofex
 new entry "MMM_BALTHAZARSKELETONBOSS"
@@ -1764,7 +1761,7 @@ data "Vitality" "146"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 // data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;CX_Fighter_Champion_Boost;LAB_Progression_Fighter_Champion_Prep"
-data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
 
 // Plouf? - The Spider King?
 new entry "MMM_SPIDERKING"

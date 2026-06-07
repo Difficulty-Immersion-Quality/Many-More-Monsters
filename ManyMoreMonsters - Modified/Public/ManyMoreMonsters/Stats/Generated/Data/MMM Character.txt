@@ -324,7 +324,6 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // 14. Hob at other entrance to grove, commander of the goblins that went inside.
 // Bug: Can kill Sazza
 
-// TODO: HP
 // Hobgoblin
 new entry "MMM_HOBGOBLIN_BACKDOOR"
 type "Character"
@@ -1124,7 +1123,7 @@ data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
 data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger;CX_Fighter_EldritchKnight_Boost;LAB_Progression_Fighter_EldritchKnight_Prep"
 // data "Progressions" ""
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Unused
@@ -1955,7 +1954,7 @@ data "Vitality" "110"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 // data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;CX_Fighter_Champion_Boost;LAB_Progression_Fighter_Champion_Prep"
-// data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa;44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Fighter // NPC_Wizard
+// data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
 data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa" // NPC_Fighter
 
 // Plouf? - The Spider King? (Wizard --> swapped to Sorcerer)
