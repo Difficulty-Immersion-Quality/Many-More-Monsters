@@ -754,7 +754,7 @@ data "Vitality" "46"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;FeyAncestry;SunlightSensitivity;AttackOfOpportunity;Darkvision"
-data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;FeyAncestry;SunlightSensitivity;AttackOfOpportunity;Darkvision;Muscular_Athletics;ExtraAttack"
+data "Passives" "DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;FeyAncestry;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;Muscular_Athletics;ExtraAttack"
 data "PsychicResistance" "Resistant"
 // data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;HeavyArmor;LightArmor;Shields"
 data "Proficiency Group" "SimpleWeapons;MartialWeapons;MediumArmor;LightArmor"
@@ -1048,7 +1048,7 @@ data "Vitality" "76"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 // data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision"
-data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;Darkvision;Muscular_Athletics;ExtraAttack"
+data "Passives" "FeyAncestry;SunlightSensitivity;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;Muscular_Athletics;ExtraAttack"
 data "PsychicResistance" "Resistant"
 // data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b" // NPC_Cleric
 // data "Progressions" "0d0ff51f-47cd-40fd-a5c6-c9daa148a450" // MMM_NPC_Cleric
@@ -1966,7 +1966,6 @@ using "Gnome_Deep_Caster"
 data "Vitality" "132"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-data "Passives" "Gnome_Cunning;Gnome_Speed;DeepGnome_StoneCamouflage;AttackOfOpportunity;SuperiorDarkvision;DarknessRules"
 // data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" // NPC_Wizard
 // data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb" // MMM_NPC_Wizard
 data "Progressions" "2189a72d-6489-4621-8b2c-85d3e7df2f6f" // NPC_Sorcerer
