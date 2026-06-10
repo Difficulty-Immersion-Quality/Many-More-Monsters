@@ -22,7 +22,7 @@ data "Priority" "1"
 // data "Vitality" "1"
 data "Vitality" "10"
 // data "ObjectCategory" "Drink;Alcohol_Rich"
-data "ObjectCategory" "Drink;Alcohol_Normal"
+data "ObjectCategory" "Drink;Alcohol_Normal;JunkArtificial"
 
 new entry "MMM_CAVEINBOULDER"
 type "Object"

@@ -6,16 +6,39 @@
             <children>
                 <node id="Relations">
                     <children>
+                    <!-- Baby Bear -->
                         <node id="Relation">
+                            <!-- MMM_Act1_BabyBear -->
+                            <attribute id="Source" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
                             <!-- MMM_Act1_MamaBear -->
+                            <attribute id="Target" type="guid" value="6e4e3897-1912-4561-b132-05054dfc504a"/>
+                            <attribute id="Value" type="int32" value="100"/>
+                        </node>
+                        <node id="Relation">
+                            <!-- MMM_Act1_BabyBear -->
+                            <attribute id="Source" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
+                            <!-- ACT1_HAG_MurderousFrog -->
+                            <attribute id="Target" type="guid" value="1e90ac19-a71f-4434-a14e-630dafdb9334"/>
+                            <attribute id="Value" type="int32" value="50"/>
+                        </node>
+                        <node id="Relation">
+                            <!-- MMM_Act1_BabyBear -->
                             <attribute id="Source" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
                             <!-- Hero -->
                             <attribute id="Target" type="guid" value="a1542c81-6895-929e-4522-10ce218bb360"/>
                             <attribute id="Value" type="int32" value="50"/>
                         </node>
+                    <!-- Mama Bear -->
                         <node id="Relation">
                             <!-- MMM_Act1_MamaBear -->
-                            <attribute id="Source" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
+                            <attribute id="Source" type="guid" value="6e4e3897-1912-4561-b132-05054dfc504a"/>
+                            <!-- MMM_Act1_BabyBear -->
+                            <attribute id="Target" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
+                            <attribute id="Value" type="int32" value="100"/>
+                        </node>
+                        <node id="Relation">
+                            <!-- MMM_Act1_MamaBear -->
+                            <attribute id="Source" type="guid" value="6e4e3897-1912-4561-b132-05054dfc504a"/>
                             <!-- ACT1_HAG_MurderousFrog -->
                             <attribute id="Target" type="guid" value="1e90ac19-a71f-4434-a14e-630dafdb9334"/>
                             <attribute id="Value" type="int32" value="50"/>

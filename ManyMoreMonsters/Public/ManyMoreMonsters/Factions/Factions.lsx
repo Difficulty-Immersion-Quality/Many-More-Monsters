@@ -5,10 +5,16 @@
         <node id="root">
             <children>
                 <node id="Faction">
-                    <attribute id="Faction" type="FixedString" value="MMM_Act1_MamaBear"/>
+                    <attribute id="Faction" type="FixedString" value="MMM_Act1_BabyBear"/>
                     <!-- Neutral NPC -->
                     <attribute id="ParentGuid" type="guid" value="cfb709b3-220f-9682-bcfb-6f0d8837462e"/>
                     <attribute id="UUID" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e"/>
+                </node>
+                <node id="Faction">
+                    <attribute id="Faction" type="FixedString" value="MMM_Act1_MamaBear"/>
+                    <!-- Evil NPC -->
+                    <attribute id="ParentGuid" type="guid" value="64321d50-d516-b1b2-cfac-2eb773de1ff6"/>
+                    <attribute id="UUID" type="guid" value="6e4e3897-1912-4561-b132-05054dfc504a"/>
                 </node>
             </children>
         </node>

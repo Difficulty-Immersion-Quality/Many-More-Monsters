@@ -7897,7 +7897,8 @@
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h7c360a8dg7f47g4734gab74gd4583915a7b1" version="1" />
-					<attribute id="Faction" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e" />
+					<!-- MMM_Act1_MamaBear -->
+					<attribute id="Faction" type="guid" value="6e4e3897-1912-4561-b132-05054dfc504a" />
 					<attribute id="CombatGroupID" type="FixedString" value="abc5cb49-597f-400d-a617-b6fd3e3960f2" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="9436dbcb-a497-77bf-75cc-5f4835a19869" />
 					<attribute id="GeneratePortrait" type="LSString" value="Icon_Bear" />
@@ -8030,7 +8031,9 @@
 			<!-- Baby Bear -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
+					<attribute id="CanJoinCombat" type="bool" value="False" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hc9d9a09ag76ccg472ag85c8g34e44a346d28" version="1" />
+					<!-- MMM_Act1_BabyBear -->
 					<attribute id="Faction" type="guid" value="e7987d56-5803-41e9-b23d-9114067bb12e" />
 					<attribute id="CombatGroupID" type="FixedString" value="abc5cb49-597f-400d-a617-b6fd3e3960f2" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="9436dbcb-a497-77bf-75cc-5f4835a19869" />
