@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
 local MountainGob1 = "MMM_MOUNTAINGOBS_68304a4f-95ae-4a67-8626-5daf30725d5e"
@@ -102,6 +104,17 @@ local Act1MikeFlag = "MMM_Act1_Mike_ab0233fc-f112-4778-8dd7-da9cad510a63"
 local Act1bAdamFlag = "MMM_Act1b_Adam_f5986888-456d-4b43-acdd-5a964397d1b5"
 local Act1bLiamFlag = "MMM_Act1b_Liam_2a947065-d6c4-4497-906b-eefd01403341"
 local Act1bMikeFlag = "MMM_Act1b_Mike_e0c88f29-8176-4b2c-ab41-412607a99ed0"
+
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
 
 --Everything to run on load
 local function InitiateMonstersCreche()
@@ -737,7 +750,6 @@ Ext.Events.SessionLoaded:Subscribe(function()
     DawnmasterRollResult = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -747,11 +759,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -826,7 +834,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
         Osi.SetHostileAndEnterCombat(FAbsoluteUndead, FCrecheCP, Prisoner1, CrecheCheckpoint)
         Osi.SetHostileAndEnterCombat(FAbsoluteUndead, FCrecheCP, Prisoner2, CrecheCheckpoint)
         Osi.SetHostileAndEnterCombat(FAbsoluteUndead, FCrecheCP, Prisoner3, CrecheCheckpoint)
-        Osi.ApplyStatus(Prisoner1, "MMM_CRECHEPRISONBREAK", 6)
+        ApplyStatus_SpeakOverhead(Prisoner1, "MMM_CRECHEPRISONBREAK")
     end
     --Gondola Flag Set
     if object == GithGondola1 then
@@ -834,53 +842,49 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
     end
 end)
 
+-- TODO: Check if silenced and then don't set the pun to 0
+-- TODO: When she runs out of puns, clear the 0s but don't allow the extra hands to SetOnStage... or do allow it?
+-- TODO: Actually, make a pool and have them used randomly.
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
     --Mad Hand Sorc
     if object == MadHandSorc then
         if MadHandPun1 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN5", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN5")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN5", "")
                 MadHandPun1 = 0
             end)
         elseif MadHandPun2 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_20MOREHANDS", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_20MOREHANDS")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_20MOREHANDS", "")
                 Osi.SetOnStage(MadHand6, 1)
                 Osi.SetOnStage(MadHand7, 1)
                 Osi.SetOnStage(MadHand8, 1)
                 MadHandPun2 = 0
             end)
         elseif MadHandPun3 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN1", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN1")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN1", "")
                 MadHandPun3 = 0
             end)
         elseif MadHandPun4 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN2", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN2")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN2", "")
                 MadHandPun4 = 0
             end)
         elseif MadHandPun5 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN3", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN3")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN3", "")
                 MadHandPun5 = 0
             end)
         elseif MadHandPun6 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN4", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN4")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN4", "")
                 MadHandPun6 = 0
             end)
         elseif MadHandPun7 == 1 then
-            Osi.ApplyStatus(MadHandSorc, "MMM_HANDPUN6", -1)
+            ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN6")
             Ext.Timer.WaitFor(3000, function()
-                Osi.RemoveStatus(MadHandSorc, "MMM_HANDPUN6", "")
                 MadHandPun7 = 0
             end)
         end
@@ -950,7 +954,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Adam1b, "Invulnerable", "", Adam1b)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Adam1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
-            Osi.ApplyStatus(Adam1b, "MMM_ADAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Adam1b, "MMM_ADAMRUNAWAY1")
+            Osi.ApplyStatus(Adam1b, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Adam1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -969,7 +974,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Liam1b, "Invulnerable", "", Liam1b)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Liam1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
-            Osi.ApplyStatus(Liam1b, "MMM_LIAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Liam1b, "MMM_LIAMRUNAWAY1")
+            Osi.ApplyStatus(Liam1b, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Liam1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -988,7 +994,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Mike1b, "Invulnerable", "", Mike1b)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Mike1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
-            Osi.ApplyStatus(Mike1b, "MMM_MIKERUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Mike1b, "MMM_MIKERUNAWAY1")
+            Osi.ApplyStatus(Mike1b, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Mike1b, 92.672912597656, -7.9482421875, -12.47047328949, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -1005,7 +1012,7 @@ end)
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     --Gith Trigger 1
-    if status == "MMM_MOUNTAINMARCH1" then
+    if status == "MMM_DETECTION_MOUNTAINBATTLEFIELD" then
         if MountainTrigger == 0 then
             MountainTrigger = MountainTrigger + 1;
             MountainArmyMarch()
@@ -1014,7 +1021,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         end
     end
     --Gith Trigger 2
-    if status == "MMM_MOUNTAINMARCH2" then
+    if status == "MMM_DETECTION_MOUNTAINBATTLEFIELD2" then
         if MountainTrigger == 0 then
             MountainTrigger = MountainTrigger + 1;
             MountainArmyMarch()
@@ -1023,7 +1030,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         end
     end
     --Shadow Knight Trigger
-    if status == "MMM_MOUNTAINMARCH3" then
+    if status == "MMM_DETECTION_MOUNTAINSHADOWCURSED" then
         Osi.CharacterMoveToPosition(ShadowSpawnDoor, -142.17744445801, 51.1376953125, -142.08139038086, "Walk", "", 0)
         Osi.SetOnStage(MountainTriggerDoor, 0)
     end
@@ -1036,7 +1043,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --         ManyMoreMonsters/MonsterJam/Crechelands.lua:1057: in function <ManyMoreMonsters/MonsterJam/Crechelands.lua:1027>
 
     --Gish'ra Trigger
-    if status == "MMM_GISHRAMARCH" then
+    if status == "MMM_DETECTION_GISHRA" then
         if Osi.GetFlag(GishraFlag, Null) == 0 then
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
                 local GishraTag = entity.Uuid.EntityUuid
@@ -1051,15 +1058,15 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             Osi.SetFlag(GishraFlag, Null, 0, 1)
         end
     end
-    -- if status == "MMM_GISHRAMARCH" then
+    -- if status == "MMM_DETECTION_GISHRA" then
     --     Osi.RequestPassiveRoll(object, CrecheGishra1, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "GishraDetectRoll")
     --     Osi.SetOnStage(GishCrechTrigger, 0)
     -- end
     --Dawnmaster Trigger
-    if status == "MMM_DAWNMASTERMARCH" then
+    if status == "MMM_DETECTION_DAWNMASTER" then
         DawnmasterCheck()
-        print("Entered dawnmaster checker")
-        Osi.RemoveStatus(Dawnmaster, "MMM_DAWNMASTERDETECT", "")
+        -- print("Entered dawnmaster checker")
+        Osi.RemoveStatus(Dawnmaster, "MMM_DETECTION_DAWNMASTER_AURA", "")
     end
 end)
 
@@ -1069,8 +1076,8 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gondola detect roll
         if eventName == "GondolaRoll" then
             if resultType == 1 then
-                -- TODO: Localise?
-                Channels.LogToPlayerOverhead:Broadcast("There are Gith on that Gondola! Prepare yourselves!")
+                -- "There are Gith on that Gondola! Prepare yourselves!""
+                Channels.LogToPlayerOverhead:Broadcast(Osi.ResolveTranslatedString("hb8227ba6g2f82g424dga330gb3817681a77a"))
                 PrepareDuration = 30
                 PreparedBoost()
             end
@@ -1078,8 +1085,8 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Gish'ra detect roll
         if eventName == "GishraDetectRoll" then
             if resultType == 1 then
-                -- TODO: Localise?
-                Channels.LogToPlayerOverhead:SendToClient("I feel eyes staring at me...", Osi.GetReservedUserID(roller))
+                -- "I feel eyes staring at me..."
+                Channels.LogToPlayerOverhead:SendToClient(Osi.ResolveTranslatedString("ha66b6be6g4799g4e71g97fag8eb6156541e6"), Osi.GetReservedUserID(roller))
                 PrepareDuration = 18
                 PreparedBoost()
                 Osi.RemoveStatus(CrecheGishra1, "INVISIBLE", "")

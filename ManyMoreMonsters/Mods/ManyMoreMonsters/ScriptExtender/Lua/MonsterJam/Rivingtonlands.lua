@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --BGO_Main_A
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
@@ -69,13 +71,24 @@ local Act3AdamFlag = "MMM_Act3_Adam_5c52b843-5241-45bc-b1fb-01c01a36abe9"
 local Act3LiamFlag = "MMM_Act3_Liam_a91c83b9-f510-44cc-b851-ac303e8ed86b"
 local Act3MikeFlag = "MMM_Act3_Mike_73c1a7d3-f348-43e8-b689-7f17abb1b05a"
 
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
+
 --On Load
 local function InitiateMonstersRivingtonlands()
     if Osi.GetFlag(Act3SeaCreatures1Flag, Null) == 0 then
-        Osi.ApplyStatus(SeaCreatureMound, "MMM_RIVINGTONSEADETECT1", -1, 1, SeaCreatureMound)
+        Osi.ApplyStatus(SeaCreatureMound, "MMM_DETECTION_SAHUAGIN1_AURA", -1, 1, SeaCreatureMound)
     end
     if Osi.GetFlag(Act3SeaCreatures2Flag, Null) == 0 then
-        Osi.ApplyStatus(SeaCreatureChest, "MMM_RIVINGTONSEADETECT2", -1, 1, SeaCreatureChest)
+        Osi.ApplyStatus(SeaCreatureChest, "MMM_DETECTION_SAHUAGIN2_AURA", -1, 1, SeaCreatureChest)
     end
     Osi.SetOnStage(SeaCreature101, 0)
     Osi.SetOnStage(SeaCreature102, 0)
@@ -183,7 +196,7 @@ local function HillGiantAttack()
     Osi.SetOnStage(HillGiant, 1)
     Osi.UseSpellAtPosition(HillGiant, "Projectile_Jump", 104.91307067871, 55.8115234375, -54.232204437256, 1)
     Ext.Timer.WaitFor(1500, function()
-        Osi.ApplyStatus(HillGiant, "MMM_HILLGIANTSPEAK", 6, 1, "")
+        ApplyStatus_SpeakOverhead(HillGiant, "MMM_HILLGIANTSPEAK")
     end)
 end
 
@@ -353,7 +366,6 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -363,11 +375,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -391,7 +399,7 @@ end)
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combatGuid)
     if object == Adam3 then
-        Osi.ApplyStatus(Adam3, "MMM_ADAMCOMBAT", 6, 1, "")
+        ApplyStatus_SpeakOverhead(Adam3, "MMM_ADAMCOMBAT")
     end
 end)
 
@@ -405,7 +413,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Adam3, "Invulnerable", "", Adam3)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Adam3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
-            Osi.ApplyStatus(Adam3, "MMM_ADAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Adam3, "MMM_ADAMRUNAWAY1")
+            Osi.ApplyStatus(Adam3, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Adam3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -424,7 +433,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Liam3, "Invulnerable", "", Liam3)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Liam3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
-            Osi.ApplyStatus(Liam3, "MMM_LIAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Liam3, "MMM_LIAMRUNAWAY1")
+            Osi.ApplyStatus(Liam3, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Liam3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -443,7 +453,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Mike3, "Invulnerable", "", Mike3)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Mike3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
-            Osi.ApplyStatus(Mike3, "MMM_MIKERUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Mike3, "MMM_MIKERUNAWAY1")
+            Osi.ApplyStatus(Mike3, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Mike3, 66.855728149414, 54.294921875, -138.26065063477, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -458,10 +469,10 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
 end)
 
 
---Open item listener
+-- Open item listener
 -- Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
 --     if item == BODE then
---         print("BODE WORKING")
+--         -- print("BODE WORKING")
 --     end
 -- end)
 
@@ -491,16 +502,16 @@ end)
 --Saw something listener
 Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
     if character == RivingtonPatrol1 and Osi.IsTagged(targetcharacter, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
-        Osi.ApplyStatus(RivingtonPatrol1, "MMM_RIVINGTONPATROLSPEAK", 6, 1, "")
+        ApplyStatus_SpeakOverhead(RivingtonPatrol1, "MMM_RIVINGTONPATROLSPEAK")
     end
 end)
 
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
-    if status == "MMM_RIVINGTONSEAATTACK1" and
+    if status == "MMM_DETECTION_SAHUAGIN1" and
         Osi.GetFlag(Act3SeaCreatures1Flag, Null) == 0 then
         Osi.SetFlag(Act3SeaCreatures1Flag, Null, 0, 1)
-        Osi.RemoveStatus(SeaCreatureMound, "MMM_RIVINGTONSEADETECT1")
+        Osi.RemoveStatus(SeaCreatureMound, "MMM_DETECTION_SAHUAGIN1_AURA")
         local CWEntity = Ext.Entity.Get(SeaCreature101)
         local CWpos = CWEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
@@ -519,10 +530,10 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             SeaCreature1Attack()
         end)
     end
-    if status == "MMM_RIVINGTONSEAATTACK2" and
+    if status == "MMM_DETECTION_SAHUAGIN2" and
         Osi.GetFlag(Act3SeaCreatures2Flag, Null) == 0 then
         Osi.SetFlag(Act3SeaCreatures2Flag, Null, 0, 1)
-        Osi.RemoveStatus(SeaCreatureMound, "MMM_RIVINGTONSEADETECT2")
+        Osi.RemoveStatus(SeaCreatureMound, "MMM_DETECTION_SAHUAGIN2_AURA")
         local CWEntity = Ext.Entity.Get(SeaCreature201)
         local CWpos = CWEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do

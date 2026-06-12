@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --CTY_Main_A
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
@@ -6,7 +8,6 @@ local Adam3c = "MMM_THIEFTRIO3C_87dcbb53-0485-4790-855f-5a769f96e747"
 local Liam3c = "MMM_THIEFTRIO3C_68f5754e-5b91-4e46-882b-fad46244a787"
 local Mike3c = "MMM_THIEFTRIO3C_fdbdbf7b-1d48-4174-a6c0-3fc2101744f8"
 local TrioDemonKill = "S_END_PatrolGhoul_1f29a90a-af31-47c8-8216-e45d401a6628"
-
 
 --Mimic Chests
 --local Act3BChest1 = ""
@@ -20,10 +21,20 @@ local FEvil = "Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6"
 
 --Item List
 
-
 --Flags
 local InitiateAct3C = "MMM_Act3c_Initiate_"
 local Act3TrajectileJail = "MMM_Act3_TrajectileJail_75220041-b369-468a-a488-7fc3919dd231"
+
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
 
 --On Load
 local function InitiateMonstersBrainlands()
@@ -42,16 +53,11 @@ local function InitiateMonstersBrainlands()
     end
 end
 
-
-Ext.Events.SessionLoaded:Subscribe(function()
-end)
-
 --Prepared Boost
 Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -61,11 +67,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -108,9 +110,9 @@ end)
 
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
-    if status == "MMM_THIEFTRIOENDATTACK" and
+    if status == "MMM_DETECTION_THIEFTRIOEND" and
         Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
-        Osi.RemoveStatus(Liam3c, "MMM_THIEFTRIOENDDETECT")
+        Osi.RemoveStatus(Liam3c, "MMM_DETECTION_THIEFTRIOEND_AURA")
         Osi.OpenMessageBox(object, Osi.ResolveTranslatedString("hdeb59186gf202g4468gac92gf1542bae1d28"))
     end
 end)

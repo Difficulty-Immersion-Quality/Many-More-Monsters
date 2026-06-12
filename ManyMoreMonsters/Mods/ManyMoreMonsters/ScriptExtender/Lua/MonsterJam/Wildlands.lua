@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
 local Wyll = "S_Player_Wyll_c774d764-4a17-48dc-b470-32ace9ce447d"
@@ -154,6 +156,17 @@ local GoblinCrashTag = "MMM_Act1_GoblinCrash_8869085a-bea0-42b6-972d-0701c0365bd
 local DrowAmbush1Tag = "MMM_Act1_DrowAmbush1_98ec443f-1c41-42b9-851d-4437e955f74f"
 local DrowAmbush2Tag = "MMM_Act1_DrowAmbush2_8b9725a4-4845-471b-bad2-6ae657b4ac5e"
 local DrowAmbush3Tag = "MMM_Act1_DrowAmbush3_fcfcbe25-ff6b-4848-abec-2050bc896262"
+
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
 
 --Everything to run on first load
 local function InitiateMonsters()
@@ -795,8 +808,7 @@ local function ClumsyOof(Oof)
         Osi.ApplyStatus(Oof, "MMM_OOFDRUNK", 6, 1, Oof)
     elseif OofClumsySelector == 4 then
         Osi.ApplyStatus(Oof, "MMM_OOFBUMBLE", 6, 1, Oof)
-        -- TODO: Needs a custom spell with ogre throwing animation.
-        Osi.UseSpell(Oof, "Projectile_AlchemistFire", Oof)
+        Osi.UseSpell(Oof, "MMM_Projectile_AlchemistFire_Ogre", Oof)
     elseif OofClumsySelector == 5 then
         Osi.ApplyStatus(Oof, "MMM_OOFHAMSTRING", 6, 1, Oof)
     elseif OofClumsySelector == 6 then
@@ -804,25 +816,26 @@ local function ClumsyOof(Oof)
     end
 end
 
---Oof randomly slipping and getting up
+-- Oof randomly slipping and getting up
 -- local function TrippyOof()
 --     if (Osi.IsDead(Oof) == 0) then
 --         local OofSlipRoll = Ext.Math.Random(1, 6)
 --         if OofSlipRoll == 1 then
---             Osi.ApplyStatus(Oof, "PRONE_GREASE", 1, 1, Oof)
+--             Osi.ApplyStatus(Oof, "PRONE", 1, 1, Oof)
 --             Ext.Timer.WaitFor(2000, function()
---                 Osi.RemoveStatus(Oof, "PRONE_GREASE", "")
+--                 Osi.RemoveStatus(Oof, "PRONE", "")
 --             end)
 --         end
 --         Ext.Timer.WaitFor(8000, function()
 --             TrippyOof()
 --         end)
 --     elseif (Osi.IsDead(Oof) == 1) then
---         print("RIP Oof - Slipped and fell too many times")
+--         -- print("RIP Oof - Slipped and fell too many times.")
 --         return
 --     end
 -- end
 
+-- TODO: Funny dialogue for ex boyfriend and maybe the vanilla characters too?
 --Ex walks over to fight, ex and bf hate each other
 local function ItsComplicated()
     if ((Osi.IsDead(Buthir) == 0) and (Osi.IsOnStage(Bogsnap) == 0)) then
@@ -1046,7 +1059,7 @@ end
 --     end
 
 --     if Osi.IsInCombat(Mike1) == 0 then
---         Osi.ApplyStatus(Mike1, "MMM_MIKECOMBAT", 6, 1, "")
+--         ApplyStatus_SpeakOverhead(Mike1, "MMM_MIKECOMBAT")
 --         Ext.Timer.WaitFor(10000, function()
 --             -- Only repeat if still valid and not in combat
 --             if Osi.IsInCombat(Mike1) == 0 then
@@ -1055,7 +1068,6 @@ end
 --         end)
 --     end
 -- end
-
 
 --Counters
 Ext.Events.SessionLoaded:Subscribe(function()
@@ -1072,7 +1084,6 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -1082,11 +1093,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -1283,7 +1290,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Adam1, "Invulnerable", "", Adam1)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Adam1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
-            Osi.ApplyStatus(Adam1, "MMM_ADAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Adam1, "MMM_ADAMRUNAWAY1")
+            Osi.ApplyStatus(Adam1, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Adam1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -1302,7 +1310,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Liam1, "Invulnerable", "", Liam1)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Liam1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
-            Osi.ApplyStatus(Liam1, "MMM_LIAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Liam1, "MMM_LIAMRUNAWAY1")
+            Osi.ApplyStatus(Liam1, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Liam1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -1321,7 +1330,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Mike1, "Invulnerable", "", Mike1)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Mike1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
-            Osi.ApplyStatus(Mike1, "MMM_MIKERUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Mike1, "MMM_MIKERUNAWAY1")
+            Osi.ApplyStatus(Mike1, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Mike1, 166.20626831055, 4.8772296905518, 265.26229858398, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -1470,7 +1480,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
             (character == AmbushGob3)) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_EnsnaringStrike", targetcharacter)
-            Osi.ApplyStatus(targetcharacter, "SURPRISED", 1, 1, character)
+            Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
             Osi.RemoveStatus(AmbushGob1, "INVISIBLE", "")
             Osi.RemoveStatus(AmbushGob2, "INVISIBLE", "")
             Osi.RemoveStatus(AmbushGob3, "INVISIBLE", "")
@@ -1505,7 +1515,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
     if (character == DrowAssassin1) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
-            Osi.ApplyStatus(targetcharacter, "SURPRISED", 1, 1, character)
+            Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
             Osi.RemoveStatus(DrowAssassin1, "INVISIBLE", "")
         end
     end
@@ -1513,7 +1523,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
     if (character == DrowAssassin2) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
-            Osi.ApplyStatus(targetcharacter, "SURPRISED", 1, 1, character)
+            Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
             Osi.RemoveStatus(DrowAssassin2, "INVISIBLE", "")
         end
     end
@@ -1521,7 +1531,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
     if (character == DrowAssassin3) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
-            Osi.ApplyStatus(targetcharacter, "SURPRISED", 1, 1, character)
+            Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
             Osi.RemoveStatus(DrowAssassin3, "INVISIBLE", "")
         end
     end
@@ -1530,7 +1540,7 @@ end)
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     --Goblin Ambush
-    if status == "MMM_CRASHAMBUSH" then
+    if status == "MMM_DETECTION_CRASH" then
         if Osi.GetFlag(GoblinCrashFlag, Null) == 0 then
             if Osi.IsTagged(object, GoblinCrashTag) == 0 then
                 Osi.SetTag(object, GoblinCrashTag)
@@ -1542,7 +1552,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         end
     end
     --Drow Ambush 1
-    if status == "MMM_DROWAMBUSH1" then
+    if status == "MMM_DETECTION_DROW1" then
         if Osi.GetFlag(DrowAmbush1Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush1Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush1Tag)
@@ -1553,7 +1563,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             end
         end
     end
-    -- if status == "MMM_DROWAMBUSH1" then
+    -- if status == "MMM_DETECTION_DROW1" then
     --     if DrowAmbush1 == 0 then
     --         DrowAmbush1 = DrowAmbush1 + 1;
     --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Hard_831e1fbe-428d-4f4d-bd17-4206d6efea35", 0, "DROWROLL1")
@@ -1562,7 +1572,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     end
     -- end
     --Drow Ambush 2
-    if status == "MMM_DROWAMBUSH2" then
+    if status == "MMM_DETECTION_DROW2" then
         if Osi.GetFlag(DrowAmbush2Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush2Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush2Tag)
@@ -1573,7 +1583,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             end
         end
     end
-    -- if status == "MMM_DROWAMBUSH2" then
+    -- if status == "MMM_DETECTION_DROW2" then
     --     if DrowAmbush2 == 0 then
     --         DrowAmbush2 = DrowAmbush2 + 1;
     --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL2")
@@ -1582,7 +1592,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     end
     -- end
     --Drow Ambush 3
-    if status == "MMM_DROWAMBUSH3" then
+    if status == "MMM_DETECTION_DROW3" then
         if Osi.GetFlag(DrowAmbush3Flag, Null) == 0 then
             if Osi.IsTagged(object, DrowAmbush3Tag) == 0 then
                 Osi.SetTag(object, DrowAmbush3Tag)
@@ -1593,7 +1603,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             end
         end
     end
-    -- if status == "MMM_DROWAMBUSH3" then
+    -- if status == "MMM_DETECTION_DROW3" then
     --     if DrowAmbush3 == 0 then
     --         DrowAmbush3 = DrowAmbush3 + 1;
     --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DROWROLL3")
@@ -1602,7 +1612,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     end
     -- end
     --DUERGAR Army 1
-    if status == "MMM_DUERGARMARCH1" then
+    if status == "MMM_DETECTION_DUERGAR1" then
         if Osi.GetFlag(DuergarMarchFlag, Null) == 0 then
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
                 local DuergarTag = entity.Uuid.EntityUuid
@@ -1617,7 +1627,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             Osi.SetFlag(DuergarMarchFlag, Null, 0, 1)
         end
     end
-    -- if status == "MMM_DUERGARMARCH1" then
+    -- if status == "MMM_DETECTION_DUERGAR1" then
     --     if DuergarMarch == 0 then
     --         DuergarMarch = DuergarMarch + 1;
     --         DUERGARARMYMARCH1()
@@ -1626,7 +1636,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     end
     -- end
     --DUERGAR Army 2
-    if status == "MMM_DUERGARMARCH2" then
+    if status == "MMM_DETECTION_DUERGAR2" then
         if Osi.GetFlag(DuergarMarchFlag, Null) == 0 then
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
                 local DuergarTag = entity.Uuid.EntityUuid
@@ -1641,7 +1651,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
             Osi.SetFlag(DuergarMarchFlag, Null, 0, 1)
         end
     end
-    -- if status == "MMM_DUERGARMARCH2" then
+    -- if status == "MMM_DETECTION_DUERGAR2" then
     --     if DuergarMarch == 0 then
     --         DuergarMarch = DuergarMarch + 1;
     --         Osi.RequestPassiveRoll(object, cause, "", "Perception", "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "DUERGARROLL2")
@@ -1655,11 +1665,12 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
         LolthEvent()
     end
     --Bulette Eggs
-    if status == "MMM_BULETTETRIGGER" then
+    if status == "MMM_DETECTION_BULETTE" then
         BULETTEHATCH()
     end
 end)
 
+-- TODO: Shouldn't they just be hidden instead of Invisible? (This is based on vanilla stuff and Invisible is used there... but is that good enough?)
 --Roll listener
 Ext.Osiris.RegisterListener("RollResult", 6, "after",
     function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
@@ -1669,7 +1680,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
                 Osi.RemoveStatus(AmbushGob1, "INVISIBLE", "")
                 Osi.RemoveStatus(AmbushGob2, "INVISIBLE", "")
                 Osi.RemoveStatus(AmbushGob3, "INVISIBLE", "")
-                Osi.RemoveStatus(AmbushGob3, "MMM_CRASHDETECT", "")
+                Osi.RemoveStatus(AmbushGob3, "MMM_DETECTION_CRASH_AURA", "")
                 Osi.SetFlag(GoblinCrashFlag, Null, 0, 1)
             elseif resultType == 0 then
                 return
@@ -1677,7 +1688,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         --Set Drow 1 Ambush Result
         if eventName == "DROWROLL1" then
-            Osi.RemoveStatus(DrowAssassin1, "MMM_DROWDETECT1", "")
+            Osi.RemoveStatus(DrowAssassin1, "MMM_DETECTION_DROW1_AURA", "")
             if resultType == 1 then
                 Osi.RemoveStatus(DrowAssassin1, "INVISIBLE", "")
                 Osi.SetFlag(DrowAmbush1Flag, Null, 0, 1)
@@ -1687,7 +1698,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         --Set Drow 2 Ambush Result
         if eventName == "DROWROLL2" then
-            Osi.RemoveStatus(DrowAssassin2, "MMM_DROWDETECT2", "")
+            Osi.RemoveStatus(DrowAssassin2, "MMM_DETECTION_DROW2_AURA", "")
             if resultType == 1 then
                 Osi.RemoveStatus(DrowAssassin2, "INVISIBLE", "")
                 Osi.SetFlag(DrowAmbush2Flag, Null, 0, 1)
@@ -1697,7 +1708,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         --Set Drow 3 Ambush Result
         if eventName == "DROWROLL3" then
-            Osi.RemoveStatus(DrowAssassin3, "MMM_DROWDETECT3", "")
+            Osi.RemoveStatus(DrowAssassin3, "MMM_DETECTION_DROW3_AURA", "")
             if resultType == 1 then
                 Osi.RemoveStatus(DrowAssassin3, "INVISIBLE", "")
                 Osi.SetFlag(DrowAmbush3Flag, Null, 0, 1)
@@ -1707,8 +1718,8 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         --Set DUERGAR 1 Result
         if eventName == "DUERGARROLL1" then
-            Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
-            Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
+            Osi.RemoveStatus(DuergarTrigger1, "MMM_DETECTION_DUERGAR1_AURA", "")
+            Osi.RemoveStatus(DuergarTrigger2, "MMM_DETECTION_DUERGAR2_AURA", "")
             if resultType == 1 then
                 ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
                 PrepareDuration = 24;
@@ -1719,8 +1730,8 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         --Set DUERGAR 2 Result
         if eventName == "DUERGARROLL2" then
-            Osi.RemoveStatus(DuergarTrigger1, "MMM_DUERGARDETECT1", "")
-            Osi.RemoveStatus(DuergarTrigger2, "MMM_DUERGARDETECT2", "")
+            Osi.RemoveStatus(DuergarTrigger1, "MMM_DETECTION_DUERGAR1_AURA", "")
+            Osi.RemoveStatus(DuergarTrigger2, "MMM_DETECTION_DUERGAR2_AURA", "")
             if resultType == 1 then
                 ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
                 PrepareDuration = 30;

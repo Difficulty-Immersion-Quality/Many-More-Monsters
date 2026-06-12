@@ -1,0 +1,18 @@
+// ==================================== Prepared ====================================
+// Called as PreparedBoost() in lua files when succeeding rolls against ambushes etc.
+
+new entry "MMM_PREPARED"
+type "StatusData"
+data "StatusType" "BOOST"
+// Prepared
+data "DisplayName" "h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0;1"
+// You are prepared for what is coming, granting a +4 bonus to Initiative and a +2 bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.
+data "Description" "hae54701cg5d50g4932ga129g9af1d6b498fc;1"
+data "Icon" "Spell_Enchantment_Bless"
+data "SoundLoop" "Spell_Status_Buff_MO"
+data "StackId" "MMM_PREPARED"
+data "Boosts" "RollBonus(Attack,2);Initiative(4)"
+data "StatusGroups" "SG_RemoveOnRespec"
+data "StatusEffect" "61fe31f9-ae4b-4926-a033-e56ea67c7d92"
+data "ManagedStatusEffectType" "Positive"
+data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"

@@ -24,6 +24,12 @@ data "DisplayName" "h685ff502g32cbg47b2g8a69ga9eeff1a6669;1"
 // The best way to run away.
 data "Description" "he30eef3fg2928g459bg87d1gc5fb3822eb7e;1"
 
+new entry "MMM_IGNOREAOO"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+data "StatusGroups" "SG_Ignore_AOO"
+
 // ==================================== Mikey "Wiggles" Pridgen
 
 new entry "MMM_Target_HOOKSHOT"
@@ -37,7 +43,7 @@ data "TargetRadius" "18"
 // data "SpellRoll" "SpellAutoResolveOnAlly(Ability.Dexterity,16, true)"
 data "SpellRoll" "SpellAutoResolveOnAlly(Ability.Dexterity, CalculateSpellDC(Ability.Strength, context.Source), true)"
 // data "SpellSuccess" "Force(-11,TargetToOrigin);IF(not Ally()):DealDamage(3d8,Bludgeoning)"
-data "SpellSuccess" "Force(-11,TargetToEntity);IF(not Ally()):DealDamage(1d8,Bludgeoning)"
+data "SpellSuccess" "Force(11,TargetToEntity);IF(not Ally()):DealDamage(1d8,Bludgeoning)"
 // Hookshot
 data "DisplayName" "h9319d7c9g2adfg4df9g81f5g50e327fa3b2d;1"
 // Pull an entity towards you with great force.
@@ -143,6 +149,31 @@ data "Boosts" "Tag(VFX_RAGE);UnlockSpell(Shout_EndRage)"
 // data "DynamicAnimationTag" "b6aa23c3-c96d-42d5-8ffa-8d441d18faa7"
 data "DynamicAnimationTag" ""
 
+new entry "MMM_Projectile_AlchemistFire_Ogre"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_Explosion_Trap"
+using "Projectile_AlchemistFire"
+// data "SpellProperties" "GROUND:CreateSurface(3,3,Fire);ApplyStatus(BURNING,100,3)"
+// data "AreaRadius" "3"
+// data "ExplodeRadius" "3"
+// data "SpellRoll" ""
+// data "SpellSuccess" ""
+// data "SpellFail" ""
+// data "Trajectories" "f71831cc-7102-407a-90a3-83f136e14e42,ae43da09-7aa5-0841-4ba5-bb7d0c1bf2bb,263a4eb1-0255-fde2-2b27-f10b0fe2de94"
+// // Alchemist's Fire
+// data "DisplayName" "ha2493cf0g0d68g4af6gaff9g7fd83d70f902;1"
+// // Hurl a flask of liquid fire that explodes on impact.
+// data "Description" "h568f6bb9g9b54g4c28g9909gba5598630258;2"
+// data "TooltipDamageList" ""
+// data "TooltipAttackSave" ""
+// data "TooltipOnSave" ""
+// data "UseCosts" "BonusActionPoint:1"
+// data "SpellFlags" "IsHarmful;CanAreaDamageEvade;DisplayInItemTooltip"
+// data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
+data "SpellAnimation" "e8075d90-9018-4b4a-8b2e-bab0cffe2fbd,,;f2803838-31cf-471b-85d1-92fa2d0eb7c2,,;4be0751c-9fca-4c35-9337-6bf8a321c516,,;86b52093-596c-4054-bb1d-2dbdfcdc4347,,;e1726462-6f35-4551-af40-5247a314f38d,,;,,;,,;,,;,,"
+// data "HitAnimationType" "MagicalDamage_External"
+
 new entry "MMM_OofClumsy"
 type "PassiveData"
 // Clumsy
@@ -156,10 +187,37 @@ type "StatusData"
 data "StatusType" "BOOST"
 // Such a Klutz!
 data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
-// Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.
+// Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and must succeed a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; after attacking, or fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
 data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
 data "Icon" "statIcons_Confused"
+data "TooltipSave" "Dexterity"
 data "Boosts" "IF(IsRangedAttack()):Disadvantage(AttackRoll)"
+data "Passives" "MMM_OofKlutz_Passive"
+data "StatsFunctorContext" "OnAttack"
+data "StatsFunctors" "ApplyStatus(MMM_OOFKLUTZ_TECHNICAL_APPLIER, 100, 0)"
+
+new entry "MMM_OofKlutz_Passive"
+type "PassiveData"
+// Such a Klutz!
+data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
+// Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and must succeed a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; after attacking, or fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnAttack"
+data "StatsFunctors" "ApplyStatus(SELF,MMM_OOFKLUTZ_TECHNICAL_APPLIER, 100, 0)"
+
+new entry "MMM_OOFKLUTZ_TECHNICAL_APPLIER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Such a Klutz!
+data "DisplayName" "hbb11e971g600bg4668ga6bag57e1543bf176;1"
+// Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and must succeed a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; after attacking, or fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+data "Description" "h1801b614g7200g423egaab7g0a55b26c9ebd;1"
+data "Icon" "statIcons_Confused"
+data "TooltipSave" "Dexterity"
+data "StatusPropertyFlags" "ExcludeFromPortraitRendering;InitiateCombat;DisablePortraitIndicator;DisableOverhead;DisableCombatlog"
+data "OnApplyRoll" "not SavingThrow(Ability.Dexterity,10)"
+data "OnApplySuccess" "ApplyStatus(PRONE, 100, 2)"
 
 new entry "MMM_OOFSLIPPED"
 type "StatusData"
@@ -1224,22 +1282,6 @@ data "SpellFlags" "IsEnemySpell;IsMelee;IsHarmful"
 data "SpellAnimationIntentType" "Aggressive"
 data "CastEffect" "937a72bb-2c7f-4446-a1d3-9e49227d984e"
 data "TargetEffect" "dc2d6fa3-5fe4-4aa0-bc5e-20213fd4e065"
-
-new entry "MMM_PREPARED"
-type "StatusData"
-data "StatusType" "BOOST"
-// Prepared
-data "DisplayName" "h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0;1"
-// You are prepared for what is coming, granting +4 Initiative and +2 Attack.
-data "Description" "hae54701cg5d50g4932ga129g9af1d6b498fc;1"
-data "Icon" "Spell_Enchantment_Bless"
-data "SoundLoop" "Spell_Status_Buff_MO"
-data "StackId" "MMM_PREPARED"
-data "Boosts" "RollBonus(Attack,2);Initiative(4)"
-data "StatusGroups" "SG_RemoveOnRespec"
-data "StatusEffect" "61fe31f9-ae4b-4926-a033-e56ea67c7d92"
-data "ManagedStatusEffectType" "Positive"
-data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
 
 new entry "MMM_SHADOWSHIELD"
 type "StatusData"

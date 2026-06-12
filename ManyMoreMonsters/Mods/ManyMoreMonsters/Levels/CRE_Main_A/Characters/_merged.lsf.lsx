@@ -980,7 +980,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_MOUNTAINDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_MOUNTAINBATTLEFIELD_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -1061,7 +1061,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_MOUNTAINDETECT2" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_MOUNTAINBATTLEFIELD2_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -2554,7 +2554,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_MOUNTAINDETECT3" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_MOUNTAINSHADOWCURSED_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -3070,14 +3070,14 @@
 			<!-- Zio -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="ranged_smart" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="bd0ca6ec-fdac-bbab-2c5f-b9f29be07eba" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="5dfc79a0-2b84-e99c-9be6-27068d498a16" />
 					<attribute id="CombatGroupID" type="FixedString" value="21c1ab35-ee53-4085-b783-5399f75116aa" />
 					<attribute id="DisplayName" type="TranslatedString" handle="hb3316416gb321g47e7gb7deg3b5bf964fade" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_HeavyCrossbow_StuddedLeather_Gith_MMM" />
 					<attribute id="Faction" type="guid" value="a51f68a3-e53a-4784-ba02-8d465b781646" />
 					<attribute id="Flag" type="int32" value="1" />
 					<attribute id="GeneratePortrait" type="LSString" value="Icon_Githyanki_Male" />
-					<attribute id="Icon" type="FixedString" value="bd0ca6ec-fdac-bbab-2c5f-b9f29be07eba-EQ_GLO_Voss_(Icon_Githyanki_Male)" />
+					<attribute id="Icon" type="FixedString" value="5dfc79a0-2b84-e99c-9be6-27068d498a16-EQ_Losiir_(Icon_Githyanki_Male)" />
 					<attribute id="IsLootable" type="bool" value="True" />
 					<attribute id="LevelName" type="FixedString" value="CRE_Main_A" />
 					<attribute id="LevelOverride" type="int32" value="5" />
@@ -4308,7 +4308,7 @@
 						</node>
 					</children>
 				</node>
-		<!-- 8.Something is watching you... -->
+		<!-- 8. Something is watching you... -->
 			<!-- Trigger Point -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCharacter" />
@@ -4363,7 +4363,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_GISHRADETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_GISHRA_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -6840,7 +6840,7 @@
 									<attribute id="Object" type="FixedString" value="DISINTEGRATE_DEATH" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DAWNMASTERDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DAWNMASTER_AURA" />
 								</node>
 							</children>
 						</node>

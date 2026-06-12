@@ -106,7 +106,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_THIEFTRIOBOSSDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_THIEFTRIOBOSS_AURA" />
 								</node>
 							</children>
 						</node>

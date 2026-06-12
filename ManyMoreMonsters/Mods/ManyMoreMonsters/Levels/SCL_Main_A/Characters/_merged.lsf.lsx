@@ -703,7 +703,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DRUIDSDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_UNDEADDRUIDS_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -1574,7 +1574,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_MEAZELSDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_MEAZELS_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -3444,7 +3444,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_BALTHAZARDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_BALTHAZAR_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -5049,7 +5049,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" />
+									<!-- <attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" /> -->
 								</node>
 							</children>
 						</node>
@@ -5167,7 +5167,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" />
+									<!-- <attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" /> -->
 								</node>
 							</children>
 						</node>
@@ -5383,7 +5383,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" />
+									<!-- <attribute id="Object" type="FixedString" value="GLO_PIXIESHIELD" /> -->
 								</node>
 							</children>
 						</node>
@@ -5468,7 +5468,7 @@
 									<attribute id="Object" type="FixedString" value="INVULNERABLE" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_THIEFTRIOPIXIEDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_THIEFTRIOPIXIE_AURA" />
 								</node>
 							</children>
 						</node>

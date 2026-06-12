@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
 local ShadowGithSouth1 = "MMM_SCGITH_SOUTHDOOR_46a41ea3-1788-411d-949f-a32c299d7d06"
@@ -145,6 +147,17 @@ local Act2AdamFlag = "MMM_Act2_Adam_f054a046-1bec-45b2-967c-a30cda09db62"
 local Act2LiamFlag = "MMM_Act2_Liam_e8712d83-3a05-4948-9934-f2842e5cf360"
 local Act2MikeFlag = "MMM_Act2_Mike_67d7b164-a43d-4c44-b64e-a5d449c02e8a"
 
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
+
 --On Load
 local function InitiateMonstersShadowlands()
     Osi.SetOnStage(HarperDruid1, 0)
@@ -195,13 +208,11 @@ local function ModifyMonstersShadowlands()
         Osi.SetOnStage(Adam2, 1)
         Osi.SetOnStage(Mike2, 1)
         Osi.SetOnStage(Liam2, 1)
+        -- TODO: Restore this pixie for the thief trio? For now they're just arbitrarily immune to the shadowcurse directly in their stat entries.
         -- Osi.SetOnStage(ThiefPixie, 1)
-        Osi.ApplyStatus(Adam2, "GLO_PIXIESHIELD", -1, 1, Adam2)
-        Osi.ApplyStatus(Mike2, "GLO_PIXIESHIELD", -1, 1, Mike2)
-        Osi.ApplyStatus(Liam2, "GLO_PIXIESHIELD", -1, 1, Liam2)
-        -- Osi.ApplyStatus(ThiefPixie, "GLO_PIXIESHIELD", -1, 1, ThiefPixie)
-        -- Osi.ApplyStatus(ThiefPixie, "INVULNERABLE", -1, 1, ThiefPixie)
-        -- Osi.ApplyStatus(ThiefPixie, "MMM_THIEFTRIOPIXIEDETECT", -1, 1, ThiefPixie)
+        -- Osi.ApplyStatus(Adam2, "GLO_PIXIESHIELD", -1, 1, Adam2)
+        -- Osi.ApplyStatus(Mike2, "GLO_PIXIESHIELD", -1, 1, Mike2)
+        -- Osi.ApplyStatus(Liam2, "GLO_PIXIESHIELD", -1, 1, Liam2)
     else
         Osi.SetOnStage(Adam2, 0)
         Osi.SetOnStage(Mike2, 0)
@@ -263,17 +274,17 @@ local function RaiseDruids()
         Osi.SetOnStage(HarperDruid1, 1)
         Osi.PlayEffect(HarperDruid1, "3c48f934-629d-0e94-4b6f-66f359cafb03", "", 2)
         Osi.SetOnStage(HarperDruidSkeleton1, 0)
-        Osi.ApplyStatus(HarperDruid1, "MMM_SHADOWDRUIDSPEAK1", 1)
+        ApplyStatus_SpeakOverhead(HarperDruid1, "MMM_SHADOWDRUIDSPEAK1")
         Ext.Timer.WaitFor(2000, function()
             Osi.SetOnStage(HarperDruid6, 1)
             Osi.PlayEffect(HarperDruid6, "3c48f934-629d-0e94-4b6f-66f359cafb03", "", 2)
             Osi.SetOnStage(HarperDruidSkeleton6, 0)
-            Osi.ApplyStatus(HarperDruid6, "MMM_SHADOWDRUIDSPEAK2", 1)
+            ApplyStatus_SpeakOverhead(HarperDruid6, "MMM_SHADOWDRUIDSPEAK2")
             Ext.Timer.WaitFor(1000, function()
                 Osi.SetOnStage(HarperDruid4, 1)
                 Osi.PlayEffect(HarperDruid4, "3c48f934-629d-0e94-4b6f-66f359cafb03", "", 2)
                 Osi.SetOnStage(HarperDruidSkeleton4, 0)
-                Osi.ApplyStatus(HarperDruid4, "MMM_SHADOWDRUIDSPEAK3", 1)
+                ApplyStatus_SpeakOverhead(HarperDruid4, "MMM_SHADOWDRUIDSPEAK3")
                 Ext.Timer.WaitFor(4000, function()
                     Osi.SetOnStage(HarperDruid3, 1)
                     Osi.PlayEffect(HarperDruid3, "3c48f934-629d-0e94-4b6f-66f359cafb03", "", 2)
@@ -323,7 +334,7 @@ local function BalthazarEventTown()
         Osi.SetOnStage(BalthazarEvent1, 1)
         Osi.PlayEffect(BalthazarEvent1, "3c48f934-629d-0e94-4b6f-66f359cafb03", "", 4)
         Ext.Timer.WaitFor(3000, function()
-            Osi.ApplyStatus(BalthazarEvent1, "MMM_BALTHAZARSPEAK1", 6, 1, BalthazarEvent1)
+            ApplyStatus_SpeakOverhead(BalthazarEvent1, "MMM_BALTHAZARSPEAK1")
             Ext.Timer.WaitFor(4000, function()
                 Osi.PlayEffectAtPosition("55015577-edce-13a7-bfc7-a71f41994b01", -19.632179260254, 27.7001953125,
                     217.4959564209, 1)
@@ -369,13 +380,13 @@ local function ZombieSpeakSelector1()
             if ZombieSpeakRoll1 == 1 then
                 ZombieSpeakSelector1()
             elseif ZombieSpeakRoll1 == 2 then
-                Osi.ApplyStatus(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT1", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT1")
                 ZombieSpeakSelector1()
             elseif ZombieSpeakRoll1 == 3 then
-                Osi.ApplyStatus(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT2", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT2")
                 ZombieSpeakSelector1()
             elseif ZombieSpeakRoll1 == 4 then
-                Osi.ApplyStatus(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT3", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie1, "MMM_ZOMBIESPEAKTEXT3")
                 ZombieSpeakSelector1()
             elseif ZombieSpeakRoll1 == 5 then
                 ZombieSpeakSelector1()
@@ -401,13 +412,13 @@ local function ZombieSpeakSelector2()
             if ZombieSpeakRoll2 == 1 then
                 ZombieSpeakSelector2()
             elseif ZombieSpeakRoll2 == 2 then
-                Osi.ApplyStatus(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT1", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT1")
                 ZombieSpeakSelector2()
             elseif ZombieSpeakRoll2 == 3 then
-                Osi.ApplyStatus(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT2", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT2")
                 ZombieSpeakSelector2()
             elseif ZombieSpeakRoll2 == 4 then
-                Osi.ApplyStatus(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT3", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie2, "MMM_ZOMBIESPEAKTEXT3")
                 ZombieSpeakSelector2()
             elseif ZombieSpeakRoll2 == 5 then
                 ZombieSpeakSelector2()
@@ -433,13 +444,13 @@ local function ZombieSpeakSelector3()
             if ZombieSpeakRoll3 == 1 then
                 ZombieSpeakSelector3()
             elseif ZombieSpeakRoll3 == 2 then
-                Osi.ApplyStatus(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT1", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT1")
                 ZombieSpeakSelector3()
             elseif ZombieSpeakRoll3 == 3 then
-                Osi.ApplyStatus(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT2", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT2")
                 ZombieSpeakSelector3()
             elseif ZombieSpeakRoll3 == 4 then
-                Osi.ApplyStatus(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT3", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie3, "MMM_ZOMBIESPEAKTEXT3")
                 ZombieSpeakSelector3()
             elseif ZombieSpeakRoll3 == 5 then
                 ZombieSpeakSelector3()
@@ -465,13 +476,13 @@ local function ZombieSpeakSelector4()
             if ZombieSpeakRoll4 == 1 then
                 ZombieSpeakSelector4()
             elseif ZombieSpeakRoll4 == 2 then
-                Osi.ApplyStatus(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT1", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT1")
                 ZombieSpeakSelector4()
             elseif ZombieSpeakRoll4 == 3 then
-                Osi.ApplyStatus(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT2", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT2")
                 ZombieSpeakSelector4()
             elseif ZombieSpeakRoll4 == 4 then
-                Osi.ApplyStatus(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT3", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie4, "MMM_ZOMBIESPEAKTEXT3")
                 ZombieSpeakSelector4()
             elseif ZombieSpeakRoll4 == 5 then
                 ZombieSpeakSelector4()
@@ -497,13 +508,13 @@ local function ZombieSpeakSelector5()
             if ZombieSpeakRoll5 == 1 then
                 ZombieSpeakSelector5()
             elseif ZombieSpeakRoll5 == 2 then
-                Osi.ApplyStatus(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT1", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT1")
                 ZombieSpeakSelector5()
             elseif ZombieSpeakRoll5 == 3 then
-                Osi.ApplyStatus(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT2", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT2")
                 ZombieSpeakSelector5()
             elseif ZombieSpeakRoll5 == 4 then
-                Osi.ApplyStatus(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT3", 1)
+                ApplyStatus_SpeakOverhead(BalthazarZombie5, "MMM_ZOMBIESPEAKTEXT3")
                 ZombieSpeakSelector5()
             elseif ZombieSpeakRoll5 == 5 then
                 ZombieSpeakSelector5()
@@ -556,7 +567,7 @@ end
 --Child Wraith Event
 local function ChildWraithEvent()
     Ext.Timer.WaitFor(1500, function()
-        Osi.ApplyStatus(ChildWraithKid, "MMM_CHILDWRAITHSPEAK1", 6, 1, ChildWraithKid)
+        ApplyStatus_SpeakOverhead(ChildWraithKid, "MMM_CHILDWRAITHSPEAK1")
         Ext.Timer.WaitFor(2500, function()
             Osi.PlayEffectAtPosition("55015577-edce-13a7-bfc7-a71f41994b01", 140.89486694336, 55.865234375,
                 65.303916931152, 1)
@@ -576,7 +587,7 @@ local function ReturnRingEvent()
     Osi.PlayLoopEffect(EllieMay, "ada1f190-ea49-4d38-a89a-3d86ccbafae9", "", 1)
     Osi.SetOnStage(EllieMay, 1)
     Ext.Timer.WaitFor(2000, function()
-        Osi.ApplyStatus(EllieMay, "MMM_ELLIEMAYSPEAK1", 6, 1, EllieMay)
+        ApplyStatus_SpeakOverhead(EllieMay, "MMM_ELLIEMAYSPEAK1")
         Ext.Timer.WaitFor(3000, function()
             Osi.SetHasDialog(EllieMay, 1)
             for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
@@ -599,7 +610,7 @@ local function BalthazarEventMausoleum()
         local SkeletonSpawnAura = Osi.PlayLoopEffectAtPosition("05e6b214-4477-644e-5c88-ac9a488bdc1e", -155.55741882324,
             31.7490234375, 70.596000671387, 1)
         Ext.Timer.WaitFor(3000, function()
-            Osi.ApplyStatus(BalthazarEvent2, "MMM_BALTHAZARSPEAK2", 6, 1, BalthazarEvent1)
+            ApplyStatus_SpeakOverhead(BalthazarEvent2, "MMM_BALTHAZARSPEAK2")
             Ext.Timer.WaitFor(4000, function()
                 Osi.PlayEffectAtPosition("55015577-edce-13a7-bfc7-a71f41994b01", -155.74822998047, 31.6103515625,
                     64.118644714355, 1)
@@ -624,7 +635,7 @@ end
 --Pixie Talking
 -- local function PixieTalking()
 --     if Osi.IsOnStage(ThiefPixie) == 1 then
---         Osi.ApplyStatus(ThiefPixie, "MMM_THIEFPIXIESPEAK", 6, 1, "")
+--         ApplyStatus_SpeakOverhead(ThiefPixie, "MMM_THIEFPIXIESPEAK")
 --         Ext.Timer.WaitFor(10000, function()
 --             PixieTalking()
 --         end)
@@ -638,7 +649,6 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -648,11 +658,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -689,7 +695,7 @@ end)
 Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
     if object == SpiderKing and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 0 then
         Osi.SetFlag(Act2SpiderKingWave1Flag, Null, 0, 1)
-        Osi.ApplyStatus(SpiderKing, "MMM_MORESPIDERS", 1)
+        ApplyStatus_SpeakOverhead(SpiderKing, "MMM_MORESPIDERS")
         local SpiderKingSpawnMidCombat1 = Osi.CreateAt(SpiderKingSummon, 304.29098510742, 0.0283203125, -705.29028320312,
             0, 1, "")
         local SpiderKingSpawnMidCombat2 = Osi.CreateAt(SpiderKingSummon, 311.21820068359, 0.1220703125, -706.70056152344,
@@ -700,7 +706,7 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
             0, 1, "")
     elseif object == SpiderKing and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 1 and Osi.GetFlag(Act2SpiderKingWave2Flag, Null) == 0 then
         Osi.SetFlag(Act2SpiderKingWave2Flag, Null, 0, 1)
-        Osi.ApplyStatus(SpiderKing, "MMM_EVENMORESPIDERS", 1)
+        ApplyStatus_SpeakOverhead(SpiderKing, "MMM_EVENMORESPIDERS")
         local SpiderKingSpawnMidCombat1 = Osi.CreateAt(SpiderKingSummon, 304.29098510742, 0.0283203125, -705.29028320312,
             0, 1, "")
         local SpiderKingSpawnMidCombat2 = Osi.CreateAt(SpiderKingSummon, 311.21820068359, 0.1220703125, -706.70056152344,
@@ -742,7 +748,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Adam2, "Invulnerable", "", Adam2)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Adam2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
-            Osi.ApplyStatus(Adam2, "MMM_ADAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Adam2, "MMM_ADAMRUNAWAY1")
+            Osi.ApplyStatus(Adam2, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Adam2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -761,7 +768,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Liam2, "Invulnerable", "", Liam2)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Liam2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
-            Osi.ApplyStatus(Liam2, "MMM_LIAMRUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Liam2, "MMM_LIAMRUNAWAY1")
+            Osi.ApplyStatus(Liam2, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Liam2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -780,7 +788,8 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         Osi.AddBoosts(Mike2, "Invulnerable", "", Mike2)
         Ext.Timer.WaitFor(2000, function()
             Osi.CharacterMoveToPosition(Mike2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
-            Osi.ApplyStatus(Mike2, "MMM_MIKERUNAWAY1", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Mike2, "MMM_MIKERUNAWAY1")
+            Osi.ApplyStatus(Mike2, "MMM_IGNOREAOO", 60, 1, "")
             Ext.Timer.WaitFor(2500, function()
                 Osi.CharacterMoveToPosition(Mike2, -279.90866088867, -31.235313415527, -888.38409423828, "Sprint", "", 0)
                 Ext.Timer.WaitFor(4000, function()
@@ -797,13 +806,13 @@ end)
 --End Combat Listener
 Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combatGuid)
     if combatGuid == BaltZombieFightID then
-        Osi.ApplyStatus(GraveyardTorch1, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch2, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch3, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch4, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch5, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch6, "BURNING", -1)
-        Osi.ApplyStatus(GraveyardTorch7, "BURNING", -1)
+        Osi.ApplyStatus(GraveyardTorch1, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch2, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch3, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch4, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch5, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch6, "BURNING", -1, 1)
+        Osi.ApplyStatus(GraveyardTorch7, "BURNING", -1, 1)
     end
 end)
 
@@ -826,7 +835,7 @@ end)
 --Dialog Start Request listener
 Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)
     if target == EllieMay then
-        Osi.ApplyStatus(player, "MMM_ELLIEMAYBLESSING", -1)
+        Osi.ApplyStatus(player, "MMM_ELLIEMAYBLESSING", -1, 1)
         Osi.SetOnStage(EllieMay, 0)
     end
 end)
@@ -881,21 +890,21 @@ end)
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
     --Druid Trigger 1
-    if status == "MMM_DRUIDSMARCH1" then
+    if status == "MMM_DETECTION_UNDEADDRUIDS" then
         Osi.SetOnStage(HarperDruidTrigger1, 0)
         RaiseDruids()
     end
-    if status == "MMM_MEAZELSMARCH1" then
+    if status == "MMM_DETECTION_MEAZELS" then
         Osi.SetOnStage(MeazelAmbushTrigger, 0)
         MeazelsAmbush()
     end
-    if status == "MMM_BALTHAZARMARCH1" then
+    if status == "MMM_DETECTION_BALTHAZAR" then
         Osi.SetOnStage(BalthazerTrigger1, 0)
         BalthazarEventTown()
     end
-    if status == "MMM_THIEFTRIOPIXIEATTACK" and
+    if status == "MMM_DETECTION_THIEFTRIOPIXIE" and
         Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
-        Osi.ApplyStatus(ThiefPixie, "MMM_THIEFPIXIESPEAK2", 6, 1, ThiefPixie)
+        ApplyStatus_SpeakOverhead(ThiefPixie, "MMM_THIEFPIXIESPEAK2")
         Ext.Timer.WaitFor(3000, function()
             Osi.PlayEffect(ThiefPixie, "1b923cb2-133a-25bd-6cbf-f808ca1cb8d2", "", 1)
             Ext.Timer.WaitFor(500, function()

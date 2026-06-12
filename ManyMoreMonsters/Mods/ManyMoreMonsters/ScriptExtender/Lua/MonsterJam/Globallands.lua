@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 local Karlach = "S_Player_Karlach_2c76687d-93a2-477b-8b18-8a14b549304c"
 local Minsc = "S_Player_Minsc_0de603c5-42e2-4811-9dad-f652de080eba"
 local Minthara = "S_GOB_DrowCommander_25721313-0c15-4935-8176-9f134385451b"
@@ -10,6 +12,17 @@ local Wyll = "S_Player_Wyll_c774d764-4a17-48dc-b470-32ace9ce447d"
 local Shadowheart = "S_Player_ShadowHeart_3ed74f06-3c60-42dc-83f6-f034cb47c679"
 local MountainChicken = "MMM_CHICKENRUN_42bd9bf1-80d8-42ee-a9a1-312ce9e630a0"
 local MountainGob1 = "MMM_MOUNTAINGOBS_68304a4f-95ae-4a67-8626-5daf30725d5e"
+
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
 
 -- Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
 --     --Remove Ambush from enemies in combat

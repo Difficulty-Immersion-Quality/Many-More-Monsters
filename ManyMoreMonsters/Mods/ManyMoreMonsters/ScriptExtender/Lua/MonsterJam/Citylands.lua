@@ -1,3 +1,5 @@
+--  ==================================== Helpers ====================================
+
 --CTY_Main_A
 --Why did I make so many things oh god
 local Null = "NULL_00000000-0000-0000-0000-000000000000"
@@ -8,8 +10,6 @@ local Mike3b = "MMM_THIEFTRIO3B_ec5ff08f-47b0-4706-8d20-9c73709bd5c3"
 local Adam3j = "MMM_THIEFTRIO3J_0f33779b-7c84-48f1-aa29-0a574463f81a"
 local Liam3j = "MMM_THIEFTRIO3J_f9b0c0c8-a916-4a9a-9cf8-63754a60fda7"
 local Mike3j = "MMM_THIEFTRIO3J_15820d6d-6637-467d-850b-c13cc00fd654"
-
-
 
 --Mimic Chests
 local Act3BChest1 = "MMM_ACT3BCHEST_5adb8ba4-48c2-4b99-a10e-75832ca94dae"
@@ -62,6 +62,16 @@ local Act3MikeFlag = "MMM_Act3_Mike_73c1a7d3-f348-43e8-b689-7f17abb1b05a"
 local Act3TrajectileBoss = "MMM_Act3_TrajectileBoss_a0236dd5-ef47-4600-b988-d785c4cb056f"
 local Act3TrajectileJail = "MMM_Act3_TrajectileJail_75220041-b369-468a-a488-7fc3919dd231"
 
+-- Overhead dialogue helper
+local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
+    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
+        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
+    else
+        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
+    end
+end
+
+--  ==================================== Stuff ====================================
 
 --On Load
 local function InitiateMonstersCitylands()
@@ -103,17 +113,17 @@ local function CreateAct3BMimics()
     for _, PossibleMimic in ipairs(Act3BChestList) do
         local IsItAMimic = Ext.Utils.Random(1, 5)
         if IsItAMimic == 1 then
-            print("Mimic")
+            -- print("Mimic")
             Osi.ApplyStatus(PossibleMimic, "MMM_MIMIC3B", -1, 1, PossibleMimic)
         elseif IsItAMimic == 2 then
-            print("Not a mimic, chest not hidden")
+            -- print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 3 then
-            print("Not a mimic, chest not hidden")
+            -- print("Not a mimic, chest not hidden")
         elseif IsItAMimic == 4 then
-            print("Not a mimic, chest hidden")
+            -- print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         elseif IsItAMimic == 5 then
-            print("Not a mimic, chest hidden")
+            -- print("Not a mimic, chest hidden")
             Osi.SetOnStage(PossibleMimic, 0)
         end
     end
@@ -140,9 +150,9 @@ end
 
 --Team Trajectile Boss
 local function TeamTrajectileBoss()
-    Osi.ApplyStatus(Mike3b, "MMM_TRAJECTILEBOSSSPEAK", 6, 1, "")
+    ApplyStatus_SpeakOverhead(Mike3b, "MMM_TRAJECTILEBOSSSPEAK")
     Ext.Timer.WaitFor(1500, function()
-        Osi.ApplyStatus(Liam3b, "MMM_TRAJECTILEBOSSSPEAK2", 6, 1, "")
+        ApplyStatus_SpeakOverhead(Liam3b, "MMM_TRAJECTILEBOSSSPEAK2")
         Ext.Timer.WaitFor(1000, function()
             Osi.ApplyStatus(Adam3b, "MMM_TEAMTRAJECTILEBLASTOFF", -1, 1, "")
             Osi.ApplyStatus(Liam3b, "MMM_TEAMTRAJECTILEBLASTOFF", -1, 1, "")
@@ -152,7 +162,7 @@ local function TeamTrajectileBoss()
 end
 
 local function TeamTrajectileLoss()
-    Osi.ApplyStatus(Mike3b, "MMM_TRAJECTILEBOSSSPEAK3", 6, 1, "")
+    ApplyStatus_SpeakOverhead(Mike3b, "MMM_TRAJECTILEBOSSSPEAK3")
     Ext.Timer.WaitFor(3200, function()
         Osi.UseSpellAtPosition(Adam3b, "MMM_Shout_MassDimensionDoor", -1.0690089464188, 24.9501953125, 777.80303955078, 1)
         Osi.UseSpellAtPosition(Liam3b, "MMM_Shout_MassDimensionDoor", -1.0690089464188, 24.9501953125, 777.80303955078, 1)
@@ -173,13 +183,13 @@ end
 
 --Prison Break
 local function PrisonBreak()
-    Osi.ApplyStatus(Liam3j, "MMM_TRAJECTILEJAILSPEAK2", 6, 1, "")
+    ApplyStatus_SpeakOverhead(Liam3j, "MMM_TRAJECTILEJAILSPEAK2")
     Osi.SetFlag(Act3TrajectileJail, Null, 0, 1)
     Ext.Timer.WaitFor(500, function()
         Osi.CharacterMoveToPosition(Adam3j, -1256.0815429688, 5.4235373681877, 742.35620117188, "Sprint", "", 0)
         Osi.CharacterMoveToPosition(Liam3j, -1256.0815429688, 5.4235373681877, 742.35620117188, "Sprint", "", 0)
         Ext.Timer.WaitFor(2000, function()
-            Osi.ApplyStatus(Mike3j, "MMM_TRAJECTILEJAILSPEAK3", 6, 1, "")
+            ApplyStatus_SpeakOverhead(Mike3j, "MMM_TRAJECTILEJAILSPEAK3")
             Osi.CharacterMoveToPosition(Mike3j, -1256.0815429688, 5.4235373681877, 742.35620117188, "Sprint", "", 0)
             Ext.Timer.WaitFor(4000, function()
                 Osi.SetOnStage(Adam3j, 0)
@@ -195,7 +205,6 @@ Ext.Events.SessionLoaded:Subscribe(function()
     PrepareDuration = 0
 end)
 
--- Leaving as documentation of abandoned feature we may wanna pick up
 local function PreparedBoost()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDprepared = v.Uuid.EntityUuid
@@ -205,11 +214,7 @@ local function PreparedBoost()
     end
 end
 
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
--------------------------------------------LISTENERS-----------------------------------------------------
----------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------
+--  ==================================== Listeners ====================================
 
 --What to run on loading level
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
@@ -263,11 +268,11 @@ end)
 
 --Status Applied listener
 Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, status, cause, storyActionID)
-    if status == "MMM_THIEFTRIOBOSSATTACK" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
+    if status == "MMM_DETECTION_THIEFTRIOBOSS" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
         TeamTrajectileBoss()
     end
     
-    if status == "MMM_THIEFTRIOJAILATTACK" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 and Osi.GetFlag(Act3TrajectileJail, Null) == 0 then
-        Osi.ApplyStatus(Adam3j, "MMM_TRAJECTILEJAILSPEAK", 6, 1, "")
+    if status == "MMM_DETECTION_THIEFTRIOJAIL" and Osi.IsTagged(object, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 and Osi.GetFlag(Act3TrajectileJail, Null) == 0 then
+        ApplyStatus_SpeakOverhead(Adam3j, "MMM_TRAJECTILEJAILSPEAK")
     end
 end)

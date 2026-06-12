@@ -6,7 +6,7 @@
 			<children>
 <!-- Upper City -->
 	<!-- Team Trajectile - Finale -->
-		<!-- 2. Team Trajectile Event #5 -->
+		<!-- 3. Team Trajectile Event #7 -->
 			<!-- Mikey "Wiggles" Pridgen -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="DefaultCombat" />
@@ -180,7 +180,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_THIEFTRIOENDDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_THIEFTRIOEND_AURA" />
 								</node>
 							</children>
 						</node>

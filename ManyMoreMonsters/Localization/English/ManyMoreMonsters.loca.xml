@@ -155,10 +155,13 @@
 
 	<!-- ==================================== Statuses ==================================== -->
 
+	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
+	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting a +4 bonus to Initiative and a +2 bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+
 	<!-- "MMM_TEAMTRAJECTILEBLASTOFF" --> <content contentuid="h18b068aege3a3g42e7ga1a5gb506a2c348f5" version="1">Blast Off!</content>
 
 	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="hbb11e971g600bg4668ga6bag57e1543bf176" version="1">Such a Klutz!</content>
-	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+	<!-- "MMM_OOFKLUTZ" --> 	<content contentuid="h1801b614g7200g423egaab7g0a55b26c9ebd" version="1">Prone to messing everything up. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on ranged &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and must succeed a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; after attacking, or fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.</content>
 	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="hd4944a6bg7362g4af0g8411ga36d3e250148" version="1">Oof slipped!</content>
 	<!-- "MMM_OOFSLIPPED" --> 	<content contentuid="h6cd48362g053dg47d7ga763g48feba5bea03" version="1">Oof fell down and went boom! He is unable to use &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; to stand up.</content>
 	<!-- "MMM_OOFSPLINTER" --> 	<content contentuid="hc812dd94g799bg4234gbc06g7a32e176f90f" version="1">Oof got a splinter!</content>
@@ -192,9 +195,6 @@
 	<!-- "MMM_SUPER_SHADOWCURSE" --> <content contentuid="he382272ag1f07g482agb5b5gec7c480a231b" version="1">Something has caused this shadow-cursed being to infuse itself with the shadows.</content>
 
 	<!-- ==================================== Statuses - Unimplemented -->
-
-	<!-- "MMM_PREPARED" --> <content contentuid="h52f43a34gfdbdg4982gb1d3gf0cfe3308ff0" version="1">Prepared</content>
-	<!-- "MMM_PREPARED" --> <content contentuid="hae54701cg5d50g4932ga129g9af1d6b498fc" version="1">You are prepared for what is coming, granting +4 Initiative and +2 Attack.</content>
 
 	<!-- "" --> <content contentuid="h56e21dfdg3a15g476fg9c1eg728d2cf8641d" version="1">Damaged</content>
 	<!-- "" --> <content contentuid="he6731f16g3826g485cg8c1ag80da399c144e" version="1">Creature has been damaged in the crash.</content>
@@ -281,6 +281,8 @@
 
 	<!-- ==================================== Voice barks and overheads ==================================== -->
 
+	<!-- "MMM_SPEAKOVERHEAD_BLOCKED" --> <content contentuid="h31694ee4g7abfg487ag85a1g3c710d69d95f" version="1">Creature attempted to speak</content>
+
 	<!-- "MMM_ADAMCOMBAT" --> 	<content contentuid="h729ee576g4c45g49a9g93deg3f8770c64a99" version="1">"Hey fellas I found the hole!"</content>
 	<!-- "MMM_MIKECOMBAT" --> 	<content contentuid="h2da6da02gfe2eg4868gb8b5g1cbaf952e430" version="1">"Time to show you the Ultimate Hero!"</content>
 	<!-- "MMM_ADAMRUNAWAY1" --> <content contentuid="h36bab53ag8b42g4033ga00bgb7b6ec8b7d53" version="1">"You can't keep the ultimate hero down!"</content>
@@ -294,6 +296,9 @@
 	<!-- "MMM_HANDPUN4" --> 	<content contentuid="h041c13efg23c5g4331g9c9cg6b49c1ece889" version="1">"You're handling this fight very well!"</content>
 	<!-- "MMM_HANDPUN5" --> 	<content contentuid="h7bdcddc9g79acg42c1gba6dg2f1c9d6f2090" version="1">"I'm just a begger looking for hand outs!"</content>
 	<!-- "MMM_HANDPUN6" --> 	<content contentuid="h1df55517gf827g43a9gb23fg5da0a0ae7f53" version="1">"Don't worry about my pets, they're all right!"</content>
+
+	<!-- "CrechLands.lua: GondolaRoll" --> <content contentuid="hb8227ba6g2f82g424dga330gb3817681a77a" version="1">There are Gith on that Gondola! Prepare yourselves!</content>
+	<!-- "CrechLands.lua: GishraDetectRoll" --> <content contentuid="ha66b6be6g4799g4e71g97fag8eb6156541e6" version="1">I feel eyes staring at me...</content>
 
 	<!-- "MMM_CRECHEPRISONBREAK" --> <content contentuid="hd687428agad54g4f8fg87c4g96be185517d2" version="1">"Now's our chance, let's break out of here!"</content>
 

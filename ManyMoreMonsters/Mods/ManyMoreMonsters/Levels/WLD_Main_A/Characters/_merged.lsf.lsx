@@ -1411,7 +1411,7 @@
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_CRASHDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_CRASH_AURA" />
 								</node>
 							</children>
 						</node>
@@ -3788,6 +3788,7 @@
 					</children>
 				</node>
 	<!-- Emerald Grove -->
+		<!-- Bug: His loot counts as stealing after the fight. -->
 		<!-- 9. Oof the Clumsy Ogre joins the battle.  Yes, he's meant to randomly slip and fall over, he's clumsy. -->
 			<!-- Oof -->
 				<node id="GameObjects">
@@ -14460,7 +14461,7 @@
 									<attribute id="Object" type="FixedString" value="AMBUSHING" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DROWDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DROW1_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -14688,7 +14689,7 @@
 									<attribute id="Object" type="FixedString" value="AMBUSHING" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DROWDETECT2" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DROW2_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -14916,7 +14917,7 @@
 									<attribute id="Object" type="FixedString" value="AMBUSHING" />
 								</node>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DROWDETECT3" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DROW3_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -16055,7 +16056,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DUERGARDETECT1" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DUERGAR1_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -16136,7 +16137,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_DUERGARDETECT2" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_DUERGAR2_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -18868,7 +18869,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="MMM_BULETTEDETECT" />
+									<attribute id="Object" type="FixedString" value="MMM_DETECTION_BULETTE_AURA" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
