@@ -397,12 +397,12 @@ end
 local bearPatrolTolerance = 2
 
 local function BearPatrolAtB()
-    return
-        Osi.GetDistanceToPosition(MamaBear, -37.9689, 12.90234, 310.9056) < bearPatrolTolerance
+    if not MamaBear then return false end
+    return (Osi.GetDistanceToPosition(MamaBear, -37.9689, 12.90234, 310.9056) or 9999) < bearPatrolTolerance
 end
 
 function BearPatrolRouteA()
-    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0) then
+    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0 and Osi.IsTagged(MamaBear, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0) then
         Osi.CharacterMoveToPosition(MamaBear, -37.9689, 12.90234, 310.9056, "Walk", "", 0)
         local function WaitForB()
             if BearPatrolAtB() then
@@ -418,12 +418,12 @@ function BearPatrolRouteA()
 end
 
 local function BearPatrolAtA()
-    return
-        Osi.GetDistanceToPosition(MamaBear, -45.38582, 16.61328, 321.6407) < bearPatrolTolerance
+    if not MamaBear then return false end
+    return (Osi.GetDistanceToPosition(MamaBear, -45.38582, 16.61328, 321.6407) or 9999) < bearPatrolTolerance
 end
 
 function BearPatrolRouteB()
-    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0) then
+    if ((Osi.IsDead(MamaBear) == 0) and Osi.IsInCombat(MamaBear) == 0 and Osi.IsTagged(MamaBear, "e45d5440-4a29-42e1-845d-890ae8e82a63") == 0) then
         Osi.CharacterMoveToPosition(MamaBear, -45.38582, 16.61328, 321.6407, "Walk", "", 0)
         local function WaitForA()
             if BearPatrolAtA() then
