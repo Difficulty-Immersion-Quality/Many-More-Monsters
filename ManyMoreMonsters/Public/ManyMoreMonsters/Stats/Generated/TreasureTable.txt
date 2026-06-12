@@ -6,6 +6,7 @@ new treasuretable "MMM_QUESTIONABLETABLE1"
 new subtable "-1"
 object category "I_MMM_OBJ_QUESTIONABLETOWEL",1,0,0,0,0,0,0,0
 
+// TODO: Me no much likey vanilla overwrite stuff...
 new treasuretable "UND_KC_LavaElemental"
 CanMerge 1
 new subtable "5,1; 6,1; 7,1; 8,1;"

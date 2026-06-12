@@ -7894,6 +7894,7 @@
 					</children>
 				</node>
 		<!-- 24. Mama bear and baby bear crossing log, breadcrumb for people who didn't realize there's a passage there. -->
+			<!-- TODO: She can't get onto the log, and even destroying the log while a player is on there just teleports them. Could force her to jump to X and destroy it or something. -->
 			<!-- Mama Bear -->
 				<node id="GameObjects">
 					<attribute id="Archetype" type="FixedString" value="beast" />
@@ -7912,7 +7913,7 @@
 					<attribute id="Name" type="LSString" value="MMM_LOGBEAR" />
 					<attribute id="Stats" type="FixedString" value="MMM_LOGBEAR" />
 					<attribute id="SpellSet" type="FixedString" value="CommonBeastActions" />
-					<attribute id="StartCombatRange" type="float" value="9" />
+					<attribute id="StartCombatRange" type="float" value="18" />
 					<attribute id="TemplateName" type="FixedString" value="b2754d31-198e-4ae6-87ec-5399a3669639" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209017" />
@@ -7983,6 +7984,33 @@
 									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
 									<attribute id="ScoreModifier" type="float" value="1" />
 									<attribute id="Skill" type="FixedString" value="MMM_Shout_Bear_Enraged" />
+									<attribute id="SpellCastingAbility" type="uint8" value="0" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Skill">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="LearningStrategy" type="uint8" value="0" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="Skill" type="FixedString" value="Projectile_Jump_Owlbear" />
 									<attribute id="SpellCastingAbility" type="uint8" value="0" />
 									<attribute id="StartRound" type="int32" value="0" />
 									<children>
@@ -20720,7 +20748,6 @@
 					</children>
 				</node>
 		<!-- 42. Lava elemental unchanged but has a much, much better loot table so he's worth killing. -->
-		<!-- TODO: Me no much likey vanilla overwrite stuff... -->
 		<!-- 43. Optional - Break the tomb to unleash the Spirits of the Forge and upgrade Grym to Grym 2.0, making him harder to cheese. -->
 			<!-- Grym 2.0 -->
 				<node id="GameObjects">

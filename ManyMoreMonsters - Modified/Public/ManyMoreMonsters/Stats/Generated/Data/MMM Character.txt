@@ -433,7 +433,7 @@ data "Weight" "500"
 data "SoundSize" "Huge"
 data "SpellCastingAbility" "Constitution"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MMM_TrollRegen_Passive"
+data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision"
 // data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE"
 data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: OGRE_HARDCORE"
 // data "Progressions" "7fb161d6-9169-4555-ae5f-6862b76bb5b9" // MMM_NPC_Barbarian
@@ -991,7 +991,6 @@ data "ThunderResistance" "Immune"
 
 // ==================================== Grymforge
 // 42. Lava elemental unchanged but has a much, much better loot table so he's worth killing.
-// TODO: Me no much likey vanilla overwrite stuff...
 
 // ==================================== Grymforge ====================================
 // Boss #1: On the boat to Grymforge you must kill all the dwarves then wait 60 seconds.

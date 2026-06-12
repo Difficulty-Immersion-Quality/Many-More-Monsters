@@ -45,13 +45,13 @@ data "Icon" "Spell_Transmutation_Reduce"
 data "Properties" "IsHidden"
 data "Boosts" "ScaleMultiplier(0.10);ObjectSize(-3)"
 
-// TODO:
+// TODO: Make it not a scroll, like Scratch's Ball.
 new entry "MMM_OBJ_Scroll_SummonGrym"
 type "Object"
 using "_MagicScroll"
 data "RootTemplate" "ef4e5e37-6bf9-4f2b-83a3-9d7a4695ea3a"
 
-// TODO:
+// TODO: Edit?
 new entry "MMM_Target_GRYMMODELN"
 type "SpellData"
 data "SpellType" "Target"

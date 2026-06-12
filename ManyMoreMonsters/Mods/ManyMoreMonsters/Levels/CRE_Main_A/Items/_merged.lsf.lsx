@@ -177,8 +177,9 @@
 						</node>
 					</children>
 				</node>
-			<!-- TODO: -->
+			<!-- Roughly-Cut Ham -->
 				<node id="GameObjects">
+					<!-- A few coarse hairs still stick out of the skin on the knee. -->
 					<attribute id="Description" type="TranslatedString" handle="h054e36b4gc775g4f73gaabag3fb7c49802b5" version="1" />
 					<attribute id="DisplayName" type="TranslatedString" handle="h23d496b4gd798g495agba53g767c2b21ef10" version="1" />
 					<attribute id="Flag" type="int32" value="0" />

@@ -314,17 +314,6 @@ data "StatusPropertyFlags" "ForceOverhead;DisablePortraitIndicator"
 // ==================================== Forest ====================================
 // 17. Troll under the bridge miniboss, shouldn't aggro if you walk over bridge.
 // TODO: Could be much more RAW, but it could also look like a troll at all too.
-// TODO: Maybe the passive should apply the status if it isn't present, but meh.
-
-new entry "MMM_TrollRegen_Passive"
-type "PassiveData"
-// Troll Regeneration
-data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
-// The troll regains [1] at the start of its turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
-data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
-data "DescriptionParams" "RegainHitPoints(10)"
-data "Icon" "Spell_Transmutation_Regenerate"
-data "Properties" "Highlighted"
 
 new entry "MMM_TROLLREGEN"
 type "StatusData"
@@ -339,6 +328,17 @@ data "StackId" "MMM_TROLLREGEN"
 data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 data "TickType" "StartTurn"
 data "TickFunctors" "IF(not Dead() and HasHPPercentageWithoutTemporaryHPLessThan(100) and not Goon_HasBurningConditionOrTag() and not HasStatus('ACID')):RegainHitPoints(10)"
+data "Passives" "MMM_TrollRegen_Passive"
+
+new entry "MMM_TrollRegen_Passive"
+type "PassiveData"
+// Troll Regeneration
+data "DisplayName" "hceeb9d88gbfd8g4a8bga4ccg86c4a04b50be;1"
+// The troll regains [1] at the start of its turn.&lt;br&gt;&lt;br&gt;The troll cannot regenerate &lt;LSTag Tooltip="HitPoints"&gt;hit point&lt;/LSTag&gt; while afflicted with &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt; conditions.
+data "Description" "h6de58c84g59bdg4c44ga201gd83b446b728d;1"
+data "DescriptionParams" "RegainHitPoints(10)"
+data "Icon" "Spell_Transmutation_Regenerate"
+data "Properties" "Highlighted"
 
 // ==================================== Blighted Village ====================================
 // 21. Buthirs jealous ex Bogsnap is looking for her, and is there a suspicious sound coming from one of those barrels?

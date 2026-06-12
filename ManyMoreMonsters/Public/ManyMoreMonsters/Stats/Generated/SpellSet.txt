@@ -1241,8 +1241,8 @@ add spell "MMM_Shout_RAGE_OGRE"
 add spell "Throw_GOB_Ogre_Throw_TargetB"
 
 // ==================================== Kua-toa ====================================
-
 // TODO: Kua-toa don't have animations for half this shit right?
+
 // new spellset "CommonBeastActions"
 // add spell "Shout_Dash_NPC"
 new spellset "MMM_SPELLS_KUOTOA"
@@ -1254,7 +1254,6 @@ add spell "Target_Shove"
 // 
 add spell "Projectile_Net_Kuotoa"
 
-// TODO: animation checks
 new spellset "MMM_SPELLS_GREGG"
 add spell "Projectile_Jump_Frog"
 add spell "Shout_Dash_NPC"
