@@ -26,8 +26,8 @@ end
 
 -- Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function (object, combat)
 --     --Remove Ambush from enemies in combat
---     if Osi.HasActiveStatus(object, "AMBUSHING") then
---         Osi.RemoveStatus(object, "AMBUSHING")
+--     if Osi.HasActiveStatus(object, "MMM_AMBUSHING") then
+--         Osi.RemoveStatus(object, "MMM_AMBUSHING")
 --     end
 -- end)
 

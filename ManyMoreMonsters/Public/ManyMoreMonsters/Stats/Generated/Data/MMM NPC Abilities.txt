@@ -1,3 +1,23 @@
+// ==================================== Abmushing Characters ====================================
+
+new entry "MMM_AMBUSHING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AMBUSHING"
+// Ambushing
+// data "DisplayName" "h871422f0g69b6g473cgab59g9226b42304e6;1"
+// Affected entity will attack as soon as its enemies are within reach. It can only be spotted with a successful Perception <LSTag Tooltip="AbilityCheck">Check</LSTag>.
+// data "Description" "h84b93b77g6361g47e4g90b2g1ab7b644a3ea;3"
+// data "Icon" "statIcons_Ambushing"
+// data "StillAnimationType" "Sneaking"
+// data "StillAnimationPriority" "Sneaking"
+// data "StackId" "AMBUSH"
+// data "StackPriority" "0"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+// data "StatusEffect" "775effb7-aaf6-4324-9fbf-55f17ca98e60"
+data "RemoveConditions" "Combat()"
+data "RemoveEvents" "OnTurn"
+
 // ==================================== Team Trajectile ====================================
 
 new entry "MMM_TEAMTRAJECTILEBLASTOFF"

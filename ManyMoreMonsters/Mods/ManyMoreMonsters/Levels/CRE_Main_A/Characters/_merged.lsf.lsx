@@ -4581,7 +4581,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="AMBUSHING" />
+									<attribute id="Object" type="FixedString" value="MMM_AMBUSHING" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
@@ -4851,7 +4851,7 @@
 						<node id="StatusList">
 							<children>
 								<node id="Status">
-									<attribute id="Object" type="FixedString" value="AMBUSHING" />
+									<attribute id="Object" type="FixedString" value="MMM_AMBUSHING" />
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="INVISIBLE" />
