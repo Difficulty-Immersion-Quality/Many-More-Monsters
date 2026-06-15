@@ -88,6 +88,7 @@ new entry "MMM_DETECTION_DROW1"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_DETECTION_TEMPLATE"
+data "StatusPropertyFlags" ""
 
 new entry "MMM_DETECTION_DROW2_AURA"
 type "StatusData"
@@ -100,6 +101,7 @@ new entry "MMM_DETECTION_DROW2"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_DETECTION_TEMPLATE"
+data "StatusPropertyFlags" ""
 
 new entry "MMM_DETECTION_DROW3_AURA"
 type "StatusData"
@@ -112,6 +114,7 @@ new entry "MMM_DETECTION_DROW3"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_DETECTION_TEMPLATE"
+data "StatusPropertyFlags" ""
 
 // Act 1: 36. Duergar patrol.
 new entry "MMM_DETECTION_DUERGAR1_AURA"
