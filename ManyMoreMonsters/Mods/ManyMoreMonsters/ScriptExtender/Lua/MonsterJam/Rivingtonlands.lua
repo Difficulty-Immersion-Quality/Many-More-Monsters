@@ -559,6 +559,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
     function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
         if eventName == "SeaCreature1Roll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Osi.ShowNotification(roller, "You notice something moving in the water.")
                 PrepareDuration = 12
                 PreparedBoost()
@@ -568,6 +569,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         if eventName == "SeaCreature2Roll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Osi.ShowNotification(roller, "You notice something moving in the water.")
                 PrepareDuration = 12
                 PreparedBoost()
@@ -577,6 +579,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         end
         if eventName == "BODERoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Osi.ShowNotification(roller, "You see the book emitting magic.")
                 PrepareDuration = 12
                 PreparedBoost()
