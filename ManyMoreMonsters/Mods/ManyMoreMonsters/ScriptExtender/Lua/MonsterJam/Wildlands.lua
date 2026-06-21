@@ -1246,10 +1246,10 @@ end)
 --Use item listener
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     if item == GrymBossMarker then
-        Osi.OpenMessageBox(character, Osi.ResolveTranslatedString("ha8f76a2eg1158g4012g9c72ged0005babae3"))
+        OpenMessageBox(character, "MMM_BOSSMARKER_GRYM")
     end
     if item == RedDragonBossMarker then
-        Osi.OpenMessageBox(character, Osi.ResolveTranslatedString("hc88d706ag5390g41f9gbfe6gdc17d182da71"))
+        OpenMessageBox(character, "MMM_BOSSMARKER_JUVENILERED")
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC1") == 1 then
         TurnIntoMimic1(item, character)
