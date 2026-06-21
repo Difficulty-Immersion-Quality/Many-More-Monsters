@@ -317,6 +317,8 @@ KBSECTION
 IF
 DB_UND_AdamantineForge_AnvilDown(1)
 AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
 DB_PermaDefeated((CHARACTER)MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65)
 AND
 DB_State_Current(S_UND_AdamantineForge_Forge_7a42a62c-0352-4f94-bf72-b3809cc83a1d, "UND_AdamantineForge_Craft", _State)
@@ -371,50 +373,64 @@ PlatformMoveTo(S_LT_PLT_UND_AdamantineForgeAnvil_3cf9ac3b-49ee-4d8b-a192-b3de689
 // THEN
 // PROC_State_Progress(S_UND_AdamantineForge_Forge_7a42a62c-0352-4f94-bf72-b3809cc83a1d, "UND_AdamantineForge_Craft", "MoldMithralLava");
 
-// IF
-// DualEntityEvent(_Character, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6, "UND_AdamantineForge_LavaValve")
-// THEN
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character);
+IF
+DualEntityEvent(_Character, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6, "UND_AdamantineForge_LavaValve")
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+THEN
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character);
 
-// //REGION Filtering on what regime activated the valve
-// IF
-// UseStarted(_Character, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6)
-// AND
-// GetFlag(GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6, 0)
-// AND
-// IsTagged(_Character, HUMANOID_7fbed0d4-cabc-4a9d-804e-12ca6088a0a8, 1)
-// THEN
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, "Valve");
+//REGION Filtering on what regime activated the valve
+IF
+UseStarted(_Character, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
+GetFlag(GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57, S_UND_AdamantineForge_LavaValve_1e41fc87-86c8-415c-8090-2b79230f4ce6, 0)
+AND
+IsTagged(_Character, HUMANOID_7fbed0d4-cabc-4a9d-804e-12ca6088a0a8, 1)
+THEN
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, "Valve");
 
-// PROC
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character)
-// THEN
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, "");
-// //END_REGION
+PROC
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+THEN
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, "");
+//END_REGION
 
-// // If enemies already spawned once, just create lava
-// PROC
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character)
-// AND
-// DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies")
-// AND
-// NOT DB_UND_AdamantineForge_AdamantineForgeDialogOngoing(1)
-// THEN
-// PROC_UND_AdamantineForge_SpawnLava();
+// If enemies already spawned once, just create lava
+PROC
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
+DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM")
+AND
+NOT DB_UND_AdamantineForge_AdamantineForgeDialogOngoing(1)
+THEN
+PROC_UND_AdamantineForge_SpawnLava();
 
 PROC
 PROC_StateSet_Defeated((CHARACTER)MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 ConstellationTriggerInputSocket(S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, "A_True", S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, NULL_00000000-0000-0000-0000-000000000000);
 
 //Adamantine Golem is just coming onstage here.
 QRY
 QRY_SpeakerIsAvailableForDialogSlot(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, 1, 0, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 DB_NOOP(1);
 
 QRY
 QRY_SpeakerIsAvailableForDialogSlot(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, (DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, 1, 0, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 DB_NOOP(1);
 
@@ -432,29 +448,39 @@ DB_NOOP(1);
 // THEN
 // DB_NOOP(1);
 
-// PROC
-// PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, _)
-// AND
-// NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies")
-// THEN
-// ConstellationTriggerInputSocket(S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, "A_False", S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, NULL_00000000-0000-0000-0000-000000000000);
+PROC
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
+NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM")
+THEN
+ConstellationTriggerInputSocket(S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, "A_False", S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2e-48e9-9e38-af24cefee1d7, NULL_00000000-0000-0000-0000-000000000000);
 
 IF
-DialogStarted(UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _)
+// DialogStarted(UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _)
+DialogEnded(UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
-MMM_PROC_UND_AdamantineGolem_Spawn();
+PROC_UND_AdamantineGolem_Spawn_MMM();
 
 PROC
-MMM_PROC_UND_AdamantineGolem_Spawn()
+PROC_UND_AdamantineGolem_Spawn_MMM()
 THEN
+// SetOnStage(S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255, 0);
+SetOnStage(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 1);
 TeleportTo(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, S_UND_AdamantineForge_EnemySpawnPlace_b34cc3a4-e187-4311-87aa-eace542770da);
 AppearAt(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, S_UND_AdamantineForge_EnemySpawnPlace_b34cc3a4-e187-4311-87aa-eace542770da, 1, CUST_PipeSpawn_01_8d8d85a7-d520-4d47-b48d-b62466d2c662, "", 0);
-PlayAnimation(DEC_Ketheric_Giant_Forge_Grill_A_000_3ed7b5ff-a37e-4321-b592-01467e487bf5, CUST_PipeSpawn_Grate_01_Start_5c7b3f22-13da-47bd-ba62-d0905f6f3d43, "UND_AdamantineForge_Spawn_DoorOpen");
+// PlayAnimation(DEC_Ketheric_Giant_Forge_Grill_A_000_3ed7b5ff-a37e-4321-b592-01467e487bf5, CUST_PipeSpawn_Grate_01_Start_5c7b3f22-13da-47bd-ba62-d0905f6f3d43, "UND_AdamantineForge_Spawn_DoorOpen");
 
 IF
-DialogStarted(UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _)
+// DialogStarted(UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _)
+DialogEnded(UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
-MMM_PROC_UND_AdamantineGolem_Spawn();
+PROC_UND_AdamantineGolem_Spawn_MMM();
 
 // IF
 // DialogEnded(UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _ID)
@@ -467,41 +493,49 @@ MMM_PROC_UND_AdamantineGolem_Spawn();
 // PlayAnimation(DEC_Ketheric_Giant_Forge_Grill_A_000_3ed7b5ff-a37e-4321-b592-01467e487bf5, CUST_PipeSpawn_Grate_01_End_e9f38a59-ffd5-41e3-92e8-eed72a014f14, "UND_AdamantineForge_Spawn_DoorClosed");
 
 PROC
-PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, _)
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 AND
 IsOnStage(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 0)
 THEN
-NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies");
+NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM");
 
 PROC
-PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, "Valve")
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, "Valve")
 AND
-NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies")
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
+NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM")
 AND
 DB_PartyMembers(_Character)
 AND
 QRY_StartDialog_Fixed((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, (CHARACTER)MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, _Character)
 THEN
-DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies");
+DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM");
 PROC_GlobalSetFlagAndCache(UND_AdamantineForge_State_GolemSpawned_15052ed5-27d1-497c-bb70-bf19512f4943);
 
 PROC
-PROC_UND_AdamantineForge_SpawnEnemies((CHARACTER)_Character, _)
+PROC_UND_AdamantineForge_SpawnEnemies_MMM((CHARACTER)_Character, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 AND
 NOT DB_DialogName(UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _)
 AND
-QRY_OnlyOnce("UND_AdamantineForge_SpawnEnemies")
+QRY_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM")
 AND
 DB_PartyMembers(_Character)
 AND
 NOT QRY_StartDialog_Fixed((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, (CHARACTER)MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, _Character)
 THEN
-MMM_PROC_UND_AdamantineGolem_Spawn();
+// PROC_UND_AdamantineGolem_Spawn_MMM();
 PROC_GlobalSetFlagAndCache(UND_AdamantineForge_State_GolemSpawned_15052ed5-27d1-497c-bb70-bf19512f4943);
 PROC_UND_AdamantineForge_SpawnLava();
 
 PROC
 PROC_DialogFlagSetup((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 SetEntityEvent(S_UND_AdamantineForge_AiGridMarkerListener_On_c84302ab-ad53-4be3-9e96-4160bd8b8387, "UND_AdamantineForge_LavaWarningOn", 1);
 SetFlag(UND_AdamantineForge_Event_UsedLavaValve_8e8bc437-9702-0065-f7e1-0baefa443841, NULL_00000000-0000-0000-0000-000000000000, 0);
@@ -511,6 +545,8 @@ DB_UND_AdamantineForge_AdamantineForgeDialogOngoing(1);
 
 PROC
 PROC_DialogFlagSetup((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 SetEntityEvent(S_UND_AdamantineForge_AiGridMarkerListener_On_c84302ab-ad53-4be3-9e96-4160bd8b8387, "UND_AdamantineForge_LavaWarningOn", 1);
 ClearFlag(UND_AdamantineForge_Event_UsedLavaValve_8e8bc437-9702-0065-f7e1-0baefa443841, NULL_00000000-0000-0000-0000-000000000000, 0);
@@ -521,6 +557,8 @@ DB_UND_AdamantineForge_AdamantineForgeDialogOngoing(1);
 
 IF
 DialogEnded((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_TurnValve_ab4f9f21-4173-dc1f-ff94-47032efcacd1, _ID)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 SetVisible(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 1);
 SetDetached(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 0);
@@ -530,6 +568,8 @@ PROC_UND_AdamantineForge_SpawnLava();
 
 IF
 DialogEnded((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _ID)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 SetVisible(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 1);
 SetDetached(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 0);
@@ -601,11 +641,13 @@ PROC_UND_AdamantineForge_SpawnLava();
 
 IF
 EnteredCombat(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
-PROC_UND_AdamantineForge_ForceCombatJoin();
+PROC_UND_AdamantineForge_ForceCombatJoin_MMM();
 
 PROC
-PROC_UND_AdamantineForge_ForceCombatJoin()
+PROC_UND_AdamantineForge_ForceCombatJoin_MMM()
 AND
 DB_PartyMembers(_Character)
 AND
@@ -615,13 +657,15 @@ IsInTrigger(_Character, S_UND_AdamantineForge_OnPlatform_15a707a4-30b1-4c09-950d
 THEN
 EnterCombat(_Character, MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65);
 
-IF
-DialogEnded((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _ID)
-THEN
-DB_UND_AdamantineForge_QueuedEnemySpawnAD(1);
+// IF
+// DialogEnded((DIALOGRESOURCE)UND_CINE_AdamantineGolemSpawn_55192bdb-87e6-684c-14e7-acd12b23ce68, _ID)
+// THEN
+// DB_UND_AdamantineForge_QueuedEnemySpawnAD(1);
 
 IF
 TurnStarted((CHARACTER)_Player)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 AND
 DB_UND_AdamantineForge_QueuedEnemySpawnAD(1)
 AND
@@ -845,6 +889,8 @@ PROC_TryStartAD((DIALOGRESOURCE)UND_AdamantineForge_PAD_SpawnedEnemies_b9dde8e9-
 IF
 EntityEvent( _, "UND_AdamantineForge_MoveUp")
 AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
 DB_UND_AdamantineForge_PlatformDown(1)
 AND
 IsOnStage(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 0)
@@ -859,6 +905,8 @@ ConstellationTriggerInputSocket(S_UND_AdamantineForge_CONST_AndGate_823c37b5-7a2
 
 IF
 EntityEvent(_, "UND_AdamantineForge_MoveUp")
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 AND
 DB_UND_AdamantineForge_PlatformDown(1)
 AND
@@ -1046,6 +1094,8 @@ PROC_UND_AdamantineForge_MovementAnimations(-1);
 IF
 TurnStarted((CHARACTER)_Player)
 AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
 DB_UND_AdamantineForge_QueuedMephitAD(1)
 AND
 DB_Players(_Player)
@@ -1070,16 +1120,22 @@ PROC_TryStartAD((DIALOGRESOURCE)UND_AdamantineGolem_PAD_Mephits_dbc0966e-6b0a-2b
 
 IF
 StatusApplied(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, "UND_ADAMANTINEGOLEM_SUPERHEATED", _, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 DB_UND_AdamantineForge_ConstructSuperheated(1);
 
 IF
 StatusRemoved(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, "UND_ADAMANTINEGOLEM_SUPERHEATED", _, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 NOT DB_UND_AdamantineForge_ConstructSuperheated(1);
 
 IF
 StatusAttempt(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, "UND_ADAMANTINEFORGE_HAMMERHELPER", _, _)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 THEN
 PROC_UND_AdamantineForge_ProcessHit();
 
@@ -1148,6 +1204,8 @@ PROC_UND_AdamantineForge_ProcessHit();
 IF
 EnteredCombat(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, _Fight)
 AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
 DB_UND_AdamantineGolem_LastFight(_LastFight)
 THEN
 NOT DB_UND_AdamantineGolem_LastFight(_LastFight);
@@ -1155,6 +1213,8 @@ DB_UND_AdamantineGolem_LastFight(_Fight);
 
 IF
 DB_PermaDefeated(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65)
+AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
 AND
 DB_UND_AdamantineGolem_LastFight(_LastFight)
 AND
@@ -1295,11 +1355,13 @@ ObjectTimerLaunch(_Player, "UND_AdamantineForge_VB_Victory", 2500);
 IF
 PlatformMovementFinished(S_PLT_UND_AdamantineForge_2a38bf22-eb9f-484c-b874-aa1b4ae0e5b9, "UND_AdamantineForge_TestCombat")
 AND
+GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0000-0000-000000000000, 1)
+AND
 GetHostCharacter(_Character)
 THEN
-NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies");
+NOT DB_OnlyOnce("UND_AdamantineForge_SpawnEnemies_MMM");
 Resurrect(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, NULL_00000000-0000-0000-0000-000000000000, 0);
-PROC_UND_AdamantineForge_SpawnEnemies(_Character);
+PROC_UND_AdamantineForge_SpawnEnemies_MMM(_Character);
 
 // IF
 // TextEvent("UND_AdamantineForge_Hammer")

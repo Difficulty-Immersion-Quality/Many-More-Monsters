@@ -150,6 +150,7 @@ local Act1AdamFlag = "MMM_Act1_Adam_f050757b-cfae-4301-a745-dcb73d4b6de7"
 local Act1LiamFlag = "MMM_Act1_Liam_88ad30aa-c051-403b-914b-47b3ddd5da53"
 local Act1MikeFlag = "MMM_Act1_Mike_ab0233fc-f112-4778-8dd7-da9cad510a63"
 local OofFlag = "MMM_Act1_Oof_70df2597-5bd3-409a-ba68-b1206849e010"
+local GrymFlag = "MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2"
 
 --Tags
 local GoblinCrashTag = "MMM_Act1_GoblinCrash_8869085a-bea0-42b6-972d-0701c0365bd0"
@@ -1280,6 +1281,9 @@ Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, character
     end
     if item == RedDragonBossMarker then
         Osi.SetOnStage(JuvDragon, 1)
+    end
+    if item == GrymBossMarker then
+        Osi.SetFlag(GrymFlag, Null, 0, 1)
     end
 end)
 
