@@ -20766,6 +20766,7 @@
 					<attribute id="SpellSet" type="FixedString" value="" />
 					<attribute id="Stats" type="FixedString" value="UND_AdamantineGolem" />
 					<attribute id="TemplateName" type="FixedString" value="fb70bad0-9438-47c3-84dc-d9c6718ca4c5" />
+					<!-- Eternal Protector of the Forge -->
 					<attribute id="Title" type="TranslatedString" handle="h15baaecagc93eg4a69g8abfg5f73f1c8133f" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115209550692654" />

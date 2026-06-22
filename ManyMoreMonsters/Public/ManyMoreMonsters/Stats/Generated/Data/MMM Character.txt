@@ -714,6 +714,7 @@ data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 // ==================================== Risen Road
 // 33. Optional - Juvenile red dragon added to fight, awww he's just a baby.  Break a tomb on the road leading to the bridge to release him.
 // TODO: "CombatStartAttack"?
+// TODO: DR of 4 on tactician is a bit too high, should have it to 1/2 instead of 2/4.
 
 // Juvenile Red Dragon
 new entry "MMM_JUVENILERED"

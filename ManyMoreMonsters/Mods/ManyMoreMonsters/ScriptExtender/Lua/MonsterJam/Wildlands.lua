@@ -150,6 +150,7 @@ local Act1AdamFlag = "MMM_Act1_Adam_f050757b-cfae-4301-a745-dcb73d4b6de7"
 local Act1LiamFlag = "MMM_Act1_Liam_88ad30aa-c051-403b-914b-47b3ddd5da53"
 local Act1MikeFlag = "MMM_Act1_Mike_ab0233fc-f112-4778-8dd7-da9cad510a63"
 local OofFlag = "MMM_Act1_Oof_70df2597-5bd3-409a-ba68-b1206849e010"
+local GrymFlag = "MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2"
 
 --Tags
 local GoblinCrashTag = "MMM_Act1_GoblinCrash_8869085a-bea0-42b6-972d-0701c0365bd0"
@@ -779,6 +780,7 @@ end
 local function ZakrugReinforcements()
     Osi.PlaySound(Zakrug, "II_Quest_DEN_BattleHorn")
     Osi.PlayEffect(Zakrug, "a5b7b36f-8033-c0cb-4767-801ab6214323", "", 2)
+    -- TODO: Localise?
     Osi.ShowNotification(Osi.GetHostCharacter(), "Za'krug is calling reinforcements!")
 end
 
@@ -930,6 +932,7 @@ end
 
 --Lolth Event
 local function LolthEvent()
+    -- TODO: Localise?
     Osi.ShowNotification(Osi.GetHostCharacter(), "You dare to call upon Lolth?")
     Ext.Timer.WaitFor(3000, function()
         Osi.UseSpellAtPosition(LolthTrigger, "Projectile_Fireball", -16.75, 25.0751953125, -69.25)
@@ -1222,16 +1225,15 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
             ClumsyOof(Oof)
         end
 
-        if object == Grym2
-        and Osi.GetHitpoints(Grym2) <= 100
-        and Osi.IsOnStage(ForgeMephit1) == 0 then
-            Osi.SetOnStage(ForgeMephit1, 1)
-            Osi.SetOnStage(ForgeMephit2, 1)
-            Osi.SetOnStage(ForgeMephit3, 1)
-            Osi.SetOnStage(ForgeMephit4, 1)
-        end
+        -- if object == Grym2
+        -- and Osi.GetHitpoints(Grym2) <= 100
+        -- and Osi.IsOnStage(ForgeMephit1) == 0 then
+        --     Osi.SetOnStage(ForgeMephit1, 1)
+        --     Osi.SetOnStage(ForgeMephit2, 1)
+        --     Osi.SetOnStage(ForgeMephit3, 1)
+        --     Osi.SetOnStage(ForgeMephit4, 1)
+        -- end
     end)
-
 end)
 
 --Open item listener
@@ -1245,10 +1247,10 @@ end)
 --Use item listener
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     if item == GrymBossMarker then
-        Osi.OpenMessageBox(character, Osi.ResolveTranslatedString("ha8f76a2eg1158g4012g9c72ged0005babae3"))
+        OpenMessageBox(character, "MMM_BOSSMARKER_GRYM")
     end
     if item == RedDragonBossMarker then
-        Osi.OpenMessageBox(character, Osi.ResolveTranslatedString("hc88d706ag5390g41f9gbfe6gdc17d182da71"))
+        OpenMessageBox(character, "MMM_BOSSMARKER_JUVENILERED")
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC1") == 1 then
         TurnIntoMimic1(item, character)
@@ -1279,6 +1281,9 @@ Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, character
     end
     if item == RedDragonBossMarker then
         Osi.SetOnStage(JuvDragon, 1)
+    end
+    if item == GrymBossMarker then
+        Osi.SetFlag(GrymFlag, Null, 0, 1)
     end
 end)
 
@@ -1412,10 +1417,12 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         BoatkillCounter = 0
         Ext.Timer.WaitFor(30000, function()
             if WentPastGregg == 0 then
+                -- TODO: Localise?
                 Osi.ShowNotification(Osi.GetHostCharacter(), "You ever drink Bailey's from a shoe..?")
                 ThrowShoe()
                 Ext.Timer.WaitFor(30000, function()
                     if WentPastGregg == 0 then
+                        -- TODO: Localise?
                         Osi.ShowNotification(Osi.GetHostCharacter(), "I'm Ol' Gregg!")
                         Osi.PlayEffectAtPosition(OlGregg, -443.29486083984, 27.8359375, -523.27209472656, 2)
                         Osi.PlaySound(OlGregg, "Spell_Impact_Utility_Jump_L1to3")
@@ -1467,9 +1474,9 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             Osi.Die(ForgeGhost1, 0, Osi.GetHostCharacter(), 0, 1, 500)
             Osi.Die(ForgeGhost2, 0, Osi.GetHostCharacter(), 0, 1, 500)
             Osi.Die(Grym, 0, "", 0, 1, 500)
-            Osi.SetFlag("UND_AdamantineForge_State_GolemPermaDefeated_6e173bc8-a5ba-4052-a480-5222438a35d1", Null, 0, 1)
-            Osi.ClearFlag("GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57",
-                "S_UND_AdamantineForge_Lever_21e51504-13c0-49c2-93aa-dbc113503297", 0, 0)
+            -- Osi.SetFlag("UND_AdamantineForge_State_GolemPermaDefeated_6e173bc8-a5ba-4052-a480-5222438a35d1", Null, 0, 1)
+            -- Osi.ClearFlag("GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57",
+            --     "S_UND_AdamantineForge_Lever_21e51504-13c0-49c2-93aa-dbc113503297", 0, 0)
         end)
     end
 end)
@@ -1723,6 +1730,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
             Osi.RemoveStatus(DuergarTrigger1, "MMM_DETECTION_DUERGAR1_AURA", "")
             Osi.RemoveStatus(DuergarTrigger2, "MMM_DETECTION_DUERGAR2_AURA", "")
             if resultType == 1 then
+                -- TODO: Localise?
                 ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
                 PrepareDuration = 24;
                 PreparedBoost()
@@ -1735,6 +1743,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
             Osi.RemoveStatus(DuergarTrigger1, "MMM_DETECTION_DUERGAR1_AURA", "")
             Osi.RemoveStatus(DuergarTrigger2, "MMM_DETECTION_DUERGAR2_AURA", "")
             if resultType == 1 then
+                -- TODO: Localise?
                 ShowNotification(GetHostCharacter(), "You hear heavy footsteps approaching.")
                 PrepareDuration = 30;
                 PreparedBoost()
@@ -1745,6 +1754,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
         --Cave In Result
         if eventName == "CAVEINROLL" then
             if resultType == 1 then
+                -- TODO: Localise?
                 ShowNotification(GetHostCharacter(), "You hear something approaching, get ready!")
                 PrepareDuration = 24;
                 PreparedBoost()
@@ -1781,7 +1791,7 @@ Ext.Osiris.RegisterListener("WentOnStage", 2, "after", function(object, isOnStag
             return
         elseif Osi.IsDestroyed(GrymBossMarker) == 1 then
             Osi.SetOnStage(Grym, 0)
-            Osi.SetOnStage(Grym2, 1)
+            -- Osi.SetOnStage(Grym2, 1)
             Osi.SetOnStage(ForgeGhost1, 1)
             Osi.SetOnStage(ForgeGhost2, 1)
         end

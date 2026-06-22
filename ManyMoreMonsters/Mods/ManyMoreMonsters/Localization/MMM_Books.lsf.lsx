@@ -1,17 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <save>
-	<version major="4" minor="6" revision="0" build="1" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<version major="4" minor="6" revision="0" build="1" lslib_meta="v1,bswap_guids" />
 	<region id="TranslatedStringKeys">
 		<node id="TranslatedStringKeys">
 			<children>
 				<node id="TranslatedStringKey">
 					<!-- ሃዐ፱ ሠⶴዐ ዪቹልጋነ ፕⶴጎነ ነ፱ጮጮዐክነ ፱የዐክ ሃዐ፱ ፕⶴቹ ጎክነልፕጎል፪ረቹ ፕⶴጎዪነፕ ዐቻ ፕⶴቹ ርረዐጎነፕቹዪ ዐቻ ⶴዐዪክሃ ⶴቹረረ ፕዐ ቹሸፕዪልርፕ ቻዪዐጮ ሃዐ፱ ልረረ ሃዐ፱ዪ ረ፱ነፕ. -->
 					<attribute id="Content" type="TranslatedString" handle="h5705dcf9gd6b9g4277g92f6g783809657858" version="1" />
-					<!-- TODO: Is this really acceptable for the UUID field? -->
 					<attribute id="UUID" type="FixedString" value="MMM_BODE" />
 					<attribute id="Speaker" type="FixedString" value="" />
 					<attribute id="ExtraData" type="LSString" value="" />
-					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="Stub" type="bool" value="False" />
+				</node>
+				<node id="TranslatedStringKey">
+					<!-- Destroying this tombstone will anger the Spirits of the Forge.&lt;br&gt;&lt;br&gt;Turns on Grym's anti-cheese/hard mode. Killing Grym in this mode rewards you with a pet.&lt;br&gt;Note: the ghosts are supposed to be invulnerable, and they will die with Grym.&lt;br&gt;&lt;br&gt;This cannot be undone. Save prior to destroying this tombstone and attempting the encounter. -->
+					<attribute id="Content" type="TranslatedString" handle="ha8f76a2eg1158g4012g9c72ged0005babae3" version="1" />
+					<attribute id="UUID" type="FixedString" value="MMM_BOSSMARKER_GRYM" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="False" />
+				</node>
+				<node id="TranslatedStringKey">
+					<!-- Destroying this tombstone will summon a Juvenile Red Dragon alongside the Githyanki.&lt;br&gt;&lt;br&gt;This cannot be undone. Save prior to destroying this tombstone and attempting the encounter. -->
+					<attribute id="Content" type="TranslatedString" handle="hc88d706ag5390g41f9gbfe6gdc17d182da71" version="1" />
+					<attribute id="UUID" type="FixedString" value="MMM_BOSSMARKER_JUVENILERED" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Stub" type="bool" value="False" />
 				</node>
 			</children>
 		</node>

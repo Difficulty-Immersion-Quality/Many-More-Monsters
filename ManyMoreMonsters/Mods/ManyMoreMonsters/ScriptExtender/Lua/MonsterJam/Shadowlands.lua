@@ -919,6 +919,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
     function(eventName, roller, rollsubject, resultType, isActiveRoll, criticality)
         if eventName == "ChildWrathRoll" then
             if resultType == 1 then
+                -- TODO: Localise?
                 Osi.ShowNotification(roller, "You sense evil magic at work in the child.")
                 PrepareDuration = 12
                 PreparedBoost()

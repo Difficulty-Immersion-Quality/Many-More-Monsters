@@ -498,6 +498,7 @@ local function LathanderStealing()
     for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
         local charIDstealing = v.Uuid.EntityUuid
         if Osi.IsPlayer(charIDstealing) == 1 then
+            -- TODO: Localise?
             Osi.ShowNotification(charIDstealing, "You think you can just steal the Blood of Lathander?")
         end
     end
@@ -605,6 +606,7 @@ local function DawnmasterCheck()
                 Ext.Timer.WaitFor(100, function()
                     local DawnmasterBad = v.Uuid.EntityUuid
                     if Osi.IsPlayer(DawnmasterBad) == 1 then
+                        -- TODO: Localise?
                         Osi.ShowNotification(DawnmasterBad, "You are not worthy to gaze upon the Blood of Lathander")
                         Ext.Timer.WaitFor(2000, function()
                             Osi.SetFaction(Dawnmaster, "Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6")
@@ -619,6 +621,7 @@ local function DawnmasterCheck()
                 Ext.Timer.WaitFor(100, function()
                     local DawnmasterGood = v.Uuid.EntityUuid
                     if Osi.IsPlayer(DawnmasterGood) == 1 then
+                        -- TODO: Localise?
                         Osi.ShowNotification(DawnmasterGood, "You are worthy of the Blood of Lathander")
                         Ext.Timer.WaitFor(1000, function()
                             Osi.PlayEffect(Dawnmaster, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
