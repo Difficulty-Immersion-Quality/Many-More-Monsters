@@ -465,11 +465,12 @@ GetFlag(MMM_Act1_Grym_b9e53cf7-82ad-4717-8584-dcf83c8deec2, NULL_00000000-0000-0
 THEN
 PROC_UND_AdamantineGolem_Spawn_MMM();
 
+// TODO: Fucking Grym 2.0 still just loves to walk around on the stage while the cutscene is playing lmao.
 PROC
 PROC_UND_AdamantineGolem_Spawn_MMM()
 THEN
 // SetOnStage(S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255, 0);
-SetOnStage(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 1);
+// SetOnStage(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, 1);
 TeleportTo(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, S_UND_AdamantineForge_EnemySpawnPlace_b34cc3a4-e187-4311-87aa-eace542770da);
 AppearAt(MMM_GRYM2_a251f7c6-5a4e-49d9-984b-501c8a3aba65, S_UND_AdamantineForge_EnemySpawnPlace_b34cc3a4-e187-4311-87aa-eace542770da, 1, CUST_PipeSpawn_01_8d8d85a7-d520-4d47-b48d-b62466d2c662, "", 0);
 // PlayAnimation(DEC_Ketheric_Giant_Forge_Grill_A_000_3ed7b5ff-a37e-4321-b592-01467e487bf5, CUST_PipeSpawn_Grate_01_Start_5c7b3f22-13da-47bd-ba62-d0905f6f3d43, "UND_AdamantineForge_Spawn_DoorOpen");

@@ -1473,7 +1473,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             -- Osi.SetOnStage(ForgeGhost2, 0)
             Osi.Die(ForgeGhost1, 0, Osi.GetHostCharacter(), 0, 1, 500)
             Osi.Die(ForgeGhost2, 0, Osi.GetHostCharacter(), 0, 1, 500)
-            -- Osi.Die(Grym, 0, "", 0, 1, 500)
+            Osi.Die(Grym, 0, "", 0, 1, 500)
             -- Osi.SetFlag("UND_AdamantineForge_State_GolemPermaDefeated_6e173bc8-a5ba-4052-a480-5222438a35d1", Null, 0, 1)
             -- Osi.ClearFlag("GLO_Lever_State_Blocked_473cad6c-a161-43ca-b1ed-8f9d4cb5ea57",
             --     "S_UND_AdamantineForge_Lever_21e51504-13c0-49c2-93aa-dbc113503297", 0, 0)
