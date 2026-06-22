@@ -1790,6 +1790,7 @@ Ext.Osiris.RegisterListener("WentOnStage", 2, "after", function(object, isOnStag
         if Osi.IsDestroyed(GrymBossMarker) == 0 then
             return
         elseif Osi.IsDestroyed(GrymBossMarker) == 1 then
+            Osi.SetFlag(GrymFlag, Null, 0, 1)
             Osi.SetOnStage(Grym, 0)
             -- Osi.SetOnStage(Grym2, 1)
             Osi.SetOnStage(ForgeGhost1, 1)
