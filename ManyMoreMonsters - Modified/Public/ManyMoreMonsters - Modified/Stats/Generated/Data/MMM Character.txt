@@ -112,7 +112,7 @@ data "Vitality" "19"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
-data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE);StatusImmunity(KNOCKED_OUT)"
 // NPC_Fighter
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 // MMM_NPC_Fighter
@@ -134,7 +134,7 @@ data "Vitality" "19"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
-data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE);StatusImmunity(KNOCKED_OUT)"
 // NPC_Barbarian
 // data "Progressions" "56db8107-e04c-4fe3-94f3-fd4acd44cd4a"
 // MMM_NPC_Barbarian
@@ -151,7 +151,7 @@ data "Vitality" "16"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 // data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
-data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(ACT2_SHADOW_CURSE_IMMUNE);StatusImmunity(KNOCKED_OUT)"
 // NPC_Druid
 // data "Progressions" "7e76da16-650c-4a6e-85b0-f9e23a7f5a60"
 // MMM_NPC_Druid
