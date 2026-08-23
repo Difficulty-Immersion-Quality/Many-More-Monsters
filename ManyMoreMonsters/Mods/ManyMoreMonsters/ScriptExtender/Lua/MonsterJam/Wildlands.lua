@@ -784,18 +784,17 @@ local function ZakrugReinforcements()
     Osi.ShowNotification(Osi.GetHostCharacter(), "Za'krug is calling reinforcements!")
 end
 
+-- TODO: Oof will walk a good bit of the way but then teleport for the last little bit. Clean this up some, might just need to give him more movement speed resource or something.
 --Spawn Oof
 local function SpawnOof()
-    if (Osi.IsDead(Oof) == 0) then
+    if (Osi.IsDead(Oof) == 0) and (Osi.IsInCombat(Zevlor) == 1) then
         Osi.SetOnStage(Oof, 1)
         -- Osi.AppearOutOfSightTo(Oof, Wyll, BridgeTroll, 0, "", "OOFAPPEARED", 0)
         -- Osi.TeleportToPosition(Oof, 173.67250061035, 21.856609344482, 414.58654785156, OofTeleport, 0, 0, 0, 1, 1)
         Osi.SetFaction(Oof, FGoblinRaiders)
-        Ext.Timer.WaitFor(1000, function()
+        Ext.Timer.WaitFor(100, function()
             Osi.CharacterMoveToPosition(Oof, 200.31283569336, 24.947265625, 421.1086730957, "Run", "", 0)
-            Ext.Timer.WaitFor(2000, function()
-                Osi.SetHostileAndEnterCombat(FGoblinRaiders, FZevlor, Oof, Zevlor)
-            end)
+            Osi.SetHostileAndEnterCombat(FGoblinRaiders, FZevlor, Oof, Zevlor)
         end)
     end
 end
@@ -1082,6 +1081,7 @@ Ext.Events.SessionLoaded:Subscribe(function()
     DuergarMarch = 0
     MimicBoss = 0
     ZakrugReinforcementTrigger = 0
+    OofSpawnTrigger = 0
 end)
 
 --Prepared Boost
@@ -1158,24 +1158,6 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
         Osi.SetFaction(JuvDragon, FHGith)
         Osi.SetHostileAndEnterCombat(FHGith, FPlayer, JuvDragon, Osi.GetHostCharacter())
     end
-    --Za'krug sounding horn
-    if (object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d") then
-        Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
-            if (round == 2) then
-                ZakrugReinforcements()
-                Osi.SetFlag(OofFlag, Null, 0, 1)
-            end
-        end)
-    end
-    --Oof Spawns round 3
-    if object == "S_DEN_GoblinRaider_Captain_22d80f21-7f31-4240-b981-9137d53ad77d" then
-        Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
-            if (round == 3) and Osi.GetFlag(OofFlag, Null) == 1 then
-                SpawnOof()
-                -- TrippyOof()
-            end
-        end)
-    end
     --Set immunity for bugbear champ fight if no player
     if object == "MMM_BUGBEARCHALLENGER_46545754-5089-4e85-b34d-81395e5ebb44" then
         BugBearCombatID = combat
@@ -1215,6 +1197,28 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
     end
     if object == "MMM_FLAYERAMBUSH_75db3611-eca6-41b6-ac65-23a0efe7129c" then
         Osi.RemoveBoosts(AmbushID2, "StatusImmunity(BURNING)", 0, "", AmbushID2)
+    end
+end)
+
+-- Global round listener, alive from script load regardless of when combat started
+Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
+    -- Za'krug sounding horn (was nested in EnteredCombat, round 2)
+    if round == 2
+        and ZakrugReinforcementTrigger == 0
+        and Osi.IsDead(Zakrug) == 0
+        and Osi.IsInCombat(Zakrug) == 1 then
+        ZakrugReinforcements()
+        Osi.SetFlag(OofFlag, Null, 0, 1)
+        ZakrugReinforcementTrigger = 1
+    end
+
+    -- Oof spawn (was nested in EnteredCombat, round 3)
+    if round == 3
+        and Osi.GetFlag(OofFlag, Null) == 1
+        and OofSpawnTrigger == 0
+        and Osi.IsInCombat(Zevlor) == 1 then
+        SpawnOof()
+        OofSpawnTrigger = 1
     end
 end)
 
