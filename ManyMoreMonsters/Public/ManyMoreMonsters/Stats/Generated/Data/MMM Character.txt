@@ -2129,7 +2129,7 @@ data "Vitality" "82"
 
 new entry "MMM_ACT1MIMICSTATS"
 type "Character"
-using "_Monstrosity"
+using "Mimic"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 
