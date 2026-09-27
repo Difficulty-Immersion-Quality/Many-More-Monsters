@@ -4619,7 +4619,7 @@
 					<attribute id="StartCombatRange" type="float" value="2" />
 					<attribute id="Stats" type="FixedString" value="MMM_GITHRA_CASTER" />
 					<attribute id="TemplateName" type="FixedString" value="5cbeda78-32f3-43e9-b120-9189afc3db28" />
-					<attribute id="Title" type="TranslatedString" handle="" version="0" />
+					<!-- <attribute id="Title" type="TranslatedString" handle="" version="0" /> -->
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="145100350494343169" />
 					<children>

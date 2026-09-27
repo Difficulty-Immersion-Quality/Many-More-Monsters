@@ -3493,6 +3493,7 @@
 					<attribute id="Race" type="guid" value="02e5c59e-80e7-4176-a289-1d08699583f5" />
 					<attribute id="Stats" type="FixedString" value="SHA_Necromancer" />
 					<attribute id="TemplateName" type="FixedString" value="167ee470-5f36-4618-a423-b04f6d8dbbb2" />
+                    <!-- Commander of the Reborn Dead -->
 					<attribute id="Title" type="TranslatedString" handle="h094824d1g96cag4657gbe8age05aeebcdaa6" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540921856" />
@@ -3595,7 +3596,7 @@
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_BARBARIAN" />
 					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEBARBARIAN" />
 					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
+					<!-- <attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" /> -->
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
 					<children>
@@ -3662,7 +3663,7 @@
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_ROGUE" />
 					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEROGUE" />
 					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
+					<!-- <attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" /> -->
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144396663052566628" />
 					<children>
@@ -3885,7 +3886,7 @@
 					<attribute id="SpellSet" type="FixedString" value="MMM_LVL5_MONK" />
 					<attribute id="Stats" type="FixedString" value="MMM_BALTHAZARZOMBIEMONK" />
 					<attribute id="TemplateName" type="FixedString" value="5b2827cb-1cf9-4cd5-9b58-0f7eb4657f0c" />
-					<attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" />
+					<!-- <attribute id="Title" type="TranslatedString" handle="h9db59951gef15g4775gab79g709bcbb11853" version="1" /> -->
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
 					<children>
@@ -4832,6 +4833,7 @@
 					<attribute id="Race" type="guid" value="02e5c59e-80e7-4176-a289-1d08699583f5" />
 					<attribute id="Stats" type="FixedString" value="SHA_Necromancer" />
 					<attribute id="TemplateName" type="FixedString" value="167ee470-5f36-4618-a423-b04f6d8dbbb2" />
+                    <!-- Commander of the Reborn Dead -->
 					<attribute id="Title" type="TranslatedString" handle="h094824d1g96cag4657gbe8age05aeebcdaa6" version="1" />
 					<attribute id="Type" type="FixedString" value="character" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144537400540921856" />
