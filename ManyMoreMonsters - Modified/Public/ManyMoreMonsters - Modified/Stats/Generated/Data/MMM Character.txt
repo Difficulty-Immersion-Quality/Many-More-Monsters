@@ -1070,6 +1070,7 @@ data "ThunderResistance" "Immune"
 
 // ==================================== Grymforge ====================================
 // Boss #1: On the boat to Grymforge you must kill all the dwarves then wait 60 seconds.
+// TODO: The 99 Charisma is funny but also kind of insane.
 
 // Ol' Gregg
 new entry "MMM_OLGREGG"
@@ -1109,10 +1110,10 @@ using "MMM_DROWASSASSIN"
 data "Vitality" "66"
 // data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
-// // MMM_NPC_Rogue
+// MMM_NPC_Rogue
 // data "Progressions" "9d8a7e34-9e27-42a0-8403-4360c4faa877"
 // NPC_Rogue
-data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
+// data "Progressions" "532203c2-7bcb-4162-9a7c-2bb20e227a30"
 // MMM_NPC_Ranger
 // data "Progressions" "0538a004-947a-4277-be12-df60bc3f919a"
 // NPC_Ranger
@@ -2050,8 +2051,8 @@ data "Wisdom" "8"
 // data "Charisma" "5"
 data "Charisma" "8"
 // data "Vitality" "22"
-data "Vitality" "65"
-// data "Vitality" "49"
+// data "Vitality" "65"
+data "Vitality" "49"
 // data "XPReward" "c1d87aaa-7548-44da-b9dd-d17b027a3885"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d" 
 // data "PersonalStatusImmunities" "SG_Poisoned;BLEEDING;GAPING_WOUND;CHEST_TRAUMA;DAZED"
