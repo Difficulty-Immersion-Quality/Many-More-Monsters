@@ -468,6 +468,7 @@ new entry "MMM_CHILDWRAITHSPEAK1"
 type "StatusData"
 data "StatusType" "BOOST"
 using "MMM_SPEAKOVERHEAD_TEMPLATE"
+// "Mummy and daddy don't want to play anymore.  Will you play with me?"
 data "DisplayName" "ha7a913e7gc032g4447g9bd0g8fe86d05e35f;1"
 
 new entry "MMM_ELLIEMAYSPEAK1"
