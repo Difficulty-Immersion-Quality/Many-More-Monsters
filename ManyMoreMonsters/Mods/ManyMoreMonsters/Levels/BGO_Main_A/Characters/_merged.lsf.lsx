@@ -851,13 +851,12 @@
 				</node>
 	<!-- Well Shapeshifters -->
 		<!-- 5. Murdered Refugees. -->
-			<!-- TODO: These fuckers have a chance to have that unique key spawn on them pretty sure, gotta fix inheritence or whatever. -->
-			<!-- TODO: what the dawg name -->
+			<!-- Mozz -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_001" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="8aecfbf4-be70-8290-94fe-9141c8539b86" />
 					<attribute id="CombatGroupID" type="FixedString" value="50d0221a-1f12-418d-a469-ce1e90fd4a64" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h030db0dcg3bd0g4a3eg84e9gf3b00479a9c6" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h4c22e644gc76eg465dg8c00g75846677de4d" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_Shortsword" />
 					<attribute id="Faction" type="guid" value="66f98981-f44d-48e0-8b16-2bfff792a8ba" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -905,7 +904,7 @@
 										</node>
 									</children>
 								</node>
-								<node id="Item">
+								<!-- <node id="Item">
 									<attribute id="AIFlags" type="uint16" value="0" />
 									<attribute id="Amount" type="int32" value="1" />
 									<attribute id="CanBePickpocketed" type="bool" value="True" />
@@ -937,7 +936,7 @@
 											</children>
 										</node>
 									</children>
-								</node>
+								</node> -->
 							</children>
 						</node>
 						<node id="LayerList">
@@ -1059,13 +1058,13 @@
 						</node>
 					</children>
 				</node>
-			<!-- TODO: what the dawg name -->
+			<!-- Durr -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_002" />
 					<attribute id="Archetype" type="FixedString" value="melee" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="aa7f04b3-3818-3c1a-fe4f-b58b0d613fda" />
 					<attribute id="CombatGroupID" type="FixedString" value="50d0221a-1f12-418d-a469-ce1e90fd4a64" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h030db0dcg3bd0g4a3eg84e9gf3b00479a9c6" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h79189049g5cd3g45b3gb61egbda36a7502c0" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_HeavyCrossbow" />
 					<attribute id="Faction" type="guid" value="66f98981-f44d-48e0-8b16-2bfff792a8ba" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -1234,11 +1233,11 @@
 						</node>
 					</children>
 				</node>
-			<!-- TODO: what the dawg name -->
+			<!-- Zumm -->
 				<node id="GameObjects">
 					<attribute id="AnubisConfigName" type="FixedString" value="WYR_OpenHand_Shifter_003" />
 					<attribute id="CombatGroupID" type="FixedString" value="50d0221a-1f12-418d-a469-ce1e90fd4a64" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h030db0dcg3bd0g4a3eg84e9gf3b00479a9c6" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h1b46851agc73eg45c0gaeb5g9deba86b3513" version="1" />
 					<attribute id="Equipment" type="FixedString" value="EQP_Rapier" />
 					<attribute id="Faction" type="guid" value="66f98981-f44d-48e0-8b16-2bfff792a8ba" />
 					<attribute id="Flag" type="int32" value="1" />
@@ -1253,7 +1252,7 @@
 					<children>
 						<node id="ItemList">
 							<children>
-								<node id="Item">
+								<!-- <node id="Item">
 									<attribute id="AIFlags" type="uint16" value="0" />
 									<attribute id="Amount" type="int32" value="1" />
 									<attribute id="CanBePickpocketed" type="bool" value="True" />
@@ -1285,7 +1284,7 @@
 											</children>
 										</node>
 									</children>
-								</node>
+								</node> -->
 								<node id="Item">
 									<attribute id="AIFlags" type="uint16" value="0" />
 									<attribute id="Amount" type="int32" value="1" />
