@@ -21163,6 +21163,9 @@
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="DISINTEGRATE_DEATH" />
 								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MOD_SKIP_PROCESSING" />
+								</node>
 							</children>
 						</node>
 						<node id="Transform">
@@ -21251,6 +21254,9 @@
 								</node>
 								<node id="Status">
 									<attribute id="Object" type="FixedString" value="DISINTEGRATE_DEATH" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MOD_SKIP_PROCESSING" />
 								</node>
 							</children>
 						</node>
