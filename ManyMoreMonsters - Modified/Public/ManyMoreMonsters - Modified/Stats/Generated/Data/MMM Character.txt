@@ -2142,6 +2142,7 @@ data "Progressions" "878630d0-136a-4dc9-aa2a-a0a123d3a107"
 
 // ==================================== Shadow Cursed Lands - Moonrise Side
 // 13. Balthazar event #2.
+// TODO: Has a bunch of spells he probably can't even use because of BlockVerbalSpellcasting.
 
 // Necrofex
 new entry "MMM_BALTHAZARSKELETONBOSS"

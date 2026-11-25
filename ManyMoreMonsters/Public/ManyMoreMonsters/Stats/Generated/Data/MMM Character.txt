@@ -1057,8 +1057,6 @@ using "CRE_Githyanki_Captain"
 data "Vitality" "70"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "dba70c09-cec3-476b-94b1-ce86fe8b3e4d"
-// data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
-data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger;CX_Fighter_EldritchKnight_Boost;LAB_Progression_Fighter_EldritchKnight_Prep"
 // data "Progressions" ""
 // MMM_NPC_Wizard
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
@@ -1870,6 +1868,7 @@ data "Progressions" "25aa19d3-6aac-4deb-90b1-a185e062aedd"
 
 // ==================================== Shadow Cursed Lands - Moonrise Side
 // 13. Balthazar event #2.
+// TODO: Has a bunch of spells he probably can't even use because of BlockVerbalSpellcasting.
 
 // Necrofex
 new entry "MMM_BALTHAZARSKELETONBOSS"
@@ -1880,7 +1879,6 @@ data "Vitality" "146"
 // data "XPReward" "810b5510-6748-4c8e-bef0-d990880ed1dd"
 data "XPReward" "da583f81-32a6-4dec-95e7-f98893bfcfba"
 // data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-data "Passives" "AttackOfOpportunity;DarknessRules;BlockVerbalSpellcasting;ExtraAttack;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;CX_Fighter_Champion_Boost;LAB_Progression_Fighter_Champion_Prep"
 // MMM_NPC_Wizard
 data "Progressions" "bd2a1de0-d9bd-47d1-80f0-b4abb36611cb"
 
