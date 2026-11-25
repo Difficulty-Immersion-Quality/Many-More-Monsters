@@ -597,7 +597,7 @@ new entry "MMM_Dragon_Red_Retaliate_Juvenile"
 type "PassiveData"
 using "Dragon_Red_Retaliate"
 // data "Conditions" "Enemy() and HasStatus('DRAGON_RED_RETALIATE') and HasLastAttackTriggered() and not HasStatus('SG_Polymorph')"
-data "Conditions" "Enemy() and HasStatus('MMM_JUVENILERED_RETALIATE') and not HasStatus('SG_Polymorph')"
+data "Conditions" "Enemy() and HasStatus('MMM_JUVENILERED_RETALIATE') and HasLastAttackTriggered() and not HasStatus('SG_Polymorph')"
 // data "StatsFunctors" "UseSpell(SWAP,Projectile_FireballRetaliate_Dragon,true,true,true,,true)"
 data "StatsFunctors" "UseSpell(SWAP,MMM_Projectile_JUVENILERED_FIREBALL_Retaliate,true,true,true)"
 
