@@ -34,6 +34,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --On Load
@@ -79,17 +84,17 @@ end)
 
 --Dialog Start Request listener
 Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)
-    if target == Adam3c then
+    if UUID(target) == UUID(Adam3c) then
         Osi.AddPartyFollower(Adam3c, player)
         -- Osi.SetFlag(ActEndAdamFlag, Null, 0, 1)
         Osi.SetHasDialog(Adam3c, 0)
     end
-    if target == Liam3c then
+    if UUID(target) == UUID(Liam3c) then
         Osi.AddPartyFollower(Liam3c, player)
         -- Osi.SetFlag(ActEndLiamFlag, Null, 0, 1)
         Osi.SetHasDialog(Liam3c, 0)
     end
-    if target == Mike3c then
+    if UUID(target) == UUID(Mike3c) then
         Osi.AddPartyFollower(Mike3c, player)
         -- Osi.SetFlag(ActEndMikeFlag, Null, 0, 1)
         Osi.SetHasDialog(Mike3c, 0)

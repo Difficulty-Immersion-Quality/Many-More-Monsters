@@ -80,6 +80,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --On Load
@@ -398,7 +403,7 @@ end)
 
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combatGuid)
-    if object == Adam3 then
+    if UUID(object) == UUID(Adam3) then
         ApplyStatus_SpeakOverhead(Adam3, "MMM_ADAMCOMBAT")
     end
 end)
@@ -406,7 +411,7 @@ end)
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     --Team Trajectile
-    if character == Adam3 then
+    if UUID(character) == UUID(Adam3) then
         Osi.SetFlag(Act3AdamFlag, Null, 0, 1)
         Osi.SetCanFight(Adam3, 0)
         Osi.Resurrect(Adam3, "", 0)
@@ -426,7 +431,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Liam3 then
+    if UUID(character) == UUID(Liam3) then
         Osi.SetFlag(Act3LiamFlag, Null, 0, 1)
         Osi.SetCanFight(Liam3, 0)
         Osi.Resurrect(Liam3, "", 0)
@@ -446,7 +451,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Mike3 then
+    if UUID(character) == UUID(Mike3) then
         Osi.SetFlag(Act3MikeFlag, Null, 0, 1)
         Osi.SetCanFight(Mike3, 0)
         Osi.Resurrect(Mike3, "", 0)
@@ -478,7 +483,7 @@ end)
 
 --Character Looted
 Ext.Osiris.RegisterListener("CharacterLootedCharacter", 2, "after", function(player, lootedCharacter)
-    if lootedCharacter == RivingtonDeadChicken and
+    if UUID(lootedCharacter) == UUID(RivingtonDeadChicken) and
         Osi.GetFlag(Act3HillGiantFlag, Null) == 0 then
         Osi.SetFlag(Act3HillGiantFlag, Null, 0, 1)
         HillGiantAttack()
@@ -501,7 +506,7 @@ end)
 
 --Saw something listener
 Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
-    if character == RivingtonPatrol1 and Osi.IsTagged(targetcharacter, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
+    if UUID(character) == UUID(RivingtonPatrol1) and Osi.IsTagged(targetcharacter, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
         ApplyStatus_SpeakOverhead(RivingtonPatrol1, "MMM_RIVINGTONPATROLSPEAK")
     end
 end)
@@ -591,7 +596,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
 
 --Close Book listener
 Ext.Osiris.RegisterListener("GameBookInterfaceClosed", 2, "after", function(item, character)
-    if item == BODE then
+    if UUID(item) == UUID(BODE) then
         local CWEntity = Ext.Entity.Get(character)
         local CWpos = CWEntity.Transform.Transform.Translate
         for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do

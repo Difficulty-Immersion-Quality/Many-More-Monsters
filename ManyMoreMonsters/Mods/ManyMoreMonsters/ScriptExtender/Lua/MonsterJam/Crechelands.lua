@@ -114,6 +114,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --Everything to run on load
@@ -656,7 +661,7 @@ local function DawnmasterExecution()
                     if distance <= 50 then
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
-                            if object == Dawnmaster and DawnmasterOff <= 1 then
+                            if UUID(object) == UUID(Dawnmaster) and DawnmasterOff <= 1 then
                                 Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_FlameStrike_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
@@ -679,7 +684,7 @@ local function DawnmasterExecution()
                     if distance <= 50 then
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
-                            if object == Dawnmaster and DawnmasterOff <= 1 then
+                            if UUID(object) == UUID(Dawnmaster) and DawnmasterOff <= 1 then
                                 Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
@@ -703,7 +708,7 @@ local function DawnmasterExecution()
                     if distance <= 50 then
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
-                            if object == Dawnmaster and DawnmasterOff <= 1 then
+                            if UUID(object) == UUID(Dawnmaster) and DawnmasterOff <= 1 then
                                 Osi.UseSpellAtPosition(Dawnmaster, "MMM_Target_FlameStrike_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
@@ -723,7 +728,7 @@ local function DawnmasterExecution()
                     if distance <= 50 then
                         local x, y, z = Osi.GetPosition(Playeruuid)
                         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
-                            if object == Dawnmaster and DawnmasterOff <= 1 then
+                            if UUID(object) == UUID(Dawnmaster) and DawnmasterOff <= 1 then
                                 Osi.UseSpellAtPosition(Dawnmaster, "MMM_Zone_Sunbeam_Lathander", x, y, z, 1)
                                 DawnmasterOff = DawnmasterOff + 1;
                             end
@@ -791,21 +796,21 @@ end)
 
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat)
-    if object == MountainGob1 then
+    if UUID(object) == UUID(MountainGob1) then
         MountainChickenTracker = MountainChickenTracker + 1;
         Osi.CharacterMoveToPosition(MountainChicken, -103.09066009521, 67.4404296875, -203.5530090332, "Sprint", "", 0)
         Ext.Timer.WaitFor(3000, function()
             Osi.SetOnStage(MountainChicken, 0)
         end)
     end
-    if object == DeathShephard then
+    if UUID(object) == UUID(DeathShephard) then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if round == 3 then
                 AbsoluteMarch()
             end
         end)
     end
-    if object == MadHandSorc then
+    if UUID(object) == UUID(MadHandSorc) then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if round == 1 then
                 MadHandPun1 = MadHandPun1 + 1;
@@ -830,7 +835,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
             end
         end)
     end
-    if object == CrecheCheckpoint then
+    if UUID(object) == UUID(CrecheCheckpoint) then
         Osi.SetFaction(Prisoner1, FAbsoluteUndead)
         Osi.SetFaction(Prisoner2, FAbsoluteUndead)
         Osi.SetFaction(Prisoner3, FAbsoluteUndead)
@@ -840,7 +845,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
         ApplyStatus_SpeakOverhead(Prisoner1, "MMM_CRECHEPRISONBREAK")
     end
     --Gondola Flag Set
-    if object == GithGondola1 then
+    if UUID(object) == UUID(GithGondola1) then
         Osi.SetFlag(GithGondolaFlag, Null, 0, 1)
     end
 end)
@@ -851,7 +856,7 @@ end)
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
     --Mad Hand Sorc
-    if object == MadHandSorc then
+    if UUID(object) == UUID(MadHandSorc) then
         if MadHandPun1 == 1 then
             ApplyStatus_SpeakOverhead(MadHandSorc, "MMM_HANDPUN5")
             Ext.Timer.WaitFor(3000, function()
@@ -893,7 +898,7 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
         end
     end
     --Dawnmaster
-    if object == Dawnmaster and Osi.GetHitpoints(Dawnmaster) <= 200 and DawnmasterOff == 0 then
+    if UUID(object) == UUID(Dawnmaster) and Osi.GetHitpoints(Dawnmaster) <= 200 and DawnmasterOff == 0 then
         DawnmasterOff = DawnmasterOff + 1;
         Osi.ApplyStatus(Dawnmaster, "MMM_LATHANDERSBLESSING", 12, 1, Dawnmaster)
         local DMEntity = Ext.Entity.Get(Dawnmaster)
@@ -929,28 +934,28 @@ end)
 
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
-    if character == SpiritualMonestary1 then
+    if UUID(character) == UUID(SpiritualMonestary1) then
         Osi.PlayEffect(SpiritualMonestary1, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
         Osi.SetOnStage(SpiritualMonestary1, 0)
     end
-    if character == SpiritualMonestary2 then
+    if UUID(character) == UUID(SpiritualMonestary2) then
         Osi.PlayEffect(SpiritualMonestary2, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
         Osi.SetOnStage(SpiritualMonestary2, 0)
     end
-    if character == SpiritualMonestary3 then
+    if UUID(character) == UUID(SpiritualMonestary3) then
         Osi.PlayEffect(SpiritualMonestary3, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
         Osi.SetOnStage(SpiritualMonestary3, 0)
     end
-    if character == SpiritualMonestary4 then
+    if UUID(character) == UUID(SpiritualMonestary4) then
         Osi.PlayEffect(SpiritualMonestary4, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
         Osi.SetOnStage(SpiritualMonestary4, 0)
     end
-    if character == Dawnmaster then
+    if UUID(character) == UUID(Dawnmaster) then
         Osi.PlayEffect(Dawnmaster, "b21ec9bd-5f35-446e-cc8f-5458962c118e", "", 2)
         Osi.SetOnStage(Dawnmaster, 0)
     end
     --Team Trajectile
-    if character == Adam1b then
+    if UUID(character) == UUID(Adam1b) then
         Osi.SetFlag(Act1bAdamFlag, Null, 0, 1)
         Osi.SetCanFight(Adam1b, 0)
         Osi.Resurrect(Adam1b, "", 0)
@@ -970,7 +975,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Liam1b then
+    if UUID(character) == UUID(Liam1b) then
         Osi.SetFlag(Act1bLiamFlag, Null, 0, 1)
         Osi.SetCanFight(Liam1b, 0)
         Osi.Resurrect(Liam1b, "", 0)
@@ -990,7 +995,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Mike1b then
+    if UUID(character) == UUID(Mike1b) then
         Osi.SetFlag(Act1bMikeFlag, Null, 0, 1)
         Osi.SetCanFight(Mike1b, 0)
         Osi.Resurrect(Mike1b, "", 0)
@@ -1099,7 +1104,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
             end
         end
         --Stealing Blood of Lathander thing
-        if rollsubject == "S_CRE_WeaponsPuzzle_HiddenDoor_5e2d9891-0dfb-4d00-9691-6ed69a50c58a" and
+        if UUID(rollsubject) == UUID("S_CRE_WeaponsPuzzle_HiddenDoor_5e2d9891-0dfb-4d00-9691-6ed69a50c58a") and
             resultType == 1 and
             isActiveRoll == 1 then
             LathanderStealing()
@@ -1120,7 +1125,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
 
 --Flag listener
 Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
-    if flag == "CRE_Exterior_State_FerryActive_6d076322-51c2-461f-bf29-8b44e4dca804" then
+    if UUID(flag) == UUID("CRE_Exterior_State_FerryActive_6d076322-51c2-461f-bf29-8b44e4dca804") then
         if Osi.GetFlag(GithGondolaFlag, Null) == 0 then
             GondolaDisembark()
             Osi.SetFlag(GithGondolaFlag, Null, 0, 1)
@@ -1152,7 +1157,7 @@ Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
     if event == "MMM_DAWNMASTER_TARGETINGF" then
         Osi.ApplyStatus(object, "MMM_AVOIDFLAMESTRIKE", -1, 1, "NULL_00000000-0000-0000-0000-000000000000")
         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object2)
-            if object2 == Dawnmaster then
+            if UUID(object2) == UUID(Dawnmaster) then
                 Osi.RequestDelete(object)
             end
         end)
@@ -1160,7 +1165,7 @@ Ext.Osiris.RegisterListener("EntityEvent", 2, "before", function(object, event)
     if event == "MMM_DAWNMASTER_TARGETINGS" then
         Osi.ApplyStatus(object, "MMM_AVOIDSUNBEAM", -1, 1, "NULL_00000000-0000-0000-0000-000000000000")
         Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object2)
-            if object2 == Dawnmaster then
+            if UUID(object2) == UUID(Dawnmaster) then
                 Osi.RequestDelete(object)
             end
         end)

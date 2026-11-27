@@ -71,6 +71,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --On Load
@@ -234,20 +239,20 @@ end)
 
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
-    if object == Adam3b and Osi.GetHitpoints(Adam3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
+    if UUID(object) == UUID(Adam3b) and Osi.GetHitpoints(Adam3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
         TeamTrajectileLoss()
     end
-    if object == Liam3b and Osi.GetHitpoints(Liam3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
+    if UUID(object) == UUID(Liam3b) and Osi.GetHitpoints(Liam3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
         TeamTrajectileLoss()
     end
-    if object == Mike3b and Osi.GetHitpoints(Mike3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
+    if UUID(object) == UUID(Mike3b) and Osi.GetHitpoints(Mike3b) <= 50 and Osi.GetFlag(Act3TrajectileBoss, Null) == 0 then
         TeamTrajectileLoss()
     end
 end)
 
 --Open item listener
 Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
-    if item == PrisonDoor and Osi.GetFlag(Act3TrajectileJail, Null) == 0 then
+    if UUID(item) == UUID(PrisonDoor) and Osi.GetFlag(Act3TrajectileJail, Null) == 0 then
         PrisonBreak()
     end
 end)

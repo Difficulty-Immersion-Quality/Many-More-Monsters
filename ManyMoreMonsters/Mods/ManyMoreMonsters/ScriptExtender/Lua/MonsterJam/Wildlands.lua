@@ -167,6 +167,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --Everything to run on first load
@@ -1130,36 +1135,36 @@ end)
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat)
     --Goblin Ambush Flag
-    if object == AmbushGob1 then
+    if UUID(object) == UUID(AmbushGob1) then
         Osi.SetFlag(GoblinCrashFlag, Null, 0, 1)
     end
     --Drow Ambush Flags
-    if object == DrowAssassin1 then
+    if UUID(object) == UUID(DrowAssassin1) then
         Osi.SetFlag(DrowAmbush1Flag, Null, 0, 1)
     end
-    if object == DrowAssassin2 then
+    if UUID(object) == UUID(DrowAssassin2) then
         Osi.SetFlag(DrowAmbush2Flag, Null, 0, 1)
     end
-    if object == DrowAssassin3 then
+    if UUID(object) == UUID(DrowAssassin3) then
         Osi.SetFlag(DrowAmbush3Flag, Null, 0, 1)
     end
     --Duergar Ambush Flags
-    if object == DArmyNecro then
+    if UUID(object) == UUID(DArmyNecro) then
         Osi.SetFlag(DuergarMarchFlag, Null, 0, 1)
     end
     --If using front of cave turn off backdoor
-    if object == Flind then
+    if UUID(object) == UUID(Flind) then
         Osi.SetOnStage(BackdoorGnoll1, 0)
         Osi.SetOnStage(BackdoorGnoll2, 0)
         Osi.SetOnStage(BackdoorGnoll3, 0)
     end
     --Change dragon faction if combat
-    if (object == "S_GLO_GithCaptain_27fa0802-fa38-4eea-9c03-496f2e022259") then
+    if (UUID(object) == UUID("S_GLO_GithCaptain_27fa0802-fa38-4eea-9c03-496f2e022259")) then
         Osi.SetFaction(JuvDragon, FHGith)
         Osi.SetHostileAndEnterCombat(FHGith, FPlayer, JuvDragon, Osi.GetHostCharacter())
     end
     --Set immunity for bugbear champ fight if no player
-    if object == "MMM_BUGBEARCHALLENGER_46545754-5089-4e85-b34d-81395e5ebb44" then
+    if UUID(object) == UUID("MMM_BUGBEARCHALLENGER_46545754-5089-4e85-b34d-81395e5ebb44") then
         BugBearCombatID = combat
         if Osi.CombatGetInvolvedPlayersCount(BugBearCombatID) == 0 then
             Osi.AddBoosts(BugbearChallenger, "Invulnerable", "", BugbearChallenger)                  --Bugbear
@@ -1184,7 +1189,7 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
             "82d1b843-9e8c-48a5-9d87-caddea5c193c")                                                    --Aradin
     end
     --Start Summon Ex Countdown
-    if (object == Buthir) then
+    if (UUID(object) == UUID(Buthir)) then
         Ext.Osiris.RegisterListener("CombatRoundStarted", 2, "after", function(combatGuid, round)
             if (round == 2) then
                 ItsComplicated()
@@ -1192,10 +1197,10 @@ Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combat
         end)
     end
     --Remove BURNING immunity from patrolling Intellect Devourers
-    if object == "MMM_FLAYERAMBUSH_998da1c1-b588-4d92-b673-7bad5c71095e" then
+    if UUID(object) == UUID("MMM_FLAYERAMBUSH_998da1c1-b588-4d92-b673-7bad5c71095e") then
         Osi.RemoveBoosts(AmbushID1, "StatusImmunity(BURNING)", 0, "", AmbushID1)
     end
-    if object == "MMM_FLAYERAMBUSH_75db3611-eca6-41b6-ac65-23a0efe7129c" then
+    if UUID(object) == UUID("MMM_FLAYERAMBUSH_75db3611-eca6-41b6-ac65-23a0efe7129c") then
         Osi.RemoveBoosts(AmbushID2, "StatusImmunity(BURNING)", 0, "", AmbushID2)
     end
 end)
@@ -1225,7 +1230,7 @@ end)
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", function(object)
     Ext.Timer.WaitFor(100, function()
-        if object == Oof then
+        if UUID(object) == UUID(Oof) then
             ClumsyOof(Oof)
         end
 
@@ -1243,17 +1248,17 @@ end)
 --Open item listener
 Ext.Osiris.RegisterListener("Opened", 1, "before", function(item)
     --Destroy voyeur barrel when opening
-    if (item == "MMM_QUESTIONABLEBARREL_2dff1009-962a-4f24-a94d-76253102237a") then
+    if (UUID(item) == UUID("MMM_QUESTIONABLEBARREL_2dff1009-962a-4f24-a94d-76253102237a")) then
         Osi.ApplyDamage("2dff1009-962a-4f24-a94d-76253102237a", 20, "Bludgeoning", "")
     end
 end)
 
 --Use item listener
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
-    if item == GrymBossMarker then
+    if UUID(item) == UUID(GrymBossMarker) then
         OpenMessageBox(character, "MMM_BOSSMARKER_GRYM")
     end
-    if item == RedDragonBossMarker then
+    if UUID(item) == UUID(RedDragonBossMarker) then
         OpenMessageBox(character, "MMM_BOSSMARKER_JUVENILERED")
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC1") == 1 then
@@ -1264,29 +1269,29 @@ end)
 --Destroy object listener
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, character, destroyerOwner, storyActionID)
     --Put voyeur on stage
-    if (item == "MMM_QUESTIONABLEBARREL_2dff1009-962a-4f24-a94d-76253102237a") then
+    if (UUID(item) == UUID("MMM_QUESTIONABLEBARREL_2dff1009-962a-4f24-a94d-76253102237a")) then
         local x, y, z = Osi.GetPosition("2dff1009-962a-4f24-a94d-76253102237a")
         Osi.AppearAtPosition(Slegbezzle, x, y, z, 1, "", "", 0)
         Osi.SetOnStage(Slegbezzle, 1)
         Osi.SetHostileAndEnterCombat(FSexCouple, FEvil, Grukkoh, Slegbezzle)
     end
     --Rock for Beholder
-    if item == "MMM_CAVEIN_c9e44fb1-98b5-4677-930f-dceee8a52200" then
+    if UUID(item) == UUID("MMM_CAVEIN_c9e44fb1-98b5-4677-930f-dceee8a52200") then
         Osi.RequestPassiveRoll(character, WeakBeholder, "", "Perception",
             "Act1_Challenging_5e7ff0e9-6c80-459c-a636-3a3e8417a61a", 0, "CAVEINROLL")
     end
     --Mithral Vein for Elemental
-    if (item == "S_UND_MithralVein_df5366a7-aa59-4104-9a1f-f744e8883f06") then
+    if (UUID(item) == UUID("S_UND_MithralVein_df5366a7-aa59-4104-9a1f-f744e8883f06")) then
         Osi.SetOnStage(LavaElemental, 1)
         Osi.CharacterMoveToPosition(LavaElemental, -633.51263427734, 10.690246582031, 258.11077880859, "Run", "", 0)
     end
     if Osi.HasActiveStatus(item, "MMM_MIMIC1") == 1 then
         TurnIntoMimic1(item, character)
     end
-    if item == RedDragonBossMarker then
+    if UUID(item) == UUID(RedDragonBossMarker) then
         Osi.SetOnStage(JuvDragon, 1)
     end
-    if item == GrymBossMarker then
+    if UUID(item) == UUID(GrymBossMarker) then
         Osi.SetFlag(GrymFlag, Null, 0, 1)
     end
 end)
@@ -1294,7 +1299,7 @@ end)
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     --Team Trajectile
-    if character == Adam1 then
+    if UUID(character) == UUID(Adam1) then
         Osi.SetFlag(Act1AdamFlag, Null, 0, 1)
         Osi.SetCanFight(Adam1, 0)
         Osi.Resurrect(Adam1, "", 0)
@@ -1314,7 +1319,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Liam1 then
+    if UUID(character) == UUID(Liam1) then
         Osi.SetFlag(Act1LiamFlag, Null, 0, 1)
         Osi.SetCanFight(Liam1, 0)
         Osi.Resurrect(Liam1, "", 0)
@@ -1334,7 +1339,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Mike1 then
+    if UUID(character) == UUID(Mike1) then
         Osi.SetFlag(Act1MikeFlag, Null, 0, 1)
         Osi.SetCanFight(Mike1, 0)
         Osi.Resurrect(Mike1, "", 0)
@@ -1355,66 +1360,66 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         end)
     end
     --Spider bait
-    if (character == DSpider0) then
+    if (UUID(character) == UUID(DSpider0)) then
         SpiderHorde()
     end
     --Spider horde kill counter
-    if (character == DSpider11) then
+    if (UUID(character) == UUID(DSpider11)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider12) then
+    if (UUID(character) == UUID(DSpider12)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider13) then
+    if (UUID(character) == UUID(DSpider13)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider14) then
+    if (UUID(character) == UUID(DSpider14)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider15) then
+    if (UUID(character) == UUID(DSpider15)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider16) then
+    if (UUID(character) == UUID(DSpider16)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider17) then
+    if (UUID(character) == UUID(DSpider17)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider18) then
+    if (UUID(character) == UUID(DSpider18)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider19) then
+    if (UUID(character) == UUID(DSpider19)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider110) then
+    if (UUID(character) == UUID(DSpider110)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider111) then
+    if (UUID(character) == UUID(DSpider111)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
-    if (character == DSpider112) then
+    if (UUID(character) == UUID(DSpider112)) then
         SpiderKillCounter = SpiderKillCounter + 1;
     end
     if (SpiderKillCounter == 7) then
         SpiderHorde2()
     end
     --DUERGAR kills for summoning Ol Gregg
-    if (character == "S_UND_DuergarRaftCaptain_473ae3b0-d8e9-428d-9129-bbffe449b8ec") then
+    if (UUID(character) == UUID("S_UND_DuergarRaftCaptain_473ae3b0-d8e9-428d-9129-bbffe449b8ec")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
-    if (character == "S_UND_DuergarSquadAlchemist_2243e892-f360-44cf-b2ef-90364059dd22") then
+    if (UUID(character) == UUID("S_UND_DuergarSquadAlchemist_2243e892-f360-44cf-b2ef-90364059dd22")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
-    if (character == "S_UND_DuergarSquadDefiant_3cec487d-d5cf-42c9-a009-0124cb432341") then
+    if (UUID(character) == UUID("S_UND_DuergarSquadDefiant_3cec487d-d5cf-42c9-a009-0124cb432341")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
-    if (character == "S_UND_DuergarSquadDilligent_a7338653-4d88-440e-aee6-4d5b3e611a2d") then
+    if (UUID(character) == UUID("S_UND_DuergarSquadDilligent_a7338653-4d88-440e-aee6-4d5b3e611a2d")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
-    if (character == "S_UND_DuergarSquadRude_b15669aa-831b-43d7-ac7b-efea2eb09018") then
+    if (UUID(character) == UUID("S_UND_DuergarSquadRude_b15669aa-831b-43d7-ac7b-efea2eb09018")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
-    if (character == "S_UND_DuergarSquadRatty_64e38ef0-9779-499c-9f0a-ea013ee81442") then
+    if (UUID(character) == UUID("S_UND_DuergarSquadRatty_64e38ef0-9779-499c-9f0a-ea013ee81442")) then
         BoatkillCounter = BoatkillCounter + 1;
     end
     if (BoatkillCounter == 6) then
@@ -1437,19 +1442,19 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         end)
     end
     --Mimic Boss Counter
-    if ((character == HarperMimic1) and (Osi.IsDead(MegaMimic) == 0)) then
+    if ((UUID(character) == UUID(HarperMimic1)) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic1, -685.5205078125, -6.07421875, 375.92196655273, "MIMIC1DIE", 0, 0, 0, 1, 1)
         Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
             MimicBoss)
     end
-    if ((character == HarperMimic2) and (Osi.IsDead(MegaMimic) == 0)) then
+    if ((UUID(character) == UUID(HarperMimic2)) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic2, -688.21392822266, -6.6494140625, 376.70120239258, "MIMIC2DIE", 0, 0, 0, 1, 1)
         Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
             MimicBoss)
     end
-    if ((character == HarperMimic3) and (Osi.IsDead(MegaMimic) == 0)) then
+    if ((UUID(character) == UUID(HarperMimic3)) and (Osi.IsDead(MegaMimic) == 0)) then
         MimicBoss = MimicBoss + 1;
         Osi.TeleportToPosition(HarperMimic3, -687.03607177734, -6.9794921875, 372.26666259766, "MIMIC3DIE", 0, 0, 0, 1, 1)
         Osi.PlayEffectAtPosition("3e398ec8-03ca-ba6d-ceaa-c1cf2cac7c3e", -687.05163574219, -6.490234375, 374.89181518555,
@@ -1460,7 +1465,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             MimicBossFight()
         end
     end
-    if (character == MegaMimic) then
+    if (UUID(character) == UUID(MegaMimic)) then
         Ext.Timer.WaitFor(1000, function()
             Osi.SetOnStage(HarperMimic1, 1)
             Osi.SetOnStage(HarperMimic2, 1)
@@ -1469,7 +1474,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
         end)
     end
     --Grym 2 Death
-    if character == Grym2 then
+    if UUID(character) == UUID(Grym2) then
         Ext.Timer.WaitFor(100, function()
             -- Osi.LeaveCombat(ForgeGhost1)
             -- Osi.LeaveCombat(ForgeGhost2)
@@ -1488,9 +1493,9 @@ end)
 --Saw something listener
 Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
     --Goblin Crash Ambush Attack
-    if ((character == AmbushGob1) or
-            (character == AmbushGob2) or
-            (character == AmbushGob3)) then
+    if ((UUID(character) == UUID(AmbushGob1)) or
+            (UUID(character) == UUID(AmbushGob2)) or
+            (UUID(character) == UUID(AmbushGob3))) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_EnsnaringStrike", targetcharacter)
             Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
@@ -1500,16 +1505,16 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         end
     end
     --Set off chicken run event when seeing guard
-    if (Osi.IsPlayer(character) == 1 and (targetcharacter == Chickenguard)) then
+    if (Osi.IsPlayer(character) == 1 and (UUID(targetcharacter) == UUID(Chickenguard))) then
         ChickenEvent()
     end
     --Remove chicken run event if gone past it
-    if (Osi.IsPlayer(character) == 1 and (targetcharacter == "S_GOB_Festivities_Trader_3c9f9d17-835c-46bf-929d-240e3b4adb55")) then
+    if (Osi.IsPlayer(character) == 1 and (UUID(targetcharacter) == UUID("S_GOB_Festivities_Trader_3c9f9d17-835c-46bf-929d-240e3b4adb55"))) then
         ChickenKiller()
     end
     --Gnolls at backdoor walk in and set off trap
     if Osi.IsPlayer(character) == 1 and
-        targetcharacter == "MMM_CAVEBACKDOOR_31da9358-a6a4-4a98-a199-85e09dea5b0e" and
+        UUID(targetcharacter) == UUID("MMM_CAVEBACKDOOR_31da9358-a6a4-4a98-a199-85e09dea5b0e") and
         Osi.IsDestroyed("S_PLA_BanditCave_PlatformBarricade_01_f82470f0-72b2-487e-9b0b-10a4a3388d99") == 0 then
         Osi.CharacterMoveToPosition(BackdoorGnoll3, 49.923347473145, 28.5263671875, 563.97900390625, "Walk", "", 0)
         Ext.Timer.WaitFor(4000, function()
@@ -1525,7 +1530,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         end)
     end
     --Drow Assassin 1 Attacks
-    if (character == DrowAssassin1) then
+    if (UUID(character) == UUID(DrowAssassin1)) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
             Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
@@ -1533,7 +1538,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         end
     end
     --Drow Assassin 2 Attacks
-    if (character == DrowAssassin2) then
+    if (UUID(character) == UUID(DrowAssassin2)) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
             Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
@@ -1541,7 +1546,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
         end
     end
     --Drow Assassin 3 Attacks
-    if (character == DrowAssassin3) then
+    if (UUID(character) == UUID(DrowAssassin3)) then
         if ((Osi.HasActiveStatus(character, "INVISIBLE") == 1) and (Osi.IsPlayer(targetcharacter) == 1)) then
             Osi.UseSpell(character, "Projectile_SneakAttack", targetcharacter)
             Osi.ApplyStatus(targetcharacter, "SURPRISED", 6, 0, character)
@@ -1674,7 +1679,7 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "before", function(object, statu
     --     end
     -- end
     --Lolth Event
-    if ((object == "LTS_DUN_Candles_Cluster_B_Gold_000_82a59deb-c0f8-41bb-9158-57af3e7d808f") and (status == "BURNING")) then
+    if ((UUID(object) == UUID("LTS_DUN_Candles_Cluster_B_Gold_000_82a59deb-c0f8-41bb-9158-57af3e7d808f")) and (status == "BURNING")) then
         LolthEvent()
     end
     --Bulette Eggs
@@ -1776,7 +1781,7 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after",
 --Flag listener
 Ext.Osiris.RegisterListener("FlagSet", 3, "after", function(flag, speaker, dialogInstance)
     --Went past Gregg
-    if flag == "UND_EbonLake_Event_MoveToCamp_0da8fee9-b7cb-4551-9baa-ec930c118716" then
+    if UUID(flag) == UUID("UND_EbonLake_Event_MoveToCamp_0da8fee9-b7cb-4551-9baa-ec930c118716") then
         WentPastGregg = WentPastGregg + 1;
     end
 end)
@@ -1790,7 +1795,7 @@ end)
 
 --On Stage listener
 Ext.Osiris.RegisterListener("WentOnStage", 2, "after", function(object, isOnStageNow)
-    if object == Grym then
+    if UUID(object) == UUID(Grym) then
         if Osi.IsDestroyed(GrymBossMarker) == 0 then
             return
         elseif Osi.IsDestroyed(GrymBossMarker) == 1 then

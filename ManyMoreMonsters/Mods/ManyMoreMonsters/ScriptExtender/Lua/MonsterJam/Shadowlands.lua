@@ -156,6 +156,11 @@ local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
     end
 end
 
+-- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
+local function UUID(guid)
+    return guid and string.sub(guid, -36) or nil
+end
+
 --  ==================================== Stuff ====================================
 
 --On Load
@@ -694,7 +699,7 @@ end)
 local BaltZombieFightID
 --Enter Combat Listener
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", function(object, combatGuid)
-    if object == BalthazarZombie1 then
+    if UUID(object) == UUID(BalthazarZombie1) then
         BaltZombieFightID = combatGuid
         ZombieSpeakSelector1()
         ZombieSpeakSelector2()
@@ -706,7 +711,7 @@ end)
 
 --Turn started listener
 Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
-    if object == SpiderKing and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 0 then
+    if UUID(object) == UUID(SpiderKing) and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 0 then
         Osi.SetFlag(Act2SpiderKingWave1Flag, Null, 0, 1)
         ApplyStatus_SpeakOverhead(SpiderKing, "MMM_MORESPIDERS")
         local SpiderKingSpawnMidCombat1 = Osi.CreateAt(SpiderKingSummon, 304.29098510742, 0.0283203125, -705.29028320312,
@@ -717,7 +722,7 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
             1, "")
         local SpiderKingSpawnMidCombat4 = Osi.CreateAt(SpiderKingSummon, 319.86599731445, 0.3916015625, -713.99682617188,
             0, 1, "")
-    elseif object == SpiderKing and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 1 and Osi.GetFlag(Act2SpiderKingWave2Flag, Null) == 0 then
+    elseif UUID(object) == UUID(SpiderKing) and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 1 and Osi.GetFlag(Act2SpiderKingWave2Flag, Null) == 0 then
         Osi.SetFlag(Act2SpiderKingWave2Flag, Null, 0, 1)
         ApplyStatus_SpeakOverhead(SpiderKing, "MMM_EVENMORESPIDERS")
         local SpiderKingSpawnMidCombat1 = Osi.CreateAt(SpiderKingSummon, 304.29098510742, 0.0283203125, -705.29028320312,
@@ -728,7 +733,7 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
             1, "")
         local SpiderKingSpawnMidCombat4 = Osi.CreateAt(SpiderKingSummon, 319.86599731445, 0.3916015625, -713.99682617188,
             0, 1, "")
-    elseif object == SpiderKing and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 1 and Osi.GetFlag(Act2SpiderKingWave2Flag, Null) == 1 then
+    elseif UUID(object) == UUID(SpiderKing) and Osi.IsInCombat(SpiderKing) == 1 and Osi.GetFlag(Act2SpiderKingWave1Flag, Null) == 1 and Osi.GetFlag(Act2SpiderKingWave2Flag, Null) == 1 then
         local SpiderKingSpawnMidCombat1 = Osi.CreateAt(SpiderKingSummon, 304.29098510742, 0.0283203125, -705.29028320312,
             0, 1, "")
         local SpiderKingSpawnMidCombat2 = Osi.CreateAt(SpiderKingSummon, 311.21820068359, 0.1220703125, -706.70056152344,
@@ -741,8 +746,8 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
     --     local x, y, z = Osi.GetPosition(SpiderKing)
     --     local ChestbursterSpawnID = Osi.CreateAt(SpiderKingChestburster, x, y, z, 0, 1, '')
     -- end
-    -- Bug Fix: Moved into SpiderKingTransform() so the spider also spawns if Plouf is killed before his turn.
-    if object == SpiderKing and Osi.IsDead(SpiderKing) == 0 and Osi.GetHitpoints(SpiderKing) <= 100 then
+    -- Bug Fix: Moved into SpiderKingTransform() so the spider also spawns if Plouf is killed before his turn
+    if UUID(object) == UUID(SpiderKing) and Osi.IsDead(SpiderKing) == 0 and Osi.GetHitpoints(SpiderKing) <= 100 then
         SpiderKingTransform()
     end
 end)
@@ -750,7 +755,7 @@ end)
 --Osi.AttackedBy
 Ext.Osiris.RegisterListener("AttackedBy", 7, "after",
     function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
-        if defender == BalthazarEvent1 then
+        if UUID(defender) == UUID(BalthazarEvent1) then
             Osi.UseSpell(BalthazarEvent1, "CURSE_SKIP_TURN", attackerOwner)
         end
     end)
@@ -758,11 +763,11 @@ Ext.Osiris.RegisterListener("AttackedBy", 7, "after",
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     --Spider King killed outright
-    if character == SpiderKing then
+    if UUID(character) == UUID(SpiderKing) then
         SpiderKingTransform()
     end
     --Team Trajectile
-    if character == Adam2 then
+    if UUID(character) == UUID(Adam2) then
         Osi.SetFlag(Act2AdamFlag, Null, 0, 1)
         Osi.SetCanFight(Adam2, 0)
         Osi.Resurrect(Adam2, "", 0)
@@ -782,7 +787,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Liam2 then
+    if UUID(character) == UUID(Liam2) then
         Osi.SetFlag(Act2LiamFlag, Null, 0, 1)
         Osi.SetCanFight(Liam2, 0)
         Osi.Resurrect(Liam2, "", 0)
@@ -802,7 +807,7 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
             end)
         end)
     end
-    if character == Mike2 then
+    if UUID(character) == UUID(Mike2) then
         Osi.SetFlag(Act2MikeFlag, Null, 0, 1)
         Osi.SetCanFight(Mike2, 0)
         Osi.Resurrect(Mike2, "", 0)
@@ -839,12 +844,12 @@ end)
 
 --Use item listener
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
-    if item == ShadowToiletDoor then
+    if UUID(item) == UUID(ShadowToiletDoor) then
         Ext.Timer.WaitFor(2000, function()
             Osi.SetHostileAndEnterCombat(FShadowCreature, FPlayer, ShadowToiletGuy, character)
         end)
     end
-    if item == SquirrelChest and
+    if UUID(item) == UUID(SquirrelChest) and
         Osi.IsOnStage(CrazedSquirrel1) == 0 then
         CrazedSquirrelEvent()
     end
@@ -855,7 +860,7 @@ end)
 
 --Dialog Start Request listener
 Ext.Osiris.RegisterListener("DialogStartRequested", 2, "after", function(target, player)
-    if target == EllieMay then
+    if UUID(target) == UUID(EllieMay) then
         Osi.ApplyStatus(player, "MMM_ELLIEMAYBLESSING", -1, 1)
         Osi.SetOnStage(EllieMay, 0)
     end
@@ -863,7 +868,7 @@ end)
 
 --Destroy object listener
 Ext.Osiris.RegisterListener("DestroyedBy", 4, "before", function(item, destroyer, destroyerOwner, storyActionID)
-    if item == SquirrelChest and
+    if UUID(item) == UUID(SquirrelChest) and
         Osi.IsOnStage(CrazedSquirrel1) == 0 then
         CrazedSquirrelEvent()
     end
@@ -874,14 +879,14 @@ end)
 
 --Added To listener
 Ext.Osiris.RegisterListener("AddedTo", 3, "after", function(object, inventoryHolder, addType)
-    if object == RobberWifeRing and inventoryHolder == RobberWifeGrave then
+    if UUID(object) == UUID(RobberWifeRing) and UUID(inventoryHolder) == UUID(RobberWifeGrave) then
         ReturnRingEvent()
     end
 end)
 
 --Saw something listener
 Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharacter, targetwassneaking)
-    if character == ChildWraithKid and
+    if UUID(character) == UUID(ChildWraithKid) and
         Osi.IsTagged(targetcharacter, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 and
         Osi.GetFlag(Act2ChildWraithFlag, Null) == 0 then
         Osi.SetFlag(Act2ChildWraithFlag, Null, 0, 1)
@@ -901,7 +906,7 @@ Ext.Osiris.RegisterListener("Saw", 3, "after", function(character, targetcharact
             end
         end
     end
-    if character == BalthazerTrigger2 and
+    if UUID(character) == UUID(BalthazerTrigger2) and
         Osi.IsTagged(targetcharacter, "25bf5042-5bf6-4360-8df8-ab107ccb0d37") == 1 then
         BalthazarEventMausoleum()
         Osi.SetOnStage(BalthazerTrigger2, 0)
