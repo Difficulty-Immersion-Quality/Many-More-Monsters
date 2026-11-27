@@ -632,6 +632,19 @@ local function BalthazarEventMausoleum()
     end)
 end
 
+--Spider King Chestburster
+local function SpiderKingTransform()
+    if Osi.GetFlag(Act2SpiderKingFlag, Null) == 1 then
+        return
+    end
+    Osi.SetFlag(Act2SpiderKingFlag, Null, 0, 1)
+    local x, y, z = Osi.GetPosition(SpiderKing)
+    if Osi.IsDead(SpiderKing) == 0 then
+        Osi.Die(SpiderKing, 5, Null, 0, 1, 500)
+    end
+    Osi.CreateAt(SpiderKingChestburster, x, y, z, 0, 1, "")
+end
+
 --Pixie Talking
 -- local function PixieTalking()
 --     if Osi.IsOnStage(ThiefPixie) == 1 then
@@ -723,10 +736,14 @@ Ext.Osiris.RegisterListener("TurnStarted", 1, "before", function(object)
         --local SpiderKingSpawnMidCombat3 = Osi.CreateAt(SpiderKingSummon, 320.95999145508, 1.70703125, -703.29797363281, 0, 1, "")
         --local SpiderKingSpawnMidCombat4 = Osi.CreateAt(SpiderKingSummon, 319.86599731445, 0.3916015625, -713.99682617188, 0, 1, "")
     end
+    -- if object == SpiderKing and Osi.IsDead(SpiderKing) == 0 and Osi.GetHitpoints(SpiderKing) <= 100 then
+    --     Osi.Die("MMM_SPIDERKING_0683b560-c29e-4a0b-b15f-f02703d3e219", 5, Null, 0, 1, 500)
+    --     local x, y, z = Osi.GetPosition(SpiderKing)
+    --     local ChestbursterSpawnID = Osi.CreateAt(SpiderKingChestburster, x, y, z, 0, 1, '')
+    -- end
+    -- Bug Fix: Moved into SpiderKingTransform() so the spider also spawns if Plouf is killed before his turn.
     if object == SpiderKing and Osi.IsDead(SpiderKing) == 0 and Osi.GetHitpoints(SpiderKing) <= 100 then
-        Osi.Die("MMM_SPIDERKING_0683b560-c29e-4a0b-b15f-f02703d3e219", 5, Null, 0, 1, 500)
-        local x, y, z = Osi.GetPosition(SpiderKing)
-        local ChestbursterSpawnID = Osi.CreateAt(SpiderKingChestburster, x, y, z, 0, 1, '')
+        SpiderKingTransform()
     end
 end)
 
@@ -740,6 +757,10 @@ Ext.Osiris.RegisterListener("AttackedBy", 7, "after",
 
 --Death listener
 Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
+    --Spider King killed outright
+    if character == SpiderKing then
+        SpiderKingTransform()
+    end
     --Team Trajectile
     if character == Adam2 then
         Osi.SetFlag(Act2AdamFlag, Null, 0, 1)
