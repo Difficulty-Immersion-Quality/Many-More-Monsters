@@ -147,19 +147,9 @@ local Act2AdamFlag = "MMM_Act2_Adam_f054a046-1bec-45b2-967c-a30cda09db62"
 local Act2LiamFlag = "MMM_Act2_Liam_e8712d83-3a05-4948-9934-f2842e5cf360"
 local Act2MikeFlag = "MMM_Act2_Mike_67d7b164-a43d-4c44-b64e-a5d449c02e8a"
 
--- Overhead dialogue helper
-local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
-    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
-        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
-    else
-        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
-    end
-end
-
--- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
-local function UUID(guid)
-    return guid and string.sub(guid, -36) or nil
-end
+local Helpers = Ext.Require("MonsterJam/Common/Helpers.lua")
+local ApplyStatus_SpeakOverhead = Helpers.SpeakOverhead
+local UUID = Helpers.UUID
 
 --  ==================================== Stuff ====================================
 

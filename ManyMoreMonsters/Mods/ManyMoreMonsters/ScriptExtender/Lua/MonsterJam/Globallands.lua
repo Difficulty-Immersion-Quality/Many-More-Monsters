@@ -13,14 +13,9 @@ local Shadowheart = "S_Player_ShadowHeart_3ed74f06-3c60-42dc-83f6-f034cb47c679"
 local MountainChicken = "MMM_CHICKENRUN_42bd9bf1-80d8-42ee-a9a1-312ce9e630a0"
 local MountainGob1 = "MMM_MOUNTAINGOBS_68304a4f-95ae-4a67-8626-5daf30725d5e"
 
--- Overhead dialogue helper
-local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
-    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
-        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
-    else
-        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
-    end
-end
+local Helpers = Ext.Require("MonsterJam/Common/Helpers.lua")
+local ApplyStatus_SpeakOverhead = Helpers.SpeakOverhead
+local UUID = Helpers.UUID
 
 --  ==================================== Stuff ====================================
 

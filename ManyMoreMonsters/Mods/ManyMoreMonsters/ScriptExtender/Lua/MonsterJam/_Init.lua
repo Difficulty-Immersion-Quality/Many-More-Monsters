@@ -1,0 +1,7 @@
+Ext.Require("MonsterJam/Globallands.lua")
+Ext.Require("MonsterJam/Wildlands.lua")
+Ext.Require("MonsterJam/Crechelands.lua")
+Ext.Require("MonsterJam/Shadowlands.lua")
+Ext.Require("MonsterJam/Rivingtonlands.lua")
+Ext.Require("MonsterJam/Citylands.lua")
+Ext.Require("MonsterJam/Brainlands.lua")

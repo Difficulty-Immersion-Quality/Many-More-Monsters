@@ -25,19 +25,9 @@ local FEvil = "Evil_NPC_64321d50-d516-b1b2-cfac-2eb773de1ff6"
 local InitiateAct3C = "MMM_Act3c_Initiate_"
 local Act3TrajectileJail = "MMM_Act3_TrajectileJail_75220041-b369-468a-a488-7fc3919dd231"
 
--- Overhead dialogue helper
-local function ApplyStatus_SpeakOverhead(character, speakOverheadStatus)
-    if Osi.HasActiveStatus(character, "SG_Silenced") == 0 then
-        Osi.ApplyStatus(character, speakOverheadStatus, -1, 1, "")
-    else
-        Osi.ApplyStatus(character, "MMM_SPEAKOVERHEAD_BLOCKED", -1, 1, "")
-    end
-end
-
--- Osiris passes objects and flags as "Name_uuid", so compare them by the last 36 characters
-local function UUID(guid)
-    return guid and string.sub(guid, -36) or nil
-end
+local Helpers = Ext.Require("MonsterJam/Common/Helpers.lua")
+local ApplyStatus_SpeakOverhead = Helpers.SpeakOverhead
+local UUID = Helpers.UUID
 
 --  ==================================== Stuff ====================================
 
